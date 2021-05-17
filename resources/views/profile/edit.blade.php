@@ -8,7 +8,7 @@
         <form method="post" enctype="multipart/form-data" action="{{ route('profile.update') }}" autocomplete="off">
           @csrf
           @method('put')
-          
+
           <div class="card-header">
             <h5 class="title">{{ __('Edit Profile') }}</h5>
           </div>
@@ -56,12 +56,12 @@
                 </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary pull-right">{{ _('Update Profile') }}</button>
+            <button type="submit" class="btn btn-primary pull-right">{{ __('Update Profile') }}</button>
             <div class="clearfix"></div>
           </div>
         </form>
       </div>
-    
+
       <div class="card">
         <div class="card-header">
           <h5 class="card-title">{{ __('Change password') }}</h5>
@@ -97,7 +97,7 @@
                 </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary pull-right">{{ _('Change password') }}</button>
+            <button type="submit" class="btn btn-primary pull-right">{{ __('Change password') }}</button>
             <div class="clearfix"></div>
           </form>
         </div>
