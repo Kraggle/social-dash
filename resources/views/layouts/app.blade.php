@@ -23,14 +23,15 @@
 
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,700,800,900" rel="stylesheet" />
-    <link href="{{ asset('white') }}/libs/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="{{ asset('custom') }}/script/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <!-- Extra details for Live View on GitHub Pages -->
 
     <!-- Nucleo Icons -->
     <link href="{{ asset('white') }}/css/nucleo-icons.css" rel="stylesheet" />
     <!-- CSS Files -->
-    {{-- <link href="{{ asset('white') }}/css/white-dashboard.css?v=1.0.0" rel="stylesheet" /> --}}
     <link href="{{ asset('css') }}/white-dashboard.css?v=1.0.1" rel="stylesheet" />
+    {{-- link to my own stylesheet --}}
+    <link href="{{ asset('css') }}/main.css?v=1.0.0" rel="stylesheet" />
 </head>
 
 <body class="white-content {{ $class ?? '' }}">

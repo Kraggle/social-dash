@@ -11,4 +11,5 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.sass('resources/scss/white-dashboard.scss', 'public/css');
+mix.sass('resources/scss/white-dashboard.scss', 'public/css')
+    .sass('public/custom/style/main.scss', 'public/css');

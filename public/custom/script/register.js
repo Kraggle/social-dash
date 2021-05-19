@@ -1,3 +1,8 @@
+
+$(() => {
+
+});
+
 const checkInstaUser = () => {
     const user = $('input[name=name]').val();
     if (!user) {

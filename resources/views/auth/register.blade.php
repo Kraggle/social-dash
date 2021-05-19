@@ -107,5 +107,5 @@
 
     </script>
 
-    <script src="{{ asset('white') }}/js/register.js"></script>
+    <script type="module" src="{{ asset('custom') }}/script/register.js"></script>
 @endpush
