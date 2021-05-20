@@ -15,16 +15,17 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\InstagramController;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
-class RegisterController extends Controller
-{
+class RegisterController extends Controller {
     /*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -50,8 +51,7 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('guest');
     }
 
@@ -61,12 +61,18 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
+    protected function validator(array $data) {
+
+        if (!key_exists('user_type', $data))
+            $data['type'] = 3;
+
+        error_log(json_encode($data, JSON_PRETTY_PRINT));
+
         return Validator::make($data, [
+            'user' => ['required', 'string'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'user_type' => ['required'],
+            'type' => ['required'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
     }
@@ -77,13 +83,23 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
-    {
-        return User::create([
+    protected function create(array $data) {
+
+        if (!key_exists('user_type', $data))
+            $data['type'] = 3;
+
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'role_id' => $data['user_type'],
+            'role_id' => $data['type'],
             'password' => Hash::make($data['password']),
         ]);
+
+        InstagramController::create([
+            'user_id' => $user->id,
+            'user'    => $data['user']
+        ]);
+
+        return $user;
     }
 }

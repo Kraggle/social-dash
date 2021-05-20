@@ -1,2 +1,10 @@
-[17-May-2021 15:06:07 UTC] PHP Warning:  require(E:\laragon\www\socialshadow\public/../vendor/autoload.php): failed to open stream: No such file or directory in E:\laragon\www\socialshadow\public\index.php on line 24
-[17-May-2021 15:06:07 UTC] PHP Fatal error:  require(): Failed opening required 'E:\laragon\www\socialshadow\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\socialshadow\public\index.php on line 24
+[20-May-2021 19:47:33 UTC] {
+    "_token": "44obWMD6g1G6Vr84VSXYslkQgypErhAV8Nd1IhJV",
+    "user": "kr4ggle",
+    "name": "Kraggle",
+    "email": "kraggle27@gmail.com",
+    "password": "Kra1984ggle",
+    "password_confirmation": "Kra1984ggle",
+    "policy": "1",
+    "type": 3
+}

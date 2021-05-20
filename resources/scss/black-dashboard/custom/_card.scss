@@ -131,13 +131,18 @@
         .input-group[disabled] {
             .input-group-prepend .input-group-text,
             .input-group-append .input-group-text {
-                background-color: $black;
+                background-color: $opacity-gray-3;
+
+                // border-color: rgba($black-states, 0.3);
+
             }
         }
 
         .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-            background: $light-gray;
-            border-color: rgba($black-states, 0.3);
+            background: $opacity-gray-3;
+
+            // border-color: rgba($black-states, 0.3);
+
         }
 
         .input-group-focus {

@@ -1,28 +1,61 @@
+import { K } from './src/K.js';
 
 $(() => {
+    if (K.urlParam('user')) {
+        checkInstaUser();
+        console.log('triggered');
+    }
+    $('#find-btn').on('click', checkInstaUser);
 
+    $('#submit-btn').on('click', () => {
+        const params = K.urlParam();
+        $.each(params, (key, value) => {
+            if ($(`.form-control[name=${String(key)}]`).length == 0) {
+                $('#register-form').prepend($('<input>', {
+                    type: 'hidden',
+                    name: key,
+                    value
+                }));
+            }
+        });
+
+        $('#register-form').trigger('submit');
+    });
 });
 
 const checkInstaUser = () => {
-    const user = $('input[name=name]').val();
+    const user = $('input[name=user]').val();
     if (!user) {
         showSidebarMessage('Please input an instergram username!', 'error');
         return;
     }
 
+    disableControl('input[name=user]');
+
     $.getJSON('/calls', {
         action: 'igAccountExists',
         name: user
     }, function(res) {
+        showSidebarMessage(res.message, res.success ? 'normal' : 'error');
         if (res.success) {
-            showSidebarMessage('Instagram account found!');
             replaceMsg();
             toggleHide($('#submit-btn'));
             toggleHide($('#find-btn'));
             toggleHide($('div[toggle]'));
-            $('input[name=name]').attr('disabled', 'true');
-        }
+        } else
+            disableControl('input[name=user]', false);
     });
+};
+
+const disableControl = (selector, disable = true) => {
+    const el = $(selector);
+    if (disable) {
+        el.attr('readonly', 1);
+        el.closest('.input-group').attr('disabled', 1);
+    } else {
+        el.removeAttr('readonly');
+        el.closest('.input-group').removeAttr('disabled');
+    }
 };
 
 const toggleHide = el => {

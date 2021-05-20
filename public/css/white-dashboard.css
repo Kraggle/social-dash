@@ -29319,14 +29319,13 @@ Copyright (c) 2015 Daniel Eden
 
 .card.card-white .input-group[disabled] .input-group-prepend .input-group-text,
 .card.card-white .input-group[disabled] .input-group-append .input-group-text {
-  background-color: #222a42;
+  background-color: rgba(222, 222, 222, 0.3);
 }
 
 .card.card-white .form-control[disabled],
 .card.card-white .form-control[readonly],
 .card.card-white fieldset[disabled] .form-control {
-  background: #E3E3E3;
-  border-color: rgba(29, 37, 59, 0.3);
+  background: rgba(222, 222, 222, 0.3);
 }
 
 .card.card-white .input-group-focus .input-group-prepend .input-group-text,

@@ -15,14 +15,14 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
-{
+class User extends Authenticatable {
     use Notifiable;
 
     /**
@@ -31,7 +31,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'picture' ,'role_id'
+        'name', 'email', 'password', 'picture', 'role_id'
     ];
 
     /**
@@ -48,8 +48,7 @@ class User extends Authenticatable
      *
      * @return \App\Role
      */
-    public function role()
-    {
+    public function role() {
         return $this->belongsTo(Role::class);
     }
 
@@ -58,8 +57,7 @@ class User extends Authenticatable
      *
      * @return string
      */
-    public function profilePicture()
-    {
+    public function profilePicture() {
         if ($this->picture) {
             return "/storage/{$this->picture}";
         }
@@ -72,8 +70,7 @@ class User extends Authenticatable
      *
      * @return boolean
      */
-    public function isAdmin()
-    {
+    public function isAdmin() {
         return $this->role_id == 1;
     }
 
@@ -82,8 +79,7 @@ class User extends Authenticatable
      *
      * @return boolean
      */
-    public function isCreator()
-    {
+    public function isCreator() {
         return $this->role_id == 2;
     }
 
@@ -92,8 +88,7 @@ class User extends Authenticatable
      *
      * @return boolean
      */
-    public function isMember()
-    {
+    public function isMember() {
         return $this->role_id == 3;
     }
 }

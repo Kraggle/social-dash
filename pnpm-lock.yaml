@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@types/bootstrap-notify': ^3.1.35
+  '@types/custom': file:./typings
   '@types/jquery': ^3.2
   axios: ^0.21.1
   bootstrap: ^4.1.0
@@ -18,6 +19,7 @@ specifiers:
 
 devDependencies:
   '@types/bootstrap-notify': 3.1.35
+  '@types/custom': link:typings
   '@types/jquery': 3.5.5
   axios: 0.21.1
   bootstrap: 4.6.0_jquery@3.6.0+popper.js@1.16.1
