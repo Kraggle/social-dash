@@ -1,8 +1,8 @@
 @extends('layouts.app', [
-'activePage' => 'dashboard',
-'menuParent' => 'dashboard',
-'titlePage' => __('Dashboard')]
-)
+'activePage' => 'comments',
+'menuParent' => 'analytics',
+'titlePage' => __('Comments')
+])
 
 @section('content')
     <div class="content">

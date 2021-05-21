@@ -424,7 +424,7 @@ const K = {
     parse: item => {
         item = K.JSON.parse(item);
         if (K.isNumeric(item)) item = parseInt(item);
-        if (K.type(item) != 'boolean' && K.isBoolean(item)) item = item == 'true';
+        else if (K.type(item) != 'boolean' && K.isBoolean(item)) item = item == 'true';
         return item;
     },
 
@@ -782,6 +782,8 @@ export function stripAndCollapse(value) {
 }
 
 K.isMobile = () => navigator.userAgent.bMatch(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
+
+export default K;
 
 // MARK: [ [  P R O T O T Y P E S  ] ]
 if (!Array.prototype.removeDupes) {
