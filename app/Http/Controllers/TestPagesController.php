@@ -17,7 +17,7 @@ class TestPagesController extends Controller {
             // After the authorize with Instagram button is clicked, it is redirected
             // here and this will get an access token and save it to the server database.
             $url = 'https://api.instagram.com/oauth/access_token';
-            $data = http_build_query([
+            $data = query_params([
                 'client_id' => 476627210291548,
                 'client_secret' => '4225c8494e335b2b1628fad0dd0332c7',
                 'grant_type' => 'authorization',
@@ -63,4 +63,18 @@ class TestPagesController extends Controller {
 
         return view('test.auth', $params);
     }
+}
+
+/**
+ * Build a query string from key value pairs.
+ *
+ * @param array|object $array The assoc array or object.
+ * @param string       $sep   The separator.
+ * @return string The query string.
+ */
+function query_params($array, $sep = '&') {
+    $temp = [];
+    foreach ($array as $key => $value)
+        if ($value) $temp[] = "$key=$value";
+    return implode($sep, $temp);
 }
