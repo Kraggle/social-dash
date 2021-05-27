@@ -18,20 +18,18 @@ class TestPagesController extends Controller {
             // here and this will get an access token and save it to the server database.
             $url = 'https://api.instagram.com/oauth/access_token';
             $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, [
-                'client_id' => '476627210291548',
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
+                'client_id' => 476627210291548,
                 'client_secret' => '4225c8494e335b2b1628fad0dd0332c7',
                 'grant_type' => 'authorization',
                 'redirect_url' => 'https://dashboard.shadow-social.com/auth',
-                'code' => $params['code']
-            ]);
+                'code' => substr($params['code'], 0, -2)
+            ]));
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
             $result = curl_exec($ch);
             curl_close($ch);
-
-            error_log(json_encode($result, JSON_PRETTY_PRINT));
 
             if ($result) {
                 $result['action'] = 'addAccessToken';
@@ -44,6 +42,9 @@ class TestPagesController extends Controller {
                 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($result));
                 curl_exec($ch);
                 curl_close($ch);
+
+                // TODO:: Check response and see if they used the correct account.
+                // TODO:: If the account was different, ask if they want to add it.
             }
         }
 
