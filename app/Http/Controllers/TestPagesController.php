@@ -17,19 +17,32 @@ class TestPagesController extends Controller {
             // After the authorize with Instagram button is clicked, it is redirected
             // here and this will get an access token and save it to the server database.
             $url = 'https://api.instagram.com/oauth/access_token';
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
+            $data = http_build_query([
                 'client_id' => 476627210291548,
                 'client_secret' => '4225c8494e335b2b1628fad0dd0332c7',
                 'grant_type' => 'authorization',
                 'redirect_url' => 'https://dashboard.shadow-social.com/auth',
                 'code' => substr($params['code'], 0, -2)
-            ]));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            ]);
 
-            $result = curl_exec($ch);
-            curl_close($ch);
+            $result = json_decode(file_get_contents("$url?$data"), true);
+
+            // $ch = curl_init($url);
+            // curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
+            //     'client_id' => 476627210291548,
+            //     'client_secret' => '4225c8494e335b2b1628fad0dd0332c7',
+            //     'grant_type' => 'authorization',
+            //     'redirect_url' => 'https://dashboard.shadow-social.com/auth',
+            //     'code' => substr($params['code'], 0, -2)
+            // ]));
+            // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+            // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+
+            // $result = curl_exec($ch);
+            // curl_close($ch);
+
+            error_log(json_encode($result));
 
             if ($result) {
                 $result['action'] = 'addAccessToken';
