@@ -19,16 +19,18 @@ class TestPagesController extends Controller {
             // After the authorize with Instagram button is clicked, it is redirected
             // here and this will get an access token and save it to the server database.
             $url = 'https://api.instagram.com/oauth/access_token';
-            $data = query_params([
+            $data = [
                 'client_id' => 476627210291548,
                 'client_secret' => '4225c8494e335b2b1628fad0dd0332c7',
                 'grant_type' => 'authorization',
                 'redirect_url' => 'https://dashboard.shadow-social.com/auth',
                 'code' => substr($params['code'], 0, -2)
-            ]);
+            ];
 
             $client = new Client();
-            $response = $client->request('GET', "$url?$data");
+            $response = $client->request('POST', $url, [
+                'form_params' => $data
+            ]);
 
             echo $response->getStatusCode(); // 200
             echo $response->getHeaderLine('content-type'); // 'application/json; charset=utf8'
