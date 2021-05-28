@@ -67,4 +67,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('likes', ['as' => 'pages.cory.likes', 'uses' => 'CoryPagesController@likes']);
     Route::get('comments', ['as' => 'pages.cory.comments', 'uses' => 'CoryPagesController@comments']);
     Route::get('posts', ['as' => 'pages.cory.posts', 'uses' => 'CoryPagesController@posts']);
+    Route::get('scheduling', ['as' => 'pages.cory.scheduling', 'uses' => 'CoryPagesController@scheduling']);
+    Route::get('followers', ['as' => 'pages.cory.followers', 'uses' => 'CoryPagesController@followers']);
+    Route::get('demographics', ['as' => 'pages.cory.demographics', 'uses' => 'CoryPagesController@demographics']);
+    Route::get('reporting', ['as' => 'pages.cory.reporting', 'uses' => 'CoryPagesController@reporting']);
+    Route::get('hashtags', ['as' => 'pages.cory.hashtags', 'uses' => 'CoryPagesController@hashtags']);
+    Route::get('hashtag_generator', ['as' => 'pages.cory.hashtag_generator', 'uses' => 'CoryPagesController@hashtag_generator']);
 });

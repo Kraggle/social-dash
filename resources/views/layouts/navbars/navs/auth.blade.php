@@ -2,6 +2,8 @@
 <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
     <div class="container-fluid">
         <div class="navbar-wrapper">
+
+
             <div class="navbar-minimize d-inline">
                 <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip"
                     data-original-title="Sidebar toggle" data-placement="right">
@@ -17,6 +19,12 @@
                 </button>
             </div>
             <a class="navbar-brand" href="javascript:void(0)">{{ $titlePage }}</a>
+            <select class="selectpicker" data-size="7" data-style="btn btn-primary" title="Single Select">
+                <option disabled selected>Instagram Accounts</option>
+                <option value="2">@makemoneyfromhomeuk</option>
+                <option value="3">@mattymyers</option>
+                <option value="4">Add/Remove Accounts +-</option>
+              </select>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -24,6 +32,7 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
                 {{-- <li>

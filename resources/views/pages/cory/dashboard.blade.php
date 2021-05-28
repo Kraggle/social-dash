@@ -19,27 +19,58 @@
                                 <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
                                     <label class="btn btn-sm btn-warning btn-simple active" id="0">
                                         <input type="radio" name="options" checked>
-                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Accounts</span>
+                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Daily</span>
                                         <span class="d-block d-sm-none">
                                             <i class="tim-icons icon-single-02"></i>
                                         </span>
                                     </label>
                                     <label class="btn btn-sm btn-warning btn-simple" id="1">
                                         <input type="radio" class="d-none d-sm-none" name="options">
-                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Purchases</span>
+                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Weekly</span>
                                         <span class="d-block d-sm-none">
                                             <i class="tim-icons icon-gift-2"></i>
                                         </span>
                                     </label>
                                     <label class="btn btn-sm btn-warning btn-simple" id="2">
                                         <input type="radio" class="d-none" name="options">
-                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Sessions</span>
+                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Monthly</span>
+                                        <span class="d-block d-sm-none">
+                                            <i class="tim-icons icon-tap-02"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                 <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                                    <label class="btn btn-sm btn-warning btn-simple active" id="0">
+                                        <input type="radio" name="options" checked>
+                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Followers</span>
+                                        <span class="d-block d-sm-none">
+                                            <i class="tim-icons icon-single-02"></i>
+                                        </span>
+                                    </label>
+                                    <label class="btn btn-sm btn-warning btn-simple" id="1">
+                                        <input type="radio" class="d-none d-sm-none" name="options">
+                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Likes</span>
+                                        <span class="d-block d-sm-none">
+                                            <i class="tim-icons icon-gift-2"></i>
+                                        </span>
+                                    </label>
+                                    <label class="btn btn-sm btn-warning btn-simple" id="2">
+                                        <input type="radio" class="d-none" name="options">
+                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Comments</span>
+                                        <span class="d-block d-sm-none">
+                                            <i class="tim-icons icon-tap-02"></i>
+                                        </span>
+                                    </label>
+                                    <label class="btn btn-sm btn-warning btn-simple" id="3">
+                                        <input type="radio" class="d-none" name="options">
+                                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Posts</span>
                                         <span class="d-block d-sm-none">
                                             <i class="tim-icons icon-tap-02"></i>
                                         </span>
                                     </label>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="card-body">
@@ -352,279 +383,218 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="tools float-right">
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-link dropdown-toggle btn-icon" data-toggle="dropdown">
-                                    <i class="tim-icons icon-settings-gear-63"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#pablo">Action</a>
-                                    <a class="dropdown-item" href="#pablo">Another action</a>
-                                    <a class="dropdown-item" href="#pablo">Something else</a>
-                                    <a class="dropdown-item text-danger" href="#pablo">Remove Data</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h5 class="card-title">Management Table</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead class="text-primary">
-                                    <tr>
-                                        <th class="text-center">
-                                            #
-                                        </th>
-                                        <th>
-                                            Name
-                                        </th>
-                                        <th>
-                                            Job Position
-                                        </th>
-                                        <th>
-                                            Milestone
-                                        </th>
-                                        <th class="text-right">
-                                            Salary
-                                        </th>
-                                        <th class="text-right">
-                                            Actions
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="photo">
-                                                <img src="{{ asset('white') }}/img/tania.jpg" alt="photo">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            Tania Mike
-                                        </td>
-                                        <td>
-                                            Develop
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="progress-container progress-sm">
-                                                <div class="progress">
-                                                    <span class="progress-value">25%</span>
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            € 99,225
-                                        </td>
-                                        <td class="text-right">
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-success btn-link btn-icon btn-sm btn-neutral"
-                                                data-original-title="Tooltip on top" title="Refresh">
-                                                <i class="tim-icons icon-refresh-01"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-danger btn-link btn-icon btn-sm btn-neutral"
-                                                data-original-title="Tooltip on top" title="Delete">
-                                                <i class="tim-icons icon-simple-remove"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="photo">
-                                                <img src="{{ asset('white') }}/img/robi.jpg" alt="photo">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            John Doe
-                                        </td>
-                                        <td>
-                                            CEO
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="progress-container progress-sm">
-                                                <div class="progress">
-                                                    <span class="progress-value">77%</span>
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            € 89,241
-                                        </td>
-                                        <td class="text-right">
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-success btn-link btn-sm btn-icon btn-neutral"
-                                                data-original-title="Tooltip on top" title="Refresh">
-                                                <i class="tim-icons icon-refresh-01"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-danger btn-link btn-sm btn-icon btn-neutral"
-                                                data-original-title="Tooltip on top" title="Delete">
-                                                <i class="tim-icons icon-simple-remove"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="photo">
-                                                <img src="{{ asset('white') }}/img/lora.jpg" alt="photo">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            Alexa Mike
-                                        </td>
-                                        <td>
-                                            Design
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="progress-container progress-sm">
-                                                <div class="progress">
-                                                    <span class="progress-value">41%</span>
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 41%;"></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            € 92,144
-                                        </td>
-                                        <td class="text-right">
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-success btn-link btn-icon btn-sm btn-neutral"
-                                                data-original-title="Tooltip on top" title="Refresh">
-                                                <i class="tim-icons icon-refresh-01"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-danger btn-link btn-icon btn-sm btn-neutral"
-                                                data-original-title="Tooltip on top" title="Delete">
-                                                <i class="tim-icons icon-simple-remove"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="photo">
-                                                <img src="{{ asset('white') }}/img/jana.jpg" alt="photo">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            Jana Monday
-                                        </td>
-                                        <td>
-                                            Marketing
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="progress-container progress-sm">
-                                                <div class="progress">
-                                                    <span class="progress-value">50%</span>
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            € 49,990
-                                        </td>
-                                        <td class="text-right">
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-success btn-link btn-sm btn-icon"
-                                                data-original-title="Tooltip on top" title="Refresh">
-                                                <i class="tim-icons icon-refresh-01"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-danger btn-link btn-sm btn-icon"
-                                                data-original-title="Tooltip on top" title="Delete">
-                                                <i class="tim-icons icon-simple-remove"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="photo">
-                                                <img src="{{ asset('white') }}/img/mike.jpg" alt="photo">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            Paul Dickens
-                                        </td>
-                                        <td>
-                                            Develop
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="progress-container progress-sm">
-                                                <div class="progress">
-                                                    <span class="progress-value">100%</span>
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            € 69,201
-                                        </td>
-                                        <td class="text-right">
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-success btn-link btn-sm  btn-icon"
-                                                data-original-title="Tooltip on top" title="Refresh">
-                                                <i class="tim-icons icon-refresh-01"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-danger btn-link btn-sm btn-icon"
-                                                data-original-title="Tooltip on top" title="Delete">
-                                                <i class="tim-icons icon-simple-remove"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="photo">
-                                                <img src="{{ asset('white') }}/img/emilyz.jpg" alt="photo">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            Manuela Rico
-                                        </td>
-                                        <td>
-                                            Manager
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="progress-container progress-sm">
-                                                <div class="progress">
-                                                    <span class="progress-value">15%</span>
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 15%;"></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            € 99,201
-                                        </td>
-                                        <td class="text-right">
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-success btn-link btn-sm btn-icon"
-                                                data-original-title="Tooltip on top" title="Refresh">
-                                                <i class="tim-icons icon-refresh-01"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip"
-                                                class="btn btn-danger btn-link btn-sm btn-icon"
-                                                data-original-title="Tooltip on top" title="Delete">
-                                                <i class="tim-icons icon-simple-remove"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="tools float-right">
+            <div class="dropdown">
+              <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-toggle="dropdown">
+                <i class="tim-icons icon-settings-gear-63"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item text-danger" href="#">Remove Data</a>
+              </div>
             </div>
+          </div>
+          <h4 class="card-title">Recent Comments</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <tr>
+                  <th class="text-center">
+                    Profile
+                  </th>
+                  <th>
+                    Instagram UN
+                  </th>
+                  <th>
+                    Followers
+                  </th>
+                  <th class="text-center">
+                    Description
+                  </th>
+                  <th class="text-right">
+                    Total Comments
+                  </th>
+                  <th class="text-right">
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">
+                    <div class="photo">
+                      <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                    </div>
+                  </td>
+                  <td>
+                    @AndrewMike
+                  </td>
+                  <td>
+                    3,198
+                  </td>
+                  <td class="text-center">
+                    Great quality content! Ke...
+                  </td>
+                  <td class="text-right">
+                    7
+                  </td>
+                  <td class="text-right">
+                    <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
+                      <i class="tim-icons icon-refresh-01"></i>
+                    </button>
+                    <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
+                      <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="photo">
+                      <img src="{{ asset('white') }}/img/robi.jpg" alt="Table image">
+                    </div>
+                  </td>
+                  <td>
+                    @JohnDoe
+                  </td>
+                  <td>
+                    81,923
+                  </td>
+                  <td class="text-center">
+                    Check out this post @fd...
+                  </td>
+                  <td class="text-right">
+                    26
+                  </td>
+                  <td class="text-right">
+                    <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
+                      <i class="tim-icons icon-refresh-01"></i>
+                    </button>
+                    <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
+                      <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="photo">
+                      <img src="{{ asset('white') }}/img/lora.jpg" alt="Table image">
+                    </div>
+                  </td>
+                  <td>
+                    @AlexMike
+                  </td>
+                  <td>
+                    821
+                  </td>
+                  <td class="text-center">
+                    Always love your posts man...
+                  </td>
+                  <td class="text-right">
+                    1
+                  </td>
+                  <td class="text-right">
+                    <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
+                      <i class="tim-icons icon-refresh-01"></i>
+                    </button>
+                    <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
+                      <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="photo">
+                      <img src="{{ asset('white') }}/img/jana.jpg" alt="Table image">
+                    </div>
+                  </td>
+                  <td>
+                    @MikeMonday
+                  </td>
+                  <td>
+                    9,384
+                  </td>
+                  <td class="text-center">
+                    How did you manage to ta...
+                  </td>
+                  <td class="text-right">
+                    1
+                  </td>
+                  <td class="text-right">
+                    <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
+                      <i class="tim-icons icon-refresh-01"></i>
+                    </button>
+                    <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
+                      <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="photo">
+                      <img src="{{ asset('white') }}/img/robi.jpg" alt="Table image">
+                    </div>
+                  </td>
+                  <td>
+                    @PaulDickens
+                  </td>
+                  <td>
+                    390
+                  </td>
+                  <td class="text-center">
+                    Thanks for sharing man!
+                  </td>
+                  <td class="text-right">
+                    1
+                  </td>
+                  <td class="text-right">
+                    <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
+                      <i class="tim-icons icon-refresh-01"></i>
+                    </button>
+                    <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
+                      <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="photo">
+                      <img src="{{ asset('white') }}/img/emilyz.jpg" alt="Table image">
+                    </div>
+                  </td>
+                  <td>
+                    @mattymyers
+                  </td>
+                  <td>
+                    102,349
+                  </td>
+                  <td class="text-center">
+                    Great content! Check th...
+                  </td>
+                  <td class="text-right">
+                    41
+                  </td>
+                  <td class="text-right">
+                    <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
+                      <i class="tim-icons icon-refresh-01"></i>
+                    </button>
+                    <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
+                      <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">

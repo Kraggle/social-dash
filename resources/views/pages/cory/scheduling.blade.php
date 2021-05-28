@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'item-management', 'menuParent' => 'laravel', 'titlePage' => __('Post Scheduling')])
+@extends('layouts.app', ['activePage' => 'scheduling', 'menuParent' => 'dashboard', 'titlePage' => __('Post Scheduling')])
 
 @section('content')
   <div class="content">
@@ -21,19 +21,19 @@
                   <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
                     <thead class="text-primary">
                       <th>
-                          {{ __('Name') }}
+                          {{ __('Picture') }}
                       </th>
                       <th>
-                        {{ __('Category') }}
+                        {{ __('Description') }}
                       </th>
                       <th>
-                        {{ __('Picture') }}
+                        {{ __('Hashtags') }}
                       </th>
                       <th>
-                        {{ __('Tags') }}
+                        {{ __('Schedule Date') }}
                       </th>
                       <th>
-                        {{ __('Creation date') }}
+                        {{ __('Schedule Time') }}
                       </th>
                       @can('manage-items', App\User::class)
                         <th class="text-right">
@@ -44,14 +44,14 @@
                     <tbody>
                       @foreach($items as $item)
                         <tr>
+                        <td>
+                            <img src="{{ $item->path() }}" alt="" style="max-width: 200px;">
+                          </td>
                           <td>
                             {{ $item->name }}
                           </td>
                           <td>
                             {{ $item->category->name }}
-                          </td>
-                          <td>
-                            <img src="{{ $item->path() }}" alt="" style="max-width: 200px;">
                           </td>
                           <td>
                             @foreach ($item->tags as $tag)

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'profile', 'menuParent' => 'laravel', 'titlePage' => __('User Profile')])
+@extends('layouts.app', ['activePage' => 'profile', 'menuParent' => 'laravel', 'titlePage' => __('My Profile')])
 
 @section('content')
 <div class="content">
@@ -56,7 +56,7 @@
                 </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary pull-right">{{ __('Update Profile') }}</button>
+            <button type="submit" class="btn btn-warning pull-right">{{ __('Update Profile') }}</button>
             <div class="clearfix"></div>
           </div>
         </form>
@@ -97,7 +97,7 @@
                 </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary pull-right">{{ __('Change password') }}</button>
+            <button type="submit" class="btn btn-warning pull-right">{{ __('Change password') }}</button>
             <div class="clearfix"></div>
           </form>
         </div>

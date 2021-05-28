@@ -3,7 +3,7 @@
 @section('content')
 <div class="content">
   <div class="header text-center">
-    <h3 class="title">Timeline</h3>
+    <h3 class="title">Live Support</h3>
   </div>
   <div class="row">
     <div class="col-md-12">
@@ -12,14 +12,15 @@
           <ul class="timeline">
             <li class="timeline-inverted">
               <div class="timeline-badge danger">
-                <i class="tim-icons icon-planet"></i>
+                <i class="tim-icons icon-chat-33"></i>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <span class="badge badge-pill badge-danger">Some Title</span>
+                  <span class="badge badge-pill badge-danger">Cory Beevers</span>
                 </div>
                 <div class="timeline-body">
-                  <p>Wifey made the best Father's Day meal ever. So thankful so happy so blessed. Thank you for making my family We just had fun with the “future” theme !!! It was a fun night all together ... The always rude Kanye Show at 2am Sold Out Famous viewing @ Figueroa and 12th in downtown.</p>
+                  <p>If I had a problem or wanted to request a new feature to be available on the tool I would type it here. Once a message has been sent, it will send us an email with the query for us to reply to.
+                  </p>
                 </div>
                 <h6>
                   <i class="ti-time"></i> 11 hours ago via Twitter
@@ -27,56 +28,66 @@
               </div>
             </li>
             <li>
-              <div class="timeline-badge success">
-                <i class="tim-icons icon-user-run"></i>
+              <div class="timeline-badge warning">
+                <i class="tim-icons icon-chat-33"></i>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <span class="badge badge-pill badge-success">Another One</span>
+                  <span class="badge badge-pill badge-warning">Social Shadow</span>
                 </div>
                 <div class="timeline-body">
-                  <p>Thank God for the support of my wife and real friends. I also wanted to point out that it’s the first album to go number 1 off of streaming!!! I love you Ellen and also my number one design rule of anything I do from shoes to music to homes is that Kim has to like it....</p>
+                  <p>This would be us responding with our feed back or support on the topic in discussion. We can add in different solutions for the user to achieve what they want or even request to developers for specific new features to be included.</p>
                 </div>
+                <div class="timeline-footer">
+                    <div class="dropdown float-right">
+                      <button type="button" class="btn btn-round btn-warning dropdown-toggle float-right" data-toggle="dropdown">
+                        <i>respond</i>
+                      </button>
+                      <div class="dropdown-menu float-right">
+                        <a class="dropdown-item float-right" href="#">Reply</a>
+                        <a class="dropdown-item float-right" href="#">Like</a>
+                        <a class="dropdown-item float-right" href="#">Report</a>
+                      </div>
+                    </div>
               </div>
             </li>
             <li class="timeline-inverted">
-              <div class="timeline-badge info">
-                <i class="tim-icons icon-notes"></i>
+              <div class="timeline-badge danger">
+                <i class="tim-icons icon-chat-33"></i>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <span class="badge badge-pill badge-info">Another Title</span>
+                  <span class="badge badge-pill badge-danger">Cory Beevers</span>
                 </div>
                 <div class="timeline-body">
-                  <p>Called I Miss the Old Kanye That’s all it was Kanye And I love you like Kanye loves Kanye Famous viewing @ Figueroa and 12th in downtown LA 11:10PM</p>
-                  <p>What if Kanye made a song about Kanye Royère doesn't make a Polar bear bed but the Polar bear couch is my favorite piece of furniture we own It wasn’t any Kanyes Set on his goals Kanye</p>
+                  <p>If I had a problem or wanted to request a new feature to be available on the tool I would type it here. Once a message has been sent, it will send us an email with the query for us to reply to.</p>
                   <hr>
-                </div>
-                <div class="timeline-footer">
-                  <div class="dropdown">
-                    <button type="button" class="btn btn-round btn-info dropdown-toggle" data-toggle="dropdown">
-                      <i class="tim-icons icon-settings-gear-63"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </li>
             <li>
               <div class="timeline-badge warning">
-                <i class="tim-icons icon-gift-2"></i>
+                <i class="tim-icons icon-chat-33"></i>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <span class="badge badge-pill badge-warning">Another One</span>
+                  <span class="badge badge-pill badge-warning">Social Shadow</span>
                 </div>
                 <div class="timeline-body">
-                  <p>Tune into Big Boy's 92.3 I'm about to play the first single from Cruel Winter also to Kim’s hair and makeup Lorraine jewelry and the whole style squad at Balmain and the Yeezy team. Thank you Anna for the invite thank you to the whole Vogue team</p>
+                  <p>This would be us responding with our feed back or support on the topic in discussion. We can add in different solutions for the user to achieve what they want or even request to developers for specific new features to be included.</p>
                 </div>
+                <div class="timeline-footer">
+                    <div class="dropdown float-right">
+                      <button type="button" class="btn btn-round btn-warning dropdown-toggle float-right" data-toggle="dropdown">
+                        <i>respond</i>
+                      </button>
+                      <div class="dropdown-menu float-right">
+                        <a class="dropdown-item float-right" href="#">Reply</a>
+                        <a class="dropdown-item float-right" href="#">Like</a>
+                        <a class="dropdown-item float-right" href="#">Report</a>
+                      </div>
+                    </div>
+              </div>
               </div>
             </li>
           </ul>

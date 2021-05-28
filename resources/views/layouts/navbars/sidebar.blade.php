@@ -11,10 +11,10 @@
     <div class="sidebar-wrapper">
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-                {{ __('CT') }}
+                {{ __('AA') }}
             </a>
             <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                {{ __('Creative Tim') }}
+                {{ __('Social Shadow') }}
             </a>
         </div>
         <ul class="nav">
@@ -25,7 +25,7 @@
                 </a>
             </li>
 
-            <li class="{{ $menuParent == 'analytics' || $activePage == 'dashboard' ? ' active' : '' }}">
+            <li class="{{ $menuParent == 'analytics' ? ' active' : '' }}">
                 <a data-toggle="collapse" href="#analytics">
                     <i class="fab fa-laravel"></i>
                     <p>
@@ -33,9 +33,16 @@
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse {{ $menuParent == 'analytics' || $activePage == 'dashboard' ? ' show' : '' }}"
+                <div class="collapse {{ $menuParent == 'analytics' ? ' show' : '' }}"
                     id="analytics">
                     <ul class="nav">
+                        <li class="{{ $activePage == 'followers' ? ' active' : '' }}">
+                            <a href="{{ route('pages.cory.followers') }}">
+                                <span class="sidebar-mini-icon">P</span>
+                                <span class="sidebar-normal"> {{ __('Followers') }} </span>
+                            </a>
+                        </li>
+
                         <li class="{{ $activePage == 'likes' ? ' active' : '' }}">
                             <a href="{{ route('pages.cory.likes') }}">
                                 <span class="sidebar-mini-icon">L</span>
@@ -54,11 +61,77 @@
                                 <span class="sidebar-normal"> {{ __('Posts') }} </span>
                             </a>
                         </li>
+                        <li class="{{ $activePage == 'demographics' ? ' active' : '' }}">
+                            <a href="{{ route('pages.cory.demographics') }}">
+                                <span class="sidebar-mini-icon">P</span>
+                                <span class="sidebar-normal"> {{ __('Demographics') }} </span>
+                            </a>
+                        </li>
+
+                        <li class="{{ $activePage == 'hashtags' ? ' active' : '' }}">
+                            <a href="{{ route('pages.cory.hashtags') }}">
+                                <span class="sidebar-mini-icon">P</span>
+                                <span class="sidebar-normal"> {{ __('Hashtags') }} </span>
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
             </li>
 
-            <li class="{{ $menuParent == 'laravel' ? ' active' : '' }}">
+            <li class="{{ $activePage == 'scheduling' ? ' active' : '' }}">
+                <a href="{{ route('pages.cory.scheduling') }}">
+                    <i class="tim-icons icon-time-alarm"></i>
+                    <p>{{ __('Scheduling') }}</p>
+                </a>
+            </li>
+
+            <li class="{{ $activePage == 'hashtag_generator' ? ' active' : '' }}">
+                <a href="{{ route('pages.cory.hashtag_generator') }}">
+                    <i class="tim-icons icon-atom"></i>
+                    <p>{{ __('hashtag_generator') }}</p>
+                </a>
+            </li>
+
+            <li class="{{ $activePage == 'role-management' ? ' active' : '' }}">
+                <a href="{{ route('role.index') }}">
+                    <i class="tim-icons icon-badge"></i>
+                    <p>{{ __('Clients') }}</p>
+                </a>
+            </li>
+
+            <li class="{{ $activePage == 'reporting' ? ' active' : '' }}">
+                <a href="{{ route('pages.cory.reporting') }}">
+                    <i class="tim-icons icon-single-copy-04"></i>
+                    <p>{{ __('Reporting') }}</p>
+                </a>
+            </li>
+
+            <li class="{{ $activePage == 'user-management' ? ' active' : '' }}">
+                <a href="{{ route('user.index') }}">
+                    <i class="tim-icons icon-single-02"></i>
+                    <p>{{ __('Team') }}</p>
+                </a>
+            </li>
+
+            <li class="{{ $activePage == 'timeline' ? ' active' : '' }}">
+                <a href="{{ route('page.timeline') }}">
+                    <i class="tim-icons icon-email-85"></i>
+                    <p>{{ __('support') }}</p>
+                </a>
+            </li>
+
+            <li class="{{ $activePage == 'profile' ? ' active' : '' }}">
+                <a href="{{ route('profile.edit') }}">
+                    <i class="tim-icons icon-settings-gear-63"></i>
+                    <p>{{ __('Settings') }}</p>
+                </a>
+            </li>
+
+
+
+{{--
+             <li class="{{ $menuParent == 'laravel' ? ' active' : '' }}">
                 <a data-toggle="collapse" href="#laravelExamples">
                     <i class="fab fa-laravel"></i>
                     <p>
@@ -66,39 +139,16 @@
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse {{ $menuParent == 'laravel' || $activePage == 'dashboard' ? ' show' : '' }}"
+                <div class="collapse {{ $menuParent == 'laravel' ? ' show' : '' }}"
                     id="laravelExamples">
                     <ul class="nav">
-                        <li class="{{ $activePage == 'profile' ? ' active' : '' }}">
-                            <a href="{{ route('profile.edit') }}">
-                                <span class="sidebar-mini-icon">UP</span>
-                                <span class="sidebar-normal"> {{ __('User profile') }} </span>
-                            </a>
-                        </li>
-                        @can('manage-users', App\User::class)
-                            <li class="{{ $activePage == 'role-management' ? ' active' : '' }}">
-                                <a href="{{ route('role.index') }}">
-                                    <span class="sidebar-mini-icon">RM</span>
-                                    <span class="sidebar-normal"> {{ __('Role Management') }} </span>
-                                </a>
-                            </li>
-                        @endcan
-                        @can('manage-users', App\User::class)
-                            <li class="{{ $activePage == 'user-management' ? ' active' : '' }}">
-                                <a href="{{ route('user.index') }}">
-                                    <span class="sidebar-mini-icon">UM</span>
-                                    <span class="sidebar-normal"> {{ __('User Management') }} </span>
-                                </a>
-                            </li>
-                        @endcan
-                        @can('manage-items', App\User::class)
-                            <li class="{{ $activePage == 'category-management' ? ' active' : '' }}">
+
+                        <li class="{{ $activePage == 'category-management' ? ' active' : '' }}">
                                 <a href="{{ route('category.index') }}">
                                     <span class="sidebar-mini-icon">CM</span>
                                     <span class="sidebar-normal"> {{ __('Category Management') }} </span>
                                 </a>
                             </li>
-                        @endcan
                         @can('manage-items', App\User::class)
                             <li class="{{ $activePage == 'tag-management' ? ' active' : '' }}">
                                 <a href="{{ route('tag.index') }}">
@@ -362,7 +412,7 @@
                     <i class="tim-icons icon-time-alarm"></i>
                     <p>{{ __('Calendar') }}</p>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </div>
