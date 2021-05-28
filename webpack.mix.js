@@ -10,6 +10,5 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
 mix.sass('resources/scss/white-dashboard.scss', 'public/css')
     .sass('public/custom/style/main.scss', 'public/css');

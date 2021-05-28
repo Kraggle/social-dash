@@ -1,7 +1,8 @@
 {
-    "name": "socialshadow",
+    "name": "social-dash",
     "version": "1.0.0",
-    "description": "",
+    "description": "This is a tool for analysing Instagram account data.",
+    "url": "https://dashboard.social-shadow.com",
     "private": true,
     "scripts": {
         "dev": "npm run development",
@@ -12,13 +13,17 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
+    "repository": {
+        "directory": "",
+        "url": ""
+    },
     "devDependencies": {
-        "@types/custom": "file:./typings",
         "@types/bootstrap-notify": "^3.1.35",
+        "@types/custom": "file:./typings",
         "@types/jquery": "^3.2",
         "axios": "^0.21.1",
         "bootstrap": "^4.1.0",
-        "cross-env": "^5.2.1",
+        "cross-env": "^7.0.3",
         "jquery": "^3.2",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.5",

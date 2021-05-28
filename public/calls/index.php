@@ -1,8 +1,16 @@
 <?php
 
-require __DIR__ . '/../../vendor/autoload.php';
+/**
+ * This is a file that contains callbacks  for any purpose.
+ *
+ * @author Kraggle
+ */
 
-if (!$_REQUEST['action']) {
+require __DIR__ . '/../../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->safeLoad();
+
+if (!key_exists('action', $_REQUEST)) {
     echo json_encode([
         'success' => false,
         'message' => 'There was no action specified!'
@@ -23,7 +31,7 @@ $function();
 
 function igAccountExists() {
 
-    $ch = curl_init('http://server.test');
+    $ch = curl_init(env('SERVER_URL'));
     curl_setopt($ch, CURLOPT_HEADER, false);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-type: application/json"));
