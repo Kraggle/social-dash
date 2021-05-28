@@ -13,7 +13,7 @@
                 @can('create', App\User::class)
                   <div class="row">
                     <div class="col-12 text-right mb-3">
-                      <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">{{ __('Add user') }}</a>
+                      <a href="{{ route('user.create') }}" class="btn btn-sm btn-warning">{{ __('Add user') }}</a>
                     </div>
                   </div>
                 @endcan
@@ -67,7 +67,7 @@
                                   <form action="{{ route('user.destroy', $user) }}" method="post">
                                       @csrf
                                       @method('delete')
-                                      
+
                                       @can('update', $user)
                                         <a href="{{ route('user.edit', $user) }}" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="tim-icons icon-pencil"></i></a>
                                       @endcan
