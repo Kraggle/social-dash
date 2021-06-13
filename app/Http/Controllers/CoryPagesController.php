@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Item;
-
 class CoryPagesController extends Controller {
     /**
      * Display the likes page
@@ -37,8 +35,8 @@ class CoryPagesController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function scheduling(Item $model) {
-        return view('pages.cory.scheduling', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function scheduling() {
+        return view('pages.cory.scheduling');
     }
 
     /**
@@ -46,8 +44,8 @@ class CoryPagesController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function followers(Item $model) {
-        return view('pages.cory.followers', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function followers() {
+        return view('pages.cory.followers');
     }
 
     /**
@@ -55,8 +53,8 @@ class CoryPagesController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function demographics(Item $model) {
-        return view('pages.cory.demographics', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function demographics() {
+        return view('pages.cory.demographics');
     }
 
 
@@ -65,8 +63,8 @@ class CoryPagesController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function reporting(Item $model) {
-        return view('pages.cory.reporting', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function reporting() {
+        return view('pages.cory.reporting');
     }
 
     /**
@@ -74,8 +72,8 @@ class CoryPagesController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function hashtags(Item $model) {
-        return view('pages.cory.hashtags', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function hashtags() {
+        return view('pages.cory.hashtags');
     }
 
     /**
@@ -83,7 +81,7 @@ class CoryPagesController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function hashtag_generator(Item $model) {
-        return view('pages.cory.hashtag_generator', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function hashtag_generator() {
+        return view('pages.cory.hashtag_generator');
     }
 }

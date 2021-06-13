@@ -92,8 +92,8 @@
                 </a>
             </li>
 
-            <li class="{{ $activePage == 'role-management' ? ' active' : '' }}">
-                <a href="{{ route('role.index') }}">
+            <li class="{{ $activePage == 'account-management' ? ' active' : '' }}">
+                <a href="{{ route('account.index') }}">
                     <i class="tim-icons icon-badge"></i>
                     <p>{{ __('Clients') }}</p>
                 </a>

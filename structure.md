@@ -43,40 +43,148 @@
   - Teams have to have a team admin.
   - New members can be added to the team by the team admin or a team member that the admin has assigned to allow this feature.
   - If the team admin closes the team down all team members will also have no further access.
-- ***Settings***
-  - Used to store user, team and account settings.
+- ***Setting Defaults***
+  - Used to store default user, team and account settings.
   - This table contains the information about each of the possible settings including the type of setting, the default value and what it is meant for.
   - Only the admin can create settings.
   - Settings will be available in each of the other tables.
+- ***Settings***
+  - Used to store user, team and account settings.
+  - These will be linked to both the setting defaults and the appropriate table.
+- ***Posts***
+  - Used to store scheduled instagram posts.
+  - These will be attached to accounts.
+  - Notifications for these posts will be to the user that created them.
+  - If creator is in a team, they can delegate to a member of the team.
 
 ## Table Structure
 
-### Users
+### users
 
-| id | name | email | email_verified_at | password | picture | role_id | remember_token | created_at | updated_at |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Tester | test@example.com | (null) | $2n982nf9s | (null) | 1 | (null) | 2020-05-24 08:46:56 | 2021-04-16 14:23:16 |
+> Dashboard users.
 
-### Accounts
+| id | name | email | email_verified_at | password | picture | remember_token | created_at | updated_at |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+### user_role
+
+> Used to attach a role to a user.
+>
+> One to Many
+
+| user_id | role_id |
+| --- | --- |
+
+### user_team
+
+> Used to attach a user to a team.
+>
+> One to Many
+
+| user_id | team_id |
+| --- | --- |
+
+### user_setting
+
+> Used to attach a setting to a user.
+>
+> One to Many
+
+| user_id | setting_id |
+| --- | --- |
+
+### accounts
+
+> Instagram accounts.
 
 | id | pk | username | created_at | updated_at |
 | --- | --- | --- | --- | --- |
-| 1 | 87576 | t3st3r | 2020-05-24 08:46:56 | 2021-04-16 14:23:16 |
 
-### Roles
+### account_team
+
+> Used to attach an account to a team.
+>
+> Many to Many
+
+| account_id | team_id |
+| --- | --- |
+
+### account_setting
+
+> Used to attach a setting to an account.
+>
+> One to Many
+
+| account_id | setting_id |
+| --- | --- |
+
+### roles
+
+> The available roles of the users.
 
 | id | name | description | created_at | updated_at |
 | --- | --- | --- | --- | --- |
-| 1 | Admin | This is the administration role. | 2020-05-24 08:46:56 | 2021-04-16 14:23:16 |
 
-### Teams
+### teams
+
+> Each user belongs to a team, even if they are the only member.
 
 | id | name | created_at | updated_at |
 | --- | --- | --- | --- |
-| 1 | Tester Team | 2020-05-24 08:46:56 | 2021-04-16 14:23:16 |
 
-### Settings
+### team_setting
+
+> Used to attach a setting to a team.
+>
+> One to Many
+
+| team_id | setting_id |
+| --- | --- |
+
+### defaults
+
+> The default settings for each of the tables.
 
 | id | name | key | description | type | for_table | default | min_value | max_value | min_cost | max_cost | created_at | updated_at |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Scrape Interval | scrape_interval | A test setting | number | users | 500 | 1 | 600 | 20000 | 0 | 2020-05-24 08:46:56 | 2021-04-16 14:23:16 |
+
+### default_setting
+
+> Used to attach a role to a user.
+>
+> One to Many
+
+| default_id | setting_id |
+| --- | --- |
+
+### settings
+
+> Used to store the settings for each of the tables.
+
+| id | value | created_at | updated_at |
+| --- | --- | --- | --- |
+
+### posts
+
+> Used to store scheduled posts.
+
+| id | description | picture | hashtags | post_at | created_at | updated_at |
+| --- | --- | --- | --- | --- | --- | --- |
+
+### post_team
+
+> Used to attach a role to a user.
+>
+> One to One
+
+| post_id | team_id |
+| --- | --- |
+
+### post_setting
+
+> Used to attach a setting to a post.
+>
+> One to Many
+
+| post_id | setting_id |
+| --- | --- |

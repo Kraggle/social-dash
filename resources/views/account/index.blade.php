@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'account-management', 'menuParent' => 'laravel', 'titlePage' => __('Account Management')])
+@extends('layouts.app', ['activePage' => 'account-management', 'menuParent' => 'laravel', 'titlePage' => __('Client Management')])
 
 @section('content')
 <div class="content">

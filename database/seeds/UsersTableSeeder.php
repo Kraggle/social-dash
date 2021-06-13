@@ -20,17 +20,25 @@ class UsersTableSeeder extends Seeder {
 
         factory(App\User::class)->create([
             'id' => 2,
-            'name' => 'Creator',
-            'email' => 'creator@white.com',
+            'name' => 'Free',
+            'email' => 'free@white.com',
             'role_id' => 2,
             'picture' => '../white/img/lora.jpg'
         ]);
 
         factory(App\User::class)->create([
             'id' => 3,
-            'name' => 'Member',
-            'email' => 'member@white.com',
+            'name' => 'Team Admin',
+            'email' => 'teamadmin@white.com',
             'role_id' => 3,
+            'picture' => '../white/img/mike.jpg'
+        ]);
+
+        factory(App\User::class)->create([
+            'id' => 4,
+            'name' => 'Team Member',
+            'email' => 'teammember@white.com',
+            'role_id' => 4,
             'picture' => '../white/img/mike.jpg'
         ]);
     }

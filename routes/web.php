@@ -30,9 +30,6 @@ Route::get('pricing', 'ExamplePagesController@pricing')->name('page.pricing');
 Route::get('lock', 'ExamplePagesController@lock')->name('page.lock');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('category', 'CategoryController', ['except' => ['show']]);
-    Route::resource('tag', 'TagController', ['except' => ['show']]);
-    Route::resource('item', 'ItemController', ['except' => ['show']]);
     Route::resource('account', 'AccountController', ['except' => ['show']]);
     Route::resource('role', 'RoleController', ['except' => ['show', 'destroy']]);
     Route::resource('user', 'UserController', ['except' => ['show']]);
