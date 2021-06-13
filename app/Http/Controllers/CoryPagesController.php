@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Item;
 
 class CoryPagesController extends Controller {

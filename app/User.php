@@ -53,6 +53,15 @@ class User extends Authenticatable {
     }
 
     /**
+     * Get the accounts of the user
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function account() {
+        return $this->belongsToMany(Account::class);
+    }
+
+    /**
      * Get the path to the profile picture
      *
      * @return string

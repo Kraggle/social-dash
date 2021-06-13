@@ -6,15 +6,13 @@ use App\Category;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoryRequest extends FormRequest
-{
+class CategoryRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    public function authorize()
-    {
+    public function authorize() {
         return auth()->check();
     }
 
@@ -23,8 +21,7 @@ class CategoryRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             'name' => [
                 'required', 'min:3', Rule::unique((new Category)->getTable())->ignore($this->route()->category->id ?? null)

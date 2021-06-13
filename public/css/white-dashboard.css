@@ -15001,7 +15001,7 @@ fieldset[disabled] .btn-link.active {
 }
 
 .footer {
-  padding: 24px 30px;
+  padding: 17px 30px 17px 280px;
 }
 
 .footer [class*=container-] {
@@ -20309,7 +20309,7 @@ table.tablesorter thead tr .headerSortDown {
     padding-left: 130px;
   }
 
-  .sidebar-mini footer {
+  .sidebar-mini .main-panel > .footer {
     padding-left: 130px;
   }
 

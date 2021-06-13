@@ -6,8 +6,7 @@ use App\User;
 use App\Category;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class CategoryPolicy
-{
+class CategoryPolicy {
     use HandlesAuthorization;
 
     /**
@@ -16,8 +15,7 @@ class CategoryPolicy
      * @param  \App\User  $user
      * @return boolean
      */
-    public function viewAny(User $user)
-    {
+    public function viewAny(User $user) {
         return $user->isAdmin() || $user->isCreator();
     }
 
@@ -27,8 +25,7 @@ class CategoryPolicy
      * @param  \App\User  $user
      * @return boolean
      */
-    public function create(User $user)
-    {
+    public function create(User $user) {
         return $user->isAdmin() || $user->isCreator();
     }
 
@@ -39,11 +36,7 @@ class CategoryPolicy
      * @param  \App\Category  $category
      * @return boolean
      */
-    public function update(User $user, Category $category)
-    {
-        if (env('IS_DEMO')){
-            return ($user->isAdmin() || $user->isCreator()) && !in_array($category->id, [1]);
-        }
+    public function update(User $user, Category $category) {
         return ($user->isAdmin() || $user->isCreator());
     }
 
@@ -54,11 +47,7 @@ class CategoryPolicy
      * @param  \App\Category  $category
      * @return boolean
      */
-    public function delete(User $user, Category $category)
-    {
-        if (env('IS_DEMO')){
-            return ($user->isAdmin() || $user->isCreator()) && !in_array($category->id, [1,2]);
-        }
+    public function delete(User $user, Category $category) {
         return ($user->isAdmin() || $user->isCreator());
     }
 }

@@ -2,16 +2,14 @@
 
 use Illuminate\Database\Seeder;
 
-class TagsTableSeeder extends Seeder
-{
+class TagsTableSeeder extends Seeder {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run()
-    {
-        
+    public function run() {
+
         DB::table('tags')->insert([
             'id' => 1,
             'name' => 'Hot',
@@ -35,6 +33,5 @@ class TagsTableSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-
     }
 }

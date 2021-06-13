@@ -6,8 +6,7 @@ use App\User;
 use App\Item;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ItemPolicy
-{
+class ItemPolicy {
     use HandlesAuthorization;
 
     /**
@@ -16,8 +15,7 @@ class ItemPolicy
      * @param  \App\User  $user
      * @return boolean
      */
-    public function viewAny(User $user)
-    {
+    public function viewAny(User $user) {
         return true;
     }
 
@@ -27,8 +25,7 @@ class ItemPolicy
      * @param  \App\User  $user
      * @return boolean
      */
-    public function create(User $user)
-    {
+    public function create(User $user) {
         return $user->isAdmin() || $user->isCreator();
     }
 
@@ -39,11 +36,7 @@ class ItemPolicy
      * @param  \App\Item  $item
      * @return boolean
      */
-    public function update(User $user, Item $item)
-    {
-        if (env('IS_DEMO')){
-            return ($user->isAdmin() || $user->isCreator()) && !in_array($item->id, [1]);
-        }
+    public function update(User $user, Item $item) {
         return ($user->isAdmin() || $user->isCreator());
     }
 
@@ -54,11 +47,7 @@ class ItemPolicy
      * @param  \App\Item  $item
      * @return boolean
      */
-    public function delete(User $user, Item $item)
-    {
-        if (env('IS_DEMO')){
-            return ($user->isAdmin() || $user->isCreator()) && !in_array($item->id, [1, 2]);
-        }
+    public function delete(User $user, Item $item) {
         return ($user->isAdmin() || $user->isCreator());
     }
 }

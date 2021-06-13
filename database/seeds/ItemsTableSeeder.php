@@ -2,15 +2,13 @@
 
 use Illuminate\Database\Seeder;
 
-class ItemsTableSeeder extends Seeder
-{
+class ItemsTableSeeder extends Seeder {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run()
-    {
+    public function run() {
         DB::table('items')->insert([
             'id' => 1,
             'name' => '5 citybreak ideas for this year',

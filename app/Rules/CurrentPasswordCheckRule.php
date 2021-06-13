@@ -5,8 +5,7 @@ namespace App\Rules;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Contracts\Validation\Rule;
 
-class CurrentPasswordCheckRule implements Rule
-{
+class CurrentPasswordCheckRule implements Rule {
     /**
      * Determine if the validation rule passes.
      *
@@ -14,8 +13,7 @@ class CurrentPasswordCheckRule implements Rule
      * @param  mixed  $value
      * @return bool
      */
-    public function passes($attribute, $value)
-    {
+    public function passes($attribute, $value) {
         return Hash::check($value, auth()->user()->password);
     }
 
@@ -24,8 +22,7 @@ class CurrentPasswordCheckRule implements Rule
      *
      * @return string
      */
-    public function message()
-    {
+    public function message() {
         return __('The current password field does not match your password');
     }
 }

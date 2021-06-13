@@ -15,6 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers;
 
 use App\Tag;
@@ -23,10 +24,8 @@ use App\Category;
 use Carbon\Carbon;
 use App\Http\Requests\ItemRequest;
 
-class ItemController extends Controller
-{
-    public function __construct()
-    {
+class ItemController extends Controller {
+    public function __construct() {
         $this->authorizeResource(Item::class);
     }
 
@@ -36,8 +35,7 @@ class ItemController extends Controller
      * @param \App\Item  $model
      * @return \Illuminate\View\View
      */
-    public function index(Item $model)
-    {
+    public function index(Item $model) {
         return view('items.index', ['items' => $model->with(['tags', 'category'])->get()]);
     }
 
@@ -48,8 +46,7 @@ class ItemController extends Controller
      * @param  \App\Category $categoryModel
      * @return \Illuminate\View\View
      */
-    public function create(Tag $tagModel, Category $categoryModel)
-    {
+    public function create(Tag $tagModel, Category $categoryModel) {
         return view('items.create', [
             'tags' => $tagModel->get(['id', 'name']),
             'categories' => $categoryModel->get(['id', 'name'])
@@ -63,8 +60,7 @@ class ItemController extends Controller
      * @param  \App\Item  $model
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(ItemRequest $request, Item $model)
-    {
+    public function store(ItemRequest $request, Item $model) {
         $item = $model->create($request->merge([
             'picture' => $request->photo->store('pictures', 'public'),
             'show_on_homepage' => $request->show_on_homepage ? 1 : 0,
@@ -84,8 +80,7 @@ class ItemController extends Controller
      * @param  \App\Category $categoryModel
      * @return \Illuminate\View\View
      */
-    public function edit(Item $item, Tag $tagModel, Category $categoryModel)
-    {
+    public function edit(Item $item, Tag $tagModel, Category $categoryModel) {
         return view('items.edit', [
             'item' => $item->load('tags'),
             'tags' => $tagModel->get(['id', 'name']),
@@ -100,8 +95,7 @@ class ItemController extends Controller
      * @param  \App\Item  $item
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(ItemRequest $request, Item $item)
-    {
+    public function update(ItemRequest $request, Item $item) {
         $item->update(
             $request->merge([
                 'picture' => $request->photo ? $request->photo->store('pictures', 'public') : null,
@@ -122,8 +116,7 @@ class ItemController extends Controller
      * @param  \App\Item  $item
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Item $item)
-    {
+    public function destroy(Item $item) {
         $item->delete();
 
         return redirect()->route('item.index')->withStatus(__('Item successfully deleted.'));

@@ -15,8 +15,7 @@ use App\Policies\CategoryPolicy;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
-class AuthServiceProvider extends ServiceProvider
-{
+class AuthServiceProvider extends ServiceProvider {
     /**
      * The policy mappings for the application.
      *
@@ -28,6 +27,7 @@ class AuthServiceProvider extends ServiceProvider
         Item::class => ItemPolicy::class,
         Role::class => RolePolicy::class,
         Tag::class => TagPolicy::class,
+        Account::class => AccountPolicy::class,
     ];
 
     /**
@@ -35,12 +35,13 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
+    public function boot() {
         $this->registerPolicies();
 
         Gate::define('manage-items', 'App\Policies\UserPolicy@manageItems');
 
         Gate::define('manage-users', 'App\Policies\UserPolicy@manageUsers');
+
+        Gate::define('manage-accounts', 'App\Policies\UserPolicy@manageAccounts');
     }
 }

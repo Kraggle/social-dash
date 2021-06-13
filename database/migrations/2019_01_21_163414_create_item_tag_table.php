@@ -4,15 +4,13 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItemTagTable extends Migration
-{
+class CreateItemTagTable extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('item_tag', function (Blueprint $table) {
             $table->unsignedInteger('item_id');
             $table->unsignedInteger('tag_id');
@@ -27,8 +25,7 @@ class CreateItemTagTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('item_tag');
     }
 }

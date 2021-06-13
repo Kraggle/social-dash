@@ -15,6 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers;
 
 use App\Role;
@@ -22,10 +23,8 @@ use App\User;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
 
-class UserController extends Controller
-{
-    public function __construct()
-    {
+class UserController extends Controller {
+    public function __construct() {
         $this->authorizeResource(User::class);
     }
 
@@ -35,8 +34,7 @@ class UserController extends Controller
      * @param  \App\User  $model
      * @return \Illuminate\View\View
      */
-    public function index(User $model)
-    {
+    public function index(User $model) {
         $this->authorize('manage-users', User::class);
 
         return view('users.index', ['users' => $model->with('role')->get()]);
@@ -48,8 +46,7 @@ class UserController extends Controller
      * @param  \App\Role  $model
      * @return \Illuminate\View\View
      */
-    public function create(Role $model)
-    {
+    public function create(Role $model) {
         return view('users.create', ['roles' => $model->get(['id', 'name'])]);
     }
 
@@ -60,8 +57,7 @@ class UserController extends Controller
      * @param  \App\User  $model
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(UserRequest $request, User $model)
-    {
+    public function store(UserRequest $request, User $model) {
         $model->create($request->merge([
             'picture' => $request->photo ? $request->photo->store('profile', 'public') : null,
             'password' => Hash::make($request->get('password'))
@@ -77,8 +73,7 @@ class UserController extends Controller
      * @param  \App\Role  $model
      * @return \Illuminate\View\View
      */
-    public function edit(User $user, Role $model)
-    {
+    public function edit(User $user, Role $model) {
         return view('users.edit', ['user' => $user->load('role'), 'roles' => $model->get(['id', 'name'])]);
     }
 
@@ -89,8 +84,7 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(UserRequest $request, User $user)
-    {
+    public function update(UserRequest $request, User $user) {
         $user->update(
             $request->merge([
                 'picture' => $request->photo ? $request->photo->store('profile', 'public') : $user->picture,
@@ -107,8 +101,7 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(User $user)
-    {
+    public function destroy(User $user) {
         $user->delete();
 
         return redirect()->route('user.index')->withStatus(__('User successfully deleted.'));

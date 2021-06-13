@@ -8,15 +8,13 @@ use App\Category;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class ItemRequest extends FormRequest
-{
+class ItemRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    public function authorize()
-    {
+    public function authorize() {
         return auth()->check();
     }
 
@@ -25,14 +23,13 @@ class ItemRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             'name' => [
                 'required', 'min:3', Rule::unique((new Item)->getTable())->ignore($this->route()->item->id ?? null)
             ],
             'category_id' => [
-                'required', 'exists:'.(new Category)->getTable().',id'
+                'required', 'exists:' . (new Category)->getTable() . ',id'
             ],
             'description' => [
                 'required'
@@ -44,7 +41,7 @@ class ItemRequest extends FormRequest
                 'required'
             ],
             'tags.*' => [
-                'exists:'.(new Tag)->getTable().',id'
+                'exists:' . (new Tag)->getTable() . ',id'
             ],
             'status' => [
                 'required',
@@ -62,8 +59,7 @@ class ItemRequest extends FormRequest
      *
      * @return array
      */
-    public function attributes()
-    {
+    public function attributes() {
         return [
             'category_id' => 'category',
             'photo' => 'picture'

@@ -1,3 +1,11 @@
+@php
+$titlePage = isset($titlePage) ? $titlePage : 'Here';
+$menuParent = isset($menuParent) ? $menuParent : '';
+$activePage = isset($activePage) ? $activePage : '';
+$class = isset($class) ? $class : '';
+$classPage = isset($classPage) ? $classPage : '';
+@endphp
+
 {{-- =========================================================
 * Argon Dashboard PRO - v1.0.0
 =========================================================
@@ -19,7 +27,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('white') }}/img/apple-icon.png">
     <link rel="icon" type="image/png" href="{{ asset('white') }}/img/favicon.png">
 
-    <title>{{ $title ?? '' }} &nbsp;|&nbsp; {{ env('APP_NAME') }}</title>
+    <title>{{ $titlePage }} &nbsp;@&nbsp; {{ env('APP_NAME') ?? 'Social Shadow' }}</title>
 
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,700,800,900" rel="stylesheet" />
@@ -35,30 +43,16 @@
 </head>
 
 <body class="white-content {{ $class ?? '' }}">
-    <style>
-        #ofBar {
-            display: none;
-        }
 
-    </style>
-
-    @if (auth()->check() &&
-    !in_array(
-        request()->route()->getName(),
-        ['welcome', 'page.pricing', 'page.lock', 'page.error'],
-    ))
+    @if (auth()->check() && !in_array(request()->route()->getName(),
+        ['welcome', 'page.pricing', 'page.lock', 'page.error']))
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
         @include('layouts.page_templates.auth')
     @else
-        @include('layouts.page_templates.guest')
+    @include('layouts.page_templates.guest')
     @endif
-
-
-
-    <!--   Core JS Files   -->
-    <script src="{{ asset('white') }}/js/core/jquery.min.js"></script>
 
     <!--   Core JS Files   -->
     <script src="{{ asset('white') }}/js/core/jquery.min.js"></script>
@@ -107,82 +101,82 @@
     <script src="{{ asset('white') }}/demo/jquery.sharrre.js"></script>
     <script>
         $(document).ready(function() {
-            @if (session('status'))
-                $.notify({
-                icon: "tim-icons icon-check-2",
-                message: "{{ session('status') }}"
-                }, {
-                type: 'success',
-                timer: 3000,
-                placement: {
-                from: 'top',
-                align: 'right'
+            @if(session('status'))
+            $.notify({
+                icon: "tim-icons icon-check-2"
+                , message: "{{ session('status') }}"
+            }, {
+                type: 'success'
+                , timer: 3000
+                , placement: {
+                    from: 'top'
+                    , align: 'right'
                 }
-                });
+            });
             @endif
 
-            @if (session('info'))
-                $.notify({
-                icon: "tim-icons icon-check-2",
-                message: "{{ session('info') }}"
-                }, {
-                type: 'info',
-                timer: 3000,
-                placement: {
-                from: 'top',
-                align: 'right'
+            @if(session('info'))
+            $.notify({
+                icon: "tim-icons icon-check-2"
+                , message: "{{ session('info') }}"
+            }, {
+                type: 'info'
+                , timer: 3000
+                , placement: {
+                    from: 'top'
+                    , align: 'right'
                 }
-                });
+            });
             @endif
 
             $('#facebook').sharrre({
                 share: {
                     facebook: true
-                },
-                enableHover: false,
-                enableTracking: false,
-                enableCounter: false,
-                click: function(api, options) {
+                }
+                , enableHover: false
+                , enableTracking: false
+                , enableCounter: false
+                , click: function(api, options) {
                     api.simulateClick();
                     api.openPopup('facebook');
-                },
-                template: '<i class="fab fa-facebook-f"></i> Facebook',
-                url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
+                }
+                , template: '<i class="fab fa-facebook-f"></i> Facebook'
+                , url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
             });
 
             $('#google').sharrre({
                 share: {
                     googlePlus: true
-                },
-                enableCounter: false,
-                enableHover: false,
-                enableTracking: true,
-                click: function(api, options) {
+                }
+                , enableCounter: false
+                , enableHover: false
+                , enableTracking: true
+                , click: function(api, options) {
                     api.simulateClick();
                     api.openPopup('googlePlus');
-                },
-                template: '<i class="fab fa-google-plus"></i> Google',
-                url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
+                }
+                , template: '<i class="fab fa-google-plus"></i> Google'
+                , url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
             });
 
             $('#twitter').sharrre({
                 share: {
                     twitter: true
-                },
-                enableHover: false,
-                enableTracking: false,
-                enableCounter: false,
-                buttons: {
+                }
+                , enableHover: false
+                , enableTracking: false
+                , enableCounter: false
+                , buttons: {
                     twitter: {
                         via: 'CreativeTim'
                     }
-                },
-                click: function(api, options) {
+                }
+                , click: function(api, options) {
                     api.simulateClick();
                     api.openPopup('twitter');
-                },
-                template: '<i class="fab fa-twitter"></i> Twitter',
-                url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
+                }
+                , template: '<i class="fab fa-twitter"></i> Twitter'
+                , url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
             });
         });
 

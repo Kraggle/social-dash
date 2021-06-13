@@ -15,17 +15,16 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers;
 
-class FormPagesController extends Controller
-{
+class FormPagesController extends Controller {
     /**
      * Display the regular forms page
      *
      * @return \Illuminate\View\View
      */
-    public function regularForms()
-    {
+    public function regularForms() {
         return view('pages.forms.form_regular');
     }
 
@@ -34,8 +33,7 @@ class FormPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function extendedForms()
-    {
+    public function extendedForms() {
         return view('pages.forms.form_extended');
     }
 
@@ -44,8 +42,7 @@ class FormPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function validationForms()
-    {
+    public function validationForms() {
         return view('pages.forms.form_validation');
     }
 
@@ -54,8 +51,7 @@ class FormPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function wizardForms()
-    {
+    public function wizardForms() {
         return view('pages.forms.form_wizard');
     }
 }
