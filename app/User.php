@@ -31,7 +31,7 @@ class User extends Authenticatable {
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'picture', 'role_id'
+        'name', 'email', 'password', 'picture'
     ];
 
     /**
@@ -53,12 +53,30 @@ class User extends Authenticatable {
     }
 
     /**
-     * Get the accounts of the user
+     * Get the team of the user
+     *
+     * @return \App\Team
+     */
+    public function team() {
+        return $this->belongsTo(Team::class);
+    }
+
+    /**
+     * Get the user settings.
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function account() {
-        return $this->belongsToMany(Account::class);
+    public function settings() {
+        return $this->hasMany(Setting::class);
+    }
+
+    /**
+     * Get the user posts.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function posts() {
+        return $this->hasMany(Post::class);
     }
 
     /**

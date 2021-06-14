@@ -2,7 +2,7 @@
 'class' => 'lock-page',
 'classPage' => 'lick-page',
 'activePage' => 'lock',
-'title' => __('White Dashboard'),
+'titlePage' => __('White Dashboard'),
 ])
 
 

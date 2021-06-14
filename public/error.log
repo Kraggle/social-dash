@@ -40,3 +40,17 @@ Stack trace:
 #2 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
 #3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('E:\\laragon\\www\\...', Array)
 #4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->e in E:\laragon\www\social-dash\storage\framework\views\ac50aa6402c63d46c4ddd2821f1cb04d099de223.php on line 12
+[14-Jun-2021 01:21:38 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined variable: titlePage in E:\laragon\www\social-dash\storage\framework\views\ac50aa6402c63d46c4ddd2821f1cb04d099de223.php:12
+Stack trace:
+#0 E:\laragon\www\social-dash\storage\framework\views\ac50aa6402c63d46c4ddd2821f1cb04d099de223.php(12): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'E:\\laragon\\www\\...', 12, Array)
+#1 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
+#2 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('E:\\laragon\\www\\...', Array)
+#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->e in E:\laragon\www\social-dash\storage\framework\views\ac50aa6402c63d46c4ddd2821f1cb04d099de223.php on line 12
+[14-Jun-2021 02:28:41 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined variable: titlePage in E:\laragon\www\social-dash\storage\framework\views\ac50aa6402c63d46c4ddd2821f1cb04d099de223.php:12
+Stack trace:
+#0 E:\laragon\www\social-dash\storage\framework\views\ac50aa6402c63d46c4ddd2821f1cb04d099de223.php(12): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'E:\\laragon\\www\\...', 12, Array)
+#1 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
+#2 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('E:\\laragon\\www\\...', Array)
+#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->e in E:\laragon\www\social-dash\storage\framework\views\ac50aa6402c63d46c4ddd2821f1cb04d099de223.php on line 12

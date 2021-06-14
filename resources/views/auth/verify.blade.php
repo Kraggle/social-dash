@@ -2,7 +2,7 @@
 'class' => 'off-canvas-sidebar',
 'classPage' => 'login-page',
 'activePage' => '',
-'title' => __('Material Dashboard'),
+'titlePage' => __('Material Dashboard'),
 'pageBackground' => asset("material").'/img/login.jpg'
 ])
 

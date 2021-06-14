@@ -2,7 +2,7 @@
 'class' => 'register-page',
 'classPage' => 'register-page',
 'activePage' => 'register',
-'title' => __('Register')
+'titlePage' => __('Register')
 ])
 
 @section('content')

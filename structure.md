@@ -21,7 +21,7 @@
   - ***Free***
     - This for a new account.
     - They can only access their account for 7 days without purchasing anything.
-    - This user can only view the initial scrape of their first account they added while creating their account and the main account we share with everyone.
+    - This user can only view the main account we share with everyone.
     - Once they purchase anything they become a team admin.
     - Can also request to join a team if they know the team name.
   - ***Team Admin***
@@ -62,65 +62,26 @@
 ### users
 
 > Dashboard users.
+>
+> Linked to > (one) role > (one) team > (many) setting > (many) post
 
 | id | name | email | email_verified_at | password | picture | remember_token | created_at | updated_at |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-### user_role
-
-> Used to attach a role to a user.
->
-> One to Many
-
-| user_id | role_id |
-| --- | --- |
-
-### user_team
-
-> Used to attach a user to a team.
->
-> One to Many
-
-| user_id | team_id |
-| --- | --- |
-
-### user_setting
-
-> Used to attach a setting to a user.
->
-> One to Many
-
-| user_id | setting_id |
-| --- | --- |
-
 ### accounts
 
 > Instagram accounts.
+>
+> Linked to > (one) team > (many) post > (many) setting
 
 | id | pk | username | created_at | updated_at |
 | --- | --- | --- | --- | --- |
 
-### account_team
-
-> Used to attach an account to a team.
->
-> Many to Many
-
-| account_id | team_id |
-| --- | --- |
-
-### account_setting
-
-> Used to attach a setting to an account.
->
-> One to Many
-
-| account_id | setting_id |
-| --- | --- |
-
 ### roles
 
 > The available roles of the users.
+>
+> Linked to > (many) user
 
 | id | name | description | created_at | updated_at |
 | --- | --- | --- | --- | --- |
@@ -128,38 +89,26 @@
 ### teams
 
 > Each user belongs to a team, even if they are the only member.
+>
+> Linked to > (many) user > (many) setting > (many) account > (many) posts
 
 | id | name | created_at | updated_at |
 | --- | --- | --- | --- |
 
-### team_setting
-
-> Used to attach a setting to a team.
->
-> One to Many
-
-| team_id | setting_id |
-| --- | --- |
-
 ### defaults
 
 > The default settings for each of the tables.
+>
+> Linked to > (many) setting
 
 | id | name | key | description | type | for_table | default | min_value | max_value | min_cost | max_cost | created_at | updated_at |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-### default_setting
-
-> Used to attach a role to a user.
->
-> One to Many
-
-| default_id | setting_id |
-| --- | --- |
-
 ### settings
 
 > Used to store the settings for each of the tables.
+>
+> Linked to > (one) default > (one) account, team, user or post
 
 | id | value | created_at | updated_at |
 | --- | --- | --- | --- |
@@ -167,24 +116,8 @@
 ### posts
 
 > Used to store scheduled posts.
+>
+> Linked to > (one) account > (one) team > (many) setting > (many) user
 
 | id | description | picture | hashtags | post_at | created_at | updated_at |
 | --- | --- | --- | --- | --- | --- | --- |
-
-### post_team
-
-> Used to attach a role to a user.
->
-> One to One
-
-| post_id | team_id |
-| --- | --- |
-
-### post_setting
-
-> Used to attach a setting to a post.
->
-> One to Many
-
-| post_id | setting_id |
-| --- | --- |

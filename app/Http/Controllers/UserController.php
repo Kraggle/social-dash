@@ -35,7 +35,7 @@ class UserController extends Controller {
      * @return \Illuminate\View\View
      */
     public function index(User $model) {
-        $this->authorize('manage-users', User::class);
+        // $this->authorize('manage-users', User::class);
 
         return view('users.index', ['users' => $model->with('role')->get()]);
     }

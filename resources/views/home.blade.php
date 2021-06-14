@@ -2,7 +2,7 @@
 'class' => 'home-page',
 'classPage' => 'home-page',
 'activePage' => 'home',
-'title' => __('Welcome')
+'titlePage' => __('Welcome')
 ])
 
 @section('content')

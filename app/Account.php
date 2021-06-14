@@ -16,11 +16,29 @@ class Account extends Model {
     ];
 
     /**
-     * Get the users for the account.
+     * Get the account settings.
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function users() {
-        return $this->belongsToMany(User::class);
+    public function settings() {
+        return $this->hasMany(Setting::class);
+    }
+
+    /**
+     * Get the account posts.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
+
+    /**
+     * Get the accounts team.
+     *
+     * @return \App\Team
+     */
+    public function team() {
+        return $this->belongsTo(Team::class);
     }
 }

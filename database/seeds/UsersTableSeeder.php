@@ -14,7 +14,6 @@ class UsersTableSeeder extends Seeder {
             'id' => 1,
             'name' => 'Admin',
             'email' => 'admin@white.com',
-            'role_id' => 1,
             'picture' => '../white/img/jana.jpg'
         ]);
 
@@ -22,7 +21,6 @@ class UsersTableSeeder extends Seeder {
             'id' => 2,
             'name' => 'Free',
             'email' => 'free@white.com',
-            'role_id' => 2,
             'picture' => '../white/img/lora.jpg'
         ]);
 
@@ -30,7 +28,6 @@ class UsersTableSeeder extends Seeder {
             'id' => 3,
             'name' => 'Team Admin',
             'email' => 'teamadmin@white.com',
-            'role_id' => 3,
             'picture' => '../white/img/mike.jpg'
         ]);
 
@@ -38,7 +35,6 @@ class UsersTableSeeder extends Seeder {
             'id' => 4,
             'name' => 'Team Member',
             'email' => 'teammember@white.com',
-            'role_id' => 4,
             'picture' => '../white/img/mike.jpg'
         ]);
     }

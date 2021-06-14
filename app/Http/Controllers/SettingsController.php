@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Settings;
+use App\Setting;
 use Illuminate\Http\Request;
 
-class SettingsController extends Controller
-{
+class SettingsController extends Controller {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
     }
 
@@ -22,8 +20,7 @@ class SettingsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -33,30 +30,27 @@ class SettingsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Settings  $settings
+     * @param  \App\Setting  $settings
      * @return \Illuminate\Http\Response
      */
-    public function show(Settings $settings)
-    {
+    public function show(Setting $settings) {
         //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Settings  $settings
+     * @param  \App\Setting  $settings
      * @return \Illuminate\Http\Response
      */
-    public function edit(Settings $settings)
-    {
+    public function edit(Setting $settings) {
         //
     }
 
@@ -64,22 +58,20 @@ class SettingsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Settings  $settings
+     * @param  \App\Setting  $settings
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Settings $settings)
-    {
+    public function update(Request $request, Setting $settings) {
         //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Settings  $settings
+     * @param  \App\Setting  $settings
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Settings $settings)
-    {
+    public function destroy(Setting $settings) {
         //
     }
 }

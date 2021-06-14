@@ -31,7 +31,7 @@ class Role extends Model {
     /**
      * Get the users for the role
      *
-     * @return void
+     * @return \App\User
      */
     public function users() {
         return $this->hasMany(User::class);

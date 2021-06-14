@@ -2,7 +2,7 @@
 'class' => 'login-page',
 'classPage' => 'login-page',
 'activePage' => 'login',
-'title' => __('White Dashboard'),
+'titlePage' => __('White Dashboard'),
 ])
 
 @section('content')
