@@ -14,28 +14,36 @@ class UsersTableSeeder extends Seeder {
             'id' => 1,
             'name' => 'Admin',
             'email' => 'admin@white.com',
-            'picture' => '../white/img/jana.jpg'
+            'picture' => '../white/img/jana.jpg',
+            'role_id' => 1,
+            'team_id' => 1
         ]);
 
         factory(App\User::class)->create([
             'id' => 2,
             'name' => 'Free',
             'email' => 'free@white.com',
-            'picture' => '../white/img/lora.jpg'
+            'picture' => '../white/img/lora.jpg',
+            'role_id' => 2,
+            'team_id' => 1
         ]);
 
         factory(App\User::class)->create([
             'id' => 3,
             'name' => 'Team Admin',
             'email' => 'teamadmin@white.com',
-            'picture' => '../white/img/mike.jpg'
+            'picture' => '../white/img/mike.jpg',
+            'role_id' => 3,
+            'team_id' => 1
         ]);
 
         factory(App\User::class)->create([
             'id' => 4,
             'name' => 'Team Member',
             'email' => 'teammember@white.com',
-            'picture' => '../white/img/mike.jpg'
+            'picture' => '../white/img/james.jpg',
+            'role_id' => 4,
+            'team_id' => 1
         ]);
     }
 }

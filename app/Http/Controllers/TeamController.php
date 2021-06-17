@@ -11,8 +11,8 @@ class TeamController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
-        //
+    public function index(Team $model) {
+        return view('team.index', ['teams' => $model->all()]);
     }
 
     /**

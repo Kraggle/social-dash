@@ -1,0 +1,17 @@
+.vertical-center-content {
+    display: grid;
+    align-content: center;
+
+    .no-margin {
+        margin: 0;
+    }
+}
+
+.center-me-switch {
+    position: relative;
+
+    .bootstrap-switch-wrapper {
+        position: relative;
+        top: 7px;
+    }
+}

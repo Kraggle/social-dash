@@ -4,19 +4,16 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AccountTeam extends Migration {
+class AccountUser extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
     public function up() {
-        Schema::create('account_team', function (Blueprint $table) {
+        Schema::create('account_user', function (Blueprint $table) {
             $table->integer('account_id')->unsigned();
-            $table->integer('team_id')->unsigned();
-
-            $table->foreign('account_id')->references('id')->on('accounts');
-            $table->foreign('team_id')->references('id')->on('teams');
+            $table->integer('user_id')->unsigned();
         });
     }
 
@@ -26,6 +23,6 @@ class AccountTeam extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('account_team');
+        Schema::dropIfExists('account_user');
     }
 }

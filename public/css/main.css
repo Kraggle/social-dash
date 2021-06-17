@@ -1,2 +1,20 @@
 /* Import any included styles into here and the compile will include it */
 
+.vertical-center-content {
+  display: grid;
+  align-content: center;
+}
+
+.vertical-center-content .no-margin {
+  margin: 0;
+}
+
+.center-me-switch {
+  position: relative;
+}
+
+.center-me-switch .bootstrap-switch-wrapper {
+  position: relative;
+  top: 7px;
+}
+

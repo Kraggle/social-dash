@@ -63,19 +63,19 @@
 
 > Dashboard users.
 >
-> Linked to > (one) role > (one) team > (many) setting > (many) post
+> Linked to > (one) role > (one) team > (many) setting > (many) post > (many) accounts
 
-| id | name | email | email_verified_at | password | picture | remember_token | created_at | updated_at |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| id | name | email | email_verified_at | password | picture | role_id | team_id | remember_token | created_at | updated_at |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ### accounts
 
 > Instagram accounts.
 >
-> Linked to > (one) team > (many) post > (many) setting
+> Linked to > (one) team > (many) post > (many) setting > (many) users
 
-| id | pk | username | created_at | updated_at |
-| --- | --- | --- | --- | --- |
+| id | pk | username | team_id | created_at | updated_at |
+| --- | --- | --- | --- | --- | --- |
 
 ### roles
 
@@ -101,8 +101,8 @@
 >
 > Linked to > (many) setting
 
-| id | name | key | description | type | for_table | default | min_value | max_value | min_cost | max_cost | created_at | updated_at |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| id | name | description | for_table | options | created_at | updated_at |
+| --- | --- | --- | --- | --- | --- | --- |
 
 ### settings
 
@@ -110,8 +110,8 @@
 >
 > Linked to > (one) default > (one) account, team, user or post
 
-| id | value | created_at | updated_at |
-| --- | --- | --- | --- |
+| id | value | default_id | account_id | team_id | user_id | post_id | created_at | updated_at |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ### posts
 
@@ -119,5 +119,5 @@
 >
 > Linked to > (one) account > (one) team > (many) setting > (many) user
 
-| id | description | picture | hashtags | post_at | created_at | updated_at |
-| --- | --- | --- | --- | --- | --- | --- |
+| id | description | picture | hashtags | post_at | account_id | team_id | created_at | updated_at |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |

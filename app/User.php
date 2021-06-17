@@ -102,11 +102,20 @@ class User extends Authenticatable {
     }
 
     /**
+     * Check if the user has admin role
+     *
+     * @return boolean
+     */
+    public function notAdmin() {
+        return $this->role_id != 1;
+    }
+
+    /**
      * Check if the user has creator role
      *
      * @return boolean
      */
-    public function isCreator() {
+    public function isGuest() {
         return $this->role_id == 2;
     }
 
@@ -115,7 +124,25 @@ class User extends Authenticatable {
      *
      * @return boolean
      */
-    public function isMember() {
+    public function isTeamAdmin() {
         return $this->role_id == 3;
+    }
+
+    /**
+     * Check if the user is a team member
+     *
+     * @return boolean
+     */
+    public function isTeamMember() {
+        return $this->role_id == 4;
+    }
+
+    /**
+     * Check if the user is in a team
+     *
+     * @return boolean
+     */
+    public function isInTeam() {
+        return in_array($this->role_id, [3, 4]);
     }
 }

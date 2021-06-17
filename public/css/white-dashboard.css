@@ -14932,7 +14932,6 @@ fieldset[disabled] .btn-link.active {
 .btn.dropdown-toggle[data-toggle=dropdown] {
   padding: 10px;
   margin: 0;
-  margin-bottom: 5px;
 }
 
 .btn.dropdown-toggle[data-toggle=dropdown]:after {
@@ -15183,6 +15182,10 @@ fieldset[disabled] .btn-link.active {
 .form-control + .input-group-append .input-group-text,
 .form-control + .input-group-prepend .input-group-text {
   background-color: #ffffff;
+}
+
+.input-group-text {
+  line-height: 1;
 }
 
 .has-success .input-group-append .input-group-text,
@@ -15718,14 +15721,17 @@ textarea.form-control {
   max-height: 80px;
   padding: 10px 10px 0 0;
   resize: none;
-  border: none;
-  border-bottom: 1px solid #2b3553;
-  border-radius: 0;
   line-height: 2;
 }
 
-textarea.form-control:focus,
-textarea.form-control:active {
+textarea.form-control.underline {
+  border: none;
+  border-bottom: 1px solid #2b3553;
+  border-radius: 0;
+}
+
+textarea.form-control.underline:focus,
+textarea.form-control.underline:active {
   border-left: none;
   border-top: none;
   border-right: none;
@@ -25326,7 +25332,7 @@ select.selectpicker {
   border-radius: 0;
   display: block;
   max-height: 245px !important;
-  overflow-y: scroll;
+  overflow-y: auto;
   -ms-overflow-style: auto;
   box-shadow: none;
 }
@@ -28686,9 +28692,11 @@ Copyright (c) 2015 Daniel Eden
 
 .white-content .bootstrap-select button.dropdown-toggle {
   border-color: rgba(29, 37, 59, 0.5);
+  padding: 10px 18px 10px 18px;
 }
 
 .white-content .bootstrap-select button.dropdown-toggle .filter-option {
+  width: 100%;
   color: #1d253b;
 }
 

@@ -377,8 +377,10 @@
 
     .bootstrap-select button.dropdown-toggle {
         border-color: rgba($black-states, 0.5);
+        padding: 10px 18px 10px 18px;
 
         .filter-option {
+            width: 100%;
             color: $black-states;
         }
 

@@ -61,22 +61,42 @@ class UserPolicy {
     }
 
     /**
-     * Determine whether the authenticate user can manage items and other related entities(tags, categories).
-     *
-     * @param  \App\User  $user
-     * @return boolean
-     */
-    public function manageItems(User $user) {
-        return $user->isAdmin() || $user->isCreator();
-    }
-
-    /**
      * Determine whether the authenticate user can manage accounts.
      *
      * @param  \App\User  $user
      * @return boolean
      */
     public function manageAccounts(User $user) {
-        return true;
+        return $user->isAdmin();
+    }
+
+    /**
+     * Determine whether the authenticate user can manage teams.
+     *
+     * @param  \App\User  $user
+     * @return boolean
+     */
+    public function manageTeams(User $user) {
+        return $user->isAdmin();
+    }
+
+    /**
+     * Determine whether the authenticate user can manage posts.
+     *
+     * @param  \App\User  $user
+     * @return boolean
+     */
+    public function managePosts(User $user) {
+        return $user->isAdmin();
+    }
+
+    /**
+     * Determine whether the authenticate user can manage defaults.
+     *
+     * @param  \App\User  $user
+     * @return boolean
+     */
+    public function manageDefaults(User $user) {
+        return $user->isAdmin();
     }
 }

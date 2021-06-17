@@ -13,7 +13,7 @@ class CreateTeamsTable extends Migration {
     public function up() {
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username');
+            $table->string('name');
             $table->timestamps();
         });
     }

@@ -15,6 +15,7 @@ class CreateAccountsTable extends Migration {
             $table->increments('id');
             $table->bigInteger('pk');
             $table->string('username');
+            $table->integer('team_id')->unsigned();
             $table->timestamps();
         });
     }

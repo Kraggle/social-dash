@@ -2,12 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\Account;
-use App\User;
-use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
-class AccountRequest extends FormRequest {
+class DefaultRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,12 +22,11 @@ class AccountRequest extends FormRequest {
      */
     public function rules() {
         return [
-            'username' => [
-                'required', 'min:3'
-            ],
-            'pk' => [
-                'required'
-            ]
+            'name' => ['required', 'min:3', 'max:255'],
+            'description' => ['nullable'],
+            'for_table' => ['required', Rule::in(['accounts', 'users', 'teams', 'posts'])],
+            'key' => ['required', 'min:3', 'max:255'],
+            'type' => ['required', Rule::in(['number', 'checkbox', 'text'])],
         ];
     }
 }

@@ -63,6 +63,8 @@ class UserController extends Controller {
             'password' => Hash::make($request->get('password'))
         ])->all());
 
+        $model->role->sync($request->role);
+
         return redirect()->route('user.index')->withStatus(__('User successfully created.'));
     }
 

@@ -17,6 +17,8 @@ class CreatePostsTable extends Migration {
             $table->string('picture')->nullable();
             $table->text('hashtags')->nullable();
             $table->timestamp('post_at');
+            $table->integer('account_id')->unsigned();
+            $table->integer('team_id')->unsigned();
             $table->timestamps();
         });
     }

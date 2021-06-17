@@ -14,6 +14,11 @@ class CreateSettingsTable extends Migration {
         Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
             $table->text('value');
+            $table->integer('default_id')->unsigned();
+            $table->integer('account_id')->unsigned()->nullable();
+            $table->integer('team_id')->unsigned()->nullable();
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->integer('post_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }
