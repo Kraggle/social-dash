@@ -20,26 +20,36 @@
                         <div class="table-responsive">
                             <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
                                 <thead class="text-primary">
-                                    <th>
-                                        {{ __('Username') }}
-                                    </th>
-                                    <th>
-                                        {{ __('Private') }}
-                                    </th>
+                                    <th>{{ __('Username') }}</th>
+                                    <th>{{ __('Team') }}</th>
+                                    <th>{{ __('Active') }}</th>
+                                    <th>{{ __('Public') }}</th>
                                     @can('manage-accounts', App\User::class)
-                                    <th class="text-right">
-                                        {{ __('Actions') }}
-                                    </th>
+                                        <th class="text-right">{{ __('Actions') }}</th>
                                     @endcan
                                 </thead>
                                 <tbody>
                                     @foreach($accounts as $account)
+
+                                    {{-- @php
+                                    $settings = (object) [];
+                                    foreach($account->settings as $setting)
+                                        $settings->{$setting->default->options->key} = $setting;
+                                    // error_log(json_encode($settings, JSON_PRETTY_PRINT));
+                                    @endphp --}}
+
                                     <tr>
                                         <td>
                                             {{ $account->username }}
                                         </td>
                                         <td>
-                                            true
+                                            {{ $account->team->name ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $account->active ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $account->private ?? '' }}
                                         </td>
                                         @can('manage-accounts', App\User::class)
                                         <td class="td-actions text-right">

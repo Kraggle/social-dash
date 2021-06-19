@@ -16,6 +16,15 @@ class Defaults extends Model {
     ];
 
     /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'options' => 'object',
+    ];
+
+    /**
      * Get the defaults settings.
      *
      * @return \Illuminate\Database\Eloquent\Collection

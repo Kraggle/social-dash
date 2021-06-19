@@ -16,7 +16,7 @@ class AccountPolicy {
      * @return boolean
      */
     public function viewAny(User $user) {
-        return true;
+        return $user->isAdmin();
     }
 
     /**
@@ -37,7 +37,7 @@ class AccountPolicy {
      * @return boolean
      */
     public function update(User $user, Account $model) {
-        return false;
+        return $user->isAdmin();
     }
 
     /**
@@ -48,7 +48,7 @@ class AccountPolicy {
      * @return boolean
      */
     public function delete(User $user, Account $model) {
-        return $user->isAdmin() || $user->id != $model->id;
+        return $user->isAdmin();
     }
 
     /**
@@ -59,7 +59,7 @@ class AccountPolicy {
      * @return boolean
      */
     public function remove(User $user, Account $model) {
-        return $user->id != $model->id;
+        return $user->isAdmin();
     }
 
     /**

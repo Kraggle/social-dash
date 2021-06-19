@@ -25,8 +25,8 @@ class DefaultRequest extends FormRequest {
             'name' => ['required', 'min:3', 'max:255'],
             'description' => ['nullable'],
             'for_table' => ['required', Rule::in(['accounts', 'users', 'teams', 'posts'])],
-            'key' => ['required', 'min:3', 'max:255'],
-            'type' => ['required', Rule::in(['number', 'checkbox', 'text'])],
+            'options.key' => ['required', 'min:3', 'max:255'],
+            'options.type' => ['required', Rule::in(['number', 'checkbox', 'text'])],
         ];
     }
 }

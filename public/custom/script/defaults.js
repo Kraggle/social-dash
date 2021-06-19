@@ -19,9 +19,9 @@ $(() => {
         const $copy = $('.row[repeat=_0]').clone();
         $(this).closest('.row').before($copy);
         const count = $('.row[repeat]').length - 1;
-        $copy.attr('repeat', `repeat_${count}`);
+        $copy.attr('repeat', `_${count}`);
         $copy.find('input').each(function() {
-            $(this).attr('name', $(this).attr('name').replace('_0', `_${count}`));
+            $(this).attr('name', $(this).attr('name').replace('[0]', `[${count}]`));
             if ($(this).attr('type') == 'checkbox') {
                 const $group = $(this).closest('.form-group'),
                     $input = $(this).detach();
@@ -39,6 +39,7 @@ $(() => {
         $('#string-options input:checked').not($(this)).bootstrapSwitch('state', false);
     });
 
+    // Used to switch between variable types
     $('#input-type').on('change', function() {
         const selected = $('option:selected', this).val();
         $('div[type]').addClass('d-none').find('input').each(function() {
@@ -53,5 +54,22 @@ $(() => {
             else
                 $(this).prop('disabled', false);
         });
+    });
+
+    // Used to remove choices from the string type
+    $('div[type=text]').on('click', '.btn.remove', function() {
+        const els = $('div[repeat]');
+        if (els.length < 2) {
+            $('input', els).val('');
+            $('input[type=checkbox]', els).bootstrapSwitch('state', false);
+        } else {
+            $(this).closest('div[repeat]').remove();
+            $('div[repeat]').each(function(i) {
+                $(this).attr('repeat', `_${i}`);
+                $('input', this).each(function() {
+                    $(this).attr('name', $(this).attr('name').replace(/\[\d+\]/, `[${i}]`));
+                });
+            });
+        }
     });
 });
