@@ -47,208 +47,7 @@ var seq2 = 0,
     delays2 = 80,
     durations2 = 500;
 
-// Returns a function, that, as long as it continues to be invoked, will not
-// be triggered. The function will be called after it stops being called for
-// N milliseconds. If `immediate` is passed, trigger the function on the
-// leading edge, instead of the trailing.
-
-function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-        var context = this,
-            args = arguments;
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        }, wait);
-        if (immediate && !timeout) func.apply(context, args);
-    };
-}
-
-(function() {
-    var isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
-
-    if (isWindows) {
-        // if we are on windows OS we activate the perfectScrollbar function
-        if ($('.main-panel').length != 0) {
-            new PerfectScrollbar('.main-panel', {
-                wheelSpeed: 2,
-                wheelPropagation: true,
-                minScrollbarLength: 20,
-                suppressScrollX: true
-            });
-        }
-
-        if ($('.sidebar .sidebar-wrapper').length != 0) {
-
-            new PerfectScrollbar('.sidebar .sidebar-wrapper');
-            $('.table-responsive').each(function() {
-                new PerfectScrollbar($(this)[0]);
-            });
-        }
-
-
-
-        $html.addClass('perfect-scrollbar-on');
-    } else {
-        $html.addClass('perfect-scrollbar-off');
-    }
-})();
-
-$(document).ready(function() {
-
-    var scroll_start = 0;
-    var startchange = $('.row');
-    var offset = startchange.offset();
-    var scrollElement = navigator.platform.indexOf('Win') > -1 ? $('.ps') : $(window);
-    scrollElement.on('scroll', function() {
-
-        scroll_start = $(this).scrollTop();
-
-        if (scroll_start > 50) {
-            $navbar_minimize_fixed.css('opacity', '1');
-        } else {
-            $navbar_minimize_fixed.css('opacity', '0');
-        }
-    });
-
-    // hide the siblings opened collapse
-
-    $collapse.on('show.bs.collapse', function() {
-        $(this).parent().siblings().children('.collapse').each(function() {
-            $(this).collapse('hide');
-        });
-    });
-
-    //  Activate the Tooltips
-    $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
-
-    // Activate Popovers and set color for popovers
-    $('[data-toggle="popover"]').each(function() {
-        let color_class = $(this).data('color');
-        $(this).popover({
-            template: '<div class="popover popover-' + color_class + '" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
-        });
-    });
-
-    var tagClass = $tagsinput.data('color');
-
-    if ($tagsinput.length != 0) {
-        $tagsinput.tagsinput();
-    }
-
-    $('.bootstrap-tagsinput').find('.tag').addClass('badge-' + tagClass);
-
-    //    Activate bootstrap-select
-    if ($selectpicker.length != 0) {
-        $selectpicker.selectpicker({
-            iconBase: "tim-icons",
-            tickIcon: "icon-check-2"
-        });
-    }
-
-    //when you click the modal search button the navbar will not be collapsed
-    $("#search-button").on('click', function() {
-        $(this).closest('.navbar-collapse').removeClass('show');
-        $navbar.addClass('navbar-transparent').removeClass('bg-white');
-
-    });
-
-
-
-    whiteDashboard.initMinimizeSidebar();
-
-    var scroll_distance = $navbar_color.attr('color-on-scroll') || 500;
-
-    // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
-    if ($navbar_color.length != 0) {
-        whiteDashboard.checkScrollForTransparentNavbar();
-        $(window).on('scroll', whiteDashboard.checkScrollForTransparentNavbar)
-    }
-
-    if ($full_screen_map.length == 0 && $('.bd-docs').length == 0) {
-        // On click navbar-collapse the menu will be white not transparent
-        $('.navbar-toggler').on('click', function() {
-            $collapse.on('show.bs.collapse', function() {
-                $(this).closest('.navbar').removeClass('navbar-transparent').addClass('bg-white');
-            }).on('hide.bs.collapse', function() {
-                $(this).closest('.navbar').addClass('navbar-transparent').removeClass('bg-white');
-            });
-            $navbar.css('transition', '');
-
-        });
-    }
-
-    $navbar.css({
-        'top': '0',
-        'transition': 'all .5s linear'
-    });
-
-    $('.form-control').on("focus", function() {
-        $(this).parent('.input-group').addClass("input-group-focus");
-    }).on("blur", function() {
-        $(this).parent(".input-group").removeClass("input-group-focus");
-    });
-
-    // Activate bootstrapSwitch
-    $('.bootstrap-switch').each(function() {
-        var data_on_label = $(this).data('on-label') || '';
-        var data_off_label = $(this).data('off-label') || '';
-
-        $(this).bootstrapSwitch({
-            onText: data_on_label,
-            offText: data_off_label
-        });
-    });
-});
-
-$(document).on('click', '.navbar-toggle', function() {
-    var $toggle = $(this);
-
-    if (whiteDashboard.misc.navbar_menu_visible == 1) {
-        $html.removeClass('nav-open');
-        whiteDashboard.misc.navbar_menu_visible = 0;
-        setTimeout(function() {
-            $toggle.removeClass('toggled');
-            $('.bodyClick').remove();
-        }, 550);
-
-    } else {
-        setTimeout(function() {
-            $toggle.addClass('toggled');
-        }, 580);
-
-        var div = '<div class="bodyClick"></div>';
-        $(div).appendTo('body').on('click', function() {
-            $html.removeClass('nav-open');
-            whiteDashboard.misc.navbar_menu_visible = 0;
-            setTimeout(function() {
-                $toggle.removeClass('toggled');
-                $('.bodyClick').remove();
-            }, 550);
-        });
-
-        $html.addClass('nav-open');
-        whiteDashboard.misc.navbar_menu_visible = 1;
-    }
-});
-
-$(window).resize(function() {
-    // reset the seq for charts drawing animations
-    seq = seq2 = 0;
-
-    if ($full_screen_map.length == 0 && $('.bd-docs').length == 0) {
-        var isExpanded = $navbar.find('[data-toggle="collapse"]').attr("aria-expanded");
-        if ($navbar.hasClass('bg-white') && $(window).width() > 991) {
-            $navbar.removeClass('bg-white').addClass('navbar-transparent');
-        } else if ($navbar.hasClass('navbar-transparent') && $(window).width() < 991 && isExpanded != "false") {
-            $navbar.addClass('bg-white').removeClass('navbar-transparent');
-        }
-    }
-});
-
-var whiteDashboard = {
+const whiteDashboard = {
     misc: {
         navbar_menu_visible: 0
     },
@@ -420,6 +219,209 @@ var whiteDashboard = {
 
     }
 };
+
+
+// Returns a function, that, as long as it continues to be invoked, will not
+// be triggered. The function will be called after it stops being called for
+// N milliseconds. If `immediate` is passed, trigger the function on the
+// leading edge, instead of the trailing.
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this,
+            args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        }, wait);
+        if (immediate && !timeout) func.apply(context, args);
+    };
+}
+
+(function() {
+    var isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
+
+    if (isWindows) {
+        // if we are on windows OS we activate the perfectScrollbar function
+        if ($('.main-panel').length != 0) {
+            new PerfectScrollbar('.main-panel', {
+                wheelSpeed: 2,
+                wheelPropagation: true,
+                minScrollbarLength: 20,
+                suppressScrollX: true
+            });
+        }
+
+        if ($('.sidebar .sidebar-wrapper').length != 0) {
+
+            new PerfectScrollbar('.sidebar .sidebar-wrapper');
+            $('.table-responsive').each(function() {
+                new PerfectScrollbar($(this)[0]);
+            });
+        }
+
+
+
+        $html.addClass('perfect-scrollbar-on');
+    } else {
+        $html.addClass('perfect-scrollbar-off');
+    }
+})();
+
+$(document).ready(function() {
+
+    var scroll_start = 0;
+    var startchange = $('.row');
+    var offset = startchange.offset();
+    var scrollElement = navigator.platform.indexOf('Win') > -1 ? $('.ps') : $(window);
+    scrollElement.on('scroll', function() {
+
+        scroll_start = $(this).scrollTop();
+
+        if (scroll_start > 50) {
+            $navbar_minimize_fixed.css('opacity', '1');
+        } else {
+            $navbar_minimize_fixed.css('opacity', '0');
+        }
+    });
+
+    // hide the siblings opened collapse
+
+    $collapse.on('show.bs.collapse', function() {
+        $(this).parent().siblings().children('.collapse').each(function() {
+            $(this).collapse('hide');
+        });
+    });
+
+    //  Activate the Tooltips
+    $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+
+    // Activate Popovers and set color for popovers
+    $('[data-toggle="popover"]').each(function() {
+        let color_class = $(this).data('color');
+        $(this).popover({
+            template: '<div class="popover popover-' + color_class + '" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+        });
+    });
+
+    var tagClass = $tagsinput.data('color');
+
+    if ($tagsinput.length != 0) {
+        $tagsinput.tagsinput();
+    }
+
+    $('.bootstrap-tagsinput').find('.tag').addClass('badge-' + tagClass);
+
+    //    Activate bootstrap-select
+    if ($selectpicker.length != 0) {
+        $selectpicker.selectpicker({
+            iconBase: "fal",
+            tickIcon: "fa-check",
+            showTick: true
+        });
+    }
+
+    //when you click the modal search button the navbar will not be collapsed
+    $("#search-button").on('click', function() {
+        $(this).closest('.navbar-collapse').removeClass('show');
+        $navbar.addClass('navbar-transparent').removeClass('bg-white');
+
+    });
+
+
+
+    whiteDashboard.initMinimizeSidebar();
+
+    var scroll_distance = $navbar_color.attr('color-on-scroll') || 500;
+
+    // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
+    if ($navbar_color.length != 0) {
+        whiteDashboard.checkScrollForTransparentNavbar();
+        $(window).on('scroll', whiteDashboard.checkScrollForTransparentNavbar)
+    }
+
+    if ($full_screen_map.length == 0 && $('.bd-docs').length == 0) {
+        // On click navbar-collapse the menu will be white not transparent
+        $('.navbar-toggler').on('click', function() {
+            $collapse.on('show.bs.collapse', function() {
+                $(this).closest('.navbar').removeClass('navbar-transparent').addClass('bg-white');
+            }).on('hide.bs.collapse', function() {
+                $(this).closest('.navbar').addClass('navbar-transparent').removeClass('bg-white');
+            });
+            $navbar.css('transition', '');
+
+        });
+    }
+
+    $navbar.css({
+        'top': '0',
+        'transition': 'all .5s linear'
+    });
+
+    $('.form-control').on("focus", function() {
+        $(this).parent('.input-group').addClass("input-group-focus");
+    }).on("blur", function() {
+        $(this).parent(".input-group").removeClass("input-group-focus");
+    });
+
+    // Activate bootstrapSwitch
+    $('.bootstrap-switch').each(function() {
+        var data_on_label = $(this).data('on-label') || '';
+        var data_off_label = $(this).data('off-label') || '';
+
+        $(this).bootstrapSwitch({
+            onText: data_on_label,
+            offText: data_off_label
+        });
+    });
+});
+
+$(document).on('click', '.navbar-toggle', function() {
+    var $toggle = $(this);
+
+    if (whiteDashboard.misc.navbar_menu_visible == 1) {
+        $html.removeClass('nav-open');
+        whiteDashboard.misc.navbar_menu_visible = 0;
+        setTimeout(function() {
+            $toggle.removeClass('toggled');
+            $('.bodyClick').remove();
+        }, 550);
+
+    } else {
+        setTimeout(function() {
+            $toggle.addClass('toggled');
+        }, 580);
+
+        var div = '<div class="bodyClick"></div>';
+        $(div).appendTo('body').on('click', function() {
+            $html.removeClass('nav-open');
+            whiteDashboard.misc.navbar_menu_visible = 0;
+            setTimeout(function() {
+                $toggle.removeClass('toggled');
+                $('.bodyClick').remove();
+            }, 550);
+        });
+
+        $html.addClass('nav-open');
+        whiteDashboard.misc.navbar_menu_visible = 1;
+    }
+});
+
+$(window).resize(function() {
+    // reset the seq for charts drawing animations
+    seq = seq2 = 0;
+
+    if ($full_screen_map.length == 0 && $('.bd-docs').length == 0) {
+        var isExpanded = $navbar.find('[data-toggle="collapse"]').attr("aria-expanded");
+        if ($navbar.hasClass('bg-white') && $(window).width() > 991) {
+            $navbar.removeClass('bg-white').addClass('navbar-transparent');
+        } else if ($navbar.hasClass('navbar-transparent') && $(window).width() < 991 && isExpanded != "false") {
+            $navbar.addClass('bg-white').removeClass('navbar-transparent');
+        }
+    }
+});
 
 function hexToRGB(hex, alpha) {
     var r = parseInt(hex.slice(1, 3), 16),

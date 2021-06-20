@@ -1,20 +1,33 @@
 /* Import any included styles into here and the compile will include it */
 
-.vertical-center-content {
-  display: grid;
-  align-content: center;
+.has-switch {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
-.vertical-center-content .no-margin {
+.has-switch .form-group {
   margin: 0;
 }
 
-.center-me-switch {
-  position: relative;
+.has-switch .bootstrap-switch-wrapper {
+  margin-bottom: 0;
 }
 
-.center-me-switch .bootstrap-switch-wrapper {
-  position: relative;
-  top: 7px;
+.no-margin {
+  margin: 0;
+}
+
+.btn-link {
+  outline: none !important;
+}
+
+.bootstrap-select > .dropdown-toggle .select-cost {
+  display: none;
+}
+
+.bootstrap-select li .select-cost {
+  padding-right: 20px;
+  float: right;
 }
 

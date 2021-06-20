@@ -1,17 +1,40 @@
-.vertical-center-content {
-    display: grid;
-    align-content: center;
+.has-switch {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
 
-    .no-margin {
+    .form-group {
         margin: 0;
+    }
+
+    .bootstrap-switch-wrapper {
+        margin-bottom: 0;
     }
 }
 
-.center-me-switch {
-    position: relative;
+.no-margin {
+    margin: 0;
+}
 
-    .bootstrap-switch-wrapper {
-        position: relative;
-        top: 7px;
+// .bootstrap-switch-wrapper {
+//     margin-bottom: 0;
+// }
+
+.btn-link {
+    outline: none !important;
+}
+
+.bootstrap-select {
+    > .dropdown-toggle {
+        .select-cost {
+            display: none;
+        }
+    }
+
+    li {
+        .select-cost {
+            padding-right: 20px;
+            float: right;
+        }
     }
 }

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Account;
 use App\Http\Requests\AccountRequest;
+use App\Team;
 use App\Defaults;
-use App\Setting;
 
 class AccountController extends Controller {
     public function __construct() {
@@ -20,27 +20,30 @@ class AccountController extends Controller {
      */
     public function index(Account $model) {
         $this->authorize('manage-accounts', User::class);
-
-        // $defaults = (object) [];
-        // foreach (Defaults::where('for_table', 'accounts')->get() as $default)
-        //     $defaults->{$default->options->key} = $default;
-        // error_log(json_encode($defaults, JSON_PRETTY_PRINT));
-
         return view('account.index', ['accounts' => $model->all()]);
     }
 
+    /**
+     * Create an account for a team.
+     *
+     * @return \Illuminate\View\View
+     */
     public function create() {
         $this->authorize('manage-accounts', User::class);
-
-
-
-        return view('account.create');
+        return view('account.create', [
+            'teams' => Team::all(),
+            'settings' => Defaults::where('for_table', 'accounts')->get()
+        ]);
     }
 
+    /**
+     * Store a newly created account.
+     *
+     * @return \Illuminate\View\View
+     */
     public function store(AccountRequest $request, Account $model) {
         $account = $model->create($request->all());
-        // $account->users()->sync(auth()->user());
 
-        return 'Success';
+        return redirect()->route('account.index')->withStatus(__('Account successfully added.'));
     }
 }

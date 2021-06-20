@@ -17,15 +17,26 @@ class AccountRequest extends FormRequest {
         return auth()->check();
     }
 
+    public function messages() {
+        return [
+            'username.unique' => 'This username has already been assigned to this team.'
+        ];
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
      * @return array
      */
     public function rules() {
+        $team_id = auth()->user()->team->id;
+        $username = $this->username;
         return [
             'username' => [
-                'required', 'min:3'
+                'required',
+                Rule::unique('accounts')->where(function ($query) use ($username, $team_id) {
+                    return $query->where('username', $username)->where('team_id', $team_id);
+                })
             ],
             'pk' => [
                 'required'

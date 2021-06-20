@@ -3,7 +3,8 @@
 namespace App;
 
 use App\User;
-use Illuminate\Database\Eloquent\Model;
+use App\Casts\CastSettings;
+use App\Model;
 
 class Account extends Model {
     /**
@@ -12,7 +13,7 @@ class Account extends Model {
      * @var array
      */
     protected $fillable = [
-        'username', 'pk'
+        'username', 'pk', 'team_id'
     ];
 
     /**

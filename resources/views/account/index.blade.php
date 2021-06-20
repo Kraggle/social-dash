@@ -31,44 +31,39 @@
                                 <tbody>
                                     @foreach($accounts as $account)
 
-                                    {{-- @php
-                                    $settings = (object) [];
-                                    foreach($account->settings as $setting)
-                                        $settings->{$setting->default->options->key} = $setting;
-                                    // error_log(json_encode($settings, JSON_PRETTY_PRINT));
-                                    @endphp --}}
+                                        @php $settings = $account->getAllSettings(); @endphp
 
-                                    <tr>
-                                        <td>
-                                            {{ $account->username }}
-                                        </td>
-                                        <td>
-                                            {{ $account->team->name ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $account->active ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $account->private ?? '' }}
-                                        </td>
-                                        @can('manage-accounts', App\User::class)
-                                        <td class="td-actions text-right">
-                                            <form action="{{ route('account.destroy', $account) }}" method="post">
-                                                @csrf
-                                                @method('delete')
+                                        <tr>
+                                            <td>
+                                                {{ $account->username }}
+                                            </td>
+                                            <td>
+                                                {{ $account->team->name ?? '' }}
+                                            </td>
+                                            <td>
+                                                {{ $settings->active->value ? 'true' : 'false' }}
+                                            </td>
+                                            <td>
+                                                {{ $settings->public->value ? 'true' : 'false' }}
+                                            </td>
+                                            @can('manage-accounts', App\User::class)
+                                                <td class="td-actions text-right">
+                                                    <form action="{{ route('account.destroy', $account) }}" method="post">
+                                                        @csrf
+                                                        @method('delete')
 
-                                                @can('update', $account)
-                                                <a href="{{ route('account.edit', $account) }}" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="tim-icons icon-pencil"></i></a>
-                                                @endcan
-                                                @if (auth()->user()->can('remove', $account))
-                                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" data-original-title="" title="" onclick="confirm('{{ __("Are you sure you want to delete this account?") }}') ? this.parentElement.submit() : ''">
-                                                    <i class="tim-icons icon-simple-remove"></i>
-                                                </button>
-                                                @endif
-                                            </form>
-                                        </td>
-                                        @endcan
-                                    </tr>
+                                                        @can('update', $account)
+                                                            <a href="{{ route('account.edit', $account) }}" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="tim-icons icon-pencil"></i></a>
+                                                        @endcan
+                                                        @if (auth()->user()->can('remove', $account))
+                                                            <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" data-original-title="" title="" onclick="confirm('{{ __("Are you sure you want to delete this account?") }}') ? this.parentElement.submit() : ''">
+                                                                <i class="tim-icons icon-simple-remove"></i>
+                                                            </button>
+                                                        @endif
+                                                    </form>
+                                                </td>
+                                            @endcan
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>
