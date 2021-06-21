@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('white') }}/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="{{ asset('white') }}/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images') }}/apple-icon.png">
+    <link rel="icon" type="image/png" href="{{ asset('images') }}/favicon.png">
     <title>
         White Dashboard PRO by Creative Tim
     </title>
@@ -346,7 +346,7 @@
                             <li class="dropdown nav-item">
                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                     <div class="photo">
-                                        <img src="{{ asset('white') }}/img/mike.jpg" alt="Profile Photo">
+                                        <img src="{{ asset('images') }}/mike.jpg" alt="Profile Photo">
                                     </div>
                                     <b class="caret d-none d-lg-block d-xl-block"></b>
                                     <p class="d-lg-none">
@@ -631,7 +631,7 @@
                         <div class="card card-pricing card-primary">
                             <div class="card-body">
                                 <h1 class="card-title">طليعة</h1>
-                                <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Card image">
+                                <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Card image">
                                 <ul class="list-group">
                                     <li class="list-group-item">300 رسائل</li>
                                     <li class="list-group-item">150 رسائل البريد الإلكتروني
@@ -655,7 +655,7 @@
                         <div class="card card-pricing card-primary card-white">
                             <div class="card-body">
                                 <h1 class="card-title">طليعة</h1>
-                                <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Card image">
+                                <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Card image">
                                 <ul class="list-group">
                                     <li class="list-group-item">300 رسائل</li>
                                     <li class="list-group-item">150 رسائل البريد الإلكتروني
@@ -679,7 +679,7 @@
                         <div class="card card-testimonial">
                             <div class="card-header card-header-avatar">
                                 <a href="#pablo">
-                                    <img class="img img-raised" src="{{ asset('white') }}/img/james.jpg" alt="Card image">
+                                    <img class="img img-raised" src="{{ asset('images') }}/james.jpg" alt="Card image">
                                 </a>
                             </div>
                             <div class="card-body ">

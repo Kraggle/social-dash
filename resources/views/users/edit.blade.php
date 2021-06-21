@@ -27,7 +27,7 @@
                                             @if ($user->picture)
                                             <img src="{{ $user->profilePicture() }}" alt="...">
                                             @else
-                                            <img src="{{ asset('white') }}/img/placeholder.jpg" alt="...">
+                                            <img src="{{ asset('images') }}/placeholder.jpg" alt="...">
                                             @endif
                                         </div>
                                         <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>

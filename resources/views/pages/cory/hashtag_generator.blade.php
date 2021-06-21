@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="photo">
-                <img src="{{ asset('white') }}/img/hashtag-generator.jpg" alt="Table image">
+                <img src="{{ asset('images') }}/hashtag-generator.jpg" alt="Table image">
             </div>
         </div>
     </div>

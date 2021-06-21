@@ -98,7 +98,7 @@
                                     <div class="col-lg-10 text-center">
                                         <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                             <div class="fileinput-new thumbnail">
-                                                <img src="{{ asset('white') }}/img/image_placeholder.jpg" alt="...">
+                                                <img src="{{ asset('images') }}/image_placeholder.jpg" alt="...">
                                             </div>
                                             <div class="fileinput-preview fileinput-exists thumbnail"></div>
                                             <div>

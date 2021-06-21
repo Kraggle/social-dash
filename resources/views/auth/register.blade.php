@@ -11,7 +11,7 @@
             <div class="col-md-7 mr-auto ml-auto">
                 <div class="card card-register card-white">
                     <div class="card-header">
-                        <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Card image">
+                        <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Card image">
                         <h4 class="card-title">{{ __('Register') }}</h4>
                     </div>
                     <div class="card-body">

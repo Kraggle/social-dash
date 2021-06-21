@@ -24,7 +24,7 @@
                                 <div class="col-sm-7">
                                     <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                         <div class="fileinput-new thumbnail img-circle">
-                                            <img src="{{ asset('white') }}/img/placeholder.jpg" alt="...">
+                                            <img src="{{ asset('images') }}/placeholder.jpg" alt="...">
                                         </div>
                                         <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
                                         <div>

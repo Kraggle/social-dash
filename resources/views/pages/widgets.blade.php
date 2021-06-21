@@ -249,7 +249,7 @@
             <div class="card card-pricing card-primary card-white">
                 <div class="card-body">
                     <h1 class="card-title">pro</h1>
-                    <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Image">
+                    <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Image">
                     <ul class="list-group">
                         <li class="list-group-item">300 messages</li>
                         <li class="list-group-item">150 emails</li>
@@ -271,7 +271,7 @@
             <div class="card card-pricing card-primary">
                 <div class="card-body">
                     <h1 class="card-title">pro</h1>
-                    <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Image">
+                    <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Image">
                     <ul class="list-group">
                         <li class="list-group-item">300 messages</li>
                         <li class="list-group-item">150 emails</li>
@@ -293,7 +293,7 @@
             <div class="card card-testimonial">
                 <div class="card-header card-header-avatar">
                     <a href="#pablo">
-                        <img class="img img-raised" src="{{ asset('white') }}/img/james.jpg" alt="Card image">
+                        <img class="img img-raised" src="{{ asset('images') }}/james.jpg" alt="Card image">
                     </a>
                 </div>
                 <div class="card-body">

@@ -13,6 +13,7 @@
 @import './plugins/vendor/plugin-jquery.jvectormap';
 @import './plugins/vendor/plugin-perfect-scrollbar';
 @import './plugins/vendor/plugin-sweetalert2';
+@import './plugins/nucleo-icons/nucleo-icons';
 
 // @import './plugins/vendor/plugin-animate-bootstrap-notify';
 // @import './plugins/vendor/plugin-datetimepicker';
@@ -21,7 +22,7 @@
 // @import './plugins/vendor/plugin-tagsinput';
 
 /* Theme */
-// @import './white/white';
+@import './white/white';
 
-@import './custom/register';
-@import './custom/forms';
+// @import './custom/register';
+// @import './custom/forms';

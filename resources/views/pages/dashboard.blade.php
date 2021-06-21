@@ -488,7 +488,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -516,7 +516,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/robi.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/robi.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -544,7 +544,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/lora.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/lora.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -572,7 +572,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/jana.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/jana.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -600,7 +600,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/robi.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/robi.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -628,7 +628,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/emilyz.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/emilyz.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -677,7 +677,7 @@
                                         <tr>
                                             <td>
                                                 <div class="flag">
-                                                    <img src="{{ asset('white') }}/img/US.png" alt="flag">
+                                                    <img src="{{ asset('images') }}/US.png" alt="flag">
                                                 </div>
                                             </td>
                                             <td>USA</td>
@@ -691,7 +691,7 @@
                                         <tr>
                                             <td>
                                                 <div class="flag">
-                                                    <img src="{{ asset('white') }}/img/DE.png" alt="flag">
+                                                    <img src="{{ asset('images') }}/DE.png" alt="flag">
                                                 </div>
                                             </td>
                                             <td>Germany</td>
@@ -705,7 +705,7 @@
                                         <tr>
                                             <td>
                                                 <div class="flag">
-                                                    <img src="{{ asset('white') }}/img/AU.png" alt="flag">
+                                                    <img src="{{ asset('images') }}/AU.png" alt="flag">
                                                 </div>
                                             </td>
                                             <td>Australia</td>
@@ -719,7 +719,7 @@
                                         <tr>
                                             <td>
                                                 <div class="flag">
-                                                    <img src="{{ asset('white') }}/img/GB.png" alt="flag">
+                                                    <img src="{{ asset('images') }}/GB.png" alt="flag">
                                                 </div>
                                             </td>
                                             <td>United Kingdom</td>
@@ -733,7 +733,7 @@
                                         <tr>
                                             <td>
                                                 <div class="flag">
-                                                    <img src="{{ asset('white') }}/img/RO.png" alt="flag">
+                                                    <img src="{{ asset('images') }}/RO.png" alt="flag">
                                                 </div>
                                             </td>
                                             <td>Romania</td>
@@ -747,7 +747,7 @@
                                         <tr>
                                             <td>
                                                 <div class="flag">
-                                                    <img src="{{ asset('white') }}/img/BR.png" alt="flag">
+                                                    <img src="{{ asset('images') }}/BR.png" alt="flag">
                                                 </div>
                                             </td>
                                             <td>Brasil</td>

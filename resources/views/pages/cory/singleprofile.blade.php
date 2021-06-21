@@ -246,7 +246,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@mattymyers</td>
@@ -258,7 +258,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@corybeevers</td>
@@ -270,7 +270,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@HaydenKibble</td>
@@ -282,7 +282,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@kraggle</td>
@@ -294,7 +294,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@mattymyers</td>
@@ -306,7 +306,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@corybeevers</td>
@@ -318,7 +318,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@HaydenKibble</td>
@@ -330,7 +330,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@kraggle</td>
@@ -342,7 +342,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@mattymyers</td>
@@ -354,7 +354,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@corybeevers</td>
@@ -366,7 +366,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@HaydenKibble</td>
@@ -378,7 +378,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@kraggle</td>
@@ -390,7 +390,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@mattymyers</td>
@@ -402,7 +402,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@corybeevers</td>
@@ -414,7 +414,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@HaydenKibble</td>
@@ -426,7 +426,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@kraggle</td>
@@ -438,7 +438,7 @@
                                 <tr>
                                     <td>
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>@kraggle</td>

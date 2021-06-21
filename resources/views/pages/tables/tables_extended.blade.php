@@ -59,7 +59,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -86,7 +86,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/robi.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/robi.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -113,7 +113,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/lora.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/lora.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -140,7 +140,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/jana.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/jana.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -167,7 +167,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/robi.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/robi.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -194,7 +194,7 @@
                                 <tr>
                                     <td class="text-center">
                                         <div class="photo">
-                                            <img src="{{ asset('white') }}/img/emilyz.jpg" alt="Table image">
+                                            <img src="{{ asset('images') }}/emilyz.jpg" alt="Table image">
                                         </div>
                                     </td>
                                     <td>
@@ -506,7 +506,7 @@
                                 <tr>
                                     <td>
                                         <div class="img-container">
-                                            <img src="{{ asset('white') }}/img/jacket.png" alt="...">
+                                            <img src="{{ asset('images') }}/jacket.png" alt="...">
                                         </div>
                                     </td>
                                     <td class="td-name">
@@ -542,7 +542,7 @@
                                 <tr>
                                     <td>
                                         <div class="img-container">
-                                            <img src="{{ asset('white') }}/img/t-shirt.png" alt="...">
+                                            <img src="{{ asset('images') }}/t-shirt.png" alt="...">
                                         </div>
                                     </td>
                                     <td class="td-name">
@@ -578,7 +578,7 @@
                                 <tr>
                                     <td>
                                         <div class="img-container">
-                                            <img src="{{ asset('white') }}/img/gucci.png" alt="...">
+                                            <img src="{{ asset('images') }}/gucci.png" alt="...">
                                         </div>
                                     </td>
                                     <td class="td-name">
