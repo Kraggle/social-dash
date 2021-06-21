@@ -31,7 +31,7 @@ $classPage = isset($classPage) ? $classPage : '';
 
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,700,800,900" rel="stylesheet" />
-    <link href="{{ asset('custom') }}/script/libs/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="{{ asset('style') }}/script/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <!-- Extra details for Live View on GitHub Pages -->
 
     <!-- Nucleo Icons -->

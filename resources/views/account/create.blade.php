@@ -136,5 +136,5 @@
 @endsection
 
 @push('js')
-    <script type="module" src="{{ asset('custom') }}/script/accounts.js"></script>
+    <script type="module" src="{{ asset('script') }}/script/accounts.js"></script>
 @endpush

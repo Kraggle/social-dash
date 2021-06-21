@@ -118,5 +118,5 @@
 
     </script>
 
-    <script type="module" src="{{ asset('custom') }}/script/register.js"></script>
+    <script type="module" src="{{ asset('script') }}/script/register.js"></script>
 @endpush

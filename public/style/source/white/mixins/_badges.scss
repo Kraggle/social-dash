@@ -1,0 +1,17 @@
+@mixin badge-variant($bg) {
+    color: color-contrast($bg);
+    background-color: $bg;
+
+    &[href] {
+        &:hover,
+        &:focus {
+            color: color-contrast($bg);
+            text-decoration: none;
+            background-color: darken($bg, 3%);
+        }
+    }
+
+    .tagsinput-remove-link {
+        color: $white;
+    }
+}

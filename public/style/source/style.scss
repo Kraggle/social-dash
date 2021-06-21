@@ -1,0 +1,27 @@
+/* Import any included styles into here and the compile will include it */
+
+// @import './custom/variables';
+
+/* Plugins */
+@import './plugins/fontawesome/scss/all';
+@import './plugins/bootstrap/bootstrap';
+@import './plugins/bootstrap-select/bootstrap-select';
+
+@import './plugins/bootstrap-switch';
+@import './plugins/datatables';
+@import './plugins/fullcalendar';
+@import './plugins/vendor/plugin-jquery.jvectormap';
+@import './plugins/vendor/plugin-perfect-scrollbar';
+@import './plugins/vendor/plugin-sweetalert2';
+
+// @import './plugins/vendor/plugin-animate-bootstrap-notify';
+// @import './plugins/vendor/plugin-datetimepicker';
+// @import './plugins/vendor/plugin-jasny-fileupload';
+// @import './plugins/vendor/plugin-nouislider';
+// @import './plugins/vendor/plugin-tagsinput';
+
+/* Theme */
+// @import './white/white';
+
+@import './custom/register';
+@import './custom/forms';

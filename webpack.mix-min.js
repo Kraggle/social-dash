@@ -1,0 +1,1 @@
+require("laravel-mix").sass("public/style/source/style.scss","public/style");

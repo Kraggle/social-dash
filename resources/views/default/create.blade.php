@@ -487,5 +487,5 @@
 @endsection
 
 @push('js')
-    <script type="module" src="{{ asset('custom') }}/script/defaults.js"></script>
+    <script type="module" src="{{ asset('script') }}/script/defaults.js"></script>
 @endpush

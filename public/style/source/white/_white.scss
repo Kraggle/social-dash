@@ -1,0 +1,102 @@
+/*!
+
+ =========================================================
+ * White Dashboard Pro - v1.0.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/white-dashboard-pro-laravel
+ * Copyright 2018 Creative Tim (http://www.creative-tim.com) & Updivision (http://www.updivision.com)
+
+
+ * Coded by www.creative-tim.com & www.updivision.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+// Core
+
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+// Custom components
+
+@import 'reboot';
+@import 'global';
+@import 'utilities';
+@import 'alerts';
+@import 'avatars';
+@import 'badge';
+@import 'buttons';
+@import 'close';
+@import 'custom-forms';
+@import 'dropdown';
+@import 'footer';
+@import 'forms';
+@import 'grid';
+@import 'icons';
+@import 'images';
+@import 'input-group';
+@import 'info-areas';
+@import 'modal';
+@import 'nav';
+@import 'navbar';
+@import 'pagination';
+@import 'tabs';
+@import 'pills';
+@import 'popover';
+@import 'progress';
+@import 'type';
+@import 'tables';
+@import 'checkboxes-radio';
+@import 'sidebar-and-main-panel';
+@import 'misc';
+@import 'rtl';
+@import 'timeline';
+
+// Vendor / Plugins
+
+@import 'vendor/plugin-datetimepicker';
+@import 'vendor/plugin-nouislider';
+@import 'vendor/plugin-fullcalendar';
+@import 'vendor/plugin-sweetalert2';
+@import 'vendor/plugin-bootstrap-switch';
+@import 'vendor/plugin-bootstrap-select';
+@import 'vendor/plugin-jasny-fileupload';
+@import 'vendor/plugin-tagsinput';
+@import 'vendor/plugin-perfect-scrollbar';
+@import 'vendor/plugin-jquery.jvectormap';
+@import 'vendor/plugin-datatables.net';
+@import 'vendor/plugin-animate-bootstrap-notify';
+@import 'vendor/plugin-card-wizard';
+
+// example pages and sections
+
+@import 'example-pages';
+
+// light mode
+
+@import 'white-content';
+
+// Cards
+
+@import 'card';
+@import 'cards/card-chart';
+@import 'cards/card-map';
+@import 'cards/card-user';
+@import 'cards/card-task';
+@import 'cards/card-animation-on-hover';
+@import 'cards/card-collapse';
+@import 'cards/card-contributions';
+@import 'cards/card-lock';
+@import 'cards/card-pricing';
+@import 'cards/card-profile';
+@import 'cards/card-plain';
+@import 'cards/card-register';
+@import 'cards/card-stats';
+@import 'cards/card-subcategories';
+@import 'cards/card-testimonials';
+@import 'cards/card-wizard';
