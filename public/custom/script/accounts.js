@@ -7,6 +7,8 @@ $(() => {
     $('button[toggle]').on('click', SS.toggleHelp);
 
     $('[has-cost]').on('change switchChange.bootstrapSwitch', SS.changeCost);
+
+    SS.noUISlider();
 });
 
 const checkInstaUser = () => {

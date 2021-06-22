@@ -1,5 +1,7 @@
+import wNumb from './libs/wNumb-min.js';
+
 export default {
-    alert: function(message, type = 'normal') {
+    alert(message, type = 'normal') {
         try {
             $.notify({
                 icon: `fal ${type == 'error' ? 'fa-exclamation-circle' : 'fa-bell-on'}`,
@@ -34,5 +36,50 @@ export default {
             cost = $(':selected', this).data('cost');
 
         $(`#${name}_cost`).text(cost);
+    },
+
+    noUISlider() {
+        $('div[id^=noUi_]:not(.initialized)').each(function() {
+            $(this).addClass('initialized');
+            const min = $(this).data('min'),
+                max = $(this).data('max'),
+                minCost = $(this).data('minCost'),
+                maxCost = $(this).data('maxCost'),
+                step = $(this).data('step'),
+                value = $(this).data('default'),
+                key = $(this).attr('name'),
+                $slider = $(this).get(0),
+                $input = $(`input[name=${key}]`);
+
+            noUiSlider.create($slider, {
+                start: value,
+                connect: [true, true],
+                range: {
+                    min,
+                    max
+                },
+                step,
+                format: wNumb({
+                    decimals: 0
+                })
+            });
+
+            const updateCost = () => {
+                const val = parseInt($slider.noUiSlider.get()),
+                    per = ((val - min) / (max - min)),
+                    cost = Math.round(((maxCost - minCost) * per) + minCost);
+                $(`#${key}_cost`).text(cost);
+            }
+
+            $slider.noUiSlider.on('update', () => {
+                $input.val($slider.noUiSlider.get());
+                updateCost();
+            });
+
+            $input.on('change', function() {
+                $slider.noUiSlider.set($(this).val());
+                updateCost();
+            });
+        });
     }
 }

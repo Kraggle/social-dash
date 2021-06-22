@@ -4,9 +4,31 @@
 // elements cannot be mixed. As such, there are no shared styles for focus or
 // active states on prefixed selectors.
 
+$form-range-thumb-active-bg: pink;
+$form-range-thumb-bg: aqua;
+$form-range-thumb-border-radius: 1rem !default;
+$form-range-thumb-box-shadow: 3px 5px 2px 0 rgba(0, 0, 0, 0.3);
+$form-range-thumb-disabled-bg: grey;
+$form-range-thumb-focus-box-shadow-width: 1rem !default;
+$form-range-thumb-focus-box-shadow: 3px 5px 2px 0 rgba(0, 0, 0, 0.3);
+$form-range-thumb-height: 1rem !default;
+$form-range-thumb-transition: all 0.3s ease;
+$form-range-thumb-width: 1rem !default;
+$form-range-track-bg: skyblue;
+$form-range-track-border-radius: 1rem !default;
+$form-range-track-box-shadow: 3px 5px 2px 0 rgba(0, 0, 0, 0.3);
+$form-range-track-cursor: pointer;
+$form-range-track-height: 1rem !default;
+$form-range-track-height: 1rem !default;
+$form-range-track-width: 1rem !default;
+$form-range-thumb-border: 1px;
+
 .form-range {
     width: 100%;
-    height: add($form-range-thumb-height, $form-range-thumb-focus-box-shadow-width * 2);
+    height: calc(
+        #{$form-range-thumb-height} + (#{$form-range-thumb-focus-box-shadow-width} *
+                    2)
+    );
     padding: 0; // Need to reset padding
     background-color: transparent;
     appearance: none;

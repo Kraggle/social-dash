@@ -134,6 +134,24 @@
                                     </div>
                                 </div>
 
+                                {{-- hidden --}}
+                                @php
+                                    $name = 'options[hidden]';
+                                    $dot = AppHelper::toDotNotation($name);
+                                @endphp
+                                <div class="row justify-content-md-center">
+                                    <label class="col-sm-2 pr-0 col-form-label text-right"
+                                        for="switch-default">{{ __('Hide Setting') }}</label>
+                                    <div class="col-sm-10 has-switch">
+                                        <div class="form-group">
+                                            <input class="bootstrap-switch" name="{{ $name }}"
+                                                id="switch-default" type="checkbox"
+                                                {{ (old($dot) ?? ($options->hidden ?? '')) == 'on' ? 'checked' : '' }}
+                                                data-off-label="OFF" data-on-label="ON" />
+                                        </div>
+                                    </div>
+                                </div>
+
                                 {{-- string --}}
                                 <div class="type-wrapper{{ $type == 'text' ? '' : ' d-none' }}" type="text">
                                     @php $disabled = $type == 'text' ? '' : 'disabled'; @endphp
@@ -200,7 +218,7 @@
                                                     <div class="form-group">
                                                         <input class="bootstrap-switch" name="{{ $name }}"
                                                             type="checkbox" {{ $disabled }}
-                                                            {{ (old($dot) ?? ($value->default ?? '')) == 'on' ? 'checked' : '' }}
+                                                            {{ (old($dot) ?? $value->default ?? '') == 'on' ? 'checked' : '' }}
                                                             data-off-label="NO" data-on-label="YES" />
                                                     </div>
                                                 </div>
