@@ -19,12 +19,63 @@
 
             <li class="{{ $activePage == 'dashboard' ? ' active' : '' }}">
                 <a href="{{ route('home') }}">
-                    <i class="tim-icons icon-chart-pie-36"></i>
+                    <i class="fal fa-chart-pie-alt"></i>
                     <p>{{ __('Dashboard') }}</p>
                 </a>
             </li>
 
-            @if(auth()->user()->notAdmin())
+            @if(auth()->user()->isAdmin())
+
+                <li class="{{ $activePage == 'user-management' ? ' active' : '' }}">
+                    <a href="{{ route('user.index') }}">
+                        <i class="fal fa-users"></i>
+                        <p>{{ __('Users') }}</p>
+                    </a>
+                </li>
+
+                <li class="{{ $activePage == 'role-management' ? ' active' : '' }}">
+                    <a href="{{ route('role.index') }}">
+                        <i class="fal fa-tags"></i>
+                        <p>{{ __('Roles') }}</p>
+                    </a>
+                </li>
+
+                <li class="{{ $activePage == 'package-management' ? ' active' : '' }}">
+                    <a href="{{ route('package.index') }}">
+                        <i class="fal fa-cubes"></i>
+                        <p>{{ __('Packages') }}</p>
+                    </a>
+                </li>
+
+                <li class="{{ $activePage == 'account-management' ? ' active' : '' }}">
+                    <a href="{{ route('account.index') }}">
+                        <i class="fal fa-id-card"></i>
+                        <p>{{ __('Accounts') }}</p>
+                    </a>
+                </li>
+
+                <li class="{{ $activePage == 'team-management' ? ' active' : '' }}">
+                    <a href="{{ route('team.index') }}">
+                        <i class="fal fa-rocket-launch"></i>
+                        <p>{{ __('Teams') }}</p>
+                    </a>
+                </li>
+
+                <li class="{{ $activePage == 'post-management' ? ' active' : '' }}">
+                    <a href="{{ route('post.index') }}">
+                        <i class="fal fa-alarm-clock"></i>
+                        <p>{{ __('Posts') }}</p>
+                    </a>
+                </li>
+
+                <li class="{{ $activePage == 'default-management' ? ' active' : '' }}">
+                    <a href="{{ route('default.index') }}">
+                        <i class="fal fa-cogs"></i>
+                        <p>{{ __('Defaults') }}</p>
+                    </a>
+                </li>
+
+            @else
 
                 <li class="{{ $menuParent == 'analytics' ? ' active' : '' }}">
                     <a data-toggle="collapse" href="#analytics">
@@ -123,43 +174,6 @@
 
                 <li class="{{ $activePage == 'profile' ? ' active' : '' }}">
                     <a href="{{ route('profile.edit') }}">
-                        <i class="tim-icons icon-settings-gear-63"></i>
-                        <p>{{ __('Settings') }}</p>
-                    </a>
-                </li>
-
-            @else
-
-                <li class="{{ $activePage == 'user-management' ? ' active' : '' }}">
-                    <a href="{{ route('user.index') }}">
-                        <i class="tim-icons icon-single-02"></i>
-                        <p>{{ __('Users') }}</p>
-                    </a>
-                </li>
-
-                <li class="{{ $activePage == 'account-management' ? ' active' : '' }}">
-                    <a href="{{ route('account.index') }}">
-                        <i class="tim-icons icon-badge"></i>
-                        <p>{{ __('Accounts') }}</p>
-                    </a>
-                </li>
-
-                <li class="{{ $activePage == 'team-management' ? ' active' : '' }}">
-                    <a href="{{ route('team.index') }}">
-                        <i class="tim-icons icon-spaceship"></i>
-                        <p>{{ __('Teams') }}</p>
-                    </a>
-                </li>
-
-                <li class="{{ $activePage == 'post-management' ? ' active' : '' }}">
-                    <a href="{{ route('post.index') }}">
-                        <i class="tim-icons icon-time-alarm"></i>
-                        <p>{{ __('Posts') }}</p>
-                    </a>
-                </li>
-
-                <li class="{{ $activePage == 'default-management' ? ' active' : '' }}">
-                    <a href="{{ route('default.index') }}">
                         <i class="tim-icons icon-settings-gear-63"></i>
                         <p>{{ __('Settings') }}</p>
                     </a>

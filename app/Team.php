@@ -40,4 +40,13 @@ class Team extends Model {
     public function posts() {
         return $this->hasMany(Post::class);
     }
+
+    /**
+     * Get the team package.
+     *
+     * @return App\Package
+     */
+    public function package() {
+        return $this->belongsTo(Package::class);
+    }
 }

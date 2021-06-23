@@ -12,6 +12,8 @@ class TeamController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index(Team $model) {
+        $this->authorize('manage-teams', User::class);
+
         return view('team.index', ['teams' => $model->all()]);
     }
 

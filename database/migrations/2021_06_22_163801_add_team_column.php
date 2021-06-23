@@ -4,17 +4,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AccountUser extends Migration {
+class AddTeamColumn extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
     public function up() {
-        Schema::create('account_user', function (Blueprint $table) {
-            $table->integer('account_id')->unsigned();
-            $table->integer('user_id')->unsigned();
-        });
+        //
     }
 
     /**
@@ -23,6 +20,6 @@ class AccountUser extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('account_user');
+        //
     }
 }

@@ -31,7 +31,6 @@
                                                 placeholder="{{ __('Some Name') }}" value="{{ old($dot) }}"
                                                 required="true" aria-required="true" />
                                             @include('alerts.feedback', ['field' => $dot])
-                                            @include('alerts.feedback', ['field' => $dot])
                                         </div>
                                     </div>
                                 </div>

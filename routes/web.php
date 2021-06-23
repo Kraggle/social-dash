@@ -37,6 +37,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('default', 'DefaultsController', ['except' => ['show']]);
     Route::resource('post', 'PostsController', ['except' => ['show']]);
     Route::resource('team', 'TeamController', ['except' => ['show']]);
+    Route::resource('package', 'PackageController', ['except' => ['show', 'destroy']]);
 
     Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
     Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);

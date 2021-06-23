@@ -81,6 +81,16 @@ class UserPolicy {
     }
 
     /**
+     * Determine whether the authenticate user can manage packages.
+     *
+     * @param  \App\User  $user
+     * @return boolean
+     */
+    public function managePackages(User $user) {
+        return $user->isAdmin();
+    }
+
+    /**
      * Determine whether the authenticate user can manage posts.
      *
      * @param  \App\User  $user
