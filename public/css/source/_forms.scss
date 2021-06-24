@@ -24,8 +24,19 @@
     outline: none !important;
 }
 
-.bootstrap-select {
+.bootstrap-select.btn-group {
     > .dropdown-toggle {
+        padding: 10px 18px 10px 18px;
+
+        .filter-option {
+            width: 100%;
+            color: $black-states;
+        }
+
+        &:after {
+            color: $black-states;
+        }
+
         .select-cost {
             display: none;
         }
@@ -37,4 +48,12 @@
             float: right;
         }
     }
+}
+
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label {
+    background: darken($light-bg, 10%);
+}
+
+.bootstrap-switch-off:before {
+    background: rgba(darken($light-bg, 10%), 0.5);
 }

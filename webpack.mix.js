@@ -10,5 +10,6 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.sass('resources/scss/white-dashboard.scss', 'public/css')
-    .sass('public/custom/style/main.scss', 'public/css');
+mix.sass('public/css/source/white-dashboard.scss', 'public/css')
+    .sass('public/css/source/main.scss', 'public/css')
+    .sourceMaps(true, 'source-map');

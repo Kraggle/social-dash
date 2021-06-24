@@ -6,6 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model {
     /**
+     * Get the account for the setting.
+     *
+     * @return \App\Team
+     */
+    public function account() {
+        return $this->belongsTo(Account::class);
+    }
+
+    /**
      * Get the team for the setting.
      *
      * @return \App\Team

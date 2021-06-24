@@ -1,0 +1,1 @@
+require("laravel-mix").sass("public/css/source/white-dashboard.scss","public/css").sass("public/css/source/main.scss","public/css").sourceMaps(!0,"source-map");

@@ -6,11 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model {
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'package_id'
+    ];
+
+    /**
      * Get the users in the team.
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function users() {
+    public function members() {
         return $this->hasMany(User::class);
     }
 
@@ -30,15 +39,6 @@ class Team extends Model {
      */
     public function accounts() {
         return $this->hasMany(Account::class);
-    }
-
-    /**
-     * Get the team posts.
-     *
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    public function posts() {
-        return $this->hasMany(Post::class);
     }
 
     /**

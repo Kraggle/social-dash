@@ -42,8 +42,34 @@ class AccountController extends Controller {
      * @return \Illuminate\View\View
      */
     public function store(AccountRequest $request, Account $model) {
-        $account = $model->create($request->all());
+        $model->create($request->all());
 
         return redirect()->route('account.index')->withStatus(__('Account successfully added.'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Account  $account
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Account $account) {
+        return view('account.edit', [
+            'account' => $account,
+            'teams' => Team::all()
+        ]);
+    }
+
+    /**
+     * Update the specified account in storage
+     *
+     * @param  \App\Http\Requests\AccountRequest  $request
+     * @param  \App\Account  $account
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(AccountRequest $request, Account $account) {
+        $account->update($request->all());
+
+        return redirect()->route('account.index')->withStatus(__('Account successfully updated.'));
     }
 }

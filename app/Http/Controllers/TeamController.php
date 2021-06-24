@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Team;
+use App\Package;
+use App\Http\Requests\TeamRequest;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller {
@@ -18,32 +20,25 @@ class TeamController extends Controller {
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new team
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function create() {
-        //
+        $this->authorize('manage-teams', User::class);
+        return view('team.create', ['packages' => Package::all()]);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created team in storage
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \App\Http\Requests\TeamRequest  $request
+     * @param  \App\Team  $model
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request) {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Team  $team
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Team $team) {
-        //
+    public function store(TeamRequest $request, Team $model) {
+        $model->create($request->all());
+        return redirect()->route('team.index')->withStatus(__('Team successfully created.'));
     }
 
     /**
@@ -53,27 +48,19 @@ class TeamController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit(Team $team) {
-        //
+        return view('team.edit', ['team' => $team, 'packages' => Package::all()]);
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified team in storage
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\TeamRequest  $request
      * @param  \App\Team  $team
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, Team $team) {
-        //
-    }
+    public function update(TeamRequest $request, Team $team) {
+        $team->update($request->all());
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Team  $team
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Team $team) {
-        //
+        return redirect()->route('team.index')->withStatus(__('Team successfully updated.'));
     }
 }

@@ -1,5 +1,9 @@
 /* Import any included styles into here and the compile will include it */
 
+/*     brand Colors              */
+
+/* navbar color */
+
 .has-switch {
   display: flex;
   align-items: center;
@@ -22,12 +26,73 @@
   outline: none !important;
 }
 
-.bootstrap-select > .dropdown-toggle .select-cost {
+.bootstrap-select.btn-group > .dropdown-toggle {
+  padding: 10px 18px 10px 18px;
+}
+
+.bootstrap-select.btn-group > .dropdown-toggle .filter-option {
+  width: 100%;
+  color: #1d253b;
+}
+
+.bootstrap-select.btn-group > .dropdown-toggle:after {
+  color: #1d253b;
+}
+
+.bootstrap-select.btn-group > .dropdown-toggle .select-cost {
   display: none;
 }
 
-.bootstrap-select li .select-cost {
+.bootstrap-select.btn-group li .select-cost {
   padding-right: 20px;
   float: right;
 }
 
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label {
+  background: #d3d7e9;
+}
+
+.bootstrap-switch-off:before {
+  background: rgba(211, 215, 233, 0.5);
+}
+
+.fc-basic-view .fc-day-number,
+.fc-basic-view .fc-week-number {
+  padding: 2px;
+  color: #344675;
+}
+
+.fc-unthemed .fc-today {
+  background: #d3d7e9;
+}
+
+.fc-unthemed .fc-content,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-list-heading td,
+.fc-unthemed .fc-list-view,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-row,
+.fc-unthemed tbody,
+.fc-unthemed td,
+.fc-unthemed th,
+.fc-unthemed thead {
+  border-color: #9499a7;
+}
+
+.fc-prev-button,
+.fc-next-button {
+  color: #344675;
+}
+
+.fc-prev-button:hover,
+.fc-next-button:hover {
+  color: #344675;
+}
+
+.fc button.btn-primary:not([data-action]):hover,
+.fc button:not([data-action]):hover {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
+/*# sourceMappingURL=main.css.map*/

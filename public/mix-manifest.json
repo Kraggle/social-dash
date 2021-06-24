@@ -1,4 +1,7 @@
 {
+    "/css/white-dashboard.css": "/css/white-dashboard.css",
     "/css/main.css": "/css/main.css",
-    "/css/white-dashboard.css": "/css/white-dashboard.css"
+    "/mix.js.map": "/mix.js.map",
+    "/css/white-dashboard.css.map": "/css/white-dashboard.css.map",
+    "/css/main.css.map": "/css/main.css.map"
 }

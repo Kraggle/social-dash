@@ -41,7 +41,14 @@
         }
 
         &.card-plain {
-            @include input-coloured-bg($opacity-5, $white, $white, $transparent-bg, $opacity-1, $opacity-2);
+            @include input-coloured-bg(
+                $opacity-5,
+                $white,
+                $white,
+                $transparent-bg,
+                $opacity-1,
+                $opacity-2
+            );
 
             .input-group-addon,
             .form-group.no-border .input-group-addon,
@@ -62,7 +69,8 @@
             @include form-control-placeholder(rgba($black, 0.4), 1);
 
             .has-danger {
-                .form-control, .input-group-prepend .input-group-text {
+                .form-control,
+                .input-group-prepend .input-group-text {
                     border-color: $danger-states;
                 }
             }
@@ -114,7 +122,9 @@
                 }
             }
 
-            .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+            .form-control[disabled],
+            .form-control[readonly],
+            fieldset[disabled] .form-control {
                 background: $light-gray;
                 border-color: rgba($black-states, 0.3);
             }
@@ -143,11 +153,23 @@
                 border-left: none;
             }
 
-            .has-danger .form-control:focus, .has-success.input-group-focus .input-group-append .input-group-text, .has-success.input-group-focus .input-group-prepend .input-group-text {
+            .has-danger .form-control:focus,
+            .has-success.input-group-focus
+                .input-group-append
+                .input-group-text,
+            .has-success.input-group-focus
+                .input-group-prepend
+                .input-group-text {
                 border-color: $danger-states;
             }
 
-            .has-success .form-control:focus, .has-success.input-group-focus .input-group-append .input-group-text, .has-success.input-group-focus .input-group-prepend .input-group-text {
+            .has-success .form-control:focus,
+            .has-success.input-group-focus
+                .input-group-append
+                .input-group-text,
+            .has-success.input-group-focus
+                .input-group-prepend
+                .input-group-text {
                 border-color: darken($success, 10%);
             }
         }
@@ -166,6 +188,8 @@
 }
 
 .full-page {
+    background: $light-bg;
+
     & > .content,
     & > .footer {
         position: relative;
@@ -248,9 +272,29 @@
         }
     }
 
-    &.pricing-page, &.login-page, &.lock-page, &.register-page {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ol li,
+    ul li,
+    pre {
+        color: $black-states;
+    }
+
+    .description {
+        color: $dark-gray;
+    }
+
+    &.pricing-page,
+    &.login-page,
+    &.lock-page,
+    &.register-page {
         min-height: 100vh;
-        background: radial-gradient($background-black, $background-states-black);
+        background: $light-bg;
     }
 }
 
@@ -265,7 +309,6 @@
     }
 }
 
-
 @include media-breakpoint-down(xs) {
     .register-page .full-page > .content {
         padding-top: 50px;
@@ -277,7 +320,6 @@
         }
     }
 }
-
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .pricing-page,

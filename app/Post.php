@@ -25,20 +25,11 @@ class Post extends Model {
     }
 
     /**
-     * Get the post team.
-     *
-     * @return \App\Team
-     */
-    public function team() {
-        return $this->hasOne(Team::class);
-    }
-
-    /**
      * Get the post account.
      *
      * @return \App\Account
      */
     public function account() {
-        return $this->hasOne(Account::class);
+        return $this->belongsTo(Account::class);
     }
 }

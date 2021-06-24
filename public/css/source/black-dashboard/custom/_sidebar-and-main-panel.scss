@@ -28,7 +28,8 @@
     background-size: cover;
     background-position: center center;
     display: block;
-    box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.1),
+        0 4px 20px 0 rgba(0, 0, 0, 0.15);
     margin-top: 82px;
     margin-left: 20px;
     border-radius: 5px;
@@ -51,7 +52,7 @@
 
         > .nav,
         .user .info {
-            [data-toggle='collapse'] ~ div > ul > li > a {
+            [data-toggle="collapse"] ~ div > ul > li > a {
                 span {
                     display: inline-block;
 
@@ -94,13 +95,14 @@
             }
         }
 
-        [data-toggle='collapse'] ~ div > ul > li:hover > a {
-            .sidebar-mini-icon, .sidebar-normal {
+        [data-toggle="collapse"] ~ div > ul > li:hover > a {
+            .sidebar-mini-icon,
+            .sidebar-normal {
                 color: $white;
             }
         }
 
-        .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-mini-icon {
+        .nav [data-toggle="collapse"] ~ div > ul > li > a .sidebar-mini-icon {
             opacity: 0;
         }
     }
@@ -169,7 +171,8 @@
 
             &:hover:not(.active) > a,
             &:focus:not(.active) > a {
-                p, i {
+                p,
+                i {
                     color: $white;
                 }
             }
@@ -179,15 +182,16 @@
                 color: $white;
             }
 
-            &.active > a:not([data-toggle='collapse']) {
+            &.active > a:not([data-toggle="collapse"]) {
                 background: transparent;
 
-                i, p {
+                i,
+                p {
                     color: white;
                 }
 
                 &:before {
-                    content: ' ';
+                    content: " ";
                     position: absolute;
                     height: 6px;
                     width: 6px;
@@ -198,7 +202,7 @@
                 }
             }
 
-            &.active > a[data-toggle='collapse'] {
+            &.active > a[data-toggle="collapse"] {
                 background: transparent;
                 box-shadow: none;
                 color: $white;
@@ -210,13 +214,14 @@
                 & + div .nav .active a {
                     box-shadow: none;
 
-                    .sidebar-mini-icon, .sidebar-normal {
+                    .sidebar-mini-icon,
+                    .sidebar-normal {
                         color: $white;
                         font-weight: $font-weight-normal;
                     }
 
                     &:before {
-                        content: ' ';
+                        content: " ";
                         position: absolute;
                         height: 6px;
                         width: 6px;
@@ -228,7 +233,7 @@
                 }
 
                 &:before {
-                    content: ' ';
+                    content: " ";
                     position: absolute;
                     height: 6px;
                     width: 6px;
@@ -247,6 +252,7 @@
             display: block;
             height: auto;
             white-space: nowrap;
+            color: $opacity-8;
 
             @extend .animation-transition-general;
         }
@@ -279,7 +285,7 @@
             z-index: 3;
             width: $full-width;
             height: 100%;
-            content: '';
+            content: "";
             display: block;
             background: $white;
             opacity: 1;
@@ -313,7 +319,7 @@
         }
 
         &:after {
-            content: '';
+            content: "";
             position: absolute;
             bottom: 0;
             right: 15px;
@@ -328,7 +334,7 @@
             margin: 10px 10px;
             color: $white;
             line-height: 20px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         .simple-text {
@@ -360,7 +366,7 @@
         }
     }
 
-    &[data='blue'] {
+    &[data="blue"] {
         @include linear-gradient($info-states, $info);
 
         &:before {
@@ -368,7 +374,7 @@
         }
     }
 
-    &[data='green'] {
+    &[data="green"] {
         @include linear-gradient($success-states, $success);
 
         &:before {
@@ -376,7 +382,7 @@
         }
     }
 
-    &[data='orange'] {
+    &[data="orange"] {
         @include linear-gradient($warning-states, $warning);
 
         &:before {
@@ -384,7 +390,7 @@
         }
     }
 
-    &[data='red'] {
+    &[data="red"] {
         @include linear-gradient($danger-states, $danger);
 
         &:before {
@@ -398,7 +404,7 @@
         position: relative;
 
         &:after {
-            content: '';
+            content: "";
             position: absolute;
             bottom: 0;
             right: 15px;
@@ -457,7 +463,7 @@
     }
 
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
@@ -495,27 +501,27 @@
     width: $full-width;
     min-height: 100vh;
     border-top: 2px solid $primary;
-    background: linear-gradient($background-black, $background-states-black);
+    background: $light-bg;
 
     @include transitions(0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
-    &[data='blue'] {
+    &[data="blue"] {
         border-top: 2px solid $info;
     }
 
-    &[data='green'] {
+    &[data="green"] {
         border-top: 2px solid $success;
     }
 
-    &[data='orange'] {
+    &[data="orange"] {
         border-top: 2px solid $warning;
     }
 
-    &[data='red'] {
+    &[data="red"] {
         border-top: 2px solid $danger;
     }
 
-    &[data='primary'] {
+    &[data="primary"] {
         border-top: 2px solid $primary;
     }
 
@@ -545,9 +551,21 @@
     height: $sidebar-width;
     padding-top: 80px;
     padding-bottom: 45px;
-    background: #141E30; /* fallback for old browsers */
-    background: -webkit-gradient(linear, left top, right top, from(#0c2646), color-stop(60%, #204065), to(#2a5788));
-    background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+    background: #141e30; /* fallback for old browsers */
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#0c2646),
+        color-stop(60%, #204065),
+        to(#2a5788)
+    );
+    background: linear-gradient(
+        to right,
+        #0c2646 0%,
+        #204065 60%,
+        #2a5788 100%
+    );
     position: relative;
     overflow: hidden;
 
@@ -660,7 +678,7 @@
         top: 0;
         right: 0;
         left: $sidebar-width;
-        content: '';
+        content: "";
         z-index: 9999;
         overflow-x: hidden;
         background-color: transparent;
@@ -681,17 +699,16 @@
     }
 }
 
-
 @include media-breakpoint-up(lg) {
     .sidebar,
     .main-panel,
     .sidebar-wrapper {
-        -webkit-transition-property: top,bottom,width;
-        transition-property: top,bottom, width;
-        -webkit-transition-duration: .2s,.2s, .35s;
-        transition-duration: .2s,.2s, .35s;
-        -webkit-transition-timing-function: linear,linear,ease;
-        transition-timing-function: linear,linear,ease;
+        -webkit-transition-property: top, bottom, width;
+        transition-property: top, bottom, width;
+        -webkit-transition-duration: 0.2s, 0.2s, 0.35s;
+        transition-duration: 0.2s, 0.2s, 0.35s;
+        -webkit-transition-timing-function: linear, linear, ease;
+        transition-timing-function: linear, linear, ease;
         -webkit-overflow-scrolling: touch;
     }
 
@@ -726,8 +743,21 @@
             }
 
             .sidebar-wrapper {
-                > .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
-                .user .info [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
+                > .nav
+                    [data-toggle="collapse"]
+                    ~ div
+                    > ul
+                    > li
+                    > a
+                    .sidebar-normal,
+                .user
+                    .info
+                    [data-toggle="collapse"]
+                    ~ div
+                    > ul
+                    > li
+                    > a
+                    .sidebar-normal,
                 .user .info > a > span,
                 > .nav li > a p {
                     @include transform-translate-x(-25px);
@@ -736,7 +766,13 @@
                 }
             }
 
-            .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-mini-icon {
+            .nav
+                [data-toggle="collapse"]
+                ~ div
+                > ul
+                > li
+                > a
+                .sidebar-mini-icon {
                 opacity: 1;
             }
         }
@@ -760,8 +796,21 @@
                 width: $sidebar-width;
 
                 > .nav li > a p,
-                > .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
-                .user .info [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
+                > .nav
+                    [data-toggle="collapse"]
+                    ~ div
+                    > ul
+                    > li
+                    > a
+                    .sidebar-normal,
+                .user
+                    .info
+                    [data-toggle="collapse"]
+                    ~ div
+                    > ul
+                    > li
+                    > a
+                    .sidebar-normal,
                 .user .info > a > span {
                     @include transform-translate-x(0px);
 
@@ -769,7 +818,13 @@
                 }
             }
 
-            .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-mini-icon {
+            .nav
+                [data-toggle="collapse"]
+                ~ div
+                > ul
+                > li
+                > a
+                .sidebar-mini-icon {
                 opacity: 0;
             }
         }
@@ -790,13 +845,12 @@
             margin-left: 10px;
 
             i {
-                color: $white;
+                color: $black-states;
                 font-size: 20px;
             }
         }
     }
 }
-
 
 @include media-breakpoint-down(sm) {
     .main-panel .content {
@@ -804,7 +858,6 @@
         padding-right: 15px;
     }
 }
-
 
 @include media-breakpoint-between(md, lg) {
     .wrapper {
@@ -893,7 +946,7 @@
         top: 0;
         right: 0;
         left: $sidebar-width;
-        content: '';
+        content: "";
         z-index: 9999;
         overflow-x: hidden;
         background-color: transparent;

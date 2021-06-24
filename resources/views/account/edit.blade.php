@@ -1,47 +1,21 @@
-@extends('layouts.app', [
-'activePage' => 'account-management',
-'menuParent' => 'laravel',
-'titlePage' => __('Account Management')
-])
+@extends('layouts.app', ['activePage' => 'account-management', 'titlePage' => __('Account Management')])
 
 @section('content')
   <div class="content">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-8">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">{{ __('Search') }}</h4>
-            </div>
-            <div class="card-body">
-              <div class="row justify-content-md-center">
-                <div class="col-sm-11">
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fal fa-hashtag"></i>
-                      </div>
-                    </div>
-                    <input name="search" class="form-control" type="search" placeholder="Instagram username" />
-                    <div class="input-group-append">
-                      <button id="find-btn" class="btn btn-success">Search</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <form method="post" enctype="multipart/form-data" action="{{ route('account.store') }}" autocomplete="off"
-            class="form-horizontal">
+          <form method="post" enctype="multipart/form-data" action="{{ route('account.update', $account) }}"
+            autocomplete="off">
             @csrf
-            @method('post')
+            @method('put')
 
-            <div toggle class="card">
-              <div class="card-header">
-                <h4 class="card-title">{{ __('New Account') }}</h4>
+            <div class="card">
+              <div class="card-header row">
+                <h4 class="card-title col-md-6">{{ __('Account') }}</h4>
               </div>
-              <div class="card-body">
+              <div class="card-body ">
+
                 <div class="row justify-content-md-center">
 
                   {{-- username --}}
@@ -51,14 +25,14 @@
                   @endphp
                   <div class="col-sm-6 pr-0">
                     <label for="input-{{ $name }}">{{ __('Instagram Username') }}</label>
-                    <div class="input-group{{ $errors->has($dot) ? ' has-danger' : '' }}">
+                    <div class="input-group{{ $errors->has($dot) ? ' has-danger' : '' }}" disabled>
                       <div class="input-group-prepend">
                         <div class="input-group-text">
                           <i class="fal fa-hashtag"></i>
                         </div>
                       </div>
                       <input class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}" type="text"
-                        name="{{ $name }}" id="{{ $name }}" value="{{ old($dot) }}">
+                        name="{{ $name }}" id="{{ $name }}" value="{{ $account->username }}" disabled>
                     </div>
                     @include('alerts.feedback', ['field' => $dot])
                   </div>
@@ -70,14 +44,14 @@
                   @endphp
                   <div class="col-sm-5">
                     <label class="">{{ __('Instagram ID') }}</label>
-                    <div class="input-group{{ $errors->has($dot) ? ' has-danger' : '' }}">
+                    <div class="input-group{{ $errors->has($dot) ? ' has-danger' : '' }}" disabled>
                       <div class="input-group-prepend">
                         <div class="input-group-text">
                           <i class="fal fa-fingerprint"></i>
                         </div>
                       </div>
                       <input class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}" type="text"
-                        name="{{ $name }}" id="{{ $name }}" value="{{ old($dot) }}">
+                        name="{{ $name }}" id="{{ $name }}" value="{{ $account->pk }}" disabled>
                     </div>
                     @include('alerts.feedback', ['field' => $dot])
                   </div>
@@ -91,7 +65,7 @@
                     <label>{{ __('Add to Team') }}</label>
                     <div class="form-group">
                       <select name="{{ $name }}" class="selectpicker" data-style="btn btn-primary">
-                        @php $selected = old($dot) ?? 1 @endphp
+                        @php $selected = old($dot) ?? $account->team_id ?? 1 @endphp
                         @foreach ($teams as $team)
                           <option value="{{ $team->id }}" {{ AppHelper::selected($selected, $team->id) }}>
                             {{ $team->name }}</option>
@@ -111,7 +85,7 @@
               <div class="card-body">
                 <div class="row justify-content-md-center">
                   <div class="col-sm-11">
-                    @foreach ($settings as $setting)
+                    @foreach ($account->getAllSettings() as $setting)
                       @php echo AppHelper::makeSetting($setting) @endphp
                     @endforeach
                   </div>
@@ -119,12 +93,12 @@
               </div>
 
               <div class="card-footer ml-auto mr-auto">
-                <button type="submit" class="btn">{{ __('Add Account') }}</button>
+                <button type="submit" class="btn">{{ __('Save Account') }}</button>
               </div>
             </div>
+
           </form>
         </div>
-
         <div class="col-md-4">
           <div class="row">
             <div class="col-md-12 mb-3 text-right">
@@ -132,13 +106,13 @@
             </div>
           </div>
           {{-- <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">{{ __('Example') }}</h4>
-            </div>
-            <div class="card-body">
+                    <div class="card-header">
+                        <h4 class="card-title">{{ __('Example') }}</h4>
+                    </div>
+                    <div class="card-body">
 
-            </div>
-        </div> --}}
+                    </div>
+                </div> --}}
         </div>
       </div>
     </div>

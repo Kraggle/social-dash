@@ -33,13 +33,4 @@ class Account extends Model {
     public function posts() {
         return $this->hasMany(Post::class);
     }
-
-    /**
-     * Get the accounts team.
-     *
-     * @return \App\Team
-     */
-    public function team() {
-        return $this->belongsTo(Team::class);
-    }
 }
