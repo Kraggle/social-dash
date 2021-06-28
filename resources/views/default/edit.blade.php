@@ -18,66 +18,68 @@
               </div>
               <div class="card-body ">
 
-                @php
-                  $name = 'name';
-                  $dot = AppHelper::toDotNotation($name);
-                @endphp
+                {{-- name --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-name">{{ __('Name') }}</label>
+                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-name">{{ __('Title') }}</label>
                   <div class="col-sm-10">
-                    <div class="form-group{{ $errors->has($dot) ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}"
-                        name="{{ $name }}" id="input-name" type="text" placeholder="{{ __('Some Name') }}"
-                        value="{{ old($dot) ?? ($default->name ?? '') }}" required="true" aria-required="true" />
-                      @include('alerts.feedback', ['field' => $dot])
-                    </div>
+                    @include('forms.text', [ 'options' => [
+                    'name' => 'name',
+                    'placeholder' => __('Some Name'),
+                    'value' => $default->name ?? '',
+                    'required' => true,
+                    'id' => 'input-name',
+                    ]])
+                  </div>
+                </div>
+
+                {{-- subtitle --}}
+                <div class="row justify-content-md-center">
+                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-subtitle">
+                    {{ __('Subtitle') }}
+                  </label>
+                  <div class="col-sm-10">
+                    @include('forms.text', [ 'options' => [
+                    'name' => 'options[subtitle]',
+                    'placeholder' => __('A subtitle for the setting.'),
+                    'value' => $options->subtitle ?? '',
+                    'id' => 'input-subtitle',
+                    ]])
                   </div>
                 </div>
 
                 {{-- description --}}
-                @php
-                  $name = 'description';
-                  $dot = AppHelper::toDotNotation($name);
-                @endphp
                 <div class="row justify-content-md-center">
                   <label class="col-sm-2 pr-0 col-form-label text-right"
                     for="input-description">{{ __('Description') }}</label>
                   <div class="col-sm-10">
-                    <div class="form-group{{ $errors->has($dot) ? ' has-danger' : '' }}">
-                      <textarea class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}"
-                        name="{{ $name }}" id="input-description"
-                        placeholder="{{ __('A nice description about what the variable is for!') }}">{{ old($dot) ?? ($default->description ?? '') }}</textarea>
-                      @include('alerts.feedback', ['field' => $dot])
-                    </div>
+                    @include('forms.textarea', [ 'options' => [
+                    'name' => 'description',
+                    'value' => $default->description ?? '',
+                    'id' => 'input-description',
+                    'placeholder' => __('A nice description about what the variable is for!'),
+                    ]])
                   </div>
                 </div>
 
                 {{-- for_table --}}
-                @php
-                  $name = 'for_table';
-                  $dot = AppHelper::toDotNotation($name);
-                  $table = old($dot) ?? ($default->for_table ?? 'accounts');
-                @endphp
                 <div class="row justify-content-md-center">
                   <label class="col-sm-2 pr-0 col-form-label text-right"
-                    for="input-for-table">{{ __('For Table') }}</label>
+                    for="select-for-table">{{ __('For Table') }}</label>
                   <div class="col-sm-10">
-                    <div class="form-group{{ $errors->has($dot) ? ' has-danger' : '' }}">
-                      <select class="selectpicker" data-size="7" data-style="btn btn-primary" id="input-for-table"
-                        name="{{ $name }}">
-                        <option value="accounts" {{ $table == 'accounts' ? ' selected' : '' }}>
-                          Accounts</option>
-                        <option value="posts" {{ $table == 'posts' ? ' selected' : '' }}>Posts
-                        </option>
-                        <option value="teams" {{ $table == 'teams' ? ' selected' : '' }}>Teams
-                        </option>
-                        <option value="users" {{ $table == 'users' ? ' selected' : '' }}>Users
-                        </option>
-                      </select>
-                      @include('alerts.feedback', ['field' => $dot])
-                    </div>
+                    @include('forms.select', [ 'options' => [
+                    'options' => [
+                    'accounts' => 'Accounts',
+                    'posts' => 'Posts',
+                    'teams' => 'Teams',
+                    'users' => 'Users',
+                    ],
+                    'name' => 'for_table',
+                    'value' => $default->for_table ?? 'accounts',
+                    'id' => 'select-for-table',
+                    ]])
                   </div>
                 </div>
+
               </div>
             </div>
 
@@ -87,60 +89,83 @@
               </div>
               <div class="card-body ">
 
+                <div class="row">
+                  <div class="col-sm-2"></div>
+                  <div class="row col-sm-10">
+
+                    {{-- hidden --}}
+                    <div class="col-md-auto">
+                      <label class="d-block" for="switch-hidden">{{ __('Hide Setting') }}</label>
+                      <div class="py-1">
+                        @include('forms.switch', ['options' => [
+                        'name' => 'options[hidden]',
+                        'value' => $options->hidden ?? '',
+                        'id' => 'switch-hidden'
+                        ]])
+                      </div>
+                    </div>
+
+                    {{-- has_cost --}}
+                    <div class="col-md-auto">
+                      <label class="d-block" for="switch-has-cost">{{ __('Has Cost') }}</label>
+                      <div class="py-1">
+                        @include('forms.switch', ['options' => [
+                        'name' => 'options[has_cost]',
+                        'value' => $options->has_cost ?? '',
+                        'id' => 'switch-has-cost',
+                        'attrs' => ['data-disabler' => ['name' => 'cost', 1 => 'show', 0 => 'hide']]
+                        ]])
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
                 {{-- key --}}
-                @php
-                  $name = 'options[key]';
-                  $dot = AppHelper::toDotNotation($name);
-                @endphp
                 <div class="row justify-content-md-center">
                   <label class="col-sm-2 pr-0 col-form-label text-right" for="input-key">{{ __('Key') }}</label>
                   <div class="col-sm-10">
-                    <div class="form-group{{ $errors->has($dot) ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}"
-                        name="{{ $name }}" id="input-key" type="text" placeholder="{{ __('some_key') }}"
-                        value="{{ old($dot) ?? ($options->key ?? '') }}" />
-                      @include('alerts.feedback', ['field' => $dot])
-                    </div>
+                    @include('forms.text', [ 'options' => [
+                    'name' => 'options[key]',
+                    'placeholder' => __('some_key'),
+                    'value' => $options->key ?? '',
+                    'id' => 'input-key',
+                    ]])
                   </div>
                 </div>
+
+                {{-- message --}}
+                <div class="row justify-content-md-center">
+                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-message">
+                    {{ __('Payment Message') }}
+                  </label>
+                  <div class="col-sm-10">
+                    @include('forms.text', [ 'options' => [
+                    'name' => 'options[message]',
+                    'placeholder' => '{n} of something',
+                    'value' => $options->message ?? '',
+                    'id' => 'input-message',
+                    ]])
+                  </div>
+                </div>
+
+                @php $type = old('options.type') ?? ($options->type ?? 'number') @endphp
 
                 {{-- type --}}
-                @php
-                  $name = 'options[type]';
-                  $dot = AppHelper::toDotNotation($name);
-                  $type = old($dot) ?? ($options->type ?? 'number');
-                @endphp
                 <div class="row justify-content-md-center">
                   <label class="col-sm-2 pr-0 col-form-label text-right"
-                    for="input-type">{{ __('Variable Type') }}</label>
+                    for="select-type">{{ __('Variable Type') }}</label>
                   <div class="col-sm-10">
-                    <div class="form-group{{ $errors->has($dot) ? ' has-danger' : '' }}">
-                      <select class="selectpicker" data-size="7" data-style="btn btn-primary" id="input-type"
-                        name="{{ $name }}">
-                        <option value="text" {{ $type == 'text' ? ' selected' : '' }}>String
-                        </option>
-                        <option value="number" {{ $type == 'number' ? ' selected' : '' }}>Number
-                        </option>
-                        <option value="checkbox" {{ $type == 'checkbox' ? ' selected' : '' }}>
-                          Boolean</option>
-                      </select>
-                      @include('alerts.feedback', ['field' => $dot])
-                    </div>
-                  </div>
-                </div>
-
-                {{-- hidden --}}
-                @php
-                  $name = 'options[hidden]';
-                  $dot = AppHelper::toDotNotation($name);
-                @endphp
-                <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pr-0 col-form-label text-right"
-                    for="switch-default">{{ __('Hide Setting') }}</label>
-                  <div class="col-sm-10 has-switch">
-                    <input class="bootstrap-switch" name="{{ $name }}" id="switch-default" type="checkbox"
-                      {{ (old($dot) ?? ($options->hidden ?? '')) == 'on' ? 'checked' : '' }} data-off-label="OFF"
-                      data-on-label="ON" />
+                    @include('forms.select', [ 'options' => [
+                    'options' => [
+                    'text' => 'String',
+                    'number' => 'Number',
+                    'checkbox' => 'Boolean',
+                    ],
+                    'name' => 'options[type]',
+                    'value' => $type,
+                    'id' => 'select-type',
+                    ]])
                   </div>
                 </div>
 
@@ -169,46 +194,39 @@
                       </div>
 
                       <div class="row" repeat="_0">
+                        @php $value = $options->values[0] ?? []; @endphp
 
                         {{-- value --}}
-                        @php
-                          $name = 'options[values][0][value]';
-                          $dot = AppHelper::toDotNotation($name);
-                          $value = $options->values[0] ?? [];
-                        @endphp
                         <div class="col-sm-6 pr-0">
-                          <div class="form-group">
-                            <input class="form-control" name="{{ $name }}" type="text"
-                              value="{{ old($dot) ?? ($value->value ?? '') }}" placeholder="{{ __('Some Value') }}"
-                              {{ $disabled }} />
-                          </div>
+                          @include('forms.text', ['options' => [
+                          'name' => 'options[values][0][value]',
+                          'placeholder' => __('Some Value'),
+                          'value' => $value->value ?? '',
+                          'disabled' => $disabled
+                          ]])
                         </div>
 
                         {{-- cost --}}
-                        @php
-                          $name = 'options[values][0][cost]';
-                          $dot = AppHelper::toDotNotation($name);
-                        @endphp
                         <div class="col-sm-3 pr-0">
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">£</span>
-                            </div>
-                            <input class="form-control" name="{{ $name }}" type="number" step=".01" min="0"
-                              placeholder="25.00" value="{{ old($dot) ?? ($value->cost ?? '') }}"
-                              {{ $disabled }} />
-                          </div>
+                          @include('forms.number', ['options' => [
+                          'name' => 'options[values][0][cost]',
+                          'placeholder' => '25.00',
+                          'value' => $value->cost ?? '',
+                          'disabled' => $disabled,
+                          'step' => '.01',
+                          'min' => '0',
+                          'prepend' => '£',
+                          'attrs' => ['disabler' => 'cost']
+                          ]])
                         </div>
 
                         {{-- default --}}
-                        @php
-                          $name = 'options[values][0][default]';
-                          $dot = AppHelper::toDotNotation($name);
-                        @endphp
                         <div class="col-sm-2 pr-0 has-switch">
-                          <input class="bootstrap-switch" name="{{ $name }}" type="checkbox" {{ $disabled }}
-                            {{ (old($dot) ?? ($value->default ?? '')) == 'on' ? 'checked' : '' }} data-off-label="NO"
-                            data-on-label="YES" />
+                          @include('forms.switch', ['options' => [
+                          'name' => 'options[values][0][default]',
+                          'value' => $options->default ?? '',
+                          'disabled' => $disabled,
+                          ]])
                         </div>
 
                         <div class="col-sm-1 pr-0">
@@ -225,44 +243,36 @@
                         <div class="row" repeat="_{{ $loop->index }}">
 
                           {{-- value --}}
-                          @php
-                            $name = "options[values][$loop->index][value]";
-                            $dot = AppHelper::toDotNotation($name);
-                          @endphp
                           <div class="col-sm-6 pr-0">
-                            <div class="form-group">
-                              <input class="form-control" name="{{ $name }}" type="text"
-                                value="{{ old($dot) ?? ($value->value ?? '') }}"
-                                placeholder="{{ __('Some Value') }}" {{ $disabled }} />
-                            </div>
+                            @include('forms.text', ['options' => [
+                            'name' => "options[values][$loop->index][value]",
+                            'placeholder' => __('Some Value'),
+                            'value' => $value->value ?? '',
+                            'disabled' => $disabled
+                            ]])
                           </div>
 
                           {{-- cost --}}
-                          @php
-                            $name = "options[values][$loop->index][cost]";
-                            $dot = AppHelper::toDotNotation($name);
-                          @endphp
                           <div class="col-sm-3 pr-0">
-                            <div class="input-group">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text">£</span>
-                              </div>
-                              <input class="form-control" name="{{ $name }}" type="number" step=".01" min="0"
-                                placeholder="25.00" value="{{ old($dot) ?? ($value->cost ?? '') }}"
-                                {{ $disabled }} />
-                            </div>
+                            @include('forms.number', ['options' => [
+                            'name' => "options[values][$loop->index][cost]",
+                            'placeholder' => '25.00',
+                            'value' => $value->cost ?? '',
+                            'disabled' => $disabled,
+                            'step' => '.01',
+                            'min' => '0',
+                            'prepend' => '£',
+                            'attrs' => ['disabler' => 'cost']
+                            ]])
                           </div>
 
                           {{-- default --}}
-                          @php
-                            $name = "options[values][$loop->index][default]";
-                            $dot = AppHelper::toDotNotation($name);
-                          @endphp
                           <div class="col-sm-2 pr-0 has-switch">
-                            <input class="bootstrap-switch" name="{{ $name }}" type="checkbox"
-                              {{ $disabled }}
-                              {{ (old($dot) ?? ($value->default ?? '')) == 'on' ? 'checked' : '' }} data-off-label="NO"
-                              data-on-label="YES" />
+                            @include('forms.switch', ['options' => [
+                            'name' => "options[values][$loop->index][default]",
+                            'value' => $value->default ?? '',
+                            'disabled' => $disabled,
+                            ]])
                           </div>
 
                           <div class="col-sm-1 pr-0">
@@ -290,108 +300,99 @@
                   @php $disabled = $type == 'number' ? '' : 'disabled'; @endphp
 
                   {{-- default --}}
-                  @php
-                    $name = 'options[default]';
-                    $dot = AppHelper::toDotNotation($name);
-                  @endphp
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pr-0 col-form-label text-right"
                       for="number-default">{{ __('Default Value') }}</label>
                     <div class="col-sm-10">
-                      <div class="form-group">
-                        <input class="form-control" name="{{ $name }}" id="number-default" type="number"
-                          value="{{ old($dot) ?? ($options->default ?? '') }}" {{ $disabled }} />
-                      </div>
+                      @include('forms.number', ['options' => [
+                      'name' => 'options[default]',
+                      'placeholder' => '1000',
+                      'value' => $options->default ?? '',
+                      'disabled' => $disabled,
+                      'id' => 'number-default',
+                      ]])
                     </div>
                   </div>
 
                   {{-- min_value --}}
-                  @php
-                    $name = 'options[min_value]';
-                    $dot = AppHelper::toDotNotation($name);
-                  @endphp
-                  <div class="row justify-content-md-center{{ $type == 'number' ? '' : ' d-none' }}">
+                  <div class="row justify-content-md-center">
                     <label class="col-sm-2 pr-0 col-form-label text-right"
-                      for="input-min-value">{{ __('Minimum Value') }}</label>
+                      for="number-min-value">{{ __('Minimum Value') }}</label>
                     <div class="col-sm-10">
-                      <div class="form-group">
-                        <input class="form-control" name="{{ $name }}" id="input-min-value" type="number"
-                          value="{{ old($dot) ?? ($options->min_value ?? '') }}" placeholder="1000"
-                          {{ $disabled }} />
-                      </div>
+                      @include('forms.number', ['options' => [
+                      'name' => 'options[min_value]',
+                      'placeholder' => '250',
+                      'value' => $options->min_value ?? '',
+                      'disabled' => $disabled,
+                      'id' => 'number-min-value',
+                      ]])
                     </div>
                   </div>
 
                   {{-- max_value --}}
-                  @php
-                    $name = 'options[max_value]';
-                    $dot = AppHelper::toDotNotation($name);
-                  @endphp
-                  <div class="row justify-content-md-center{{ $type == 'number' ? '' : ' d-none' }}">
+                  <div class="row justify-content-md-center">
                     <label class="col-sm-2 pr-0 col-form-label text-right"
-                      for="input-max-value">{{ __('Maximum Value') }}</label>
+                      for="number-max-value">{{ __('Maximum Value') }}</label>
                     <div class="col-sm-10">
-                      <div class="form-group">
-                        <input class="form-control" name="{{ $name }}" id="input-max-value" type="number"
-                          value="{{ old($dot) ?? ($options->max_value ?? '') }}" placeholder="60000"
-                          {{ $disabled }} />
-                      </div>
+                      @include('forms.number', ['options' => [
+                      'name' => 'options[max_value]',
+                      'placeholder' => '9000',
+                      'value' => $options->max_value ?? '',
+                      'disabled' => $disabled,
+                      'id' => 'number-max-value',
+                      ]])
                     </div>
                   </div>
 
                   {{-- step --}}
-                  @php
-                    $name = 'options[step]';
-                    $dot = AppHelper::toDotNotation($name);
-                  @endphp
-                  <div class="row justify-content-md-center{{ $type == 'number' ? '' : ' d-none' }}">
-                    <label class="col-sm-2 pr-0 col-form-label text-right" for="input-step">{{ __('Step') }}</label>
+                  <div class="row justify-content-md-center">
+                    <label class="col-sm-2 pr-0 col-form-label text-right" for="number-step">{{ __('Step') }}</label>
                     <div class="col-sm-10">
-                      <div class="form-group">
-                        <input class="form-control" name="{{ $name }}" id="input-step" type="number"
-                          value="{{ old($dot) ?? ($options->step ?? '') }}" placeholder="1000" min="1"
-                          {{ $disabled }} />
-                      </div>
+                      @include('forms.number', ['options' => [
+                      'name' => 'options[step]',
+                      'placeholder' => '50',
+                      'value' => $options->step ?? '',
+                      'disabled' => $disabled,
+                      'id' => 'number-step',
+                      ]])
                     </div>
                   </div>
 
                   {{-- min_cost --}}
-                  @php
-                    $name = 'options[min_cost]';
-                    $dot = AppHelper::toDotNotation($name);
-                  @endphp
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pr-0 col-form-label text-right"
                       for="number-min-cost">{{ __('Minimum Cost') }}</label>
                     <div class="col-sm-10">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">£</span>
-                        </div>
-                        <input class="form-control" name="{{ $name }}" id="number-min-cost" type="number"
-                          value="{{ old($dot) ?? ($options->min_cost ?? '') }}" placeholder="0.00" step=".01" min="0"
-                          {{ $disabled }} />
-                      </div>
+                      @include('forms.number', ['options' => [
+                      'name' => 'options[min_cost]',
+                      'placeholder' => '0.00',
+                      'value' => $options->min_cost ?? '',
+                      'disabled' => $disabled,
+                      'id' => 'number-min-cost',
+                      'step' => '.01',
+                      'min' => '0',
+                      'prepend' => '£',
+                      'attrs' => ['disabler' => 'cost']
+                      ]])
                     </div>
                   </div>
 
                   {{-- max_cost --}}
-                  @php
-                    $name = 'options[max_cost]';
-                    $dot = AppHelper::toDotNotation($name);
-                  @endphp
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pr-0 col-form-label text-right"
                       for="number-max-cost">{{ __('Maximum Cost') }}</label>
                     <div class="col-sm-10">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">£</span>
-                        </div>
-                        <input class="form-control" name="{{ $name }}" id="number-max-cost" type="number"
-                          value="{{ old($dot) ?? ($options->max_cost ?? '') }}" placeholder="100.00" step=".01" min="0"
-                          {{ $disabled }} />
-                      </div>
+                      @include('forms.number', ['options' => [
+                      'name' => 'options[max_cost]',
+                      'placeholder' => '100.00',
+                      'value' => $options->max_cost ?? '',
+                      'disabled' => $disabled,
+                      'id' => 'number-max-cost',
+                      'step' => '.01',
+                      'min' => '0',
+                      'prepend' => '£',
+                      'attrs' => ['disabler' => 'cost']
+                      ]])
                     </div>
                   </div>
 
@@ -402,57 +403,54 @@
                   @php $disabled = $type == 'checkbox' ? '' : 'disabled'; @endphp
 
                   {{-- default --}}
-                  @php
-                    $name = 'options[default]';
-                    $dot = AppHelper::toDotNotation($name);
-                  @endphp
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pr-0 col-form-label text-right"
                       for="switch-default">{{ __('Default Value') }}</label>
                     <div class="col-sm-10 has-switch">
-                      <input class="bootstrap-switch" name="{{ $name }}" id="switch-default" type="checkbox"
-                        {{ $disabled }} {{ (old($dot) ?? ($options->default ?? '')) == 'on' ? 'checked' : '' }}
-                        data-off-label="OFF" data-on-label="ON" />
+                      @include('forms.switch', ['options' => [
+                      'name' => 'options[default]',
+                      'value' => $options->default ?? '',
+                      'id' => 'switch-default',
+                      'disabled' => $disabled,
+                      ]])
                     </div>
                   </div>
 
                   {{-- on_cost --}}
-                  @php
-                    $name = 'options[on_cost]';
-                    $dot = AppHelper::toDotNotation($name);
-                  @endphp
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pr-0 col-form-label text-right"
-                      for="boolean-on-cost">{{ __('On Cost') }}</label>
+                      for="number-on-cost">{{ __('On Cost') }}</label>
                     <div class="col-sm-10">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">£</span>
-                        </div>
-                        <input class="form-control" name="{{ $name }}" id="boolean-on-cost" type="number"
-                          value="{{ old($dot) ?? ($options->on_cost ?? '') }}" placeholder="50.00" step=".01" min="0"
-                          {{ $disabled }} />
-                      </div>
+                      @include('forms.number', ['options' => [
+                      'name' => 'options[on_cost]',
+                      'placeholder' => '50.00',
+                      'value' => $options->on_cost ?? '',
+                      'disabled' => $disabled,
+                      'id' => 'number-on-cost',
+                      'step' => '.01',
+                      'min' => '0',
+                      'prepend' => '£',
+                      'attrs' => ['disabler' => 'cost']
+                      ]])
                     </div>
                   </div>
 
                   {{-- off_cost --}}
-                  @php
-                    $name = 'options[off_cost]';
-                    $dot = AppHelper::toDotNotation($name);
-                  @endphp
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pr-0 col-form-label text-right"
-                      for="boolean-off-cost">{{ __('Off Cost') }}</label>
+                      for="number-off-cost">{{ __('Off Cost') }}</label>
                     <div class="col-sm-10">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">£</span>
-                        </div>
-                        <input class="form-control" name="{{ $name }}" id="boolean-off-cost" type="number"
-                          value="{{ old($dot) ?? ($options->off_cost ?? '') }}" placeholder="0.00" step=".01" min="0"
-                          {{ $disabled }} />
-                      </div>
+                      @include('forms.number', ['options' => [
+                      'name' => 'options[off_cost]',
+                      'placeholder' => '0.00',
+                      'value' => $options->off_cost ?? '',
+                      'disabled' => $disabled,
+                      'id' => 'number-off-cost',
+                      'step' => '.01',
+                      'min' => '0',
+                      'prepend' => '£',
+                      'attrs' => ['disabler' => 'cost']
+                      ]])
                     </div>
                   </div>
 
@@ -486,5 +484,5 @@
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('custom') }}/script/defaults.js"></script>
+  <script type="module" src="{{ asset('js') }}/defaults.js"></script>
 @endpush

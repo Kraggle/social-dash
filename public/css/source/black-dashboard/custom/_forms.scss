@@ -12,6 +12,7 @@
     &:focus {
         border-color: $primary;
         background-color: $input-bg;
+        color: $black-states;
 
         @include box-shadow(none);
 
@@ -206,5 +207,11 @@
                 color: $danger-states;
             }
         }
+    }
+
+    &[disabled],
+    &[readonly] {
+        background-color: $gray-100;
+        border-color: rgba($black-states, 0.3);
     }
 }

@@ -6,6 +6,7 @@ use App\Account;
 use App\Http\Requests\AccountRequest;
 use App\Team;
 use App\Defaults;
+use App\Setting;
 
 class AccountController extends Controller {
     public function __construct() {
@@ -41,8 +42,20 @@ class AccountController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function store(AccountRequest $request, Account $model) {
-        $model->create($request->all());
+    public function store(AccountRequest $request) {
+        $model = Account::create($request->except('settings'));
+
+        $settings = $request->settings;
+        $defaults = Defaults::for('accounts');
+        foreach ($settings as $key => $value) {
+            Setting::create([
+                'value' => $value ?? 0,
+                'account_id' => $model->id,
+                'default_id' => $defaults->$key->id
+            ]);
+        }
+
+        // TODO:: Add total_cost, old_cost and renew_date
 
         return redirect()->route('account.index')->withStatus(__('Account successfully added.'));
     }
@@ -68,7 +81,20 @@ class AccountController extends Controller {
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(AccountRequest $request, Account $account) {
-        $account->update($request->all());
+        $account->update($request->except('settings'));
+
+        $settings = $request->settings;
+        $defaults = Defaults::for('accounts');
+        foreach ($defaults as $key => $value) {
+            $setting = Setting::where('default_id', $value->id)
+                ->where('account_id', $account->id)->first();
+            if ($setting) $setting->update(['value' => $settings[$key] ?? 0]);
+            else Setting::create([
+                'value' => $settings[$key] ?? $value->default(),
+                'account_id' => $account->id,
+                'default_id' => $value->id
+            ]);
+        }
 
         return redirect()->route('account.index')->withStatus(__('Account successfully updated.'));
     }

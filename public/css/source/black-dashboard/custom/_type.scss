@@ -188,3 +188,39 @@ hr {
     margin-top: $spacer;
     margin-bottom: $spacer;
 }
+
+.fz-base {
+    font-size: $font-size-base;
+}
+
+.fz-xl {
+    font-size: $font-size-xl;
+}
+
+.fz-lg {
+    font-size: $font-size-lg;
+}
+
+.fz-sm {
+    font-size: $font-size-sm;
+}
+
+.fz-xs {
+    font-size: $font-size-xs;
+}
+
+.fw-light {
+    font-weight: $font-weight-light;
+}
+
+.fw-normal {
+    font-weight: $font-weight-normal;
+}
+
+.fw-bold {
+    font-weight: $font-weight-bold;
+}
+
+.fw-bolder {
+    font-weight: $font-weight-extra-bold;
+}

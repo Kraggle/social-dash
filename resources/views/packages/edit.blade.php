@@ -23,62 +23,52 @@ Management')])
                 </div>
 
                 {{-- name --}}
-                @php
-                  $name = 'name';
-                  $dot = AppHelper::toDotNotation($name);
-                @endphp
                 <div class="row">
-                  <label class="col-sm-2 pr-0 col-form-label text-right"
-                    for="input-{{ $name }}">{{ __('Name') }}</label>
+                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-name">
+                    {{ __('Name') }}
+                  </label>
                   <div class="col-sm-8">
-                    <div class="form-group{{ $errors->has($dot) ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}"
-                        name="{{ $name }}" id="input-{{ $name }}" type="text"
-                        placeholder="{{ __('Name') }}" value="{{ old($dot) ?? $package->name }}" required="true"
-                        aria-required="true" />
-                      @include('alerts.feedback', ['field' => $dot])
-                    </div>
+                    @include('forms.text', ['options' => [
+                    'name' => 'name',
+                    'value' => $package->name ?? '',
+                    'placeholder' => __('Name'),
+                    'id' => 'input-name',
+                    'required' => true
+                    ]])
                   </div>
                 </div>
 
                 {{-- description --}}
-                @php
-                  $name = 'description';
-                  $dot = AppHelper::toDotNotation($name);
-                @endphp
                 <div class="row">
                   <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-{{ $name }}">{{ __('Description') }}</label>
+                    for="input-description">{{ __('Description') }}</label>
                   <div class="col-sm-8">
-                    <div class="form-group{{ $errors->has($dot) ? ' has-danger' : '' }}">
-                      <textarea cols="30" rows="10" class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}"
-                        name="{{ $name }}" id="input-{{ $name }}" type="text"
-                        placeholder="{{ __('Description') }}" required="true"
-                        aria-required="true">{{ old($dot) ?? $package->description }}</textarea>
-                      @include('alerts.feedback', ['field' => $dot])
-                    </div>
+                    @include('forms.textarea', ['options' => [
+                    'name' => 'description',
+                    'value' => $package->description ?? '',
+                    'placeholder' => __('Description'),
+                    'id' => 'input-description',
+                    'required' => true
+                    ]])
                   </div>
                 </div>
 
                 {{-- cost --}}
-                @php
-                  $name = 'cost';
-                  $dot = AppHelper::toDotNotation($name);
-                @endphp
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-{{ $name }}">{{ __('Cost') }}</label>
+                  <label class="col-sm-2 col-form-label pr-0 text-right" for="input-cost">{{ __('Cost') }}</label>
                   <div class="col-sm-8">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">£</span>
-                      </div>
-                      <input id="input-{{ $name }}" class="form-control" name="{{ $name }}"
-                        type="number" step=".01" min="0" placeholder="25.00"
-                        value="{{ old($dot) ?? $package->cost }}" />
-                    </div>
+                    @include('forms.number', ['options' => [
+                    'name' => 'cost',
+                    'value' => $package->cost ?? '',
+                    'placeholder' => '25.00',
+                    'id' => 'number-cost',
+                    'prepend' => '£',
+                    'min' => '0',
+                    'step' => '.01'
+                    ]])
                   </div>
                 </div>
+
               </div>
             </div>
 
@@ -91,106 +81,92 @@ Management')])
                 <div class="row justify-content-center">
                   <div class="row col-10">
                     <div class="col pr-0">
-                      <label for="checkbox-{{ $name }}">{{ __('Comments') }}</label>
+                      <label for="checkbox-comments">{{ __('Comments') }}</label>
                     </div>
                     <div class="col pr-0">
-                      <label for="checkbox-{{ $name }}">{{ __('Followers') }}</label>
+                      <label for="checkbox-followers">{{ __('Followers') }}</label>
                     </div>
                     <div class="col pr-0">
-                      <label for="checkbox-{{ $name }}">{{ __('Following') }}</label>
+                      <label for="checkbox-following">{{ __('Following') }}</label>
                     </div>
                     <div class="col pr-0">
-                      <label for="checkbox-{{ $name }}">{{ __('Hashtags') }}</label>
+                      <label for="checkbox-hashtags">{{ __('Hashtags') }}</label>
                     </div>
                     <div class="col pr-0">
-                      <label for="checkbox-{{ $name }}">{{ __('Scheduling') }}</label>
+                      <label for="checkbox-scheduling">{{ __('Scheduling') }}</label>
                     </div>
                     <div class="col pr-0">
-                      <label for="checkbox-{{ $name }}">{{ __('Teams') }}</label>
+                      <label for="checkbox-teams">{{ __('Teams') }}</label>
                     </div>
                     <div class="col">
-                      <label for="checkbox-{{ $name }}">{{ __('Reporting') }}</label>
+                      <label for="checkbox-reporting">{{ __('Reporting') }}</label>
                     </div>
                   </div>
 
                   <div class="row col-10">
                     @php $access = $package->access; @endphp
 
-                    {{-- default --}}
-                    @php
-                      $name = 'access[comments]';
-                      $dot = AppHelper::toDotNotation($name);
-                    @endphp
+                    {{-- comments --}}
                     <div class="col pr-0 has-switch">
-                      <input class="bootstrap-switch" name="{{ $name }}" type="checkbox"
-                        {{ AppHelper::checked(old($dot) ?? ($access->comments ?? 0)) }} data-off-label="NO"
-                        data-on-label="YES" />
+                      @include('forms.switch', ['options' => [
+                      'name' => 'access[comments]',
+                      'value' => $access->comments ?? 0,
+                      'id' => 'checkbox-comments'
+                      ]])
                     </div>
 
                     {{-- followers --}}
-                    @php
-                      $name = 'access[followers]';
-                      $dot = AppHelper::toDotNotation($name);
-                    @endphp
                     <div class="col pr-0 has-switch">
-                      <input class="bootstrap-switch" name="{{ $name }}" type="checkbox"
-                        {{ AppHelper::checked(old($dot) ?? ($access->followers ?? 0)) }} data-off-label="NO"
-                        data-on-label="YES" />
+                      @include('forms.switch', ['options' => [
+                      'name' => 'access[followers]',
+                      'value' => $access->followers ?? 0,
+                      'id' => 'checkbox-followers'
+                      ]])
                     </div>
 
                     {{-- following --}}
-                    @php
-                      $name = 'access[following]';
-                      $dot = AppHelper::toDotNotation($name);
-                    @endphp
                     <div class="col pr-0 has-switch">
-                      <input class="bootstrap-switch" name="{{ $name }}" type="checkbox"
-                        {{ AppHelper::checked(old($dot) ?? ($access->following ?? 0)) }} data-off-label="NO"
-                        data-on-label="YES" />
+                      @include('forms.switch', ['options' => [
+                      'name' => 'access[following]',
+                      'value' => $access->following ?? 0,
+                      'id' => 'checkbox-following'
+                      ]])
                     </div>
 
                     {{-- hashtags --}}
-                    @php
-                      $name = 'access[hashtags]';
-                      $dot = AppHelper::toDotNotation($name);
-                    @endphp
                     <div class="col pr-0 has-switch">
-                      <input class="bootstrap-switch" name="{{ $name }}" type="checkbox"
-                        {{ AppHelper::checked(old($dot) ?? ($access->hashtags ?? 0)) }} data-off-label="NO"
-                        data-on-label="YES" />
+                      @include('forms.switch', ['options' => [
+                      'name' => 'access[hashtags]',
+                      'value' => $access->hashtags ?? 0,
+                      'id' => 'checkbox-hashtags'
+                      ]])
                     </div>
 
                     {{-- scheduling --}}
-                    @php
-                      $name = 'access[scheduling]';
-                      $dot = AppHelper::toDotNotation($name);
-                    @endphp
                     <div class="col pr-0 has-switch">
-                      <input class="bootstrap-switch" name="{{ $name }}" type="checkbox"
-                        {{ AppHelper::checked(old($dot) ?? ($access->scheduling ?? 0)) }} data-off-label="NO"
-                        data-on-label="YES" />
+                      @include('forms.switch', ['options' => [
+                      'name' => 'access[scheduling]',
+                      'value' => $access->scheduling ?? 0,
+                      'id' => 'checkbox-scheduling'
+                      ]])
                     </div>
 
                     {{-- teams --}}
-                    @php
-                      $name = 'access[teams]';
-                      $dot = AppHelper::toDotNotation($name);
-                    @endphp
                     <div class="col pr-0 has-switch">
-                      <input class="bootstrap-switch" name="{{ $name }}" type="checkbox"
-                        {{ AppHelper::checked(old($dot) ?? ($access->teams ?? 0)) }} data-off-label="NO"
-                        data-on-label="YES" />
+                      @include('forms.switch', ['options' => [
+                      'name' => 'access[teams]',
+                      'value' => $access->teams ?? 0,
+                      'id' => 'checkbox-teams'
+                      ]])
                     </div>
 
                     {{-- reporting --}}
-                    @php
-                      $name = 'access[reporting]';
-                      $dot = AppHelper::toDotNotation($name);
-                    @endphp
                     <div class="col has-switch">
-                      <input class="bootstrap-switch" name="{{ $name }}" type="checkbox"
-                        {{ AppHelper::checked(old($dot) ?? ($access->reporting ?? 0)) }} data-off-label="NO"
-                        data-on-label="YES" />
+                      @include('forms.switch', ['options' => [
+                      'name' => 'access[reporting]',
+                      'value' => $access->reporting ?? 0,
+                      'id' => 'checkbox-reporting'
+                      ]])
                     </div>
 
                   </div>

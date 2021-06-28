@@ -52,6 +52,7 @@
 @import "black-dashboard/bootstrap/jumbotron";
 @import "black-dashboard/bootstrap/alert";
 @import "black-dashboard/bootstrap/progress";
+@import "black-dashboard/bootstrap/spinners";
 @import "black-dashboard/bootstrap/media";
 @import "black-dashboard/bootstrap/list-group";
 @import "black-dashboard/bootstrap/close";
@@ -117,7 +118,7 @@
 
 // example pages and sections
 
-// @import "black-dashboard/custom/example-pages";
+@import "black-dashboard/custom/auth-pages";
 
 // Cards
 

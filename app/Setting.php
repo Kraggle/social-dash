@@ -6,6 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model {
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'value', 'default_id', 'account_id', 'user_id', 'team_id', 'post_id'
+    ];
+
+    /**
      * Get the account for the setting.
      *
      * @return \App\Team

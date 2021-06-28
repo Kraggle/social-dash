@@ -1,6 +1,7 @@
-import { K } from './src/K.js';
+// import SS from './shared.js';
 
 $(() => {
+
     // Used to automatically set a key from the input name.
     $('#input-name').on('keyup', function() {
         const $key = $('#input-key');
@@ -23,7 +24,7 @@ $(() => {
         $copy.find('input').each(function() {
             $(this).attr('name', $(this).attr('name').replace('[0]', `[${count}]`));
             if ($(this).attr('type') == 'checkbox') {
-                const $group = $(this).closest('.form-group'),
+                const $group = $(this).closest('.has-switch'),
                     $input = $(this).detach();
                 $group.html($input);
                 $input.prop('checked', false);
@@ -40,7 +41,7 @@ $(() => {
     });
 
     // Used to switch between variable types
-    $('#input-type').on('change', function() {
+    $('#select-type').on('change', function() {
         const selected = $('option:selected', this).val();
         $('div[type]').addClass('d-none').find('input').each(function() {
             if ($(this).hasClass('bootstrap-switch'))
@@ -54,6 +55,7 @@ $(() => {
             else
                 $(this).prop('disabled', false);
         });
+        disablerElements.call($('[data-disabler]'));
     });
 
     // Used to remove choices from the string type
@@ -72,4 +74,19 @@ $(() => {
             });
         }
     });
+
+    $('[data-disabler]').on('switchChange.bootstrapSwitch', disablerElements);
+    function disablerElements() {
+        $(this).each(function() {
+            const info = $(this).data('disabler'),
+                show = ($(this).is(':checked') ? info[1] : info[0]) == 'show';
+            $(`[disabler=${info.name}]`).each(function() {
+                if ($(this).closest('.type-wrapper').hasClass('d-none')) return;
+                if (show)
+                    $(this).add($(this).closest('div')).removeAttr('disabled');
+                else $(this).add($(this).closest('div')).attr('disabled', true);
+            });
+        });
+    }
+    disablerElements.call($('[data-disabler]'));
 });
