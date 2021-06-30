@@ -1,6 +1,9 @@
 import { K } from './src/K.js';
 import SS from './shared.js';
 import wNumb from './libs/wNumb-min.js';
+// import Sentencer from './libs/Sentencer-min.js';
+
+// console.log(Sentencer.make('{{ adverb }} {{ adjective }} {{ nouns }}').titleCase());
 
 $(() => {
     $('#search').on('keypress', function(e) {
@@ -9,10 +12,12 @@ $(() => {
             checkInstaUser();
         }
     });
+
     $('#find-btn').on('click', function(e) {
         e.preventDefault();
         checkInstaUser();
     });
+
     $('button[toggle]').on('click', SS.toggleHelp);
 
     $('[has-cost]').on('change switchChange.bootstrapSwitch', function(e) {
@@ -116,8 +121,8 @@ const updateFollowers = () => {
                 $('option', this).each(function() {
                     data = $(this).data();
                     if (!data.oldCost) data.oldCost = data.cost;
-                    data.cost = data.oldCost * multi;
-                    data.content = data.content.replace(/cost'>£\d+/, `cost'>£${data.cost}`);
+                    data.cost = Math.round(data.oldCost * multi);
+                    data.content = data.content.replace(/cost'>£[\d\.]+/, `cost'>£${data.cost}`);
                 });
                 $(this).selectpicker('refresh');
                 $(this).trigger('change');
@@ -162,7 +167,10 @@ const checkInstaUser = () => {
         if (res.success) {
             $('input[name=username]').val(res.username);
             $('input[name=pk]').val(res.pk);
-
+            let fol = res.data.follower_count;
+            fol = K.isArray(fol) ? fol.pop() : fol;
+            $('[name=followers]').val(fol);
+            updateFollowers();
         }
     });
 };

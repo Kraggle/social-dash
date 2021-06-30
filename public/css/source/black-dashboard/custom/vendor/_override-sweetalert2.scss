@@ -1,0 +1,7 @@
+.swal2-actions {
+    button {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}

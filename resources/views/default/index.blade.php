@@ -5,6 +5,9 @@ Management')])
   <div class="content">
     <div class="container-fluid">
       <div class="row">
+        <div class="col-md-12 mb-3">
+          <button class="btn btn-success delete-alert">Alert</button>
+        </div>
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
@@ -48,9 +51,7 @@ Management')])
                                     class="tim-icons icon-pencil"></i></a>
                               @endcan
                               @if (auth()->user()->can('remove', $default))
-                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove"
-                                  data-original-title="" title=""
-                                  onclick="confirm('{{ __('Are you sure you want to delete this default?') }}') ? this.parentElement.submit() : ''">
+                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
                                   <i class="tim-icons icon-simple-remove"></i>
                                 </button>
                               @endif

@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 use App\Helpers\AppHelper;
 
 class Defaults extends Model {
+    public static function boot() {
+        parent::boot();
+
+        static::deleting(function ($default) {
+            $default->settings()->delete();
+        });
+    }
+
     /**
      * The attributes that are mass assignable.
      *
@@ -31,7 +39,7 @@ class Defaults extends Model {
      * @return \Illuminate\Database\Eloquent\Collection
      */
     public function settings() {
-        return $this->hasMany(Setting::class);
+        return $this->hasMany(Setting::class, 'default_id');
     }
 
     public static function for($table) {

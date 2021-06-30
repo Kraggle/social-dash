@@ -5,6 +5,18 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model {
+    public static function boot() {
+        parent::boot();
+
+        static::deleting(function ($setting) {
+            $setting->account()->detach();
+            $setting->team()->detach();
+            $setting->post()->detach();
+            $setting->user()->detach();
+            $setting->default()->detach();
+        });
+    }
+
     /**
      * The attributes that are mass assignable.
      *

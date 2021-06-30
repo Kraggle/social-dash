@@ -508,7 +508,79 @@ const K = {
         });
     },
 
-    loadStylesWithCondition: (ifTrue, stylesheets) => ifTrue && K.loadStyles(stylesheets)
+    loadStylesWithCondition: (ifTrue, stylesheets) => ifTrue && K.loadStyles(stylesheets),
+
+    /**
+     * Returns a random element from an array.
+     * 
+     * @param {array} array The array to choose from.
+     * @returns The random element.
+     */
+    choice: array => array[K.random(0, array.length)],
+
+    /**
+     * Convert a `Date` into an sql compatible `timestamp`. 
+     * 
+     * @param {Date} [date] The date to convert. Defaults to the current date.
+     * @returns {string} The date converted into a sql timestamp.
+     */
+    dateToTimestamp: (date = new Date()) => date.toISOString().replace(/(T|\.\d+Z)/g, ' ').trim(),
+
+    /**
+     * Generate a random string at a given length.
+     * 
+     * @param {number} [length] The length of the output string.
+     * @returns {string} The generated string.
+     */
+    generateID(length = 10) {
+        const result = [],
+            chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+            len = chars.length;
+        for (let i = 0; i < length; i++)
+            result.push(chars.charAt(Math.floor(Math.random() * len)));
+        return result.join('');
+    },
+
+    /**
+     * Used to delay the script execution for a given number of milliseconds.
+     * 
+     * @param {number} ms The delay in milliseconds.
+     * @returns {Promise<void>}
+     */
+    delay: (ms) => new Promise(resolve => setTimeout(resolve, ms)),
+
+    /**
+     * Get a value from an object with a given key.
+     * 
+     * @param {object} obj The object.
+     * @param {string} key The key to find. Can be like `key.key` 
+     */
+    getValue(obj, key) {
+        if (K.type(obj) != 'object') return obj;
+        let value;
+        const keys = key.split('.');
+        for (key of keys) {
+            value = obj[key];
+            if (K.type(value) != 'object') break;
+        }
+        return value;
+    },
+
+    /**
+     * Get the current timestamp.
+     * 
+     * @param {boolean} [ms] Default `true`, wether to return as milliseconds. 
+     */
+    now: (ms = true) => ms ? new Date().getTime() : new Date(),
+
+    /**
+     * Returns a random number between the input min and max.
+     * 
+     * @param {number} [min] The min possible number.
+     * @param {number} [max] The max possible number.
+     * @returns The random number.
+     */
+    random: (min = 0, max = 100) => Math.floor(Math.random() * (max - min + 1) + min),
 };
 
 K.JSON = {

@@ -34,7 +34,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="spinner-border"></div>
                 </div>
               </div>
             </div>

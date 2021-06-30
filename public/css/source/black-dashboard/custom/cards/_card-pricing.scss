@@ -33,6 +33,9 @@
         }
 
         .card-prices {
+            position: relative;
+            height: 100px;
+
             .text-on-front {
                 position: relative;
                 z-index: 2;
@@ -40,28 +43,34 @@
                 font-size: 3.6em;
                 font-weight: 900;
                 text-align: center;
+
                 .symbol {
                     font-size: 0.7em;
                 }
+
                 .term {
                     font-size: 0.3em;
                 }
             }
 
             .text-on-back {
-                position: relative;
+                position: absolute;
+                top: -50px;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
                 z-index: 1;
                 font-size: 9.5em;
                 text-align: center;
-                margin-top: -160px;
                 font-weight: 900;
                 color: rgba($default-states, 0.1);
+                white-space: nowrap;
             }
 
             .plan {
                 font-weight: 600;
                 font-size: 0.8em;
-                margin-top: -80px;
+                margin-top: -49px;
                 text-align: center;
                 color: rgba($white, 0.9);
             }

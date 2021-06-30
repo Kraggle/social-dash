@@ -21,7 +21,7 @@ class Post extends Model {
      * @return \Illuminate\Database\Eloquent\Collection
      */
     public function users() {
-        return $this->hasMany(User::class);
+        return $this->belongsToMany(User::class);
     }
 
     /**

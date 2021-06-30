@@ -17,63 +17,55 @@
           <div class="card-body">
             <form class="form" id="register-form" method="POST" action="{{ route('register') }}">
               @csrf
-              {{-- <div class="input-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fal fa-hashtag"></i>
-                  </div>
-                </div>
-                <input type="text" name="user" class="form-control" placeholder="{{ __('Instagram username...') }}"
-                  value="{{ old('user') ?? app('request')->input('user') }}" required>
-              </div> --}}
-              @include('alerts.feedback', ['field' => 'user'])
-              <div class="input-group mb-3{{ $errors->has('name') ? ' has-danger' : '' }}">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fal fa-user"></i>
-                  </div>
-                </div>
-                <input type="text" name="name" class="form-control" placeholder="{{ __('Name...') }}"
-                  value="{{ old('name') }}" required>
-              </div>
-              @include('alerts.feedback', ['field' => 'name'])
-              <div class="input-group mb-3{{ $errors->has('name') ? ' has-danger' : '' }}">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fal fa-envelope"></i>
-                  </div>
-                </div>
-                <input type="text" class="form-control" name="email" placeholder="{{ __('Email...') }}"
-                  value="{{ old('email') }}" required>
-              </div>
-              @include('alerts.feedback', ['field' => 'email'])
-              <div class="input-group mb-3{{ $errors->has('name') ? ' has-danger' : '' }}">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="tim-icons icon-lock-circle"></i>
-                  </div>
-                </div>
-                <input type="password" name="password" placeholder="{{ __('Password...') }}" class="form-control"
-                  required>
-              </div>
-              @include('alerts.feedback', ['field' => 'password'])
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="tim-icons icon-lock-circle"></i>
-                  </div>
-                </div>
-                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control"
-                  placeholder="{{ __('Confirm Password...') }}" required>
-              </div>
-              <div class="form-check text-left">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox" name="policy" value="1"
-                    {{ old('policy') ? 'checked' : 'checked' }}>
-                  <span class="form-check-sign"></span>
-                  {{ __('I agree with the ') }} <a href="#">{{ __('terms and conditions') }}</a>
-                </label>
-              </div>
+
+              {{-- @include('forms.text', ['options' => [
+              'name' => 'user',
+              'value' => app('request')->input('user'),
+              'required' => true,
+              'prepend' => ['icon' => 'fal fa-hashtag'],
+              'placeholder' => __('Instagram username...')
+              ]]) --}}
+
+              @include('forms.text', ['options' => [
+              'name' => 'name',
+              'required' => true,
+              'prepend' => ['icon' => 'fal fa-user'],
+              'placeholder' => __('Name...'),
+              // 'group' => ['attrs' => 'toggle', 'class' => 'd-none']
+              ]])
+
+              @include('forms.text', ['options' => [
+              'name' => 'email',
+              'required' => true,
+              'prepend' => ['icon' => 'fal fa-envelope'],
+              'placeholder' => __('Email...'),
+              // 'group' => ['attrs' => 'toggle', 'class' => 'd-none']
+              ]])
+
+              @include('forms.text', ['options' => [
+              'name' => 'password',
+              'type' => 'password',
+              'required' => true,
+              'prepend' => ['icon' => 'fal fa-lock-alt'],
+              'placeholder' => __('Password...'),
+              // 'group' => ['attrs' => 'toggle', 'class' => 'd-none']
+              ]])
+
+              @include('forms.text', ['options' => [
+              'name' => 'password_confirmation',
+              'type' => 'password',
+              'required' => true,
+              'prepend' => ['icon' => 'fal fa-lock-alt'],
+              'placeholder' => __('Confirm Password...'),
+              // 'group' => ['attrs' => 'toggle', 'class' => 'd-none']
+              ]])
+
+              @include('forms.check', ['options' => [
+              'name' => 'policy',
+              'placeholder' => __('I agree with the ') . " <a href=\"#\">" . __('terms and conditions') . "</a>",
+              // 'group' => ['attrs' => 'toggle', 'class' => 'd-none']
+              ]])
+
             </form>
 
             {{-- <div class="card-message">
@@ -102,11 +94,5 @@
 @endsection
 
 @push('js')
-  <script>
-    $(document).ready(function() {
-      demo.checkFullPageBackgroundImage();
-    });
-  </script>
-
   <script type="module" src="{{ asset('js') }}/register.js"></script>
 @endpush

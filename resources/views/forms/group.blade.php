@@ -6,26 +6,29 @@ extract(
             'name' => '',
             'prepend' => false,
             'append' => false,
+            'group' => [],
         ],
         $options,
     ),
 );
 
-$dot = AppHelper::toDot($name);
-$group = $prepend || $append ? 'input-group' : 'form-group';
+$class = isset($group['class']) ? (is_array($group['class']) ? implode(' ', $group['class']) : $group['class']) : '';
+$class = ($prepend || $append ? 'input-group' : 'form-group') . " $class";
+$attrs = isset($group['attrs']) ? (is_array($group['attrs']) ? implode(' ', $group['attrs']) : $group['attrs']) : '';
+
 @endphp
 
-<div class="{{ $group }} {{ $errors->has($dot) ? 'has-danger' : '' }}">
+<div class="{{ $class }}{{ $errors->has($dot) ? ' has-danger' : '' }}" {{ $attrs }}>
 
   @if ($prepend)
     <div class="input-group-prepend">
-      <span class="input-group-text">
+      <div class="input-group-text">
         @if (is_array($prepend))
-          <span class="{{ $prepend['icon'] }}"></span>
+          <i class="{{ $prepend['icon'] }}"></i>
         @else
           {{ $prepend }}
         @endif
-      </span>
+      </div>
     </div>
   @endif
 
@@ -33,13 +36,13 @@ $group = $prepend || $append ? 'input-group' : 'form-group';
 
   @if ($append)
     <div class="input-group-append">
-      <span class="input-group-text">
+      <div class="input-group-text">
         @if (is_array($prepend))
-          <span class="{{ $append['icon'] }}"></span>
+          <i class="{{ $append['icon'] }}"></i>
         @else
           {{ $append }}
         @endif
-      </span>
+      </div>
     </div>
   @endif
 

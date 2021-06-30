@@ -102,6 +102,7 @@ $classPage = isset($classPage) ? $classPage : '';
   <script src="{{ asset('white') }}/demo/demo.js"></script>
   <script src="{{ asset('white') }}/js/settings.js"></script>
   <script src="{{ asset('white') }}/demo/jquery.sharrre.js"></script>
+  <script type="module" src="{{ asset('js') }}/global.js"></script>
   <script>
     $(document).ready(function() {
       @if (session('status'))

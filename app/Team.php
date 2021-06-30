@@ -5,6 +5,24 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model {
+    public static function boot() {
+        parent::boot();
+
+        static::deleting(function ($team) {
+            $team->settings()->delete();
+
+            foreach ($team->accounts as $account) {
+                $account->delete();
+            }
+
+            foreach ($team->members as $member) {
+                $member->dissociate();
+            }
+
+            $team->package()->dissociate();
+        });
+    }
+
     /**
      * The attributes that are mass assignable.
      *

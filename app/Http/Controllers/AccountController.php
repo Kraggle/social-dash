@@ -98,4 +98,17 @@ class AccountController extends Controller {
 
         return redirect()->route('account.index')->withStatus(__('Account successfully updated.'));
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Account  $account
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Account $account) {
+        $this->authorize('manage-accounts', User::class);
+
+        $account->delete();
+        return redirect()->route('account.index')->withStatus(__('Account successfully deleted.'));
+    }
 }

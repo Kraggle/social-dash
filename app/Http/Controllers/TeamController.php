@@ -63,4 +63,17 @@ class TeamController extends Controller {
 
         return redirect()->route('team.index')->withStatus(__('Team successfully updated.'));
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Team $team
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Team $team) {
+        $this->authorize('manage-teams', User::class);
+
+        $team->delete();
+        return redirect()->route('team.index')->withStatus(__('Team successfully deleted.'));
+    }
 }

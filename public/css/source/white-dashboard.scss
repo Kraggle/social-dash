@@ -62,6 +62,7 @@
 @import "black-dashboard/bootstrap/carousel";
 @import "black-dashboard/bootstrap/utilities";
 @import "black-dashboard/bootstrap/print";
+@import "black-dashboard/bootstrap/toasts";
 
 // Custom components
 
@@ -139,3 +140,7 @@
 @import "black-dashboard/custom/cards/card-subcategories";
 @import "black-dashboard/custom/cards/card-testimonials";
 @import "black-dashboard/custom/cards/card-wizard";
+
+// plugin overrides
+
+@import "black-dashboard/custom/vendor/override-sweetalert2";
