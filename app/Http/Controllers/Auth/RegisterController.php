@@ -95,11 +95,6 @@ class RegisterController extends Controller {
             'password' => Hash::make($data['password']),
         ]);
 
-        InstagramController::create([
-            'user_id' => $user->id,
-            'user'    => $data['user']
-        ]);
-
         return $user;
     }
 }
