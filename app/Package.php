@@ -12,7 +12,7 @@ class Package extends Model {
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'cost', 'access'
+        'name',  'key', 'description', 'cost', 'options'
     ];
 
     /**
@@ -21,7 +21,7 @@ class Package extends Model {
      * @var array
      */
     protected $attributes = [
-        'access' => '[]',
+        'options' => '{}',
     ];
 
     /**
@@ -30,7 +30,7 @@ class Package extends Model {
      * @var array
      */
     protected $casts = [
-        'access' => 'object',
+        'options' => 'object',
     ];
 
     /**

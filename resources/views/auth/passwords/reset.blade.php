@@ -1,8 +1,8 @@
 @extends('layouts.app', [
-'class' => 'login-page',
-'classPage' => 'login-page',
-'activePage' => 'login',
-'titlePage' => __('White Dashboard'),
+'class' => 'reset-page',
+'classPage' => 'reset-page',
+'activePage' => 'reset',
+'titlePage' => __('Password Reset'),
 ])
 
 @section('content')
@@ -53,7 +53,7 @@
               </div>
               <div class="card-footer">
                 <a href="#" onclick="event.preventDefault();
-                  document.getElementById('reset-form').submit();"
+                    document.getElementById('reset-form').submit();"
                   class="btn btn-primary btn-lg btn-block mb-3">{{ __('Reset Password') }}</a>
               </div>
             </div>

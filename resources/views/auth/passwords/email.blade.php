@@ -1,9 +1,12 @@
 @extends('layouts.app', [
-'class' => 'login-page',
-'classPage' => 'login-page',
-'activePage' => 'login',
-'titlePage' => __('White Dashboard'),
+'class' => 'forgot-page',
+'classPage' => 'forgot-page',
+'activePage' => 'forgot',
+'titlePage' => __('Forgot Password'),
 ])
+
+{{-- TODO:: Update this so it actually sends out an email --}}
+{{-- TODO:: Styling is all wrong for this page --}}
 
 @section('content')
   <div class="content">
@@ -31,7 +34,7 @@
               </div>
               <div class="card-footer">
                 <a href="#" onclick="event.preventDefault();
-                  document.getElementById('email-form').submit();"
+                          document.getElementById('email-form').submit();"
                   class="btn btn-primary btn-lg btn-block mb-3">{{ __('Send Password Reset Link') }}</a>
               </div>
             </div>

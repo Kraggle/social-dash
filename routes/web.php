@@ -24,12 +24,19 @@ Route::get('/welcome', function () {
 
 Auth::routes();
 
-Route::get('home', 'HomeController@index')->name('home');
-Route::get('dashboard', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home')->middleware('subscribed');
+Route::get('dashboard', 'HomeController@index')->name('home')->middleware('subscribed');
 Route::get('pricing', 'ExamplePagesController@pricing')->name('page.pricing');
 Route::get('lock', 'ExamplePagesController@lock')->name('page.lock');
 
 Route::group(['middleware' => 'auth'], function () {
+    // TODO: Redirect if already subscribed
+    // TODO: Setup change subscription
+    Route::get('subscription', ['as' => 'auth.subscription', 'uses' => 'SubscriptionController@index']);
+    Route::post('/subscribe', ['as' => 'subscription.store', 'uses' => 'SubscriptionController@store']);
+});
+
+Route::middleware(['auth', 'subscribed'])->group(function () {
     Route::resource('account', 'AccountController', ['except' => ['show']]);
     Route::resource('role', 'RoleController', ['except' => ['show', 'destroy']]);
     Route::resource('user', 'UserController', ['except' => ['show']]);

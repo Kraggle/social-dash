@@ -25,11 +25,12 @@ $g_attrs = isset($group['attrs']) ? (is_array($group['attrs']) ? implode(' ', $g
 
 <div class="form-check text-left {{ $g_class }}" {{ $g_attrs }}>
   <label class="form-check-label">
-    <input type="hidden" name="{{ $name }}" value="false">
-    <input class="form-check-input" type="checkbox" name="{{ $name }}" value="true" id="{{ $id }}"
+    <input type="hidden" name="{{ $name }}" value=0>
+    <input class="form-check-input" type="checkbox" name="{{ $name }}" value=1 id="{{ $id }}"
       {{ AppHelper::checked($value) }} {{ $disabled ? 'disabled' : '' }}
       {{ $readonly ? 'readonly' : '' }}{{ AppHelper::makeAttrs($attrs) }}>
     <span class="form-check-sign"></span>
     @php echo $placeholder @endphp
   </label>
 </div>
+@include('alerts.feedback', ['field' => $dot])

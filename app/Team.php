@@ -2,9 +2,12 @@
 
 namespace App;
 
+use Laravel\Cashier\Billable;
 use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model {
+    use Billable;
+
     public static function boot() {
         parent::boot();
 

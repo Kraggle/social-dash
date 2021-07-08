@@ -6,61 +6,38 @@ Management')])
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">{{ __('Teams') }}</h4>
-            </div>
-            <div class="card-body">
-              @can('create', App\Team::class)
-                <div class="row">
-                  <div class="col-12 text-right mb-3">
-                    <a href="{{ route('team.create') }}" class="btn btn-sm btn-primary">{{ __('Add team') }}</a>
+          @can('manage-teams', App\User::class)
+            {{-- Teams management - admin only --}}
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">{{ __('Teams') }}</h4>
+              </div>
+              <div class="card-body">
+                @can('create', App\Team::class)
+                  <div class="row">
+                    <div class="col-12 text-right mb-3">
+                      <a href="{{ route('team.create') }}" class="btn btn-sm btn-primary">{{ __('Add team') }}</a>
+                    </div>
                   </div>
-                </div>
-              @endcan
-              <div class="table-responsive">
-                <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
-                  <thead class="text-primary">
-                    <th>
-                      {{ __('Name') }}
-                    </th>
-                    <th>
-                      {{ __('Package') }}
-                    </th>
-                    <th>
-                      {{ __('Accounts') }}
-                    </th>
-                    <th>
-                      {{ __('Members') }}
-                    </th>
-                    <th>
-                      {{ __('Creation Date') }}
-                    </th>
-                    @can('manage-teams', App\User::class)
-                      <th class="text-right">
-                        {{ __('Actions') }}
-                      </th>
-                    @endcan
-                  </thead>
-                  <tbody>
-                    @foreach ($teams as $team)
-                      <tr>
-                        <td>
-                          {{ $team->name }}
-                        </td>
-                        <td>
-                          {{ $team->package->name }}
-                        </td>
-                        <td>
-                          {{ $team->accounts->count() }}
-                        </td>
-                        <td>
-                          {{ $team->members->count() }}
-                        </td>
-                        <td>
-                          {{ $team->created_at->format('d-m-Y') }}
-                        </td>
-                        @can('manage-teams', App\User::class)
+                @endcan
+                <div class="table-responsive">
+                  <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
+                    <thead class="text-primary">
+                      <th>{{ __('Name') }}</th>
+                      <th> {{ __('Package') }} </th>
+                      <th> {{ __('Accounts') }} </th>
+                      <th> {{ __('Members') }} </th>
+                      <th> {{ __('Creation Date') }} </th>
+                      <th class="text-right"> {{ __('Actions') }} </th>
+                    </thead>
+                    <tbody>
+                      @foreach ($teams as $team)
+                        <tr>
+                          <td> {{ $team->name }} </td>
+                          <td> {{ $team->package->name ?? '' }} </td>
+                          <td> {{ $team->accounts->count() }} </td>
+                          <td> {{ $team->members->count() }} </td>
+                          <td> {{ $team->created_at->format('d-m-Y') }} </td>
                           <td class="td-actions text-right">
                             <form action="{{ route('team.destroy', $team) }}" method="post">
                               @csrf
@@ -78,14 +55,19 @@ Management')])
                               @endif
                             </form>
                           </td>
-                        @endcan
-                      </tr>
-                    @endforeach
-                  </tbody>
-                </table>
+                        </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
-          </div>
+          @elsecan('manage-team', App\User::class)
+            {{-- Team management - by permission or team admin --}}
+            {{-- <h1>I can manage this team</h1>
+          @else --}}
+            @include('permission')
+          @endcan
         </div>
       </div>
     </div>

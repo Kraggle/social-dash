@@ -15,7 +15,7 @@
   <!-- Nucleo Icons -->
   <link href="{{ asset('white') }}/css/nucleo-icons.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="{{ asset('white') }}/css/white-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <link href="{{ asset('css') }}/white-dashboard.css?v=1.0.0" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{ asset('white') }}/demo/demo.css" rel="stylesheet" />

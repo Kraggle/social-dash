@@ -81,6 +81,17 @@ class UserPolicy {
     }
 
     /**
+     * Determine whether the authenticate user can manage the team they are in.
+     *
+     * @param  \App\User  $user
+     * @return boolean
+     */
+    public function manageTeam(User $user) {
+        // TODO:: make sure member with permission can also do this
+        return $user->isTeamAdmin();
+    }
+
+    /**
      * Determine whether the authenticate user can manage packages.
      *
      * @param  \App\User  $user

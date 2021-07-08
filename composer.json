@@ -11,11 +11,13 @@
         "php": "^7.3.0",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^7.3",
+        "laravel/cashier": "^13.3",
         "laravel/framework": "^8.0",
         "laravel/legacy-factories": "^1.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
         "nyholm/psr7": "^1.4",
+        "srmklive/paypal": "~3.0",
         "symfony/psr-http-message-bridge": "^2.1"
     },
     "require-dev": {

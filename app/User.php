@@ -31,7 +31,7 @@ class User extends Authenticatable {
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'picture'
+        'firstname', 'lastname', 'name', 'email', 'password', 'picture', 'role_id', 'team_id'
     ];
 
     /**
@@ -42,6 +42,10 @@ class User extends Authenticatable {
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    // public static function boot() {
+    //     Cashier::useCustomerModel(User::class);
+    // }
 
     /**
      * Get the role of the user

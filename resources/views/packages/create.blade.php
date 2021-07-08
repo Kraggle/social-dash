@@ -36,6 +36,21 @@ Management')])
                   </div>
                 </div>
 
+                {{-- key --}}
+                <div class="row">
+                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-key">
+                    {{ __('Key') }}
+                  </label>
+                  <div class="col-sm-8">
+                    @include('forms.text', ['options' => [
+                    'name' => 'key',
+                    'placeholder' => __('starter'),
+                    'id' => 'input-key',
+                    'required' => true
+                    ]])
+                  </div>
+                </div>
+
                 {{-- description --}}
                 <div class="row">
                   <label class="col-sm-2 col-form-label pr-0 text-right"
@@ -50,9 +65,24 @@ Management')])
                   </div>
                 </div>
 
+                {{-- includes --}}
+                <div class="row">
+                  <label class="col-sm-2 col-form-label pr-0 text-right"
+                    for="input-includes">{{ __('Includes') }}</label>
+                  <div class="col-sm-8">
+                    @include('forms.textarea', ['options' => [
+                    'name' => 'options[includes]',
+                    'placeholder' => __('A comma separated list of benefits of the package. Include (+) at the beginning
+                    to set an icon.'),
+                    'id' => 'input-includes',
+                    'required' => true
+                    ]])
+                  </div>
+                </div>
+
                 {{-- cost --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right" for="input-cost">{{ __('Cost') }}</label>
+                  <label class="col-sm-2 col-form-label pr-0 text-right" for="number-cost">{{ __('Cost') }}</label>
                   <div class="col-sm-8">
                     @include('forms.number', ['options' => [
                     'name' => 'cost',
@@ -65,98 +95,29 @@ Management')])
                   </div>
                 </div>
 
-              </div>
-            </div>
-
-            <div class="card ">
-              <div class="card-header">
-                <h4 class="card-title">{{ __('Access Permissions') }}</h4>
-              </div>
-              <div class="card-body">
-
-                <div class="row justify-content-center">
-                  <div class="row col-10">
-                    <div class="col pr-0">
-                      <label for="checkbox-comments">{{ __('Comments') }}</label>
-                    </div>
-                    <div class="col pr-0">
-                      <label for="checkbox-followers">{{ __('Followers') }}</label>
-                    </div>
-                    <div class="col pr-0">
-                      <label for="checkbox-following">{{ __('Following') }}</label>
-                    </div>
-                    <div class="col pr-0">
-                      <label for="checkbox-hashtags">{{ __('Hashtags') }}</label>
-                    </div>
-                    <div class="col pr-0">
-                      <label for="checkbox-scheduling">{{ __('Scheduling') }}</label>
-                    </div>
-                    <div class="col pr-0">
-                      <label for="checkbox-teams">{{ __('Teams') }}</label>
-                    </div>
-                    <div class="col">
-                      <label for="checkbox-reporting">{{ __('Reporting') }}</label>
-                    </div>
+                {{-- stripe_id --}}
+                <div class="row">
+                  <label class="col-sm-2 col-form-label pr-0 text-right"
+                    for="input-stripe-id">{{ __('Stripe ID') }}</label>
+                  <div class="col-sm-8">
+                    @include('forms.text', ['options' => [
+                    'name' => 'stripe_id',
+                    'placeholder' => 'prod_oi34...',
+                    'id' => 'input-stripe-id'
+                    ]])
                   </div>
+                </div>
 
-                  <div class="row col-10">
-
-                    {{-- default --}}
-                    <div class="col pr-0 has-switch">
-                      @include('forms.switch', ['options' => [
-                      'name' => 'access[comments]',
-                      'id' => 'checkbox-comments'
-                      ]])
-                    </div>
-
-                    {{-- followers --}}
-                    <div class="col pr-0 has-switch">
-                      @include('forms.switch', ['options' => [
-                      'name' => 'access[followers]',
-                      'id' => 'checkbox-followers'
-                      ]])
-                    </div>
-
-                    {{-- following --}}
-                    <div class="col pr-0 has-switch">
-                      @include('forms.switch', ['options' => [
-                      'name' => 'access[following]',
-                      'id' => 'checkbox-following'
-                      ]])
-                    </div>
-
-                    {{-- hashtags --}}
-                    <div class="col pr-0 has-switch">
-                      @include('forms.switch', ['options' => [
-                      'name' => 'access[hashtags]',
-                      'id' => 'checkbox-hashtags'
-                      ]])
-                    </div>
-
-                    {{-- scheduling --}}
-                    <div class="col pr-0 has-switch">
-                      @include('forms.switch', ['options' => [
-                      'name' => 'access[scheduling]',
-                      'id' => 'checkbox-scheduling'
-                      ]])
-                    </div>
-
-                    {{-- teams --}}
-                    <div class="col pr-0 has-switch">
-                      @include('forms.switch', ['options' => [
-                      'name' => 'access[teams]',
-                      'id' => 'checkbox-teams'
-                      ]])
-                    </div>
-
-                    {{-- reporting --}}
-                    <div class="col has-switch">
-                      @include('forms.switch', ['options' => [
-                      'name' => 'access[reporting]',
-                      'id' => 'checkbox-reporting'
-                      ]])
-                    </div>
-
+                {{-- price_id --}}
+                <div class="row">
+                  <label class="col-sm-2 col-form-label pr-0 text-right"
+                    for="input-price-id">{{ __('Price ID') }}</label>
+                  <div class="col-sm-8">
+                    @include('forms.text', ['options' => [
+                    'name' => 'price_id',
+                    'placeholder' => 'price_w5u2...',
+                    'id' => 'input-price-id'
+                    ]])
                   </div>
                 </div>
 

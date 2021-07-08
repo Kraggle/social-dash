@@ -18,10 +18,18 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Role;
+use App\Team;
 use App\User;
+use Stripe\SetupIntent;
+use App\Helpers\AppHelper;
+use Illuminate\Http\Request;
+use Laravel\Cashier\Cashier;
+use App\Traits\StripeFunctions;
+use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\InstagramController;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -38,13 +46,14 @@ class RegisterController extends Controller {
     */
 
     use RegistersUsers;
+    use StripeFunctions;
 
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    // protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -63,18 +72,18 @@ class RegisterController extends Controller {
      */
     protected function validator(array $data) {
 
-        if (!key_exists('user_type', $data))
-            $data['type'] = 3;
+        $data['name'] = $data['firstname'] . ' ' . $data['lastname'];
 
-        error_log(json_encode($data, JSON_PRETTY_PRINT));
-
-        return Validator::make($data, [
-            'user' => ['required', 'string'],
+        $valid = Validator::make($data, [
+            'firstname' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'type' => ['required'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'policy' => ['required', 'boolean']
         ]);
+
+        return $valid;
     }
 
     /**
@@ -85,16 +94,27 @@ class RegisterController extends Controller {
      */
     protected function create(array $data) {
 
-        if (!key_exists('user_type', $data))
-            $data['type'] = 3;
+        $exists = key_exists('user_type', $data);
+        if (!$exists || ($exists && !in_array($data['user_type'], [2, 3, 4])))
+            $data['user_type'] = 3;
 
-        $user = User::create([
-            'name' => $data['name'],
+        $team = null;
+        if (in_array($data['user_type'], [2, 3])) {
+            $team = Team::create([
+                'name' => $data['team_name']
+            ]);
+        } else {
+            // TODO: setup team member additions with tokens
+        }
+
+        return User::create([
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
+            'name' => $data['firstname'] . ' ' . $data['lastname'],
             'email' => $data['email'],
-            'role_id' => $data['type'],
             'password' => Hash::make($data['password']),
+            'role_id' => $data['user_type'],
+            'team_id' => $team->id
         ]);
-
-        return $user;
     }
 }

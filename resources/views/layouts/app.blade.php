@@ -47,15 +47,16 @@ $classPage = isset($classPage) ? $classPage : '';
   @if (auth()->check() &&
     !in_array(
         request()->route()->getName(),
-        ['welcome', 'page.pricing', 'page.lock', 'page.error'],
+        ['welcome', 'page.pricing', 'page.lock', 'page.error', 'auth.subscription'],
     ))
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-      @csrf
-    </form>
     @include('layouts.page_templates.auth')
   @else
     @include('layouts.page_templates.guest')
   @endif
+
+  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+  </form>
 
   <!--   Core JS Files   -->
   <script src="{{ asset('white') }}/js/core/jquery.min.js"></script>
@@ -63,6 +64,8 @@ $classPage = isset($classPage) ? $classPage : '';
   <script src="{{ asset('white') }}/js/core/bootstrap.min.js"></script>
   <script src="{{ asset('white') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <script src="{{ asset('white') }}/js/plugins/moment.min.js"></script>
+
+  <script src="https://js.stripe.com/v3/"></script>
   <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
   <script src="{{ asset('white') }}/js/plugins/bootstrap-switch.js"></script>
   <!--  Plugin for Sweet Alert -->

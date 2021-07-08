@@ -1,0 +1,135 @@
+/*     brand Colors              */
+/* navbar color */
+.has-switch {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.has-switch .form-group {
+  margin: 0;
+}
+.has-switch .bootstrap-switch-wrapper {
+  margin-bottom: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.btn-link {
+  outline: none !important;
+}
+
+.bootstrap-select.btn-group > .dropdown-toggle {
+  padding: 10px 18px 10px 18px;
+  border: 1px solid rgba(29, 37, 59, 0.5);
+  border-radius: 0.4285rem;
+}
+.bootstrap-select.btn-group > .dropdown-toggle .filter-option {
+  width: 100%;
+  color: #1d253b;
+}
+.bootstrap-select.btn-group > .dropdown-toggle:after {
+  color: #1d253b;
+}
+.bootstrap-select.btn-group > .dropdown-toggle .select-cost {
+  display: none;
+}
+.bootstrap-select.btn-group li .select-cost {
+  padding-right: 20px;
+  float: right;
+}
+
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label {
+  background: #d3d7e9;
+}
+
+.bootstrap-switch-off:before {
+  background: rgba(211, 215, 233, 0.5);
+}
+
+.input-group + label.error,
+.form-group + label.error {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+.input-group + label.error:empty,
+.form-group + label.error:empty {
+  display: none !important;
+}
+
+.package-column .package-button {
+  display: block;
+  cursor: pointer;
+}
+.package-column .card-pricing.card-package {
+  box-shadow: 0 0 6px 1px rgba(29, 37, 59, 0.05);
+  transform: scale(0.95);
+  transition: all 0.15s ease;
+}
+.package-column .card-pricing.card-package .plan {
+  margin-top: -39px;
+}
+.package-column .card-pricing.card-package .mark-not i,
+.package-column .card-pricing.card-package .mark-is i {
+  margin-left: 10px;
+  color: #00f2c3;
+}
+.package-column .card-pricing.card-package .mark-not {
+  color: #adb5bd;
+  text-decoration: line-through;
+}
+.package-column .card-pricing.card-package .mark-not i {
+  color: #fd5d93;
+}
+.package-column .card-pricing.card-package a {
+  pointer-events: none;
+}
+.package-column .card-title {
+  white-space: nowrap;
+  text-shadow: 2px 3px 6px rgba(29, 37, 59, 0.15);
+}
+.package-column input:checked ~ label .card-pricing.card-package {
+  box-shadow: 0 0 12px 1px rgba(29, 37, 59, 0.25);
+  transform: scale(1.05);
+}
+
+.form-control:-webkit-autofill, .form-control:-webkit-autofill:hover, .form-control:-webkit-autofill:focus, .form-control:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.btn.btn-image {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+}
+.btn.btn-image img {
+  height: 90px;
+}
+
+.form-wrap {
+  border: 1px solid rgba(29, 37, 59, 0.5);
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 0.4285rem;
+}
+.form-wrap .form-wrap-title {
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 0 10px;
+}
+
+.powered-image {
+  position: absolute;
+  height: 45px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: white;
+  right: 8px;
+  bottom: -23px;
+}
