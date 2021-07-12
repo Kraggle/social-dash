@@ -2,6 +2,8 @@
 
 namespace App\Helpers;
 
+use DateTime;
+
 class AppHelper {
     /**
      * Change an elements name e.g. `name[value]` to
@@ -16,6 +18,12 @@ class AppHelper {
 
     public static function isTrue($value) {
         return in_array($value, ['on', 'true', true, 1, '1'], true);
+    }
+
+    public static function oneTrue($array) {
+        foreach ($array as $value)
+            if (AppHelper::isTrue($value)) return true;
+        return false;
     }
 
     public static function checked($value) {
@@ -57,5 +65,29 @@ class AppHelper {
             $return .= " $attr=$value";
         }
         return $return;
+    }
+
+    public static function generateToken() {
+        //Generate a random string.
+        $token = openssl_random_pseudo_bytes(16);
+
+        //Convert the binary data into hexadecimal representation.
+        $token = bin2hex($token);
+
+        return $token;
+    }
+
+    public static function timestamp($modify = '') {
+        $date = new DateTime();
+        if ($modify) $date->modify($modify);
+        return $date;
+    }
+
+    public static function expired($stamp) {
+        return new DateTime() > $stamp;
+    }
+
+    public static function valid($stamp) {
+        return !AppHelper::expired($stamp);
     }
 }

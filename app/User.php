@@ -18,6 +18,7 @@
 
 namespace App;
 
+use App\Helpers\AppHelper;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -31,7 +32,7 @@ class User extends Authenticatable {
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'name', 'email', 'password', 'picture', 'role_id', 'team_id'
+        'firstname', 'lastname', 'name', 'email', 'password', 'picture', 'role_id', 'team_id', 'permission'
     ];
 
     /**
@@ -43,9 +44,14 @@ class User extends Authenticatable {
         'password', 'remember_token',
     ];
 
-    // public static function boot() {
-    //     Cashier::useCustomerModel(User::class);
-    // }
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'permission' => 'object',
+    ];
 
     /**
      * Get the role of the user
@@ -55,6 +61,19 @@ class User extends Authenticatable {
     public function role() {
         return $this->belongsTo(Role::class);
     }
+
+    /**
+     * The model's default values for attributes.
+     *
+     * @var array
+     */
+    // protected $attributes = [
+    //     'permission' => [
+    //         'member' => ['create' => '0', 'update' => '0', 'delete' => '0'],
+    //         'account' => ['create' => '0', 'update' => '0', 'delete' => '0', 'share' => '0'],
+    //         'client' => ['add' => '0', 'remove' => '0'],
+    //     ],
+    // ];
 
     /**
      * Get the team of the user
@@ -139,6 +158,16 @@ class User extends Authenticatable {
      */
     public function isTeamAdmin() {
         return $this->role_id == 3;
+    }
+
+    /**
+     * Check if the user has user role
+     *
+     * @return boolean
+     */
+    public function canManageTeam() {
+        $permission = AppHelper::oneTrue($this->permission->member ?? []);
+        return $this->isTeamAdmin() || $permission;
     }
 
     /**

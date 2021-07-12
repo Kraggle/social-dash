@@ -87,8 +87,7 @@ class UserPolicy {
      * @return boolean
      */
     public function manageTeam(User $user) {
-        // TODO:: make sure member with permission can also do this
-        return $user->isTeamAdmin();
+        return $user->team->package->id == 4 && ($user->isTeamAdmin() || $user->canManageTeam());
     }
 
     /**

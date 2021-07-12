@@ -24,20 +24,20 @@ Management')])
                   <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
                     <thead class="text-primary">
                       <th>{{ __('Name') }}</th>
-                      <th> {{ __('Package') }} </th>
-                      <th> {{ __('Accounts') }} </th>
-                      <th> {{ __('Members') }} </th>
-                      <th> {{ __('Creation Date') }} </th>
-                      <th class="text-right"> {{ __('Actions') }} </th>
+                      <th>{{ __('Package') }}</th>
+                      <th>{{ __('Accounts') }}</th>
+                      <th>{{ __('Members') }}</th>
+                      <th>{{ __('Creation Date') }}</th>
+                      <th class="text-right">{{ __('Actions') }}</th>
                     </thead>
                     <tbody>
                       @foreach ($teams as $team)
                         <tr>
-                          <td> {{ $team->name }} </td>
-                          <td> {{ $team->package->name ?? '' }} </td>
-                          <td> {{ $team->accounts->count() }} </td>
-                          <td> {{ $team->members->count() }} </td>
-                          <td> {{ $team->created_at->format('d-m-Y') }} </td>
+                          <td>{{ $team->name }}</td>
+                          <td>{{ $team->package->name ?? '' }}</td>
+                          <td>{{ $team->accounts->count() }}</td>
+                          <td>{{ $team->members->count() }}</td>
+                          <td>{{ $team->created_at->format('d-m-Y') }}</td>
                           <td class="td-actions text-right">
                             <form action="{{ route('team.destroy', $team) }}" method="post">
                               @csrf
@@ -64,8 +64,70 @@ Management')])
             </div>
           @elsecan('manage-team', App\User::class)
             {{-- Team management - by permission or team admin --}}
-            {{-- <h1>I can manage this team</h1>
-          @else --}}
+            @php $team = auth()->user()->team; @endphp
+            <div class="card">
+
+              <div class="card-header">
+                <h4 class="card-title">{{ __('Team Management') }}</h4>
+              </div>
+
+              <div class="card-body">
+                @can('add-member', $team)
+                  <div class="row">
+                    <div class="col-12 text-right mb-3">
+                      <a href="{{ route('member.create') }}"
+                        class="btn btn-sm btn-primary">{{ __('Add team member') }}</a>
+                    </div>
+                  </div>
+                @endcan
+
+                <div class="table-responsive">
+                  <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
+                    <thead class="text-primary">
+                      <th>{{ __('Name') }}</th>
+                      <th>{{ __('Email') }}</th>
+                      <th>{{ __('Member Since') }}</th>
+                      <th class="text-right">{{ __('Actions') }}</th>
+                    </thead>
+                    <tbody>
+                      @foreach ($team->members as $member)
+                        @php
+                          $admin = $member->isTeamAdmin() ? '<i class="fal fa-user-crown text-orange"></i> &nbsp;' : '';
+                        @endphp
+                        <tr>
+                          <td>{!! $admin !!} {{ $member->name }}</td>
+                          <td>{{ $member->email ?? '' }}</td>
+                          <td>{{ $team->created_at->format('d-m-Y') }}</td>
+                          <td class="td-actions text-right">
+                            <form action="{{ route('team.destroy', $team) }}" method="post">
+                              @csrf
+                              @method('delete')
+
+                              @unless(auth()->user()->id == $member->id || $member->isTeamAdmin())
+                                @can('edit-member', $team)
+                                  <a href="{{ route('member.edit', $member) }}"
+                                    class="btn btn-link btn-warning btn-icon btn-sm edit"><i
+                                      class="tim-icons icon-pencil"></i></a>
+                                @endcan
+
+                                @can('remove-member', $team)
+                                  <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
+                                    <i class="tim-icons icon-simple-remove"></i>
+                                  </button>
+                                @endcan
+                              @endunless
+                            </form>
+                          </td>
+                        </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          @else
+            {{-- Lacks permissions for team management --}}
             @include('permission')
           @endcan
         </div>

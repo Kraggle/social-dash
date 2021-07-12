@@ -18,18 +18,15 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Role;
 use App\Team;
 use App\User;
-use Stripe\SetupIntent;
+use App\RegisterToken;
 use App\Helpers\AppHelper;
-use Illuminate\Http\Request;
-use Laravel\Cashier\Cashier;
 use App\Traits\StripeFunctions;
-use Illuminate\Http\JsonResponse;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -80,8 +77,19 @@ class RegisterController extends Controller {
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
-            'policy' => ['required', 'boolean']
+            'token' => ['sometimes', 'required', 'string']
         ]);
+
+        if (isset($data['token'])) {
+            $token = $data['token'];
+            $valid = Validator::make($data, [
+                'email' => [
+                    Rule::exists('register_tokens', 'email')->where(function ($query) use ($token) {
+                        return $query->where('token', $token);
+                    })
+                ]
+            ], ['email.exists' => 'The provided token is not for this email address.']);
+        }
 
         return $valid;
     }
@@ -94,17 +102,20 @@ class RegisterController extends Controller {
      */
     protected function create(array $data) {
 
-        $exists = key_exists('user_type', $data);
-        if (!$exists || ($exists && !in_array($data['user_type'], [2, 3, 4])))
-            $data['user_type'] = 3;
-
+        $role_id = 3;
+        $token = $data['token'] ?? null;
         $team = null;
-        if (in_array($data['user_type'], [2, 3])) {
+
+        if ($token) {
+            $column = RegisterToken::where('token', $token)->first();
+            $role_id = $column->role_id;
+            $team = $column->team;
+        }
+
+        if (in_array($role_id, [2, 3])) {
             $team = Team::create([
                 'name' => $data['team_name']
             ]);
-        } else {
-            // TODO: setup team member additions with tokens
         }
 
         return User::create([
@@ -113,7 +124,7 @@ class RegisterController extends Controller {
             'name' => $data['firstname'] . ' ' . $data['lastname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'role_id' => $data['user_type'],
+            'role_id' => $role_id,
             'team_id' => $team->id
         ]);
     }

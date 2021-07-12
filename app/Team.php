@@ -63,6 +63,15 @@ class Team extends Model {
     }
 
     /**
+     * Get the team tokens.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function tokens() {
+        return $this->hasMany(RegisterToken::class);
+    }
+
+    /**
      * Get the team package.
      *
      * @return App\Package

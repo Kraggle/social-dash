@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Team;
 use App\User;
+use App\Helpers\AppHelper;
 use Laravel\Cashier\Cashier;
 use App\Observers\UserObserver;
 use Illuminate\Support\Facades\Blade;
@@ -18,6 +19,10 @@ class AppServiceProvider extends ServiceProvider {
     public function boot() {
         User::observe(UserObserver::class);
         Cashier::useCustomerModel(Team::class);
+
+        Blade::extend(function ($value) {
+            return preg_replace('/\@(define|php)\((.+)\)/', '<?php ${2}; ?>', $value);
+        });
     }
 
     /**

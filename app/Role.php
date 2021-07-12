@@ -36,4 +36,13 @@ class Role extends Model {
     public function users() {
         return $this->hasMany(User::class);
     }
+
+    /**
+     * Get the role tokens.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function tokens() {
+        return $this->hasMany(RegisterToken::class);
+    }
 }
