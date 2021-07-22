@@ -161,13 +161,36 @@ class User extends Authenticatable {
     }
 
     /**
-     * Check if the user has user role
+     * Check if the user can manage team members
      *
      * @return boolean
      */
-    public function canManageTeam() {
-        $permission = AppHelper::oneTrue($this->permission->member ?? []);
-        return $this->isTeamAdmin() || $permission;
+    public function canManageTeam($rule = null) {
+        $allow = AppHelper::oneTrue($this->permission->member ?? []);
+        if ($rule) $allow = AppHelper::isTrue($this->permission->member->$rule ?? false);
+        return $this->isTeamAdmin() || $allow;
+    }
+
+    /**
+     * Check if the user can manage team accounts
+     *
+     * @return boolean
+     */
+    public function canManageTeamAccounts($rule = null) {
+        $allow = AppHelper::oneTrue($this->permission->account ?? []);
+        if ($rule) $allow = AppHelper::isTrue($this->permission->account->$rule ?? false);
+        return $this->isTeamAdmin() || $allow;
+    }
+
+    /**
+     * Check if the user can manage team clients
+     *
+     * @return boolean
+     */
+    public function canManageTeamClients($rule = null) {
+        $allow = AppHelper::oneTrue($this->permission->client ?? []);
+        if ($rule) $allow = AppHelper::isTrue($this->permission->client->$rule ?? false);
+        return $this->isTeamAdmin() || $allow;
     }
 
     /**

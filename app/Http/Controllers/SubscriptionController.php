@@ -51,7 +51,9 @@ class SubscriptionController extends Controller {
 		$package = Package::where('id', $request->package_id ?? 2)->first();
 
 		$team = $request->user()->team;
-		$team->newSubscription('default', $package->price_id)->trialDays(7)->create($request->token);
+		$team->newSubscription('default', $package->price_id)->trialDays(7)->create($request->token, [
+			'email' => $team->admin()->email
+		]);
 		$team->package_id = $request->package_id;
 		$team->save();
 

@@ -6,7 +6,8 @@
     @include transitions($fast-transition-time, $transition-linear);
 
     &.dropdown-menu-right {
-        &:before, &:after {
+        &:before,
+        &:after {
             left: auto;
             right: 10px;
         }
@@ -36,14 +37,14 @@
             height: 0;
             z-index: 1;
             vertical-align: middle;
-            content: '';
+            content: "";
             top: -6px;
             left: 10px;
             right: auto;
             color: $default;
-            border-bottom: .4em solid;
-            border-right: .4em solid transparent;
-            border-left: .4em solid transparent;
+            border-bottom: 0.4em solid;
+            border-right: 0.4em solid transparent;
+            border-left: 0.4em solid transparent;
         }
 
         &.dropdown-menu-right {
@@ -65,15 +66,15 @@
                 width: 0;
                 height: 0;
                 vertical-align: middle;
-                content: '';
+                content: "";
                 top: auto;
                 bottom: -6px;
                 right: auto;
                 left: 10px;
                 color: $dark-background;
-                border-top: .4em solid;
-                border-right: .4em solid transparent;
-                border-left: .4em solid transparent;
+                border-top: 0.4em solid;
+                border-right: 0.4em solid transparent;
+                border-left: 0.4em solid transparent;
                 border-bottom: none;
                 z-index: 1;
             }
@@ -86,13 +87,18 @@
         top: 1px;
     }
 
+    .fa,
+    .fal,
+    .fad,
+    .far,
+    .fas,
     .tim-icons {
         margin-right: 10px;
         position: relative;
         top: 4px;
         font-size: 18px;
         margin-top: -5px;
-        opacity: .5;
+        opacity: 0.5;
     }
 
     .dropdown-item {
@@ -113,20 +119,21 @@
             width: 0;
             height: 0;
             vertical-align: middle;
-            content: '';
+            content: "";
             top: auto;
             bottom: -5px;
             right: auto;
             left: 10px;
             color: $white;
-            border-top: .4em solid;
-            border-right: .4em solid transparent;
-            border-left: .4em solid transparent;
+            border-top: 0.4em solid;
+            border-right: 0.4em solid transparent;
+            border-left: 0.4em solid transparent;
             border-bottom: none;
         }
 
         &.dropdown-menu-right {
-            &:after, &:before {
+            &:after,
+            &:before {
                 right: 10px;
                 left: auto;
             }
@@ -139,14 +146,14 @@
         width: 0;
         height: 0;
         vertical-align: middle;
-        content: '';
+        content: "";
         top: -5px;
         left: 10px;
         right: auto;
         color: $white;
-        border-bottom: .4em solid;
-        border-right: .4em solid transparent;
-        border-left: .4em solid transparent;
+        border-bottom: 0.4em solid;
+        border-right: 0.4em solid transparent;
+        border-left: 0.4em solid transparent;
     }
 
     &.dropdown-menu-right {
@@ -157,8 +164,8 @@
     .dropdown-item,
     .bootstrap-select &.inner li a {
         font-size: $font-size-sm;
-        padding-top: .6rem;
-        padding-bottom: .6rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
         margin-top: 5px;
 
         @include transitions($fast-transition-time, $transition-linear);
@@ -192,23 +199,48 @@
     }
 
     &.dropdown-primary {
-        @include dropdown-colors(darken($primary, 3%), $opacity-8, $white, $opacity-2);
+        @include dropdown-colors(
+            darken($primary, 3%),
+            $opacity-8,
+            $white,
+            $opacity-2
+        );
     }
 
     &.dropdown-info {
-        @include dropdown-colors(darken($info, 3%), $opacity-8, $white, $opacity-2);
+        @include dropdown-colors(
+            darken($info, 3%),
+            $opacity-8,
+            $white,
+            $opacity-2
+        );
     }
 
     &.dropdown-danger {
-        @include dropdown-colors(darken($danger, 3%), $opacity-8, $white, $opacity-2);
+        @include dropdown-colors(
+            darken($danger, 3%),
+            $opacity-8,
+            $white,
+            $opacity-2
+        );
     }
 
     &.dropdown-success {
-        @include dropdown-colors(darken($success, 3%), $opacity-8, $white, $opacity-2);
+        @include dropdown-colors(
+            darken($success, 3%),
+            $opacity-8,
+            $white,
+            $opacity-2
+        );
     }
 
     &.dropdown-warning {
-        @include dropdown-colors(darken($warning, 3%), $opacity-8, $white, $opacity-2);
+        @include dropdown-colors(
+            darken($warning, 3%),
+            $opacity-8,
+            $white,
+            $opacity-2
+        );
     }
 
     .dropdown &,
@@ -275,7 +307,8 @@
     &.dropdown-navbar {
         left: -80px;
 
-        &:before, &:after {
+        &:before,
+        &:after {
             left: auto;
             right: 17px;
         }
@@ -285,14 +318,14 @@
 .btn {
     cursor: pointer;
 
-    &.dropdown-toggle[data-toggle='dropdown'] {
+    &.dropdown-toggle[data-toggle="dropdown"] {
         padding: 10px;
         margin: 0;
 
         // margin-bottom: 5px;
 
         &:after {
-            content: '';
+            content: "";
             margin-left: 5px;
         }
     }
@@ -346,16 +379,15 @@
         display: inline-block;
         width: 0;
         height: 0;
-        margin-left: .255em;
-        vertical-align: .255em;
-        content: '';
-        border-top: .3em solid;
-        border-right: .3em solid transparent;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
         border-bottom: 0;
-        border-left: .3em solid transparent;
+        border-left: 0.3em solid transparent;
     }
 }
-
 
 @include media-breakpoint-up(lg) {
     .dropdown-menu .dropdown-item {

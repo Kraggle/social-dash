@@ -70,18 +70,17 @@ Management')])
                                 @can('update', $user)
                                   <a href="{{ route('user.edit', $user) }}"
                                     class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                                      class="tim-icons icon-pencil"></i></a>
+                                      class="fal fa-pencil-alt"></i></a>
                                 @endcan
                                 @can('delete', $user)
                                   <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
-                                    <i class="tim-icons icon-simple-remove"></i>
+                                    <i class="fal fa-trash-alt"></i>
                                   </button>
                                 @endcan
                               </form>
                             @else
                               <a href="{{ route('profile.edit') }}"
-                                class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                                  class="tim-icons icon-pencil"></i></a>
+                                class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
                             @endif
                           </td>
                         @endcan

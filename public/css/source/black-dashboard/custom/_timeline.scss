@@ -1,8 +1,8 @@
-.card.card-timeline{
-  .card-body {
-    padding-left: 0;
-    padding-right: 0;
-  }
+.card.card-timeline {
+    .card-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .timeline {
         list-style: none;
         padding: 20px 0 20px;
@@ -20,30 +20,29 @@
         }
 
         .timeline-footer {
-          .btn{
-            margin: 0;
+            .btn {
+                margin: 0;
 
-            &.dropdown-toggle {
-              i {
-                top: -1px;
-                left: 10px;
-              }
+                &.dropdown-toggle {
+                    i {
+                        top: -1px;
+                        left: 10px;
+                    }
 
-              &:after {
-                margin-left: 20px !important;
-              }
+                    &:after {
+                        margin-left: 20px !important;
+                    }
+                }
             }
-          }
         }
 
-        h6{
-            color: rgba($white,0.8);
+        h6 {
+            color: rgba($white, 0.8);
             font-weight: 400;
             margin: 10px 0px 0px;
         }
 
         &.timeline-simple {
-
             &:before {
                 left: 5%;
             }
@@ -70,7 +69,6 @@
             &:after {
                 clear: both;
             }
-
         }
 
         > li > .timeline-panel {
@@ -108,20 +106,19 @@
                 content: " ";
             }
 
-            &.timeline-panel-white{
-              background: $white;
-              .timeline-body p{
-                color: $black-states;
-              }
+            &.timeline-panel-white {
+                background: $white;
+                .timeline-body p {
+                    color: $black-states;
+                }
 
-              &:after, &:before{
-                border-right-color: $white;
-                border-left-color: $white;
-              }
+                &:after,
+                &:before {
+                    border-right-color: $white;
+                    border-left-color: $white;
+                }
             }
         }
-
-
 
         > li > .timeline-badge {
             color: $white;
@@ -142,18 +139,21 @@
             border-bottom-left-radius: 50%;
 
             [class^="ti-"],
-            [class*=" ti-"]{
+            [class*=" ti-"] {
                 line-height: inherit;
             }
 
-            .tim-icons{
-              width: 25px;
-              height: 21px;
-              text-align: center;
+            .tim-icons,
+            .fa,
+            .far,
+            .fad,
+            .fal,
+            .fas {
+                width: 25px;
+                height: 21px;
+                text-align: center;
             }
         }
-
-
 
         > li.timeline-inverted > .timeline-panel {
             float: right;
@@ -171,81 +171,75 @@
                 left: -14px;
                 right: auto;
             }
-
         }
-
-
     }
-    .timeline-heading{
+    .timeline-heading {
         margin-bottom: 15px;
     }
     .timeline-badge.primary {
-      background-color: $info !important;
+        background-color: $info !important;
     }
     .timeline-badge.info {
-      background-color: $info !important;
+        background-color: $info !important;
     }
 
     .timeline-badge.success {
-      background-color: darken($success,10%) !important;
+        background-color: darken($success, 10%) !important;
     }
 
     .timeline-badge.warning {
-      background-color: $warning !important;
+        background-color: $warning !important;
     }
 
     .timeline-badge.danger {
-      background-color: $danger !important;
+        background-color: $danger !important;
     }
 
-
     .timeline-title {
-      margin-top: 0;
-      color: inherit;
+        margin-top: 0;
+        color: inherit;
     }
 
     .timeline-body > p,
     .timeline-body > ul {
-      margin-bottom: 0;
-      color: $white;
+        margin-bottom: 0;
+        color: $white;
     }
 
     .timeline-body > p + p {
-      margin-top: 5px;
+        margin-top: 5px;
     }
-
-
 }
 
-@include media-breakpoint-down(sm){
-  .card.card-timeline {
-    .timeline {
-        &:before {
-          left: 5%;
-        }
-
-        > li > .timeline-badge {
-            left: 5%;
-        }
-
-        > li > .timeline-panel{
-            float: right;
-            width: 83% !important;
-
-            &:before{
-                border-left-width: 0;
-                border-right-width: 15px;
-                left: -15px;
-                right: auto;
+@include media-breakpoint-down(sm) {
+    .card.card-timeline {
+        .timeline {
+            &:before {
+                left: 5%;
             }
 
-            &:after{
-                border-left-width: 0;
-                border-right-width: 14px;
-                left: -14px;
-                right: auto;
+            > li > .timeline-badge {
+                left: 5%;
+            }
+
+            > li > .timeline-panel {
+                float: right;
+                width: 83% !important;
+
+                &:before {
+                    border-left-width: 0;
+                    border-right-width: 15px;
+                    left: -15px;
+                    right: auto;
+                }
+
+                &:after {
+                    border-left-width: 0;
+                    border-right-width: 14px;
+                    left: -14px;
+                    right: auto;
+                }
             }
         }
     }
-  }
 }

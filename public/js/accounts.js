@@ -30,7 +30,7 @@ $(() => {
             val = $(this).is(':checked') ? 'on' : 'off';
         } else if (!type) {
             cost = $(':selected', this).data('cost');
-            val = $(this).val();
+            val = $('option:selected', this).attr('title');
         }
 
         $(`#${name}_cost`).text(cost);
@@ -72,7 +72,7 @@ $(() => {
                 minCost = iData.minCost,
                 val = parseInt($slider.noUiSlider.get()),
                 per = ((val - min) / (max - min)),
-                cost = Math.round(((maxCost - minCost) * per) + minCost);
+                cost = (((maxCost - minCost) * per) + minCost).toFixed(2);
             $(`#${name}_cost`).text(cost);
         }
 
@@ -98,7 +98,7 @@ $(() => {
 
 const updateFollowers = () => {
     const followers = parseInt($('[name=followers]').val()),
-        multi = Math.ceil(followers / 5e4);
+        multi = Math.ceil(followers / 5e4) || 1;
 
     $('[has-cost]').each(function() {
         let data = $(this).data();
@@ -121,7 +121,7 @@ const updateFollowers = () => {
                 $('option', this).each(function() {
                     data = $(this).data();
                     if (!data.oldCost) data.oldCost = data.cost;
-                    data.cost = Math.round(data.oldCost * multi);
+                    data.cost = (data.oldCost * multi).toFixed(2);
                     data.content = data.content.replace(/cost'>£[\d\.]+/, `cost'>£${data.cost}`);
                 });
                 $(this).selectpicker('refresh');
@@ -138,7 +138,7 @@ const updateFollowers = () => {
 function updateMessage(val) {
     if (!this.hasAttribute('has-msg')) return;
     const name = $(this).attr('name');
-    $(`[update="${$(this).attr('name')}"]`).text(val.toLowerCase());
+    $(`[update="${name}"]`).text(val.toLowerCase());
 }
 
 const updateCost = () => {
@@ -147,9 +147,10 @@ const updateCost = () => {
         const data = $(this).data(),
             id = '#' + $(this).attr('name').replace(/(^s\w+\[|\])/g, '') + '_cost';
         if ($(this).attr('type') == 'hidden') cost += data.cost;
-        else cost += parseInt($(id).text());
+        else cost += parseFloat($(id).text());
     });
-    $('.acc-cost').text(cost);
+    $('.text-on-front .acc-cost').text(cost.toFixed(2));
+    $('.text-on-back .acc-cost').text(Math.floor(cost));
 }
 
 const checkInstaUser = () => {

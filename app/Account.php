@@ -25,7 +25,7 @@ class Account extends Model {
      * @var array
      */
     protected $fillable = [
-        'username', 'pk', 'team_id'
+        'username', 'pk', 'team_id', 'quantity', 'price_id'
     ];
 
     /**

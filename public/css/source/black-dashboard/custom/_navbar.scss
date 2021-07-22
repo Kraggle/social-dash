@@ -371,9 +371,15 @@
 
     .navbar-nav {
         .nav-link {
-            i.fa,
-            i.tim-icons {
-                opacity: 0.5;
+            i {
+                &.tim-icons,
+                &.fa,
+                &.far,
+                &.fad,
+                &.fal,
+                &.fas {
+                    opacity: 0.5;
+                }
             }
         }
     }

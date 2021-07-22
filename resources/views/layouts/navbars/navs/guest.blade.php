@@ -49,7 +49,7 @@
         @auth()
           <li class="nav-item">
             <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
-                              document.getElementById('logout-form').submit();">
+                                  document.getElementById('logout-form').submit();">
               <i class="fal fa-sign-out"></i>
               <span>{{ __('Logout') }}</span>
             </a>
@@ -66,7 +66,7 @@
       <div class="modal-header">
         <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <i class="tim-icons icon-simple-remove"></i>
+          <i class="fal fa-trash-alt"></i>
         </button>
       </div>
     </div>

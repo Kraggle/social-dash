@@ -119,7 +119,7 @@
       <div class="modal-header">
         <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="{{ __('SEARCH') }}">
         <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('Close') }}">
-          <i class="tim-icons icon-simple-remove"></i>
+          <i class="fal fa-trash-alt"></i>
         </button>
       </div>
     </div>

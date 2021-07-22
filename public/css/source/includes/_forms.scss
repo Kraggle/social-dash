@@ -52,7 +52,7 @@
 
     li {
         .select-cost {
-            padding-right: 20px;
+            padding-right: 27px;
             float: right;
         }
     }
@@ -328,4 +328,47 @@
 
 label:empty {
     display: none;
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr auto auto;
+    gap: 0 10px;
+    align-items: center;
+
+    .btn.remove {
+        margin-bottom: 14px;
+    }
+}
+
+.no-vis {
+    visibility: hidden;
+}
+
+.form-group {
+    .input-group-cards {
+        display: flex;
+        gap: 5px;
+        margin-right: 79px;
+
+        .img-rotator {
+            display: grid;
+            grid-template-columns: 24px;
+            grid-template-rows: auto;
+            grid-template-areas: "only";
+            align-items: center;
+            justify-items: center;
+            position: relative;
+
+            img {
+                opacity: 1;
+                grid-area: only;
+                transition: all 0.3ms linear;
+            }
+
+            .hidden {
+                opacity: 0;
+            }
+        }
+    }
 }

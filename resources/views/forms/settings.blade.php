@@ -60,7 +60,7 @@ use App\Defaults;
         <select name="{{ $name }}" class="selectpicker" data-style="btn btn-primary"
           {{ $has_cost ? ' has-cost' : '' }} {{ $has_msg ? 'has-msg' : '' }}>
           @foreach ($options->values as $option)
-            <option title="{{ $option->value }}" value="{{ $option->value }}"
+            <option title="{{ $option->value }}" value="{{ $option->key ?? $option->value }}"
               {{ $has_cost ? " data-cost=$option->cost" : '' }} {{ AppHelper::selected($value, $option->value) }}
               data-content="<span>{{ $option->value }}</span><span class='select-cost'>{{ $has_cost ? "£$option->cost" : '' }}</span>">
             </option>

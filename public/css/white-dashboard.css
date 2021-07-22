@@ -14394,6 +14394,10 @@ button.section-darker:focus {
 }
 
 .alert i.fa,
+.alert i.fad,
+.alert i.fal,
+.alert i.fas,
+.alert i.far,
 .alert i.tim-icons {
   font-size: 1rem;
 }
@@ -14764,11 +14768,17 @@ fieldset[disabled] .navbar .navbar-nav > a.btn.active {
 .btn-group-sm > .btn.btn-icon .far,
 .btn.btn-icon.btn-sm .fas,
 .btn-group-sm > .btn.btn-icon .fas,
+.btn.btn-icon.btn-sm .fad,
+.btn-group-sm > .btn.btn-icon .fad,
+.btn.btn-icon.btn-sm .fal,
+.btn-group-sm > .btn.btn-icon .fal,
 .btn.btn-icon.btn-sm .tim-icons,
 .btn-group-sm > .btn.btn-icon .tim-icons,
 .navbar .navbar-nav > a.btn.btn-icon.btn-sm .fa,
 .navbar .navbar-nav > a.btn.btn-icon.btn-sm .far,
 .navbar .navbar-nav > a.btn.btn-icon.btn-sm .fas,
+.navbar .navbar-nav > a.btn.btn-icon.btn-sm .fad,
+.navbar .navbar-nav > a.btn.btn-icon.btn-sm .fal,
 .navbar .navbar-nav > a.btn.btn-icon.btn-sm .tim-icons {
   font-size: 0.6875rem;
 }
@@ -14788,11 +14798,17 @@ fieldset[disabled] .navbar .navbar-nav > a.btn.active {
 .btn-group-lg > .btn.btn-icon .far,
 .btn.btn-icon.btn-lg .fas,
 .btn-group-lg > .btn.btn-icon .fas,
+.btn.btn-icon.btn-lg .fad,
+.btn-group-lg > .btn.btn-icon .fad,
+.btn.btn-icon.btn-lg .fal,
+.btn-group-lg > .btn.btn-icon .fal,
 .btn.btn-icon.btn-lg .tim-icons,
 .btn-group-lg > .btn.btn-icon .tim-icons,
 .navbar .navbar-nav > a.btn.btn-icon.btn-lg .fa,
 .navbar .navbar-nav > a.btn.btn-icon.btn-lg .far,
 .navbar .navbar-nav > a.btn.btn-icon.btn-lg .fas,
+.navbar .navbar-nav > a.btn.btn-icon.btn-lg .fad,
+.navbar .navbar-nav > a.btn.btn-icon.btn-lg .fal,
 .navbar .navbar-nav > a.btn.btn-icon.btn-lg .tim-icons {
   font-size: 1.325rem;
 }
@@ -14800,10 +14816,14 @@ fieldset[disabled] .navbar .navbar-nav > a.btn.active {
 .btn.btn-icon:not(.btn-footer) .tim-icons,
 .btn.btn-icon:not(.btn-footer) .fa,
 .btn.btn-icon:not(.btn-footer) .far,
+.btn.btn-icon:not(.btn-footer) .fad,
+.btn.btn-icon:not(.btn-footer) .fal,
 .btn.btn-icon:not(.btn-footer) .fas,
 .navbar .navbar-nav > a.btn.btn-icon:not(.btn-footer) .tim-icons,
 .navbar .navbar-nav > a.btn.btn-icon:not(.btn-footer) .fa,
 .navbar .navbar-nav > a.btn.btn-icon:not(.btn-footer) .far,
+.navbar .navbar-nav > a.btn.btn-icon:not(.btn-footer) .fad,
+.navbar .navbar-nav > a.btn.btn-icon:not(.btn-footer) .fal,
 .navbar .navbar-nav > a.btn.btn-icon:not(.btn-footer) .fas {
   position: absolute;
   font-size: 1em;
@@ -17397,6 +17417,11 @@ fieldset[disabled] .btn-link.active {
   top: 1px;
 }
 
+.dropdown-menu .fa,
+.dropdown-menu .fal,
+.dropdown-menu .fad,
+.dropdown-menu .far,
+.dropdown-menu .fas,
 .dropdown-menu .tim-icons {
   margin-right: 10px;
   position: relative;
@@ -18757,7 +18782,17 @@ textarea.form-control.underline:active {
   color: #222a42;
 }
 
+.input-group-prepend .fa,
+.input-group-prepend .far,
+.input-group-prepend .fad,
+.input-group-prepend .fal,
+.input-group-prepend .fas,
 .input-group-prepend .tim-icons,
+.input-group-append .fa,
+.input-group-append .far,
+.input-group-append .fad,
+.input-group-append .fal,
+.input-group-append .fas,
 .input-group-append .tim-icons {
   font-size: 1rem;
 }
@@ -18951,7 +18986,12 @@ textarea.form-control.underline:active {
   color: #222a42;
 }
 
-.modal-content .modal-header i.tim-icons {
+.modal-content .modal-header i.tim-icons,
+.modal-content .modal-header i.fa,
+.modal-content .modal-header i.far,
+.modal-content .modal-header i.fad,
+.modal-content .modal-header i.fal,
+.modal-content .modal-header i.fas {
   font-size: 16px;
 }
 
@@ -20561,8 +20601,12 @@ textarea.form-control.underline:active {
     }
 }
 
+  .navbar-nav .nav-link i.tim-icons,
   .navbar-nav .nav-link i.fa,
-  .navbar-nav .nav-link i.tim-icons {
+  .navbar-nav .nav-link i.far,
+  .navbar-nav .nav-link i.fad,
+  .navbar-nav .nav-link i.fal,
+  .navbar-nav .nav-link i.fas {
     opacity: 0.5;
   }
 }
@@ -21007,7 +21051,12 @@ textarea.form-control.underline:active {
   border-radius: 30px;
 }
 
-.nav-tabs > .nav-item > .nav-link i.tim-icons {
+.nav-tabs > .nav-item > .nav-link i.tim-icons,
+.nav-tabs > .nav-item > .nav-link i.fa,
+.nav-tabs > .nav-item > .nav-link i.far,
+.nav-tabs > .nav-item > .nav-link i.fad,
+.nav-tabs > .nav-item > .nav-link i.fal,
+.nav-tabs > .nav-item > .nav-link i.fas {
   font-size: 14px;
   position: relative;
   top: 1px;
@@ -21075,7 +21124,12 @@ textarea.form-control.underline:active {
   width: 80px;
 }
 
-.nav-pills.nav-pills-just-icons .nav-item .nav-link .tim-icons {
+.nav-pills.nav-pills-just-icons .nav-item .nav-link .tim-icons,
+.nav-pills.nav-pills-just-icons .nav-item .nav-link .fa,
+.nav-pills.nav-pills-just-icons .nav-item .nav-link .far,
+.nav-pills.nav-pills-just-icons .nav-item .nav-link .fad,
+.nav-pills.nav-pills-just-icons .nav-item .nav-link .fal,
+.nav-pills.nav-pills-just-icons .nav-item .nav-link .fas {
   font-size: 24px;
   line-height: 80px;
 }
@@ -24182,7 +24236,12 @@ code {
   line-height: inherit;
 }
 
-.card.card-timeline .timeline > li > .timeline-badge .tim-icons {
+.card.card-timeline .timeline > li > .timeline-badge .tim-icons,
+.card.card-timeline .timeline > li > .timeline-badge .fa,
+.card.card-timeline .timeline > li > .timeline-badge .far,
+.card.card-timeline .timeline > li > .timeline-badge .fad,
+.card.card-timeline .timeline > li > .timeline-badge .fal,
+.card.card-timeline .timeline > li > .timeline-badge .fas {
   width: 25px;
   height: 21px;
   text-align: center;
@@ -24311,7 +24370,12 @@ code {
   max-width: 254px;
 }
 
-.bootstrap-datetimepicker-widget.dropdown-menu .tim-icons {
+.bootstrap-datetimepicker-widget.dropdown-menu .tim-icons,
+.bootstrap-datetimepicker-widget.dropdown-menu .fa,
+.bootstrap-datetimepicker-widget.dropdown-menu .far,
+.bootstrap-datetimepicker-widget.dropdown-menu .fad,
+.bootstrap-datetimepicker-widget.dropdown-menu .fal,
+.bootstrap-datetimepicker-widget.dropdown-menu .fas {
   opacity: 1;
 }
 
@@ -24633,7 +24697,7 @@ code {
   content: "";
   display: inline-block;
   border: 0 0 7px 7px solid transparent;
-  border-bottom-color: #68B3C8;
+  border-bottom-color: #68b3c8;
   border-top-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   bottom: 4px;
@@ -24671,7 +24735,7 @@ code {
 
 .bootstrap-datetimepicker-widget table td span.active {
   background-color: #e14eca;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .bootstrap-datetimepicker-widget table td span.old {
@@ -32464,7 +32528,12 @@ Copyright (c) 2015 Daniel Eden
 }
 
 @media (max-width: 767.98px) {
-  .card.card-chart .card-header .btn-group-toggle .tim-icons {
+  .card.card-chart .card-header .btn-group-toggle .tim-icons,
+  .card.card-chart .card-header .btn-group-toggle .fa,
+  .card.card-chart .card-header .btn-group-toggle .far,
+  .card.card-chart .card-header .btn-group-toggle .fad,
+  .card.card-chart .card-header .btn-group-toggle .fal,
+  .card.card-chart .card-header .btn-group-toggle .fas {
     font-size: 0.875rem;
     top: -1px;
   }

@@ -20,7 +20,6 @@ class AccountController extends Controller {
      * @return \Illuminate\View\View
      */
     public function index(Account $model) {
-        $this->authorize('manage-accounts', User::class);
         return view('account.index', ['accounts' => $model->all()]);
     }
 
@@ -30,7 +29,6 @@ class AccountController extends Controller {
      * @return \Illuminate\View\View
      */
     public function create() {
-        $this->authorize('manage-accounts', User::class);
         return view('account.create', [
             'teams' => Team::all(),
             'settings' => Defaults::where('for_table', 'accounts')->get()
@@ -43,9 +41,21 @@ class AccountController extends Controller {
      * @return \Illuminate\View\View
      */
     public function store(AccountRequest $request) {
-        $model = Account::create($request->except('settings'));
+
+        $team_id = auth()->user()->team->id;
+        if ($request->team_id) $team_id = $request->team_id;
 
         $settings = $request->settings;
+
+        $price_id = $settings['follower_freq'];
+        $quantity = ceil($request->followers / 5e4 ?? 1);
+
+        $model = Account::create($request->merge([
+            'team_id' => $team_id,
+            'quantity' => $quantity,
+            'price_id' => $price_id
+        ])->except(['settings', 'followers']));
+
         $defaults = Defaults::for('accounts');
         foreach ($settings as $key => $value) {
             Setting::create([
@@ -55,7 +65,12 @@ class AccountController extends Controller {
             ]);
         }
 
-        // TODO:: Add total_cost, old_cost and renew_date
+        $team = Team::where('id', $team_id)->first();
+        $team->newSubscription($request->username, ['price_1JEZ3NAy9PNycxnJ9fMA6x8u', $price_id])
+            ->quantity($quantity, $price_id)->add();
+
+        // TODO:: Check that the payment was successful, then...
+        // TODO:: Send a webhook to the scraper to start the scrape
 
         return redirect()->route('account.index')->withStatus(__('Account successfully added.'));
     }
@@ -106,9 +121,12 @@ class AccountController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy(Account $account) {
-        $this->authorize('manage-accounts', User::class);
+        $this->authorize('remove-account', [$account->team, User::class]);
 
         $account->delete();
+
+        // TODO: cancel and remove the subscription when deleting the account
+
         return redirect()->route('account.index')->withStatus(__('Account successfully deleted.'));
     }
 }

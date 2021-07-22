@@ -29,7 +29,7 @@ class AccountRequest extends FormRequest {
      * @return array
      */
     public function rules() {
-        $team_id = auth()->user()->team->id;
+        $team_id = $this->input('team_id') ?? auth()->user()->team->id;
         $username = $this->username;
         return [
             'username' => [

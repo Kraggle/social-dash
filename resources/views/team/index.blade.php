@@ -45,12 +45,11 @@ Management')])
 
                               @can('update', $team)
                                 <a href="{{ route('team.edit', $team) }}"
-                                  class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                                    class="tim-icons icon-pencil"></i></a>
+                                  class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
                               @endcan
                               @if (auth()->user()->can('remove', $team))
                                 <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
-                                  <i class="tim-icons icon-simple-remove"></i>
+                                  <i class="fal fa-trash-alt"></i>
                                 </button>
                               @endif
                             </form>
@@ -64,7 +63,7 @@ Management')])
             </div>
           @elsecan('manage-team', App\User::class)
             {{-- Team management - by permission or team admin --}}
-            @php $team = auth()->user()->team; @endphp
+            @define($team = auth()->user()->team)
             <div class="card">
 
               <div class="card-header">
@@ -106,13 +105,12 @@ Management')])
                               @unless(auth()->user()->id == $member->id || $member->isTeamAdmin())
                                 @can('edit-member', $team)
                                   <a href="{{ route('member.edit', $member) }}"
-                                    class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                                      class="tim-icons icon-pencil"></i></a>
+                                    class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
                                 @endcan
 
                                 @can('remove-member', $team)
                                   <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
-                                    <i class="tim-icons icon-simple-remove"></i>
+                                    <i class="fal fa-trash-alt"></i>
                                   </button>
                                 @endcan
                               @endunless

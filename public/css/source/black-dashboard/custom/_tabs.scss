@@ -4,8 +4,8 @@
     border: 0;
     padding: $padding-base-vertical $padding-base-horizontal;
 
-    > .nav-item{
-        > .nav-link{
+    > .nav-item {
+        > .nav-link {
             color: $white;
             margin: 0;
             margin-right: 5px;
@@ -16,16 +16,21 @@
 
             &:hover {
                 background-color: $transparent-bg;
-                border: 1px solid darken($black,5%);
+                border: 1px solid darken($black, 5%);
                 color: rgba($white, 0.8);
             }
 
-            &.active{
+            &.active {
                 border: 1px solid $white;
                 border-radius: 30px;
             }
 
-            i.tim-icons{
+            i.tim-icons,
+            i.fa,
+            i.far,
+            i.fad,
+            i.fal,
+            i.fas {
                 font-size: 14px;
                 position: relative;
                 top: 1px;
@@ -35,16 +40,16 @@
 
         &.disabled > .nav-link,
         &.disabled > .nav-link:hover {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
         }
     }
 
-    &.nav-tabs-neutral{
-        > .nav-item{
-            > .nav-link{
+    &.nav-tabs-neutral {
+        > .nav-item {
+            > .nav-link {
                 color: $white;
 
-                &.active{
+                &.active {
                     border-color: $opacity-5;
                     color: $white;
                 }
@@ -52,10 +57,10 @@
         }
     }
 
-    &.nav-tabs-primary{
-        > .nav-item{
-            > .nav-link{
-                &.active{
+    &.nav-tabs-primary {
+        > .nav-item {
+            > .nav-link {
+                &.active {
                     border-color: $primary;
                     color: $primary;
                 }
@@ -63,10 +68,10 @@
         }
     }
 
-    &.nav-tabs-info{
-        > .nav-item{
-            > .nav-link{
-                &.active{
+    &.nav-tabs-info {
+        > .nav-item {
+            > .nav-link {
+                &.active {
                     border-color: $info;
                     color: $info;
                 }
@@ -74,10 +79,10 @@
         }
     }
 
-    &.nav-tabs-danger{
-        > .nav-item{
-            > .nav-link{
-                &.active{
+    &.nav-tabs-danger {
+        > .nav-item {
+            > .nav-link {
+                &.active {
                     border-color: $danger;
                     color: $danger;
                 }
@@ -85,10 +90,10 @@
         }
     }
 
-    &.nav-tabs-warning{
-        > .nav-item{
-            > .nav-link{
-                &.active{
+    &.nav-tabs-warning {
+        > .nav-item {
+            > .nav-link {
+                &.active {
                     border-color: $warning;
                     color: $warning;
                 }
@@ -96,15 +101,14 @@
         }
     }
 
-    &.nav-tabs-success{
-        > .nav-item{
-            > .nav-link{
-                &.active{
+    &.nav-tabs-success {
+        > .nav-item {
+            > .nav-link {
+                &.active {
                     border-color: $success;
                     color: $success;
                 }
             }
         }
     }
-
 }

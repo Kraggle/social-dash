@@ -171,133 +171,126 @@
 
                 {{-- string --}}
                 <div class="type-wrapper{{ $type == 'text' ? '' : ' d-none' }}" type="text">
-                  @php $disabled = $type == 'text' ? '' : 'disabled'; @endphp
+                  @php $disabled = $type != 'text'; @endphp
 
                   {{-- default --}}
                   <div class="row justify-content-md-center mt-3">
                     <label class="col-sm-2 pr-0 col-form-label text-right"
                       for="text-default">{{ __('Choices') }}</label>
-                    <div class="col-sm-10" id="string-options">
-                      <div class="row">
-                        <div class="col-sm-6 pr-0">
-                          <label>{{ __('Value') }}</label>
-                        </div>
-                        <div class="col-sm-3 pr-0">
-                          <label>{{ __('Cost') }}</label>
-                        </div>
-                        <div class="col-sm-2 pr-0">
-                          <label>{{ __('Default') }}</label>
-                        </div>
-                        <div class="col-sm-1 pr-0">
-                          <label></label>
-                        </div>
-                      </div>
+                    <div class="col-sm-10 choice-grid" id="string-options">
+                      <label>{{ __('Value') }}</label>
+                      <label>{{ __('Key') }}</label>
+                      <label>{{ __('Cost') }}</label>
+                      <label>{{ __('Default') }}</label>
+                      <label class="no-vis">#</label>
 
-                      <div class="row" repeat="_0">
-                        @php $value = $options->values[0] ?? []; @endphp
+                      @php $value = $options->values[0] ?? []; @endphp
 
-                        {{-- value --}}
-                        <div class="col-sm-6 pr-0">
-                          @include('forms.text', ['options' => [
-                          'name' => 'options[values][0][value]',
-                          'placeholder' => __('Some Value'),
-                          'value' => $value->value ?? '',
-                          'disabled' => $disabled
-                          ]])
-                        </div>
+                      {{-- value --}}
+                      @include('forms.text', ['options' => [
+                      'name' => 'options[values][0][value]',
+                      'placeholder' => __('Some Value'),
+                      'value' => $value->value ?? '',
+                      'disabled' => $disabled,
+                      'group' => ['attrs' => 'repeat=_0']
+                      ]])
 
-                        {{-- cost --}}
-                        <div class="col-sm-3 pr-0">
-                          @include('forms.number', ['options' => [
-                          'name' => 'options[values][0][cost]',
-                          'placeholder' => '25.00',
-                          'value' => $value->cost ?? '',
-                          'disabled' => $disabled,
-                          'step' => '.01',
-                          'min' => '0',
-                          'prepend' => '£',
-                          'attrs' => ['disabler' => 'cost']
-                          ]])
-                        </div>
+                      {{-- key --}}
+                      @include('forms.text', ['options' => [
+                      'name' => 'options[values][0][key]',
+                      'placeholder' => __('some_value'),
+                      'value' => $value->key ?? '',
+                      'disabled' => $disabled,
+                      'group' => ['attrs' => 'repeat=_0']
+                      ]])
 
-                        {{-- default --}}
-                        <div class="col-sm-2 pr-0 has-switch">
-                          @include('forms.switch', ['options' => [
-                          'name' => 'options[values][0][default]',
-                          'value' => $options->default ?? '',
-                          'disabled' => $disabled,
-                          ]])
-                        </div>
+                      {{-- cost --}}
+                      @include('forms.number', ['options' => [
+                      'name' => 'options[values][0][cost]',
+                      'placeholder' => '25.00',
+                      'value' => $value->cost ?? '',
+                      'disabled' => $disabled,
+                      'step' => '.01',
+                      'min' => '0',
+                      'prepend' => '£',
+                      'attrs' => ['disabler' => 'cost'],
+                      'group' => ['attrs' => 'repeat=_0']
+                      ]])
 
-                        <div class="col-sm-1 pr-0">
-                          <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove"
-                            title="Remove choice">
-                            <i class="tim-icons icon-simple-remove"></i>
-                          </button>
-                        </div>
-                      </div>
+                      {{-- default --}}
+                      @include('forms.switch', ['options' => [
+                      'name' => 'options[values][0][default]',
+                      'value' => $options->default ?? '',
+                      'disabled' => $disabled,
+                      'group' => ['attrs' => 'repeat=_0']
+                      ]])
+
+                      <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" title="Remove choice"
+                        repeat="_0">
+                        <i class="fal fa-trash-alt"></i>
+                      </button>
 
                       @foreach (old('options.values') ?? ($options->values ?? []) as $value)
                         @continue($loop->index == 0)
 
-                        <div class="row" repeat="_{{ $loop->index }}">
+                        {{-- value --}}
+                        @include('forms.text', ['options' => [
+                        'name' => "options[values][$loop->index][value]",
+                        'placeholder' => __('Some Value'),
+                        'value' => $value->value ?? '',
+                        'disabled' => $disabled,
+                        'group' => ['attrs' => "repeat=_$loop->index"]
+                        ]])
 
-                          {{-- value --}}
-                          <div class="col-sm-6 pr-0">
-                            @include('forms.text', ['options' => [
-                            'name' => "options[values][$loop->index][value]",
-                            'placeholder' => __('Some Value'),
-                            'value' => $value->value ?? '',
-                            'disabled' => $disabled
-                            ]])
-                          </div>
+                        {{-- key --}}
+                        @include('forms.text', ['options' => [
+                        'name' => "options[values][$loop->index][key]",
+                        'placeholder' => __('some_value'),
+                        'value' => $value->key ?? '',
+                        'disabled' => $disabled,
+                        'group' => ['attrs' => "repeat=_$loop->index"]
+                        ]])
 
-                          {{-- cost --}}
-                          <div class="col-sm-3 pr-0">
-                            @include('forms.number', ['options' => [
-                            'name' => "options[values][$loop->index][cost]",
-                            'placeholder' => '25.00',
-                            'value' => $value->cost ?? '',
-                            'disabled' => $disabled,
-                            'step' => '.01',
-                            'min' => '0',
-                            'prepend' => '£',
-                            'attrs' => ['disabler' => 'cost']
-                            ]])
-                          </div>
+                        {{-- cost --}}
+                        @include('forms.number', ['options' => [
+                        'name' => "options[values][$loop->index][cost]",
+                        'placeholder' => '25.00',
+                        'value' => $value->cost ?? '',
+                        'disabled' => $disabled,
+                        'step' => '.01',
+                        'min' => '0',
+                        'prepend' => '£',
+                        'attrs' => ['disabler' => 'cost'],
+                        'group' => ['attrs' => "repeat=_$loop->index"]
+                        ]])
 
-                          {{-- default --}}
-                          <div class="col-sm-2 pr-0 has-switch">
-                            @include('forms.switch', ['options' => [
-                            'name' => "options[values][$loop->index][default]",
-                            'value' => $value->default ?? '',
-                            'disabled' => $disabled,
-                            ]])
-                          </div>
+                        {{-- default --}}
+                        @include('forms.switch', ['options' => [
+                        'name' => "options[values][$loop->index][default]",
+                        'value' => $value->default ?? '',
+                        'disabled' => $disabled,
+                        'group' => ['attrs' => "repeat=_$loop->index"]
+                        ]])
 
-                          <div class="col-sm-1 pr-0">
-                            <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove"
-                              title="Remove choice">
-                              <i class="tim-icons icon-simple-remove"></i>
-                            </button>
-                          </div>
-                        </div>
+                        <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" title="Remove choice"
+                          repeat="_{{ $loop->index }}">
+                          <i class="fal fa-trash-alt"></i>
+                        </button>
 
                       @endforeach
+                    </div>
 
-                      <div class="row">
-                        <div class="col text-right">
-                          <button id="add-option" class="btn btn-sm btn-primary">{{ __('Add Option') }}</button>
-                        </div>
+                    <div class="row col-md-12">
+                      <div class="col text-right">
+                        <button id="add-option" class="btn btn-sm btn-primary">{{ __('Add Option') }}</button>
                       </div>
                     </div>
                   </div>
-
                 </div>
 
                 {{-- number --}}
                 <div class="type-wrapper{{ $type == 'number' ? '' : ' d-none' }}" type="number">
-                  @php $disabled = $type == 'number' ? '' : 'disabled'; @endphp
+                  @php $disabled = $type != 'number'; @endphp
 
                   {{-- default --}}
                   <div class="row justify-content-md-center">
@@ -400,7 +393,7 @@
 
                 {{-- boolean --}}
                 <div class="type-wrapper{{ $type == 'checkbox' ? '' : ' d-none' }}" type="checkbox">
-                  @php $disabled = $type == 'checkbox' ? '' : 'disabled'; @endphp
+                  @php $disabled = $type != 'checkbox'; @endphp
 
                   {{-- default --}}
                   <div class="row justify-content-md-center">

@@ -58,8 +58,7 @@ Management')])
                           <td class="td-actions text-right">
                             @can('update', $package)
                               <a href="{{ route('package.edit', $package) }}"
-                                class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                                  class="tim-icons icon-pencil"></i></a>
+                                class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
                             @endcan
                           </td>
                         @endcan

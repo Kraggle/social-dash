@@ -47,12 +47,11 @@ Management')])
 
                               @can('update', $default)
                                 <a href="{{ route('default.edit', $default) }}"
-                                  class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                                    class="tim-icons icon-pencil"></i></a>
+                                  class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
                               @endcan
                               @if (auth()->user()->can('remove', $default))
                                 <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
-                                  <i class="tim-icons icon-simple-remove"></i>
+                                  <i class="fal fa-trash-alt"></i>
                                 </button>
                               @endif
                             </form>

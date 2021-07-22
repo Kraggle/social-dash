@@ -79,4 +79,13 @@ class Team extends Model {
     public function package() {
         return $this->belongsTo(Package::class);
     }
+
+    /**
+     * Get the team admin.
+     *
+     * @return App\Package
+     */
+    public function admin() {
+        return User::where('role_id', 3)->where('team_id', $this->id)->first();
+    }
 }

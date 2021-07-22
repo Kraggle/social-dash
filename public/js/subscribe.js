@@ -35,4 +35,13 @@ $(() => {
 		const id = $('input[name=package_id]:checked').val();
 		$('#payment-form input[name=package_id]').val(id);
 	});
+
+	setInterval(() => {
+		let next = $('.img-rotator img:not(.hidden)').next();
+		$('.img-rotator img').addClass('hidden');
+		if (!next.length) next = $('.img-rotator img').first();
+		next.removeClass('hidden');
+	}, 3000);
+
+
 });

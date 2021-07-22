@@ -2,6 +2,7 @@
 
 namespace App\Policies;
 
+use App\Helpers\AppHelper;
 use App\Team;
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
@@ -57,7 +58,7 @@ class TeamPolicy {
      */
     public function addMember(User $user, Team $team) {
         if ($user->team->id != $team->id) return false;
-        return $user->isTeamAdmin();
+        return $user->isTeamAdmin() || $user->canManageTeam('create');
     }
 
     /**
@@ -68,7 +69,7 @@ class TeamPolicy {
      */
     public function editMember(User $user, Team $team) {
         if ($user->team->id != $team->id) return false;
-        return $user->isTeamAdmin();
+        return $user->isTeamAdmin() || $user->canManageTeam('update');
     }
 
     /**
@@ -79,6 +80,38 @@ class TeamPolicy {
      */
     public function removeMember(User $user, Team $team) {
         if ($user->team->id != $team->id) return false;
-        return $user->isTeamAdmin();
+        return $user->isTeamAdmin() || $user->canManageTeam('delete');
+    }
+
+    /**
+     * Determine whether the user can add team accounts.
+     *
+     * @param  \App\User  $user
+     * @return boolean
+     */
+    public function addAccount(User $user) {
+        return $user->isTeamAdmin() || $user->canManageTeamAccounts('create');
+    }
+
+    /**
+     * Determine whether the user can edit team accounts.
+     *
+     * @param  \App\User  $user
+     * @return boolean
+     */
+    public function editAccount(User $user, Team $team) {
+        if ($user->team->id != $team->id) return false;
+        return $user->isTeamAdmin() || $user->canManageTeamAccounts('update');
+    }
+
+    /**
+     * Determine whether the user can remove team accounts.
+     *
+     * @param  \App\User  $user
+     * @return boolean
+     */
+    public function removeAccount(User $user, Team $team) {
+        if ($user->team->id != $team->id) return false;
+        return $user->isTeamAdmin() || $user->canManageTeamAccounts('delete');
     }
 }

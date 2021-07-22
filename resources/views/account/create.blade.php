@@ -4,14 +4,19 @@
 'titlePage' => __('Account Management')
 ])
 
+@define($plus = in_array(auth()->user()->team->package->id, [1, 3, 4]))
+
+{{-- TODO: Needs a loader when searching for the Instagram account --}}
+
 @section('content')
   <div class="content">
-    <input type="hidden" name="followers" value="150000">
     <div class="container-fluid">
       <form method="post" enctype="multipart/form-data" action="{{ route('account.store') }}" autocomplete="off"
         class="form-horizontal">
         @csrf
         @method('post')
+        <input type="hidden" name="followers" value="150000">
+
         <div class="row">
           <div class="col-md-8">
             <div class="card">
@@ -37,7 +42,6 @@
                 </div>
               </div>
             </div>
-
 
             <div toggle class="card">
               <div class="card-header">
@@ -74,42 +78,46 @@
                     ]])
                   </div>
 
-                  {{-- team_id --}}
-                  <div class="col-sm-11">
-                    <label for="select-team-id">
-                      {{ __('Add to Team') }}
-                    </label>
-                    @include('forms.select', ['options' => [
-                    'name' => 'team_id',
-                    'value' => 1,
-                    'id' => 'select-team-id',
-                    'from' => [
-                    'array' => $teams,
-                    'value' => 'id',
-                    'display' => 'name'
-                    ]
-                    ]])
-                  </div>
+                  @if (auth()->user()->isAdmin())
+                    {{-- team_id --}}
+                    <div class="col-sm-11">
+                      <label for="select-team-id">
+                        {{ __('Add to Team') }}
+                      </label>
+                      @include('forms.select', ['options' => [
+                      'name' => 'team_id',
+                      'value' => 1,
+                      'id' => 'select-team-id',
+                      'from' => [
+                      'array' => $teams,
+                      'value' => 'id',
+                      'display' => 'name'
+                      ]
+                      ]])
+                    </div>
+                  @endif
 
                 </div>
               </div>
             </div>
 
-            <div toggle class="card">
-              <div class="card-header">
-                <h4 class="card-title">{{ __('Pricing Options') }}</h4>
-              </div>
-              <div class="card-body">
-                <div class="row justify-content-md-center">
+            @if ($plus)
+              <div toggle class="card">
+                <div class="card-header">
+                  <h4 class="card-title">{{ __('Pricing Options') }}</h4>
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-md-center">
 
-                  {{-- settings --}}
-                  <div class="col-sm-11">
-                    @include('forms.settings', ['settings' => $settings])
+                    {{-- settings --}}
+                    <div class="col-sm-11">
+                      @include('forms.settings', ['settings' => $settings])
+                    </div>
+
                   </div>
-
                 </div>
               </div>
-            </div>
+            @endif
           </div>
 
           <div class="col-md-4">
@@ -124,9 +132,11 @@
                 <img class="card-img" src="http://social-dash.test/white/img/card-primary.png" alt="Image" title="">
                 <ul class="list-group">
                   <li class="list-group-item"><span update="followers">98k</span> followers</li>
-                  @foreach ($settings as $setting)
-                    @include('forms.message', ['setting' => $setting])
-                  @endforeach
+                  @if ($plus)
+                    @foreach ($settings as $setting)
+                      @include('forms.message', ['setting' => $setting])
+                    @endforeach
+                  @endif
                 </ul>
                 <div class="card-prices">
                   <h3 class="text-on-front">
