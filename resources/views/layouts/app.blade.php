@@ -1,3 +1,11 @@
+@php
+$titlePage = isset($titlePage) ? $titlePage : 'Here';
+$menuParent = isset($menuParent) ? $menuParent : '';
+$activePage = isset($activePage) ? $activePage : '';
+$class = isset($class) ? $class : '';
+$classPage = isset($classPage) ? $classPage : '';
+@endphp
+
 {{-- =========================================================
 * Argon Dashboard PRO - v1.0.0
 =========================================================
@@ -19,7 +27,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('white') }}/img/apple-icon.png">
     <link rel="icon" type="image/png" href="{{ asset('white') }}/img/favicon.png">
 
-    <title>{{ $title ?? '' }} &nbsp;|&nbsp; {{ env('APP_NAME') }}</title>
+    <title>{{ $titlePage }} &nbsp;@&nbsp; {{ env('APP_NAME') ?? 'Social Shadow' }}</title>
 
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,700,800,900" rel="stylesheet" />
@@ -35,82 +43,16 @@
 </head>
 
 <body class="white-content {{ $class ?? '' }}">
-    <style>
-        #ofBar {
-            display: none;
-        }
 
-    </style>
-
-    @if (auth()->check() &&
-    !in_array(
-        request()->route()->getName(),
-        ['welcome', 'page.pricing', 'page.lock', 'page.error'],
-    ))
+    @if (auth()->check() && !in_array(request()->route()->getName(),
+        ['welcome', 'page.pricing', 'page.lock', 'page.error']))
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
         @include('layouts.page_templates.auth')
-        <div class="fixed-plugin">
-            <div class="dropdown show-dropdown">
-                <a href="#" data-toggle="dropdown">
-                    <i class="fa fa-cog fa-2x"> </i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li class="header-title"> Sidebar Background</li>
-                    <li class="adjustments-line">
-                        <a href="javascript:void(0)" class="switch-trigger background-color">
-                            <div class="badge-colors text-center">
-                                <span class="badge filter badge-primary" data-color="primary"></span>
-                                <span class="badge filter badge-info" data-color="blue"></span>
-                                <span class="badge filter badge-success" data-color="green"></span>
-                                <span class="badge filter badge-warning active" data-color="orange"></span>
-                                <span class="badge filter badge-danger" data-color="red"></span>
-                            </div>
-                            <div class="clearfix"></div>
-                        </a>
-                    </li>
-                    <li class="header-title">
-                        Sidebar Mini
-                    </li>
-                    <li class="adjustments-line">
-                        <div class="togglebutton switch-sidebar-mini">
-                            <span class="label-switch">OFF</span>
-                            <input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label=""
-                                data-off-label="" />
-                            <span class="label-switch label-right">ON</span>
-                        </div>
-                    </li>
-                    <li class="button-container mt-4">
-                        <a href="https://white-dashboard-pro-laravel.creative-tim.com/docs/getting-started/laravel-setup.html"
-                            target="_blank" class="btn btn-default btn-block btn-round">
-                            Documentation
-                        </a>
-                    </li>
-                    <li class="header-title">Thank you for 95 shares!</li>
-                    <li class="button-container text-center">
-                        <button id="twitter" class="btn btn-round btn-info"><i class="fab fa-twitter"></i> &middot;
-                            45</button>
-                        <button id="facebook" class="btn btn-round btn-info"><i class="fab fa-facebook-f"></i> &middot;
-                            50</button>
-                        <br>
-                        <br>
-                        <a class="github-button"
-                            href="https://github.com/creativetimofficial/ct-white-dashboard-pro-laravel"
-                            data-icon="octicon-star" data-size="large" data-show-count="true" target="_blank"
-                            aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
     @else
-        @include('layouts.page_templates.guest')
+    @include('layouts.page_templates.guest')
     @endif
-
-
-
-    <!--   Core JS Files   -->
-    <script src="{{ asset('white') }}/js/core/jquery.min.js"></script>
 
     <!--   Core JS Files   -->
     <script src="{{ asset('white') }}/js/core/jquery.min.js"></script>
@@ -159,82 +101,82 @@
     <script src="{{ asset('white') }}/demo/jquery.sharrre.js"></script>
     <script>
         $(document).ready(function() {
-            @if (session('status'))
-                $.notify({
-                icon: "tim-icons icon-check-2",
-                message: "{{ session('status') }}"
-                }, {
-                type: 'success',
-                timer: 3000,
-                placement: {
-                from: 'top',
-                align: 'right'
+            @if(session('status'))
+            $.notify({
+                icon: "tim-icons icon-check-2"
+                , message: "{{ session('status') }}"
+            }, {
+                type: 'success'
+                , timer: 3000
+                , placement: {
+                    from: 'top'
+                    , align: 'right'
                 }
-                });
+            });
             @endif
 
-            @if (session('info'))
-                $.notify({
-                icon: "tim-icons icon-check-2",
-                message: "{{ session('info') }}"
-                }, {
-                type: 'info',
-                timer: 3000,
-                placement: {
-                from: 'top',
-                align: 'right'
+            @if(session('info'))
+            $.notify({
+                icon: "tim-icons icon-check-2"
+                , message: "{{ session('info') }}"
+            }, {
+                type: 'info'
+                , timer: 3000
+                , placement: {
+                    from: 'top'
+                    , align: 'right'
                 }
-                });
+            });
             @endif
 
             $('#facebook').sharrre({
                 share: {
                     facebook: true
-                },
-                enableHover: false,
-                enableTracking: false,
-                enableCounter: false,
-                click: function(api, options) {
+                }
+                , enableHover: false
+                , enableTracking: false
+                , enableCounter: false
+                , click: function(api, options) {
                     api.simulateClick();
                     api.openPopup('facebook');
-                },
-                template: '<i class="fab fa-facebook-f"></i> Facebook',
-                url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
+                }
+                , template: '<i class="fab fa-facebook-f"></i> Facebook'
+                , url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
             });
 
             $('#google').sharrre({
                 share: {
                     googlePlus: true
-                },
-                enableCounter: false,
-                enableHover: false,
-                enableTracking: true,
-                click: function(api, options) {
+                }
+                , enableCounter: false
+                , enableHover: false
+                , enableTracking: true
+                , click: function(api, options) {
                     api.simulateClick();
                     api.openPopup('googlePlus');
-                },
-                template: '<i class="fab fa-google-plus"></i> Google',
-                url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
+                }
+                , template: '<i class="fab fa-google-plus"></i> Google'
+                , url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
             });
 
             $('#twitter').sharrre({
                 share: {
                     twitter: true
-                },
-                enableHover: false,
-                enableTracking: false,
-                enableCounter: false,
-                buttons: {
+                }
+                , enableHover: false
+                , enableTracking: false
+                , enableCounter: false
+                , buttons: {
                     twitter: {
                         via: 'CreativeTim'
                     }
-                },
-                click: function(api, options) {
+                }
+                , click: function(api, options) {
                     api.simulateClick();
                     api.openPopup('twitter');
-                },
-                template: '<i class="fab fa-twitter"></i> Twitter',
-                url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
+                }
+                , template: '<i class="fab fa-twitter"></i> Twitter'
+                , url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
             });
         });
 

@@ -15,17 +15,16 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers;
 
-class ComponentPagesController extends Controller
-{
+class ComponentPagesController extends Controller {
     /**
      * Display the buttons page
      *
      * @return \Illuminate\View\View
      */
-    public function buttons()
-    {
+    public function buttons() {
         return view('pages.components.buttons');
     }
 
@@ -34,8 +33,7 @@ class ComponentPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function grid()
-    {
+    public function grid() {
         return view('pages.components.grid');
     }
 
@@ -44,8 +42,7 @@ class ComponentPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function panels()
-    {
+    public function panels() {
         return view('pages.components.panels');
     }
 
@@ -54,8 +51,7 @@ class ComponentPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function sweetAlert()
-    {
+    public function sweetAlert() {
         return view('pages.components.sweet_alert');
     }
 
@@ -64,8 +60,7 @@ class ComponentPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function notifications()
-    {
+    public function notifications() {
         return view('pages.components.notifications');
     }
 
@@ -74,8 +69,7 @@ class ComponentPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function icons()
-    {
+    public function icons() {
         return view('pages.components.icons');
     }
 
@@ -84,8 +78,7 @@ class ComponentPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function typography()
-    {
+    public function typography() {
         return view('pages.components.typography');
     }
 }

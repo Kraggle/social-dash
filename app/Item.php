@@ -15,14 +15,14 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App;
 
 use App\Tag;
 use App\Category;
 use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
-{
+class Item extends Model {
     /**
      * The attributes that are mass assignable.
      *
@@ -46,8 +46,7 @@ class Item extends Model
      *
      * @return \App\Category
      */
-    public function category()
-    {
+    public function category() {
         return $this->belongsTo(Category::class);
     }
 
@@ -56,8 +55,7 @@ class Item extends Model
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function tags()
-    {
+    public function tags() {
         return $this->belongsToMany(Tag::class);
     }
 
@@ -66,8 +64,7 @@ class Item extends Model
      *
      * @return string
      */
-    public function path()
-    {
+    public function path() {
         return "/storage/{$this->picture}";
     }
 }

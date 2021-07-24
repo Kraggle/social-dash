@@ -15,13 +15,13 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App;
 
 use App\Item;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
-{
+class Category extends Model {
     /**
      * The attributes that are mass assignable.
      *
@@ -34,8 +34,7 @@ class Category extends Model
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function items()
-    {
+    public function items() {
         return $this->hasMany(Item::class);
     }
 }

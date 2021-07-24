@@ -10,10 +10,10 @@
 -->
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-                {{ __('AA') }}
+            <a href="#" class="simple-text logo-mini">
+                {{ __('SS') }}
             </a>
-            <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+            <a href="#" class="simple-text logo-normal">
                 {{ __('Social Shadow') }}
             </a>
         </div>
@@ -129,6 +129,7 @@
 
 
 
+<<<<<<< HEAD
 
             {{-- <li class="{{ $menuParent == 'laravel' ? ' active' : '' }}">
                 <a data-toggle="collapse" href="#laravelExamples">
@@ -141,38 +142,51 @@
                 <div class="collapse {{ $menuParent == 'laravel' ? ' show' : '' }}"
                     id="laravelExamples">
                     <ul class="nav">
+=======
+            {{--
+             <li class="{{ $menuParent == 'laravel' ? ' active' : '' }}">
+            <a data-toggle="collapse" href="#laravelExamples">
+                <i class="fab fa-laravel"></i>
+                <p>
+                    {{ __('Laravel Examples') }}
+                    <b class="caret"></b>
+                </p>
+            </a>
+            <div class="collapse {{ $menuParent == 'laravel' ? ' show' : '' }}" id="laravelExamples">
+                <ul class="nav">
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
 
-                        <li class="{{ $activePage == 'category-management' ? ' active' : '' }}">
-                                <a href="{{ route('category.index') }}">
-                                    <span class="sidebar-mini-icon">CM</span>
-                                    <span class="sidebar-normal"> {{ __('Category Management') }} </span>
-                                </a>
-                            </li>
-                        @can('manage-items', App\User::class)
-                            <li class="{{ $activePage == 'tag-management' ? ' active' : '' }}">
-                                <a href="{{ route('tag.index') }}">
-                                    <span class="sidebar-mini-icon">TM</span>
-                                    <span class="sidebar-normal"> {{ __('Tag Management') }} </span>
-                                </a>
-                            </li>
-                        @endcan
-                        @can('manage-items', App\User::class)
-                            <li class="{{ $activePage == 'item-management' ? ' active' : '' }}">
-                                <a href="{{ route('item.index') }}">
-                                    <span class="sidebar-mini-icon">IM</span>
-                                    <span class="sidebar-normal"> {{ __('Item Management') }} </span>
-                                </a>
-                            </li>
-                        @else
-                            <li class="{{ $activePage == 'item-management' ? ' active' : '' }}">
-                                <a href="{{ route('item.index') }}">
-                                    <span class="sidebar-mini-icon"> IM </span>
-                                    <span class="sidebar-normal"> {{ __('Items') }} </span>
-                                </a>
-                            </li>
-                        @endcan
-                    </ul>
-                </div>
+                    <li class="{{ $activePage == 'category-management' ? ' active' : '' }}">
+                        <a href="{{ route('category.index') }}">
+                            <span class="sidebar-mini-icon">CM</span>
+                            <span class="sidebar-normal"> {{ __('Category Management') }} </span>
+                        </a>
+                    </li>
+                    @can('manage-items', App\User::class)
+                    <li class="{{ $activePage == 'tag-management' ? ' active' : '' }}">
+                        <a href="{{ route('tag.index') }}">
+                            <span class="sidebar-mini-icon">TM</span>
+                            <span class="sidebar-normal"> {{ __('Tag Management') }} </span>
+                        </a>
+                    </li>
+                    @endcan
+                    @can('manage-items', App\User::class)
+                    <li class="{{ $activePage == 'item-management' ? ' active' : '' }}">
+                        <a href="{{ route('item.index') }}">
+                            <span class="sidebar-mini-icon">IM</span>
+                            <span class="sidebar-normal"> {{ __('Item Management') }} </span>
+                        </a>
+                    </li>
+                    @else
+                    <li class="{{ $activePage == 'item-management' ? ' active' : '' }}">
+                        <a href="{{ route('item.index') }}">
+                            <span class="sidebar-mini-icon"> IM </span>
+                            <span class="sidebar-normal"> {{ __('Items') }} </span>
+                        </a>
+                    </li>
+                    @endcan
+                </ul>
+            </div>
             </li>
 
             <li class="{{ $menuParent == 'pages' ? 'active' : '' }}">
@@ -218,8 +232,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="{{ $menuParent == 'compoments' ? 'active' : '' }}"
-                {{ $menuParent == 'components' ? 'aria-expanded="true"' : '' }}>
+            <li class="{{ $menuParent == 'compoments' ? 'active' : '' }}" {{ $menuParent == 'components' ? 'aria-expanded="true"' : '' }}>
                 <a data-toggle="collapse" href="#componentsExamples">
                     <i class="tim-icons icon-molecule-40"></i>
                     <p>
@@ -293,8 +306,7 @@
                 </div>
             </li>
             <li class="{{ $menuParent == 'forms' ? ' active' : '' }}">
-                <a data-toggle="collapse" href="#formsExamples"
-                    {{ $menuParent == 'forms' ? 'aria-expanded="true"' : '' }}>
+                <a data-toggle="collapse" href="#formsExamples" {{ $menuParent == 'forms' ? 'aria-expanded="true"' : '' }}>
                     <i class="tim-icons icon-notes"></i>
                     <p>
                         {{ __('Forms') }}
@@ -331,8 +343,7 @@
                 </div>
             </li>
             <li class="{{ $menuParent == 'tables' ? 'active' : '' }}">
-                <a data-toggle="collapse" href="#tablesExamples"
-                    {{ $menuParent == 'tables' ? 'aria-expanded="true"' : '' }}>
+                <a data-toggle="collapse" href="#tablesExamples" {{ $menuParent == 'tables' ? 'aria-expanded="true"' : '' }}>
                     <i class="tim-icons icon-puzzle-10"></i>
                     <p>
                         {{ __('Tables') }}
@@ -363,8 +374,7 @@
                 </div>
             </li>
             <li class="{{ $menuParent == 'maps' ? 'active' : '' }}">
-                <a data-toggle="collapse" href="#mapsExamples"
-                    {{ $menuParent == 'maps' ? 'aria-expanded="true"' : '' }}>
+                <a data-toggle="collapse" href="#mapsExamples" {{ $menuParent == 'maps' ? 'aria-expanded="true"' : '' }}>
                     <i class="tim-icons icon-pin"></i>
                     <p>
                         {{ __('Maps') }}

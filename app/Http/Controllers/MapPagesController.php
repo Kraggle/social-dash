@@ -15,17 +15,16 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers;
 
-class MapPagesController extends Controller
-{
+class MapPagesController extends Controller {
     /**
      * Display the google maps page
      *
      * @return \Illuminate\View\View
      */
-    public function googleMaps()
-    {
+    public function googleMaps() {
         return view('pages.maps.maps_google');
     }
 
@@ -34,8 +33,7 @@ class MapPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function fullscreenMaps()
-    {
+    public function fullscreenMaps() {
         return view('pages.maps.maps_fullscreen');
     }
 
@@ -44,8 +42,7 @@ class MapPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function vectorMaps()
-    {
+    public function vectorMaps() {
         return view('pages.maps.maps_vector');
     }
 }

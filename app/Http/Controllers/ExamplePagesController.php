@@ -15,17 +15,16 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers;
 
-class ExamplePagesController extends Controller
-{
+class ExamplePagesController extends Controller {
     /**
      * Display the pricing page
      *
      * @return \Illuminate\View\View
      */
-    public function pricing()
-    {
+    public function pricing() {
         return view('pages.example_pages.pricing');
     }
 
@@ -34,8 +33,7 @@ class ExamplePagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function lock()
-    {
+    public function lock() {
         return view('pages.example_pages.lock');
     }
 
@@ -44,8 +42,7 @@ class ExamplePagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function rtlSupport()
-    {
+    public function rtlSupport() {
         return view('pages.example_pages.language');
     }
 
@@ -54,8 +51,7 @@ class ExamplePagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function timeline()
-    {
+    public function timeline() {
         return view('pages.example_pages.timeline');
     }
 
@@ -64,8 +60,7 @@ class ExamplePagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function widgets()
-    {
+    public function widgets() {
         return view('pages.widgets');
     }
 
@@ -74,8 +69,7 @@ class ExamplePagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function charts()
-    {
+    public function charts() {
         return view('pages.charts');
     }
 
@@ -84,8 +78,7 @@ class ExamplePagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function calendar()
-    {
+    public function calendar() {
         return view('pages.calendar');
     }
 }

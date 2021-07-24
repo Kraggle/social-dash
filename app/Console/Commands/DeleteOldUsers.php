@@ -9,8 +9,7 @@ use App\User;
 use App\Category;
 use Illuminate\Console\Command;
 
-class DeleteOldUsers extends Command
-{
+class DeleteOldUsers extends Command {
     /**
      * The name and signature of the console command.
      *
@@ -30,8 +29,7 @@ class DeleteOldUsers extends Command
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
     }
 
@@ -40,8 +38,7 @@ class DeleteOldUsers extends Command
      *
      * @return mixed
      */
-    public function handle()
-    {
+    public function handle() {
         $date = now()->subDays(3);
 
         User::whereNotIn('id', [1, 2, 3])->where('created_at', '<=', $date)->delete();

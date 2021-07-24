@@ -5,18 +5,16 @@ namespace App\Observers;
 use App\Item;
 use Illuminate\Support\Facades\File;
 
-class ItemObserver
-{
+class ItemObserver {
     /**
      * Handle the User "deleting" event.
      *
      * @param  \App\Item  $item
      * @return void
      */
-    public function deleting(Item  $item)
-    {
+    public function deleting(Item  $item) {
         File::delete(storage_path("/app/public/{$item->picture}"));
-        
+
         $item->tags()->detach();
     }
 
@@ -26,8 +24,7 @@ class ItemObserver
      * @param  \App\Item  $item
      * @return void
      */
-    public function updating(Item $item)
-    {
+    public function updating(Item $item) {
         if ($item->picture != $item->getOriginal('picture')) {
             File::delete(storage_path("/app/public/{$item->getOriginal('picture')}"));
         }

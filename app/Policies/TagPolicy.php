@@ -6,8 +6,7 @@ use App\User;
 use App\Tag;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class TagPolicy
-{
+class TagPolicy {
     use HandlesAuthorization;
 
     /**
@@ -16,8 +15,7 @@ class TagPolicy
      * @param  \App\User  $user
      * @return boolean
      */
-    public function viewAny(User $user)
-    {
+    public function viewAny(User $user) {
         return $user->isAdmin() || $user->isCreator();
     }
 
@@ -27,8 +25,7 @@ class TagPolicy
      * @param  \App\User  $user
      * @return boolean
      */
-    public function create(User $user)
-    {
+    public function create(User $user) {
         return $user->isAdmin() || $user->isCreator();
     }
 
@@ -39,11 +36,7 @@ class TagPolicy
      * @param  \App\Tag  $tag
      * @return boolean
      */
-    public function update(User $user, Tag $tag)
-    {
-        if (env('IS_DEMO')){
-            return ($user->isAdmin() || $user->isCreator()) && !in_array($tag->id, [1]);
-        }
+    public function update(User $user, Tag $tag) {
         return ($user->isAdmin() || $user->isCreator());
     }
 
@@ -54,11 +47,7 @@ class TagPolicy
      * @param  \App\Tag  $tag
      * @return boolean
      */
-    public function delete(User $user, Tag $tag)
-    {
-        if (env('IS_DEMO')){
-            return ($user->isAdmin() || $user->isCreator()) && !in_array($tag->id, [1, 2]);
-        }
+    public function delete(User $user, Tag $tag) {
         return ($user->isAdmin() || $user->isCreator());
     }
 }

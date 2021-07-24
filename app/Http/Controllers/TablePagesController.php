@@ -15,17 +15,16 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers;
 
-class TablePagesController extends Controller
-{
+class TablePagesController extends Controller {
     /**
      * Display the regular tables page
      *
      * @return \Illuminate\View\View
      */
-    public function regularTables()
-    {
+    public function regularTables() {
         return view('pages.tables.tables_regular');
     }
 
@@ -34,8 +33,7 @@ class TablePagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function extendedTables()
-    {
+    public function extendedTables() {
         return view('pages.tables.tables_extended');
     }
 
@@ -44,8 +42,7 @@ class TablePagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function datatableTables()
-    {
+    public function datatableTables() {
         return view('pages.tables.tables_datatable');
     }
 }

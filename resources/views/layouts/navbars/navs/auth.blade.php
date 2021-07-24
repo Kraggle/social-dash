@@ -3,10 +3,8 @@
     <div class="container-fluid">
         <div class="navbar-wrapper">
 
-
             <div class="navbar-minimize d-inline">
-                <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip"
-                    data-original-title="Sidebar toggle" data-placement="right">
+                <button class="minimize-sidebar btn btn-link btn-just-icon position-relative" rel="tooltip" data-original-title="Sidebar toggle" data-placement="right" style="top:-1px">
                     <i class="tim-icons icon-align-center visible-on-sidebar-regular"></i>
                     <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini"></i>
                 </button>
@@ -19,15 +17,21 @@
                 </button>
             </div>
             <a class="navbar-brand" href="javascript:void(0)">{{ $titlePage }}</a>
-            <select class="selectpicker" data-size="7" data-style="btn btn-primary" title="Single Select">
-                <option disabled selected>Instagram Accounts</option>
-                <option value="2">@makemoneyfromhomeuk</option>
-                <option value="3">@mattymyers</option>
-                <option value="4">Add/Remove Accounts +-</option>
-              </select>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-            aria-expanded="false" aria-label="Toggle navigation">
+
+        {{-- TODO:: Change this to not show on certain pages --}}
+        {{-- TODO:: This also needs to automatically populate with allowed accounts --}}
+        <div class="col-3 position-relative" style="top:1px">
+            <select class="selectpicker" data-size="7" data-style="btn btn-primary" title="Single Select">
+                <option value="1" selected>makemoneyfromhomeuk</option>
+                <option value="2">mattymyers</option>
+            </select>
+        </div>
+        @can('manage-accounts')
+            <span><a class="fw-bold" href="{{ route('account.index') }}">{{ __('Manage Accounts') }}</a></span>
+        @endcan
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -45,8 +49,7 @@
           <a class="btn btn-info mt-2 text-white" target="_blank" href="https://www.creative-tim.com/product/white-dashboard-laravel"><i class="tim-icons icon-cloud-download-93 text-white"></i> Get free demo</a>
         </li> --}}
                 <li class="search-bar input-group">
-                    <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i
-                            class="tim-icons icon-zoom-split"></i>
+                    <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
                         <span class="d-lg-none d-md-block">{{ __('Search') }}</span>
                     </button>
                 </li>
@@ -60,20 +63,16 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
                         <li class="nav-link">
-                            <a href="#"
-                                class="nav-item dropdown-item">{{ __('Mike John responded to your email') }}</a>
+                            <a href="#" class="nav-item dropdown-item">{{ __('Mike John responded to your email') }}</a>
                         </li>
                         <li class="nav-link">
-                            <a href="javascript:void(0)"
-                                class="nav-item dropdown-item">{{ __('You have 5 more tasks') }}</a>
+                            <a href="javascript:void(0)" class="nav-item dropdown-item">{{ __('You have 5 more tasks') }}</a>
                         </li>
                         <li class="nav-link">
-                            <a href="javascript:void(0)"
-                                class="nav-item dropdown-item">{{ __('Your friend Michael is in town') }}</a>
+                            <a href="javascript:void(0)" class="nav-item dropdown-item">{{ __('Your friend Michael is in town') }}</a>
                         </li>
                         <li class="nav-link">
-                            <a href="javascript:void(0)"
-                                class="nav-item dropdown-item">{{ __('Another notification') }}</a>
+                            <a href="javascript:void(0)" class="nav-item dropdown-item">{{ __('Another notification') }}</a>
                         </li>
                         <li class="nav-link">
                             <a href="javascript:void(0)" class="nav-item dropdown-item">{{ __('Another one') }}</a>
@@ -87,19 +86,16 @@
                         </div>
                         <b class="caret d-none d-lg-block d-xl-block"></b>
                         <p class="d-lg-none">
-                            <a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
                         </p>
                     </a>
                     <ul class="dropdown-menu dropdown-navbar">
                         <li class="nav-link">
-                            <a href="{{ route('profile.edit') }}"
-                                class="nav-item dropdown-item">{{ __('Profile') }}</a>
+                            <a href="{{ route('profile.edit') }}" class="nav-item dropdown-item">{{ __('Profile') }}</a>
                         </li>
                         <li class="dropdown-divider"></li>
                         <li class="nav-link">
-                            <a href="{{ route('logout') }}" class="nav-item dropdown-item"
-                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
+                            <a href="{{ route('logout') }}" class="nav-item dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
                         </li>
                     </ul>
                 </li>
@@ -108,8 +104,7 @@
         </div>
     </div>
 </nav>
-<div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal"
-    aria-hidden="true">
+<div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

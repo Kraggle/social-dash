@@ -6,15 +6,13 @@ use App\Tag;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class TagRequest extends FormRequest
-{
+class TagRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    public function authorize()
-    {
+    public function authorize() {
         return auth()->check();
     }
 
@@ -23,8 +21,7 @@ class TagRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             'name' => [
                 'required', 'min:3', Rule::unique((new Tag)->getTable())->ignore($this->route()->tag->id ?? null)

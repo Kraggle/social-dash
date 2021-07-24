@@ -5,6 +5,7 @@
 ])
 
 @section('content')
+<<<<<<< HEAD
     <div class="content">
         <div class="row">
             <div class="col-12">
@@ -14,8 +15,44 @@
                             <div class="col-sm-6 text-left">
                                 <h5 class="card-category">Account Followers</h5>
                                 <h2 class="card-title">Followers</h2>
+=======
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-chart">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-sm-6 text-left">
+                            <h5 class="card-category">Account Followers</h5>
+                            <h2 class="card-title">Followers</h2>
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
 
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                                <label class="btn btn-sm btn-warning btn-simple active" id="0">
+                                    <input type="radio" name="options" checked>
+                                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Daily</span>
+                                    <span class="d-block d-sm-none">
+                                        <i class="tim-icons icon-single-02"></i>
+                                    </span>
+                                </label>
+                                <label class="btn btn-sm btn-warning btn-simple" id="1">
+                                    <input type="radio" class="d-none d-sm-none" name="options">
+                                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Weekly</span>
+                                    <span class="d-block d-sm-none">
+                                        <i class="tim-icons icon-gift-2"></i>
+                                    </span>
+                                </label>
+                                <label class="btn btn-sm btn-warning btn-simple" id="2">
+                                    <input type="radio" class="d-none" name="options">
+                                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Monthly</span>
+                                    <span class="d-block d-sm-none">
+                                        <i class="tim-icons icon-tap-02"></i>
+                                    </span>
+                                </label>
                             </div>
+<<<<<<< HEAD
                             <div class="col-sm-6">
                                 <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
                                     <label class="btn btn-sm btn-warning btn-simple active" id="0">
@@ -52,16 +89,32 @@
                                 <div class="col-sm-4 float-right">
                                     <input type="text" class="form-control -block datepicker" value="05/05/2021">
                                 </div>
+=======
+                            <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                                <label class="btn btn-sm btn-warning btn-simple" id="3">
+                                    <input type="radio" class="d-none" name="options">
+                                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Posts</span>
+                                    <span class="d-block d-sm-none">
+                                        <i class="tim-icons icon-tap-02"></i>
+                                    </span>
+                                </label>
                             </div>
+                            <div class="col-sm-4 float-right">
+                                <input type="text" class="form-control -block datepicker" value="05/05/2021">
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
+                            </div>
+                        </div>
 
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="chart-area">
-                            <canvas id="chartBig1"></canvas>
-                        </div>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="chartBig1"></canvas>
+                    </div>
+                </div>
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
             </div>
         </div>
         <div class="content">
@@ -104,9 +157,13 @@
             <div class="content">
                 <div class="col-md-8 ml-auto mr-auto">
                     <h2 class="text-center">Follower Activity</h2>
+<<<<<<< HEAD
                     <p class="text-center">Search and analyse through your data to compare and analyse the what/why and hows
                         of your Instagram engagement. We allow you to sort and search through everything to give you the
                         best understanding of your data.
+=======
+                    <p class="text-center">Search and analyse through your data to compare and analyse the what/why and hows of your Instagram engagement. We allow you to sort and search through everything to give you the best understanding of your data.
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
                         <br><a href="https://social-shadow.com/" target="_blank">How To Benefit From This?</a>
                     </p>
                 </div>
@@ -120,6 +177,7 @@
                                 <table id="datatable" class="table table-striped">
                                     <thead>
                                         <tr>
+<<<<<<< HEAD
                                             <th
                                                 title="This is the profile image of the user who has interacted with your profile.">
                                                 Profile</th>
@@ -142,6 +200,17 @@
                                             <th
                                                 title="We show you here whether this user has either followed your account or un-followed your account.">
                                                 Action</th>
+=======
+                                            <th>Profile</th>
+                                            <th>Instagram UN</th>
+                                            <th>Followers</th>
+                                            <th>Posts</th>
+                                            <th>Likes</th>
+                                            <th>Comments</th>
+                                            <th>Avg Likes</th>
+                                            <th>Avg Comments</th>
+                                            <th>Action</th>
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
                                             <th class="sorting_desc_disabled sorting_asc_disabled text-right">Actions</th>
                                         </tr>
                                     </thead>
@@ -155,6 +224,7 @@
                                             <td>@mattymyers</td>
                                             <td>1,287</td>
                                             <td>196</td>
+<<<<<<< HEAD
                                             <td>8%</td>
                                             <td><a href="http://localhost:8000/likes">36</a></td>
                                             <td><a href="http://localhost:8000/comments">33</a></td>
@@ -170,6 +240,17 @@
                                                 <a href="javascript:void(0)"
                                                     class="btn btn-link btn-danger btn-icon btn-sm remove"><i
                                                         class="tim-icons icon-simple-remove"></i></a>
+=======
+                                            <td>19,600</td>
+                                            <td>392</td>
+                                            <td>1,500</td>
+                                            <td>2</td>
+                                            <td>Followed</th>
+                                            <td class="text-right">
+                                                <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="tim-icons icon-heart-2"></i></a>
+                                                <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="tim-icons icon-pencil"></i></a>
+                                                <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="tim-icons icon-simple-remove"></i></a>
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
                                             </td>
                                         </tr>
                                         <tr>
@@ -181,6 +262,7 @@
                                             <td>@corybeevers</td>
                                             <td>129,362</td>
                                             <td>2,500</td>
+<<<<<<< HEAD
                                             <td>6%</td>
                                             <td><a href="http://localhost:8000/likes">28</a></td>
                                             <td><a href="http://localhost:8000/comments">29</a></td>
@@ -196,6 +278,17 @@
                                                 <a href="javascript:void(0)"
                                                     class="btn btn-link btn-danger btn-icon btn-sm remove"><i
                                                         class="tim-icons icon-simple-remove"></i></a>
+=======
+                                            <td>25,000,000</td>
+                                            <td>250,000</td>
+                                            <td>10,000</td>
+                                            <td>100</td< /td>
+                                            <td>Followed</th>
+                                            <td class="text-right">
+                                                <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="tim-icons icon-heart-2"></i></a>
+                                                <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="tim-icons icon-pencil"></i></a>
+                                                <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="tim-icons icon-simple-remove"></i></a>
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
                                             </td>
                                         </tr>
                                         <tr>
@@ -207,6 +300,7 @@
                                             <td>@HaydenKibble</td>
                                             <td>127</td>
                                             <td>9</td>
+<<<<<<< HEAD
                                             <td>7%</td>
                                             <td><a href="http://localhost:8000/likes">18</a></td>
                                             <td><a href="http://localhost:8000/comments">18</a></td>
@@ -222,6 +316,17 @@
                                                 <a href="javascript:void(0)"
                                                     class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
                                                         class="tim-icons icon-simple-remove"></i></a>
+=======
+                                            <td>90</td>
+                                            <td>18</td>
+                                            <td>10</td>
+                                            <td>2</td>
+                                            <td>Followed</th>
+                                            <td class="text-right">
+                                                <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i class="tim-icons icon-heart-2"></i></a>
+                                                <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i class="tim-icons icon-pencil"></i></a>
+                                                <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i class="tim-icons icon-simple-remove"></i></a>
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
                                             </td>
                                         </tr>
                                         <tr>
@@ -233,6 +338,7 @@
                                             <td>@kraggle</td>
                                             <td>491</td>
                                             <td>60</td>
+<<<<<<< HEAD
                                             <td>5.5%</td>
                                             <td><a href="http://localhost:8000/likes">23</a></td>
                                             <td><a href="http://localhost:8000/comments">6</a></td>
@@ -248,6 +354,17 @@
                                                 <a href="javascript:void(0)"
                                                     class="btn btn-link btn-danger btn-icon btn-sm remove"><i
                                                         class="tim-icons icon-simple-remove"></i></a>
+=======
+                                            <td>7,200</td>
+                                            <td>600</td>
+                                            <td>120</td>
+                                            <td>10</td>
+                                            <td>Un-Followed</th>
+                                            <td class="text-right">
+                                                <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="tim-icons icon-heart-2"></i></a>
+                                                <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="tim-icons icon-pencil"></i></a>
+                                                <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="tim-icons icon-simple-remove"></i></a>
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
                                             </td>
 
                                         </tr>
@@ -278,12 +395,17 @@
 
         </div>
     </div>
+<<<<<<< HEAD
     </div>
+=======
+</div>
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
 
 @endsection
 
 
 @push('js')
+<<<<<<< HEAD
     <script>
         $(document).ready(function() {
             // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
@@ -297,10 +419,26 @@
             demo.initDashboardPageCharts();
             demo.initVectorMap();
         });
+=======
+<script>
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+        demo.initChartPageCharts();
+    });
 
-    </script>
+</script>
+<script>
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+        demo.initVectorMap();
+    });
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
+
+</script>
 
 
+<<<<<<< HEAD
     <script>
         $(document).ready(function() {
             $('#datatable').DataTable({
@@ -359,5 +497,65 @@
         });
 
     </script>
+=======
+<script>
+    $(document).ready(function() {
+        $('#datatable').DataTable({
+            "pagingType": "full_numbers"
+            , "lengthMenu": [
+                [10, 25, 50, -1]
+                , [10, 25, 50, "All"]
+            ]
+            , responsive: true
+            , language: {
+                search: "_INPUT_"
+                , searchPlaceholder: "Search records"
+            , }
+
+        });
+
+        var table = $('#datatable').DataTable();
+
+        // Edit record
+        table.on('click', '.edit', function() {
+            $tr = $(this).closest('tr');
+
+            var data = table.row($tr).data();
+            alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
+        });
+
+        // Delete a record
+        table.on('click', '.remove', function(e) {
+            $tr = $(this).closest('tr');
+            table.row($tr).remove().draw();
+            e.preventDefault();
+        });
+
+        //Like record
+        table.on('click', '.like', function() {
+            alert('You clicked on Like button');
+        });
+    });
+
+</script>
+<script>
+    $(document).ready(function() {
+        // initialise Datetimepicker and Sliders
+        whiteDashboard.initDateTimePicker();
+        if ($('.slider').length != 0) {
+            demo.initSliders();
+        }
+    });
+
+</script>
+
+<script>
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+        demo.initChartPageCharts();
+    });
+
+</script>
+>>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
 
 @endpush

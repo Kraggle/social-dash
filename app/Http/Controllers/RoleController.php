@@ -15,16 +15,15 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers;
 
 use App\Role;
 use App\User;
 use App\Http\Requests\RoleRequest;
 
-class RoleController extends Controller
-{
-    public function __construct()
-    {
+class RoleController extends Controller {
+    public function __construct() {
         $this->authorizeResource(Role::class);
     }
 
@@ -34,8 +33,7 @@ class RoleController extends Controller
      * @param \App\Role  $model
      * @return \Illuminate\View\View
      */
-    public function index(Role $model)
-    {
+    public function index(Role $model) {
         $this->authorize('manage-users', User::class);
 
         return view('roles.index', ['roles' => $model->all()]);
@@ -46,8 +44,7 @@ class RoleController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create()
-    {
+    public function create() {
         return view('roles.create');
     }
 
@@ -58,8 +55,7 @@ class RoleController extends Controller
      * @param  \App\Role  $model
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(RoleRequest $request, Role $model)
-    {
+    public function store(RoleRequest $request, Role $model) {
         $model->create($request->all());
 
         return redirect()->route('role.index')->withStatus(__('Role successfully created.'));
@@ -71,8 +67,7 @@ class RoleController extends Controller
      * @param  \App\Role  $role
      * @return \Illuminate\View\View
      */
-    public function edit(Role $role)
-    {
+    public function edit(Role $role) {
         return view('roles.edit', compact('role'));
     }
 
@@ -83,8 +78,7 @@ class RoleController extends Controller
      * @param  \App\Role  $role
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(RoleRequest $request, Role $role)
-    {
+    public function update(RoleRequest $request, Role $role) {
         $role->update($request->all());
 
         return redirect()->route('role.index')->withStatus(__('Role successfully updated.'));

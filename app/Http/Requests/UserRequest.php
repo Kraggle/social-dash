@@ -7,15 +7,13 @@ use App\User;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class UserRequest extends FormRequest
-{
+class UserRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    public function authorize()
-    {
+    public function authorize() {
         return auth()->check();
     }
 
@@ -24,8 +22,7 @@ class UserRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             'name' => [
                 'required', 'min:3'
@@ -34,7 +31,7 @@ class UserRequest extends FormRequest
                 'required', 'email', Rule::unique((new User)->getTable())->ignore($this->route()->user->id ?? null)
             ],
             'role_id' => [
-                'required', 'exists:'.(new Role)->getTable().',id'
+                'required', 'exists:' . (new Role)->getTable() . ',id'
             ],
             'password' => [
                 $this->route()->user ? 'required_with:password_confirmation' : 'required', 'nullable', 'confirmed', 'min:6'
@@ -47,8 +44,7 @@ class UserRequest extends FormRequest
      *
      * @return array
      */
-    public function attributes()
-    {
+    public function attributes() {
         return [
             'role_id' => 'role',
         ];

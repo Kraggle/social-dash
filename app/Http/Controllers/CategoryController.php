@@ -15,16 +15,15 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 namespace App\Http\Controllers;
 
 use App\User;
 use App\Category;
 use App\Http\Requests\CategoryRequest;
 
-class CategoryController extends Controller
-{
-    public function __construct()
-    {
+class CategoryController extends Controller {
+    public function __construct() {
         $this->authorizeResource(Category::class);
     }
 
@@ -34,8 +33,7 @@ class CategoryController extends Controller
      * @param \App\Category  $model
      * @return \Illuminate\View\View
      */
-    public function index(Category $model)
-    {
+    public function index(Category $model) {
         $this->authorize('manage-items', User::class);
 
         return view('categories.index', ['categories' => $model->all()]);
@@ -46,8 +44,7 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create()
-    {
+    public function create() {
         return view('categories.create');
     }
 
@@ -58,8 +55,7 @@ class CategoryController extends Controller
      * @param  \App\Category  $model
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(CategoryRequest $request, Category $model)
-    {
+    public function store(CategoryRequest $request, Category $model) {
         $model->create($request->all());
 
         return redirect()->route('category.index')->withStatus(__('Category successfully created.'));
@@ -71,8 +67,7 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\View\View
      */
-    public function edit(Category $category)
-    {
+    public function edit(Category $category) {
         return view('categories.edit', compact('category'));
     }
 
@@ -83,8 +78,7 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(CategoryRequest $request, Category $category)
-    {
+    public function update(CategoryRequest $request, Category $category) {
         $category->update($request->all());
 
         return redirect()->route('category.index')->withStatus(__('Category successfully updated.'));
@@ -96,8 +90,7 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Category $category)
-    {
+    public function destroy(Category $category) {
         if (!$category->items->isEmpty()) {
             return redirect()->route('category.index')->withErrors(__('This category has items attached and can\'t be deleted.'));
         }

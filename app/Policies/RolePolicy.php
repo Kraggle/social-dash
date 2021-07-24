@@ -6,8 +6,7 @@ use App\User;
 use App\Role;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class RolePolicy
-{
+class RolePolicy {
     use HandlesAuthorization;
 
     /**
@@ -16,8 +15,7 @@ class RolePolicy
      * @param  \App\User  $user
      * @return boolean
      */
-    public function viewAny(User $user)
-    {
+    public function viewAny(User $user) {
         return $user->isAdmin();
     }
 
@@ -27,8 +25,7 @@ class RolePolicy
      * @param  \App\User  $user
      * @return boolean
      */
-    public function create(User $user)
-    {
+    public function create(User $user) {
         return $user->isAdmin();
     }
 
@@ -39,11 +36,7 @@ class RolePolicy
      * @param  \App\Role  $role
      * @return boolean
      */
-    public function update(User $user, Role $role)
-    {
-        if (env('IS_DEMO')){
-            return $user->isAdmin() && !in_array($role->id, [1, 2, 3]);
-        }
+    public function update(User $user, Role $role) {
         return $user->isAdmin();
     }
 }
