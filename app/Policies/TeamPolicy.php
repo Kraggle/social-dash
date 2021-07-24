@@ -3,8 +3,8 @@
 namespace App\Policies;
 
 use App\Helpers\AppHelper;
-use App\Team;
-use App\User;
+use App\Models\Team;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class TeamPolicy {
@@ -13,7 +13,7 @@ class TeamPolicy {
     /**
      * Determine whether the user can see the teams.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function viewAny(User $user) {
@@ -23,7 +23,7 @@ class TeamPolicy {
     /**
      * Determine whether the user can create teams.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function create(User $user) {
@@ -33,7 +33,7 @@ class TeamPolicy {
     /**
      * Determine whether the user can update the team.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function update(User $user) {
@@ -43,7 +43,7 @@ class TeamPolicy {
     /**
      * Determine whether the user can remove the team.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function remove(User $user) {
@@ -53,7 +53,7 @@ class TeamPolicy {
     /**
      * Determine whether the user can add team members.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function addMember(User $user, Team $team) {
@@ -64,7 +64,7 @@ class TeamPolicy {
     /**
      * Determine whether the user can edit team members.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function editMember(User $user, Team $team) {
@@ -75,7 +75,7 @@ class TeamPolicy {
     /**
      * Determine whether the user can remove team members.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function removeMember(User $user, Team $team) {
@@ -86,32 +86,32 @@ class TeamPolicy {
     /**
      * Determine whether the user can add team accounts.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function addAccount(User $user) {
-        return $user->isTeamAdmin() || $user->canManageTeamAccounts('create');
+        return $user->isAdmin() || $user->isTeamAdmin() || $user->canManageTeamAccounts('create');
     }
 
     /**
      * Determine whether the user can edit team accounts.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function editAccount(User $user, Team $team) {
         if ($user->team->id != $team->id) return false;
-        return $user->isTeamAdmin() || $user->canManageTeamAccounts('update');
+        return $user->isAdmin() || $user->isTeamAdmin() || $user->canManageTeamAccounts('update');
     }
 
     /**
      * Determine whether the user can remove team accounts.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function removeAccount(User $user, Team $team) {
         if ($user->team->id != $team->id) return false;
-        return $user->isTeamAdmin() || $user->canManageTeamAccounts('delete');
+        return $user->isAdmin() || $user->isTeamAdmin() || $user->canManageTeamAccounts('delete');
     }
 }

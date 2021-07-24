@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,7 +29,7 @@ class Setting extends Model {
     /**
      * Get the account for the setting.
      *
-     * @return \App\Team
+     * @return \App\Models\Team
      */
     public function account() {
         return $this->belongsTo(Account::class);
@@ -38,7 +38,7 @@ class Setting extends Model {
     /**
      * Get the team for the setting.
      *
-     * @return \App\Team
+     * @return \App\Models\Team
      */
     public function team() {
         return $this->belongsTo(Team::class);
@@ -47,7 +47,7 @@ class Setting extends Model {
     /**
      * Get the post for the setting.
      *
-     * @return \App\Post
+     * @return \App\Models\Post
      */
     public function post() {
         return $this->belongsTo(Post::class);
@@ -56,7 +56,7 @@ class Setting extends Model {
     /**
      * Get the user for the setting.
      *
-     * @return \App\User
+     * @return \App\Models\User
      */
     public function user() {
         return $this->belongsTo(User::class);
@@ -65,7 +65,7 @@ class Setting extends Model {
     /**
      * Get the default for the setting.
      *
-     * @return \App\Defaults
+     * @return \App\Models\Defaults
      */
     public function default() {
         return $this->belongsTo(Defaults::class);

@@ -11,7 +11,7 @@ Management')])
               <h4 class="card-title">{{ __('Users') }}</h4>
             </div>
             <div class="card-body">
-              @can('create', App\User::class)
+              @can('create', App\Models\User::class)
                 <div class="row">
                   <div class="col-12 text-right mb-3">
                     <a href="{{ route('user.create') }}" class="btn btn-sm btn-warning">{{ __('Add user') }}</a>
@@ -36,7 +36,7 @@ Management')])
                     <th>
                       {{ __('Creation date') }}
                     </th>
-                    @can('manage-users', App\User::class)
+                    @can('manage-users', App\Models\User::class)
                       <th class="text-right">
                         {{ __('Actions') }}
                       </th>
@@ -60,7 +60,7 @@ Management')])
                         <td>
                           {{ $user->created_at->format('d-m-Y') }}
                         </td>
-                        @can('manage-users', App\User::class)
+                        @can('manage-users', App\Models\User::class)
                           <td class="td-actions text-right">
                             @if ($user->id != auth()->user()->id)
                               <form action="{{ route('user.destroy', $user) }}" method="post">

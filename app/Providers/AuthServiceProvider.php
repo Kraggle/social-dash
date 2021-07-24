@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Role;
-use App\User;
+use App\Models\Role;
+use App\Models\User;
 use App\Policies\RolePolicy;
 use App\Policies\UserPolicy;
 use Illuminate\Support\Facades\Gate;

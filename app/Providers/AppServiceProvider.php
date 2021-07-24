@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Team;
-use App\User;
+use App\Models\Team;
+use App\Models\User;
 use App\Helpers\AppHelper;
 use Laravel\Cashier\Cashier;
 use App\Observers\UserObserver;

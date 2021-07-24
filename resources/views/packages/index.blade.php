@@ -11,7 +11,7 @@ Management')])
               <h4 class="card-title">{{ __('Packages') }}</h4>
             </div>
             <div class="card-body">
-              @can('create', App\Package::class)
+              @can('create', App\Models\Package::class)
                 <div class="row">
                   <div class="col-12 text-right mb-3">
                     <a href="{{ route('package.create') }}" class="btn btn-primary btn-sm">{{ __('Add package') }}</a>
@@ -33,7 +33,7 @@ Management')])
                     <th>
                       {{ __('Creation date') }}
                     </th>
-                    @can('manage-users', App\User::class)
+                    @can('manage-users', App\Models\User::class)
                       <th class="text-right">
                         {{ __('Actions') }}
                       </th>
@@ -54,7 +54,7 @@ Management')])
                         <td>
                           {{ $package->created_at->format('d-m-Y') }}
                         </td>
-                        @can('manage-users', App\User::class)
+                        @can('manage-users', App\Models\User::class)
                           <td class="td-actions text-right">
                             @can('update', $package)
                               <a href="{{ route('package.edit', $package) }}"

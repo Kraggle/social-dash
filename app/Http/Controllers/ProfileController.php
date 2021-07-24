@@ -1,25 +1,9 @@
 <?php
-/*
-
-=========================================================
-* Argon Dashboard PRO - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro-laravel
-* Copyright 2018 Creative Tim (https://www.creative-tim.com) & UPDIVISION (https://www.updivision.com)
-
-* Coded by www.creative-tim.com & www.updivision.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 namespace App\Http\Controllers;
 
 use Gate;
-use App\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\ProfileRequest;
 use App\Http\Requests\PasswordRequest;

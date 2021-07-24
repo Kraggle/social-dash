@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Defaults;
+use App\Models\Defaults;
 use App\Http\Requests\DefaultRequest;
 
 class DefaultsController extends Controller {
@@ -42,7 +42,7 @@ class DefaultsController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Defaults  $defaults
+     * @param  \App\Models\Defaults  $defaults
      * @return \Illuminate\Http\Response
      */
     public function edit(Defaults $default) {
@@ -53,7 +53,7 @@ class DefaultsController extends Controller {
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Defaults  $defaults
+     * @param  \App\Models\Defaults  $defaults
      * @return \Illuminate\Http\Response
      */
     public function update(DefaultRequest $request, Defaults $default) {
@@ -64,7 +64,7 @@ class DefaultsController extends Controller {
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Defaults  $defaults
+     * @param  \App\Models\Defaults  $defaults
      * @return \Illuminate\Http\Response
      */
     public function destroy(Defaults $default) {

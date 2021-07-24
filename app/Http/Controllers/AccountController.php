@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Account;
+use App\Models\Account;
 use App\Http\Requests\AccountRequest;
-use App\Team;
-use App\Defaults;
-use App\Setting;
+use App\Models\Team;
+use App\Models\Defaults;
+use App\Models\Setting;
 
 class AccountController extends Controller {
     public function __construct() {
@@ -16,7 +16,7 @@ class AccountController extends Controller {
     /**
      * Display a listing of the accounts
      *
-     * @param \App\Account  $model
+     * @param \App\Models\Account  $model
      * @return \Illuminate\View\View
      */
     public function index(Account $model) {
@@ -78,7 +78,7 @@ class AccountController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Account  $account
+     * @param  \App\Models\Account  $account
      * @return \Illuminate\Http\Response
      */
     public function edit(Account $account) {
@@ -92,7 +92,7 @@ class AccountController extends Controller {
      * Update the specified account in storage
      *
      * @param  \App\Http\Requests\AccountRequest  $request
-     * @param  \App\Account  $account
+     * @param  \App\Models\Account  $account
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(AccountRequest $request, Account $account) {
@@ -111,13 +111,16 @@ class AccountController extends Controller {
             ]);
         }
 
+        // TODO: Change the subscription if it was changed
+        // TODO: Cancel the subscription if necessary
+
         return redirect()->route('account.index')->withStatus(__('Account successfully updated.'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Account  $account
+     * @param  \App\Models\Account  $account
      * @return \Illuminate\Http\Response
      */
     public function destroy(Account $account) {

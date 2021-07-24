@@ -1,5 +1,5 @@
 @php
-use App\Defaults;
+use App\Models\Defaults;
 @endphp
 
 @foreach ($settings ?? [] as $setting)

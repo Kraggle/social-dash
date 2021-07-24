@@ -14,7 +14,7 @@ Management')])
               <h4 class="card-title">{{ __('Defaults') }}</h4>
             </div>
             <div class="card-body">
-              @can('create', App\Defaults::class)
+              @can('create', App\Models\Defaults::class)
                 <div class="row">
                   <div class="col-12 text-right mb-3">
                     <a href="{{ route('default.create') }}" class="btn btn-sm btn-primary">{{ __('Add default') }}</a>
@@ -27,7 +27,7 @@ Management')])
                     <th>{{ __('Name') }}</th>
                     <th>{{ __('Description') }}</th>
                     <th>{{ __('For Table') }}</th>
-                    @can('manage-defaults', App\User::class)
+                    @can('manage-defaults', App\Models\User::class)
                       <th class="text-right">
                         {{ __('Actions') }}
                       </th>
@@ -39,7 +39,7 @@ Management')])
                         <td>{{ $default->name }}</td>
                         <td>{{ AppHelper::truncate($default->description) }}</td>
                         <td>{{ ucwords($default->for_table) }}</td>
-                        @can('manage-defaults', App\User::class)
+                        @can('manage-defaults', App\Models\User::class)
                           <td class="td-actions text-right">
                             <form action="{{ route('default.destroy', $default) }}" method="post">
                               @csrf

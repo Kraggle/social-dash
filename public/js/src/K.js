@@ -609,7 +609,6 @@ K.JSON = {
  */
 
 K.Util = {
-
     formatLatLngs(latLngs, digits = 5) {
         const pow = Math.pow(10, digits);
 
@@ -786,8 +785,119 @@ K.Util = {
         });
     },
 
-    templateRe: /\{ *([\w_-]+) *\}/g
+    templateRe: /\{ *([\w_-]+) *\}/g,
+
+    cookie: {
+        assign(target) {
+            for (let i = 1; i < arguments.length; i++) {
+                const source = arguments[i];
+                for (let key in source)
+                    target[key] = source[key];
+            }
+            return target;
+        },
+
+        defaultConverter: {
+            read(value) {
+                return value.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent)
+            },
+            write(value) {
+                return encodeURIComponent(value).replace(
+                    /%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,
+                    decodeURIComponent
+                )
+            }
+        },
+
+        init(converter, defaultAttributes) {
+            function set(key, value, attributes) {
+                if (typeof document === 'undefined') return;
+
+                attributes = K.Util.cookie.assign({}, defaultAttributes, attributes);
+
+                if (typeof attributes.expires === 'number')
+                    attributes.expires = new Date(Date.now() + attributes.expires * 864e5);
+
+                if (attributes.expires)
+                    attributes.expires = attributes.expires.toUTCString();
+
+                key = encodeURIComponent(key)
+                    .replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent)
+                    .replace(/[()]/g, escape);
+
+                value = converter.write(value, key);
+
+                let stringifiedAttributes = '';
+                for (const attributeName in attributes) {
+                    if (!attributes[attributeName]) continue;
+
+                    stringifiedAttributes += '; ' + attributeName;
+
+                    if (attributes[attributeName] === true) continue;
+
+                    stringifiedAttributes += '=' + attributes[attributeName].split(';')[0];
+                }
+
+                return (document.cookie = key + '=' + value + stringifiedAttributes)
+            }
+
+            function get(key) {
+                if (typeof document === 'undefined' || (arguments.length && !key)) return;
+
+                // To prevent the for loop in the first place assign an empty array
+                // in case there are no cookies at all.
+                const cookies = document.cookie ? document.cookie.split('; ') : [],
+                    jar = {};
+                for (const cookie of cookies) {
+                    const parts = cookie.split('=');
+                    let value = parts.slice(1).join('=');
+
+                    if (value[0] === '=')
+                        value = value.slice(1, -1);
+
+                    try {
+                        const foundKey = K.Util.cookie.defaultConverter.read(parts[0]);
+                        jar[foundKey] = converter.read(value, foundKey);
+
+                        if (key === foundKey) break;
+                    } catch (e) { }
+                }
+
+                return key ? jar[key] : jar
+            }
+
+            return Object.create(
+                {
+                    set: set,
+                    get: get,
+                    remove: function(key, attributes) {
+                        set(
+                            key,
+                            '',
+                            K.Util.cookie.assign({}, attributes, {
+                                expires: -1
+                            })
+                        );
+                    },
+                    withAttributes: function(attributes) {
+                        return K.Util.cookie.init(this.converter, K.Util.cookie.assign({}, this.attributes, attributes))
+                    },
+                    withConverter: function(converter) {
+                        return K.Util.cookie.init(K.Util.cookie.assign({}, this.converter, converter), this.attributes)
+                    }
+                },
+                {
+                    attributes: { value: Object.freeze(defaultAttributes) },
+                    converter: { value: Object.freeze(converter) }
+                }
+            )
+        }
+    }
 };
+
+K.cookie = K.Util.cookie.init(K.Util.cookie.defaultConverter, { path: '/' });
+
+console.log(K.cookie);
 
 // alternatives for functions
 K.has = K.inArray;

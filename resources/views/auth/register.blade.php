@@ -9,7 +9,7 @@
 $token = app('request')->input('token') ?? false;
 $valid = null;
 if ($token) {
-    $column = App\RegisterToken::where('token', $token)->first();
+    $column = App\Models\RegisterToken::where('token', $token)->first();
     $valid = $column ? AppHelper::valid(new DateTime($column->valid_until)) : false;
 }
 @endphp

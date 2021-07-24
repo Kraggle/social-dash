@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Package;
+use App\Models\Package;
 use App\http\Requests\PackageRequest;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,7 @@ class PackageController extends Controller {
     /**
      * Display a listing of the packages
      *
-     * @param \App\Package  $model
+     * @param \App\Models\Package  $model
      * @return \Illuminate\View\View
      */
     public function index(Package $model) {
@@ -36,7 +36,7 @@ class PackageController extends Controller {
      * Store a newly created package in storage
      *
      * @param  \App\Http\Requests\PackageRequest  $request
-     * @param  \App\Package  $model
+     * @param  \App\Models\Package  $model
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(PackageRequest $request, Package $model) {
@@ -48,7 +48,7 @@ class PackageController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Package  $package
+     * @param  \App\Models\Package  $package
      * @return \Illuminate\Http\Response
      */
     public function edit(Package $package) {
@@ -59,7 +59,7 @@ class PackageController extends Controller {
      * Update the specified package in storage
      *
      * @param  \App\Http\Requests\PackageRequest  $request
-     * @param  \App\Package  $package
+     * @param  \App\Models\Package  $package
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(PackageRequest $request, Package $package) {

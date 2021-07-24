@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -27,7 +27,7 @@ class Post extends Model {
     /**
      * Get the post account.
      *
-     * @return \App\Account
+     * @return \App\Models\Account
      */
     public function account() {
         return $this->belongsTo(Account::class);

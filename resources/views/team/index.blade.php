@@ -6,14 +6,14 @@ Management')])
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          @can('manage-teams', App\User::class)
+          @can('manage-teams', App\Models\User::class)
             {{-- Teams management - admin only --}}
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title">{{ __('Teams') }}</h4>
               </div>
               <div class="card-body">
-                @can('create', App\Team::class)
+                @can('create', App\Models\Team::class)
                   <div class="row">
                     <div class="col-12 text-right mb-3">
                       <a href="{{ route('team.create') }}" class="btn btn-sm btn-primary">{{ __('Add team') }}</a>
@@ -61,7 +61,7 @@ Management')])
                 </div>
               </div>
             </div>
-          @elsecan('manage-team', App\User::class)
+          @elsecan('manage-team', App\Models\User::class)
             {{-- Team management - by permission or team admin --}}
             @define($team = auth()->user()->team)
             <div class="card">

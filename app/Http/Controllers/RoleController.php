@@ -1,25 +1,9 @@
 <?php
-/*
-
-=========================================================
-* Argon Dashboard PRO - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro-laravel
-* Copyright 2018 Creative Tim (https://www.creative-tim.com) & UPDIVISION (https://www.updivision.com)
-
-* Coded by www.creative-tim.com & www.updivision.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 namespace App\Http\Controllers;
 
-use App\Role;
-use App\User;
+use App\Models\Role;
+use App\Models\User;
 use App\Http\Requests\RoleRequest;
 
 class RoleController extends Controller {
@@ -30,7 +14,7 @@ class RoleController extends Controller {
     /**
      * Display a listing of the roles
      *
-     * @param \App\Role  $model
+     * @param \App\Models\Role  $model
      * @return \Illuminate\View\View
      */
     public function index(Role $model) {
@@ -52,7 +36,7 @@ class RoleController extends Controller {
      * Store a newly created role in storage
      *
      * @param  \App\Http\Requests\RoleRequest  $request
-     * @param  \App\Role  $model
+     * @param  \App\Models\Role  $model
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(RoleRequest $request, Role $model) {
@@ -64,7 +48,7 @@ class RoleController extends Controller {
     /**
      * Show the form for editing the specified role
      *
-     * @param  \App\Role  $role
+     * @param  \App\Models\Role  $role
      * @return \Illuminate\View\View
      */
     public function edit(Role $role) {
@@ -75,7 +59,7 @@ class RoleController extends Controller {
      * Update the specified role in storage
      *
      * @param  \App\Http\Requests\RoleRequest  $request
-     * @param  \App\Role  $role
+     * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(RoleRequest $request, Role $role) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Laravel\Cashier\Billable;
 use Illuminate\Database\Eloquent\Model;
@@ -74,7 +74,7 @@ class Team extends Model {
     /**
      * Get the team package.
      *
-     * @return App\Package
+     * @return App\Models\Package
      */
     public function package() {
         return $this->belongsTo(Package::class);
@@ -83,7 +83,7 @@ class Team extends Model {
     /**
      * Get the team admin.
      *
-     * @return App\Package
+     * @return App\Models\Package
      */
     public function admin() {
         return User::where('role_id', 3)->where('team_id', $this->id)->first();

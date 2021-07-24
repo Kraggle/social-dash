@@ -11,7 +11,7 @@ Management')])
               <h4 class="card-title">{{ __('Posts') }}</h4>
             </div>
             <div class="card-body">
-              @can('create', App\Post::class)
+              @can('create', App\Models\Post::class)
                 <div class="row">
                   <div class="col-12 text-right mb-3">
                     <a href="{{ route('post.create') }}" class="btn btn-sm btn-primary">{{ __('Add post') }}</a>
@@ -45,7 +45,7 @@ Management')])
                     <th>
                       {{ __('Added On') }}
                     </th>
-                    @can('manage-posts', App\User::class)
+                    @can('manage-posts', App\Models\User::class)
                       <th class="text-right">
                         {{ __('Actions') }}
                       </th>
@@ -78,7 +78,7 @@ Management')])
                         <td>
                           {{ $post->created_at->format('d-m-Y') }}
                         </td>
-                        @can('manage-posts', App\User::class)
+                        @can('manage-posts', App\Models\User::class)
                           <td class="td-actions text-right">
                             <form action="{{ route('post.destroy', $post) }}" method="post">
                               @csrf

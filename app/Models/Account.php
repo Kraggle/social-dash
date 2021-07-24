@@ -1,12 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use App\User;
-use App\Post;
-use App\Setting;
 use App\Casts\CastSettings;
-use App\Model;
 
 class Account extends Model {
     public static function boot() {
@@ -58,7 +54,7 @@ class Account extends Model {
     /**
      * Get the accounts team.
      *
-     * @return App\Team
+     * @return App\Models\Team
      */
     public function team() {
         return $this->belongsTo(Team::class);

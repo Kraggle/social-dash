@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class DefaultsPolicy {
@@ -11,7 +11,7 @@ class DefaultsPolicy {
     /**
      * Determine whether the user can see the posts.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function viewAny(User $user) {
@@ -21,7 +21,7 @@ class DefaultsPolicy {
     /**
      * Determine whether the user can create posts.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function create(User $user) {
@@ -31,7 +31,7 @@ class DefaultsPolicy {
     /**
      * Determine whether the user can update the post.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function update(User $user) {
@@ -41,7 +41,7 @@ class DefaultsPolicy {
     /**
      * Determine whether the user can remove the post.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function remove(User $user) {

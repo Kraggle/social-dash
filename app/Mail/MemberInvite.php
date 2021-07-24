@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Team;
+use App\Models\Team;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -14,7 +14,7 @@ class MemberInvite extends Mailable {
     /**
      * The team instance.
      * 
-     * @var \App\Team
+     * @var \App\Models\Team
      */
     public $team;
 

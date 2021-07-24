@@ -11,7 +11,7 @@ Management')])
               <h4 class="card-title">{{ __('Roles') }}</h4>
             </div>
             <div class="card-body">
-              @can('create', App\Role::class)
+              @can('create', App\Models\Role::class)
                 <div class="row">
                   <div class="col-12 text-right mb-3">
                     <a href="{{ route('role.create') }}" class="btn btn-primary btn-sm">{{ __('Add role') }}</a>
@@ -33,7 +33,7 @@ Management')])
                     <th>
                       {{ __('Creation date') }}
                     </th>
-                    @can('manage-users', App\User::class)
+                    @can('manage-users', App\Models\User::class)
                       <th class="text-right">
                         {{ __('Actions') }}
                       </th>
@@ -54,7 +54,7 @@ Management')])
                         <td>
                           {{ $role->created_at->format('d-m-Y') }}
                         </td>
-                        @can('manage-users', App\User::class)
+                        @can('manage-users', App\Models\User::class)
                           <td class="td-actions text-right">
                             @can('update', $role)
                               <a href="{{ route('role.edit', $role) }}"

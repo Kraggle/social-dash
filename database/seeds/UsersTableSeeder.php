@@ -10,7 +10,7 @@ class UsersTableSeeder extends Seeder {
      * @return void
      */
     public function run() {
-        factory(App\User::class)->create([
+        factory(App\Models\User::class)->create([
             'id' => 1,
             'name' => 'Admin',
             'email' => 'admin@white.com',
@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder {
             'team_id' => 1
         ]);
 
-        factory(App\User::class)->create([
+        factory(App\Models\User::class)->create([
             'id' => 2,
             'name' => 'Free',
             'email' => 'free@white.com',
@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder {
             'team_id' => 1
         ]);
 
-        factory(App\User::class)->create([
+        factory(App\Models\User::class)->create([
             'id' => 3,
             'name' => 'Team Admin',
             'email' => 'teamadmin@white.com',
@@ -37,7 +37,7 @@ class UsersTableSeeder extends Seeder {
             'team_id' => 1
         ]);
 
-        factory(App\User::class)->create([
+        factory(App\Models\User::class)->create([
             'id' => 4,
             'name' => 'Team Member',
             'email' => 'teammember@white.com',

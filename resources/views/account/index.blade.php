@@ -6,14 +6,14 @@ Management')])
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          @can('manage-accounts', App\User::class)
+          @can('manage-accounts', App\Models\User::class)
             {{-- Account management - admin only --}}
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title">{{ __('Accounts') }}</h4>
               </div>
               <div class="card-body">
-                @can('create', App\Account::class)
+                @can('create', App\Models\Account::class)
                   <div class="row">
                     <div class="col-12 text-right mb-3">
                       <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary">{{ __('Add account') }}</a>
@@ -26,9 +26,8 @@ Management')])
                       <th>{{ __('Username') }}</th>
                       <th>{{ __('Team') }}</th>
                       <th>{{ __('Active') }}</th>
-                      <th>{{ __('Public') }}</th>
                       <th>{{ __('Added On') }}</th>
-                      @can('manage-accounts', App\User::class)
+                      @can('manage-accounts', App\Models\User::class)
                         <th class="text-right">{{ __('Actions') }}</th>
                       @endcan
                     </thead>
@@ -39,7 +38,7 @@ Management')])
 
                         <tr>
                           <td>
-                            {{ $account->username }}
+                            {{ '@' . $account->username }}
                           </td>
                           <td>
                             {{ $account->team->name ?? '' }}
@@ -48,12 +47,9 @@ Management')])
                             {{ $settings->active->value ? 'true' : 'false' }}
                           </td>
                           <td>
-                            {{ $settings->public->value ? 'true' : 'false' }}
-                          </td>
-                          <td>
                             {{ $account->created_at->format('d-m-Y') }}
                           </td>
-                          @can('manage-accounts', App\User::class)
+                          @can('manage-accounts', App\Models\User::class)
                             <td class="td-actions text-right">
                               <form action="{{ route('account.destroy', $account) }}" method="post">
                                 @csrf
@@ -78,7 +74,7 @@ Management')])
                 </div>
               </div>
             </div>
-          @elsecan ('manage-team-accounts', App\User::class)
+          @elsecan ('manage-team-accounts', App\Models\User::class)
             {{-- Account management - team admin or by permission --}}
             @define($team = auth()->user()->team)
             @define($accounts = $team->accounts)
@@ -109,14 +105,14 @@ Management')])
                         @define($settings = $account->getAllSettings())
 
                         @php
-                          $cost = (float) \App\Defaults::where('options->key', 'active')->first()->options->on_cost;
-                          $values = \App\Defaults::where('options->key', 'follower_freq')->first()->options->values;
+                          $cost = (float) \App\Models\Defaults::where('options->key', 'active')->first()->options->on_cost;
+                          $values = \App\Models\Defaults::where('options->key', 'follower_freq')->first()->options->values;
                           $price = $values[array_search($account->price_id, array_column($values, 'key'))];
                           $cost += ((float) $price->cost) * (int) $account->quantity;
                         @endphp
 
                         <tr>
-                          <td>{{ $account->username }}</td>
+                          <td>{{ '@' . $account->username }}</td>
                           <td>£{{ number_format($cost, 2) }} pm</td>
                           <td>{{ $team->subscribed($account->username) ? 'true' : 'false' }}</td>
                           <td>{{ $account->created_at->format('d-m-Y') }}</td>

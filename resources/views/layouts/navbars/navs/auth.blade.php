@@ -21,15 +21,30 @@
     </div>
 
     {{-- TODO:: Change this to not show on certain pages --}}
-    {{-- TODO:: This also needs to automatically populate with allowed accounts --}}
-    <div class="col-3 position-relative" style="top:1px">
-      <select class="selectpicker" data-size="7" data-style="btn btn-primary" title="Single Select">
-        <option value="1" selected>makemoneyfromhomeuk</option>
-        <option value="2">mattymyers</option>
-      </select>
-    </div>
+    @define($team = auth()->user()->team)
+    @if ($team->subscribed('default'))
+      @php
+        $main = \App\Models\Team::where('package_id', 1)->first()->accounts[0];
+        $accounts = [$main->username => $main];
+        foreach ($team->accounts as $account) {
+            if (isset($accounts[$account->username])) {
+                continue;
+            }
+            $accounts[$account->username] = $account;
+        }
+        $selected = $_COOKIE['selected-account'] ?? $main->username;
+      @endphp
+      <div class="col-3 position-relative" style="top:1px">
+        <select class="selectpicker" id="account-selector" data-style="btn btn-primary" title="Single Select">
+          @foreach ($accounts as $account)
+            <option value={{ $account->pk }} {{ AppHelper::selected($selected, $account->pk) }}>
+              {{ '@' . $account->username }}</option>
+          @endforeach
+        </select>
+      </div>
+    @endif
     @can('manage-accounts')
-      <span><a class="fw-bold" href="{{ route('account.index') }}">{{ __('Manage Accounts') }}</a></span>
+      {{-- <span><a class="fw-bold" href="{{ route('account.index') }}">{{ __('Manage Accounts') }}</a></span> --}}
     @endcan
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false"

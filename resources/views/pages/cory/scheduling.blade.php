@@ -36,7 +36,7 @@ Scheduling')])
                     <th>
                       {{ __('Schedule Time') }}
                     </th>
-                    {{-- @can('manage-items', App\User::class)
+                    {{-- @can('manage-items', App\Models\User::class)
                                     <th class="text-right">
                                         {{ __('Actions') }}
                                     </th>
@@ -62,7 +62,7 @@ Scheduling')])
                                         <td>
                                             {{ $item->created_at->format('Y-m-d') }}
                                         </td>
-                                        @can('manage-items', App\User::class)
+                                        @can('manage-items', App\Models\User::class)
                                         <td class="td-actions text-right">
                                             <form action="{{ route('item.destroy', $item) }}" method="post">
                                                 @csrf

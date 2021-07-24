@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use App\Helpers\AppHelper;
 use Illuminate\Database\Eloquent\Model;
@@ -21,7 +21,7 @@ class RegisterToken extends Model {
     /**
      * Get the team
      *
-     * @return \App\Team
+     * @return \App\Models\Team
      */
     public function team() {
         return $this->belongsTo(Team::class);
@@ -30,7 +30,7 @@ class RegisterToken extends Model {
     /**
      * Get the role
      *
-     * @return \App\Role
+     * @return \App\Models\Role
      */
     public function role() {
         return $this->belongsTo(Role::class);

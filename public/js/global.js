@@ -1,8 +1,25 @@
 import Swal from './libs/sweetalert2/sweetalert2.js';
+import K from './src/K.js';
 
 $(() => {
 	$('.delete-alert').on('click', deleteAlert);
+
+	// Used to set the selected account
+	$('#account-selector').on('change', selectAccount);
+	selectAccount();
 });
+
+/**
+ * This is used to set the visably selected account.
+ */
+function selectAccount() {
+	const $el = $('#account-selector'),
+		selected = $el.val();
+	if ($el.data('selected') == selected) return;
+	$el.data('selected', selected);
+	K.cookie.set('selected-account', selected, { expires: 64 });
+	console.log(selected);
+}
 
 function deleteAlert(e) {
 	e.preventDefault();

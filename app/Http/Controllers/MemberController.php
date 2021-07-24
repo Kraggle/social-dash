@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Models\User;
 use App\Helpers\AppHelper;
 use App\Mail\MemberInvite;
 use Illuminate\Http\Request;
@@ -14,7 +14,7 @@ class MemberController extends Controller {
      * Open the new member registration page.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Models\User
      */
     protected function create() {
         return view('team.member.create');
@@ -24,7 +24,7 @@ class MemberController extends Controller {
      * Send a registration email to a new member.
      *
      * @param  Illuminate\Http\Request  $request
-     * @param  \App\User  $model
+     * @param  \App\Models\User  $model
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request) {
@@ -54,7 +54,7 @@ class MemberController extends Controller {
     /**
      * Edit the premissions of the given member.
      *
-     * @param \App\User  $member
+     * @param \App\Models\User  $member
      * @return \Illuminate\View\View
      */
     public function edit(User $member) {
@@ -65,7 +65,7 @@ class MemberController extends Controller {
      * Update the specified team member in storage
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $member
+     * @param  \App\Models\User  $member
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, User $member) {
@@ -77,7 +77,7 @@ class MemberController extends Controller {
     /**
      * Remove the specified team member.
      *
-     * @param  \App\User $member
+     * @param  \App\Models\User $member
      * @return \Illuminate\Http\Response
      */
     public function remove(User $member) {

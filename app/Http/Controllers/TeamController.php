@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Team;
-use App\Package;
+use App\Models\Team;
+use App\Models\Package;
 use App\Http\Requests\TeamRequest;
 use Illuminate\Http\Request;
 
@@ -33,7 +33,7 @@ class TeamController extends Controller {
      * Store a newly created team in storage
      *
      * @param  \App\Http\Requests\TeamRequest  $request
-     * @param  \App\Team  $model
+     * @param  \App\Models\Team  $model
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(TeamRequest $request, Team $model) {
@@ -44,7 +44,7 @@ class TeamController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Team  $team
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
     public function edit(Team $team) {
@@ -55,7 +55,7 @@ class TeamController extends Controller {
      * Update the specified team in storage
      *
      * @param  \App\Http\Requests\TeamRequest  $request
-     * @param  \App\Team  $team
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(TeamRequest $request, Team $team) {
@@ -67,7 +67,7 @@ class TeamController extends Controller {
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Team $team
+     * @param  \App\Models\Team $team
      * @return \Illuminate\Http\Response
      */
     public function destroy(Team $team) {

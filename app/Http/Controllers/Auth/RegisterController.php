@@ -1,26 +1,10 @@
 <?php
-/*
-
-=========================================================
-* Argon Dashboard PRO - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro-laravel
-* Copyright 2018 Creative Tim (https://www.creative-tim.com) & UPDIVISION (https://www.updivision.com)
-
-* Coded by www.creative-tim.com & www.updivision.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 namespace App\Http\Controllers\Auth;
 
-use App\Team;
-use App\User;
-use App\RegisterToken;
+use App\Models\Team;
+use App\Models\User;
+use App\Models\RegisterToken;
 use App\Helpers\AppHelper;
 use App\Traits\StripeFunctions;
 use Illuminate\Validation\Rule;
@@ -98,7 +82,7 @@ class RegisterController extends Controller {
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Models\User
      */
     protected function create(array $data) {
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use App\Team;
+use App\Models\Team;
 use Illuminate\Database\Eloquent\Model;
 
 class Package extends Model {
@@ -36,7 +36,7 @@ class Package extends Model {
     /**
      * Get the teams for the role
      *
-     * @return \App\Team
+     * @return \App\Models\Team
      */
     public function teams() {
         return $this->hasMany(Team::class);

@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class PackagePolicy {
@@ -11,7 +11,7 @@ class PackagePolicy {
     /**
      * Determine whether the user can see the packages.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function viewAny(User $user) {
@@ -21,7 +21,7 @@ class PackagePolicy {
     /**
      * Determine whether the user can create packages.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function create(User $user) {
@@ -31,7 +31,7 @@ class PackagePolicy {
     /**
      * Determine whether the user can update the package.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return boolean
      */
     public function update(User $user) {

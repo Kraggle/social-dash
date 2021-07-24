@@ -6,7 +6,7 @@
 ])
 
 @php
-$packages = \App\Package::all();
+$packages = \App\Models\Package::all();
 // $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
 $stripe_key = env('STRIPE_KEY');
 // $products = $stripe->products->all();
