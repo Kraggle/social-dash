@@ -129,7 +129,6 @@
 
 
 
-<<<<<<< HEAD
 
             {{-- <li class="{{ $menuParent == 'laravel' ? ' active' : '' }}">
                 <a data-toggle="collapse" href="#laravelExamples">
@@ -142,19 +141,6 @@
                 <div class="collapse {{ $menuParent == 'laravel' ? ' show' : '' }}"
                     id="laravelExamples">
                     <ul class="nav">
-=======
-            {{--
-             <li class="{{ $menuParent == 'laravel' ? ' active' : '' }}">
-            <a data-toggle="collapse" href="#laravelExamples">
-                <i class="fab fa-laravel"></i>
-                <p>
-                    {{ __('Laravel Examples') }}
-                    <b class="caret"></b>
-                </p>
-            </a>
-            <div class="collapse {{ $menuParent == 'laravel' ? ' show' : '' }}" id="laravelExamples">
-                <ul class="nav">
->>>>>>> 7567ce2837be88f4c114c17a77aa5c8c189a821c
 
                     <li class="{{ $activePage == 'category-management' ? ' active' : '' }}">
                         <a href="{{ route('category.index') }}">
