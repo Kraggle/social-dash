@@ -33,8 +33,7 @@
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse {{ $menuParent == 'analytics' ? ' show' : '' }}"
-                    id="analytics">
+                <div class="collapse {{ $menuParent == 'analytics' ? ' show' : '' }}" id="analytics">
                     <ul class="nav">
                         <li class="{{ $activePage == 'followers' ? ' active' : '' }}">
                             <a href="{{ route('pages.cory.followers') }}">
@@ -130,8 +129,8 @@
 
 
 
-{{--
-             <li class="{{ $menuParent == 'laravel' ? ' active' : '' }}">
+
+            {{-- <li class="{{ $menuParent == 'laravel' ? ' active' : '' }}">
                 <a data-toggle="collapse" href="#laravelExamples">
                     <i class="fab fa-laravel"></i>
                     <p>
@@ -412,7 +411,7 @@
                     <i class="tim-icons icon-time-alarm"></i>
                     <p>{{ __('Calendar') }}</p>
                 </a>
-            </li> --}}
-        </ul>
+            </li>
+        </ul> --}}
     </div>
 </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app', [
-'activePage' => 'singleprofile',
+'activePage' => 'individualpost',
 'menuParent' => '',
-'titlePage' => __('Single Profile')
+'titlePage' => __('individualpost')
 ])
 
 @section('content')

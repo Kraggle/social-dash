@@ -18179,7 +18179,6 @@ textarea.form-control:active {
 }
 
 .nav-pills.nav-pills:not(.flex-column) .nav-item:not(:last-child) .nav-link {
-  margin-right: 10px;
   margin-bottom: 5px;
 }
 
