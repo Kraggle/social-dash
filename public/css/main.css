@@ -1,3 +1,12 @@
+@charset "UTF-8";
+
+/* Import any included styles into here and the compile will include it */
+
+.card-chart .chart-area-posts {
+  height: auto;
+  min-height: 350px;
+}
+
 /* Import any included styles into here and the compile will include it */
 
 /*     brand Colors              */

@@ -2,17 +2,17 @@
     <div class="container-fluid">
         <ul class="nav">
             <li class="nav-item">
-                <a href="https://www.creative-tim.com/" class="nav-link">
-                    {{ __('Creative Tim') }}
+                <a href="https://www.social-shadow.com/" class="nav-link">
+                    {{ __('Social Shadow') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link">
+                <a href="https://www.social-shadow.com/" class="nav-link">
                     {{ __('About Us') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a href="http://blog.creative-tim.com/" class="nav-link">
+                <a href="https://www.social-shadow.com/" class="nav-link">
                     {{ __('Blog') }}
                 </a>
             </li>
@@ -23,7 +23,8 @@
                 document.write(new Date().getFullYear())
 
             </script> made with <i class="tim-icons icon-heart-2"></i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> and <a href="https://www.updivision.com" target="_blank">UPDIVISION</a> for a better web.
+            <a href="https://www.social-shadow.com" target="_blank">Social Shadow Ltd</a> for a better analytical
+            understanding of our Instagram accounts.
         </div>
     </div>
 </footer>

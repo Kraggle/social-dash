@@ -9,15 +9,16 @@
     <div class="row">
       <div class="col-md-6 mb-4">
         <h2 class="card-title">Hashtags Most Commenly Used</h2>
-        <input type="text"
-          value="#millionairemotivation,#moneymotivation,#hashtags,#cory,#beevers,#fillitup,#hashyhashtag,#millionairemotivation,#motivationalquote,#motivationalmeme,#moneymotivation,#moneyinspiration,#moneymentor,#anotherhashtag,#andanother,#have10intotal"
-          class="tagsinput" data-role="tagsinput" data-color="warning" />
+        {{-- <input type="text"
+                    value="#millionairemotivation,#moneymotivation,#hashtags,#cory,#beevers,#fillitup,#hashyhashtag,#millionairemotivation,#motivationalquote,#motivationalmeme,#moneymotivation,#moneyinspiration,#moneymentor,#anotherhashtag,#andanother,#have10intotal"
+                    class="tagsinput" data-role="tagsinput" data-color="warning" /> --}}
       </div>
+
       <div class="col-md-6 mb-4 float-right">
         <h2 class="card-title">Hashtags By Engagement Rate</h2>
-        <input type="text"
-          value="#millionairemotivation,#moneymotivation,#hashtags,#cory,#beevers,#fillitup,#hashyhashtag,#millionairemotivation,#motivationalquote,#motivationalmeme,#moneymotivation,#moneyinspiration,#moneymentor,#anotherhashtag,#andanother,#have10intotal"
-          class="tagsinput" data-role="tagsinput" data-color="warning" />
+        {{-- <input type="text"
+                    value="#millionairemotivation,#moneymotivation,#hashtags,#cory,#beevers,#fillitup,#hashyhashtag,#millionairemotivation,#motivationalquote,#motivationalmeme,#moneymotivation,#moneyinspiration,#moneymentor,#anotherhashtag,#andanother,#have10intotal"
+                    class="tagsinput" data-role="tagsinput" data-color="warning" /> --}}
       </div>
       <div class="col-md-6 mb-4">
         <div class="progress-container progress-warning">
@@ -183,16 +184,16 @@
               <table id="datatable" class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Hashtag</th>
-                    <th>Competition</th>
-                    <th>Posts</th>
-                    <th>Likes</th>
-                    <th>Eng Rate</th>
-                    <th>Like Rate</th>
-                    <th>Comment Rate</th>
-                    <th>Difficulty ?/100</th>
-                    <th>Other Post Per Day</th>
-                    <th class="sorting_desc_disabled sorting_asc_disabled text-right">Actions</th>
+                    <th title="Enter Text Here">Hashtag</th>
+                    <th title="Enter Text Here">Competition</th>
+                    <th title="Enter Text Here">Posts</th>
+                    <th title="Enter Text Here">Likes</th>
+                    <th title="Enter Text Here">Eng Rate</th>
+                    <th title="Enter Text Here">Like Rate</th>
+                    <th title="Enter Text Here">Comment Rate</th>
+                    <th title="Enter Text Here">Difficulty ?/100</th>
+                    <th title="Enter Text Here">Other Post Per Day</th>
+                    <th class="sorting_desc_disabled sorting_asc_disabled text-right" title="Enter Text Here">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -210,9 +211,9 @@
                       <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
                           class="tim-icons icon-heart-2"></i></a>
                       <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                          class="fal fa-pencil-alt"></i></a>
+                          class="tim-icons icon-pencil"></i></a>
                       <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                          class="fal fa-trash-alt"></i></a>
+                          class="tim-icons icon-simple-remove"></i></a>
                     </td>
                   </tr>
                   <tr>
@@ -229,9 +230,9 @@
                       <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
                           class="tim-icons icon-heart-2"></i></a>
                       <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                          class="fal fa-pencil-alt"></i></a>
+                          class="tim-icons icon-pencil"></i></a>
                       <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                          class="fal fa-trash-alt"></i></a>
+                          class="tim-icons icon-simple-remove"></i></a>
                     </td>
                   </tr>
                   <tr>
@@ -245,12 +246,12 @@
                     <td>78</td>
                     <td>145</th>
                     <td class="text-right">
-                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i
+                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
                           class="tim-icons icon-heart-2"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
-                          class="fal fa-pencil-alt"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
-                          class="fal fa-trash-alt"></i></a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm  edit"><i
+                          class="tim-icons icon-pencil"></i></a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
+                          class="tim-icons icon-simple-remove"></i></a>
                     </td>
                   </tr>
                   <tr>
@@ -269,9 +270,9 @@
                       <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
                           class="tim-icons icon-heart-2"></i></a>
                       <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                          class="fal fa-pencil-alt"></i></a>
+                          class="tim-icons icon-pencil"></i></a>
                       <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                          class="fal fa-trash-alt"></i></a>
+                          class="tim-icons icon-simple-remove"></i></a>
                     </td>
 
                   </tr>
@@ -300,10 +301,6 @@
       </div>
       <!-- end row -->
     </div>
-
-
-  </div>
-  </div>
   </div>
 
 @endsection

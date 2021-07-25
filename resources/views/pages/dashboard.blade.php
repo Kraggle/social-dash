@@ -6,22 +6,22 @@
 
 @php
 $stats = [
-    (object) [
-        'name' => 'Impressions',
-        'link' => route('pages.cory.followers'),
-        'id' => 'impressions',
-        'stat' => 'Impression',
-        'type' => 'total',
-        'icon' => 'tim-icons icon-shape-star',
-    ],
-    (object) [
-        'name' => 'Engagements',
-        'link' => route('pages.cory.likes'),
-        'id' => 'likes',
-        'stat' => 'Engagement',
-        'type' => 'total',
-        'icon' => 'tim-icons icon-satisfied',
-    ],
+    // (object) [
+    //     'name' => 'Impressions',
+    //     'link' => route('pages.cory.followers'),
+    //     'id' => 'impressions',
+    //     'stat' => 'Impression',
+    //     'type' => 'total',
+    //     'icon' => 'tim-icons icon-shape-star',
+    // ],
+    // (object) [
+    //     'name' => 'Profile Actions',
+    //     'link' => route('pages.cory.posts'),
+    //     'id' => 'actions',
+    //     'stat' => 'Post',
+    //     'type' => 'number',
+    //     'icon' => 'tim-icons icon-triangle-right-17',
+    // ],
     (object) [
         'name' => 'Average Users Activity',
         'link' => route('pages.cory.comments'),
@@ -31,12 +31,12 @@ $stats = [
         'icon' => 'tim-icons icon-tap-02',
     ],
     (object) [
-        'name' => 'Profile Actions',
-        'link' => route('pages.cory.posts'),
-        'id' => 'actions',
-        'stat' => 'Post',
-        'type' => 'number',
-        'icon' => 'tim-icons icon-triangle-right-17',
+        'name' => 'Engagements',
+        'link' => route('pages.cory.likes'),
+        'id' => 'likes',
+        'stat' => 'Engagement',
+        'type' => 'total',
+        'icon' => 'tim-icons icon-satisfied',
     ],
     (object) [
         'name' => 'Followers',
@@ -78,7 +78,7 @@ $stats = [
     <div class="row">
 
       @foreach ($stats as $stat)
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="card card-stats">
             <div class="card-body">
               <div class="row">
@@ -121,7 +121,7 @@ $stats = [
                 <h2 class="card-title">Performance</h2>
               </div>
               <div class="col-sm-6">
-                <div class="btn-group btn-group-toggle float-right ml-3" data-toggle="buttons">
+                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
                   <label class="btn btn-sm btn-warning btn-simple active" id="0">
                     <input type="radio" name="options" checked>
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Daily</span>
@@ -175,7 +175,6 @@ $stats = [
                   </label>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="card-body">
@@ -184,11 +183,12 @@ $stats = [
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
     <div class="row">
-      <div class="col-lg-5"> {{-- Scheduled Posts --}}
+      <div class="col-lg-5">
         <div class="card card-tasks">
           <div class="card-header">
             <h6 class="title d-inline">Scheduled Posts</h6>
@@ -225,7 +225,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-right">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-pencil-alt"></i>
+                        <i class="tim-icons icon-pencil"></i>
                       </button>
                     </td>
                   </tr>
@@ -246,7 +246,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-right">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-pencil-alt"></i>
+                        <i class="tim-icons icon-pencil"></i>
                       </button>
                     </td>
                   </tr>
@@ -267,7 +267,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-right">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-pencil-alt"></i>
+                        <i class="tim-icons icon-pencil"></i>
                       </button>
                     </td>
                   </tr>
@@ -288,7 +288,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-right">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-pencil-alt"></i>
+                        <i class="tim-icons icon-pencil"></i>
                       </button>
                     </td>
                   </tr>
@@ -309,7 +309,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-right">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-pencil-alt"></i>
+                        <i class="tim-icons icon-pencil"></i>
                       </button>
                     </td>
                   </tr>
@@ -330,7 +330,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-right">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-pencil-alt"></i>
+                        <i class="tim-icons icon-pencil"></i>
                       </button>
                     </td>
                   </tr>
@@ -340,7 +340,8 @@ $stats = [
           </div>
         </div>
       </div>
-      <div class="col-lg-7"> {{-- Recent Comments --}}
+
+      <div class="col-lg-7">
         <div class="card">
           <div class="card-header">
             <div class="tools float-right">
@@ -570,7 +571,7 @@ $stats = [
     </div>
 
     <div class="row">
-      <div class="col-lg-12"> {{-- Demographics --}}
+      <div class="col-12">
         <div class="card">
           <div class="card-header">
             <h4 class="card-title">Follower Demographs By Country</h4>
@@ -678,6 +679,7 @@ $stats = [
         </div>
       </div>
     </div>
+
   </div>
 
 @endsection

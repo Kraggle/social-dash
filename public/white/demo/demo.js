@@ -434,9 +434,9 @@ demo = {
 
             var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-            gradientStroke.addColorStop(1, 'rgba(72,72,176,0.4)');
-            gradientStroke.addColorStop(0.8, 'rgba(72,72,176,0.2)');
-            gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
+            gradientStroke.addColorStop(1, 'rgba(255,103,142,0.4)');
+            gradientStroke.addColorStop(0.8, 'rgba(255,103,142,0.2)');
+            gradientStroke.addColorStop(0, 'rgba(255,103,142,0)'); //purple colors
 
 
 
@@ -449,13 +449,13 @@ demo = {
                         label: "Data",
                         fill: true,
                         backgroundColor: gradientStroke,
-                        borderColor: '#ba54f5',
+                        borderColor: '#ff678e',
                         borderWidth: 2,
                         borderDash: [],
                         borderDashOffset: 0.0,
-                        pointBackgroundColor: '#be55ed',
+                        pointBackgroundColor: '#ff678e',
                         pointBorderColor: 'rgba(255,255,255,0)',
-                        pointHoverBackgroundColor: '#be55ed',
+                        pointHoverBackgroundColor: '#ff678e',
                         //pointHoverBorderColor:'rgba(35,46,55,1)',
                         pointBorderWidth: 20,
                         pointHoverRadius: 4,
@@ -475,9 +475,9 @@ demo = {
 
             var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-            gradientStroke.addColorStop(1, 'rgba(0,135,191,0.2)');
-            gradientStroke.addColorStop(0.8, 'rgba(0,135,191,0.1)');
-            gradientStroke.addColorStop(0, 'rgba(0,84,119,0)'); //blue colors
+            gradientStroke.addColorStop(1, 'rgba(254,140,113,0.4)');
+            gradientStroke.addColorStop(0.8, 'rgba(254,140,113,0.2)');
+            gradientStroke.addColorStop(0, 'rgba(254,140,113,0)'); //blue colors
 
 
             var myChart = new Chart(ctx, {
@@ -489,13 +489,13 @@ demo = {
                         label: "Data",
                         fill: true,
                         backgroundColor: gradientStroke,
-                        borderColor: '#2380f7',
+                        borderColor: '#fe8c71',
                         borderWidth: 2,
                         borderDash: [],
                         borderDashOffset: 0.0,
-                        pointBackgroundColor: '#2380f7',
+                        pointBackgroundColor: '#fe8c71',
                         pointBorderColor: 'rgba(255,255,255,0)',
-                        pointHoverBackgroundColor: '#2380f7',
+                        pointHoverBackgroundColor: '#fe8c71',
                         pointBorderWidth: 20,
                         pointHoverRadius: 4,
                         pointHoverBorderWidth: 15,
@@ -850,7 +850,11 @@ demo = {
             legend: {
                 display: false
             },
-
+            layout: {
+                padding: {
+                    left: 20, right: 20, top: 20, bottom: 20
+                }
+            },
             tooltips: {
                 backgroundColor: '#f5f5f5',
                 titleFontColor: '#333',
@@ -1110,14 +1114,227 @@ demo = {
 
         // });
 
+        /*         var mixedChart = new Chart(ctx, {
+                    data: {
+                        datasets: [{
+                            type: 'line',
+                            label: 'photos_data',
+                            data: [120, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100]
+                        }, {
+                            type: 'line',
+                            label: 'Videos',
+                            data: [80, 30, 20, 60, 85, 60, 75, 60, 90, 80, 110, 100],
+                        }, {
+                            type: 'line',
+                            label: 'Carousel',
+                            data: [20, 10, 15, 10, 5, 20, 15, 10, 10, 80, 110, 100],
+                        }],
+                        labels: ['09/05', '10/05', '11/05', '12/05', '13/05', '14/05', '15/05', '16/05', '17/05', '18/05', '19/05', '20/05']
+                    },
+                    options: options
+                }); */
+
+        var chart_labels = ['09/05', '10/05', '11/05', '12/05', '13/05', '14/05', '15/05', '16/05', '17/05', '18/05', '19/05', '20/05'];
+        var chart_data = [30, 40, 60, 40, 50, 70, 30, 50, 40, 60, 60, 40];
+
+        var ctx = document.getElementById("chartBig1");
+
+        if (ctx) {
+            ctx = ctx.getContext('2d');
+
+            var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+            gradientStroke.addColorStop(1, 'rgba(72,72,176,0.1)');
+            gradientStroke.addColorStop(0.4, 'rgba(72,72,176,0.0)');
+            gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
+            var config = {
+                type: 'line',
+                data: {
+                    labels: chart_labels,
+                    datasets: [{
+                        label: "My First dataset",
+                        fill: true,
+                        backgroundColor: gradientStroke,
+                        borderColor: '#ff643f',
+                        borderWidth: 2,
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        pointBackgroundColor: '#ff643f',
+                        pointBorderColor: 'rgba(255,255,255,0)',
+                        pointHoverBackgroundColor: '#ff643f',
+                        pointBorderWidth: 20,
+                        pointHoverRadius: 4,
+                        pointHoverBorderWidth: 15,
+                        pointRadius: 4,
+                        data: chart_data,
+                    }]
+                },
+                options: gradientChartOptionsConfigurationWithTooltipPurple
+            };
+            var myChartData = new Chart(ctx, config);
+        }
+
 
 
         var chart_labels = ['09/05', '10/05', '11/05', '12/05', '13/05', '14/05', '15/05', '16/05', '17/05', '18/05', '19/05', '20/05'];
-        var chart_data = [120, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100];
+        var chart_data = [30, 40, 60, 40, 50, 70, 30, 50, 40, 60, 60, 40];
+        var chart_data1 = [50, 70, 90, 70, 30, 80, 60, 80, 90, 50, 30, 20];
+        var chart_data2 = [70, 50, 65, 40, 60, 50, 80, 80, 30, 70, 20, 30];
+        var chart_data3 = [20, 90, 60, 30, 90, 40, 20, 80, 50, 30, 50, 40];
+        var chart_data4 = [10, 30, 50, 80, 50, 10, 60, 80, 110, 20, 90, 50];
+
+        var ctx = document.getElementById("chartBig3");
+
+        if (ctx) {
+            ctx = ctx.getContext('2d');
+
+            var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+            gradientStroke.addColorStop(1, 'rgba(72,72,176,0.1)');
+            gradientStroke.addColorStop(0.4, 'rgba(72,72,176,0.0)');
+            gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
+            var config = {
+                type: 'line',
+                data: {
+                    labels: chart_labels,
+                    datasets: [{
+                        label: "My First dataset",
+                        fill: true,
+                        backgroundColor: gradientStroke,
+                        borderColor: '#71feb0',
+                        borderWidth: 2,
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        pointBackgroundColor: '#71feb0',
+                        pointBorderColor: 'rgba(255,255,255,0)',
+                        pointHoverBackgroundColor: '#ff643f',
+                        pointBorderWidth: 20,
+                        pointHoverRadius: 4,
+                        pointHoverBorderWidth: 15,
+                        pointRadius: 4,
+                        data: chart_data,
+                    }, {
+                        label: "My First dataset",
+                        fill: true,
+                        backgroundColor: gradientStroke,
+                        borderColor: '#7178fe',
+                        borderWidth: 2,
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        pointBackgroundColor: '#7178fe',
+                        pointBorderColor: 'rgba(255,255,255,0)',
+                        pointHoverBackgroundColor: '#ff643f',
+                        pointBorderWidth: 20,
+                        pointHoverRadius: 4,
+                        pointHoverBorderWidth: 15,
+                        pointRadius: 4,
+                        data: chart_data1,
+                    }, {
+                        label: "My First dataset",
+                        fill: true,
+                        backgroundColor: gradientStroke,
+                        borderColor: '#fe7171',
+                        borderWidth: 2,
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        pointBackgroundColor: '#fe7171',
+                        pointBorderColor: 'rgba(255,255,255,0)',
+                        pointHoverBackgroundColor: '#ff643f',
+                        pointBorderWidth: 20,
+                        pointHoverRadius: 4,
+                        pointHoverBorderWidth: 15,
+                        pointRadius: 4,
+                        data: chart_data2,
+                    }, {
+                        label: "My First dataset",
+                        fill: true,
+                        backgroundColor: gradientStroke,
+                        borderColor: '#fc71fe',
+                        borderWidth: 2,
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        pointBackgroundColor: '#fc71fe',
+                        pointBorderColor: 'rgba(255,255,255,0)',
+                        pointHoverBackgroundColor: '#ff643f',
+                        pointBorderWidth: 20,
+                        pointHoverRadius: 4,
+                        pointHoverBorderWidth: 15,
+                        pointRadius: 4,
+                        data: chart_data3,
+                    }, {
+                        label: "My First dataset",
+                        fill: true,
+                        backgroundColor: gradientStroke,
+                        borderColor: '#fece71',
+                        borderWidth: 2,
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        pointBackgroundColor: '#fece71',
+                        pointBorderColor: 'rgba(255,255,255,0)',
+                        pointHoverBackgroundColor: '#ff643f',
+                        pointBorderWidth: 20,
+                        pointHoverRadius: 4,
+                        pointHoverBorderWidth: 15,
+                        pointRadius: 4,
+                        data: chart_data4,
+                    }]
+                },
+                options: gradientChartOptionsConfigurationWithTooltipPurple
+            };
+            var myChartData = new Chart(ctx, config);
+        }
 
 
 
-        var ctx = document.getElementById("chartBig1");
+
+        var chart_labels = ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'];
+        var chart_data = [0, 30, 80, 160, 240, 140, 115, 75, 55, 35, 20, 10];
+
+
+
+        var ctx = document.getElementById("individualpostchart");
+
+        if (ctx) {
+            ctx = ctx.getContext('2d');
+
+            var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+            gradientStroke.addColorStop(1, 'rgba(72,72,176,0.1)');
+            gradientStroke.addColorStop(0.4, 'rgba(72,72,176,0.0)');
+            gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
+            var config = {
+                type: 'line',
+                data: {
+                    labels: chart_labels,
+                    datasets: [{
+                        label: "My First dataset",
+                        fill: true,
+                        backgroundColor: gradientStroke,
+                        borderColor: '#ff643f',
+                        borderWidth: 2,
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        pointBackgroundColor: '#ff643f',
+                        pointBorderColor: 'rgba(255,255,255,0)',
+                        pointHoverBackgroundColor: '#ff643f',
+                        pointBorderWidth: 20,
+                        pointHoverRadius: 4,
+                        pointHoverBorderWidth: 15,
+                        pointRadius: 4,
+                        data: chart_data,
+                    }]
+                },
+                options: gradientChartOptionsConfigurationWithTooltipPurple
+            };
+            var myChartData = new Chart(ctx, config);
+        }
+
+        var chart_labels = ['09/05', '10/05', '11/05', '12/05', '13/05', '14/05', '15/05', '16/05', '17/05', '18/05', '19/05', '20/05'];
+        var chart_data = [4, 7, 2, 6, 13, 5, 2, 6, 8, 4, 11, 10];
+
+
+
+        var ctx = document.getElementById("posttypes");
 
         if (ctx) {
             ctx = ctx.getContext('2d');
