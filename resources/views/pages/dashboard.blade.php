@@ -4,215 +4,111 @@
 'titlePage' => __('Dashboard')]
 )
 
+@php
+$stats = [
+    (object) [
+        'name' => 'Impressions',
+        'link' => route('pages.cory.followers'),
+        'id' => 'impressions',
+        'stat' => 'Impression',
+        'type' => 'total',
+        'icon' => 'tim-icons icon-shape-star',
+    ],
+    (object) [
+        'name' => 'Engagements',
+        'link' => route('pages.cory.likes'),
+        'id' => 'likes',
+        'stat' => 'Engagement',
+        'type' => 'total',
+        'icon' => 'tim-icons icon-satisfied',
+    ],
+    (object) [
+        'name' => 'Average Users Activity',
+        'link' => route('pages.cory.comments'),
+        'id' => 'aua',
+        'stat' => 'AUA',
+        'type' => 'percent',
+        'icon' => 'tim-icons icon-tap-02',
+    ],
+    (object) [
+        'name' => 'Profile Actions',
+        'link' => route('pages.cory.posts'),
+        'id' => 'actions',
+        'stat' => 'Post',
+        'type' => 'number',
+        'icon' => 'tim-icons icon-triangle-right-17',
+    ],
+    (object) [
+        'name' => 'Followers',
+        'link' => route('pages.cory.followers'),
+        'id' => 'followers',
+        'stat' => 'Follower',
+        'type' => 'total',
+        'icon' => 'tim-icons icon-single-02',
+    ],
+    (object) [
+        'name' => 'Likes',
+        'link' => route('pages.cory.likes'),
+        'id' => 'likes',
+        'stat' => 'Like',
+        'type' => 'total',
+        'icon' => 'tim-icons icon-heart-2',
+    ],
+    (object) [
+        'name' => 'Comments',
+        'link' => route('pages.cory.comments'),
+        'id' => 'comments',
+        'stat' => 'Comment',
+        'type' => 'number',
+        'icon' => 'tim-icons icon-chat-33',
+    ],
+    (object) [
+        'name' => 'Posts',
+        'link' => route('pages.cory.posts'),
+        'id' => 'posts',
+        'stat' => 'Post',
+        'type' => 'number',
+        'icon' => 'tim-icons icon-molecule-40',
+    ],
+];
+@endphp
+
 @section('content')
   <div class="content">
     <div class="row">
-      <div class="col-lg-3 col-md-6"> {{-- Impressions --}}
-        <div class="card card-stats">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-5">
-                <div class="info-icon text-center icon-warning">
-                  <i class="tim-icons icon-shape-star"></i>
+
+      @foreach ($stats as $stat)
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-5">
+                  <div class="info-icon text-center icon-warning">
+                    <i class="{{ $stat->icon }}"></i>
+                  </div>
                 </div>
-              </div>
-              <div class="col-7">
-                <div class="numbers">
-                  <p class="card-category"><a style="color: #ff6b8a"
-                      href="http://localhost:8000/followers">Impressions</a></p>
-                  <h3 class="card-title"><a style="color: #ff6b8a" href="http://localhost:8000/followers">123,721</a></h3>
+                <div class="col-7">
+                  <div class="numbers">
+                    <a href="{{ $stat->link }}">
+                      <p class="card-category text-dark-pink">{{ $stat->name }}</p>
+                      <h3 id="num-{{ $stat->id }}" data-type="{{ $stat->type }}" class="card-title text-dark-pink">
+                      </h3>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card-footer">
-            <hr>
-            <div class="stats">
-              <i class="tim-icons icon-minimal-up"></i> 18% Impressions Increase
+            <div class="card-footer">
+              <hr>
+              <div class="stats">
+                <i id="dir-{{ $stat->id }}" class="tim-icons icon-minimal-up"></i>
+                <span id="inc-{{ $stat->id }}" data-value="{{ $stat->stat }}"></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6"> {{-- Engagements --}}
-        <div class="card card-stats">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-5">
-                <div class="info-icon text-center icon-warning">
-                  <i class="tim-icons icon-satisfied"></i>
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="numbers">
-                  <p class="card-category"><a style="color: #ff6b8a" href="http://localhost:8000/likes">Engagements</a>
-                  </p>
-                  <h3 class="card-title"><a style="color: #ff6b8a" href="http://localhost:8000/likes">17,941</a></h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <hr>
-            <div class="stats">
-              <i class="tim-icons icon-minimal-up"></i> 28% Engagement Increase
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6"> {{-- Average User Activity --}}
-        <div class="card card-stats">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-5">
-                <div class="info-icon text-center icon-warning">
-                  <i class="tim-icons icon-tap-02"></i>
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="numbers">
-                  <p class="card-category"><a style="color: #ff6b8a" href="http://localhost:8000/comments">Average Users
-                      Activity</a></p>
-                  <h3 class="card-title"><a style="color: #ff6b8a" href="http://localhost:8000/comments">7.45%</a></h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <hr>
-            <div class="stats">
-              <i class="tim-icons icon-minimal-down"></i> 12% AUA Decrease
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6"> {{-- Profile Actions --}}
-        <div class="card card-stats">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-5">
-                <div class="info-icon text-center icon-warning">
-                  <i class="tim-icons icon-triangle-right-17"></i>
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="numbers">
-                  <p class="card-category"><a style="color: #ff6b8a" href="http://localhost:8000/posts">Profile
-                      Actions</a></p>
-                  <h3 class="card-title"><a style="color: #ff6b8a" href="http://localhost:8000/posts">+8</a></h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <hr>
-            <div class="stats">
-              <i class="tim-icons icon-minimal-up"></i> 13% Post Increase
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6"> {{-- Followers --}}
-        <div class="card card-stats">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-5">
-                <div class="info-icon text-center icon-warning">
-                  <i class="tim-icons icon-single-02"></i>
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="numbers">
-                  <p class="card-category"><a style="color: #ff6b8a" href="http://localhost:8000/followers">Followers</a>
-                  </p>
-                  <h3 class="card-title"><a style="color: #ff6b8a" href="http://localhost:8000/followers">3,721</a></h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <hr>
-            <div class="stats">
-              <i class="tim-icons icon-minimal-up"></i> 23% Follower Increase
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6"> {{-- Likes --}}
-        <div class="card card-stats">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-5">
-                <div class="info-icon text-center icon-warning">
-                  <i class="tim-icons icon-heart-2"></i>
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="numbers">
-                  <p class="card-category"><a style="color: #ff6b8a" href="http://localhost:8000/likes">Likes</a></p>
-                  <h3 class="card-title"><a style="color: #ff6b8a" href="http://localhost:8000/likes">14,726</a></h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <hr>
-            <div class="stats">
-              <i class="tim-icons icon-minimal-up"></i> 32% Like Increase
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6"> {{-- Comments --}}
-        <div class="card card-stats">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-5">
-                <div class="info-icon text-center icon-warning">
-                  <i class="tim-icons icon-chat-33"></i>
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="numbers">
-                  <p class="card-category"><a style="color: #ff6b8a" href="http://localhost:8000/comments">Comments</a>
-                  </p>
-                  <h3 class="card-title"><a style="color: #ff6b8a" href="http://localhost:8000/comments">+1,892</a></h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <hr>
-            <div class="stats">
-              <i class="tim-icons icon-minimal-down"></i> 4% Comment Decrease
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6"> {{-- Posts --}}
-        <div class="card card-stats">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-5">
-                <div class="info-icon text-center icon-warning">
-                  <i class="tim-icons icon-molecule-40"></i>
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="numbers">
-                  <p class="card-category"><a style="color: #ff6b8a" href="http://localhost:8000/posts">Posts</a></p>
-                  <h3 class="card-title"><a style="color: #ff6b8a" href="http://localhost:8000/posts">+12</a></h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <hr>
-            <div class="stats">
-              <i class="tim-icons icon-minimal-up"></i> 18% Post Increase
-            </div>
-          </div>
-        </div>
-      </div>
+      @endforeach
+
     </div>
 
     <div class="row">

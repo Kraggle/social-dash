@@ -51,6 +51,7 @@ $yellow: #ffd600 !default;
 $green: #2dce89 !default;
 $teal: #11cdef !default;
 $cyan: #2bffc6 !default;
+$dark-pink: #ff6b8a !default;
 
 $line-height-lg: 1.625rem !default;
 $line-height-sm: 1.5 !default;
@@ -86,7 +87,8 @@ $colors: map-merge(
         "gray": $gray-600,
         "light": $gray-400,
         "lighter": $gray-200,
-        "gray-dark": $gray-800
+        "gray-dark": $gray-800,
+        "dark-pink": $dark-pink
     ),
     $colors
 );
