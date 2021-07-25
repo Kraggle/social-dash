@@ -28,7 +28,7 @@ $stats = [
         'id' => 'aua',
         'stat' => 'AUA',
         'type' => 'percent',
-        'icon' => 'tim-icons icon-tap-02',
+        'icon' => 'fal fa-bullseye-pointer',
     ],
     (object) [
         'name' => 'Engagements',
@@ -36,7 +36,7 @@ $stats = [
         'id' => 'likes',
         'stat' => 'Engagement',
         'type' => 'total',
-        'icon' => 'tim-icons icon-satisfied',
+        'icon' => 'fal fa-comment-alt-smile',
     ],
     (object) [
         'name' => 'Followers',
@@ -44,7 +44,7 @@ $stats = [
         'id' => 'followers',
         'stat' => 'Follower',
         'type' => 'total',
-        'icon' => 'tim-icons icon-single-02',
+        'icon' => 'fal fa-users',
     ],
     (object) [
         'name' => 'Likes',
@@ -52,7 +52,7 @@ $stats = [
         'id' => 'likes',
         'stat' => 'Like',
         'type' => 'total',
-        'icon' => 'tim-icons icon-heart-2',
+        'icon' => 'fal fa-heart',
     ],
     (object) [
         'name' => 'Comments',
@@ -60,7 +60,7 @@ $stats = [
         'id' => 'comments',
         'stat' => 'Comment',
         'type' => 'number',
-        'icon' => 'tim-icons icon-chat-33',
+        'icon' => 'fal fa-comments',
     ],
     (object) [
         'name' => 'Posts',
@@ -68,7 +68,7 @@ $stats = [
         'id' => 'posts',
         'stat' => 'Post',
         'type' => 'number',
-        'icon' => 'tim-icons icon-molecule-40',
+        'icon' => 'fal fa-file-alt',
     ],
 ];
 @endphp
@@ -112,65 +112,67 @@ $stats = [
     </div>
 
     <div class="row">
-      <div class="col-12"> {{-- Performance Chart --}}
+      <div class="col-12">
+
+        {{-- Performance Chart --}}
         <div class="card card-chart">
           <div class="card-header">
             <div class="row">
-              <div class="col-sm-6 text-left">
+              <div class="col-md-4">
                 <h5 class="card-category">Account Engagement</h5>
                 <h2 class="card-title">Performance</h2>
               </div>
-              <div class="col-sm-6">
-                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+              <div class="row col-md-8 align-items-start justify-content-end pr-0">
+                <div class="col-auto btn-group btn-group-toggle pr-0" data-toggle="buttons">
                   <label class="btn btn-sm btn-warning btn-simple active" id="0">
                     <input type="radio" name="options" checked>
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Daily</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-single-02"></i>
+                      <i class="fal fa-calendar-day"></i>
                     </span>
                   </label>
                   <label class="btn btn-sm btn-warning btn-simple" id="1">
                     <input type="radio" class="d-none d-sm-none" name="options">
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Weekly</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-gift-2"></i>
+                      <i class="fal fa-calendar-week"></i>
                     </span>
                   </label>
                   <label class="btn btn-sm btn-warning btn-simple" id="2">
                     <input type="radio" class="d-none" name="options">
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Monthly</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-tap-02"></i>
+                      <i class="fal fa-calendar"></i>
                     </span>
                   </label>
                 </div>
-                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                <div class="col-auto btn-group btn-group-toggle pr-0" data-toggle="buttons">
                   <label class="btn btn-sm btn-warning btn-simple active" id="0">
                     <input type="radio" name="options" checked>
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Followers</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-single-02"></i>
+                      <i class="fal fa-users"></i>
                     </span>
                   </label>
                   <label class="btn btn-sm btn-warning btn-simple" id="1">
                     <input type="radio" class="d-none d-sm-none" name="options">
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Likes</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-gift-2"></i>
+                      <i class="fal fa-heart"></i>
                     </span>
                   </label>
                   <label class="btn btn-sm btn-warning btn-simple" id="2">
                     <input type="radio" class="d-none" name="options">
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Comments</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-tap-02"></i>
+                      <i class="fal fa-comments"></i>
                     </span>
                   </label>
                   <label class="btn btn-sm btn-warning btn-simple" id="3">
                     <input type="radio" class="d-none" name="options">
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Posts</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-tap-02"></i>
+                      <i class="fal fa-file-alt"></i>
                     </span>
                   </label>
                 </div>

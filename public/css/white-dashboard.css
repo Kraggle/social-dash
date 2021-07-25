@@ -21123,6 +21123,7 @@ textarea.form-control.underline:active {
 }
 
 .nav-pills.nav-pills:not(.flex-column) .nav-item:not(:last-child) .nav-link {
+  margin-right: 10px;
   margin-bottom: 5px;
 }
 
@@ -33129,6 +33130,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-stats .info-icon {
+  position: relative;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -33139,9 +33141,12 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-stats .info-icon i {
+  position: absolute;
   color: #ffffff;
   font-size: 1.7em;
-  padding: 14px 13px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .card-stats .info-icon.icon-danger {
