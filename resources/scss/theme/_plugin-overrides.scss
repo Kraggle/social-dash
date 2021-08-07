@@ -1,0 +1,12 @@
+.fileinput {
+    position: relative;
+    width: 200px;
+
+    .thumbnail {
+        margin: 10px;
+
+        &.img-circle {
+            border-radius: 50%;
+        }
+    }
+}

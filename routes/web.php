@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ Route::middleware(['auth', 'subscribed'])->group(function () {
     Route::resource('role', 'RoleController', ['except' => ['show', 'destroy']]);
     Route::resource('user', 'UserController', ['except' => ['show']]);
     Route::resource('default', 'DefaultsController', ['except' => ['show']]);
-    Route::resource('post', 'PostsController', ['except' => ['show']]);
+    // Route::resource('post', 'PostsController', ['except' => ['show']]);
     Route::resource('team', 'TeamController', ['except' => ['show']]);
     Route::resource('package', 'PackageController', ['except' => ['show', 'destroy']]);
 
@@ -51,8 +51,25 @@ Route::middleware(['auth', 'subscribed'])->group(function () {
     Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
     Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 
-    // Route::get('rtl-support', ['as' => 'page.rtl-support', 'uses' => 'ExamplePagesController@rtlSupport']);
-    Route::get('timeline', ['as' => 'page.timeline', 'uses' => 'ExamplePagesController@timeline']);
+    // Pages
+    Route::get('posts', ['as' => 'pages.posts', 'uses' => 'PagesController@posts']);
+    Route::get('likes', ['as' => 'pages.likes', 'uses' => 'PagesController@likes']);
+    Route::get('comments', ['as' => 'pages.comments', 'uses' => 'PagesController@comments']);
+    Route::get('followers', ['as' => 'pages.followers', 'uses' => 'PagesController@followers']);
+    Route::get('demographics', ['as' => 'pages.demographics', 'uses' => 'PagesController@demographics']);
+
+    Route::get('hashtags', ['as' => 'pages.hashtags', 'uses' => 'PagesController@hashtags']);
+    Route::get('hashtag-generator', ['as' => 'pages.hashtag-generator', 'uses' => 'PagesController@hashtagGenerator']);
+
+    Route::get('post', ['as' => 'pages.post', 'uses' => 'PagesController@post']);
+    Route::get('compare-posts', ['as' => 'pages.compare-posts', 'uses' => 'PagesController@comparePosts']);
+    Route::get('single-profile', ['as' => 'pages.single-profile', 'uses' => 'PagesController@single-profile']);
+
+    Route::get('scheduling', ['as' => 'pages.scheduling', 'uses' => 'PagesController@scheduling']);
+    Route::get('reporting', ['as' => 'pages.reporting', 'uses' => 'PagesController@reporting']);
+    Route::get('support', ['as' => 'page.support', 'uses' => 'PagesController@support']);
+
+    // Example Pages
     Route::get('widgets', ['as' => 'page.widgets', 'uses' => 'ExamplePagesController@widgets']);
     Route::get('charts', ['as' => 'page.charts', 'uses' => 'ExamplePagesController@charts']);
     Route::get('calendar', ['as' => 'page.calendar', 'uses' => 'ExamplePagesController@calendar']);
@@ -78,18 +95,5 @@ Route::middleware(['auth', 'subscribed'])->group(function () {
     Route::get('fullscreen-maps', ['as' => 'page.fullscreen_maps', 'uses' => 'MapPagesController@fullscreenMaps']);
     Route::get('vector-maps', ['as' => 'page.vector_maps', 'uses' => 'MapPagesController@vectorMaps']);
 
-    Route::get('auth', ['as' => 'test.auth', 'uses' => 'TestPagesController@auth']);
-
-    Route::get('likes', ['as' => 'pages.cory.likes', 'uses' => 'CoryPagesController@likes']);
-    Route::get('comments', ['as' => 'pages.cory.comments', 'uses' => 'CoryPagesController@comments']);
-    Route::get('posts', ['as' => 'pages.cory.posts', 'uses' => 'CoryPagesController@posts']);
-    Route::get('scheduling', ['as' => 'pages.cory.scheduling', 'uses' => 'CoryPagesController@scheduling']);
-    Route::get('followers', ['as' => 'pages.cory.followers', 'uses' => 'CoryPagesController@followers']);
-    Route::get('demographics', ['as' => 'pages.cory.demographics', 'uses' => 'CoryPagesController@demographics']);
-    Route::get('reporting', ['as' => 'pages.cory.reporting', 'uses' => 'CoryPagesController@reporting']);
-    Route::get('hashtags', ['as' => 'pages.cory.hashtags', 'uses' => 'CoryPagesController@hashtags']);
-    Route::get('hashtag_generator', ['as' => 'pages.cory.hashtag_generator', 'uses' => 'CoryPagesController@hashtag_generator']);
-    Route::get('individualpost', ['as' => 'pages.cory.individualpost', 'uses' => 'CoryPagesController@individualpost']);
-    Route::get('compareposts', ['as' => 'pages.cory.compareposts', 'uses' => 'CoryPagesController@compareposts']);
-    Route::get('singleprofile', ['as' => 'pages.cory.singleprofile', 'uses' => 'CoryPagesController@singleprofile']);
+    // Route::get('rtl-support', ['as' => 'page.rtl-support', 'uses' => 'ExamplePagesController@rtlSupport']);
 });

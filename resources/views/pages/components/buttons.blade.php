@@ -9,12 +9,11 @@
             <h4 class="card-title">Pick your Color</h4>
           </div>
           <div class="card-body">
-            <button class="btn">Default</button>
+            <button class="btn btn-primary">Default</button>
             <button class="btn btn-primary">Primary</button>
             <button class="btn btn-info">Info</button>
             <br>
-            <button class="btn btn-success animation-on-hover" type="button" rel="tooltip"
-              data-original-title="I'm special!" data-placement="bottom">Success</button>
+            <button class="btn btn-success animation-on-hover" type="button" rel="tooltip" data-original-title="I'm special!" data-placement="bottom">Success</button>
             <button class="btn btn-warning">Warning</button>
             <button class="btn btn-danger">Danger</button>
           </div>
@@ -24,22 +23,22 @@
             <h4 class="card-title">Buttons with Label</h4>
           </div>
           <div class="card-body">
-            <button class="btn">
-              <i class="tim-icons icon-minimal-left"></i> Left
+            <button class="btn btn-primary">
+              <i class="fal fa-chevron-left"></i> Left
             </button>
-            <button class="btn">
+            <button class="btn btn-primary">
               Right
-              <i class="tim-icons icon-minimal-right"></i>
+              <i class="fal fa-chevron-right"></i>
             </button>
             <button class="btn btn-info">
-              <i class="tim-icons icon-alert-circle-exc"></i> Info
+              <i class="fal fa-info-circle"></i> Info
             </button>
             <br>
             <button class="btn btn-success">
-              <i class="tim-icons icon-check-2"></i> Success
+              <i class="fal fa-check"></i> Success
             </button>
             <button class="btn btn-warning">
-              <i class="tim-icons icon-time-alarm"></i> Warning
+              <i class="fal fa-alarm-clock"></i> Warning
             </button>
             <button class="btn btn-danger">
               <i class="fal fa-trash-alt"></i> Danger
@@ -66,10 +65,10 @@
             <button class="btn btn-primary">Default</button>
             <button class="btn btn-primary btn-round">round</button>
             <button class="btn btn-primary btn-round">
-              <i class="tim-icons icon-heart-2"></i> with icon
+              <i class="fal fa-heart"></i> with icon
             </button>
             <button class="btn btn-primary btn-round btn-icon">
-              <i class="tim-icons icon-heart-2"></i>
+              <i class="fal fa-heart"></i>
             </button>
             <button class="btn btn-primary btn-simple">
               simple
@@ -107,7 +106,7 @@
               <ul class="pagination">
                 <li class="page-item">
                   <a class="page-link" href="#link" aria-label="Previous">
-                    <span aria-hidden="true"><i class="tim-icons icon-double-left" aria-hidden="true"></i></span>
+                    <span aria-hidden="true"><i class="fal fa-chevron-double-left" aria-hidden="true"></i></span>
                   </a>
                 </li>
                 <li class="page-item">
@@ -121,7 +120,7 @@
                 </li>
                 <li class="page-item">
                   <a class="page-link" href="#link" aria-label="Next">
-                    <span aria-hidden="true"><i class="tim-icons icon-double-right" aria-hidden="true"></i></span>
+                    <span aria-hidden="true"><i class="fal fa-chevron-double-right" aria-hidden="true"></i></span>
                   </a>
                 </li>
               </ul>

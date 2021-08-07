@@ -6,7 +6,6 @@ use App\Models\Team;
 use App\Models\User;
 use App\Models\RegisterToken;
 use App\Helpers\AppHelper;
-use App\Traits\StripeFunctions;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -27,7 +26,6 @@ class RegisterController extends Controller {
     */
 
     use RegistersUsers;
-    use StripeFunctions;
 
     /**
      * Where to redirect users after registration.

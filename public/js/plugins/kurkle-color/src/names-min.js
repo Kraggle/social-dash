@@ -1,0 +1,1 @@
+import e from"./packed.js";let r;export function nameParse(t){r||(r=e(),r.transparent=[0,0,0,0]);const n=r[t.toLowerCase()];return n&&{r:n[0],g:n[1],b:n[2],a:4===n.length?n[3]:255}}

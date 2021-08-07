@@ -1,0 +1,1 @@
+import r from"./src/index.js";export default r;

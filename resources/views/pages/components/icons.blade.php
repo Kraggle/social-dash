@@ -15,7 +15,7 @@
             <div class="row">
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-alert-circle-exc"></i>
+                  <i class="fal fa-info-circle"></i>
                   <p>icon-alert-circle-exc</p>
                 </div>
               </div>
@@ -57,7 +57,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-bag-16"></i>
+                  <i class="fal fa-shopping-bag"></i>
                   <p>icon-bag-16</p>
                 </div>
               </div>
@@ -75,7 +75,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-bell-55"></i>
+                  <i class="fal fa-bell"></i>
                   <p>icon-bell-55</p>
                 </div>
               </div>
@@ -93,7 +93,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-double-right"></i>
+                  <i class="fal fa-chevron-double-right"></i>
                   <p>icon-double-right</p>
                 </div>
               </div>
@@ -105,7 +105,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-bullet-list-67"></i>
+                  <i class="fal fa-list-ul"></i>
                   <p>icon-bullet-list-67</p>
                 </div>
               </div>
@@ -147,7 +147,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-chart-bar-32"></i>
+                  <i class="fal fa-chart-bar"></i>
                   <p>icon-chart-bar-32</p>
                 </div>
               </div>
@@ -165,7 +165,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-check-2"></i>
+                  <i class="fal fa-check"></i>
                   <p>icon-check-2</p>
                 </div>
               </div>
@@ -219,7 +219,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-gift-2"></i>
+                  <i class="fal fa-gift-2"></i>
                   <p>icon-gift-2</p>
                 </div>
               </div>
@@ -237,7 +237,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-heart-2"></i>
+                  <i class="fal fa-heart"></i>
                   <p>icon-heart-2</p>
                 </div>
               </div>
@@ -249,7 +249,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-double-left"></i>
+                  <i class="fal fa-chevron-double-left"></i>
                   <p>icon-double-left</p>
                 </div>
               </div>
@@ -309,13 +309,13 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-minimal-left"></i>
+                  <i class="fal fa-chevron-left"></i>
                   <p>icon-minimal-left</p>
                 </div>
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-minimal-right"></i>
+                  <i class="fal fa-chevron-right"></i>
                   <p>icon-minimal-right</p>
                 </div>
               </div>
@@ -369,7 +369,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-planet"></i>
+                  <i class="fal fa-planet-ringed"></i>
                   <p>icon-planet</p>
                 </div>
               </div>
@@ -399,19 +399,19 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-send"></i>
+                  <i class="fal fa-paper-plane"></i>
                   <p>icon-send</p>
                 </div>
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-settings-gear-63"></i>
+                  <i class="fal fa-cog"></i>
                   <p>icon-settings-gear-63</p>
                 </div>
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-settings"></i>
+                  <i class="fal fa-tools"></i>
                   <p>icon-settings</p>
                 </div>
               </div>
@@ -423,7 +423,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-single-02"></i>
+                  <i class="fal fa-user"></i>
                   <p>icon-single-02</p>
                 </div>
               </div>
@@ -483,7 +483,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-time-alarm"></i>
+                  <i class="fal fa-alarm-clock"></i>
                   <p>icon-time-alarm</p>
                 </div>
               </div>
@@ -573,7 +573,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-shape-star"></i>
+                  <i class="fal fa-star"></i>
                   <p>icon-shape-star</p>
                 </div>
               </div>
@@ -585,7 +585,7 @@
               </div>
               <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                 <div class="font-icon-detail">
-                  <i class="tim-icons icon-triangle-right-17"></i>
+                  <i class="fal fa-play"></i>
                   <p>icon-triangle-right-17</p>
                 </div>
               </div>

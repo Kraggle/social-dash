@@ -29,7 +29,7 @@ $from = (object) $from;
 @endphp
 
 @section($yield)
-  <select class="selectpicker" data-style="btn btn-primary" id="{{ $id }}" name="{{ $name }}"
+  <select class="selectpicker" data-style="btn" id="{{ $id }}" name="{{ $name }}"
     {{ $disabled ? 'disabled' : '' }} {{ $readonly ? 'readonly' : '' }} {{ AppHelper::makeAttrs($attrs) }}>
     @if (isset($from->array) && isset($from->value) && isset($from->display))
       @foreach ($from->array as $option)

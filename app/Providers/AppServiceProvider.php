@@ -4,13 +4,21 @@ namespace App\Providers;
 
 use App\Models\Team;
 use App\Models\User;
-use App\Helpers\AppHelper;
 use Laravel\Cashier\Cashier;
 use App\Observers\UserObserver;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register() {
+        //
+    }
+
     /**
      * Bootstrap any application services.
      *
@@ -23,14 +31,5 @@ class AppServiceProvider extends ServiceProvider {
         Blade::extend(function ($value) {
             return preg_replace('/\@(define|php)\((.+)\)/', '<?php ${2}; ?>', $value);
         });
-    }
-
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register() {
-        //
     }
 }

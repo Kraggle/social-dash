@@ -1,0 +1,2 @@
+[07-Aug-2021 12:00:08 UTC] PHP Warning:  require(E:\laragon\www\social-dashboard\public/../vendor/autoload.php): failed to open stream: No such file or directory in E:\laragon\www\social-dashboard\public\index.php on line 34
+[07-Aug-2021 12:00:08 UTC] PHP Fatal error:  require(): Failed opening required 'E:\laragon\www\social-dashboard\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dashboard\public\index.php on line 34

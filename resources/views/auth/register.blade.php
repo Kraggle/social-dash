@@ -15,13 +15,14 @@ if ($token) {
 @endphp
 
 @section('content')
-  <div class="content d-flex align-items-center" style="height:100vh">
+  <div class="content d-flex align-items-center">
     <div class="container">
-      <div class="col-md-7 mr-auto ml-auto">
+      <div class="mx-auto" style="width:618px; max-width:calc(100vw - 80px);">
         @if ($valid === null || $valid)
-          <div class="card card-register card-white">
-            <div class="card-header">
-              <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Card image">
+
+          <div class="card card-auth">
+            <div class="card-header header-image">
+              <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Card image">
               <h4 class="card-title">{{ __('Register') }}</h4>
             </div>
             <div class="card-body">

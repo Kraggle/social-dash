@@ -8,45 +8,27 @@ Management')])
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">{{ __('Posts') }}</h4>
+              <h4 class="card-title d-inline-block">{{ __('Posts') }}</h4>
+              @can('create', App\Models\Post::class)
+                <a href="{{ route('post.create') }}" class="btn btn-sm btn-primary float-end">
+                  {{ __('Add post') }}
+                </a>
+              @endcan
             </div>
             <div class="card-body">
-              @can('create', App\Models\Post::class)
-                <div class="row">
-                  <div class="col-12 text-right mb-3">
-                    <a href="{{ route('post.create') }}" class="btn btn-sm btn-primary">{{ __('Add post') }}</a>
-                  </div>
-                </div>
-              @endcan
               <div class="table-responsive">
-                <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
+                <table id="datatable" class="table table-striped table-no-bordered table-hover" style="display:none" data-search-placeholder="Search posts...">
                   <thead class="text-primary">
-                    <th>
-                      {{ __('Id') }}
-                    </th>
-                    <th>
-                      {{ __('Description') }}
-                    </th>
-                    <th>
-                      {{ __('Picture') }}
-                    </th>
-                    <th>
-                      {{ __('Hashtags') }}
-                    </th>
-                    <th>
-                      {{ __('Post at') }}
-                    </th>
-                    <th>
-                      {{ __('Account') }}
-                    </th>
-                    <th>
-                      {{ __('Team') }}
-                    </th>
-                    <th>
-                      {{ __('Added On') }}
-                    </th>
+                    <th>{{ __('Id') }}</th>
+                    <th>{{ __('Description') }}</th>
+                    <th>{{ __('Picture') }}</th>
+                    <th>{{ __('Hashtags') }}</th>
+                    <th>{{ __('Post at') }}</th>
+                    <th>{{ __('Account') }}</th>
+                    <th>{{ __('Team') }}</th>
+                    <th>{{ __('Added On') }}</th>
                     @can('manage-posts', App\Models\User::class)
-                      <th class="text-right">
+                      <th class="text-end dt-nosort">
                         {{ __('Actions') }}
                       </th>
                     @endcan
@@ -54,44 +36,27 @@ Management')])
                   <tbody>
                     @foreach ($posts as $post)
                       <tr>
-                        <td>
-                          {{ $post->id }}
-                        </td>
-                        <td>
-                          {{ $post->description }}
-                        </td>
-                        <td>
-                          {{ $post->picture }}
-                        </td>
-                        <td>
-                          {{ $post->hashtags }}
-                        </td>
-                        <td>
-                          {{ $post->post_at }}
-                        </td>
-                        <td>
-                          {{ $post->account }}
-                        </td>
-                        <td>
-                          {{ $post->team }}
-                        </td>
-                        <td>
-                          {{ $post->created_at->format('d-m-Y') }}
-                        </td>
+                        <td>{{ $post->id }}</td>
+                        <td>{{ $post->description }}</td>
+                        <td>{{ $post->picture }}</td>
+                        <td>{{ $post->hashtags }}</td>
+                        <td>{{ $post->post_at }}</td>
+                        <td>{{ $post->account }}</td>
+                        <td>{{ $post->team }}</td>
+                        <td>{{ $post->created_at->format('d-m-Y') }}</td>
                         @can('manage-posts', App\Models\User::class)
-                          <td class="td-actions text-right">
+                          <td class="td-actions text-end">
                             <form action="{{ route('post.destroy', $post) }}" method="post">
                               @csrf
                               @method('delete')
 
                               @can('update', $post)
-                                <a href="{{ route('post.edit', $post) }}"
-                                  class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                                <a href="{{ route('post.edit', $post) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
+                                  <i class="fal fa-pencil-alt"></i>
+                                </a>
                               @endcan
                               @if (auth()->user()->can('remove', $post))
-                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove"
-                                  data-original-title="" title=""
-                                  onclick="confirm('{{ __('Are you sure you want to delete this post?') }}') ? this.parentElement.submit() : ''">
+                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
                                   <i class="fal fa-trash-alt"></i>
                                 </button>
                               @endif
@@ -112,25 +77,5 @@ Management')])
 @endsection
 
 @push('js')
-  <script>
-    $(document).ready(function() {
-      $('#datatables').fadeIn(1100);
-      $('#datatables').DataTable({
-        "pagingType": "full_numbers",
-        "lengthMenu": [
-          [10, 25, 50, -1],
-          [10, 25, 50, "All"]
-        ],
-        responsive: true,
-        language: {
-          search: "_INPUT_",
-          searchPlaceholder: "Search accounts",
-        },
-        "columnDefs": [{
-          "orderable": false,
-          "targets": 3
-        }, ],
-      });
-    });
-  </script>
+  <script type="module" src="{{ asset('js') }}/pages/datatable-only.js"></script>
 @endpush

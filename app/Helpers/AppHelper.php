@@ -34,6 +34,10 @@ class AppHelper {
         return $value == $other ? ' selected' : '';
     }
 
+    public static function log(...$values) {
+        AppHelper::print($values);
+    }
+
     public static function print(...$values) {
         foreach ($values as $value) {
             if (in_array(gettype($value), ['array', 'object', 'boolean']))

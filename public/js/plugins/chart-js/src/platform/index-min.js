@@ -1,0 +1,1 @@
+import{_isDomSupported as r}from"../helpers/index.js";import o from"./platform.base.js";import e from"./platform.basic.js";import f from"./platform.dom.js";export function _detectPlatform(o){return!r()||"undefined"!=typeof OffscreenCanvas&&o instanceof OffscreenCanvas?e:f}export{o as BasePlatform,e as BasicPlatform,f as DomPlatform};

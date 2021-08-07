@@ -1,0 +1,242 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    line-height: $headings-line-height;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $font-family-base;
+}
+.card {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: $dark-states;
+    }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $font-weight-normal;
+    color: $dark-states;
+}
+
+a {
+    color: $primary-states;
+    font-weight: $font-weight-light;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $primary;
+    }
+}
+h1,
+.h1 {
+    line-height: 1.05;
+    margin-bottom: $margin-base-vertical * 2;
+
+    small {
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        opacity: 0.8;
+    }
+}
+h2,
+.h2 {
+    margin-bottom: $margin-base-vertical * 2;
+    line-height: 1.2;
+}
+h3,
+.h3 {
+    margin-bottom: $margin-base-vertical * 2;
+    line-height: 1.4em;
+}
+h4,
+.h4 {
+    line-height: 1.45em;
+    margin-bottom: $margin-base-vertical;
+
+    & + .category,
+    &.title + .category {
+        margin-top: -10px;
+    }
+}
+h5,
+.h5 {
+    line-height: 1.4em;
+    margin-bottom: 15px;
+}
+h6,
+.h6 {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+}
+p {
+    color: $dark-states;
+    margin-bottom: 5px;
+
+    &.description {
+        font-size: 1.14em;
+    }
+}
+
+.title {
+    font-weight: $font-weight-bold;
+    &.title-up {
+        text-transform: uppercase;
+
+        a {
+            color: $black;
+            text-decoration: none;
+        }
+    }
+    & + .category {
+        margin-top: -10px;
+    }
+}
+
+.description,
+.card-description,
+.footer-big p,
+.card .footer .stats {
+    color: $gray-800;
+    font-weight: $font-weight-light;
+}
+.category,
+.card-category {
+    text-transform: capitalize;
+    font-weight: $font-weight-normal;
+    color: rgba($white, 0.6);
+    font-size: $font-size-sm;
+}
+
+.card-category {
+    font-size: $font-size-sm;
+}
+
+.blockquote {
+    border-left: none;
+    border: 1px solid $default;
+    padding: 20px;
+    font-size: $blockquote-font-size;
+    line-height: 1.8;
+
+    small {
+        color: $default;
+        font-size: $font-size-sm;
+        text-transform: uppercase;
+    }
+
+    &.blockquote-primary {
+        border-color: $primary;
+        color: $primary;
+
+        small {
+            color: $primary;
+        }
+    }
+
+    &.blockquote-danger {
+        border-color: $danger;
+        color: $danger;
+
+        small {
+            color: $danger;
+        }
+    }
+
+    &.blockquote-white {
+        border-color: $opacity-8;
+        color: $white;
+
+        small {
+            color: $opacity-8;
+        }
+    }
+}
+
+ul li,
+ol li {
+    color: $dark-states;
+}
+
+pre {
+    color: $dark-states;
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+}
+
+.fz-base {
+    font-size: $font-size-base;
+}
+
+.fz-xl {
+    font-size: $font-size-xl;
+}
+
+.fz-lg {
+    font-size: $font-size-lg;
+}
+
+.fz-sm {
+    font-size: $font-size-sm;
+}
+
+.fz-xs {
+    font-size: $font-size-xs;
+}
+
+.fw-light {
+    font-weight: $font-weight-light;
+}
+
+.fw-normal {
+    font-weight: $font-weight-normal;
+}
+
+.fw-bold {
+    font-weight: $font-weight-bold;
+}
+
+.fw-bolder {
+    font-weight: $font-weight-extra-bold;
+}
+
+@each $color, $value in $theme-colors {
+    @if $emphasized-link-hover-darken-percentage != 0 {
+        a.text-#{$color} {
+            &:hover,
+            &:focus {
+                color: darken(
+                    $value,
+                    $emphasized-link-hover-darken-percentage
+                ) !important;
+            }
+        }
+    }
+}

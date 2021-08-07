@@ -14,7 +14,7 @@
               <div class="card-header row">
                 <h4 class="card-title col-md-6">{{ __('Team') }}</h4>
 
-                <div class="col-md-6 mb-3 text-right">
+                <div class="col-md-6 mb-3 text-end">
                   <a href="{{ route('team.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
                 </div>
               </div>
@@ -22,7 +22,7 @@
 
                 {{-- name --}}
                 <div class="row">
-                  <label class=" col-sm-2 pr-0 col-form-label text-right" for="input-name">
+                  <label class=" col-sm-2 pe-0 col-form-label text-end" for="input-name">
                     {{ __('Name') }}</label>
                   <div class="col-sm-8">
                     @include('forms.text', ['options' => [
@@ -37,7 +37,7 @@
 
                 {{-- package_id --}}
                 <div class="row">
-                  <label class="col-sm-2 pr-0 col-form-label text-right"
+                  <label class="col-sm-2 pe-0 col-form-label text-end"
                     for="select-package-id">{{ __('Package') }}</label>
                   <div class="col-sm-8">
                     @include('forms.select', ['options' => [
@@ -54,8 +54,8 @@
                 </div>
 
               </div>
-              <div class="card-footer ml-auto mr-auto">
-                <button type="submit" class="btn">{{ __('Save') }}</button>
+              <div class="card-footer mx-auto">
+                <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
               </div>
             </div>
           </form>

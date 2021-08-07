@@ -10,25 +10,21 @@ Management')])
             {{-- Account management - admin only --}}
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title">{{ __('Accounts') }}</h4>
+                <h4 class="card-title d-inline-block">{{ __('Accounts') }}</h4>
+                @can('create', App\Models\Account::class)
+                  <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary float-end">{{ __('Add account') }}</a>
+                @endcan
               </div>
               <div class="card-body">
-                @can('create', App\Models\Account::class)
-                  <div class="row">
-                    <div class="col-12 text-right mb-3">
-                      <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary">{{ __('Add account') }}</a>
-                    </div>
-                  </div>
-                @endcan
                 <div class="table-responsive">
-                  <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
+                  <table id="datatable" class="table table-striped table-no-bordered table-hover" style="display:none" data-search-placeholder="Search accounts...">
                     <thead class="text-primary">
                       <th>{{ __('Username') }}</th>
                       <th>{{ __('Team') }}</th>
                       <th>{{ __('Active') }}</th>
                       <th>{{ __('Added On') }}</th>
                       @can('manage-accounts', App\Models\User::class)
-                        <th class="text-right">{{ __('Actions') }}</th>
+                        <th class="text-end dt-nosort">{{ __('Actions') }}</th>
                       @endcan
                     </thead>
                     <tbody>
@@ -37,30 +33,23 @@ Management')])
                         @php $settings = $account->getAllSettings(); @endphp
 
                         <tr>
-                          <td>
-                            {{ '@' . $account->username }}
-                          </td>
-                          <td>
-                            {{ $account->team->name ?? '' }}
-                          </td>
-                          <td>
-                            {{ $settings->active->value ? 'true' : 'false' }}
-                          </td>
-                          <td>
-                            {{ $account->created_at->format('d-m-Y') }}
-                          </td>
+                          <td>{{ '@' . $account->username }}</td>
+                          <td>{{ $account->team->name ?? '' }}</td>
+                          <td>{{ $settings->active->value ? 'true' : 'false' }}</td>
+                          <td>{{ $account->created_at->format('d-m-Y') }}</td>
                           @can('manage-accounts', App\Models\User::class)
-                            <td class="td-actions text-right">
+                            <td class="td-actions text-end">
                               <form action="{{ route('account.destroy', $account) }}" method="post">
                                 @csrf
                                 @method('delete')
 
                                 @can('update', $account)
-                                  <a href="{{ route('account.edit', $account) }}"
-                                    class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                                  <a href="{{ route('account.edit', $account) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
+                                    <i class="fal fa-pencil-alt"></i>
+                                  </a>
                                 @endcan
                                 @if (auth()->user()->can('remove', $account))
-                                  <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
+                                  <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
                                     <i class="fal fa-trash-alt"></i>
                                   </button>
                                 @endif
@@ -80,24 +69,22 @@ Management')])
             @define($accounts = $team->accounts)
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title">{{ __('Instagram Accounts') }}</h4>
+                <h4 class="card-title d-inline-block">{{ __('Instagram Accounts') }}</h4>
+                @can('add-account', $team)
+                  <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary float-end">
+                    {{ __('Add account') }}
+                  </a>
+                @endcan
               </div>
               <div class="card-body">
-                @can('add-account', $team)
-                  <div class="row">
-                    <div class="col-12 text-right mb-3">
-                      <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary">{{ __('Add account') }}</a>
-                    </div>
-                  </div>
-                @endcan
                 <div class="table-responsive">
-                  <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
-                    <thead class="text-primary">
+                  <table id="datatable" class="table table-striped table-no-bordered table-hover" style="display:none">
+                    <thead class="text-primary" data-search-placeholder="Search accounts...">
                       <th>{{ __('Username') }}</th>
                       <th>{{ __('Cost') }}</th>
                       <th>{{ __('Active') }}</th>
                       <th>{{ __('Added On') }}</th>
-                      <th class="text-right">{{ __('Actions') }}</th>
+                      <th class="text-end dt-nosort">{{ __('Actions') }}</th>
                     </thead>
                     <tbody>
                       @foreach ($accounts as $account)
@@ -116,19 +103,18 @@ Management')])
                           <td>£{{ number_format($cost, 2) }} pm</td>
                           <td>{{ $team->subscribed($account->username) ? 'true' : 'false' }}</td>
                           <td>{{ $account->created_at->format('d-m-Y') }}</td>
-                          <td class="td-actions text-right">
+                          <td class="td-actions text-end">
                             <form action="{{ route('account.destroy', $account) }}" method="post">
                               @csrf
                               @method('delete')
 
                               @can('edit-account', $team)
-                                <a href="{{ route('account.edit', $account) }}"
-                                  class="btn btn-link btn-warning btn-icon btn-sm edit">
+                                <a href="{{ route('account.edit', $account) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-toggle="tooltip" title="{{ __('Edit') }}">
                                   <i class="fal fa-pencil-alt"></i>
                                 </a>
                               @endcan
                               @can('remove-account', $team)
-                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
+                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert" data-toggle="tooltip" title="{{ __('Delete') }}">
                                   <i class="fal fa-trash-alt"></i>
                                 </button>
                               @endcan
@@ -151,25 +137,5 @@ Management')])
 @endsection
 
 @push('js')
-  <script>
-    $(document).ready(function() {
-      $('#datatables').fadeIn(1100);
-      $('#datatables').DataTable({
-        "pagingType": "full_numbers",
-        "lengthMenu": [
-          [10, 25, 50, -1],
-          [10, 25, 50, "All"]
-        ],
-        responsive: true,
-        language: {
-          search: "_INPUT_",
-          searchPlaceholder: "Search accounts",
-        },
-        "columnDefs": [{
-          "orderable": false,
-          "targets": 3
-        }, ],
-      });
-    });
-  </script>
+  <script type="module" src="{{ asset('js') }}/pages/datatable-only.js"></script>
 @endpush

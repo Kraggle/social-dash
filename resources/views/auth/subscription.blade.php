@@ -17,8 +17,8 @@ $prev = '';
 @endphp
 
 @section('content')
-  <div class="content" style="height:100vh">
-    <div class="col-md-8 mr-auto ml-auto">
+  <div class="content">
+    <div class="col-md-8 mx-auto">
 
       <h1 class="fw-bold text-center">{{ __('Start with a 7 day free trial!') }}</h1>
       <p class="text-center sub-text">
@@ -136,38 +136,34 @@ $prev = '';
                   <div class="col-sm-12">
                     <label for="">{{ __('Card Number') }}</label>
                     <div class="form-group d-flex">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="fal fa-credit-card"></i>
-                        </div>
+                      <div class="input-group-text">
+                        <i class="fal fa-credit-card"></i>
                       </div>
                       <div class="form-control" id="number-element">
                       </div>
-                      <div class="input-group-append">
-                        <div class="input-group-cards">
+                      <div class="input-group-cards">
+                        <img class="card-icon"
+                          src="https://js.stripe.com/v3/fingerprinted/img/visa-365725566f9578a9589553aa9296d178.svg"
+                          alt="visa">
+                        <img class="card-icon"
+                          src="https://js.stripe.com/v3/fingerprinted/img/mastercard-4d8844094130711885b5e41b28c9848f.svg"
+                          alt="mastercard">
+                        <img class="card-icon"
+                          src="https://js.stripe.com/v3/fingerprinted/img/amex-a49b82f46c5cd6a96a6e418a6ca1717c.svg"
+                          alt="amex">
+                        <div class="img-rotator">
+                          <img class="card-icon hidden"
+                            src="https://js.stripe.com/v3/fingerprinted/img/discover-ac52cd46f89fa40a29a0bfb954e33173.svg"
+                            alt="discover">
+                          <img class="card-icon hidden"
+                            src="https://js.stripe.com/v3/fingerprinted/img/jcb-271fd06e6e7a2c52692ffa91a95fb64f.svg"
+                            alt="jcb">
                           <img class="card-icon"
-                            src="https://js.stripe.com/v3/fingerprinted/img/visa-365725566f9578a9589553aa9296d178.svg"
-                            alt="visa">
-                          <img class="card-icon"
-                            src="https://js.stripe.com/v3/fingerprinted/img/mastercard-4d8844094130711885b5e41b28c9848f.svg"
-                            alt="mastercard">
-                          <img class="card-icon"
-                            src="https://js.stripe.com/v3/fingerprinted/img/amex-a49b82f46c5cd6a96a6e418a6ca1717c.svg"
-                            alt="amex">
-                          <div class="img-rotator">
-                            <img class="card-icon hidden"
-                              src="https://js.stripe.com/v3/fingerprinted/img/discover-ac52cd46f89fa40a29a0bfb954e33173.svg"
-                              alt="discover">
-                            <img class="card-icon hidden"
-                              src="https://js.stripe.com/v3/fingerprinted/img/jcb-271fd06e6e7a2c52692ffa91a95fb64f.svg"
-                              alt="jcb">
-                            <img class="card-icon"
-                              src="https://js.stripe.com/v3/fingerprinted/img/diners-fbcbd3360f8e3f629cdaa80e93abdb8b.svg"
-                              alt="diners">
-                            <img class="card-icon hidden"
-                              src="https://js.stripe.com/v3/fingerprinted/img/unionpay-8a10aefc7295216c338ba4e1224627a1.svg"
-                              alt="unionpay">
-                          </div>
+                            src="https://js.stripe.com/v3/fingerprinted/img/diners-fbcbd3360f8e3f629cdaa80e93abdb8b.svg"
+                            alt="diners">
+                          <img class="card-icon hidden"
+                            src="https://js.stripe.com/v3/fingerprinted/img/unionpay-8a10aefc7295216c338ba4e1224627a1.svg"
+                            alt="unionpay">
                         </div>
                       </div>
                     </div>
@@ -175,13 +171,11 @@ $prev = '';
                   </div>
 
                   {{-- card expiry --}}
-                  <div class="col-sm-7 pr-0">
+                  <div class="col-sm-7 pe-0">
                     <label for="">{{ __('Expiry') }}</label>
                     <div class="form-group d-flex">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="fal fa-calendar-week"></i>
-                        </div>
+                      <div class="input-group-text">
+                        <i class="fal fa-calendar-week"></i>
                       </div>
                       <div class="form-control" id="expiry-element"></div>
                     </div>
@@ -192,10 +186,8 @@ $prev = '';
                   <div class="col-sm-5">
                     <label for="">{{ __('CVC') }}</label>
                     <div class="form-group d-flex">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="fal fa-shield-alt"></i>
-                        </div>
+                      <div class="input-group-text">
+                        <i class="fal fa-shield-alt"></i>
                       </div>
                       <div class="form-control" id="cvc-element"></div>
                     </div>

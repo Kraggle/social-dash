@@ -29,7 +29,7 @@ use App\Models\Defaults;
         <label>
           {{ $default->name }}
           @if ($options->subtitle)
-            <span class="fz-sm fw-light ml-2">{{ $options->subtitle }}</span>
+            <span class="fz-sm fw-light ms-2">{{ $options->subtitle }}</span>
           @endif
         </label>
       </div>
@@ -56,9 +56,9 @@ use App\Models\Defaults;
       <input type="hidden" name="{{ $name }}" value="{{ $value }}"
         {{ $has_cost ? " data-cost=$cost has-cost" : '' }}>
     @else
-      <div class="col pr-0 mb-2">
-        <select name="{{ $name }}" class="selectpicker" data-style="btn btn-primary"
-          {{ $has_cost ? ' has-cost' : '' }} {{ $has_msg ? 'has-msg' : '' }}>
+      <div class="col pe-0 mb-2">
+        <select name="{{ $name }}" class="selectpicker" data-style="btn" {{ $has_cost ? ' has-cost' : '' }}
+          {{ $has_msg ? 'has-msg' : '' }}>
           @foreach ($options->values as $option)
             <option title="{{ $option->value }}" value="{{ $option->key ?? $option->value }}"
               {{ $has_cost ? " data-cost=$option->cost" : '' }} {{ AppHelper::selected($value, $option->value) }}
@@ -82,14 +82,12 @@ use App\Models\Defaults;
       <input type="hidden" name="{{ $name }}" value="{{ $value }}"
         {{ $has_cost ? " data-cost=$cost has-cost" : '' }}>
     @else
-      <div class="col-sm-2 pr-0 mb-2">
+      <div class="col-sm-2 pe-0 mb-2">
         <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fal fa-lambda"></i>
-            </span>
-          </div>
-          <input type="number" class="form-control pl-2 pr-0" id="{{ $key }}" name="{{ $name }}"
+          <span class="input-group-text">
+            <i class="fal fa-lambda"></i>
+          </span>
+          <input type="number" class="form-control ps-2 pe-0" id="{{ $key }}" name="{{ $name }}"
             min="{{ $min }}" max="{{ $max }}" step="{{ $step }}"
             value="{{ $value }}" {{ $has_msg ? 'has-msg' : '' }}
             {{ $has_cost ? " has-cost data-min-cost=$cost_min data-max-cost=$cost_max" : '' }} />

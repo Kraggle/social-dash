@@ -10,25 +10,23 @@ Management')])
             {{-- Teams management - admin only --}}
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title">{{ __('Teams') }}</h4>
+                <h4 class="card-title d-inline-block">{{ __('Teams') }}</h4>
+                @can('create', App\Models\Team::class)
+                  <a href="{{ route('team.create') }}" class="btn btn-sm btn-primary float-end">
+                    {{ __('Add team') }}
+                  </a>
+                @endcan
               </div>
               <div class="card-body">
-                @can('create', App\Models\Team::class)
-                  <div class="row">
-                    <div class="col-12 text-right mb-3">
-                      <a href="{{ route('team.create') }}" class="btn btn-sm btn-primary">{{ __('Add team') }}</a>
-                    </div>
-                  </div>
-                @endcan
                 <div class="table-responsive">
-                  <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
-                    <thead class="text-primary">
+                  <table id="datatable" class="table table-striped table-no-bordered table-hover" style="display:none">
+                    <thead class="text-primary" data-search-placeholder="Search teams...">
                       <th>{{ __('Name') }}</th>
                       <th>{{ __('Package') }}</th>
                       <th>{{ __('Accounts') }}</th>
                       <th>{{ __('Members') }}</th>
                       <th>{{ __('Creation Date') }}</th>
-                      <th class="text-right">{{ __('Actions') }}</th>
+                      <th class="text-end dt-nosort">{{ __('Actions') }}</th>
                     </thead>
                     <tbody>
                       @foreach ($teams as $team)
@@ -38,17 +36,18 @@ Management')])
                           <td>{{ $team->accounts->count() }}</td>
                           <td>{{ $team->members->count() }}</td>
                           <td>{{ $team->created_at->format('d-m-Y') }}</td>
-                          <td class="td-actions text-right">
+                          <td class="td-actions text-end">
                             <form action="{{ route('team.destroy', $team) }}" method="post">
                               @csrf
                               @method('delete')
 
                               @can('update', $team)
-                                <a href="{{ route('team.edit', $team) }}"
-                                  class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                                <a href="{{ route('team.edit', $team) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" title="{{ __('Edit') }}">
+                                  <i class="fal fa-pencil-alt"></i>
+                                </a>
                               @endcan
                               @if (auth()->user()->can('remove', $team))
-                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
+                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert" title="{{ __('Delete') }}">
                                   <i class="fal fa-trash-alt"></i>
                                 </button>
                               @endif
@@ -67,26 +66,22 @@ Management')])
             <div class="card">
 
               <div class="card-header">
-                <h4 class="card-title">{{ __('Team Management') }}</h4>
+                <h4 class="card-title d-inline-block">{{ __('Team Management') }}</h4>
+                @can('add-member', $team)
+                  <a href="{{ route('member.create') }}" class="btn btn-sm btn-primary float-end">
+                    {{ __('Add team member') }}
+                  </a>
+                @endcan
               </div>
 
               <div class="card-body">
-                @can('add-member', $team)
-                  <div class="row">
-                    <div class="col-12 text-right mb-3">
-                      <a href="{{ route('member.create') }}"
-                        class="btn btn-sm btn-primary">{{ __('Add team member') }}</a>
-                    </div>
-                  </div>
-                @endcan
-
                 <div class="table-responsive">
-                  <table id="datatables" class="table table-striped table-no-bordered table-hover" style="display:none">
+                  <table id="datatable" class="table table-striped table-no-bordered table-hover" style="display:none" data-search-placeholder="Search teams...">
                     <thead class="text-primary">
                       <th>{{ __('Name') }}</th>
                       <th>{{ __('Email') }}</th>
                       <th>{{ __('Member Since') }}</th>
-                      <th class="text-right">{{ __('Actions') }}</th>
+                      <th class="text-end dt-nosort">{{ __('Actions') }}</th>
                     </thead>
                     <tbody>
                       @foreach ($team->members as $member)
@@ -97,19 +92,20 @@ Management')])
                           <td>{!! $admin !!} {{ $member->name }}</td>
                           <td>{{ $member->email ?? '' }}</td>
                           <td>{{ $team->created_at->format('d-m-Y') }}</td>
-                          <td class="td-actions text-right">
+                          <td class="td-actions text-end">
                             <form action="{{ route('team.destroy', $team) }}" method="post">
                               @csrf
                               @method('delete')
 
                               @unless(auth()->user()->id == $member->id || $member->isTeamAdmin())
                                 @can('edit-member', $team)
-                                  <a href="{{ route('member.edit', $member) }}"
-                                    class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                                  <a href="{{ route('member.edit', $member) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
+                                    <i class="fal fa-pencil-alt"></i>
+                                  </a>
                                 @endcan
 
                                 @can('remove-member', $team)
-                                  <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
+                                  <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
                                     <i class="fal fa-trash-alt"></i>
                                   </button>
                                 @endcan
@@ -135,25 +131,5 @@ Management')])
 @endsection
 
 @push('js')
-  <script>
-    $(document).ready(function() {
-      $('#datatables').fadeIn(1100);
-      $('#datatables').DataTable({
-        "pagingType": "full_numbers",
-        "lengthMenu": [
-          [10, 25, 50, -1],
-          [10, 25, 50, "All"]
-        ],
-        responsive: true,
-        language: {
-          search: "_INPUT_",
-          searchPlaceholder: "Search accounts",
-        },
-        "columnDefs": [{
-          "orderable": false,
-          "targets": 3
-        }, ],
-      });
-    });
-  </script>
+  <script type="module" src="{{ asset('js') }}/pages/datatable-only.js"></script>
 @endpush

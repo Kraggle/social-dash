@@ -16,14 +16,14 @@ Management')])
               </div>
               <div class="card-body ">
                 <div class="row">
-                  <div class="col-md-12 text-right">
+                  <div class="col-md-12 text-end">
                     <a href="{{ route('package.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
                   </div>
                 </div>
 
                 {{-- name --}}
                 <div class="row">
-                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-name">
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="input-name">
                     {{ __('Name') }}
                   </label>
                   <div class="col-sm-8">
@@ -38,7 +38,7 @@ Management')])
 
                 {{-- key --}}
                 <div class="row">
-                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-key">
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="input-key">
                     {{ __('Key') }}
                   </label>
                   <div class="col-sm-8">
@@ -53,8 +53,7 @@ Management')])
 
                 {{-- description --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-description">{{ __('Description') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="input-description">{{ __('Description') }}</label>
                   <div class="col-sm-8">
                     @include('forms.textarea', ['options' => [
                     'name' => 'description',
@@ -67,13 +66,12 @@ Management')])
 
                 {{-- includes --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-includes">{{ __('Includes') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="input-includes">{{ __('Includes') }}</label>
                   <div class="col-sm-8">
                     @include('forms.textarea', ['options' => [
                     'name' => 'options[includes]',
-                    'placeholder' => __('A comma separated list of benefits of the package. Include (+) at the beginning
-                    to set an icon.'),
+                    'placeholder' => __('A comma separated list of benefits of the package. Include (+) at the
+                    beginning format to set an icon.'),
                     'id' => 'input-includes',
                     'required' => true
                     ]])
@@ -82,7 +80,7 @@ Management')])
 
                 {{-- cost --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right" for="number-cost">{{ __('Cost') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="number-cost">{{ __('Cost') }}</label>
                   <div class="col-sm-8">
                     @include('forms.number', ['options' => [
                     'name' => 'cost',
@@ -97,8 +95,7 @@ Management')])
 
                 {{-- stripe_id --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-stripe-id">{{ __('Stripe ID') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="input-stripe-id">{{ __('Stripe ID') }}</label>
                   <div class="col-sm-8">
                     @include('forms.text', ['options' => [
                     'name' => 'stripe_id',
@@ -110,8 +107,7 @@ Management')])
 
                 {{-- price_id --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-price-id">{{ __('Price ID') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="input-price-id">{{ __('Price ID') }}</label>
                   <div class="col-sm-8">
                     @include('forms.text', ['options' => [
                     'name' => 'price_id',
@@ -122,8 +118,8 @@ Management')])
                 </div>
 
               </div>
-              <div class="card-footer ml-auto mr-auto">
-                <button type="submit" class="btn btn-rose">{{ __('Add package') }}</button>
+              <div class="card-footer mx-auto">
+                <button type="submit" class="btn btn-primary">{{ __('Add package') }}</button>
               </div>
             </div>
           </form>

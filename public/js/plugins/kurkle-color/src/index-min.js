@@ -1,0 +1,1 @@
+import o from"./color.js";export default function(r){return new o(r)}

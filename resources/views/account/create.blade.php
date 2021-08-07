@@ -29,16 +29,12 @@
                   <div class="row justify-content-md-center">
                     <div class="col-sm-11">
                       <div class="input-group">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                            <i class="fal fa-hashtag"></i>
-                          </div>
+                        <div class="input-group-text">
+                          <i class="fal fa-hashtag"></i>
                         </div>
                         <input id="search" class="form-control" type="search" placeholder="Instagram username"
                           value="makemoneyfromhomeuk" />
-                        <div class="input-group-append">
-                          <button id="find-btn" class="btn btn-success">Search</button>
-                        </div>
+                        <button id="find-btn" class="btn btn-success">Search</button>
                       </div>
                     </div>
                   </div>
@@ -53,7 +49,7 @@
                   <div class="row justify-content-md-center">
 
                     {{-- username --}}
-                    <div class="col-sm-6 pr-0">
+                    <div class="col-sm-6 pe-0">
                       <label for="input-username">
                         {{ __('Instagram Username') }}
                       </label>
@@ -124,7 +120,7 @@
 
             <div class="col-md-4">
               <div class="row">
-                <div class="col-md-12 mb-3 text-right">
+                <div class="col-md-12 mb-3 text-end">
                   <a href="{{ route('account.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
                 </div>
               </div>
@@ -164,5 +160,5 @@
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/accounts.js"></script>
+  <script type="module" src="{{ asset('js') }}/pages/accounts.js"></script>
 @endpush

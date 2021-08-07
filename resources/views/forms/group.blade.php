@@ -21,28 +21,24 @@ $attrs = isset($group['attrs']) ? (is_array($group['attrs']) ? implode(' ', $gro
 <div class="{{ $class }}{{ $errors->has($dot) ? ' has-danger' : '' }}" {{ $attrs }}>
 
   @if ($prepend)
-    <div class="input-group-prepend">
-      <div class="input-group-text">
-        @if (is_array($prepend))
-          <i class="{{ $prepend['icon'] }}"></i>
-        @else
-          {{ $prepend }}
-        @endif
-      </div>
+    <div class="input-group-text">
+      @if (is_array($prepend))
+        <i class="{{ $prepend['icon'] }}"></i>
+      @else
+        {{ $prepend }}
+      @endif
     </div>
   @endif
 
   @yield($yield)
 
   @if ($append)
-    <div class="input-group-append">
-      <div class="input-group-text">
-        @if (is_array($prepend))
-          <i class="{{ $append['icon'] }}"></i>
-        @else
-          {{ $append }}
-        @endif
-      </div>
+    <div class="input-group-text">
+      @if (is_array($prepend))
+        <i class="{{ $append['icon'] }}"></i>
+      @else
+        {{ $append }}
+      @endif
     </div>
   @endif
 

@@ -6,8 +6,7 @@ Management')])
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="post" enctype="multipart/form-data" action="{{ route('package.update', $package) }}"
-            autocomplete="off">
+          <form method="post" enctype="multipart/form-data" action="{{ route('package.update', $package) }}" autocomplete="off">
             @csrf
             @method('put')
 
@@ -15,8 +14,10 @@ Management')])
               <div class="card-header">
                 <div class="row">
                   <h4 class="card-title col-md-6">{{ __('Edit Package') }}</h4>
-                  <div class="col-md-6 text-right">
-                    <a href="{{ route('package.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
+                  <div class="col-md-6 text-end">
+                    <a href="{{ route('package.index') }}" class="btn btn-sm btn-warning">
+                      {{ __('Back to list') }}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -24,7 +25,7 @@ Management')])
 
                 {{-- name --}}
                 <div class="row">
-                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-name">
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="input-name">
                     {{ __('Name') }}
                   </label>
                   <div class="col-sm-8">
@@ -40,7 +41,7 @@ Management')])
 
                 {{-- key --}}
                 <div class="row">
-                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-key">
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="input-key">
                     {{ __('Key') }}
                   </label>
                   <div class="col-sm-8">
@@ -56,8 +57,9 @@ Management')])
 
                 {{-- description --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-description">{{ __('Description') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="input-description">
+                    {{ __('Description') }}
+                  </label>
                   <div class="col-sm-8">
                     @include('forms.textarea', ['options' => [
                     'name' => 'description',
@@ -71,14 +73,14 @@ Management')])
 
                 {{-- includes --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-includes">{{ __('Includes') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="input-includes">
+                    {{ __('Includes') }}
+                  </label>
                   <div class="col-sm-8">
                     @include('forms.textarea', ['options' => [
                     'name' => 'options[includes]',
                     'value' => $package->options->includes ?? '',
-                    'placeholder' => __('A comma separated list of benefits of the package. Include (+) at the beginning
-                    to set an icon.'),
+                    'placeholder' => __('A comma separated list of benefits of the package. Include (+) at beginning to set an icon.'),
                     'id' => 'input-includes',
                     'required' => true
                     ]])
@@ -87,7 +89,7 @@ Management')])
 
                 {{-- cost --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right" for="number-cost">{{ __('Cost') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="number-cost">{{ __('Cost') }}</label>
                   <div class="col-sm-8">
                     @include('forms.number', ['options' => [
                     'name' => 'cost',
@@ -103,8 +105,7 @@ Management')])
 
                 {{-- stripe_id --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-stripe-id">{{ __('Stripe ID') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="input-stripe-id">{{ __('Stripe ID') }}</label>
                   <div class="col-sm-8">
                     @include('forms.text', ['options' => [
                     'name' => 'stripe_id',
@@ -117,8 +118,7 @@ Management')])
 
                 {{-- price_id --}}
                 <div class="row">
-                  <label class="col-sm-2 col-form-label pr-0 text-right"
-                    for="input-price-id">{{ __('Price ID') }}</label>
+                  <label class="col-sm-2 col-form-label pe-0 text-end" for="input-price-id">{{ __('Price ID') }}</label>
                   <div class="col-sm-8">
                     @include('forms.text', ['options' => [
                     'name' => 'price_id',
@@ -131,8 +131,8 @@ Management')])
 
 
               </div>
-              <div class="card-footer ml-auto mr-auto">
-                <button type="submit" class="btn btn-rose">{{ __('Update package') }}</button>
+              <div class="card-footer mx-auto">
+                <button type="submit" class="btn btn-primary">{{ __('Update package') }}</button>
               </div>
             </div>
 

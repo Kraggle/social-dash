@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('white') }}/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="{{ asset('white') }}/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images') }}/apple-icon.png">
+  <link rel="icon" type="image/png" href="{{ asset('images') }}/favicon.png">
   <title>
     White Dashboard PRO by Creative Tim
   </title>
@@ -25,8 +25,8 @@
   <div class="wrapper">
     <div class="navbar-minimize-fixed">
       <button class="minimize-sidebar btn btn-link btn-just-icon">
-        <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
-        <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
+        <i class="fal fa-align-center visible-on-sidebar-regular text-muted"></i>
+        <i class="fal fa-list-ul visible-on-sidebar-mini text-muted"></i>
       </button>
     </div>
     <div class="sidebar">
@@ -45,13 +45,13 @@
         <ul class="nav">
           <li>
             <a href="{{ route('home') }}">
-              <i class="tim-icons icon-chart-pie-36"></i>
+              <i class="fal fa-chart-pie-alt"></i>
               <p>لوحة القيادة</p>
             </a>
           </li>
           <li>
-            <a data-toggle="collapse" href="#pagesExamples">
-              <i class="tim-icons icon-image-02"></i>
+            <a data-bs-toggle="collapse" href="#pagesExamples">
+              <i class="fal fa-image-polaroid"></i>
               <p>
                 صفحات
                 <b class="caret"></b>
@@ -72,7 +72,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('page.timeline') }}">
+                  <a href="{{ route('page.support') }}">
                     <span class="sidebar-mini-icon">تي</span>
                     <span class="sidebar-normal"> الجدول الزمني </span>
                   </a>
@@ -93,7 +93,7 @@
             </div>
           </li>
           <li>
-            <a data-toggle="collapse" href="#componentsExamples">
+            <a data-bs-toggle="collapse" href="#componentsExamples">
               <i class="tim-icons icon-molecule-40"></i>
               <p>
                 المكونات
@@ -103,7 +103,7 @@
             <div class="collapse " id="componentsExamples">
               <ul class="nav">
                 <li>
-                  <a data-toggle="collapse" aria-expanded="false" href="#multicollapse">
+                  <a data-bs-toggle="collapse" aria-expanded="false" href="#multicollapse">
                     <span class="sidebar-mini-icon">ر</span>
                     <span class="sidebar-normal"> انهيار متعدد المستويات
                       <b class="caret"></b>
@@ -166,7 +166,7 @@
             </div>
           </li>
           <li>
-            <a data-toggle="collapse" href="#formsExamples">
+            <a data-bs-toggle="collapse" href="#formsExamples">
               <i class="tim-icons icon-notes"></i>
               <p>
                 إستمارات
@@ -203,7 +203,7 @@
             </div>
           </li>
           <li>
-            <a data-toggle="collapse" href="#tablesExamples">
+            <a data-bs-toggle="collapse" href="#tablesExamples">
               <i class="tim-icons icon-puzzle-10"></i>
               <p>
                 الجداول
@@ -234,7 +234,7 @@
             </div>
           </li>
           <li>
-            <a data-toggle="collapse" href="#mapsExamples">
+            <a data-bs-toggle="collapse" href="#mapsExamples">
               <i class="tim-icons icon-pin"></i>
               <p>
                 خرائط
@@ -266,19 +266,19 @@
           </li>
           <li>
             <a href="{{ route('page.widgets') }}">
-              <i class="tim-icons icon-settings"></i>
+              <i class="fal fa-tools"></i>
               <p>الحاجيات</p>
             </a>
           </li>
           <li>
             <a href="{{ route('page.charts') }}">
-              <i class="tim-icons icon-chart-bar-32"></i>
+              <i class="fal fa-chart-bar"></i>
               <p>الرسوم البيانية</p>
             </a>
           </li>
           <li>
             <a href="{{ route('page.calendar') }}">
-              <i class="tim-icons icon-time-alarm"></i>
+              <i class="fal fa-alarm-clock"></i>
               <p>التقويم</p>
             </a>
           </li>
@@ -291,10 +291,9 @@
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-minimize d-inline">
-              <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip"
-                data-original-title="Sidebar toggle" data-placement="right">
-                <i class="tim-icons icon-align-center visible-on-sidebar-regular"></i>
-                <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini"></i>
+              <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip" data-original-title="Sidebar toggle" data-placement="right">
+                <i class="fal fa-align-center visible-on-sidebar-regular"></i>
+                <i class="fal fa-list-ul visible-on-sidebar-mini"></i>
               </button>
             </div>
             <div class="navbar-toggle d-inline">
@@ -306,29 +305,28 @@
             </div>
             <a class="navbar-brand" href="javascript:void(0)">RTL</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-            aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
           <div class="collapse navbar-collapse" id="navigation">
-            <ul class="navbar-nav  mr-auto">
+            <ul class="navbar-nav  me-auto">
               <li class="search-bar nav-item">
-                <a href="javascript:void(0)" class="nav-link" data-toggle="modal" data-target="#searchModal">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="modal" data-bs-target="#searchModal">
                   <i class="tim-icons icon-zoom-split"></i>
                   <p class="d-lg-none">Search</p>
                 </a>
               </li>
               <li class="dropdown nav-item">
-                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                   <div class="notification d-none d-lg-block d-xl-block"></div>
                   <i class="tim-icons icon-sound-wave"></i>
                   <p class="d-lg-none">
                     Notifications
                   </p>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                <ul class="dropdown-menu dropdown-menu-end dropdown-navbar">
                   <li class="nav-link">
                     <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
                   </li>
@@ -347,14 +345,13 @@
                 </ul>
               </li>
               <li class="dropdown nav-item">
-                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                   <div class="photo">
-                    <img src="{{ asset('white') }}/img/mike.jpg" alt="Profile Photo">
+                    <img src="{{ asset('images') }}/mike.jpg" alt="Profile Photo">
                   </div>
                   <b class="caret d-none d-lg-block d-xl-block"></b>
                   <p class="d-lg-none">
-                    <a href="{{ route('logout') }}"
-                      onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
                   </p>
                 </a>
                 <ul class="dropdown-menu dropdown-navbar">
@@ -366,8 +363,7 @@
                   </li>
                   <li class="dropdown-divider"></li>
                   <li class="nav-link">
-                    <a href="{{ route('logout') }}" class="nav-item dropdown-item"
-                      onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
+                    <a href="{{ route('logout') }}" class="nav-item dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
                   </li>
                 </ul>
               </li>
@@ -376,8 +372,7 @@
           </div>
         </div>
       </nav>
-      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal"
-        aria-hidden="true">
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -393,14 +388,13 @@
       <div class="content">
         <div class="row">
           <div class="col-lg-6 col-sm-6 text-center">
-            <div class="card  card-tasks text-left">
+            <div class="card  card-tasks text-start">
               <div class="card-header ">
                 <h6 class="title d-inline">تتبع</h6>
                 <p class="card-category d-inline">اليوم</p>
                 <div class="dropdown">
-                  <a class="btn btn-link dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false"><i class="tim-icons icon-settings-gear-63"></i></a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                  <a class="btn btn-link dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-cog"></i></a>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="#">عمل</a>
                     <a class="dropdown-item" href="#">عمل آخر</a>
                     <a class="dropdown-item" href="#">شيء آخر هنا</a>
@@ -422,14 +416,13 @@
                             </label>
                           </div>
                         </td>
-                        <td class="text-right">
+                        <td class="text-end">
                           <p class="title">مركز معالجة موقع محور</p>
                           <p class="text-muted">نص آخر هناالوثائق</p>
                         </td>
                         <td class="td-actions">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link"
-                            data-original-title="مهمة تحرير">
-                            <i class="tim-icons icon-settings"></i>
+                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                            <i class="fal fa-tools"></i>
                           </button>
                         </td>
                       </tr>
@@ -444,16 +437,15 @@
                             </label>
                           </div>
                         </td>
-                        <td class="text-right">
+                        <td class="text-end">
                           <p class="title">لامتثال GDPR</p>
                           <p class="text-muted">الناتج المحلي الإجمالي هو نظام يتطلب من الشركات حماية البيانات الشخصية
                             والخصوصية لمواطني أوروبا بالنسبة للمعاملات التي تتم داخل الدول الأعضاء في الاتحاد الأوروبي.
                           </p>
                         </td>
                         <td class="td-actions">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link"
-                            data-original-title="مهمة تحرير">
-                            <i class="tim-icons icon-settings"></i>
+                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                            <i class="fal fa-tools"></i>
                           </button>
                         </td>
                       </tr>
@@ -468,15 +460,14 @@
                             </label>
                           </div>
                         </td>
-                        <td class="text-right">
+                        <td class="text-end">
                           <p class="title">القضاياالقضايا</p>
                           <p class="text-muted">سيكونونقال 50٪ من جميع المستجيبين أنهم سيكونون أكثر عرضة للتسوق في شركة
                           </p>
                         </td>
                         <td class="td-actions">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link"
-                            data-original-title="مهمة تحرير">
-                            <i class="tim-icons icon-settings"></i>
+                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                            <i class="fal fa-tools"></i>
                           </button>
                         </td>
                       </tr>
@@ -491,15 +482,14 @@
                             </label>
                           </div>
                         </td>
-                        <td class="text-right">
+                        <td class="text-end">
                           <p class="title">تصدير الملفات التي تمت معالجتها</p>
                           <p class="text-muted">كما يبين التقرير أن المستهلكين لن يغفروا شركة بسهولة بمجرد حدوث خرق يعرض
                             بياناتهم الشخصية.</p>
                         </td>
                         <td class="td-actions">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link"
-                            data-original-title="مهمة تحرير">
-                            <i class="tim-icons icon-settings"></i>
+                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                            <i class="fal fa-tools"></i>
                           </button>
                         </td>
                       </tr>
@@ -514,16 +504,15 @@
                             </label>
                           </div>
                         </td>
-                        <td class="text-right">
+                        <td class="text-end">
                           <p class="title">الوصول إلى عملية التصدير</p>
                           <p class="text-muted">سياسة السيء إنطلاق في قبل, مساعدة والمانيا أخذ قد. بل أما أمام ماشاء
                             الشتاء،, تكاليف الإقتصادي بـ حين. ٣٠ يتعلّق للإتحاد ولم, وتم هناك مدينة بتحدّي إذ, كان بل
                             عمل</p>
                         </td>
                         <td class="td-actions">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link"
-                            data-original-title="مهمة تحرير">
-                            <i class="tim-icons icon-settings"></i>
+                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                            <i class="fal fa-tools"></i>
                           </button>
                         </td>
                       </tr>
@@ -538,15 +527,14 @@
                             </label>
                           </div>
                         </td>
-                        <td class="text-right">
+                        <td class="text-end">
                           <p class="title">الافراج عن v2.0.0</p>
                           <p class="text-muted">عن رئيس طوكيو البولندي لمّ, مايو مرجع وباءت قبل هو, تسمّى الطريق
                             الإقتصادي ذات أن. لغات الإطلاق الفرنسية دار ان, بين بتخصيص الساحة اقتصادية أم. و الآخ</p>
                         </td>
                         <td class="td-actions">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link"
-                            data-original-title="مهمة تحرير">
-                            <i class="tim-icons icon-settings"></i>
+                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                            <i class="fal fa-tools"></i>
                           </button>
                         </td>
                       </tr>
@@ -564,17 +552,15 @@
               <hr>
               <div class="card-footer ">
                 <div class="row">
-                  <div class="col-lg-6 col-md-9 ml-auto mr-auto">
+                  <div class="col-lg-6 col-md-9 mx-auto">
                     <div class="card-stats justify-content-center">
-                      <input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="على"
-                        data-off-label="إيقاف" checked>
+                      <input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="على" data-off-label="إيقاف" checked>
                       <span>جميع المساهمات العامة </span>
                     </div>
                   </div>
-                  <div class="col-lg-6 col-md-9 ml-auto mr-auto">
+                  <div class="col-lg-6 col-md-9 mx-auto">
                     <div class="card-stats justify-content-center">
-                      <input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="على"
-                        data-off-label="إيقاف">
+                      <input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="على" data-off-label="إيقاف">
                       <span>مساهمات الأسبوع الماضي </span>
                     </div>
                   </div>
@@ -586,47 +572,47 @@
             <div class="card card-timeline card-plain">
               <div class="card-body">
                 <ul class="timeline timeline-simple">
-                  <li class="timeline-inverted">
+                  <li class="timeline-end">
                     <div class="timeline-badge danger">
-                      <i class="tim-icons icon-bag-16"></i>
+                      <i class="fal fa-shopping-bag"></i>
                     </div>
-                    <div class="timeline-panel text-right">
+                    <div class="card-timeline text-end">
                       <div class="timeline-heading">
-                        <span class="badge badge-pill badge-danger">بعض العنوان </span>
+                        <span class="badge rounded-pill bg-danger">بعض العنوان </span>
                       </div>
-                      <div class="timeline-body">
+                      <div class="card-body">
                         <p>ل Wifey قدم أفضل وجبة يوم الأب على الإطلاق. ممتن جدا سعيد جدا حتى المباركة. شكراً لك على صنع
                           عائلتي لقد استمتعنا بالموضوع "المستقبلي" !!! كانت ليلة ممتعة معًا ...</p>
                       </div>
                       <h6>
-                        <i class="ti-time"></i> قبل ساعتين عبر تويتر
+                        <i class="fal fa-clock"></i> قبل ساعتين عبر تويتر
                       </h6>
                     </div>
                   </li>
-                  <li class="timeline-inverted">
+                  <li class="timeline-end">
                     <div class="timeline-badge success">
-                      <i class="tim-icons icon-gift-2"></i>
+                      <i class="fal fa-gift-2"></i>
                     </div>
-                    <div class="timeline-panel text-right">
+                    <div class="card-timeline text-end">
                       <div class="timeline-heading">
-                        <span class="badge badge-pill badge-success">واحدة أخرى </span>
+                        <span class="badge rounded-pill badge-success">واحدة أخرى </span>
                       </div>
-                      <div class="timeline-body">
+                      <div class="card-body">
                         <p>أشكر الله على دعم زوجتي وأصدقائي الحقيقيين. أود أيضًا الإشارة إلى أنه أول ألبوم ينتقل إلى رقم
                           1 من البث المباشر !!! أنا أحبك إلين وأيضا قاعدة بلدي رقم واحد تصميم أي شيء أفعله من الأحذية
                           إلى الموسيقى إلى المنازل.</p>
                       </div>
                     </div>
                   </li>
-                  <li class="timeline-inverted">
+                  <li class="timeline-end">
                     <div class="timeline-badge info">
-                      <i class="tim-icons icon-planet"></i>
+                      <i class="fal fa-planet-ringed"></i>
                     </div>
-                    <div class="timeline-panel text-right">
+                    <div class="card-timeline text-end">
                       <div class="timeline-heading">
-                        <span class="badge badge-pill badge-info">عنوان آخر</span>
+                        <span class="badge rounded-pill badge-info">عنوان آخر</span>
                       </div>
-                      <div class="timeline-body">
+                      <div class="card-body">
                         <p>يطلق عليه أنا أفتقد كاني القديم هذا كل ما كان كاني وأنا أحبك مثل كانيي يحب كاني الشهير مشاهدة
                           فيجويروا والثاني عشر في وسط المدينة LA 11:10 PM</p>
                         <p>ماذا لو قدمت كاني أغنية عن كاني رويير لا تصنع سرير الدب القطبي ولكن الأريكة الدببة القطبية هي
@@ -634,12 +620,12 @@
                         </p>
                         <hr>
                       </div>
-                      <div class="timeline-footer">
+                      <div class="card-footer">
                         <div class="dropdown">
-                          <button type="button" class="btn btn-round btn-info dropdown-toggle" data-toggle="dropdown">
-                            <i class="tim-icons icon-bullet-list-67"></i>
+                          <button type="button" class="btn btn-round btn-info dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fal fa-list-ul"></i>
                           </button>
-                          <div class="dropdown-menu dropdown-menu-right">
+                          <div class="dropdown-menu dropdown-menu-end">
                             <a class="dropdown-item" href="#">عمل</a>
                             <a class="dropdown-item" href="#">عمل آخر</a>
                             <a class="dropdown-item" href="#">شيء آخر هنا</a>
@@ -658,7 +644,7 @@
             <div class="card card-pricing card-primary">
               <div class="card-body">
                 <h1 class="card-title">طليعة</h1>
-                <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Card image">
+                <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Card image">
                 <ul class="list-group">
                   <li class="list-group-item">300 رسائل</li>
                   <li class="list-group-item">150 رسائل البريد الإلكتروني
@@ -683,7 +669,7 @@
             <div class="card card-pricing card-primary card-white">
               <div class="card-body">
                 <h1 class="card-title">طليعة</h1>
-                <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Card image">
+                <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Card image">
                 <ul class="list-group">
                   <li class="list-group-item">300 رسائل</li>
                   <li class="list-group-item">150 رسائل البريد الإلكتروني
@@ -708,7 +694,7 @@
             <div class="card card-testimonial">
               <div class="card-header card-header-avatar">
                 <a href="#pablo">
-                  <img class="img img-raised" src="{{ asset('white') }}/img/james.jpg" alt="Card image">
+                  <img class="img img-raised" src="{{ asset('images') }}/james.jpg" alt="Card image">
                 </a>
               </div>
               <div class="card-body ">
@@ -748,7 +734,7 @@
           </ul>
           <div class="copyright">
             ©
-            {{ now()->year }} made with <i class="tim-icons icon-heart-2"></i> by
+            {{ now()->year }} made with <i class="fal fa-heart"></i> by
             <a href="javascript:void(0)" target="_blank">Creative Tim</a> for a better web.
           </div>
         </div>

@@ -3,7 +3,7 @@
 @section('content')
   <div class="content">
     <div class="row">
-      <ol class="breadcrumb bg-transparent ml-3">
+      <ol class="breadcrumb bg-transparent ms-3">
         <li class="breadcrumb-item">
           <a href="#">Home</a>
         </li>
@@ -15,12 +15,12 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <div class="tools float-right">
+            <div class="tools float-end">
               <div class="dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-toggle="dropdown">
-                  <i class="tim-icons icon-settings-gear-63"></i>
+                <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-bs-toggle="dropdown">
+                  <i class="fal fa-cog"></i>
                 </button>
-                <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Another action</a>
                   <a class="dropdown-item" href="#">Something else here</a>
@@ -47,10 +47,10 @@
                     <th class="text-center">
                       Since
                     </th>
-                    <th class="text-right">
+                    <th class="text-end">
                       Salary
                     </th>
-                    <th class="text-right">
+                    <th class="text-end">
                       Actions
                     </th>
                   </tr>
@@ -59,7 +59,7 @@
                   <tr>
                     <td class="text-center">
                       <div class="photo">
-                        <img src="{{ asset('white') }}/img/tania.jpg" alt="Table image">
+                        <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
                       </div>
                     </td>
                     <td>
@@ -71,16 +71,14 @@
                     <td class="text-center">
                       2013
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 99,225
                     </td>
-                    <td class="text-right">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon "
-                        data-original-title="Tooltip on top" title="Refresh">
-                        <i class="tim-icons icon-refresh-01"></i>
+                    <td class="text-end">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
+                        <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm "
-                        data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -88,7 +86,7 @@
                   <tr>
                     <td class="text-center">
                       <div class="photo">
-                        <img src="{{ asset('white') }}/img/robi.jpg" alt="Table image">
+                        <img src="{{ asset('images') }}/robi.jpg" alt="Table image">
                       </div>
                     </td>
                     <td>
@@ -100,16 +98,14 @@
                     <td class="text-center">
                       2012
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 89,241
                     </td>
-                    <td class="text-right">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon "
-                        data-original-title="Tooltip on top" title="Refresh">
-                        <i class="tim-icons icon-refresh-01"></i>
+                    <td class="text-end">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
+                        <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm "
-                        data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -117,7 +113,7 @@
                   <tr>
                     <td class="text-center">
                       <div class="photo">
-                        <img src="{{ asset('white') }}/img/lora.jpg" alt="Table image">
+                        <img src="{{ asset('images') }}/lora.jpg" alt="Table image">
                       </div>
                     </td>
                     <td>
@@ -129,16 +125,14 @@
                     <td class="text-center">
                       2010
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 92,144
                     </td>
-                    <td class="text-right">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon "
-                        data-original-title="Tooltip on top" title="Refresh">
-                        <i class="tim-icons icon-refresh-01"></i>
+                    <td class="text-end">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
+                        <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm "
-                        data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -146,7 +140,7 @@
                   <tr>
                     <td class="text-center">
                       <div class="photo">
-                        <img src="{{ asset('white') }}/img/jana.jpg" alt="Table image">
+                        <img src="{{ asset('images') }}/jana.jpg" alt="Table image">
                       </div>
                     </td>
                     <td>
@@ -158,16 +152,14 @@
                     <td class="text-center">
                       2013
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 49,990
                     </td>
-                    <td class="text-right">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  "
-                        data-original-title="Tooltip on top" title="Refresh">
-                        <i class="tim-icons icon-refresh-01"></i>
+                    <td class="text-end">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
+                        <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  "
-                        data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -175,7 +167,7 @@
                   <tr>
                     <td class="text-center">
                       <div class="photo">
-                        <img src="{{ asset('white') }}/img/robi.jpg" alt="Table image">
+                        <img src="{{ asset('images') }}/robi.jpg" alt="Table image">
                       </div>
                     </td>
                     <td>
@@ -187,16 +179,14 @@
                     <td class="text-center">
                       2015
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 69,201
                     </td>
-                    <td class="text-right">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  "
-                        data-original-title="Tooltip on top" title="Refresh">
-                        <i class="tim-icons icon-refresh-01"></i>
+                    <td class="text-end">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
+                        <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  "
-                        data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -204,7 +194,7 @@
                   <tr>
                     <td class="text-center">
                       <div class="photo">
-                        <img src="{{ asset('white') }}/img/emilyz.jpg" alt="Table image">
+                        <img src="{{ asset('images') }}/emilyz.jpg" alt="Table image">
                       </div>
                     </td>
                     <td>
@@ -216,16 +206,14 @@
                     <td class="text-center">
                       2012
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 99,201
                     </td>
-                    <td class="text-right">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  "
-                        data-original-title="Tooltip on top" title="Refresh">
-                        <i class="tim-icons icon-refresh-01"></i>
+                    <td class="text-end">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
+                        <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  "
-                        data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -239,12 +227,12 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <div class="tools float-right">
+            <div class="tools float-end">
               <div class="dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-toggle="dropdown">
-                  <i class="tim-icons icon-settings-gear-63"></i>
+                <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-bs-toggle="dropdown">
+                  <i class="fal fa-cog"></i>
                 </button>
-                <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Another action</a>
                   <a class="dropdown-item" href="#">Something else here</a>
@@ -274,10 +262,10 @@
                     <th class="text-center">
                       Qty
                     </th>
-                    <th class="text-right">
+                    <th class="text-end">
                       Price
                     </th>
-                    <th class="text-right">
+                    <th class="text-end">
                       Amount
                     </th>
                   </tr>
@@ -302,8 +290,7 @@
                       <div class="progress-container">
                         <span class="progress-badge">v1.2.0</span>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 25%;">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
                             <span class="progress-value">25%</span>
                           </div>
                         </div>
@@ -312,10 +299,10 @@
                     <td class="text-center">
                       25
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 49
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 1,225
                     </td>
                   </tr>
@@ -338,8 +325,7 @@
                       <div class="progress-container">
                         <span class="progress-badge">v1.4.0</span>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 45%;">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
                             <span class="progress-value">45%</span>
                           </div>
                         </div>
@@ -348,10 +334,10 @@
                     <td class="text-center">
                       30
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 10
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 300
                     </td>
                   </tr>
@@ -374,8 +360,7 @@
                       <div class="progress-container">
                         <span class="progress-badge">v2.0.0</span>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 10%;">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
                             <span class="progress-value">10%</span>
                           </div>
                         </div>
@@ -384,10 +369,10 @@
                     <td class="text-center">
                       50
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 10.99
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 109
                     </td>
                   </tr>
@@ -410,8 +395,7 @@
                       <div class="progress-container">
                         <span class="progress-badge">v1.5.0</span>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 80%;">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
                             <span class="progress-value">80%</span>
                           </div>
                         </div>
@@ -420,10 +404,10 @@
                     <td class="text-center">
                       10
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 499.00
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 4,990
                     </td>
                   </tr>
@@ -446,8 +430,7 @@
                       <div class="progress-container">
                         <span class="progress-badge">v1.0.0</span>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 30%;">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
                             <span class="progress-value">30%</span>
                           </div>
                         </div>
@@ -456,10 +439,10 @@
                     <td class="text-center">
                       10
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 599.00
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                       € 5,999
                     </td>
                   </tr>
@@ -477,12 +460,12 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <div class="tools float-right">
+            <div class="tools float-end">
               <div class="dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-toggle="dropdown">
-                  <i class="tim-icons icon-settings-gear-63"></i>
+                <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-bs-toggle="dropdown">
+                  <i class="fal fa-cog"></i>
                 </button>
-                <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="javascript:void(0)">Action</a>
                   <a class="dropdown-item" href="javascript:void(0)">Another action</a>
                   <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
@@ -505,16 +488,16 @@
                     <th>
                       Color
                     </th>
-                    <th class="text-right">
+                    <th class="text-end">
                       Size
                     </th>
-                    <th class="text-right">
+                    <th class="text-end">
                       Price
                     </th>
-                    <th class="text-right">
+                    <th class="text-end">
                       Qty
                     </th>
-                    <th class="text-right">
+                    <th class="text-end">
                       Amount
                     </th>
                   </tr>
@@ -523,7 +506,7 @@
                   <tr>
                     <td>
                       <div class="img-container">
-                        <img src="{{ asset('white') }}/img/jacket.png" alt="...">
+                        <img src="{{ asset('images') }}/jacket.png" alt="...">
                       </div>
                     </td>
                     <td class="td-name">
@@ -542,9 +525,9 @@
                     </td>
                     <td class="td-number">
                       <div class="btn-group">
-                        <button class="btn btn-info btn-simple btn-sm"> <i class="tim-icons icon-simple-delete"></i>
+                        <button class="btn btn-info btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
                         </button>
-                        <button class="btn btn-info btn-sm"> <i class="tim-icons icon-simple-add"></i> </button>
+                        <button class="btn btn-info btn-sm"> <i class="fal fa-plus"></i> </button>
                       </div>
                       1
                     </td>
@@ -552,8 +535,7 @@
                       <small>€</small>3490
                     </td>
                     <td class="td-actions">
-                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-link"
-                        data-original-title="Remove item">
+                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-link" data-original-title="Remove item">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -561,7 +543,7 @@
                   <tr>
                     <td>
                       <div class="img-container">
-                        <img src="{{ asset('white') }}/img/t-shirt.png" alt="...">
+                        <img src="{{ asset('images') }}/t-shirt.png" alt="...">
                       </div>
                     </td>
                     <td class="td-name">
@@ -580,9 +562,9 @@
                     </td>
                     <td class="td-number">
                       <div class="btn-group">
-                        <button class="btn btn-info btn-simple btn-sm"> <i class="tim-icons icon-simple-delete"></i>
+                        <button class="btn btn-info btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
                         </button>
-                        <button class="btn btn-info btn-sm"> <i class="tim-icons icon-simple-add"></i> </button>
+                        <button class="btn btn-info btn-sm"> <i class="fal fa-plus"></i> </button>
                       </div>
                       2
                     </td>
@@ -590,8 +572,7 @@
                       <small>€</small>470
                     </td>
                     <td class="td-actions">
-                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-link"
-                        data-original-title="Remove item">
+                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-link" data-original-title="Remove item">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -599,7 +580,7 @@
                   <tr>
                     <td>
                       <div class="img-container">
-                        <img src="{{ asset('white') }}/img/gucci.png" alt="...">
+                        <img src="{{ asset('images') }}/gucci.png" alt="...">
                       </div>
                     </td>
                     <td class="td-name">
@@ -618,9 +599,9 @@
                     </td>
                     <td class="td-number">
                       <div class="btn-group">
-                        <button class="btn btn-info btn-simple btn-sm"> <i class="tim-icons icon-simple-delete"></i>
+                        <button class="btn btn-info btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
                         </button>
-                        <button class="btn btn-info btn-sm"> <i class="tim-icons icon-simple-add"></i> </button>
+                        <button class="btn btn-info btn-sm"> <i class="fal fa-plus"></i> </button>
                       </div>
                       1
                     </td>
@@ -628,8 +609,7 @@
                       <small>€</small>140
                     </td>
                     <td class="td-actions">
-                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-link"
-                        data-original-title="Remove item">
+                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-link" data-original-title="Remove item">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -648,10 +628,9 @@
                   </tr>
                 </tbody>
               </table>
-              <button type="button" rel="tooltip" class="btn btn-info btn-round float-right mr-5" data-original-title=""
-                title="">
+              <button type="button" rel="tooltip" class="btn btn-info btn-round float-end me-5" data-original-title="" title="">
                 Complete Purchase
-                <i class="tim-icons icon-minimal-right"></i>
+                <i class="fal fa-chevron-right"></i>
               </button>
             </div>
           </div>

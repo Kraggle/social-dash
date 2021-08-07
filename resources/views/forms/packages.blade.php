@@ -25,7 +25,7 @@ $colors = ['danger', 'info', 'warning', 'success', 'primary'];
         <div class="card card-pricing card-package card-white">
           <div class="card-body">
             <h1 class="card-title mt-3" style="font-size:4em">{{ $package->name }}</h1>
-            <img class="card-img" src="{{ asset('white') }}/img/card-{{ $color }}.png" alt="Image">
+            <img class="card-img" src="{{ asset('images') }}/card-{{ $color }}.png" alt="Image">
             <ul class="list-group">
               @foreach ($package->access as $access => $on)
                 @php $on = AppHelper::isTrue($on) @endphp

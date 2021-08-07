@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Casts\CastSettings;
-
 class Account extends Model {
     public static function boot() {
         parent::boot();

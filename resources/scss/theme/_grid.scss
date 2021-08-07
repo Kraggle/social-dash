@@ -1,0 +1,11 @@
+.row {
+    // --#{$variable-prefix}gutter-x: #{$gutter};
+    // --#{$variable-prefix}gutter-y: 0;
+
+    // &:not(:last-of-type) {
+    //     margin-bottom: var(--#{$variable-prefix}gutter-x);
+    // }
+
+    &.row-equal-height {
+    }
+}

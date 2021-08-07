@@ -17,7 +17,7 @@
 
                 {{-- name --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-name">{{ __('Title') }}</label>
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="input-name">{{ __('Title') }}</label>
                   <div class="col-sm-10">
                     @include('forms.text', [ 'options' => [
                     'name' => 'name',
@@ -30,7 +30,7 @@
 
                 {{-- subtitle --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-subtitle">
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="input-subtitle">
                     {{ __('Subtitle') }}
                   </label>
                   <div class="col-sm-10">
@@ -44,7 +44,7 @@
 
                 {{-- description --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pr-0 col-form-label text-right"
+                  <label class="col-sm-2 pe-0 col-form-label text-end"
                     for="input-description">{{ __('Description') }}</label>
                   <div class="col-sm-10">
                     @include('forms.textarea', [ 'options' => [
@@ -57,7 +57,7 @@
 
                 {{-- for_table --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pr-0 col-form-label text-right"
+                  <label class="col-sm-2 pe-0 col-form-label text-end"
                     for="select-for-table">{{ __('For Table') }}</label>
                   <div class="col-sm-10">
                     @include('forms.select', [ 'options' => [
@@ -93,7 +93,8 @@
                       <div class="py-1">
                         @include('forms.switch', ['options' => [
                         'name' => 'options[hidden]',
-                        'id' => 'switch-hidden'
+                        'id' => 'switch-hidden',
+                        'attrs' => ['data-on-color' => 'danger']
                         ]])
                       </div>
                     </div>
@@ -105,7 +106,10 @@
                         @include('forms.switch', ['options' => [
                         'name' => 'options[has_cost]',
                         'id' => 'switch-has-cost',
-                        'attrs' => ['data-disabler' => ['name' => 'cost', 1 => 'show', 0 => 'hide']]
+                        'attrs' => [
+                        'data-disabler' => ['name' => 'cost', 1 => 'show', 0 => 'hide'],
+                        'data-on-color' => 'danger'
+                        ]
                         ]])
                       </div>
                     </div>
@@ -115,7 +119,7 @@
 
                 {{-- key --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-key">{{ __('Key') }}</label>
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="input-key">{{ __('Key') }}</label>
                   <div class="col-sm-10">
                     @include('forms.text', [ 'options' => [
                     'name' => 'options[key]',
@@ -127,7 +131,7 @@
 
                 {{-- message --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pr-0 col-form-label text-right" for="input-message">
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="input-message">
                     {{ __('Payment Message') }}
                   </label>
                   <div class="col-sm-10">
@@ -143,7 +147,7 @@
 
                 {{-- type --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pr-0 col-form-label text-right"
+                  <label class="col-sm-2 pe-0 col-form-label text-end"
                     for="select-type">{{ __('Variable Type') }}</label>
                   <div class="col-sm-10">
                     @include('forms.select', [ 'options' => [
@@ -164,8 +168,7 @@
                   @php $disabled = $type != 'text'; @endphp
 
                   <div class="row justify-content-md-center mt-3">
-                    <label class="col-sm-2 pr-0 col-form-label text-right"
-                      for="text-default">{{ __('Options') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="text-default">{{ __('Options') }}</label>
                     <div class="col-sm-10 choice-grid" id="string-options">
                       <label>{{ __('Value') }}</label>
                       <label>{{ __('Key') }}</label>
@@ -210,8 +213,8 @@
                       'group' => ['attrs' => 'repeat=_0']
                       ]])
 
-                      <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" title="Remove choice"
-                        repeat="_0">
+                      <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" repeat="_0"
+                        data-bs-toggle="tooltip" title="Remove">
                         <i class="fal fa-trash-alt"></i>
                       </button>
 
@@ -253,8 +256,8 @@
                         'group' => ['attrs' => "repeat=_$loop->index"]
                         ]])
 
-                        <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" title="Remove choice"
-                          repeat="_{{ $loop->index }}">
+                        <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove"
+                          repeat="_{{ $loop->index }}" data-bs-toggle="tooltip" title="Remove">
                           <i class="fal fa-trash-alt"></i>
                         </button>
 
@@ -262,8 +265,8 @@
                     </div>
 
                     <div class="row">
-                      <div class="col text-right">
-                        <button id="add-option" class="btn btn-sm btn-primary">{{ __('Add Option') }}</button>
+                      <div class="col text-end">
+                        <button id="add-option" class="btn btn-sm btn-info">{{ __('Add Option') }}</button>
                       </div>
                     </div>
                   </div>
@@ -276,7 +279,7 @@
 
                   {{-- default --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pr-0 col-form-label text-right"
+                    <label class="col-sm-2 pe-0 col-form-label text-end"
                       for="number-default">{{ __('Default Value') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
@@ -290,7 +293,7 @@
 
                   {{-- min_value --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pr-0 col-form-label text-right"
+                    <label class="col-sm-2 pe-0 col-form-label text-end"
                       for="number-min-value">{{ __('Minimum Value') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
@@ -304,7 +307,7 @@
 
                   {{-- max_value --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pr-0 col-form-label text-right"
+                    <label class="col-sm-2 pe-0 col-form-label text-end"
                       for="number-max-value">{{ __('Maximum Value') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
@@ -318,7 +321,7 @@
 
                   {{-- step --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pr-0 col-form-label text-right" for="number-step">{{ __('Step') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="number-step">{{ __('Step') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
                       'name' => 'options[step]',
@@ -331,7 +334,7 @@
 
                   {{-- min_cost --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pr-0 col-form-label text-right"
+                    <label class="col-sm-2 pe-0 col-form-label text-end"
                       for="number-min-cost">{{ __('Minimum Cost') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
@@ -349,7 +352,7 @@
 
                   {{-- max_cost --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pr-0 col-form-label text-right"
+                    <label class="col-sm-2 pe-0 col-form-label text-end"
                       for="number-max-cost">{{ __('Maximum Cost') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
@@ -373,7 +376,7 @@
 
                   {{-- default --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pr-0 col-form-label text-right"
+                    <label class="col-sm-2 pe-0 col-form-label text-end"
                       for="switch-default">{{ __('Default Value') }}</label>
                     <div class="col-sm-10 has-switch">
                       @include('forms.switch', ['options' => [
@@ -386,7 +389,7 @@
 
                   {{-- on_cost --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pr-0 col-form-label text-right"
+                    <label class="col-sm-2 pe-0 col-form-label text-end"
                       for="number-on-cost">{{ __('On Cost') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
@@ -404,7 +407,7 @@
 
                   {{-- off_cost --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pr-0 col-form-label text-right"
+                    <label class="col-sm-2 pe-0 col-form-label text-end"
                       for="number-off-cost">{{ __('Off Cost') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
@@ -423,15 +426,15 @@
                 </div>
 
               </div>
-              <div class="card-footer ml-auto mr-auto">
-                <button type="submit" class="btn">{{ __('Add Default') }}</button>
+              <div class="card-footer mx-auto">
+                <button type="submit" class="btn btn-primary">{{ __('Add Default') }}</button>
               </div>
             </div>
           </form>
         </div>
         <div class="col-md-4">
           <div class="row">
-            <div class="col-md-12 mb-3 text-right">
+            <div class="col-md-12 mb-3 text-end">
               <a href="{{ route('default.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
             </div>
           </div>
@@ -450,5 +453,5 @@
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/defaults.js"></script>
+  <script type="module" src="{{ asset('js') }}/pages/defaults.js"></script>
 @endpush

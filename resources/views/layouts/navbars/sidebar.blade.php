@@ -1,7 +1,7 @@
 <div class="navbar-minimize-fixed">
-  <button class="minimize-sidebar btn btn-link btn-just-icon">
-    <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
-    <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
+  <button class="minimize-sidebar btn btn-link btn-just-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Sidebar toggle">
+    <i class="fal fa-align-center visible-on-sidebar-regular"></i>
+    <i class="fal fa-list-ul visible-on-sidebar-mini"></i>
   </button>
 </div>
 <div class="sidebar" data="orange">
@@ -9,7 +9,7 @@
   <div class="sidebar-wrapper">
     <div class="logo">
       <a href="#" class="simple-text logo-mini">
-        {{ __('SS') }}
+        <img src="{{ asset('images') }}/logo-out-white.svg" class="logo-white">
       </a>
       <a href="#" class="simple-text logo-normal">
         {{ __('Social Shadow') }}
@@ -61,12 +61,12 @@
           </a>
         </li>
 
-        <li class="{{ $activePage == 'post-management' ? ' active' : '' }}">
+        {{-- <li class="{{ $activePage == 'post-management' ? ' active' : '' }}">
           <a href="{{ route('post.index') }}">
             <i class="fal fa-alarm-clock"></i>
             <p>{{ __('Posts') }}</p>
           </a>
-        </li>
+        </li> --}}
 
         <li class="{{ $activePage == 'default-management' ? ' active' : '' }}">
           <a href="{{ route('default.index') }}">
@@ -78,7 +78,7 @@
       @else
 
         <li class="{{ $menuParent == 'analytics' ? ' active' : '' }}">
-          <a data-toggle="collapse" href="#analytics">
+          <a data-bs-toggle="collapse" href="#analytics">
             <i class="fab fa-laravel"></i>
             <p>
               {{ __('Analytics') }}
@@ -88,40 +88,40 @@
           <div class="collapse {{ $menuParent == 'analytics' ? ' show' : '' }}" id="analytics">
             <ul class="nav">
               <li class="{{ $activePage == 'followers' ? ' active' : '' }}">
-                <a href="{{ route('pages.cory.followers') }}">
-                  <span class="sidebar-mini-icon">P</span>
+                <a href="{{ route('pages.followers') }}">
+                  <span class="sidebar-mini-icon">Fo</span>
                   <span class="sidebar-normal"> {{ __('Followers') }} </span>
                 </a>
               </li>
 
               <li class="{{ $activePage == 'likes' ? ' active' : '' }}">
-                <a href="{{ route('pages.cory.likes') }}">
-                  <span class="sidebar-mini-icon">L</span>
+                <a href="{{ route('pages.likes') }}">
+                  <span class="sidebar-mini-icon">Li</span>
                   <span class="sidebar-normal"> {{ __('Likes') }} </span>
                 </a>
               </li>
               <li class="{{ $activePage == 'comments' ? ' active' : '' }}">
-                <a href="{{ route('pages.cory.comments') }}">
-                  <span class="sidebar-mini-icon">C</span>
+                <a href="{{ route('pages.comments') }}">
+                  <span class="sidebar-mini-icon">Co</span>
                   <span class="sidebar-normal"> {{ __('Comments') }} </span>
                 </a>
               </li>
               <li class="{{ $activePage == 'posts' ? ' active' : '' }}">
-                <a href="{{ route('pages.cory.posts') }}">
-                  <span class="sidebar-mini-icon">P</span>
+                <a href="{{ route('pages.posts') }}">
+                  <span class="sidebar-mini-icon">Po</span>
                   <span class="sidebar-normal"> {{ __('Posts') }} </span>
                 </a>
               </li>
               <li class="{{ $activePage == 'demographics' ? ' active' : '' }}">
-                <a href="{{ route('pages.cory.demographics') }}">
-                  <span class="sidebar-mini-icon">P</span>
+                <a href="{{ route('pages.demographics') }}">
+                  <span class="sidebar-mini-icon">De</span>
                   <span class="sidebar-normal"> {{ __('Demographics') }} </span>
                 </a>
               </li>
 
               <li class="{{ $activePage == 'hashtags' ? ' active' : '' }}">
-                <a href="{{ route('pages.cory.hashtags') }}">
-                  <span class="sidebar-mini-icon">P</span>
+                <a href="{{ route('pages.hashtags') }}">
+                  <span class="sidebar-mini-icon">Ha</span>
                   <span class="sidebar-normal"> {{ __('Hashtags') }} </span>
                 </a>
               </li>
@@ -131,50 +131,50 @@
         </li>
 
         <li class="{{ $activePage == 'scheduling' ? ' active' : '' }}">
-          <a href="{{ route('pages.cory.scheduling') }}">
-            <i class="tim-icons icon-time-alarm"></i>
+          <a href="{{ route('pages.scheduling') }}">
+            <i class="fal fa-alarm-clock"></i>
             <p>{{ __('Scheduling') }}</p>
           </a>
         </li>
 
-        <li class="{{ $activePage == 'hashtag_generator' ? ' active' : '' }}">
-          <a href="{{ route('pages.cory.hashtag_generator') }}">
-            <i class="tim-icons icon-atom"></i>
+        <li class="{{ $activePage == 'hashtag-generator' ? ' active' : '' }}">
+          <a href="{{ route('pages.hashtag-generator') }}">
+            <i class="fal fa-hashtag"></i>
             <p>{{ __('Hashtags') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'account-management' ? ' active' : '' }}">
           <a href="{{ route('account.index') }}">
-            <i class="tim-icons icon-badge"></i>
+            <i class="fal fa-id-card"></i>
             <p>{{ __('Accounts') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'reporting' ? ' active' : '' }}">
-          <a href="{{ route('pages.cory.reporting') }}">
-            <i class="tim-icons icon-single-copy-04"></i>
+          <a href="{{ route('pages.reporting') }}">
+            <i class="fal fa-file-chart-pie"></i>
             <p>{{ __('Reporting') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'team-management' ? ' active' : '' }}">
           <a href="{{ route('team.index') }}">
-            <i class="tim-icons icon-single-02"></i>
+            <i class="fal fa-rocket-launch"></i>
             <p>{{ __('Team') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'timeline' ? ' active' : '' }}">
-          <a href="{{ route('page.timeline') }}">
-            <i class="tim-icons icon-email-85"></i>
+          <a href="{{ route('page.support') }}">
+            <i class="fal fa-envelope"></i>
             <p>{{ __('Support') }}</p>
           </a>
         </li>
 
-        <li class="{{ $activePage == 'profile' ? ' active' : '' }}">
+        <li class=" {{ $activePage == 'profile' ? ' active' : '' }}">
           <a href="{{ route('profile.edit') }}">
-            <i class="tim-icons icon-settings-gear-63"></i>
+            <i class="fal fa-cogs"></i>
             <p>{{ __('Settings') }}</p>
           </a>
         </li>

@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent fixed-top">
+<nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
   <div class="container-fluid">
     <div class="navbar-wrapper">
       <div class="navbar-toggle d-inline">
@@ -11,19 +11,18 @@
       </div>
       <a class="navbar-brand" href="{{ route('home') }}">{{ $titlePage }}</a>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false"
-      aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-bar navbar-kebab"></span>
       <span class="navbar-toggler-bar navbar-kebab"></span>
       <span class="navbar-toggler-bar navbar-kebab"></span>
     </button>
     <div class="collapse navbar-collapse" id="navigation">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ms-auto">
 
         @if (auth()->user() && $activePage != 'subscribe')
           <li class="nav-item">
-            <a href="{{ route('home') }}" class="nav-link text-primary">
-              <i class="tim-icons icon-minimal-left"></i> {{ __('Back to Dashboard') }}
+            <a href="{{ route('home') }}" class="nav-link">
+              <i class="fal fa-chevron-left"></i> {{ __('Back to Dashboard') }}
             </a>
           </li>
         @endif
@@ -48,8 +47,7 @@
 
         @auth()
           <li class="nav-item">
-            <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
-                                  document.getElementById('logout-form').submit();">
+            <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
               <i class="fal fa-sign-out"></i>
               <span>{{ __('Logout') }}</span>
             </a>
@@ -59,8 +57,7 @@
     </div>
   </div>
 </nav>
-<div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal"
-  aria-hidden="true">
+<div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">

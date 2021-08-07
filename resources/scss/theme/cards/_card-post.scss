@@ -1,0 +1,26 @@
+.card {
+    &.card-post {
+        .card-img-top {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .card-title {
+            margin-bottom: 0;
+        }
+    }
+
+    .card-details {
+        label {
+            font-weight: 300;
+            margin-bottom: -2px;
+            color: $gray-500;
+            display: block;
+        }
+
+        p {
+            padding-left: 5px;
+            font-size: $font-size-base;
+        }
+    }
+}

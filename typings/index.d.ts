@@ -106,6 +106,12 @@ interface Date {
     addMinutes(mins: number): Date;
 }
 
-interface jQuery {
+interface JQuery {
     perfectScrollbar(settings?: object): jQuery;
+    replaceTag(element: HTMLElement, newTag: string, keepProps?: boolean): this;
+}
+
+interface JQueryStatic {
+    replaceTag(newTag: string, keepProps?: boolean): this;
+    hasAttr(attribute: string): boolean;
 }

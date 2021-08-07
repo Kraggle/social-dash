@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="content">
-    <div class="col-md-8 ml-auto mr-auto">
+    <div class="col-md-8 mx-auto">
       <h2 class="text-center">DataTables.net</h2>
       <p class="text-center">A beautiful plugin, highly flexible tool build upon the foundations of progressive
         enhancement, that adds all of these advanced features to any HTML table. Handcrafted by our friends. Please check
@@ -24,7 +24,7 @@
                   <th>Position</th>
                   <th>Office</th>
                   <th>Age</th>
-                  <th class="sorting_desc_disabled sorting_asc_disabled text-right">Actions</th>
+                  <th class="sorting_desc_disabled sorting_asc_disabled text-end">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -33,13 +33,10 @@
                   <td>System Architect</td>
                   <td>Edinburgh</td>
                   <td>61</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -47,13 +44,10 @@
                   <td>Accountant</td>
                   <td>Tokyo</td>
                   <td>63</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -61,13 +55,10 @@
                   <td>Junior Technical Author</td>
                   <td>San Francisco</td>
                   <td>66</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -75,13 +66,10 @@
                   <td>Senior Javascript Developer</td>
                   <td>Edinburgh</td>
                   <td>22</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -89,13 +77,10 @@
                   <td>Accountant</td>
                   <td>Tokyo</td>
                   <td>33</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -103,13 +88,10 @@
                   <td>Integration Specialist</td>
                   <td>New York</td>
                   <td>61</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -117,13 +99,10 @@
                   <td>Sales Assistant</td>
                   <td>San Francisco</td>
                   <td>59</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -131,13 +110,10 @@
                   <td>Integration Specialist</td>
                   <td>Tokyo</td>
                   <td>55</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -145,13 +121,10 @@
                   <td>Javascript Developer</td>
                   <td>San Francisco</td>
                   <td>39</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -159,13 +132,10 @@
                   <td>Software Engineer</td>
                   <td>Edinburgh</td>
                   <td>23</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -173,13 +143,10 @@
                   <td>Office Manager</td>
                   <td>London</td>
                   <td>30</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -187,13 +154,10 @@
                   <td>Support Lead</td>
                   <td>Edinburgh</td>
                   <td>22</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -201,13 +165,10 @@
                   <td>Regional Director</td>
                   <td>San Francisco</td>
                   <td>36</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -215,13 +176,10 @@
                   <td>Senior Marketing Designer</td>
                   <td>London</td>
                   <td>43</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -229,13 +187,10 @@
                   <td>Regional Director</td>
                   <td>London</td>
                   <td>19</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -243,13 +198,10 @@
                   <td>Marketing Designer</td>
                   <td>London</td>
                   <td>66</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -257,13 +209,10 @@
                   <td>Chief Financial Officer (CFO)</td>
                   <td>New York</td>
                   <td>64</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -271,13 +220,10 @@
                   <td>Systems Administrator</td>
                   <td>New York</td>
                   <td>59</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -285,13 +231,10 @@
                   <td>Software Engineer</td>
                   <td>London</td>
                   <td>41</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -299,13 +242,10 @@
                   <td>Personnel Lead</td>
                   <td>Edinburgh</td>
                   <td>35</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -313,13 +253,10 @@
                   <td>Development Lead</td>
                   <td>New York</td>
                   <td>30</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -327,13 +264,10 @@
                   <td>Chief Marketing Officer (CMO)</td>
                   <td>New York</td>
                   <td>40</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -341,13 +275,10 @@
                   <td>Pre-Sales Support</td>
                   <td>New York</td>
                   <td>21</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -355,13 +286,10 @@
                   <td>Sales Assistant</td>
                   <td>Sidney</td>
                   <td>23</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -369,13 +297,10 @@
                   <td>Chief Executive Officer (CEO)</td>
                   <td>London</td>
                   <td>47</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -383,13 +308,10 @@
                   <td>Developer</td>
                   <td>Edinburgh</td>
                   <td>42</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -397,13 +319,10 @@
                   <td>Regional Director</td>
                   <td>Singapore</td>
                   <td>28</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -411,13 +330,10 @@
                   <td>Software Engineer</td>
                   <td>San Francisco</td>
                   <td>28</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm btn-neutral like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -425,13 +341,10 @@
                   <td>Chief Operating Officer (COO)</td>
                   <td>San Francisco</td>
                   <td>48</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -439,13 +352,10 @@
                   <td>Regional Marketing</td>
                   <td>Tokyo</td>
                   <td>20</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -453,13 +363,10 @@
                   <td>Integration Specialist</td>
                   <td>Sidney</td>
                   <td>37</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -467,13 +374,10 @@
                   <td>Developer</td>
                   <td>London</td>
                   <td>53</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -481,13 +385,10 @@
                   <td>Technical Author</td>
                   <td>London</td>
                   <td>27</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -495,13 +396,10 @@
                   <td>Team Leader</td>
                   <td>San Francisco</td>
                   <td>22</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -509,13 +407,10 @@
                   <td>Post-Sales support</td>
                   <td>Edinburgh</td>
                   <td>46</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -523,13 +418,10 @@
                   <td>Marketing Designer</td>
                   <td>San Francisco</td>
                   <td>47</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -537,13 +429,10 @@
                   <td>Office Manager</td>
                   <td>San Francisco</td>
                   <td>51</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -551,13 +440,10 @@
                   <td>Secretary</td>
                   <td>San Francisco</td>
                   <td>41</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -565,13 +451,10 @@
                   <td>Financial Controller</td>
                   <td>San Francisco</td>
                   <td>62</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -579,13 +462,10 @@
                   <td>Office Manager</td>
                   <td>London</td>
                   <td>37</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -593,13 +473,10 @@
                   <td>Director</td>
                   <td>New York</td>
                   <td>65</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -607,13 +484,10 @@
                   <td>Support Engineer</td>
                   <td>Singapore</td>
                   <td>64</td>
-                  <td class="text-right">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i
-                        class="tim-icons icon-heart-2"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
-                        class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
-                        class="fal fa-trash-alt"></i></a>
+                  <td class="text-end">
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
               </tbody>
@@ -623,7 +497,7 @@
                   <th>Position</th>
                   <th>Office</th>
                   <th>Age</th>
-                  <th class="disabled-sorting text-right">Actions</th>
+                  <th class="disabled-sorting text-end">Actions</th>
                 </tr>
               </tfoot>
             </table>

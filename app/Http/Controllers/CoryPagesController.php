@@ -9,7 +9,7 @@ class CoryPagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function likes() {
-        return view('pages.cory.likes');
+        return view('pages.likes');
     }
 
     /**
@@ -18,7 +18,7 @@ class CoryPagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function comments() {
-        return view('pages.cory.comments');
+        return view('pages.comments');
     }
 
     /**
@@ -27,7 +27,7 @@ class CoryPagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function posts() {
-        return view('pages.cory.posts');
+        return view('pages.posts');
     }
 
     /**
@@ -36,7 +36,7 @@ class CoryPagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function scheduling() {
-        return view('pages.cory.scheduling');
+        return view('pages.scheduling');
     }
 
     /**
@@ -45,7 +45,7 @@ class CoryPagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function followers() {
-        return view('pages.cory.followers');
+        return view('pages.followers');
     }
 
     /**
@@ -54,7 +54,7 @@ class CoryPagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function demographics() {
-        return view('pages.cory.demographics');
+        return view('pages.demographics');
     }
 
 
@@ -64,7 +64,7 @@ class CoryPagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function reporting() {
-        return view('pages.cory.reporting');
+        return view('pages.reporting');
     }
 
     /**
@@ -73,44 +73,44 @@ class CoryPagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function hashtags() {
-        return view('pages.cory.hashtags');
+        return view('pages.hashtags');
     }
 
     /**
-     * Display the hashtag_generator page
+     * Display the hashtag-generator page
      *
      * @return \Illuminate\View\View
      */
-    public function hashtag_generator() {
-        return view('pages.cory.hashtag_generator');
+    public function hashtagGenerator() {
+        return view('pages.hashtag-generator');
     }
 
     /**
-     * Display the individualpost page
+     * Display the post page
      *
      * @return \Illuminate\View\View
      */
-    public function individualpost() {
-        return view('pages.cory.individualpost');
-    }
-
-
-    /**
-     * Display the compareposts page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function compareposts() {
-        return view('pages.cory.compareposts');
+    public function post() {
+        return view('pages.post');
     }
 
 
     /**
-     * Display the singleprofile page
+     * Display the compare-posts page
      *
      * @return \Illuminate\View\View
      */
-    public function singleprofile() {
-        return view('pages.cory.singleprofile');
+    public function comparePosts() {
+        return view('pages.compare-posts');
+    }
+
+
+    /**
+     * Display the single-profile page
+     *
+     * @return \Illuminate\View\View
+     */
+    public function singleProfile() {
+        return view('pages.single-profile');
     }
 }

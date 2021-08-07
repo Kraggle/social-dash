@@ -23,14 +23,14 @@ __('Notifications')])
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
                 <i class="fal fa-trash-alt"></i>
               </button>
-              <span data-notify="icon" class="tim-icons icon-bell-55"></span>
+              <span data-notify="icon" class="fal fa-bell"></span>
               <span data-notify="message">This is a notification with close button and icon.</span>
             </div>
             <div class="alert alert-info alert-with-icon" data-notify="container">
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
                 <i class="fal fa-trash-alt"></i>
               </button>
-              <span data-notify="icon" class="tim-icons icon-bell-55"></span>
+              <span data-notify="icon" class="fal fa-bell"></span>
               <span data-notify="message">This is a notification with close button and icon and have many lines. You can
                 see that the icon and the close button are always vertically aligned. This is a beautiful notification. So
                 you don't have to worry about the style.</span>
@@ -87,7 +87,7 @@ __('Notifications')])
           <div class="card-body">
             <div class="places-buttons">
               <div class="row">
-                <div class="col-md-6 ml-auto mr-auto text-center">
+                <div class="col-md-6 mx-auto text-center">
                   <h4 class="card-title">
                     Notifications Places
                   </h4>
@@ -95,7 +95,7 @@ __('Notifications')])
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-8 ml-auto mr-auto">
+                <div class="col-lg-8 mx-auto">
                   <div class="row">
                     <div class="col-md-4">
                       <button class="btn btn-primary btn-block" onclick="demo.showNotification('top','left')">Top
@@ -113,7 +113,7 @@ __('Notifications')])
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-8 ml-auto mr-auto">
+                <div class="col-lg-8 mx-auto">
                   <div class="row">
                     <div class="col-md-4">
                       <button class="btn btn-primary btn-block" onclick="demo.showNotification('bottom','left')">Bottom
@@ -136,18 +136,17 @@ __('Notifications')])
                 <div class="card-header">
                   <h4 class="card-title">Modal</h4>
                 </div>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                <button class="btn btn-primary" data-toggle="modal" data-bs-target="#myModal">
                   Classic modal
                 </button>
-                <button class="btn btn-info" data-toggle="modal" data-target="#noticeModal">
+                <button class="btn btn-info" data-toggle="modal" data-bs-target="#noticeModal">
                   Notice modal
                 </button>
-                <button class="btn" data-toggle="modal" data-target="#myModal10">
+                <button class="btn btn-primary" data-toggle="modal" data-bs-target="#myModal10">
                   Small alert modal
                 </button>
                 <!-- Classic Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                  aria-hidden="true">
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header justify-content-center">
@@ -173,8 +172,7 @@ __('Notifications')])
                 </div>
                 <!--  End Modal -->
                 <!-- notice modal -->
-                <div class="modal fade" id="noticeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                  aria-hidden="true">
+                <div class="modal fade" id="noticeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-notice">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -227,8 +225,7 @@ __('Notifications')])
                 </div>
                 <!-- end notice modal -->
                 <!-- small modal -->
-                <div class="modal fade modal-mini modal-primary" id="myModal10" tabindex="-1" role="dialog"
-                  aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal fade modal-mini modal-primary" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header justify-content-center">
@@ -236,7 +233,7 @@ __('Notifications')])
                           <i class="fal fa-trash-alt text-white"></i>
                         </button>
                         <div class="modal-profile">
-                          <i class="tim-icons icon-single-02"></i>
+                          <i class="fal fa-user"></i>
                         </div>
                       </div>
                       <div class="modal-body">

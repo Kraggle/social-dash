@@ -50,25 +50,18 @@
                 <div class="row mb-3">
                   <div class="col-md-4">
                     <p class="category">Default</p>
-                    <input type="checkbox" checked name="checkbox" class="bootstrap-switch" data-on-label="ON"
-                      data-off-label="OFF" />
-                    <input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="ON"
-                      data-off-label="OFF" />
+                    <input type="checkbox" checked name="checkbox" class="bootstrap-switch" data-on-label="ON" data-off-label="OFF" />
+                    <input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="ON" data-off-label="OFF" />
                   </div>
                   <div class="col-md-4">
                     <p class="category">Plain</p>
-                    <input type="checkbox" checked name="checkbox" class="bootstrap-switch" data-on-label=""
-                      data-off-label="" />
+                    <input type="checkbox" checked name="checkbox" class="bootstrap-switch" data-on-label="" data-off-label="" />
                     <input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="" data-off-label="" />
                   </div>
                   <div class="col-md-4">
                     <p class="category">With Icons</p>
-                    <input type="checkbox" checked name="checkbox" class="bootstrap-switch"
-                      data-on-label="<i class='tim-icons icon-check-2'></i>"
-                      data-off-label="<i class='fal fa-trash-alt'></i>" />
-                    <input type="checkbox" name="checkbox" class="bootstrap-switch"
-                      data-on-label="<i class='tim-icons icon-check-2'></i>"
-                      data-off-label="<i class='fal fa-trash-alt'></i>" />
+                    <input type="checkbox" checked name="checkbox" class="bootstrap-switch" data-on-label="<i class='fal fa-check'></i>" data-off-label="<i class='fal fa-trash-alt'></i>" />
+                    <input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="<i class='fal fa-check'></i>" data-off-label="<i class='fal fa-trash-alt'></i>" />
                   </div>
                 </div>
               </div>
@@ -111,16 +104,14 @@
             <div class="row">
               <div class="col-md-6 mb-4">
                 <h4 class="card-title">Tags</h4>
-                <input type="text" value="Amsterdam,Washington,Sydney,Beijing" class="tagsinput" data-role="tagsinput"
-                  data-color="danger" />
+                <input type="text" value="Amsterdam,Washington,Sydney,Beijing" class="tagsinput" data-role="tagsinput" data-color="danger" />
               </div>
               <div class="col-md-6">
                 <h4 class="card-title">Dropdown & Dropup</h4>
                 <div class="row">
                   <div class="col-lg-4 col-md-6 col-sm-3">
                     <div class="dropdown">
-                      <button class="dropdown-toggle btn btn-primary btn-block" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <button class="dropdown-toggle btn btn-primary btn-block" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
                       </button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -133,7 +124,7 @@
                   </div>
                   <div class="col-lg-4 col-md-6 col-sm-3">
                     <div class="dropup">
-                      <button type="button" class="dropdown-toggle btn btn-primary btn-block" data-toggle="dropdown">
+                      <button type="button" class="dropdown-toggle btn btn-primary btn-block" data-bs-toggle="dropdown">
                         Dropup
                       </button>
                       <div class="dropdown-menu">
@@ -153,8 +144,7 @@
                 <div class="progress-container">
                   <span class="progress-badge">Default</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                      style="width: 25%;">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
                       <span class="progress-value">25%</span>
                     </div>
                   </div>
@@ -162,8 +152,7 @@
                 <div class="progress-container progress-primary">
                   <span class="progress-badge">Primary</span>
                   <div class="progress">
-                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                      aria-valuemax="100" style="width: 60%;">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
                       <span class="progress-value">60%</span>
                     </div>
                   </div>
@@ -182,17 +171,16 @@
                 <h4 class="card-title">Regular Image</h4>
                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                   <div class="fileinput-new thumbnail">
-                    <img src="{{ asset('white') }}/img/image_placeholder.jpg" alt="...">
+                    <img src="{{ asset('images') }}/image_placeholder.jpg" alt="...">
                   </div>
                   <div class="fileinput-preview fileinput-exists thumbnail"></div>
                   <div>
-                    <span class="btn btn-rose btn-round btn-file">
+                    <span class="btn btn-primary btn-round btn-file">
                       <span class="fileinput-new">Select image</span>
                       <span class="fileinput-exists">Change</span>
                       <input type="file" name="..." />
                     </span>
-                    <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i
-                        class="fa fa-times"></i> Remove</a>
+                    <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
                   </div>
                 </div>
               </div>
@@ -200,18 +188,17 @@
                 <h4 class="card-title">Avatar</h4>
                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                   <div class="fileinput-new thumbnail img-circle">
-                    <img src="{{ asset('white') }}/img/placeholder.jpg" alt="...">
+                    <img src="{{ asset('images') }}/placeholder.jpg" alt="...">
                   </div>
                   <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
                   <div>
-                    <span class="btn btn-round btn-rose btn-file">
+                    <span class="btn btn-round btn-primary btn-file">
                       <span class="fileinput-new">Add Photo</span>
                       <span class="fileinput-exists">Change</span>
                       <input type="file" name="..." />
                     </span>
                     <br />
-                    <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i
-                        class="fa fa-times"></i> Remove</a>
+                    <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
                   </div>
                 </div>
               </div>
