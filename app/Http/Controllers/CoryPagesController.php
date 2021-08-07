@@ -113,33 +113,4 @@ class CoryPagesController extends Controller {
     public function singleProfile() {
         return view('pages.single-profile');
     }
-
-    /**
-     * Display the individualpost page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function individualpost(Item $model) {
-        return view('pages.cory.individualpost', ['items' => $model->with(['tags', 'category'])->get()]);
-    }
-
-
-    /**
-     * Display the compareposts page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function compareposts(Item $model) {
-        return view('pages.cory.compareposts', ['items' => $model->with(['tags', 'category'])->get()]);
-    }
-
-
-    /**
-     * Display the singleprofile page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function singleprofile(Item $model) {
-        return view('pages.cory.singleprofile', ['items' => $model->with(['tags', 'category'])->get()]);
-    }
 }

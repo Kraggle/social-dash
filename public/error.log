@@ -1,45 +1,6 @@
 [07-Aug-2021 12:00:08 UTC] PHP Warning:  require(E:\laragon\www\social-dashboard\public/../vendor/autoload.php): failed to open stream: No such file or directory in E:\laragon\www\social-dashboard\public\index.php on line 34
 [07-Aug-2021 12:00:08 UTC] PHP Fatal error:  require(): Failed opening required 'E:\laragon\www\social-dashboard\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dashboard\public\index.php on line 34
-[07-Aug-2021 12:07:19 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined variable: titlePage in E:\laragon\www\social-dash\storage\framework\views\ac50aa6402c63d46c4ddd2821f1cb04d099de223.php:12
-Stack trace:
-#0 E:\laragon\www\social-dash\storage\framework\views\ac50aa6402c63d46c4ddd2821f1cb04d099de223.php(12): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'E:\\laragon\\www\\...', 12, Array)
-#1 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
-#2 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('E:\\laragon\\www\\...', Array)
-#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->e in E:\laragon\www\social-dash\resources\views/layouts/navbars/navs/guest.blade.php on line 12
-[07-Aug-2021 12:07:51 UTC] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [logout] not defined. in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php:427
-Stack trace:
-#0 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(726): Illuminate\Routing\UrlGenerator->route('logout', Array, true)
-#1 E:\laragon\www\social-dash\storage\framework\views\8631753355c8ae8456882eb373bc9cd7cb643b9a.php(32): route('logout')
-#2 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
-#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('E:\\laragon\\www\\...', Array)
-#5 E:\laragon\www\social-dash\vendor\laravel\frame in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php on line 427
-[07-Aug-2021 12:08:00 UTC] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [logout] not defined. in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php:427
-Stack trace:
-#0 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(726): Illuminate\Routing\UrlGenerator->route('logout', Array, true)
-#1 E:\laragon\www\social-dash\storage\framework\views\8631753355c8ae8456882eb373bc9cd7cb643b9a.php(32): route('logout')
-#2 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
-#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('E:\\laragon\\www\\...', Array)
-#5 E:\laragon\www\social-dash\vendor\laravel\frame in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php on line 427
-[07-Aug-2021 12:08:28 UTC] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [logout] not defined. in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php:427
-Stack trace:
-#0 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(726): Illuminate\Routing\UrlGenerator->route('logout', Array, true)
-#1 E:\laragon\www\social-dash\storage\framework\views\8631753355c8ae8456882eb373bc9cd7cb643b9a.php(32): route('logout')
-#2 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
-#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('E:\\laragon\\www\\...', Array)
-#5 E:\laragon\www\social-dash\vendor\laravel\frame in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php on line 427
-[07-Aug-2021 12:08:37 UTC] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [logout] not defined. in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php:427
-Stack trace:
-#0 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(726): Illuminate\Routing\UrlGenerator->route('logout', Array, true)
-#1 E:\laragon\www\social-dash\storage\framework\views\8631753355c8ae8456882eb373bc9cd7cb643b9a.php(32): route('logout')
-#2 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
-#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
-#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('E:\\laragon\\www\\...', Array)
-#5 E:\laragon\www\social-dash\vendor\laravel\frame in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php on line 427
-[07-Aug-2021 12:08:48 UTC] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [logout] not defined. in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php:427
+[07-Aug-2021 12:23:09 UTC] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [logout] not defined. in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php:427
 Stack trace:
 #0 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(726): Illuminate\Routing\UrlGenerator->route('logout', Array, true)
 #1 E:\laragon\www\social-dash\storage\framework\views\8631753355c8ae8456882eb373bc9cd7cb643b9a.php(32): route('logout')
