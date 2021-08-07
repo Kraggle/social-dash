@@ -9,6 +9,9 @@
 /* navbar color */
 
 .has-switch {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
   padding-bottom: 10px;
@@ -204,6 +207,9 @@
 }
 
 .check-wrap .head-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
@@ -319,6 +325,9 @@ label:empty {
 }
 
 .form-group .input-group-cards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   gap: 5px;
   margin-right: 79px;

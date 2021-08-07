@@ -1,51 +1,47 @@
-.card-collapse{
-    .card{
+.card-collapse {
+    .card {
         margin-bottom: 0px;
         background: $transparent-bg;
         box-shadow: none;
 
-        .card-header{
+        .card-header {
             position: relative;
             padding: 1rem 0.75rem;
 
-            a[data-toggle="collapse"]{
+            a[data-toggle="collapse"] {
                 display: block;
-                color: rgba($white,0.6);
+                color: rgba($white, 0.6);
 
-
-                i{
+                i {
                     float: right;
                     position: relative;
                     color: $primary;
                     top: 1px;
-                    @extend .animation-transition-general;
+                    @extend .animation-transition-general !optional;
                 }
             }
 
-            &:after{
+            &:after {
                 content: "";
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 width: 100%;
                 height: 1px;
-                background: rgba($white,0.1);
-
+                background: rgba($white, 0.1);
             }
-
-
         }
 
-        .card-body{
+        .card-body {
             padding-left: 1.5rem;
             padding-right: 1.5rem;
-            color: rgba($white,0.5);
+            color: rgba($white, 0.5);
         }
 
-        &:last-child{
-          .card-header:after{
-            content: none;
-          }
+        &:last-child {
+            .card-header:after {
+                content: none;
+            }
         }
     }
 }

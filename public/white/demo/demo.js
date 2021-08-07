@@ -1139,6 +1139,8 @@ demo = {
 
         var ctx = document.getElementById("chartBig1");
 
+        console.log(Chart.defaults);
+
         if (ctx) {
             ctx = ctx.getContext('2d');
 

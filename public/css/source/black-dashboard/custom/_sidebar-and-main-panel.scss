@@ -56,7 +56,7 @@
                 span {
                     display: inline-block;
 
-                    @extend .animation-transition-general;
+                    @extend .animation-transition-general !optional;
                 }
 
                 .sidebar-normal {

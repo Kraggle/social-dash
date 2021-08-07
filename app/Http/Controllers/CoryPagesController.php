@@ -90,8 +90,8 @@ class CoryPagesController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function individualpost(Item $model) {
-        return view('pages.cory.individualpost', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function individualpost() {
+        return view('pages.cory.individualpost');
     }
 
 
@@ -100,8 +100,8 @@ class CoryPagesController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function compareposts(Item $model) {
-        return view('pages.cory.compareposts', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function compareposts() {
+        return view('pages.cory.compareposts');
     }
 
 
@@ -110,7 +110,7 @@ class CoryPagesController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function singleprofile(Item $model) {
-        return view('pages.cory.singleprofile', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function singleprofile() {
+        return view('pages.cory.singleprofile');
     }
 }
