@@ -1,0 +1,311 @@
+.card {
+    opacity: 0;
+    border: 0;
+    width: 100%;
+    margin-bottom: $grid-gutter-width;
+    box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
+    transition: all 0.3s ease-in;
+    transform: translateX(100%);
+
+    .pagination .page-item:not(.active) .page-link {
+        color: $dark-states;
+
+        &:hover {
+            background: rgba($gray-800, 0.1);
+        }
+    }
+
+    &:not(.card-wizard).nav-pills .nav-item .nav-link {
+        color: $nav-gray;
+        background-color: hsla(0, 0%, 87%, 0.3);
+
+        &:not(.active):hover {
+            background: hsla(0, 0%, 87%, 0.5);
+        }
+
+        &.active {
+            color: $white;
+        }
+    }
+
+    .tab-content .tab-pane {
+        color: $nav-gray;
+    }
+
+    .card {
+        box-shadow: none;
+    }
+
+    .card-collapse {
+        .card {
+            .card-body {
+                color: $gray-800;
+            }
+        }
+    }
+
+    &.card-contributions {
+        span {
+            color: $gray-800;
+        }
+
+        .bootstrap-switch-container {
+            span {
+                color: $white;
+            }
+        }
+    }
+
+    label:not(.btn) {
+        color: $default;
+    }
+
+    .card-title {
+        margin-bottom: 0.75rem;
+        color: $black;
+    }
+
+    .card-body {
+        padding: 15px;
+
+        &.table-full-width {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .card-title {
+            color: $white;
+            text-transform: inherit;
+            font-weight: $font-weight-light;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-description,
+        .card-category {
+            color: $dark-states;
+        }
+    }
+
+    .card-header {
+        padding: 15px 15px 0;
+        border: 0;
+        color: $black;
+
+        a[data-bs-toggle='collapse'] {
+            color: $black;
+        }
+
+        &:not([data-background-color]) {
+            background-color: transparent;
+        }
+
+        .card-title {
+            color: $dark-states;
+            font-weight: 100;
+        }
+
+        .card-category {
+            color: $card-stats-gray;
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+    }
+
+    .stats {
+        color: $card-stats-gray;
+    }
+
+    .map {
+        border-radius: $border-radius-sm;
+
+        &.map-big {
+            height: 420px;
+        }
+    }
+
+    .input-group-text {
+        border-color: rgba($dark-states, 0.2);
+        color: $dark-states;
+    }
+
+    .has-danger {
+        .form-control,
+        .input-group-text {
+            border-color: $danger-states;
+        }
+    }
+
+    .form-control {
+        color: $black;
+        border-color: rgba($dark-states, 0.2);
+
+        &:focus {
+            border-color: $primary;
+        }
+    }
+
+    label:not(.btn) {
+        color: $default;
+    }
+
+    .form-group.no-border,
+    .input-group.no-border {
+        .form-control,
+        .input-group-text {
+            background-color: $opacity-gray-3;
+
+            &:focus,
+            &:active,
+            &:active {
+                background-color: $opacity-gray-5;
+            }
+        }
+
+        .form-control {
+            &:focus {
+                & + .input-group-text {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .input-group[disabled] {
+        .input-group-text {
+            background-color: $opacity-gray-3;
+        }
+    }
+
+    .form-control[disabled],
+    .form-control[readonly],
+    fieldset[disabled] .form-control {
+        background: $opacity-gray-3;
+    }
+
+    .input-group-focus {
+        .input-group-text,
+        .form-control {
+            background-color: $white;
+            border-color: $primary;
+        }
+
+        &.no-border {
+            .input-group-text {
+                background-color: $opacity-gray-5;
+            }
+        }
+    }
+
+    .input-group-text {
+        border-right: none;
+        border-left: none;
+    }
+
+    .has-danger .form-control:focus,
+    .has-success.input-group-focus .input-group-text {
+        border-color: $danger-states;
+    }
+
+    .has-success .form-control:focus,
+    .has-success.input-group-focus .input-group-text {
+        border-color: darken($success, 10%);
+    }
+
+    &.card-plain {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .image {
+        overflow: hidden;
+        height: 200px;
+        position: relative;
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+
+    label:not(.btn) {
+        font-size: $font-size-sm;
+        margin-bottom: 5px;
+    }
+
+    .card-footer {
+        background-color: transparent;
+        border: 0;
+        padding: 15px;
+
+        .stats {
+            i {
+                margin-right: 5px;
+                position: relative;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0;
+            padding: 7px 0;
+        }
+    }
+
+    &.card-pricing:not(.card-white) {
+        ul li {
+            color: $white;
+        }
+    }
+
+    &:not(.card-pricing) {
+        &.card-wizard {
+            .card-body {
+                background: $white;
+            }
+
+            .card-footer {
+                background-color: $white !important;
+            }
+
+            .nav-pills .nav-item .nav-link p {
+                color: $dark-states;
+            }
+        }
+
+        &.card-stats {
+            hr {
+                border-color: rgba($dark-states, 0.1);
+            }
+
+            .card-title {
+                color: $dark-states;
+            }
+
+            .card-category,
+            .stats {
+                color: $card-stats-gray;
+            }
+        }
+    }
+
+    .card-describe {
+        color: $dark-states;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: $font-size-sm;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+}
+
+.card-body {
+    padding: $card-spacer-y;
+}
+
+.card-message {
+    margin-top: 20px;
+}

@@ -1,0 +1,1 @@
+import*as t from"../index.js";import{renderInput as o}from"./renderInput.js";export const renderContent=(e,n)=>{const r=t.getHtmlContainer();t.applyCustomClass(r,n,"htmlContainer"),n.html?(t.parseHtmlToContainer(n.html,r),t.show(r,"block")):n.text?(r.textContent=n.text,t.show(r,"block")):t.hide(r),o(e,n)};

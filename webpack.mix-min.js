@@ -1,0 +1,1 @@
+require("laravel-mix").sourceMaps(!0,"source-map").webpackConfig({devtool:"source-map"}).options({postCss:[require("autoprefixer")]}).sass("resources/scss/app.scss","public/css").sass("resources/scss/plugins/bootstrap/bootstrap.scss","public/css");

@@ -28,7 +28,7 @@ interface String {
      * @param matchCase Weather to make the search case-sensitive.
      * @returns True if the value was found.
      */
-    contains(str: string, matchCase: Boolean): Boolean;
+    contains(str: string, matchCase?: Boolean): Boolean;
 
     /**
      * When input a string with no whitespace but uppercase
@@ -60,7 +60,7 @@ interface String {
      * @param matchCase Wether to do a case sensitive match.
      * @returns True if the values match.
      */
-    equals(other: Any, matchCase: Boolean): Boolean;
+    equals(other: Any, matchCase?: Boolean): Boolean;
 
     /**
      * Used to add a given string to a string. Will only add it
@@ -104,4 +104,14 @@ interface Date {
      * @returns The date object with the minutes added.
      */
     addMinutes(mins: number): Date;
+}
+
+interface JQuery {
+    perfectScrollbar(settings?: object): jQuery;
+    replaceTag(element: HTMLElement, newTag: string, keepProps?: boolean): this;
+}
+
+interface JQueryStatic {
+    replaceTag(newTag: string, keepProps?: boolean): this;
+    hasAttr(attribute: string): boolean;
 }

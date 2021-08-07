@@ -1,0 +1,1 @@
+import r from"../core/jquery/jquery.js";import m from"./shared/map-data.js";r((()=>{m.init()}));

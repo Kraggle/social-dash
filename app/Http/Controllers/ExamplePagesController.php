@@ -47,21 +47,12 @@ class ExamplePagesController extends Controller {
     }
 
     /**
-     * Display the timeline page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function timeline() {
-        return view('pages.example_pages.timeline');
-    }
-
-    /**
      * Display the widgets page
      *
      * @return \Illuminate\View\View
      */
     public function widgets() {
-        return view('pages.widgets');
+        return view('pages.example_pages.widgets');
     }
 
     /**
@@ -70,7 +61,7 @@ class ExamplePagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function charts() {
-        return view('pages.charts');
+        return view('pages.example_pages.charts');
     }
 
     /**
@@ -79,6 +70,6 @@ class ExamplePagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function calendar() {
-        return view('pages.calendar');
+        return view('pages.example_pages.calendar');
     }
 }

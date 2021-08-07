@@ -1,0 +1,1 @@
+import*as t from"../index.js";export const renderTitle=(e,l)=>{const i=t.getTitle();t.toggle(i,l.title||l.titleText,"block"),l.title&&t.parseHtmlToContainer(l.title,i),l.titleText&&(i.innerText=l.titleText),t.applyCustomClass(i,l,"title")};

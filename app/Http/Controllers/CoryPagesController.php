@@ -2,18 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Item;
-
-class CoryPagesController extends Controller
-{
+class CoryPagesController extends Controller {
     /**
      * Display the likes page
      *
      * @return \Illuminate\View\View
      */
-    public function likes()
-    {
-        return view('pages.cory.likes');
+    public function likes() {
+        return view('pages.likes');
     }
 
     /**
@@ -21,9 +17,8 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function comments()
-    {
-        return view('pages.cory.comments');
+    public function comments() {
+        return view('pages.comments');
     }
 
     /**
@@ -31,9 +26,8 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function posts()
-    {
-        return view('pages.cory.posts');
+    public function posts() {
+        return view('pages.posts');
     }
 
     /**
@@ -41,9 +35,8 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function scheduling(Item $model)
-    {
-        return view('pages.cory.scheduling', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function scheduling() {
+        return view('pages.scheduling');
     }
 
     /**
@@ -51,9 +44,8 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function followers(Item $model)
-    {
-        return view('pages.cory.followers', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function followers() {
+        return view('pages.followers');
     }
 
     /**
@@ -61,9 +53,8 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function demographics(Item $model)
-    {
-        return view('pages.cory.demographics', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function demographics() {
+        return view('pages.demographics');
     }
 
 
@@ -72,9 +63,8 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function reporting(Item $model)
-    {
-        return view('pages.cory.reporting', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function reporting() {
+        return view('pages.reporting');
     }
 
     /**
@@ -82,19 +72,46 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function hashtags(Item $model)
-    {
-        return view('pages.cory.hashtags', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function hashtags() {
+        return view('pages.hashtags');
     }
 
     /**
-     * Display the hashtag_generator page
+     * Display the hashtag-generator page
      *
      * @return \Illuminate\View\View
      */
-    public function hashtag_generator(Item $model)
-    {
-        return view('pages.cory.hashtag_generator', ['items' => $model->with(['tags', 'category'])->get()]);
+    public function hashtagGenerator() {
+        return view('pages.hashtag-generator');
+    }
+
+    /**
+     * Display the post page
+     *
+     * @return \Illuminate\View\View
+     */
+    public function post() {
+        return view('pages.post');
+    }
+
+
+    /**
+     * Display the compare-posts page
+     *
+     * @return \Illuminate\View\View
+     */
+    public function comparePosts() {
+        return view('pages.compare-posts');
+    }
+
+
+    /**
+     * Display the single-profile page
+     *
+     * @return \Illuminate\View\View
+     */
+    public function singleProfile() {
+        return view('pages.single-profile');
     }
 
     /**
@@ -102,8 +119,7 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function individualpost(Item $model)
-    {
+    public function individualpost(Item $model) {
         return view('pages.cory.individualpost', ['items' => $model->with(['tags', 'category'])->get()]);
     }
 
@@ -113,8 +129,7 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function compareposts(Item $model)
-    {
+    public function compareposts(Item $model) {
         return view('pages.cory.compareposts', ['items' => $model->with(['tags', 'category'])->get()]);
     }
 
@@ -124,8 +139,7 @@ class CoryPagesController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function singleprofile(Item $model)
-    {
+    public function singleprofile(Item $model) {
         return view('pages.cory.singleprofile', ['items' => $model->with(['tags', 'category'])->get()]);
     }
 }

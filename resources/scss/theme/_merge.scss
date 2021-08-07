@@ -1,0 +1,60 @@
+/* Bootstrap v5.0.2 */
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '../plugins/bootstrap/functions';
+
+// 2. Include any default variable overrides here
+@import 'variables';
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import '../plugins/bootstrap/variables';
+@import '../plugins/bootstrap/mixins';
+@import '../plugins/bootstrap/utilities';
+
+// 4. Theme bootstrap overrides
+@import 'mixins';
+
+// Plugins
+@import 'vendor';
+
+// Theme
+@import 'reboot';
+@import 'avatars';
+@import 'alerts';
+// @import "badge";
+@import 'card';
+@import 'cards';
+@import 'dropdown';
+@import 'footer';
+@import 'forms';
+// @import "custom-forms";
+// @import "fixed-plugin";
+// @import "form-range";
+// @import "functions";
+// @import "global";
+@import 'grid';
+@import 'info-areas';
+@import 'icons';
+@import 'full-page';
+@import 'images';
+@import 'input-group';
+@import 'buttons';
+@import 'button-group';
+@import 'misc';
+@import 'modal';
+@import 'pills';
+// @import "popover";
+@import 'progress';
+// @import "nav";
+@import 'navbar';
+@import 'sidebar-and-main-panel';
+// @import "tabs";
+@import 'timeline';
+@import 'type';
+@import 'tables';
+@import 'checkboxes-radio';
+@import 'pagination';
+@import 'utilities';
+// @import "rtl";
+@import 'plugin-overrides';
+
+@import 'custom';

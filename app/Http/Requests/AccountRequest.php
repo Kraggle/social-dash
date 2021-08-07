@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use App\Account;
-use App\User;
+use App\Models\Account;
+use App\Models\User;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -17,18 +17,29 @@ class AccountRequest extends FormRequest {
         return auth()->check();
     }
 
+    public function messages() {
+        return [
+            'username.unique' => 'This username has already been assigned to this team.'
+        ];
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
      * @return array
      */
     public function rules() {
+        $team_id = $this->input('team_id') ?? auth()->user()->team->id;
+        $username = $this->username;
         return [
             'username' => [
-                'required', 'min:3'
+                'required',
+                Rule::unique('accounts')->where(function ($query) use ($username, $team_id) {
+                    return $query->where('username', $username)->where('team_id', $team_id);
+                })
             ],
             'pk' => [
-                'required', Rule::unique((new Account)->getTable())->ignore($this->route()->item->id ?? null)
+                'required'
             ]
         ];
     }

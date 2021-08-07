@@ -2,11 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Tag;
-use App\Item;
-use App\Role;
-use App\User;
-use App\Category;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Console\Command;
 
 class DeleteOldUsers extends Command {
@@ -43,8 +40,5 @@ class DeleteOldUsers extends Command {
 
         User::whereNotIn('id', [1, 2, 3])->where('created_at', '<=', $date)->delete();
         Role::whereNotIn('id', [1, 2, 3])->where('created_at', '<=', $date)->delete();
-        Category::whereNotIn('id', [1, 2, 3, 4, 5])->where('created_at', '<=', $date)->delete();
-        Tag::whereNotIn('id', [1, 2, 3])->where('created_at', '<=', $date)->delete();
-        Item::whereNotIn('id', [1, 2, 3])->where('created_at', '<=', $date)->delete();
     }
 }

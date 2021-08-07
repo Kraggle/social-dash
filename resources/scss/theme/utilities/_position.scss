@@ -1,0 +1,30 @@
+@each $size, $value in $spacers {
+    .top-#{$size} {
+        top: $value;
+    }
+    .right-#{$size} {
+        right: $value;
+    }
+    .bottom-#{$size} {
+        bottom: $value;
+    }
+    .left-#{$size} {
+        left: $value;
+    }
+}
+
+.center-x {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-y {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

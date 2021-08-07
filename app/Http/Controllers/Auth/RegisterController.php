@@ -1,26 +1,14 @@
 <?php
-/*
-
-=========================================================
-* Argon Dashboard PRO - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro-laravel
-* Copyright 2018 Creative Tim (https://www.creative-tim.com) & UPDIVISION (https://www.updivision.com)
-
-* Coded by www.creative-tim.com & www.updivision.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\Team;
+use App\Models\User;
+use App\Models\RegisterToken;
+use App\Helpers\AppHelper;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\InstagramController;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -44,7 +32,7 @@ class RegisterController extends Controller {
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    // protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -63,43 +51,63 @@ class RegisterController extends Controller {
      */
     protected function validator(array $data) {
 
-        if (!key_exists('user_type', $data))
-            $data['type'] = 3;
+        $data['name'] = $data['firstname'] . ' ' . $data['lastname'];
 
-        error_log(json_encode($data, JSON_PRETTY_PRINT));
-
-        return Validator::make($data, [
-            'user' => ['required', 'string'],
+        $valid = Validator::make($data, [
+            'firstname' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'type' => ['required'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'token' => ['sometimes', 'required', 'string']
         ]);
+
+        if (isset($data['token'])) {
+            $token = $data['token'];
+            $valid = Validator::make($data, [
+                'email' => [
+                    Rule::exists('register_tokens', 'email')->where(function ($query) use ($token) {
+                        return $query->where('token', $token);
+                    })
+                ]
+            ], ['email.exists' => 'The provided token is not for this email address.']);
+        }
+
+        return $valid;
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Models\User
      */
     protected function create(array $data) {
 
-        if (!key_exists('user_type', $data))
-            $data['type'] = 3;
+        $role_id = 3;
+        $token = $data['token'] ?? null;
+        $team = null;
 
-        $user = User::create([
-            'name' => $data['name'],
+        if ($token) {
+            $column = RegisterToken::where('token', $token)->first();
+            $role_id = $column->role_id;
+            $team = $column->team;
+        }
+
+        if (in_array($role_id, [2, 3])) {
+            $team = Team::create([
+                'name' => $data['team_name']
+            ]);
+        }
+
+        return User::create([
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
+            'name' => $data['firstname'] . ' ' . $data['lastname'],
             'email' => $data['email'],
-            'role_id' => $data['type'],
             'password' => Hash::make($data['password']),
+            'role_id' => $role_id,
+            'team_id' => $team->id
         ]);
-
-        InstagramController::create([
-            'user_id' => $user->id,
-            'user'    => $data['user']
-        ]);
-
-        return $user;
     }
 }

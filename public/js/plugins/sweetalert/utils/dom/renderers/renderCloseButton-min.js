@@ -1,0 +1,1 @@
+import*as t from"../index.js";export const renderCloseButton=(o,e)=>{const s=t.getCloseButton();t.setInnerHtml(s,e.closeButtonHtml),t.applyCustomClass(s,e,"closeButton"),t.toggle(s,e.showCloseButton),s.setAttribute("aria-label",e.closeButtonAriaLabel)};

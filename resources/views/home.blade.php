@@ -2,24 +2,23 @@
 'class' => 'home-page',
 'classPage' => 'home-page',
 'activePage' => 'home',
-'title' => __('Welcome')
+'titlePage' => __('Welcome')
 ])
 
 @section('content')
-<div class="content">
+  <div class="content">
     <div class="row" style="padding-top: 90px;">
-        <div class="col-md-9 ml-auto mr-auto mb-1 text-center">
-            <h3>{{ __('You are logged in!') }} </h3>
-        </div>
+      <div class="col-md-9 mx-auto mb-1 text-center">
+        <h3>{{ __('You are logged in!') }} </h3>
+      </div>
     </div>
-</div>
+  </div>
 @endsection
 
 @push('js')
-<script>
+  <script>
     $(document).ready(function() {
-        demo.checkFullPageBackgroundImage();
+      demo.checkFullPageBackgroundImage();
     });
-
-</script>
+  </script>
 @endpush

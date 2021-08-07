@@ -6,9 +6,18 @@ const mix = require('laravel-mix');
  |--------------------------------------------------------------------------
  |
  | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
+ | for your Laravel applications. By default, we are compiling the CSS
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.sass('resources/scss/white-dashboard.scss', 'public/css')
-    .sass('public/custom/style/main.scss', 'public/css');
+
+mix.sourceMaps(true, 'source-map')
+    .webpackConfig({ devtool: 'source-map' })
+    .options({
+        postCss: [
+            require('autoprefixer')
+        ]
+    })
+    .sass('resources/scss/app.scss', 'public/css')
+    .sass('resources/scss/plugins/bootstrap/bootstrap.scss', 'public/css')
+    // .sass('resources/scss/plugins/font-awesome/font-awesome.scss', 'public/css')

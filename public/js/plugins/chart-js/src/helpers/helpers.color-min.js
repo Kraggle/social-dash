@@ -1,0 +1,1 @@
+import r from"../../../kurkle-color/color.js";const o=r=>r instanceof CanvasGradient||r instanceof CanvasPattern;export function color(n){return o(n)?n:r(n)}export function getHoverColor(n){return o(n)?n:r(n).saturate(.5).darken(.1).hexString()}

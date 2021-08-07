@@ -1,0 +1,304 @@
+@mixin button-gradient($main, $state) {
+    &:not(.btn-simple):not(.btn-link) {
+        @include diagonal-gradient($main, $state);
+
+        background-color: $main;
+        transition: all 0.15s ease;
+
+        .btn-check:checked + &,
+        .btn-check:active + &,
+        &:active,
+        &.active,
+        .show > &.dropdown-toggle,
+        .btn-check:focus + &,
+        &:focus,
+        &:hover {
+            background-position: bottom left;
+            transition: all 0.3s ease-in-out;
+            border-color: transparent;
+
+            &:focus {
+                background-position: bottom left;
+                transition: all 0.3s ease-in-out;
+                border-color: transparent;
+            }
+        }
+
+        &:disabled,
+        &.disabled {
+            @include diagonal-gradient(darken($main, 5%), darken($state, 5%));
+        }
+    }
+}
+
+@mixin button-variant(
+    $background,
+    $border,
+    $color: color-contrast($background),
+    $hover-background:
+        if(
+            $color == $color-contrast-light,
+            shade-color($background, $btn-hover-bg-shade-amount),
+            tint-color($background, $btn-hover-bg-tint-amount)
+        ),
+    $hover-border:
+        if(
+            $color == $color-contrast-light,
+            shade-color($border, $btn-hover-border-shade-amount),
+            tint-color($border, $btn-hover-border-tint-amount)
+        ),
+    $hover-color: color-contrast($hover-background),
+    $active-background:
+        if(
+            $color == $color-contrast-light,
+            shade-color($background, $btn-active-bg-shade-amount),
+            tint-color($background, $btn-active-bg-tint-amount)
+        ),
+    $active-border:
+        if(
+            $color == $color-contrast-light,
+            shade-color($border, $btn-active-border-shade-amount),
+            tint-color($border, $btn-active-border-tint-amount)
+        ),
+    $active-color: color-contrast($active-background),
+    $disabled-background: $background,
+    $disabled-border: $border,
+    $disabled-color: color-contrast($disabled-background)
+) {
+    &:not(.btn-link):not(.btn-simple) {
+        color: $color;
+        @include gradient-bg($background);
+        border-color: $border;
+        @include box-shadow($btn-box-shadow);
+
+        &:hover {
+            color: $hover-color;
+            @include gradient-bg($hover-background);
+            border-color: $hover-border;
+        }
+
+        .btn-check:focus + &,
+        &:focus {
+            color: $hover-color;
+            @include gradient-bg($hover-background);
+            border-color: $hover-border;
+            @if $enable-shadows {
+                @include box-shadow(
+                    $btn-box-shadow,
+                    0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5)
+                );
+            } @else {
+                // Avoid using mixin so we can pass custom focus shadow properly
+                box-shadow: 0
+                    0
+                    0
+                    $btn-focus-width
+                    rgba(mix($color, $border, 15%), 0.5);
+            }
+        }
+
+        .btn-check:checked + &,
+        .btn-check:active + &,
+        &:active,
+        &.active,
+        .show > &.dropdown-toggle {
+            color: $active-color;
+            background-color: $active-background;
+            // Remove CSS gradients if they're enabled
+            background-image: if($enable-gradients, none, null);
+            border-color: $active-border;
+
+            &:focus {
+                @if $enable-shadows {
+                    @include box-shadow(
+                        $btn-active-box-shadow,
+                        0 0 0 $btn-focus-width
+                            rgba(mix($color, $border, 15%), 0.5)
+                    );
+                } @else {
+                    // Avoid using mixin so we can pass custom focus shadow properly
+                    box-shadow: 0
+                        0
+                        0
+                        $btn-focus-width
+                        rgba(mix($color, $border, 15%), 0.5);
+                }
+            }
+        }
+
+        &:disabled,
+        &.disabled {
+            color: $disabled-color;
+            background-color: $disabled-background;
+            // Remove CSS gradients if they're enabled
+            background-image: if($enable-gradients, none, null);
+            border-color: $disabled-border;
+        }
+    }
+
+    &.btn-link {
+        color: $background;
+
+        &:hover {
+            color: $hover-background;
+        }
+
+        .btn-check:focus + &,
+        &:focus {
+            color: $hover-background;
+        }
+
+        .btn-check:checked + &,
+        .btn-check:active + &,
+        &:active,
+        &.active,
+        .show > &.dropdown-toggle {
+            color: $hover-background;
+        }
+
+        &:disabled,
+        &.disabled {
+            color: $disabled-background;
+        }
+    }
+
+    &.btn-simple {
+        border-color: $background;
+        color: $background;
+
+        &:hover {
+            color: $hover-background;
+            border-color: $hover-background;
+        }
+
+        .btn-check:focus + &,
+        &:focus {
+            color: $hover-background;
+            border-color: $hover-background;
+        }
+
+        .btn-check:checked + &,
+        .btn-check:active + &,
+        &:active,
+        &.active,
+        .show > &.dropdown-toggle {
+            color: $hover-background;
+            border-color: $hover-background;
+        }
+
+        &:disabled,
+        &.disabled {
+            color: $disabled-background;
+            border-color: $disabled-background;
+        }
+    }
+}
+// scss-docs-end btn-variant-mixin
+
+// @mixin button-outline-variant(
+//     $color,
+//     $color-hover: color-contrast($color),
+//     $active-background: $color,
+//     $active-border: $color
+// ) {
+//     color: $color;
+//     background-color: transparent;
+//     background-image: none;
+//     border-color: $color;
+
+//     &:hover {
+//         color: $color-hover;
+//         background-color: $active-background;
+//         border-color: $active-border;
+//     }
+
+//     &:focus,
+//     &.focus {
+//         box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+//     }
+
+//     &.disabled,
+//     &:disabled {
+//         color: $color;
+//         background-color: transparent;
+//     }
+
+//     &:not(:disabled):not(.disabled):active,
+//     &:not(:disabled):not(.disabled).active,
+//     .show > &.dropdown-toggle {
+//         color: color-contrast($active-background);
+//         background-color: $active-background;
+//         border-color: $active-border;
+
+//         &:focus {
+//             // Avoid using mixin so we can pass custom focus shadow properly
+//             @if $enable-shadows and $btn-active-box-shadow != none {
+//                 box-shadow: $btn-active-box-shadow,
+//                     0 0 0 $btn-focus-width rgba($color, 0.5);
+//             } @else {
+//                 box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+//             }
+//         }
+//     }
+// }
+
+// Button sizes
+@mixin btn-size($padding-vertical, $padding-horizontal, $font-size, $border) {
+    font-size: $font-size;
+    border-radius: $border;
+    padding: $padding-vertical $padding-horizontal;
+
+    &.btn-simple {
+        padding: ($padding-vertical - 1) ($padding-horizontal - 1);
+    }
+}
+
+// for social buttons
+@mixin social-buttons-color($color, $state-color) {
+    @include diagonal-gradient($color, darken($color, 20%));
+
+    //background-color: $color;
+    color: $white;
+    background-size: 210% 210%;
+    background-position: top right;
+    background-repeat: space;
+
+    &:focus,
+    &:active,
+    &:hover {
+        background-color: $state-color;
+        background-image: linear-gradient(
+            to bottom left,
+            $color,
+            darken($color, 20%),
+            $color
+        ) !important;
+        color: $white;
+    }
+
+    &.btn-simple {
+        color: $state-color;
+        background-color: transparent;
+        background-image: none !important;
+        box-shadow: none;
+        border-color: $state-color;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $state-color;
+            border-color: $state-color;
+        }
+    }
+
+    &.btn-neutral {
+        color: $color;
+        background-color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $state-color;
+        }
+    }
+}

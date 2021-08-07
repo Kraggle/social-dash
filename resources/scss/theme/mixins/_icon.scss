@@ -1,0 +1,14 @@
+@mixin icon-shape-variant($color) {
+    color: saturate(darken($color, 10%), 10);
+    background-color: transparentize(lighten($color, 10%), 0.5);
+}
+
+@mixin icon-classes {
+    i.fa,
+    i.fal,
+    i.fas,
+    i.fad,
+    i.far {
+        @content;
+    }
+}
