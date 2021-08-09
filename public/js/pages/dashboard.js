@@ -10,43 +10,62 @@ $(() => {
 
 	(() => {
 		let $ctx = $('#performance-chart');
+		if (!$ctx.length) return;
+		const ctx = $ctx.get(0).getContext('2d');
 
-		if ($ctx.length) {
-			const ctx = $ctx.get(0).getContext('2d');
+		const setData = [],
+			scales = { // These can be changed tp generate different results
+				day: {
+					count: 14,
+					min: 0,
+					max: 300
+				},
+				week: {
+					count: 14,
+					min: 0,
+					max: 2000
+				},
+				month: {
+					count: 12,
+					min: 1000,
+					max: 10000
+				}
+			},
+			$toggles = $ctx.closest('.card').find('[data-chart-toggles] input'),
+			$scales = $ctx.closest('.card').find('[data-chart-scale]');
 
-			const setData = [],
-				$toggles = $ctx.closest('.card').find('[data-chart-toggles] input'),
-				$scales = $ctx.closest('.card').find('[data-chart-scale] input');
+		let chart;
 
-			$toggles.each(function() {
-				const data = $(this).data();
-				data.options = {
-					color: data.color,
-					label: data.label,
-					btn: this,
-					hidden: !$(this).is(':checked')
-				};
-				setData.push(data.options);
-			});
+		$toggles.each(function() {
+			const data = $(this).data();
+			data.options = {
+				color: data.color,
+				label: data.label,
+				btn: this,
+				hidden: !$(this).is(':checked')
+			};
+			setData.push(data.options);
+		});
+
+		const createChart = (scale = 'day') => {
+			if (chart) chart.destroy();
 
 			const datasets = [],
 				dataValues = [],
-				dayCount = 14,
-				min = 0,
-				max = 300;
+				opts = scales[scale];
 
 			K.each(setData, (i, set) => {
-				let date = dayjs().add(-dayCount, 'day'),
+				let date = dayjs().add(-opts.count, scale),
 					last;
 
 				const data = [];
 
-				for (let d = 0; d < dayCount; d++) {
+				for (let d = 0; d < opts.count; d++) {
 					data.push({
-						x: date.format('DD/MM'),
-						y: last = K.random(min, max)
+						x: date.format(scale == 'month' ? "MMM 'YY" : 'DD/MM'),
+						y: last = K.random(opts.min, opts.max)
 					});
-					date = date.clone().add(1, 'day');
+					date = date.clone().add(1, scale);
 					dataValues.push(last);
 				}
 
@@ -74,14 +93,20 @@ $(() => {
 				})
 			}
 
-			const chart = new Chart(ctx, config);
-			$ctx.data('chart', chart);
-
-			$toggles.on('change', function() {
-				const options = $(this).data('options');
-				chart[$(this).is(':checked') ? 'show' : 'hide'](options.index);
-			})
+			chart = new Chart(ctx, config);
+			// $ctx.data('chart', chart);
 		}
+		createChart($scales.find(':checked').val());
+
+		$scales.find('input').on('change', () => {
+			createChart($scales.find(':checked').val());
+		});
+
+		$toggles.on('change', function() {
+			const options = $(this).data('options'),
+				hidden = options.hidden = !$(this).is(':checked');
+			chart[!hidden ? 'show' : 'hide'](options.index);
+		});
 	})();
 
 	const testData = [{
