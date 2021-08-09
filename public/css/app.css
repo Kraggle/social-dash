@@ -6693,17 +6693,15 @@ body {
 }
 
 .card {
-  opacity: 0;
-  visibility: hidden;
   border: 0;
   width: 100%;
   margin-bottom: 24px;
   -webkit-box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
           box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+}
+.card:not(.no-animate) {
+  opacity: 0;
+  visibility: hidden;
 }
 .card .pagination .page-item:not(.active) .page-link {
   color: #1d253b;
@@ -6923,6 +6921,33 @@ body {
 .card .card-describe i {
   margin-right: 5px;
 }
+.card.card-subscribe {
+  padding: 30px;
+}
+.card.card-subscribe .fade-info {
+  padding: 20px 100px 10px;
+  color: #6c757d;
+}
+.card.card-subscribe .btn {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.card.card-payment {
+  padding: 30px 40px;
+}
+.card.card-payment .info-text {
+  text-align: center;
+}
+.card.card-payment .btn-link {
+  position: absolute;
+  color: #ced4da;
+  font-size: 18px;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
 
 .card-body {
   padding: 1rem;
@@ -7124,17 +7149,24 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.card-stats .info-icon.icon-danger {
-  background: #de4b39;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#de4b39), color-stop(#a759d0), to(#de4b39));
-  background-image: linear-gradient(to bottom left, #de4b39, #a759d0, #de4b39);
+.card-stats .info-icon.icon-default {
+  background: #344675;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#344675), color-stop(#263148), to(#344675));
+  background-image: linear-gradient(to bottom left, #344675, #263148, #344675);
   background-size: 210% 210%;
   background-position: top right;
 }
-.card-stats .info-icon.icon-warning {
-  background: #ff8d72;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#ff8d72), color-stop(#ff6491), to(#ff8d72));
-  background-image: linear-gradient(to bottom left, #ff8d72, #ff6491, #ff8d72);
+.card-stats .info-icon.icon-primary {
+  background: #e14eca;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#e14eca), color-stop(#6112b9), to(#e14eca));
+  background-image: linear-gradient(to bottom left, #e14eca, #6112b9, #e14eca);
+  background-size: 210% 210%;
+  background-position: top right;
+}
+.card-stats .info-icon.icon-secondary {
+  background: #e2d31b;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#e2d31b), color-stop(#e44c4c), to(#e2d31b));
+  background-image: linear-gradient(to bottom left, #e2d31b, #e44c4c, #e2d31b);
   background-size: 210% 210%;
   background-position: top right;
 }
@@ -7152,10 +7184,31 @@ body {
   background-size: 210% 210%;
   background-position: top right;
 }
-.card-stats .info-icon.icon-primary {
-  background: #e14eca;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#e14eca), color-stop(#6112b9), to(#e14eca));
-  background-image: linear-gradient(to bottom left, #e14eca, #6112b9, #e14eca);
+.card-stats .info-icon.icon-warning {
+  background: #ff8d72;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#ff8d72), color-stop(#ff6491), to(#ff8d72));
+  background-image: linear-gradient(to bottom left, #ff8d72, #ff6491, #ff8d72);
+  background-size: 210% 210%;
+  background-position: top right;
+}
+.card-stats .info-icon.icon-danger {
+  background: #de4b39;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#de4b39), color-stop(#a759d0), to(#de4b39));
+  background-image: linear-gradient(to bottom left, #de4b39, #a759d0, #de4b39);
+  background-size: 210% 210%;
+  background-position: top right;
+}
+.card-stats .info-icon.icon-light {
+  background: #e9ecef;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#e9ecef), color-stop(#adb5bd), to(#e9ecef));
+  background-image: linear-gradient(to bottom left, #e9ecef, #adb5bd, #e9ecef);
+  background-size: 210% 210%;
+  background-position: top right;
+}
+.card-stats .info-icon.icon-dark {
+  background: #222a42;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#222a42), color-stop(#1d253b), to(#222a42));
+  background-image: linear-gradient(to bottom left, #222a42, #1d253b, #222a42);
   background-size: 210% 210%;
   background-position: top right;
 }
@@ -19134,34 +19187,6 @@ button.bg-lighter:focus {
   background-color: white;
   right: 8px;
   bottom: -23px;
-}
-
-.card.card-subscribe {
-  padding: 30px;
-}
-.card.card-subscribe .fade-info {
-  padding: 20px 100px 10px;
-  color: #6c757d;
-}
-.card.card-subscribe .btn {
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-.card.card-payment {
-  padding: 30px 40px;
-}
-.card.card-payment .info-text {
-  text-align: center;
-}
-.card.card-payment .btn-link {
-  position: absolute;
-  color: #ced4da;
-  font-size: 18px;
-  top: 0;
-  right: 0;
-  margin: 10px;
 }
 
 .check-wrap {

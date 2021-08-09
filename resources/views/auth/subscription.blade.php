@@ -95,7 +95,7 @@ $prev = '';
   <div id="pay-popup" class="full-fade center-all">
     <div class="row justify-content-center">
       <div class="col-lg-4">
-        <div class="card card-payment">
+        <div class="card card-payment no-animate">
           <a href="javascript:void(0)" id="close-btn" class="btn btn-icon btn-link">
             <i class="fas fa-times"></i>
           </a>

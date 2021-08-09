@@ -33,9 +33,9 @@ $stats = [
     (object) [
         'name' => 'Engagements',
         'link' => route('pages.likes'),
-        'id' => 'likes',
+        'id' => 'engagement',
         'stat' => 'Engagement',
-        'type' => 'total',
+        'type' => 'number',
         'icon' => 'fal fa-comment-alt-smile',
     ],
     (object) [
@@ -43,7 +43,7 @@ $stats = [
         'link' => route('pages.followers'),
         'id' => 'followers',
         'stat' => 'Follower',
-        'type' => 'total',
+        'type' => 'number',
         'icon' => 'fal fa-users',
     ],
     (object) [
@@ -51,7 +51,7 @@ $stats = [
         'link' => route('pages.likes'),
         'id' => 'likes',
         'stat' => 'Like',
-        'type' => 'total',
+        'type' => 'number',
         'icon' => 'fal fa-heart',
     ],
     (object) [
@@ -81,17 +81,17 @@ $stats = [
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="card card-stats">
             <div class="card-body">
-              <div class="row">
-                <div class="col-5">
+              <div class="row justify-content-between">
+                <div class="col-auto">
                   <div class="info-icon text-center icon-warning">
                     <i class="{{ $stat->icon }}"></i>
                   </div>
                 </div>
-                <div class="col-7">
+                <div class="col-auto">
                   <div class="numbers">
                     <a href="{{ $stat->link }}">
-                      <p class="card-category text-dark-pink">{{ $stat->name }}</p>
-                      <h3 id="num-{{ $stat->id }}" data-type="{{ $stat->type }}" class="card-title text-dark-pink">
+                      <p class="card-category">{{ $stat->name }}</p>
+                      <h3 id="num-{{ $stat->id }}" data-type="{{ $stat->type }}" class="card-title">
                       </h3>
                     </a>
                   </div>

@@ -15,17 +15,19 @@ $(() => {
 
 	// transition the cards onto the screen
 	const randMax = 300, randMin = 0;
-	$('.card').each(function() {
+	$('.card:not(.no-animate)').each(function() {
 		const rX = K.random(-200, 200),
-			rY = K.random(-200, 200);
+			rY = K.random(-200, 200),
+			r = K.random(-35, 35),
+			s = K.random(30, 80) / 100;
 		$(this).css({
-			transition: 'all 0.3s cubic-bezier(.38,.01,.38,1.49)',
-			transform: `translate(${rX}%, ${rY}%)`
+			transform: `translate(${rX}%, ${rY}%) rotate(${r}deg) scale(${s})`,
 		});
 
 		setTimeout(() => {
 			$(this).css({
-				transform: 'translate(0, 0)',
+				transition: 'all 0.3s cubic-bezier(.38,.01,.38,1.49)',
+				transform: 'translate(0, 0) rotate(0) scale(1)',
 				opacity: '1',
 				visibility: 'visible'
 			});

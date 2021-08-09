@@ -23,24 +23,13 @@
             transform: translate(-50%, -50%);
         }
 
-        &.icon-danger {
-            @include diagonal-gradient($danger, $danger-states);
-        }
-
-        &.icon-warning {
-            @include diagonal-gradient($warning, $warning-states);
-        }
-
-        &.icon-success {
-            @include diagonal-gradient($success, $success-states);
-        }
-
-        &.icon-info {
-            @include diagonal-gradient($info, $info-states);
-        }
-
-        &.icon-primary {
-            @include diagonal-gradient($primary, $primary-states);
+        @each $color, $value in $main-colors {
+            &.icon-#{$color} {
+                @include diagonal-gradient(
+                    $value,
+                    map-get($main-states, '#{$color}-states')
+                );
+            }
         }
     }
 
@@ -77,7 +66,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-    .card-stats [class*="col-"] .statistics::after {
+    .card-stats [class*='col-'] .statistics::after {
         display: none;
     }
 }
