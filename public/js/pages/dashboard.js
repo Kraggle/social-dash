@@ -3,33 +3,70 @@ import Chart from '../plugins/chart-js/chart.js';
 import chartConfig from './shared/chart-options.js';
 import K from '../plugins/K.js';
 import Maps from './shared/map-data.js';
+import dayjs from '../plugins/dayjs/index.js';
 
 $(() => {
 	Maps.init();
 
 	(() => {
-		const labels = ['09/05', '10/05', '11/05', '12/05', '13/05', '14/05', '15/05', '16/05', '17/05', '18/05', '19/05', '20/05'],
-			data = [30, 40, 60, 40, 50, 70, 30, 50, 40, 60, 60, 40],
-			color = 'pink';
+		let $ctx = $('#performance-chart');
 
-		let ctx = $('#performance-chart').get(0);
+		if ($ctx.length) {
+			const ctx = $ctx.get(0).getContext('2d');
 
-		if (ctx) {
-			ctx = ctx.getContext('2d');
+			const setData = [],
+				$toggles = $ctx.closest('.card').find('[data-chart-toggles] input'),
+				$scales = $ctx.closest('.card').find('[data-chart-scale] input');
+
+			$toggles.each(function() {
+				const data = $(this).data();
+				data.options = {
+					color: data.color,
+					label: data.label,
+					btn: this,
+					hidden: !$(this).is(':checked')
+				};
+				setData.push(data.options);
+			});
+
+			const datasets = [],
+				dataValues = [],
+				dayCount = 14,
+				min = 0,
+				max = 300;
+
+			K.each(setData, (i, set) => {
+				let date = dayjs().add(-dayCount, 'day'),
+					last;
+
+				const data = [];
+
+				for (let d = 0; d < dayCount; d++) {
+					data.push({
+						x: date.format('DD/MM'),
+						y: last = K.random(min, max)
+					});
+					date = date.clone().add(1, 'day');
+					dataValues.push(last);
+				}
+
+				datasets.push(K.extend({}, chartConfig.lineDataset(set.color, ctx, true), {
+					hidden: set.hidden,
+					label: set.label,
+					data
+				}));
+
+				set.index = i;
+			});
 
 			let config = {
 				type: 'line',
-				data: {
-					labels: labels,
-					datasets: [K.extend({}, chartConfig.lineDataset(color, ctx, true), {
-						data
-					})]
-				},
-				options: K.extend(true, {}, chartConfig.lineOptions(color), {
+				data: { datasets },
+				options: K.extend(true, {}, chartConfig.lineOptions(), {
 					scales: {
 						yAxes: {
-							suggestedMin: Math.min.apply(null, data) - 10,
-							suggestedMax: Math.max.apply(null, data) + 10
+							suggestedMin: Math.max(0, Math.min.apply(null, dataValues) - 10),
+							suggestedMax: Math.max.apply(null, dataValues) + 10
 						}
 					},
 					maintainAspectRatio: true,
@@ -37,7 +74,13 @@ $(() => {
 				})
 			}
 
-			let myChartData = new Chart(ctx, config);
+			const chart = new Chart(ctx, config);
+			$ctx.data('chart', chart);
+
+			$toggles.on('change', function() {
+				const options = $(this).data('options');
+				chart[$(this).is(':checked') ? 'show' : 'hide'](options.index);
+			})
 		}
 	})();
 
@@ -82,3 +125,121 @@ $(() => {
 		$dir[`${up ? 'add' : 'remove'}Class`]('fa-arrow-up')[`${up ? 'remove' : 'add'}Class`]('fa-arrow-down');
 	});
 });
+
+// var randomScalingFactor = function() {
+// 	return Math.round(Math.random() * 100);
+// };
+
+// var chartColors = {
+// 	red: 'rgb(255, 99, 132)',
+// 	orange: 'rgb(255, 159, 64)',
+// 	yellow: 'rgb(255, 205, 86)',
+// 	green: 'rgb(75, 192, 192)',
+// 	blue: 'rgb(54, 162, 235)',
+// 	purple: 'rgb(153, 102, 255)',
+// 	grey: 'rgb(231,233,237)'
+// };
+
+// var color = Chart.helpers.color;
+// var config = {
+// 	type: 'radar',
+// 	data: {
+// 		labels: [["Eating", "Dinner"], ["Drinking", "Water"], "Sleeping", ["Designing", "Graphics"], "Coding", "Cycling", "Running"],
+// 		datasets: [{
+// 			label: "My First dataset",
+// 			backgroundColor: color(chartColors.red).alpha(0.2).rgbString(),
+// 			borderColor: chartColors.red,
+// 			pointBackgroundColor: chartColors.red,
+// 			data: [
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor()
+// 			]
+// 		}, {
+// 			label: "My Second dataset",
+// 			backgroundColor: color(chartColors.blue).alpha(0.2).rgbString(),
+// 			borderColor: chartColors.blue,
+// 			pointBackgroundColor: chartColors.blue,
+// 			data: [
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor()
+// 			]
+// 		}, {
+// 			label: "My Third dataset",
+// 			backgroundColor: color(chartColors.orange).alpha(0.2).rgbString(),
+// 			borderColor: chartColors.orange,
+// 			pointBackgroundColor: chartColors.orange,
+// 			data: [
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor(),
+// 				randomScalingFactor()
+// 			]
+// 		},]
+// 	},
+// 	options: {
+// 		legend: {
+// 			position: 'top',
+// 			labels: {
+// 				fontColor: 'rgb(255, 99, 132)'
+// 			},
+// 			onHover: function(event, legendItem) {
+// 				document.getElementById("canvas").style.cursor = 'pointer';
+// 			},
+// 			onClick: function(e, legendItem) {
+// 				var index = legendItem.datasetIndex;
+// 				var ci = this.chart;
+// 				var alreadyHidden = (ci.getDatasetMeta(index).hidden === null) ? false : ci.getDatasetMeta(index).hidden;
+
+// 				ci.data.datasets.forEach(function(e, i) {
+// 					var meta = ci.getDatasetMeta(i);
+
+// 					if (i !== index) {
+// 						if (!alreadyHidden) {
+// 							meta.hidden = meta.hidden === null ? !meta.hidden : null;
+// 						} else if (meta.hidden === null) {
+// 							meta.hidden = true;
+// 						}
+// 					} else if (i === index) {
+// 						meta.hidden = null;
+// 					}
+// 				});
+
+// 				ci.update();
+// 			},
+// 		},
+// 		tooltips: {
+// 			custom: function(tooltip) {
+// 				if (!tooltip.opacity) {
+// 					document.getElementById("canvas").style.cursor = 'default';
+// 					return;
+// 				}
+// 			}
+// 		},
+// 		title: {
+// 			display: true,
+// 			text: 'Chart.js Radar Chart'
+// 		},
+// 		scale: {
+// 			ticks: {
+// 				beginAtZero: true
+// 			}
+// 		}
+// 	}
+// };
+
+// window.onload = function() {
+// 	window.myRadar = new Chart(document.getElementById("canvas"), config);
+// };

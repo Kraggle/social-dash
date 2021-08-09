@@ -1179,6 +1179,13 @@ if (!String.prototype.get) {
     };
 }
 
+if (!Date.prototype.addDays) {
+    Date.prototype.addDays = function(days) {
+        this.setTime(this.getTime() + (days * 24 * 60 * 60 * 1000));
+        return this;
+    };
+}
+
 if (!Date.prototype.addHours) {
     Date.prototype.addHours = function(hrs) {
         this.setTime(this.getTime() + (hrs * 60 * 60 * 1000));
@@ -1193,8 +1200,9 @@ if (!Date.prototype.addMinutes) {
     };
 }
 
-const date = new Date();
-date.addMinutes(10);
+// const date = new Date();
+// date.addDays(-2);
+// console.log(date);
 
 export { K };
 

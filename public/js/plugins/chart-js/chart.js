@@ -23,6 +23,8 @@ import Scale from './src/core/core.scale.js';
 import * as scales from './src/scales/index.js';
 import Ticks from './src/core/core.ticks.js';
 
+import Zoom from './plugins/zoom/index.esm.js';
+
 // Register built-ins
 Chart.register(
 	elements.ArcElement,
@@ -48,7 +50,8 @@ Chart.register(
 	plugins.Legend,
 	plugins.Title,
 	plugins.Tooltip,
-	plugins.SubTitle
+	plugins.SubTitle,
+	Zoom
 );
 // Chart.register(controllers, scales, elements, plugins);
 
