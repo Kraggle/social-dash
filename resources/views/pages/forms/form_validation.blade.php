@@ -27,8 +27,7 @@ Forms')])
                 <label>
                   Confirm Password *
                 </label>
-                <input class="form-control" name="password_confirmation" id="registerPasswordConfirmation" type="password"
-                  equalto="#registerPassword" />
+                <input class="form-control" name="password_confirmation" id="registerPasswordConfirmation" type="password" equalto="#registerPassword" />
               </div>
               <div class="category form-category">* Required fields</div>
             </div>
@@ -40,7 +39,7 @@ Forms')])
                   Accept the terms and conditions
                 </label>
               </div>
-              <button type="submit" class="btn btn-primary">Register</button>
+              <button type="submit" class="btn btn-primary btn-gradient">Register</button>
             </div>
           </div>
         </form>
@@ -67,7 +66,7 @@ Forms')])
               <div class="category form-category">* Required fields</div>
             </div>
             <div class="card-footer text-start">
-              <button type="submit" class="btn btn-primary">Register</button>
+              <button type="submit" class="btn btn-primary btn-gradient">Register</button>
               <a href="javascript:void(0)" class="pull-right">Forgot password?</a>
             </div>
           </div>
@@ -133,8 +132,7 @@ Forms')])
                 </div>
                 <div class="col-sm-3">
                   <div class="form-group">
-                    <input class="form-control" id="idDestination" type="text" placeholder="#idDestination"
-                      equalTo="#idSource" />
+                    <input class="form-control" id="idDestination" type="text" placeholder="#idDestination" equalTo="#idSource" />
                   </div>
                 </div>
                 <label class="col-sm-4 label-on-right">
@@ -143,7 +141,7 @@ Forms')])
               </div>
             </div>
             <div class="card-footer text-center">
-              <button type="submit" class="btn btn-primary">Validate Inputs</button>
+              <button type="submit" class="btn btn-primary btn-gradient">Validate Inputs</button>
             </div>
           </div>
         </form>
@@ -212,7 +210,7 @@ Forms')])
               </div>
             </div>
             <div class="card-footer text-center">
-              <button type="submit" class="btn btn-primary">Validate Inputs</button>
+              <button type="submit" class="btn btn-primary btn-gradient">Validate Inputs</button>
             </div>
           </div>
         </form>

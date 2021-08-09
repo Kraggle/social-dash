@@ -24,7 +24,7 @@
             </div>
           </div>
           <div class="card-footer">
-            <a href="javascript:void(0)" class="btn btn-primary btn-round btn-lg">{{ __('Unlock') }}</a>
+            <a href="javascript:void(0)" class="btn btn-primary btn-gradient btn-round btn-lg">{{ __('Unlock') }}</a>
           </div>
         </div>
       </div>

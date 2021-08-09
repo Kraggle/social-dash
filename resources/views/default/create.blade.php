@@ -44,8 +44,7 @@
 
                 {{-- description --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pe-0 col-form-label text-end"
-                    for="input-description">{{ __('Description') }}</label>
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="input-description">{{ __('Description') }}</label>
                   <div class="col-sm-10">
                     @include('forms.textarea', [ 'options' => [
                     'name' => 'description',
@@ -57,8 +56,7 @@
 
                 {{-- for_table --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pe-0 col-form-label text-end"
-                    for="select-for-table">{{ __('For Table') }}</label>
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="select-for-table">{{ __('For Table') }}</label>
                   <div class="col-sm-10">
                     @include('forms.select', [ 'options' => [
                     'options' => [
@@ -147,8 +145,7 @@
 
                 {{-- type --}}
                 <div class="row justify-content-md-center">
-                  <label class="col-sm-2 pe-0 col-form-label text-end"
-                    for="select-type">{{ __('Variable Type') }}</label>
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="select-type">{{ __('Variable Type') }}</label>
                   <div class="col-sm-10">
                     @include('forms.select', [ 'options' => [
                     'options' => [
@@ -213,8 +210,7 @@
                       'group' => ['attrs' => 'repeat=_0']
                       ]])
 
-                      <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" repeat="_0"
-                        data-bs-toggle="tooltip" title="Remove">
+                      <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove" repeat="_0" data-bs-toggle="tooltip" title="Remove">
                         <i class="fal fa-trash-alt"></i>
                       </button>
 
@@ -256,8 +252,7 @@
                         'group' => ['attrs' => "repeat=_$loop->index"]
                         ]])
 
-                        <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove"
-                          repeat="_{{ $loop->index }}" data-bs-toggle="tooltip" title="Remove">
+                        <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove" repeat="_{{ $loop->index }}" data-bs-toggle="tooltip" title="Remove">
                           <i class="fal fa-trash-alt"></i>
                         </button>
 
@@ -266,7 +261,7 @@
 
                     <div class="row">
                       <div class="col text-end">
-                        <button id="add-option" class="btn btn-sm btn-info">{{ __('Add Option') }}</button>
+                        <button id="add-option" class="btn btn-sm btn-info btn-gradient">{{ __('Add Option') }}</button>
                       </div>
                     </div>
                   </div>
@@ -279,8 +274,7 @@
 
                   {{-- default --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pe-0 col-form-label text-end"
-                      for="number-default">{{ __('Default Value') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="number-default">{{ __('Default Value') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
                       'name' => 'options[default]',
@@ -293,8 +287,7 @@
 
                   {{-- min_value --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pe-0 col-form-label text-end"
-                      for="number-min-value">{{ __('Minimum Value') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="number-min-value">{{ __('Minimum Value') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
                       'name' => 'options[min_value]',
@@ -307,8 +300,7 @@
 
                   {{-- max_value --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pe-0 col-form-label text-end"
-                      for="number-max-value">{{ __('Maximum Value') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="number-max-value">{{ __('Maximum Value') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
                       'name' => 'options[max_value]',
@@ -334,8 +326,7 @@
 
                   {{-- min_cost --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pe-0 col-form-label text-end"
-                      for="number-min-cost">{{ __('Minimum Cost') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="number-min-cost">{{ __('Minimum Cost') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
                       'name' => 'options[min_cost]',
@@ -352,8 +343,7 @@
 
                   {{-- max_cost --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pe-0 col-form-label text-end"
-                      for="number-max-cost">{{ __('Maximum Cost') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="number-max-cost">{{ __('Maximum Cost') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
                       'name' => 'options[max_cost]',
@@ -376,8 +366,7 @@
 
                   {{-- default --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pe-0 col-form-label text-end"
-                      for="switch-default">{{ __('Default Value') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="switch-default">{{ __('Default Value') }}</label>
                     <div class="col-sm-10 has-switch">
                       @include('forms.switch', ['options' => [
                       'name' => 'options[default]',
@@ -389,8 +378,7 @@
 
                   {{-- on_cost --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pe-0 col-form-label text-end"
-                      for="number-on-cost">{{ __('On Cost') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="number-on-cost">{{ __('On Cost') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
                       'name' => 'options[on_cost]',
@@ -407,8 +395,7 @@
 
                   {{-- off_cost --}}
                   <div class="row justify-content-md-center">
-                    <label class="col-sm-2 pe-0 col-form-label text-end"
-                      for="number-off-cost">{{ __('Off Cost') }}</label>
+                    <label class="col-sm-2 pe-0 col-form-label text-end" for="number-off-cost">{{ __('Off Cost') }}</label>
                     <div class="col-sm-10">
                       @include('forms.number', ['options' => [
                       'name' => 'options[off_cost]',
@@ -427,7 +414,7 @@
 
               </div>
               <div class="card-footer mx-auto">
-                <button type="submit" class="btn btn-primary">{{ __('Add Default') }}</button>
+                <button type="submit" class="btn btn-primary btn-gradient">{{ __('Add Default') }}</button>
               </div>
             </div>
           </form>
@@ -435,7 +422,7 @@
         <div class="col-md-4">
           <div class="row">
             <div class="col-md-12 mb-3 text-end">
-              <a href="{{ route('default.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
+              <a href="{{ route('default.index') }}" class="btn btn-sm btn-warning btn-gradient">{{ __('Back to list') }}</a>
             </div>
           </div>
           {{-- <div class="card">

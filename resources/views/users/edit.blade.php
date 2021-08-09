@@ -6,15 +6,14 @@ Management')])
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="post" enctype="multipart/form-data" action="{{ route('user.update', $user) }}"
-            autocomplete="off">
+          <form method="post" enctype="multipart/form-data" action="{{ route('user.update', $user) }}" autocomplete="off">
             @csrf
             @method('put')
 
             <div class="card ">
               <div class="card-header">
                 <h4 class="card-title d-inline-block">{{ __('Edit User') }}</h4>
-                <a href="{{ route('user.index') }}" class="btn btn-sm btn-warning float-end">
+                <a href="{{ route('user.index') }}" class="btn btn-sm btn-warning btn-gradient float-end">
                   {{ __('Back to list') }}
                 </a>
               </div>
@@ -37,8 +36,7 @@ Management')])
                           <span class="fileinput-exists">{{ __('Change') }}</span>
                           <input type="file" name="photo" id="input-picture" />
                         </span>
-                        <a href="#pablo" class="btn btn-danger btn-round fileinput-exists mt-2"
-                          data-dismiss="fileinput"><i class="fa fa-times"></i> {{ __('Remove') }}</a>
+                        <a href="#pablo" class="btn btn-danger btn-gradient btn-round fileinput-exists mt-2" data-dismiss="fileinput"><i class="fa fa-times"></i> {{ __('Remove') }}</a>
                       </div>
                       @include('alerts.feedback', ['field' => 'photo'])
                     </div>
@@ -48,9 +46,7 @@ Management')])
                   <label class="col-sm-2 col-form-label">{{ __('Name') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
-                        id="input-name" type="text" placeholder="{{ __('Name') }}"
-                        value="{{ old('name', $user->name) }}" required="true" aria-required="true" />
+                      <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="input-name" type="text" placeholder="{{ __('Name') }}" value="{{ old('name', $user->name) }}" required="true" aria-required="true" />
                       @include('alerts.feedback', ['field' => 'name'])
                     </div>
                   </div>
@@ -59,9 +55,7 @@ Management')])
                   <label class="col-sm-2 col-form-label">{{ __('Email') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
-                        id="input-email" type="email" placeholder="{{ __('Email') }}"
-                        value="{{ old('email', $user->email) }}" required />
+                      <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" id="input-email" type="email" placeholder="{{ __('Email') }}" value="{{ old('email', $user->email) }}" required />
                       @include('alerts.feedback', ['field' => 'email'])
                     </div>
                   </div>
@@ -70,8 +64,7 @@ Management')])
                   <label class="col-sm-2 col-form-label">{{ __('Role') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('role_id') ? ' has-danger' : '' }}">
-                      <select class="selectpicker col-sm-12 ps-0 pe-0" name="role_id" data-style="select-with-transition"
-                        title="" data-size="100">
+                      <select class="selectpicker col-sm-12 ps-0 pe-0" name="role_id" data-style="select-with-transition" title="" data-size="100">
                         @foreach ($roles as $role)
                           <option value="{{ $role->id }}" @if (old('role_id', $user->role_id) == $role->id) selected="selected" @endif>{{ $role->name }}</option>
                         @endforeach
@@ -84,25 +77,22 @@ Management')])
                   <label class="col-sm-2 col-form-label" for="input-password">{{ __(' Password') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" input
-                        type="password" name="password" id="input-password" placeholder="{{ __('Password') }}" />
+                      <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" input type="password" name="password" id="input-password" placeholder="{{ __('Password') }}" />
                       @include('alerts.feedback', ['field' => 'password'])
                     </div>
                   </div>
                 </div>
                 <div class="row">
-                  <label class="col-sm-2 col-form-label"
-                    for="input-password-confirmation">{{ __('Confirm Password') }}</label>
+                  <label class="col-sm-2 col-form-label" for="input-password-confirmation">{{ __('Confirm Password') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="password_confirmation" id="input-password-confirmation"
-                        type="password" placeholder="{{ __('Confirm Password') }}" />
+                      <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirm Password') }}" />
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card-footer mx-auto">
-                <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                <button type="submit" class="btn btn-primary btn-gradient">{{ __('Save') }}</button>
               </div>
             </div>
           </form>

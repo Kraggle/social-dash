@@ -98,15 +98,15 @@ __('Notifications')])
                 <div class="col-lg-8 mx-auto">
                   <div class="row">
                     <div class="col-md-4">
-                      <button class="btn btn-primary btn-block" onclick="demo.showNotification('top','left')">Top
+                      <button class="btn btn-primary btn-gradient btn-block" onclick="demo.showNotification('top','left')">Top
                         Left</button>
                     </div>
                     <div class="col-md-4">
-                      <button class="btn btn-primary btn-block" onclick="demo.showNotification('top','center')">Top
+                      <button class="btn btn-primary btn-gradient btn-block" onclick="demo.showNotification('top','center')">Top
                         Center</button>
                     </div>
                     <div class="col-md-4">
-                      <button class="btn btn-primary btn-block" onclick="demo.showNotification('top','right')">Top
+                      <button class="btn btn-primary btn-gradient btn-block" onclick="demo.showNotification('top','right')">Top
                         Right</button>
                     </div>
                   </div>
@@ -116,15 +116,15 @@ __('Notifications')])
                 <div class="col-lg-8 mx-auto">
                   <div class="row">
                     <div class="col-md-4">
-                      <button class="btn btn-primary btn-block" onclick="demo.showNotification('bottom','left')">Bottom
+                      <button class="btn btn-primary btn-gradient btn-block" onclick="demo.showNotification('bottom','left')">Bottom
                         Left</button>
                     </div>
                     <div class="col-md-4">
-                      <button class="btn btn-primary btn-block" onclick="demo.showNotification('bottom','center')">Bottom
+                      <button class="btn btn-primary btn-gradient btn-block" onclick="demo.showNotification('bottom','center')">Bottom
                         Center</button>
                     </div>
                     <div class="col-md-4">
-                      <button class="btn btn-primary btn-block" onclick="demo.showNotification('bottom','right')">Bottom
+                      <button class="btn btn-primary btn-gradient btn-block" onclick="demo.showNotification('bottom','right')">Bottom
                         Right</button>
                     </div>
                   </div>
@@ -136,13 +136,13 @@ __('Notifications')])
                 <div class="card-header">
                   <h4 class="card-title">Modal</h4>
                 </div>
-                <button class="btn btn-primary" data-toggle="modal" data-bs-target="#myModal">
+                <button class="btn btn-primary btn-gradient" data-toggle="modal" data-bs-target="#myModal">
                   Classic modal
                 </button>
-                <button class="btn btn-info" data-toggle="modal" data-bs-target="#noticeModal">
+                <button class="btn btn-info btn-gradient" data-toggle="modal" data-bs-target="#noticeModal">
                   Notice modal
                 </button>
-                <button class="btn btn-primary" data-toggle="modal" data-bs-target="#myModal10">
+                <button class="btn btn-primary btn-gradient" data-toggle="modal" data-bs-target="#myModal10">
                   Small alert modal
                 </button>
                 <!-- Classic Modal -->
@@ -165,7 +165,7 @@ __('Notifications')])
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default">Nice Button</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger btn-gradient" data-dismiss="modal">Close</button>
                       </div>
                     </div>
                   </div>
@@ -218,7 +218,7 @@ __('Notifications')])
                           here to help!</p>
                       </div>
                       <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-info btn-round" data-dismiss="modal">Sounds good!</button>
+                        <button type="button" class="btn btn-info btn-gradient btn-round" data-dismiss="modal">Sounds good!</button>
                       </div>
                     </div>
                   </div>

@@ -8,8 +8,7 @@
       @can('edit-account', $team)
         <div class="row">
           <div class="col-md-8">
-            <form method="post" enctype="multipart/form-data" action="{{ route('account.update', $account) }}"
-              autocomplete="off">
+            <form method="post" enctype="multipart/form-data" action="{{ route('account.update', $account) }}" autocomplete="off">
               @csrf
               @method('put')
 
@@ -87,7 +86,7 @@
                 </div>
 
                 <div class="card-footer mx-auto">
-                  <button type="submit" class="btn btn-primary">{{ __('Save Account') }}</button>
+                  <button type="submit" class="btn btn-primary btn-gradient">{{ __('Save Account') }}</button>
                 </div>
               </div>
 
@@ -96,7 +95,7 @@
           <div class="col-md-4">
             <div class="row">
               <div class="col-md-12 mb-3 text-end">
-                <a href="{{ route('account.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
+                <a href="{{ route('account.index') }}" class="btn btn-sm btn-warning btn-gradient">{{ __('Back to list') }}</a>
               </div>
             </div>
             {{-- <div class="card">

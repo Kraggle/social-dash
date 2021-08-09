@@ -56,7 +56,7 @@
 
         > .nav,
         .user .info {
-            [data-bs-toggle="collapse"] ~ div > ul > li > a {
+            [data-bs-toggle='collapse'] ~ div > ul > li > a {
                 span {
                     display: inline-block;
 
@@ -99,7 +99,7 @@
             }
         }
 
-        [data-bs-toggle="collapse"] ~ div > ul > li:hover > a {
+        [data-bs-toggle='collapse'] ~ div > ul > li:hover > a {
             .sidebar-mini-icon,
             .sidebar-normal {
                 color: $white;
@@ -107,7 +107,7 @@
         }
 
         .nav
-            [data-bs-toggle="collapse"]
+            [data-bs-toggle='collapse']
             ~ div
             > ul
             > li
@@ -192,7 +192,7 @@
                 color: $white;
             }
 
-            &.active > a:not([data-bs-toggle="collapse"]) {
+            &.active > a:not([data-bs-toggle='collapse']) {
                 background: transparent;
 
                 i,
@@ -201,7 +201,7 @@
                 }
 
                 &:before {
-                    content: " ";
+                    content: ' ';
                     position: absolute;
                     height: 6px;
                     width: 6px;
@@ -212,7 +212,7 @@
                 }
             }
 
-            &.active > a[data-bs-toggle="collapse"] {
+            &.active > a[data-bs-toggle='collapse'] {
                 background: transparent;
                 box-shadow: none;
                 color: $white;
@@ -231,7 +231,7 @@
                     }
 
                     &:before {
-                        content: " ";
+                        content: ' ';
                         position: absolute;
                         height: 6px;
                         width: 6px;
@@ -243,7 +243,7 @@
                 }
 
                 &:before {
-                    content: " ";
+                    content: ' ';
                     position: absolute;
                     height: 6px;
                     width: 6px;
@@ -295,7 +295,7 @@
             z-index: 3;
             width: 100%;
             height: 100%;
-            content: "";
+            content: '';
             display: block;
             background: $white;
             opacity: 1;
@@ -329,7 +329,7 @@
         }
 
         &:after {
-            content: "";
+            content: '';
             position: absolute;
             bottom: 0;
             right: 15px;
@@ -344,7 +344,7 @@
             margin: 10px 10px;
             color: $white;
             line-height: 20px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 
         .simple-text {
@@ -376,7 +376,39 @@
         }
     }
 
-    &[data="blue"] {
+    &[data='default'] {
+        @include linear-gradient($default-states, $default);
+
+        &:before {
+            border-bottom-color: $default;
+        }
+    }
+
+    &[data='pink'] {
+        @include linear-gradient($primary-states, $primary);
+
+        &:before {
+            border-bottom-color: $primary;
+        }
+    }
+
+    &[data='purple'] {
+        @include linear-gradient($secondary-states, $secondary);
+
+        &:before {
+            border-bottom-color: $secondary;
+        }
+    }
+
+    &[data='dark'] {
+        @include linear-gradient($dark-states, $dark);
+
+        &:before {
+            border-bottom-color: $dark;
+        }
+    }
+
+    &[data='blue'] {
         @include linear-gradient($info-states, $info);
 
         &:before {
@@ -384,7 +416,7 @@
         }
     }
 
-    &[data="green"] {
+    &[data='green'] {
         @include linear-gradient($success-states, $success);
 
         &:before {
@@ -392,7 +424,7 @@
         }
     }
 
-    &[data="orange"] {
+    &[data='orange'] {
         @include linear-gradient($warning-states, $warning);
 
         &:before {
@@ -400,7 +432,7 @@
         }
     }
 
-    &[data="red"] {
+    &[data='red'] {
         @include linear-gradient($danger-states, $danger);
 
         &:before {
@@ -414,7 +446,7 @@
         position: relative;
 
         &:after {
-            content: "";
+            content: '';
             position: absolute;
             bottom: 0;
             right: 15px;
@@ -473,7 +505,7 @@
     }
 
     &:before {
-        content: "";
+        content: '';
         position: absolute;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
@@ -511,7 +543,7 @@
     }
 }
 
-[data-notify="container"] {
+[data-notify='container'] {
     max-width: 500px;
 }
 
@@ -525,7 +557,7 @@
 
 body {
     &::after {
-        content: "";
+        content: '';
         position: fixed;
         left: 0;
         right: 0;
@@ -724,7 +756,7 @@ body {
         top: 0;
         right: 0;
         left: $sidebar-width;
-        content: "";
+        content: '';
         z-index: 9999;
         overflow-x: hidden;
         background-color: transparent;
@@ -790,7 +822,7 @@ body {
 
             .sidebar-wrapper {
                 > .nav
-                    [data-bs-toggle="collapse"]
+                    [data-bs-toggle='collapse']
                     ~ div
                     > ul
                     > li
@@ -798,7 +830,7 @@ body {
                     .sidebar-normal,
                 .user
                     .info
-                    [data-bs-toggle="collapse"]
+                    [data-bs-toggle='collapse']
                     ~ div
                     > ul
                     > li
@@ -813,7 +845,7 @@ body {
             }
 
             .nav
-                [data-bs-toggle="collapse"]
+                [data-bs-toggle='collapse']
                 ~ div
                 > ul
                 > li
@@ -843,7 +875,7 @@ body {
 
                 > .nav li > a p,
                 > .nav
-                    [data-bs-toggle="collapse"]
+                    [data-bs-toggle='collapse']
                     ~ div
                     > ul
                     > li
@@ -851,7 +883,7 @@ body {
                     .sidebar-normal,
                 .user
                     .info
-                    [data-bs-toggle="collapse"]
+                    [data-bs-toggle='collapse']
                     ~ div
                     > ul
                     > li
@@ -865,7 +897,7 @@ body {
             }
 
             .nav
-                [data-bs-toggle="collapse"]
+                [data-bs-toggle='collapse']
                 ~ div
                 > ul
                 > li
@@ -993,7 +1025,7 @@ body {
         top: 0;
         right: 0;
         left: $sidebar-width;
-        content: "";
+        content: '';
         z-index: 9999;
         overflow-x: hidden;
         background-color: transparent;

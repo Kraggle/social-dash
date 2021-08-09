@@ -74,9 +74,9 @@
                   <td>22/02/2021</td>
                   <td>#cristianoronaldo #ronaldo #cr...</td>
                   <td class="text-end text-nowrap">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -92,9 +92,9 @@
                   <td>20/02/2021</td>
                   <td>#rocky #rockybalboa #rockybal...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -110,9 +110,9 @@
                   <td>19/02/2021</td>
                   <td>#millionairequote #millionaire...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm  edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm  edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -128,9 +128,9 @@
                   <td>18/02/2021</td>
                   <td>#millionairequote #moneymotiva...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -146,9 +146,9 @@
                   <td>17/02/2021</td>
                   <td>#thomasshelby #tomshelby #shelby...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -164,9 +164,9 @@
                   <td>17/02/2021</td>
                   <td>#millionairequote #moneymotiva...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -182,9 +182,9 @@
                   <td>15/02/2021</td>
                   <td>#millionairequote #moneymotiva...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -200,9 +200,9 @@
                   <td>15/02/2021</td>
                   <td>#millionairequote #entrepre...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -218,9 +218,9 @@
                   <td>15/02/2021</td>
                   <td>#billionairequote #billiona...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -236,9 +236,9 @@
                   <td>14/02/2021</td>
                   <td>#thomasshelby #thomasshelbyme...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -254,9 +254,9 @@
                   <td>12/02/2021</td>
                   <td>#arnoldschwarzenegger #schwarze...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -272,9 +272,9 @@
                   <td>12/02/2021</td>
                   <td>#entrepreneurship #entrepreneu...</td>
                   <td class="text-end">
-                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                   </td>
                 </tr>
               </tbody>

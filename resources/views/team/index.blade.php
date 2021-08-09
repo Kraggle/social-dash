@@ -12,7 +12,7 @@ Management')])
               <div class="card-header">
                 <h4 class="card-title d-inline-block">{{ __('Teams') }}</h4>
                 @can('create', App\Models\Team::class)
-                  <a href="{{ route('team.create') }}" class="btn btn-sm btn-primary float-end">
+                  <a href="{{ route('team.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">
                     {{ __('Add team') }}
                   </a>
                 @endcan
@@ -42,12 +42,12 @@ Management')])
                               @method('delete')
 
                               @can('update', $team)
-                                <a href="{{ route('team.edit', $team) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" title="{{ __('Edit') }}">
+                                <a href="{{ route('team.edit', $team) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" title="{{ __('Edit') }}">
                                   <i class="fal fa-pencil-alt"></i>
                                 </a>
                               @endcan
                               @if (auth()->user()->can('remove', $team))
-                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert" title="{{ __('Delete') }}">
+                                <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove delete-alert" title="{{ __('Delete') }}">
                                   <i class="fal fa-trash-alt"></i>
                                 </button>
                               @endif
@@ -68,7 +68,7 @@ Management')])
               <div class="card-header">
                 <h4 class="card-title d-inline-block">{{ __('Team Management') }}</h4>
                 @can('add-member', $team)
-                  <a href="{{ route('member.create') }}" class="btn btn-sm btn-primary float-end">
+                  <a href="{{ route('member.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">
                     {{ __('Add team member') }}
                   </a>
                 @endcan
@@ -99,13 +99,13 @@ Management')])
 
                               @unless(auth()->user()->id == $member->id || $member->isTeamAdmin())
                                 @can('edit-member', $team)
-                                  <a href="{{ route('member.edit', $member) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
+                                  <a href="{{ route('member.edit', $member) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
                                     <i class="fal fa-pencil-alt"></i>
                                   </a>
                                 @endcan
 
                                 @can('remove-member', $team)
-                                  <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
+                                  <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove delete-alert" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
                                     <i class="fal fa-trash-alt"></i>
                                   </button>
                                 @endcan

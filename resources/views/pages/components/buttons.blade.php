@@ -9,13 +9,13 @@
             <h4 class="card-title">Pick your Color</h4>
           </div>
           <div class="card-body">
-            <button class="btn btn-primary">Default</button>
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-info">Info</button>
+            <button class="btn btn-primary btn-gradient">Default</button>
+            <button class="btn btn-primary btn-gradient">Primary</button>
+            <button class="btn btn-info btn-gradient">Info</button>
             <br>
-            <button class="btn btn-success animation-on-hover" type="button" rel="tooltip" data-original-title="I'm special!" data-placement="bottom">Success</button>
-            <button class="btn btn-warning">Warning</button>
-            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-success btn-gradient animation-on-hover" type="button" rel="tooltip" data-original-title="I'm special!" data-placement="bottom">Success</button>
+            <button class="btn btn-warning btn-gradient">Warning</button>
+            <button class="btn btn-danger btn-gradient">Danger</button>
           </div>
         </div>
         <div class="col-md-6">
@@ -23,24 +23,24 @@
             <h4 class="card-title">Buttons with Label</h4>
           </div>
           <div class="card-body">
-            <button class="btn btn-primary">
+            <button class="btn btn-primary btn-gradient">
               <i class="fal fa-chevron-left"></i> Left
             </button>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary btn-gradient">
               Right
               <i class="fal fa-chevron-right"></i>
             </button>
-            <button class="btn btn-info">
+            <button class="btn btn-info btn-gradient">
               <i class="fal fa-info-circle"></i> Info
             </button>
             <br>
-            <button class="btn btn-success">
+            <button class="btn btn-success btn-gradient">
               <i class="fal fa-check"></i> Success
             </button>
-            <button class="btn btn-warning">
+            <button class="btn btn-warning btn-gradient">
               <i class="fal fa-alarm-clock"></i> Warning
             </button>
-            <button class="btn btn-danger">
+            <button class="btn btn-danger btn-gradient">
               <i class="fal fa-trash-alt"></i> Danger
             </button>
           </div>
@@ -52,9 +52,9 @@
             <h4 class="card-title">Pick your Size</h4>
           </div>
           <div class="card-body">
-            <button class="btn btn-primary btn-sm">Small</button>
-            <button class="btn btn-primary">Regular</button>
-            <button class="btn btn-primary btn-lg">Large</button>
+            <button class="btn btn-primary btn-gradient btn-sm">Small</button>
+            <button class="btn btn-primary btn-gradient">Regular</button>
+            <button class="btn btn-primary btn-gradient btn-lg">Large</button>
           </div>
         </div>
         <div class="col-md-6">
@@ -62,18 +62,18 @@
             <h4 class="card-title">Pick your Style</h4>
           </div>
           <div class="card-body">
-            <button class="btn btn-primary">Default</button>
-            <button class="btn btn-primary btn-round">round</button>
-            <button class="btn btn-primary btn-round">
+            <button class="btn btn-primary btn-gradient">Default</button>
+            <button class="btn btn-primary btn-gradient btn-round">round</button>
+            <button class="btn btn-primary btn-gradient btn-round">
               <i class="fal fa-heart"></i> with icon
             </button>
-            <button class="btn btn-primary btn-round btn-icon">
+            <button class="btn btn-primary btn-gradient btn-round btn-icon">
               <i class="fal fa-heart"></i>
             </button>
-            <button class="btn btn-primary btn-simple">
+            <button class="btn btn-primary btn-gradient btn-simple">
               simple
             </button>
-            <button class="btn btn-primary btn-link">
+            <button class="btn btn-primary btn-gradient btn-link">
               link
             </button>
           </div>
@@ -133,22 +133,22 @@
           </div>
           <div class="card-body">
             <div class="btn-group">
-              <button type="button" class="btn btn-info">Left</button>
-              <button type="button" class="btn btn-info">Middle</button>
-              <button type="button" class="btn btn-info">Right</button>
+              <button type="button" class="btn btn-info btn-gradient">Left</button>
+              <button type="button" class="btn btn-info btn-gradient">Middle</button>
+              <button type="button" class="btn btn-info btn-gradient">Right</button>
             </div>
             <br>
             <br>
             <div class="btn-group" data-toggle="buttons">
-              <button type="button" class="btn btn-round btn-info">1</button>
-              <button type="button" class="btn btn-round btn-info">2</button>
-              <button type="button" class="btn btn-round btn-info">3</button>
-              <button type="button" class="btn btn-round btn-info">4</button>
+              <button type="button" class="btn btn-round btn-info btn-gradient">1</button>
+              <button type="button" class="btn btn-round btn-info btn-gradient">2</button>
+              <button type="button" class="btn btn-round btn-info btn-gradient">3</button>
+              <button type="button" class="btn btn-round btn-info btn-gradient">4</button>
             </div>
             <div class="btn-group">
-              <button type="button" class="btn btn-round btn-info">5</button>
-              <button type="button" class="btn btn-round btn-info">6</button>
-              <button type="button" class="btn btn-round btn-info">7</button>
+              <button type="button" class="btn btn-round btn-info btn-gradient">5</button>
+              <button type="button" class="btn btn-round btn-info btn-gradient">6</button>
+              <button type="button" class="btn btn-round btn-info btn-gradient">7</button>
             </div>
           </div>
         </div>

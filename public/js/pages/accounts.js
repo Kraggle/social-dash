@@ -6,6 +6,7 @@ import wNumb from '../plugins/wNumb-min.js';
 // console.log(Sentencer.make('{{ adverb }} {{ adjective }} {{ nouns }}').titleCase());
 
 $(() => {
+
     $('#search').on('keypress', function(e) {
         if (e.key == 'Enter') {
             e.preventDefault();
@@ -154,6 +155,9 @@ const updateCost = () => {
 }
 
 const checkInstaUser = () => {
+    const $inputs = $('#find-btn, #search');
+    $inputs.disable();
+
     const user = $('#search').val();
     if (!user) {
         SS.alert('Please input an instergram username!', 'error');
@@ -173,6 +177,7 @@ const checkInstaUser = () => {
             $('[name=followers]').val(fol);
             updateFollowers();
         }
+        $inputs.enable();
     });
 };
 

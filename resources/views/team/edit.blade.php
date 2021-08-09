@@ -5,8 +5,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="post" enctype="multipart/form-data" action="{{ route('team.update', $team) }}"
-            autocomplete="off">
+          <form method="post" enctype="multipart/form-data" action="{{ route('team.update', $team) }}" autocomplete="off">
             @csrf
             @method('put')
 
@@ -15,7 +14,7 @@
                 <h4 class="card-title col-md-6">{{ __('Team') }}</h4>
 
                 <div class="col-md-6 mb-3 text-end">
-                  <a href="{{ route('team.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
+                  <a href="{{ route('team.index') }}" class="btn btn-sm btn-warning btn-gradient">{{ __('Back to list') }}</a>
                 </div>
               </div>
               <div class="card-body ">
@@ -37,8 +36,7 @@
 
                 {{-- package_id --}}
                 <div class="row">
-                  <label class="col-sm-2 pe-0 col-form-label text-end"
-                    for="select-package-id">{{ __('Package') }}</label>
+                  <label class="col-sm-2 pe-0 col-form-label text-end" for="select-package-id">{{ __('Package') }}</label>
                   <div class="col-sm-8">
                     @include('forms.select', ['options' => [
                     'name' => 'package_id',
@@ -55,7 +53,7 @@
 
               </div>
               <div class="card-footer mx-auto">
-                <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                <button type="submit" class="btn btn-primary btn-gradient">{{ __('Save') }}</button>
               </div>
             </div>
           </form>

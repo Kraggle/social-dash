@@ -111,7 +111,7 @@
                 <div class="row">
                   <div class="col-lg-4 col-md-6 col-sm-3">
                     <div class="dropdown">
-                      <button class="dropdown-toggle btn btn-primary btn-block" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <button class="dropdown-toggle btn btn-primary btn-gradient btn-block" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
                       </button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -124,7 +124,7 @@
                   </div>
                   <div class="col-lg-4 col-md-6 col-sm-3">
                     <div class="dropup">
-                      <button type="button" class="dropdown-toggle btn btn-primary btn-block" data-bs-toggle="dropdown">
+                      <button type="button" class="dropdown-toggle btn btn-primary btn-gradient btn-block" data-bs-toggle="dropdown">
                         Dropup
                       </button>
                       <div class="dropdown-menu">
@@ -175,12 +175,12 @@
                   </div>
                   <div class="fileinput-preview fileinput-exists thumbnail"></div>
                   <div>
-                    <span class="btn btn-primary btn-round btn-file">
+                    <span class="btn btn-primary btn-gradient btn-round btn-file">
                       <span class="fileinput-new">Select image</span>
                       <span class="fileinput-exists">Change</span>
                       <input type="file" name="..." />
                     </span>
-                    <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                    <a href="#pablo" class="btn btn-danger btn-gradient btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
                   </div>
                 </div>
               </div>
@@ -192,13 +192,13 @@
                   </div>
                   <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
                   <div>
-                    <span class="btn btn-round btn-primary btn-file">
+                    <span class="btn btn-round btn-primary btn-gradient btn-file">
                       <span class="fileinput-new">Add Photo</span>
                       <span class="fileinput-exists">Change</span>
                       <input type="file" name="..." />
                     </span>
                     <br />
-                    <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                    <a href="#pablo" class="btn btn-danger btn-gradient btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
                   </div>
                 </div>
               </div>

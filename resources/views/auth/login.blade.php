@@ -43,23 +43,20 @@
                 <div class="input-group-text">
                   <i class="fal fa-envelope"></i>
                 </div>
-                <input type="email" class="form-control" id="exampleEmails" name="email"
-                  placeholder="{{ __('Email...') }}" value="{{ old('email', 'admin@white.com') }}" required>
+                <input type="email" class="form-control" id="exampleEmails" name="email" placeholder="{{ __('Email...') }}" value="{{ old('email', 'admin@white.com') }}" required>
               </div>
               @include('alerts.feedback', ['field' => 'email'])
               <div class="input-group mb-0{{ $errors->has('password') ? ' has-danger' : '' }}">
                 <div class="input-group-text">
                   <i class="fal fa-lock-alt"></i>
                 </div>
-                <input type="password" class="form-control" id="examplePassword" name="password"
-                  placeholder="{{ __('Password...') }}" value="secret" required>
+                <input type="password" class="form-control" id="examplePassword" name="password" placeholder="{{ __('Password...') }}" value="secret" required>
               </div>
               @include('alerts.feedback', ['field' => 'password'])
             </div>
             <div class="card-footer">
               <div class="d-grid">
-                <a href="#" onclick="event.preventDefault(); document.getElementById('login-form').submit();"
-                  class="btn btn-primary btn-lg mb-3">{{ __('Get started') }}</a>
+                <a href="#" onclick="event.preventDefault(); document.getElementById('login-form').submit();" class="btn btn-primary btn-gradient btn-lg mb-3">{{ __('Get started') }}</a>
               </div>
               <div class="pull-left">
                 <h6>

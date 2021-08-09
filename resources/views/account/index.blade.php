@@ -12,7 +12,7 @@ Management')])
               <div class="card-header">
                 <h4 class="card-title d-inline-block">{{ __('Accounts') }}</h4>
                 @can('create', App\Models\Account::class)
-                  <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary float-end">{{ __('Add account') }}</a>
+                  <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">{{ __('Add account') }}</a>
                 @endcan
               </div>
               <div class="card-body">
@@ -44,12 +44,12 @@ Management')])
                                 @method('delete')
 
                                 @can('update', $account)
-                                  <a href="{{ route('account.edit', $account) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
+                                  <a href="{{ route('account.edit', $account) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
                                     <i class="fal fa-pencil-alt"></i>
                                   </a>
                                 @endcan
                                 @if (auth()->user()->can('remove', $account))
-                                  <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
+                                  <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove delete-alert" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
                                     <i class="fal fa-trash-alt"></i>
                                   </button>
                                 @endif
@@ -71,7 +71,7 @@ Management')])
               <div class="card-header">
                 <h4 class="card-title d-inline-block">{{ __('Instagram Accounts') }}</h4>
                 @can('add-account', $team)
-                  <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary float-end">
+                  <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">
                     {{ __('Add account') }}
                   </a>
                 @endcan
@@ -109,12 +109,12 @@ Management')])
                               @method('delete')
 
                               @can('edit-account', $team)
-                                <a href="{{ route('account.edit', $account) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-toggle="tooltip" title="{{ __('Edit') }}">
+                                <a href="{{ route('account.edit', $account) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-toggle="tooltip" title="{{ __('Edit') }}">
                                   <i class="fal fa-pencil-alt"></i>
                                 </a>
                               @endcan
                               @can('remove-account', $team)
-                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert" data-toggle="tooltip" title="{{ __('Delete') }}">
+                                <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove delete-alert" data-toggle="tooltip" title="{{ __('Delete') }}">
                                   <i class="fal fa-trash-alt"></i>
                                 </button>
                               @endcan

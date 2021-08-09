@@ -17,7 +17,7 @@ Management')])
               <div class="card-body ">
                 <div class="row">
                   <div class="col-md-12 text-end">
-                    <a href="{{ route('package.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
+                    <a href="{{ route('package.index') }}" class="btn btn-sm btn-primary btn-gradient">{{ __('Back to list') }}</a>
                   </div>
                 </div>
 
@@ -119,7 +119,7 @@ Management')])
 
               </div>
               <div class="card-footer mx-auto">
-                <button type="submit" class="btn btn-primary">{{ __('Add package') }}</button>
+                <button type="submit" class="btn btn-primary btn-gradient">{{ __('Add package') }}</button>
               </div>
             </div>
           </form>

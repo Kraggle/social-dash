@@ -17,7 +17,7 @@ Management')])
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-12 text-end">
-                    <a href="{{ route('role.index') }}" class="btn btn-warning btn-sm">{{ __('Back to list') }}</a>
+                    <a href="{{ route('role.index') }}" class="btn btn-warning btn-gradient btn-sm">{{ __('Back to list') }}</a>
                   </div>
                 </div>
 
@@ -51,7 +51,7 @@ Management')])
 
               </div>
               <div class="card-footer mx-auto">
-                <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                <button type="submit" class="btn btn-primary btn-gradient">{{ __('Save') }}</button>
               </div>
             </div>
           </form>

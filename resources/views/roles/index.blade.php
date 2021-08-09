@@ -10,7 +10,7 @@ Management')])
             <div class="card-header">
               <h4 class="card-title d-inline-block">{{ __('Roles') }}</h4>
               @can('create', App\Models\Role::class)
-                <a href="{{ route('role.create') }}" class="btn btn-primary btn-sm float-end">{{ __('Add role') }}</a>
+                <a href="{{ route('role.create') }}" class="btn btn-primary btn-gradient btn-sm float-end">{{ __('Add role') }}</a>
               @endcan
             </div>
             <div class="card-body">
@@ -35,7 +35,7 @@ Management')])
                         @can('manage-users', App\Models\User::class)
                           <td class="td-actions text-end">
                             @can('update', $role)
-                              <a href="{{ route('role.edit', $role) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-bs-toggle="tooltip" title="Edit">
+                              <a href="{{ route('role.edit', $role) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-bs-toggle="tooltip" title="Edit">
                                 <i class="fal fa-pencil-alt"></i>
                               </a>
                             @endcan

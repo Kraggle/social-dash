@@ -8,8 +8,7 @@ Permissions')])
         <div class="col-md-12">
           @unless(auth()->user()->id == $member->id || $member->isTeamAdmin())
             @can('edit-member', $member->team)
-              <form method="post" enctype="multipart/form-data" action="{{ route('member.update', $member) }}"
-                autocomplete="off">
+              <form method="post" enctype="multipart/form-data" action="{{ route('member.update', $member) }}" autocomplete="off">
                 @csrf
                 @method('put')
 
@@ -18,7 +17,7 @@ Permissions')])
                     <h4 class="card-title col-md-6">{{ __('Team Member') }}</h4>
 
                     <div class="col-md-6 mb-3 text-end">
-                      <a href="{{ route('team.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
+                      <a href="{{ route('team.index') }}" class="btn btn-sm btn-warning btn-gradient">{{ __('Back to list') }}</a>
                     </div>
                   </div>
                   <div class="card-body ">
@@ -112,7 +111,7 @@ Permissions')])
 
                   </div>
                   <div class="card-footer mx-auto">
-                    <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                    <button type="submit" class="btn btn-primary btn-gradient">{{ __('Save') }}</button>
                   </div>
                 </div>
               </form>

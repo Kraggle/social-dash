@@ -21,15 +21,13 @@
                 <div class="input-group-text">
                   <i class="fal fa-envelope"></i>
                 </div>
-                <input type="email" class="form-control" id="exampleEmails" name="email"
-                  placeholder="{{ __('Email...') }}" value="{{ old('email') }}" required>
+                <input type="email" class="form-control" id="exampleEmails" name="email" placeholder="{{ __('Email...') }}" value="{{ old('email') }}" required>
               </div>
               @include('alerts.feedback', ['field' => 'email'])
             </div>
             <div class="card-footer">
               <div class="d-grid">
-                <a href="#" onclick="event.preventDefault(); document.getElementById('email-form').submit();"
-                  class="btn btn-primary btn-lg btn-block mb-3">{{ __('Send Password Reset Link') }}</a>
+                <a href="#" onclick="event.preventDefault(); document.getElementById('email-form').submit();" class="btn btn-primary btn-gradient btn-lg btn-block mb-3">{{ __('Send Password Reset Link') }}</a>
               </div>
             </div>
           </div>

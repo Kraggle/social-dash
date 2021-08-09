@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\Team;
 use App\Models\User;
-use App\Models\RegisterToken;
+use App\Models\Token;
 use App\Helpers\AppHelper;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
@@ -89,7 +89,7 @@ class RegisterController extends Controller {
         $team = null;
 
         if ($token) {
-            $column = RegisterToken::where('token', $token)->first();
+            $column = Token::where('token', $token)->first();
             $role_id = $column->role_id;
             $team = $column->team;
         }

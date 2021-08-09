@@ -1,0 +1,1 @@
+import t from"./SweetAlert.js";const e=t;e.default=e;export default e;

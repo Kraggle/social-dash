@@ -10,7 +10,7 @@ Management')])
             <div class="card-header">
               <h4 class="card-title d-inline-block">{{ __('Posts') }}</h4>
               @can('create', App\Models\Post::class)
-                <a href="{{ route('post.create') }}" class="btn btn-sm btn-primary float-end">
+                <a href="{{ route('post.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">
                   {{ __('Add post') }}
                 </a>
               @endcan
@@ -51,12 +51,12 @@ Management')])
                               @method('delete')
 
                               @can('update', $post)
-                                <a href="{{ route('post.edit', $post) }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
+                                <a href="{{ route('post.edit', $post) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
                                   <i class="fal fa-pencil-alt"></i>
                                 </a>
                               @endcan
                               @if (auth()->user()->can('remove', $post))
-                                <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
+                                <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
                                   <i class="fal fa-trash-alt"></i>
                                 </button>
                               @endif

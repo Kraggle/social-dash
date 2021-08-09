@@ -101,13 +101,13 @@ if ($token) {
             </div>
 
             {{-- <div id="find-btn" class="card-footer d-flex justify-content-center" unhide="d-flex">
-            <a href="javascript:void(0)" class="btn btn-primary btn-round btn-lg">
+            <a href="javascript:void(0)" class="btn btn-primary btn-gradient btn-round btn-lg">
               find account
             </a>
           </div> --}}
 
             <div id="submit-btn" class="card-footer justify-content-center d-flex" unhide="d-flex">
-              <a href="javascript:void(0)" class="btn btn-primary btn-round btn-lg">
+              <a href="javascript:void(0)" class="btn btn-primary btn-gradient btn-round btn-lg">
                 lets go
               </a>
             </div>

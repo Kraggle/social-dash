@@ -15,7 +15,7 @@ Management')])
                 <div class="row">
                   <h4 class="card-title col-md-6">{{ __('Edit Package') }}</h4>
                   <div class="col-md-6 text-end">
-                    <a href="{{ route('package.index') }}" class="btn btn-sm btn-warning">
+                    <a href="{{ route('package.index') }}" class="btn btn-sm btn-warning btn-gradient">
                       {{ __('Back to list') }}
                     </a>
                   </div>
@@ -132,7 +132,7 @@ Management')])
 
               </div>
               <div class="card-footer mx-auto">
-                <button type="submit" class="btn btn-primary">{{ __('Update package') }}</button>
+                <button type="submit" class="btn btn-primary btn-gradient">{{ __('Update package') }}</button>
               </div>
             </div>
 

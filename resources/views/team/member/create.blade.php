@@ -14,7 +14,7 @@
                 <div class="card-header row">
                   <h4 class="card-title col-md-6">{{ __('Team') }}</h4>
                   <div class="col-md-6 mb-3 text-end">
-                    <a href="{{ route('team.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
+                    <a href="{{ route('team.index') }}" class="btn btn-sm btn-warning btn-gradient">{{ __('Back to list') }}</a>
                   </div>
                 </div>
                 <div class="card-body ">
@@ -35,7 +35,7 @@
 
                 </div>
                 <div class="card-footer mx-auto">
-                  <button type="submit" class="btn btn-primary">{{ __('Send invite') }}</button>
+                  <button type="submit" class="btn btn-primary btn-gradient">{{ __('Send invite') }}</button>
                 </div>
               </div>
             </form>

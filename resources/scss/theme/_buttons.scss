@@ -52,21 +52,21 @@
 @each $color, $value in $theme-colors {
     .btn-#{$color} {
         @include button-variant($value, $value);
+
+        @if (map-has-key($main-colors, $color)) {
+            &.btn-gradient {
+                @include button-gradient(
+                    $value,
+                    map-get($main-states, '#{$color}-states')
+                );
+            }
+        }
     }
 }
 
 @each $color, $value in $theme-colors {
     .btn-outline-#{$color} {
         @include button-outline-variant($value);
-    }
-}
-
-@each $color, $value in $main-colors {
-    .btn-#{$color} {
-        @include button-gradient(
-            $value,
-            map-get($states-colors, "#{$color}-states")
-        );
     }
 }
 
@@ -199,53 +199,13 @@
 }
 
 .btn {
-    // social buttons
-    &.btn-facebook {
-        @include social-buttons-color($facebook, $facebook-states);
-    }
-
-    &.btn-twitter {
-        @include social-buttons-color($twitter, $twitter-states);
-    }
-
-    &.btn-pinterest {
-        @include social-buttons-color($pinterest, $pinterest-states);
-    }
-
-    &.btn-google {
-        @include social-buttons-color($google-plus, $google-plus-states);
-    }
-
-    &.btn-linkedin {
-        @include social-buttons-color($linkedin, $linkedin-states);
-    }
-
-    &.btn-dribbble {
-        @include social-buttons-color($dribbble, $dribbble-states);
-    }
-
-    &.btn-github {
-        @include social-buttons-color($github, $github-states);
-    }
-
-    &.btn-youtube {
-        @include social-buttons-color($youtube, $youtube-states);
-    }
-
-    &.btn-instagram {
-        @include social-buttons-color($instagram, $instagram-states);
-    }
-
-    &.btn-reddit {
-        @include social-buttons-color($reddit, $reddit-states);
-    }
-
-    &.btn-tumblr {
-        @include social-buttons-color($tumblr, $tumblr-states);
-    }
-
-    &.btn-behance {
-        @include social-buttons-color($behance, $behance-states);
+    @each $color, $value in $brand-colors {
+        &.btn-#{$color} {
+            @include social-buttons-color(
+                $value,
+                map-get($brand-states, '#{$color}-states')
+            );
+        }
     }
 
     &.btn-double-padding {
@@ -265,12 +225,18 @@
             padding-right: $double-padding-lg;
         }
     }
-}
 
-.btn-secondary:not(:disabled):not(.disabled):active,
-.btn-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-secondary.dropdown-toggle {
-    color: $white;
+    &:not([disabled]) {
+        [class*='spinner-'] {
+            display: none;
+        }
+    }
+
+    &[disabled] {
+        .btn-text {
+            display: none;
+        }
+    }
 }
 
 @include media-breakpoint-down(md) {

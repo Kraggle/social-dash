@@ -118,16 +118,16 @@
         border-right: 0;
     }
 
-    .btn {
-        display: flex;
-        align-items: center;
-        padding: $input-padding-y $input-padding-x;
-        margin: 0;
-        font-size: $font-size-base;
-        font-weight: $font-weight-bold;
-        line-height: $input-line-height;
-        border-color: $primary;
-    }
+    // .btn {
+    //     display: flex;
+    //     align-items: center;
+    //     padding: $input-padding-y $input-padding-x;
+    //     margin: 0;
+    //     font-size: $font-size-base;
+    //     font-weight: $font-weight-bold;
+    //     line-height: $input-line-height;
+    //     border-color: $primary;
+    // }
 }
 
 .input-group .form-control:first-child,
@@ -204,7 +204,7 @@ textarea.form-control {
 }
 
 // Input files - hide actual input - requires specific markup in the sample.
-.form-group input[type="file"] {
+.form-group input[type='file'] {
     opacity: 0;
     position: absolute;
     top: 0;

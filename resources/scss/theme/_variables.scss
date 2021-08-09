@@ -1,7 +1,7 @@
 $enable-gradients: true;
 $enable-shadows: false;
 
-$min-contrast-ratio: 1;
+$min-contrast-ratio: 1.3;
 
 $white: #fff;
 $gray-100: #f8f9fa;
@@ -39,10 +39,21 @@ $purple: #8965e0;
 $pink: #f3a4b5;
 $red: #f5365c;
 $orange: #fb6340;
-$yellow: #ffd600;
-$green: #2dce89;
+$yellow: #c5a507;
+$green: #5ab48d;
 $teal: #11cdef;
 $cyan: #2bffc6;
+
+// $blue: #5487f5;
+// $indigo: #6454f5;
+// $purple: #ba54f5;
+// $pink: #f554cd;
+// $red: #f5546a;
+// $orange: #f57454;
+// $yellow: #e5f554;
+// $green: #67f554;
+// $teal: #54f5f5;
+// $cyan: #54f5b7;
 
 $colors: (
     'blue': $blue,
@@ -64,13 +75,23 @@ $colors: (
 
 $default: #344675;
 $primary: #e14eca;
-$secondary: #f4f5f7;
-$success: #00f2c3;
+$secondary: #e2d31b;
+$success: #17c3a0;
 $info: #1d8cf8;
 $warning: #ff8d72;
-$danger: #fd5d93;
-$light: $secondary;
+$danger: #de4b39;
+$light: $gray-200;
 $dark: #222a42;
+
+// $default: #344675;
+// $primary: $pink;
+// $secondary: $teal;
+// $success: $green;
+// $info: $blue;
+// $warning: $orange;
+// $danger: $red;
+// $light: $gray-300;
+// $dark: #222a42;
 
 $main-colors: (
     'default': $default,
@@ -85,16 +106,16 @@ $main-colors: (
 );
 
 $default-states: #263148;
-$primary-states: #ba54f5;
-$secondary-states: #ba54f5;
+$primary-states: #6112b9;
+$secondary-states: #e44c4c;
 $success-states: #0098f0;
-$info-states: #3358f4;
+$info-states: #46f9f1;
 $warning-states: #ff6491;
-$danger-states: #ec250d;
-$light-states: $secondary;
+$danger-states: #a759d0;
+$light-states: $gray-500;
 $dark-states: #1d253b;
 
-$states-colors: (
+$main-states: (
     'default-states': $default-states,
     'primary-states': $primary-states,
     'secondary-states': $secondary-states,
@@ -185,6 +206,21 @@ $brand-colors: (
     'linkedin': $linkedin,
 );
 
+$brand-states: (
+    'facebook': $facebook-states,
+    'twitter': $twitter-states,
+    'google-plus': $google-plus-states,
+    'instagram': $instagram-states,
+    'pinterest': $pinterest-states,
+    'youtube': $youtube-states,
+    'dribbble': $dribbble-states,
+    'github': $github-states,
+    'reddit': $reddit-states,
+    'behance': $behance-states,
+    'tumblr': $tumblr-states,
+    'linkedin': $linkedin-states,
+);
+
 $font-size-base: 0.875rem;
 $font-size-xs: $font-size-base * 0.714;
 $font-size-sm: $font-size-base * 0.875;
@@ -230,7 +266,7 @@ $font-family-sans-serif: 'Montserrat', system-ui, -apple-system, 'Segoe UI',
 $navbar-padding-y: 0.625rem;
 $navbar-padding-x: 0.9375rem;
 
-$theme-colors: map-merge(map-merge($theme-colors, $states-colors), $colors);
+$theme-colors: map-merge(map-merge($theme-colors, $main-states), $colors);
 
 $border-radius: 0.25rem;
 $border-radius-xl: 0.875rem;

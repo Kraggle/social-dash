@@ -35,7 +35,7 @@ Scheduling')])
                 @can('create', App\Item::class)
                   <div class="row">
                     <div class="col-12 text-end mb-3">
-                      <a href="{{ route('item.create') }}" class="btn btn-sm btn-primary">{{ __('Add Item') }}</a>
+                      <a href="{{ route('item.create') }}" class="btn btn-sm btn-primary btn-gradient">{{ __('Add Item') }}</a>
                     </div>
                   </div>
                 @endcan
@@ -92,11 +92,11 @@ Scheduling')])
 
                                 @can('update', $item)
                                   <a href="{{ route('item.edit', $item) }}"
-                                    class="btn btn-link btn-warning btn-icon btn-sm edit"><i
+                                    class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i
                                       class="fal fa-pencil-alt"></i></a>
                                 @endcan
                                 @can('delete', $item)
-                                  <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove"
+                                  <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"
                                     data-original-title="" title=""
                                     onclick="confirm('{{ __('Are you sure you want to delete this item?') }}') ? this.parentElement.submit() : ''">
                                     <i class="fal fa-trash-alt"></i>

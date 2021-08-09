@@ -185,7 +185,7 @@
                 </div>
 
                 <div class="col-auto pe-0">
-                  <a href="{{ route('pages.compare-posts') }}" class="btn btn-sm btn-warning">Compare</a>
+                  <a href="{{ route('pages.compare-posts') }}" class="btn btn-sm btn-warning btn-gradient">Compare</a>
                 </div>
 
               </div>
@@ -230,9 +230,9 @@
                           <td><a href="{{ route('pages.posts') }}">22/02/2021</a></td>
                           <td>#cristianoronaldo #ronaldo #cr...</td>
                           <td class="text-nowrap text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -250,9 +250,9 @@
                           <td><a href="{{ route('pages.posts') }}">20/02/2021</a></td>
                           <td>#rocky #rockybalboa #rockybal...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -270,9 +270,9 @@
                           <td><a href="{{ route('pages.posts') }}">19/02/2021</a></td>
                           <td>#millionairequote #millionaire...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm  edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm  edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -290,9 +290,9 @@
                           <td><a href="{{ route('pages.posts') }}">18/02/2021</a></td>
                           <td>#millionairequote #moneymotiva...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -310,9 +310,9 @@
                           <td><a href="{{ route('pages.posts') }}">17/02/2021</a></td>
                           <td>#thomasshelby #tomshelby #shelby...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -330,9 +330,9 @@
                           <td><a href="{{ route('pages.posts') }}">17/02/2021</a></td>
                           <td>#millionairequote #moneymotiva...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -350,9 +350,9 @@
                           <td><a href="{{ route('pages.posts') }}">15/02/2021</a></td>
                           <td>#millionairequote #moneymotiva...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -370,9 +370,9 @@
                           <td><a href="{{ route('pages.posts') }}">15/02/2021</a></td>
                           <td>#millionairequote #entrepre...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -390,9 +390,9 @@
                           <td><a href="{{ route('pages.posts') }}">15/02/2021</a></td>
                           <td>#billionairequote #billiona...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -410,9 +410,9 @@
                           <td><a href="{{ route('pages.posts') }}">14/02/2021</a></td>
                           <td>#thomasshelby #thomasshelbyme...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -430,9 +430,9 @@
                           <td><a href="{{ route('pages.posts') }}">12/02/2021</a></td>
                           <td>#arnoldschwarzenegger #schwarze...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <tr>
@@ -450,9 +450,9 @@
                           <td><a href="{{ route('pages.posts') }}">12/02/2021</a></td>
                           <td>#entrepreneurship #entrepreneu...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
                           </td>
                         </tr>
                       </tbody>

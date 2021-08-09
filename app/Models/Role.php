@@ -27,6 +27,6 @@ class Role extends Model {
      * @return \Illuminate\Database\Eloquent\Collection
      */
     public function tokens() {
-        return $this->hasMany(RegisterToken::class);
+        return $this->hasMany(Token::class);
     }
 }

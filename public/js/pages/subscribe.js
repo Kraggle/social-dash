@@ -1,5 +1,5 @@
-import { K } from './src/K.js';
-import stripeForm from './src/stripeForm.js';
+import { K } from '../plugins/K.js';
+import stripeForm from './shared/stripeForm.js';
 
 $(() => {
 	stripeForm();

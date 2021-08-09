@@ -51,7 +51,7 @@
                 </div>
 
                 {{-- <div class="col-auto btn-group btn-group-toggle float-end" data-toggle="buttons">
-                  <label class="btn btn-sm btn-warning btn-simple" id="3">
+                  <label class="btn btn-sm btn-warning btn-gradient btn-simple" id="3">
                     <input type="radio" class="d-none" name="options">
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Posts</span>
                     <span class="d-block d-sm-none">

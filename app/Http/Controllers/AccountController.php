@@ -42,7 +42,8 @@ class AccountController extends Controller {
      */
     public function store(AccountRequest $request) {
 
-        $team_id = auth()->user()->team->id;
+        $user = auth()->user();
+        $team_id = $user->team->id;
         if ($request->team_id) $team_id = $request->team_id;
 
         $settings = $request->settings;
@@ -65,14 +66,19 @@ class AccountController extends Controller {
             ]);
         }
 
-        $team = Team::where('id', $team_id)->first();
-        $team->newSubscription($request->username, ['price_1JEZ3NAy9PNycxnJ9fMA6x8u', $price_id])
-            ->quantity($quantity, $price_id)->add();
+        $msg = __('Account successfully added.');
+
+        if (!$user->isAdmin()) {
+            $team = Team::where('id', $team_id)->first();
+            $team->newSubscription($request->username, ['price_1JEZ3NAy9PNycxnJ9fMA6x8u', $price_id])
+                ->quantity($quantity, $price_id)->add();
+            $msg = __('Account successfully purchased.');
+        }
 
         // TODO:: Check that the payment was successful, then...
         // TODO:: Send a webhook to the scraper to start the scrape
 
-        return redirect()->route('account.index')->withStatus(__('Account successfully added.'));
+        return redirect()->route('account.index')->withStatus($msg);
     }
 
     /**

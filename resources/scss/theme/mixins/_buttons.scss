@@ -70,11 +70,13 @@
         @include gradient-bg($background);
         border-color: $border;
         @include box-shadow($btn-box-shadow);
+        // transform: scale(1);
 
         &:hover {
             color: $hover-color;
             @include gradient-bg($hover-background);
             border-color: $hover-border;
+            // transform: scale(1.05);
         }
 
         .btn-check:focus + &,

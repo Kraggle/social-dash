@@ -75,10 +75,10 @@
                       € 99,225
                     </td>
                     <td class="text-end">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
                         <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -102,10 +102,10 @@
                       € 89,241
                     </td>
                     <td class="text-end">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
                         <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -129,10 +129,10 @@
                       € 92,144
                     </td>
                     <td class="text-end">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
                         <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -156,10 +156,10 @@
                       € 49,990
                     </td>
                     <td class="text-end">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
                         <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -183,10 +183,10 @@
                       € 69,201
                     </td>
                     <td class="text-end">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
                         <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -210,10 +210,10 @@
                       € 99,201
                     </td>
                     <td class="text-end">
-                      <button type="button" rel="tooltip" class="btn btn-success btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
+                      <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
                         <i class="fal fa-redo"></i>
                       </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
+                      <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -525,9 +525,9 @@
                     </td>
                     <td class="td-number">
                       <div class="btn-group">
-                        <button class="btn btn-info btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
+                        <button class="btn btn-info btn-gradient btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
                         </button>
-                        <button class="btn btn-info btn-sm"> <i class="fal fa-plus"></i> </button>
+                        <button class="btn btn-info btn-gradient btn-sm"> <i class="fal fa-plus"></i> </button>
                       </div>
                       1
                     </td>
@@ -535,7 +535,7 @@
                       <small>€</small>3490
                     </td>
                     <td class="td-actions">
-                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-link" data-original-title="Remove item">
+                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-gradient btn-link" data-original-title="Remove item">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -562,9 +562,9 @@
                     </td>
                     <td class="td-number">
                       <div class="btn-group">
-                        <button class="btn btn-info btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
+                        <button class="btn btn-info btn-gradient btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
                         </button>
-                        <button class="btn btn-info btn-sm"> <i class="fal fa-plus"></i> </button>
+                        <button class="btn btn-info btn-gradient btn-sm"> <i class="fal fa-plus"></i> </button>
                       </div>
                       2
                     </td>
@@ -572,7 +572,7 @@
                       <small>€</small>470
                     </td>
                     <td class="td-actions">
-                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-link" data-original-title="Remove item">
+                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-gradient btn-link" data-original-title="Remove item">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -599,9 +599,9 @@
                     </td>
                     <td class="td-number">
                       <div class="btn-group">
-                        <button class="btn btn-info btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
+                        <button class="btn btn-info btn-gradient btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
                         </button>
-                        <button class="btn btn-info btn-sm"> <i class="fal fa-plus"></i> </button>
+                        <button class="btn btn-info btn-gradient btn-sm"> <i class="fal fa-plus"></i> </button>
                       </div>
                       1
                     </td>
@@ -609,7 +609,7 @@
                       <small>€</small>140
                     </td>
                     <td class="td-actions">
-                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-link" data-original-title="Remove item">
+                      <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-gradient btn-link" data-original-title="Remove item">
                         <i class="fal fa-trash-alt"></i>
                       </button>
                     </td>
@@ -628,7 +628,7 @@
                   </tr>
                 </tbody>
               </table>
-              <button type="button" rel="tooltip" class="btn btn-info btn-round float-end me-5" data-original-title="" title="">
+              <button type="button" rel="tooltip" class="btn btn-info btn-gradient btn-round float-end me-5" data-original-title="" title="">
                 Complete Purchase
                 <i class="fal fa-chevron-right"></i>
               </button>

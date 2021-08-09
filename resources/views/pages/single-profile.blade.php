@@ -88,21 +88,21 @@
 
                     <input type="text" class="form-control -block datepicker text-warning border-warning me-2" value="05/05/2021">
                     <div class="btn-group">
-                      <div class="btn btn-sm btn-warning btn-simple" id="3">
+                      <div class="btn btn-sm btn-warning btn-gradient btn-simple" id="3">
                         <input type="radio" class="d-none" name="options">
                         <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Engagement</span>
                         <span class="d-block d-sm-none">
                           <i class="fal fa-hand-point-up"></i>
                         </span>
                       </div>
-                      <div class="btn btn-sm btn-warning btn-simple" id="3">
+                      <div class="btn btn-sm btn-warning btn-gradient btn-simple" id="3">
                         <input type="radio" class="d-none" name="options">
                         <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Likes</span>
                         <span class="d-block d-sm-none">
                           <i class="fal fa-hand-point-up"></i>
                         </span>
                       </div>
-                      <div class="btn btn-sm btn-warning btn-simple" id="3">
+                      <div class="btn btn-sm btn-warning btn-gradient btn-simple" id="3">
                         <input type="radio" class="d-none" name="options">
                         <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Comments</span>
                         <span class="d-block d-sm-none">

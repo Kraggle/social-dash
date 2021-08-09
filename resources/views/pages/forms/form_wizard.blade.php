@@ -92,12 +92,12 @@
                         </div>
                         <div class="fileinput-preview fileinput-exists thumbnail"></div>
                         <div>
-                          <span class="btn btn-primary btn-simple btn-file">
+                          <span class="btn btn-primary btn-gradient btn-simple btn-file">
                             <span class="fileinput-new">Select image</span>
                             <span class="fileinput-exists">Change</span>
                             <input type="file" name="..." />
                           </span>
-                          <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                          <a href="#pablo" class="btn btn-danger btn-gradient btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
                         </div>
                       </div>
                     </div>

@@ -273,11 +273,11 @@
                         </tr>
                         <tr>
                           <td></td>
-                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-lg">View Post</a></td>
-                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-lg">View Post</a></td>
-                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-lg">View Post</a></td>
-                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-lg">View Post</a></td>
-                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-lg">View Post</a></td>
+                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-gradient btn-lg">View Post</a></td>
+                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-gradient btn-lg">View Post</a></td>
+                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-gradient btn-lg">View Post</a></td>
+                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-gradient btn-lg">View Post</a></td>
+                          <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-gradient btn-lg">View Post</a></td>
                         </tr>
                       </tbody>
                     </table>
@@ -625,11 +625,11 @@
                             <tr></tr>
                             <tr>
                               <td></td>
-                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary">View all Hashtags</a></td>
-                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary">View all Hashtags</a></td>
-                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary">View all Hashtags</a></td>
-                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary">View all Hashtags</a></td>
-                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary">View all Hashtags</a></td>
+                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary btn-gradient">View all Hashtags</a></td>
+                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary btn-gradient">View all Hashtags</a></td>
+                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary btn-gradient">View all Hashtags</a></td>
+                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary btn-gradient">View all Hashtags</a></td>
+                              <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary btn-gradient">View all Hashtags</a></td>
                             </tr>
                           </tbody>
                         </table>

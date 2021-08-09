@@ -34,7 +34,7 @@
               </div>
             </div>
             <div class="card-footer text-center mb-3 mt-3">
-              <button class="btn btn-round btn-just-icon btn-primary">{{ __('Get started') }}</button>
+              <button class="btn btn-round btn-just-icon btn-primary btn-gradient">{{ __('Get started') }}</button>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
               </div>
             </div>
             <div class="card-footer text-center mb-3 mt-3">
-              <button class="btn btn-round btn-just-icon btn-success">Get started</button>
+              <button class="btn btn-round btn-just-icon btn-success btn-gradient">Get started</button>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
               </div>
             </div>
             <div class="card-footer text-center mb-3 mt-3">
-              <button class="btn btn-round btn-just-icon btn-warning">Get started</button>
+              <button class="btn btn-round btn-just-icon btn-warning btn-gradient">Get started</button>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
               </div>
             </div>
             <div class="card-footer text-center mb-3 mt-3">
-              <button class="btn btn-round btn-just-icon btn-danger">Get started</button>
+              <button class="btn btn-round btn-just-icon btn-danger btn-gradient">Get started</button>
             </div>
           </div>
         </div>
@@ -120,16 +120,14 @@
           <div class="progress-container progress-warning">
             <span class="progress-badge">500GB</span>
             <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                style="width: 75%;">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
               </div>
             </div>
           </div>
           <div class="progress-container progress-primary">
             <span class="progress-badge">4 years</span>
             <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                style="width: 50%;">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
               </div>
             </div>
           </div>

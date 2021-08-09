@@ -234,7 +234,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="dropdown">
-                      <button type="button" class="btn btn-round btn-info dropdown-toggle" data-bs-toggle="dropdown">
+                      <button type="button" class="btn btn-round btn-info btn-gradient dropdown-toggle" data-bs-toggle="dropdown">
                         <i class="fal fa-list-ul"></i>
                       </button>
                       <div class="dropdown-menu">
@@ -271,7 +271,7 @@
             </div>
           </div>
           <div class="card-footer text-center mb-3 mt-3">
-            <button class="btn btn-round btn-just-icon btn-primary">Get started</button>
+            <button class="btn btn-round btn-just-icon btn-primary btn-gradient">Get started</button>
           </div>
         </div>
       </div>
@@ -294,7 +294,7 @@
             </div>
           </div>
           <div class="card-footer text-center mb-3 mt-3">
-            <button class="btn btn-round btn-just-icon btn-primary">Get started</button>
+            <button class="btn btn-round btn-just-icon btn-primary btn-gradient">Get started</button>
           </div>
         </div>
       </div>

@@ -9,11 +9,11 @@
 
     <div class="row">
       <div class="col-12 mb-4">
-        <a href="{{ route('pages.post') }}" class="btn btn-round btn-lg btn-info">
+        <a href="{{ route('pages.post') }}" class="btn btn-round btn-lg btn-info btn-gradient">
           <i class="fal fa-chevron-left"></i>
           {{ __('Previous Post') }}
         </a>
-        <a href="{{ route('pages.post') }}" class="btn btn-round btn-lg btn-info">
+        <a href="{{ route('pages.post') }}" class="btn btn-round btn-lg btn-info btn-gradient">
           {{ __('Next Post') }}
           <i class="fal fa-chevron-right"></i>
         </a>

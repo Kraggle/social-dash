@@ -38,8 +38,7 @@ $prev = '';
 
             <div class="col-sm-4">
 
-              <input id="{{ $id }}" type="radio" class="d-none check-wrap-input" name="{{ $name }}"
-                value={{ $package->id }} {{ $package->id == 3 ? 'checked' : '' }}>
+              <input id="{{ $id }}" type="radio" class="d-none check-wrap-input" name="{{ $name }}" value={{ $package->id }} {{ $package->id == 3 ? 'checked' : '' }}>
 
               <label for="{{ $id }}" class="check-wrap">
                 <div class="head-row">
@@ -83,7 +82,7 @@ $prev = '';
         </div>
 
         <div class="row justify-content-center">
-          <button id="pay-now" class="btn btn-lg btn-warning rounded-pill">Continue</button>
+          <button id="pay-now" class="btn btn-lg btn-warning btn-gradient rounded-pill">Continue</button>
           <p class="fade-info text-center">
             {{ __('You can upgrade, downgrade, or cancel your subscription anytime. Upgrading during your trail period will charge at the end of the trial period.') }}
           </p>
@@ -101,8 +100,7 @@ $prev = '';
             <i class="fas fa-times"></i>
           </a>
 
-          <form class="form" data-secret={{ $intent->client_secret }} data-stripe="{{ $stripe_key }}"
-            id="payment-form" method="POST" action="{{ route('subscription.store') }}">
+          <form class="form" data-secret={{ $intent->client_secret }} data-stripe="{{ $stripe_key }}" id="payment-form" method="POST" action="{{ route('subscription.store') }}">
             @csrf
 
             <input type="hidden" name="package_id" value="3">
@@ -142,28 +140,14 @@ $prev = '';
                       <div class="form-control" id="number-element">
                       </div>
                       <div class="input-group-cards">
-                        <img class="card-icon"
-                          src="https://js.stripe.com/v3/fingerprinted/img/visa-365725566f9578a9589553aa9296d178.svg"
-                          alt="visa">
-                        <img class="card-icon"
-                          src="https://js.stripe.com/v3/fingerprinted/img/mastercard-4d8844094130711885b5e41b28c9848f.svg"
-                          alt="mastercard">
-                        <img class="card-icon"
-                          src="https://js.stripe.com/v3/fingerprinted/img/amex-a49b82f46c5cd6a96a6e418a6ca1717c.svg"
-                          alt="amex">
+                        <img class="card-icon" src="https://js.stripe.com/v3/fingerprinted/img/visa-365725566f9578a9589553aa9296d178.svg" alt="visa">
+                        <img class="card-icon" src="https://js.stripe.com/v3/fingerprinted/img/mastercard-4d8844094130711885b5e41b28c9848f.svg" alt="mastercard">
+                        <img class="card-icon" src="https://js.stripe.com/v3/fingerprinted/img/amex-a49b82f46c5cd6a96a6e418a6ca1717c.svg" alt="amex">
                         <div class="img-rotator">
-                          <img class="card-icon hidden"
-                            src="https://js.stripe.com/v3/fingerprinted/img/discover-ac52cd46f89fa40a29a0bfb954e33173.svg"
-                            alt="discover">
-                          <img class="card-icon hidden"
-                            src="https://js.stripe.com/v3/fingerprinted/img/jcb-271fd06e6e7a2c52692ffa91a95fb64f.svg"
-                            alt="jcb">
-                          <img class="card-icon"
-                            src="https://js.stripe.com/v3/fingerprinted/img/diners-fbcbd3360f8e3f629cdaa80e93abdb8b.svg"
-                            alt="diners">
-                          <img class="card-icon hidden"
-                            src="https://js.stripe.com/v3/fingerprinted/img/unionpay-8a10aefc7295216c338ba4e1224627a1.svg"
-                            alt="unionpay">
+                          <img class="card-icon hidden" src="https://js.stripe.com/v3/fingerprinted/img/discover-ac52cd46f89fa40a29a0bfb954e33173.svg" alt="discover">
+                          <img class="card-icon hidden" src="https://js.stripe.com/v3/fingerprinted/img/jcb-271fd06e6e7a2c52692ffa91a95fb64f.svg" alt="jcb">
+                          <img class="card-icon" src="https://js.stripe.com/v3/fingerprinted/img/diners-fbcbd3360f8e3f629cdaa80e93abdb8b.svg" alt="diners">
+                          <img class="card-icon hidden" src="https://js.stripe.com/v3/fingerprinted/img/unionpay-8a10aefc7295216c338ba4e1224627a1.svg" alt="unionpay">
                         </div>
                       </div>
                     </div>
@@ -198,7 +182,7 @@ $prev = '';
                 <img class="powered-image" src="{{ asset('images') }}/stripe-powered.svg" alt="stripe">
               </div>
 
-              <button class="btn btn-lg btn-warning w-100" type="submit">Subscribe</button>
+              <button class="btn btn-lg btn-warning btn-gradient w-100" type="submit">Subscribe</button>
 
             </div>
 
@@ -211,5 +195,5 @@ $prev = '';
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/subscribe.js"></script>
+  <script type="module" src="{{ asset('js/pages') }}/subscribe.js"></script>
 @endpush

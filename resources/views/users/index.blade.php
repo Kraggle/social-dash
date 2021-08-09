@@ -10,7 +10,7 @@ Management')])
             <div class="card-header">
               <h4 class="card-title d-inline-block">{{ __('Users') }}</h4>
               @can('create', App\Models\User::class)
-                <a href="{{ route('user.create') }}" class="btn btn-sm btn-warning float-end">{{ __('Add user') }}</a>
+                <a href="{{ route('user.create') }}" class="btn btn-sm btn-warning btn-gradient float-end">{{ __('Add user') }}</a>
               @endcan
             </div>
             <div class="card-body">
@@ -44,16 +44,16 @@ Management')])
                                 @method('delete')
 
                                 @can('update', $user)
-                                  <a href="{{ route('user.edit', $user) }}" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                                  <a href="{{ route('user.edit', $user) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
                                 @endcan
                                 @can('delete', $user)
-                                  <button type="button" class="btn btn-link btn-danger btn-icon btn-sm remove delete-alert">
+                                  <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove delete-alert">
                                     <i class="fal fa-trash-alt"></i>
                                   </button>
                                 @endcan
                               </form>
                             @else
-                              <a href="{{ route('profile.edit') }}" class="btn btn-link btn-warning btn-icon btn-sm edit" data-bs-toggle="tooltip" title="Edit">
+                              <a href="{{ route('profile.edit') }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-bs-toggle="tooltip" title="Edit">
                                 <i class="fal fa-pencil-alt"></i>
                               </a>
                             @endif

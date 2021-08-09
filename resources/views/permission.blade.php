@@ -18,7 +18,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-auto mb-5">
-          <a href="{{ url()->previous() }}" class="btn btn-lg btn-danger rounded-pill">Go Back</a>
+          <a href="{{ url()->previous() }}" class="btn btn-lg btn-danger btn-gradient rounded-pill">Go Back</a>
         </div>
       </div>
     </div>

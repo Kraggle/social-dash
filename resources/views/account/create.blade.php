@@ -13,8 +13,7 @@
   <div class="content">
     <div class="container-fluid">
       @can('add-account', $team)
-        <form method="post" enctype="multipart/form-data" action="{{ route('account.store') }}" autocomplete="off"
-          class="form-horizontal">
+        <form method="post" enctype="multipart/form-data" action="{{ route('account.store') }}" autocomplete="off" class="form-horizontal">
           @csrf
           @method('post')
           <input type="hidden" name="followers" value="50000">
@@ -32,9 +31,11 @@
                         <div class="input-group-text">
                           <i class="fal fa-hashtag"></i>
                         </div>
-                        <input id="search" class="form-control" type="search" placeholder="Instagram username"
-                          value="makemoneyfromhomeuk" />
-                        <button id="find-btn" class="btn btn-success">Search</button>
+                        <input id="search" class="form-control" type="search" placeholder="Instagram username" value="makemoneyfromhomeuk" />
+                        <button id="find-btn" class="btn btn-success btn-gradient">
+                          <span class="spinner-text spinner-dots">{{ __('Searching') }}</span>
+                          <span class="btn-text">{{ __('Search') }}</span>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -121,13 +122,13 @@
             <div class="col-md-4">
               <div class="row">
                 <div class="col-md-12 mb-3 text-end">
-                  <a href="{{ route('account.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
+                  <a href="{{ route('account.index') }}" class="btn btn-sm btn-warning btn-gradient">{{ __('Back to list') }}</a>
                 </div>
               </div>
               <div class="card card-pricing card-primary card-white">
                 <div class="card-body">
                   <h1 class="card-title">payment</h1>
-                  <img class="card-img" src="http://social-dash.test/white/img/card-primary.png" alt="Image" title="">
+                  <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Image">
                   <ul class="list-group">
                     <li class="list-group-item"><span update="followers">98k</span> followers</li>
                     @if ($plus)
@@ -145,7 +146,7 @@
                   </div>
                 </div>
                 <div class="card-footer text-center mb-3 mt-3">
-                  <button class="btn btn-round btn-just-icon btn-primary">Pay Now</button>
+                  <button class="btn btn-round btn-just-icon btn-primary btn-gradient">Pay Now</button>
                 </div>
               </div>
 

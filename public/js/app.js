@@ -2,6 +2,7 @@ import $ from './core/jquery/jquery.js';
 // import Bootstrap from './core/bootstrap/bootstrap.esm.js';
 import Theme from './imports/functionality.js';
 import K from './plugins/K.js';
+import handler from './imports/handlers.js';
 
 $(() => {
 
@@ -11,8 +12,8 @@ $(() => {
 	Theme.initTooltips();
 	Theme.initSelects();
 	Theme.initSwitches();
-	// Theme.initCharts();
 
+	// transition the cards onto the screen
 	const randMax = 300, randMin = 0;
 	$('.card').each(function() {
 		const rX = K.random(-200, 200),
@@ -25,8 +26,15 @@ $(() => {
 		setTimeout(() => {
 			$(this).css({
 				transform: 'translate(0, 0)',
-				opacity: '1'
+				opacity: '1',
+				visibility: 'visible'
 			});
 		}, K.random(randMax, randMin));
 	});
+
+	$('.delete-alert').on('click', handler.deleteAlert);
+
+	// Used to set the selected account
+	$('#account-selector').on('change', handler.selectAccount);
+	handler.selectAccount();
 });

@@ -31,8 +31,7 @@
                         <span class="fileinput-exists">{{ __('Change') }}</span>
                         <input type="file" name="photo" id="input-picture" />
                       </span>
-                      <a href="#pablo" class="btn btn-danger btn-round fileinput-exists mt-2" data-dismiss="fileinput"><i
-                          class="fa fa-times"></i> {{ __('Remove') }}</a>
+                      <a href="#pablo" class="btn btn-danger btn-gradient btn-round fileinput-exists mt-2" data-dismiss="fileinput"><i class="fa fa-times"></i> {{ __('Remove') }}</a>
                     </div>
                     @include('alerts.feedback', ['field' => 'photo'])
                   </div>
@@ -42,9 +41,7 @@
                 <label class="col-sm-2 col-form-label">{{ __('Name') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                    <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
-                      id="input-name" type="text" placeholder="{{ __('Name') }}"
-                      value="{{ old('name', auth()->user()->name) }}" required="true" aria-required="true" />
+                    <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="input-name" type="text" placeholder="{{ __('Name') }}" value="{{ old('name', auth()->user()->name) }}" required="true" aria-required="true" />
                     @include('alerts.feedback', ['field' => 'name'])
                   </div>
                 </div>
@@ -53,14 +50,12 @@
                 <label class="col-sm-2 col-form-label">{{ __('Email') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
-                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
-                      id="input-email" type="email" placeholder="{{ __('Email') }}"
-                      value="{{ old('email', auth()->user()->email) }}" required />
+                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" id="input-email" type="email" placeholder="{{ __('Email') }}" value="{{ old('email', auth()->user()->email) }}" required />
                     @include('alerts.feedback', ['field' => 'email'])
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-warning pull-right">{{ __('Update Profile') }}</button>
+              <button type="submit" class="btn btn-warning btn-gradient pull-right">{{ __('Update Profile') }}</button>
               <div class="clearfix"></div>
             </div>
           </form>
@@ -76,13 +71,10 @@
               @method('put')
 
               <div class="row">
-                <label class="col-sm-2 col-form-label"
-                  for="input-current-password">{{ __('Current Password') }}</label>
+                <label class="col-sm-2 col-form-label" for="input-current-password">{{ __('Current Password') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                    <input class="form-control{{ $errors->has('old_password') ? ' is-invalid' : '' }}" input
-                      type="password" name="old_password" id="input-current-password"
-                      placeholder="{{ __('Current Password') }}" value="" required />
+                    <input class="form-control{{ $errors->has('old_password') ? ' is-invalid' : '' }}" input type="password" name="old_password" id="input-current-password" placeholder="{{ __('Current Password') }}" value="" required />
                     @include('alerts.feedback', ['field' => 'old_password'])
                   </div>
                 </div>
@@ -91,23 +83,20 @@
                 <label class="col-sm-2 col-form-label" for="input-password">{{ __('New Password') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
-                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password"
-                      id="input-password" type="password" placeholder="{{ __('New Password') }}" value="" required />
+                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="input-password" type="password" placeholder="{{ __('New Password') }}" value="" required />
                     @include('alerts.feedback', ['field' => 'password'])
                   </div>
                 </div>
               </div>
               <div class="row">
-                <label class="col-sm-2 col-form-label"
-                  for="input-password-confirmation">{{ __('Confirm New Password') }}</label>
+                <label class="col-sm-2 col-form-label" for="input-password-confirmation">{{ __('Confirm New Password') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group">
-                    <input class="form-control" name="password_confirmation" id="input-password-confirmation"
-                      type="password" placeholder="{{ __('Confirm New Password') }}" value="" required />
+                    <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirm New Password') }}" value="" required />
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-warning pull-right">{{ __('Change password') }}</button>
+              <button type="submit" class="btn btn-warning btn-gradient pull-right">{{ __('Change password') }}</button>
               <div class="clearfix"></div>
             </form>
           </div>

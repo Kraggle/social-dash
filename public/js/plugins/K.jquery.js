@@ -104,3 +104,15 @@ $.fn.extend({
 $.fn.hasAttr = function(attr) {
 	return $(this)[0].hasAttribute(attr);
 };
+
+$.fn.disable = function() {
+	return this.each(function() {
+		$(this).prop('disabled', true);
+	});
+};
+
+$.fn.enable = function() {
+	return this.each(function() {
+		$(this).prop('disabled', false);
+	});
+};
