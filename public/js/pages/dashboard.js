@@ -1,132 +1,150 @@
 import $ from '../core/jquery/jquery.js';
-import Chart from '../plugins/chart-js/chart.js';
-import chartConfig from './shared/chart-options.js';
 import K from '../plugins/K.js';
 import Maps from './shared/map-data.js';
-import dayjs from '../plugins/dayjs/index.js';
-import SS from './shared/shared.js';
+import Chart from './shared/chart.js';
 
 $(() => {
 	const page = $('[data-page]').data('page');
 
-	console.log(SS.getPageCookie(page));
-
 	Maps.init();
 
-	(() => {
-		let $ctx = $('#performance-chart');
-		if (!$ctx.length) return;
-		const ctx = $ctx.get(0).getContext('2d');
-
-		const setData = [],
-			scales = { // These can be changed tp generate different results
-				day: {
-					count: 14,
-					min: 0,
-					max: 300
-				},
-				week: {
-					count: 14,
-					min: 0,
-					max: 2000
-				},
-				month: {
-					count: 12,
-					min: 1000,
-					max: 10000
-				}
+	Chart({
+		chartId: '#performance-chart',
+		scales: {
+			day: {
+				count: 14,
+				min: 0,
+				max: 300
 			},
-			$toggles = $ctx.closest('.card').find('[data-chart-toggles] input'),
-			$scales = $ctx.closest('.card').find('[data-chart-scale]');
-
-		let chart;
-
-		$toggles.each(function() {
-			const data = $(this).data();
-			data.options = {
-				color: data.color,
-				label: data.label,
-				btn: this,
-				hidden: !$(this).is(':checked')
-			};
-			setData.push(data.options);
-		});
-
-		const createChart = (scale = 'day') => {
-			if (chart) chart.destroy();
-
-			const datasets = [],
-				dataValues = [],
-				opts = scales[scale];
-
-			K.each(setData, (i, set) => {
-				let date = dayjs().add(-opts.count, scale),
-					last;
-
-				const data = [];
-
-				for (let d = 0; d < opts.count; d++) {
-					data.push({
-						x: date.format(scale == 'month' ? "MMM 'YY" : 'DD/MM'),
-						y: last = K.random(opts.min, opts.max)
-					});
-					date = date.clone().add(1, scale);
-					dataValues.push(last);
-				}
-
-				datasets.push(K.extend({}, chartConfig.lineDataset(set.color, ctx, true), {
-					hidden: set.hidden,
-					label: set.label,
-					data
-				}));
-
-				set.index = i;
-			});
-
-			let config = {
-				type: 'line',
-				data: { datasets },
-				options: K.extend(true, {}, chartConfig.lineOptions(), {
-					scales: {
-						yAxes: {
-							suggestedMin: Math.max(0, Math.min.apply(null, dataValues) - 10),
-							suggestedMax: Math.max.apply(null, dataValues) + 10
-						}
-					},
-					maintainAspectRatio: true,
-					aspectRatio: 4
-				})
+			week: {
+				count: 14,
+				min: 0,
+				max: 2000
+			},
+			month: {
+				count: 12,
+				min: 1000,
+				max: 10000
 			}
+		},
+		page
+	});
 
-			chart = new Chart(ctx, config);
-			// $ctx.data('chart', chart);
-		}
-		createChart($scales.find(':checked').val());
+	// (() => {
+	// 	let $ctx = $('#performance-chart');
+	// 	if (!$ctx.length) return;
+	// 	const ctx = $ctx.get(0).getContext('2d');
 
-		$scales.find('input').on('change', () => {
-			const $checked = $scales.find(':checked');
+	// 	const setData = [],
+	// 		scales = { // These can be changed tp generate different results
+	// 			day: {
+	// 				count: 14,
+	// 				min: 0,
+	// 				max: 300
+	// 			},
+	// 			week: {
+	// 				count: 14,
+	// 				min: 0,
+	// 				max: 2000
+	// 			},
+	// 			month: {
+	// 				count: 12,
+	// 				min: 1000,
+	// 				max: 10000
+	// 			}
+	// 		},
+	// 		$toggles = $ctx.closest('.card').find('[data-chart-toggles] input'),
+	// 		$scales = $ctx.closest('.card').find('[data-chart-scale]');
 
-			SS.setPageCookie(page, {
-				[$checked.attr('name')]: $checked.attr('id')
-			});
+	// 	let chart;
 
-			createChart($checked.val());
-		});
+	// 	$toggles.each(function() {
+	// 		const data = $(this).data();
+	// 		data.options = {
+	// 			color: data.color,
+	// 			label: data.label,
+	// 			btn: this,
+	// 			hidden: !$(this).is(':checked')
+	// 		};
+	// 		setData.push(data.options);
+	// 	});
 
-		$toggles.on('change', function() {
-			const options = $(this).data('options'),
-				hidden = options.hidden = !$(this).is(':checked');
+	// 	const createChart = (scale = 'day') => {
+	// 		if (chart) chart.destroy();
 
-			$toggles.each(function() {
-				SS.setPageCookie(page, {
-					[$(this).attr('id')]: $(this).is(':checked')
-				});
-			});
+	// 		const datasets = [],
+	// 			dataValues = [],
+	// 			opts = scales[scale];
 
-			chart[!hidden ? 'show' : 'hide'](options.index);
-		});
-	})();
+	// 		K.each(setData, (i, set) => {
+	// 			let date = dayjs().add(-opts.count, scale),
+	// 				last;
 
+	// 			const data = [];
+
+	// 			for (let d = 0; d < opts.count; d++) {
+	// 				data.push({
+	// 					x: date.format(scale == 'month' ? "MMM 'YY" : 'DD/MM'),
+	// 					y: last = K.random(opts.min, opts.max)
+	// 				});
+	// 				date = date.clone().add(1, scale);
+	// 				dataValues.push(last);
+	// 			}
+
+	// 			datasets.push(K.extend({}, chartConfig.lineDataset(set.color, ctx, true), {
+	// 				hidden: set.hidden,
+	// 				label: set.label,
+	// 				data
+	// 			}));
+
+	// 			set.index = i;
+	// 		});
+
+	// 		let config = {
+	// 			type: 'line',
+	// 			data: { datasets },
+	// 			options: K.extend(true, {}, chartConfig.lineOptions(), {
+	// 				scales: {
+	// 					yAxes: {
+	// 						suggestedMin: Math.max(0, Math.min.apply(null, dataValues) - 10),
+	// 						suggestedMax: Math.max.apply(null, dataValues) + 10
+	// 					}
+	// 				},
+	// 				maintainAspectRatio: true,
+	// 				aspectRatio: 4
+	// 			})
+	// 		}
+
+	// 		chart = new Chart(ctx, config);
+	// 		$ctx.data('chart', chart);
+	// 	}
+	// 	createChart($scales.find(':checked').val());
+
+	// 	$scales.find('input').on('change', () => {
+	// 		const $checked = $scales.find(':checked');
+
+	// 		SS.setPageCookie(page, {
+	// 			[$checked.attr('name')]: $checked.attr('id')
+	// 		});
+
+	// 		createChart($checked.val());
+	// 	});
+
+	// 	$toggles.on('change', function() {
+	// 		const options = $(this).data('options'),
+	// 			hidden = options.hidden = !$(this).is(':checked');
+
+	// 		$toggles.each(function() {
+	// 			SS.setPageCookie(page, {
+	// 				[$(this).attr('id')]: $(this).is(':checked')
+	// 			});
+	// 		});
+
+	// 		chart[!hidden ? 'show' : 'hide'](options.index);
+	// 	});
+	// })();
+
+	// fill the stat cards
 	const testData = [{
 		id: 'aua',
 		value: 7.45,
@@ -168,121 +186,3 @@ $(() => {
 		$dir[`${up ? 'add' : 'remove'}Class`]('fa-arrow-up')[`${up ? 'remove' : 'add'}Class`]('fa-arrow-down');
 	});
 });
-
-// var randomScalingFactor = function() {
-// 	return Math.round(Math.random() * 100);
-// };
-
-// var chartColors = {
-// 	red: 'rgb(255, 99, 132)',
-// 	orange: 'rgb(255, 159, 64)',
-// 	yellow: 'rgb(255, 205, 86)',
-// 	green: 'rgb(75, 192, 192)',
-// 	blue: 'rgb(54, 162, 235)',
-// 	purple: 'rgb(153, 102, 255)',
-// 	grey: 'rgb(231,233,237)'
-// };
-
-// var color = Chart.helpers.color;
-// var config = {
-// 	type: 'radar',
-// 	data: {
-// 		labels: [["Eating", "Dinner"], ["Drinking", "Water"], "Sleeping", ["Designing", "Graphics"], "Coding", "Cycling", "Running"],
-// 		datasets: [{
-// 			label: "My First dataset",
-// 			backgroundColor: color(chartColors.red).alpha(0.2).rgbString(),
-// 			borderColor: chartColors.red,
-// 			pointBackgroundColor: chartColors.red,
-// 			data: [
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor()
-// 			]
-// 		}, {
-// 			label: "My Second dataset",
-// 			backgroundColor: color(chartColors.blue).alpha(0.2).rgbString(),
-// 			borderColor: chartColors.blue,
-// 			pointBackgroundColor: chartColors.blue,
-// 			data: [
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor()
-// 			]
-// 		}, {
-// 			label: "My Third dataset",
-// 			backgroundColor: color(chartColors.orange).alpha(0.2).rgbString(),
-// 			borderColor: chartColors.orange,
-// 			pointBackgroundColor: chartColors.orange,
-// 			data: [
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor(),
-// 				randomScalingFactor()
-// 			]
-// 		},]
-// 	},
-// 	options: {
-// 		legend: {
-// 			position: 'top',
-// 			labels: {
-// 				fontColor: 'rgb(255, 99, 132)'
-// 			},
-// 			onHover: function(event, legendItem) {
-// 				document.getElementById("canvas").style.cursor = 'pointer';
-// 			},
-// 			onClick: function(e, legendItem) {
-// 				var index = legendItem.datasetIndex;
-// 				var ci = this.chart;
-// 				var alreadyHidden = (ci.getDatasetMeta(index).hidden === null) ? false : ci.getDatasetMeta(index).hidden;
-
-// 				ci.data.datasets.forEach(function(e, i) {
-// 					var meta = ci.getDatasetMeta(i);
-
-// 					if (i !== index) {
-// 						if (!alreadyHidden) {
-// 							meta.hidden = meta.hidden === null ? !meta.hidden : null;
-// 						} else if (meta.hidden === null) {
-// 							meta.hidden = true;
-// 						}
-// 					} else if (i === index) {
-// 						meta.hidden = null;
-// 					}
-// 				});
-
-// 				ci.update();
-// 			},
-// 		},
-// 		tooltips: {
-// 			custom: function(tooltip) {
-// 				if (!tooltip.opacity) {
-// 					document.getElementById("canvas").style.cursor = 'default';
-// 					return;
-// 				}
-// 			}
-// 		},
-// 		title: {
-// 			display: true,
-// 			text: 'Chart.js Radar Chart'
-// 		},
-// 		scale: {
-// 			ticks: {
-// 				beginAtZero: true
-// 			}
-// 		}
-// 	}
-// };
-
-// window.onload = function() {
-// 	window.myRadar = new Chart(document.getElementById("canvas"), config);
-// };

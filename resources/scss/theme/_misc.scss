@@ -8,7 +8,7 @@
 .navbar-collapse .navbar-nav .nav-link,
 .animation-transition-general,
 .tag,
-.tag [data-role="remove"],
+.tag [data-role='remove'],
 .animation-transition-general {
     @include transitions($general-transition-time, $transition-ease);
 }
@@ -19,10 +19,10 @@
     @include transitions($fast-transition-time, $transition-ease);
 }
 
-.dropdown-toggle[aria-expanded="true"]:after,
-a[data-bs-toggle="collapse"][aria-expanded="true"] .caret,
-.card-collapse .card a[data-bs-toggle="collapse"][aria-expanded="true"] i,
-.card-collapse .card a[data-bs-toggle="collapse"].expanded i {
+.dropdown-toggle[aria-expanded='true']:after,
+a[data-bs-toggle='collapse'][aria-expanded='true'] .caret,
+.card-collapse .card a[data-bs-toggle='collapse'][aria-expanded='true'] i,
+.card-collapse .card a[data-bs-toggle='collapse'].expanded i {
     @include rotate-180();
 }
 
@@ -77,27 +77,27 @@ a[data-bs-toggle="collapse"][aria-expanded="true"] .caret,
     }
 }
 
-.card {
-    .map-title {
-        color: $white;
-    }
+// .card {
+//     .map-title {
+//         color: $white;
+//     }
 
-    .table {
-        tr td {
-            p.title {
-                padding-top: 7px;
-                margin-bottom: 0;
-            }
-        }
-    }
+//     .table {
+//         tr td {
+//             p.title {
+//                 padding-top: 7px;
+//                 margin-bottom: 0;
+//             }
+//         }
+//     }
 
-    &.card-chart {
-        .gmnoprint,
-        .gm-style-cc {
-            display: none !important;
-        }
-    }
-}
+//     &.card-chart {
+//         .gmnoprint,
+//         .gm-style-cc {
+//             display: none !important;
+//         }
+//     }
+// }
 
 // documentation
 

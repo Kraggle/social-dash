@@ -1,8 +1,3 @@
-.card-chart .chart-area {
-    height: auto;
-    min-height: 400px;
-}
-
 /* Import any included styles into here and the compile will include it */
 
 .card {
@@ -15,7 +10,7 @@
             display: inline-block;
         }
 
-        input[type="checkbox"] {
+        input[type='checkbox'] {
             display: none;
         }
 
@@ -31,7 +26,7 @@
             &::before {
                 background-color: white;
                 color: white;
-                content: " ";
+                content: ' ';
                 display: block;
                 border-radius: 50%;
                 border: 1px solid grey;
@@ -57,7 +52,7 @@
                 border-color: #ddd;
 
                 &::before {
-                    content: "✓";
+                    content: '✓';
                     background-color: gray;
                     transform: scale(1);
                 }
@@ -70,11 +65,11 @@
             }
         }
 
-        :checked+label {
+        :checked + label {
             border-color: #ddd;
 
             &::before {
-                content: "✓";
+                content: '✓';
                 background-color: green;
                 transform: scale(1);
             }
@@ -92,11 +87,7 @@
     padding: 0px 30px 30px 280px;
 }
 
-
 .card {
-
-
-
     &.card-comparepost {
         margin-bottom: 0px;
 
@@ -108,7 +99,7 @@
             display: inline-block;
         }
 
-        input[type="checkbox"] {
+        input[type='checkbox'] {
             display: none;
         }
 
@@ -124,7 +115,7 @@
             &::before {
                 background-color: white;
                 color: white;
-                content: " ";
+                content: ' ';
                 display: block;
                 border-radius: 50%;
                 /* border: 1px solid grey; */
@@ -150,7 +141,7 @@
                 border-color: #ddd;
 
                 &::before {
-                    content: "x";
+                    content: 'x';
                     background-color: red;
                     transform: scale(1);
                 }
@@ -163,11 +154,11 @@
             }
         }
 
-        :checked+label {
+        :checked + label {
             border-color: #ddd;
 
             &::before {
-                content: "x";
+                content: 'x';
                 background-color: red;
                 transform: scale(1);
             }

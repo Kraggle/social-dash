@@ -6699,10 +6699,6 @@ body {
   -webkit-box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
           box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
 }
-.card:not(.no-animate) {
-  opacity: 0;
-  visibility: hidden;
-}
 .card .pagination .page-item:not(.active) .page-link {
   color: #1d253b;
 }
@@ -7277,6 +7273,7 @@ body {
   margin-bottom: 5px;
 }
 .card-chart .card-body {
+  padding-top: 0;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -13747,18 +13744,6 @@ a[data-bs-toggle=collapse][aria-expanded=true] .caret,
   padding: 0.9375rem 0;
 }
 
-.card .map-title {
-  color: #fff;
-}
-.card .table tr td p.title {
-  padding-top: 7px;
-  margin-bottom: 0;
-}
-.card.card-chart .gmnoprint,
-.card.card-chart .gm-style-cc {
-  display: none !important;
-}
-
 .bd-docs h1,
 .bd-docs h2,
 .bd-docs h3,
@@ -14791,11 +14776,6 @@ code {
   background-image: linear-gradient(to bottom left, #a759d0, #de4b39, #a759d0);
   background-size: 210% 210%;
   background-position: top right;
-}
-
-.card-chart .progress-container + .progress-container,
-.card-chart .progress-container ~ .progress-container {
-  margin-top: 25px;
 }
 
 .navbar {

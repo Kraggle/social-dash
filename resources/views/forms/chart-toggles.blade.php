@@ -17,7 +17,8 @@ extract(
  *    name => '',
  *    color => '',
  *    display => '',
- *    icon => ''
+ *    icon => '',
+ *    checked => boolean,
  * ]]
  */
 
@@ -42,7 +43,7 @@ if ($cookie) {
       }
     @endphp
 
-    <input type="checkbox" class="btn-check" name="{{ $btn['name'] ?? '' }}" id="{{ $btn['id'] }}" data-color="{{ $btn['color'] }}" data-label="{{ $btn['display'] }}" {{ AppHelper::checked($checked) }}>
+    <input type="checkbox" class="btn-check" name="{{ $btn['name'] ?? '' }}" id="{{ $btn['id'] }}" data-color="{{ $btn['color'] }}" data-label="{{ $btn['display'] }}" {{ AppHelper::checked($btn['checked'] ?? $checked) }}>
     <label class="btn btn-outline-{{ $btn['color'] }}" for="{{ $btn['id'] }}">
       <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">{{ $btn['display'] }}</span>
       <span class="d-block d-sm-none">

@@ -4,8 +4,13 @@
 'titlePage' => __('followers')
 ])
 
+@php
+$page = 'followers'; // Used to get and set cookies
+$cookie = AppHelper::getPageCookie($page);
+@endphp
+
 @section('content')
-  <div class="content">
+  <div class="content" data-page="{{ $page }}">
     <div class="row">
       <div class="col-12">
         <div class="card card-chart">
@@ -16,49 +21,51 @@
                 <h2 class="card-title">Followers</h2>
               </div>
 
-              <div class="row col-md-8 align-items-start justify-content-end">
+              <div class="row col-md-8 align-items-start justify-content-end pe-0">
 
                 <div class="col-auto pe-0">
                   <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
                 </div>
 
                 {{-- chart day selector --}}
-                <div class="col-auto btn-group btn-group-sm pe-0" role="group">
+                @include('forms.chart-radio', ['options' => [
+                'name' => 'f-chart-day',
+                'color' => 'warning',
+                'buttons' => [[
+                'display' => __('Daily'),
+                'id' => 'f-chart-day-1',
+                'value' => 'day',
+                'icon' => 'fal fa-calendar-day'
+                ], [
+                'display' => __('Weekly'),
+                'id' => 'f-chart-day-2',
+                'value' => 'week',
+                'icon' => 'fal fa-calendar-week'
+                ], [
+                'display' => __('Monthly'),
+                'id' => 'f-chart-day-3',
+                'value' => 'month',
+                'icon' => 'fal fa-calendar'
+                ]],
+                'group_class' => 'btn-group-sm pe-0',
+                'group_attrs' => 'data-chart-scale',
+                'cookie' => $cookie
+                ]])
 
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-1" checked>
-                  <label class="btn btn-outline-warning" for="p-chart-day-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Daily</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar-day"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-2">
-                  <label class="btn btn-outline-warning" for="p-chart-day-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Weekly</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar-week"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-3">
-                  <label class="btn btn-outline-warning" for="p-chart-day-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Monthly</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar"></i>
-                    </span>
-                  </label>
-                </div>
-
-                {{-- <div class="col-auto btn-group btn-group-toggle float-end" data-toggle="buttons">
-                  <label class="btn btn-sm btn-warning btn-gradient btn-simple" id="3">
-                    <input type="radio" class="d-none" name="options">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Posts</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-hand-point-up"></i>
-                    </span>
-                  </label>
-                </div> --}}
+                {{-- chart line selector --}}
+                {{-- There is only one line, so we'll hide this with d-none --}}
+                {{-- We still need it for the color and tooltip label --}}
+                @include('forms.chart-toggles', ['options' => [
+                'buttons' => [[
+                'id' => 'f-chart-line-1',
+                'color' => 'yellow',
+                'display' => __('Followers'),
+                'icon' => 'fal fa-users',
+                ]],
+                'group_class' => 'd-none',
+                'group_attrs' => 'data-chart-toggles',
+                'cookie' => $cookie
+                ]])
 
               </div>
             </div>
@@ -76,16 +83,63 @@
     <div class="row">
       <div class="col-md-6">
         <div class="card card-chart">
-          <div class="card-header">
-            <div class="col-sm-4 float-end">
-              <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
+          <div class="card-header row">
+
+            <div class="col-md-6">
+              <h5 class="card-category">Compare Followers</h5>
+              <h3 class="card-title">Follow VS Un-Follow</h3>
             </div>
-            <h5 class="card-category">Compare Your Followers</h5>
-            <h3 class="card-title">Followers VS Un-Followers</h3>
+
+            <div class="row col-md-6 align-items-start justify-content-end pe-0">
+
+              <div class="col-auto pe-0">
+                <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
+              </div>
+
+              {{-- chart line selector --}}
+              {{-- There is only one line, so we'll hide this with d-none --}}
+              {{-- We still need it for the color and tooltip label --}}
+              @include('forms.chart-toggles', ['options' => [
+              'buttons' => [[
+              'id' => 'u-chart-bar-1',
+              'color' => 'orange',
+              'display' => __('Followers'),
+              'icon' => 'fal fa-users',
+              'checked' => true
+              ],[
+              'id' => 'u-chart-bar-2',
+              'color' => 'blue',
+              'display' => __('Un-followers'),
+              'icon' => 'fal fa-heart',
+              'checked' => true
+              ]],
+              'group_class' => 'btn-group-sm pe-0 d-none',
+              'group_attrs' => 'data-chart-toggles',
+              'cookie' => $cookie
+              ]])
+
+              {{-- chart day selector --}}
+              {{-- There is only one line, so we'll hide this with d-none --}}
+              {{-- We still need it for the color and tooltip label --}}
+              @include('forms.chart-radio', ['options' => [
+              'name' => 'u-chart-day',
+              'color' => 'warning',
+              'buttons' => [[
+              'display' => __('Monthly'),
+              'id' => 'u-chart-day-1',
+              'value' => 'month',
+              'icon' => 'fal fa-calendar-day'
+              ]],
+              'group_class' => 'btn-group-sm pe-0 d-none',
+              'group_attrs' => 'data-chart-scale',
+              'cookie' => $cookie
+              ]])
+
+            </div>
           </div>
           <div class="card-body">
             <div class="chart-area">
-              <canvas id="follow-vs-unfollow-chart"></canvas>
+              <canvas id="follow-vs-unfollow-chart" data-type="bar"></canvas>
             </div>
           </div>
         </div>
@@ -93,12 +147,52 @@
 
       <div class="col-md-6">
         <div class="card card-chart">
-          <div class="card-header">
-            <div class="col-sm-4 float-end">
-              <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
+          <div class="card-header row">
+
+            <div class="col-md-6">
+              <h5 class="card-category">Overall Account Followers</h5>
+              <h3 class="card-title">Followers All-Time</h3>
             </div>
-            <h5 class="card-category">Overall Account Followers</h5>
-            <h3 class="card-title"> Followers All-Time</h3>
+
+            <div class="row col-md-6 align-items-start justify-content-end pe-0">
+
+              <div class="col-auto pe-0">
+                <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
+              </div>
+
+              {{-- chart line selector --}}
+              {{-- There is only one line, so we'll hide this with d-none --}}
+              {{-- We still need it for the color and tooltip label --}}
+              @include('forms.chart-toggles', ['options' => [
+              'buttons' => [[
+              'id' => 'o-chart-bar-1',
+              'color' => 'green',
+              'display' => __('Followers'),
+              'icon' => 'fal fa-users'
+              ]],
+              'group_class' => 'btn-group-sm pe-0 d-none',
+              'group_attrs' => 'data-chart-toggles',
+              'cookie' => $cookie
+              ]])
+
+              {{-- chart day selector --}}
+              {{-- There is only one line, so we'll hide this with d-none --}}
+              {{-- We still need it for the color and tooltip label --}}
+              @include('forms.chart-radio', ['options' => [
+              'name' => 'o-chart-day',
+              'color' => 'warning',
+              'buttons' => [[
+              'display' => __('Monthly'),
+              'id' => 'o-chart-day-1',
+              'value' => 'month',
+              'icon' => 'fal fa-calendar-day'
+              ]],
+              'group_class' => 'btn-group-sm pe-0 d-none',
+              'group_attrs' => 'data-chart-scale',
+              'cookie' => $cookie
+              ]])
+
+            </div>
           </div>
           <div class="card-body">
             <div class="chart-area">

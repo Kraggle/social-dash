@@ -101,7 +101,7 @@ class Defaults {
 			legend: {
 				display: false
 			},
-			tooltips: this.tooltip
+			tooltip: this.tooltip
 		}
 	}
 
@@ -149,7 +149,7 @@ class Defaults {
 			legend: {
 				display: false
 			},
-			tooltips: this.tooltip
+			tooltip: this.tooltip
 		}
 	}
 
@@ -175,6 +175,15 @@ class Defaults {
 const defaults = new Defaults();
 
 export default {
+
+	dataset(type = 'line', color = 'blue', ctx = null, gradient = null) {
+		return this[`${type}Dataset`](color, ctx, gradient);
+	},
+
+	options(type = 'line', color = 'blue') {
+		return this[`${type}Options`](color);
+	},
+
 	lineDataset(color = 'blue', ctx = null, gradient = null) {
 		if (gradient && ctx) {
 			gradient = ctx.createLinearGradient(0, 200, 0, 0);

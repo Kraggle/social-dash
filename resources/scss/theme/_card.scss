@@ -4,10 +4,10 @@
     margin-bottom: $grid-gutter-width;
     box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
 
-    &:not(.no-animate) {
-        opacity: 0;
-        visibility: hidden;
-    }
+    // &:not(.no-animate) {
+    //     opacity: 0;
+    //     visibility: hidden;
+    // }
 
     .pagination .page-item:not(.active) .page-link {
         color: $dark-states;
