@@ -94,4 +94,10 @@ class AppHelper {
     public static function valid($stamp) {
         return !AppHelper::expired($stamp);
     }
+
+    public static function getPageCookie($page) {
+        $cookie = $_COOKIE[$page] ?? (object) [];
+        if (is_string($cookie)) $cookie = json_decode($cookie);
+        return $cookie;
+    }
 }

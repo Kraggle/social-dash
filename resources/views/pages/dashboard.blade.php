@@ -5,6 +5,9 @@
 )
 
 @php
+$page = 'dashboard'; // Used to get and set cookies
+$cookie = AppHelper::getPageCookie($page);
+
 $stats = [
     // (object) [
     //     'name' => 'Impressions',
@@ -74,7 +77,7 @@ $stats = [
 @endphp
 
 @section('content')
-  <div class="content">
+  <div class="content" data-page="{{ $page }}">
     <div class="row">
 
       @foreach ($stats as $stat)
@@ -119,74 +122,63 @@ $stats = [
           <div class="card-header">
             <div class="row">
               <div class="col-md-4">
-                <h5 class="card-category">Account Engagement</h5>
-                <h2 class="card-title">Performance</h2>
+                <h5 class="card-category">{{ __('Account Engagement') }}</h5>
+                <h2 class="card-title">{{ __('Performance') }}</h2>
               </div>
               <div class="row col-md-8 align-items-start justify-content-end pe-0">
 
                 {{-- chart day selector --}}
-                <div class="col-auto btn-group btn-group-sm pe-0" data-chart-scale=true role="group">
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-1" value="day" checked>
-                  <label class="btn btn-outline-warning" for="p-chart-day-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Daily</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar-day"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-2" value="week">
-                  <label class="btn btn-outline-warning" for="p-chart-day-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Weekly</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar-week"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-3" value="month">
-                  <label class="btn btn-outline-warning" for="p-chart-day-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Monthly</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar"></i>
-                    </span>
-                  </label>
-                </div>
+                @include('forms.chart-radio', ['options' => [
+                'name' => 'p-chart-day',
+                'color' => 'warning',
+                'buttons' => [[
+                'display' => __('Daily'),
+                'id' => 'p-chart-day-1',
+                'value' => 'day',
+                'icon' => 'fal fa-calendar-day'
+                ], [
+                'display' => __('Weekly'),
+                'id' => 'p-chart-day-2',
+                'value' => 'week',
+                'icon' => 'fal fa-calendar-week'
+                ], [
+                'display' => __('Monthly'),
+                'id' => 'p-chart-day-3',
+                'value' => 'month',
+                'icon' => 'fal fa-calendar'
+                ]],
+                'group_class' => 'btn-group-sm pe-0',
+                'group_attrs' => 'data-chart-scale',
+                'cookie' => $cookie
+                ]])
 
                 {{-- chart line selector --}}
-                <div class="col-auto btn-group btn-group-sm pe-0" data-chart-toggles=true role="group">
-
-                  <input type="checkbox" class="btn-check" id="p-chart-line-1" data-color="blue" data-label="Followers" checked>
-                  <label class="btn btn-outline-blue" for="p-chart-line-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Followers</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-users"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" data-color="orange" id="p-chart-line-2" data-label="Likes">
-                  <label class="btn btn-outline-orange" for="p-chart-line-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Likes</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-heart"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" data-color="red" id="p-chart-line-3" data-label="Comments">
-                  <label class="btn btn-outline-red" for="p-chart-line-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Comments</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-comments"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" data-color="green" id="p-chart-line-4" data-label="Posts">
-                  <label class="btn btn-sm btn-outline-green" for="p-chart-line-4">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Posts</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-file-alt"></i>
-                    </span>
-                  </label>
-                </div>
+                @include('forms.chart-toggles', ['options' => [
+                'buttons' => [[
+                'id' => 'p-chart-line-1',
+                'color' => 'blue',
+                'display' => __('Follower'),
+                'icon' => 'fal fa-users',
+                ],[
+                'id' => 'p-chart-line-2',
+                'color' => 'orange',
+                'display' => __('Likes'),
+                'icon' => 'fal fa-heart',
+                ],[
+                'id' => 'p-chart-line-3',
+                'color' => 'red',
+                'display' => __('Comments'),
+                'icon' => 'fal fa-comments',
+                ],[
+                'id' => 'p-chart-line-4',
+                'color' => 'green',
+                'display' => __('Posts'),
+                'icon' => 'fal fa-file-alt',
+                ]],
+                'group_class' => 'btn-group-sm pe-0',
+                'group_attrs' => 'data-chart-toggles',
+                'cookie' => $cookie
+                ]])
 
               </div>
             </div>

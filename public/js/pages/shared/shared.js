@@ -1,3 +1,4 @@
+import K from '../../plugins/K.js';
 
 const SS = {
     alert(message, type = 'normal') {
@@ -18,7 +19,7 @@ const SS = {
         }
     },
 
-    toggleHelp: function(e) {
+    toggleHelp(e) {
         e.preventDefault();
         const name = $(this).attr('toggle');
         $(`div[toggle="${name}"]`).toggleClass('d-none');
@@ -39,6 +40,12 @@ const SS = {
             return num >= i.value;
         });
         return item ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol : "0";
+    },
+
+    getPageCookie: page => K.JSON.parse(K.cookie.get(page)) || {},
+    setPageCookie: function(page, obj) {
+        const cookie = this.getPageCookie(page);
+        K.cookie.set(page, K.JSON.stringify(K.extend(true, {}, cookie, obj)));
     }
 }
 

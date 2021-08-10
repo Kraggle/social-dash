@@ -177,9 +177,9 @@ const defaults = new Defaults();
 export default {
 	lineDataset(color = 'blue', ctx = null, gradient = null) {
 		if (gradient && ctx) {
-			gradient = ctx.createLinearGradient(0, 150, 0, 0);
+			gradient = ctx.createLinearGradient(0, 200, 0, 0);
 			gradient.addColorStop(1, colors.alpha(color, 0.3));
-			gradient.addColorStop(0.4, colors.alpha(color, 0.05));
+			// gradient.addColorStop(0.4, colors.alpha(color, 0.05));
 			gradient.addColorStop(0, colors.alpha(color, 0));
 		}
 
@@ -268,26 +268,6 @@ export default {
 	},
 
 	bubbleOptions(color = 'blue') {
-		return K.extend(true, {}, defaults.barOptions, {
-			scales: {
-				yAxes: [{
-					grid: {
-						color: colors.alpha(color, 0.1)
-					},
-					ticks: {
-						fontColor: colors.hex[color]
-					}
-				}],
-
-				xAxes: [{
-					grid: {
-						color: colors.alpha(color, 0.1)
-					},
-					ticks: {
-						fontColor: colors.hex[color]
-					}
-				}]
-			}
-		});
+		return this.barOptions(color);
 	}
 }

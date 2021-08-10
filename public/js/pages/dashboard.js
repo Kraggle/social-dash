@@ -4,8 +4,13 @@ import chartConfig from './shared/chart-options.js';
 import K from '../plugins/K.js';
 import Maps from './shared/map-data.js';
 import dayjs from '../plugins/dayjs/index.js';
+import SS from './shared/shared.js';
 
 $(() => {
+	const page = $('[data-page]').data('page');
+
+	console.log(SS.getPageCookie(page));
+
 	Maps.init();
 
 	(() => {
@@ -99,12 +104,25 @@ $(() => {
 		createChart($scales.find(':checked').val());
 
 		$scales.find('input').on('change', () => {
-			createChart($scales.find(':checked').val());
+			const $checked = $scales.find(':checked');
+
+			SS.setPageCookie(page, {
+				[$checked.attr('name')]: $checked.attr('id')
+			});
+
+			createChart($checked.val());
 		});
 
 		$toggles.on('change', function() {
 			const options = $(this).data('options'),
 				hidden = options.hidden = !$(this).is(':checked');
+
+			$toggles.each(function() {
+				SS.setPageCookie(page, {
+					[$(this).attr('id')]: $(this).is(':checked')
+				});
+			});
+
 			chart[!hidden ? 'show' : 'hide'](options.index);
 		});
 	})();
