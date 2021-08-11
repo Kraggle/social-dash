@@ -24,7 +24,10 @@ $cookie = AppHelper::getPageCookie($page);
               <div class="row col-md-8 align-items-start justify-content-end pe-0">
 
                 <div class="col-auto pe-0">
-                  <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
+                  @include('forms.datepicker', ['options' => [
+                  'cookie' => $cookie,
+                  'id' => 'f-chart-date'
+                  ]])
                 </div>
 
                 {{-- chart day selector --}}
@@ -93,7 +96,11 @@ $cookie = AppHelper::getPageCookie($page);
             <div class="row col-md-6 align-items-start justify-content-end pe-0">
 
               <div class="col-auto pe-0">
-                <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
+                @include('forms.datepicker', ['options' => [
+                'cookie' => $cookie,
+                'id' => 'u-chart-date',
+                'settings' => ['alt-format' => 'F, Y']
+                ]])
               </div>
 
               {{-- chart line selector --}}
@@ -157,7 +164,11 @@ $cookie = AppHelper::getPageCookie($page);
             <div class="row col-md-6 align-items-start justify-content-end pe-0">
 
               <div class="col-auto pe-0">
-                <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
+                @include('forms.datepicker', ['options' => [
+                'cookie' => $cookie,
+                'id' => 'o-chart-date',
+                'settings' => ['alt-format' => 'F, Y']
+                ]])
               </div>
 
               {{-- chart line selector --}}

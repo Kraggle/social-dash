@@ -1,5 +1,6 @@
 import $ from '../core/jquery/jquery.js';
 import newChart from './shared/chart.js';
+import '../plugins/flatpickr/flatpickr.js';
 
 $(() => {
 	const page = $('[data-page]').data('page');
@@ -8,17 +9,17 @@ $(() => {
 		chartId: '#follower-chart',
 		scales: {
 			day: {
-				count: 14,
+				count: 15,
 				min: 0,
 				max: 300
 			},
 			week: {
-				count: 14,
+				count: 15,
 				min: 0,
 				max: 2000
 			},
 			month: {
-				count: 12,
+				count: 11,
 				min: 1000,
 				max: 10000
 			}
@@ -30,7 +31,7 @@ $(() => {
 		chartId: '#follow-vs-unfollow-chart',
 		scales: {
 			month: {
-				count: 6,
+				count: 7,
 				min: 20,
 				max: 170
 			}
@@ -45,7 +46,7 @@ $(() => {
 		chartId: '#follow-all-time-chart',
 		scales: {
 			month: {
-				count: 6,
+				count: 7,
 				min: 1000,
 				max: 10000
 			}

@@ -13,7 +13,7 @@
     $padding-input-horizontal
 );
 
-@include input-base-padding($padding-input-vertical, $padding-input-horizontal);
+// @include input-base-padding($padding-input-vertical, $padding-input-horizontal);
 
 .form-group.no-border,
 .input-group.no-border {
@@ -188,7 +188,7 @@ textarea.form-control {
 .has-danger {
     &.form-group .form-control,
     &.form-group.no-border .form-control {
-        padding-right: $input-padding-horizontal + 21;
+        padding-right: $input-padding-x + 21;
     }
 }
 
@@ -349,5 +349,91 @@ textarea.form-control {
         &:active {
             -webkit-box-shadow: 0 0 0 30px white inset !important;
         }
+    }
+}
+
+.input-group,
+.form-group {
+    border: 1px solid rgba($dark-states, 0.5);
+    border-radius: $input-border-radius;
+
+    .form-control,
+    .input-group-text {
+        border: 0 !important;
+        background-color: transparent !important;
+    }
+
+    .btn {
+        border: 0 !important;
+    }
+
+    &.has-danger {
+        border-color: rgba($danger-states, 0.5);
+        background-color: rgba($danger-states, 0.03);
+
+        .form-control,
+        .input-group-text,
+        .btn {
+            color: $danger-states;
+        }
+
+        &::after {
+            color: $danger-states;
+            top: 12px;
+        }
+    }
+
+    &.has-success {
+        &::after {
+            color: darken($success, 10%);
+            top: 12px;
+        }
+    }
+
+    &:focus-within {
+        border-color: $primary;
+
+        &.has-success {
+            border-color: rgba(darken($success, 10%), 0.9);
+
+            .form-control,
+            .input-group-text,
+            .btn {
+                color: darken($success, 20%);
+            }
+        }
+
+        &.has-danger {
+            border-color: rgba($danger-states, 0.6);
+            background-color: transparent;
+
+            .form-control,
+            .input-group-text,
+            .btn {
+                color: $danger-states;
+            }
+        }
+    }
+
+    &[disabled],
+    &[readonly] {
+        background-color: $gray-100;
+        border-color: rgba($dark-states, 0.3);
+    }
+}
+
+.input-group {
+    @include input-base-padding($input-padding-y, $input-padding-x);
+
+    &.input-group-sm {
+        border-radius: $input-border-radius-sm;
+
+        @include input-base-padding($input-padding-y-sm, $input-padding-x-sm);
+    }
+
+    &.input-group-lg {
+        border-radius: $input-border-radius-lg;
+
+        @include input-base-padding($input-padding-y-lg, $input-padding-x-lg);
     }
 }

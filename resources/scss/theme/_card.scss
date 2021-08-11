@@ -137,81 +137,81 @@
         }
     }
 
-    .form-control {
-        color: $black;
-        border-color: rgba($dark-states, 0.2);
+    // .form-control {
+    //     color: $black;
+    //     border-color: rgba($dark-states, 0.2);
 
-        &:focus {
-            border-color: $primary;
-        }
-    }
+    //     &:focus {
+    //         border-color: $primary;
+    //     }
+    // }
 
     label:not(.btn) {
         color: $default;
     }
 
-    .form-group.no-border,
-    .input-group.no-border {
-        .form-control,
-        .input-group-text {
-            background-color: $opacity-gray-3;
+    // .form-group.no-border,
+    // .input-group.no-border {
+    //     .form-control,
+    //     .input-group-text {
+    //         background-color: $opacity-gray-3;
 
-            &:focus,
-            &:active,
-            &:active {
-                background-color: $opacity-gray-5;
-            }
-        }
+    //         &:focus,
+    //         &:active,
+    //         &:active {
+    //             background-color: $opacity-gray-5;
+    //         }
+    //     }
 
-        .form-control {
-            &:focus {
-                & + .input-group-text {
-                    background-color: transparent;
-                }
-            }
-        }
-    }
+    //     .form-control {
+    //         &:focus {
+    //             & + .input-group-text {
+    //                 background-color: transparent;
+    //             }
+    //         }
+    //     }
+    // }
 
-    .input-group[disabled] {
-        .input-group-text {
-            background-color: $opacity-gray-3;
-        }
-    }
+    // .input-group[disabled] {
+    //     .input-group-text {
+    //         background-color: $opacity-gray-3;
+    //     }
+    // }
 
-    .form-control[disabled],
-    .form-control[readonly],
-    fieldset[disabled] .form-control {
-        background: $opacity-gray-3;
-    }
+    // .form-control[disabled],
+    // .form-control[readonly],
+    // fieldset[disabled] .form-control {
+    //     background: $opacity-gray-3;
+    // }
 
-    .input-group-focus {
-        .input-group-text,
-        .form-control {
-            background-color: $white;
-            border-color: $primary;
-        }
+    // .input-group-focus {
+    //     .input-group-text,
+    //     .form-control {
+    //         background-color: $white;
+    //         border-color: $primary;
+    //     }
 
-        &.no-border {
-            .input-group-text {
-                background-color: $opacity-gray-5;
-            }
-        }
-    }
+    //     &.no-border {
+    //         .input-group-text {
+    //             background-color: $opacity-gray-5;
+    //         }
+    //     }
+    // }
 
-    .input-group-text {
-        border-right: none;
-        border-left: none;
-    }
+    // .input-group-text {
+    //     border-right: none;
+    //     border-left: none;
+    // }
 
-    .has-danger .form-control:focus,
-    .has-success.input-group-focus .input-group-text {
-        border-color: $danger-states;
-    }
+    // .has-danger .form-control:focus,
+    // .has-success.input-group-focus .input-group-text {
+    //     border-color: $danger-states;
+    // }
 
-    .has-success .form-control:focus,
-    .has-success.input-group-focus .input-group-text {
-        border-color: darken($success, 10%);
-    }
+    // .has-success .form-control:focus,
+    // .has-success.input-group-focus .input-group-text {
+    //     border-color: darken($success, 10%);
+    // }
 
     &.card-plain {
         background: transparent;

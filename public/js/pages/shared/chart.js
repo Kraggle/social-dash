@@ -22,8 +22,10 @@ export default (options = {}) => {
 		type = $ctx.data('type') || 'line';
 
 	const setData = [],
-		$toggles = $ctx.closest('.card').find('[data-chart-toggles] input'),
-		$scales = $ctx.closest('.card').find('[data-chart-scale]');
+		$card = $ctx.closest('.card'),
+		$toggles = $card.find('[data-chart-toggles] input'),
+		$scales = $card.find('[data-chart-scale]'),
+		$date = $card.find('[data-flatpickr]');
 
 	let chart;
 
@@ -38,15 +40,22 @@ export default (options = {}) => {
 		setData.push(data.options);
 	});
 
-	const createChart = (scale = 'day') => {
+	const createChart = () => {
 		if (chart) chart.destroy();
 
 		const datasets = [],
 			dataValues = [],
+			scale = $scales.find(':checked').val() || 'day',
 			s = opts.scales[scale];
 
+		let end = dayjs($date.length ? $date.val() : undefined),
+			half = Math.ceil(s.count / 2);
+		end = end.add(half, scale);
+
+		if (end.isAfter(dayjs())) end = dayjs();
+
 		K.each(setData, (i, set) => {
-			let date = dayjs().add(-s.count, scale),
+			let date = end.clone().add(-s.count, scale),
 				last;
 
 			const data = [];
@@ -94,7 +103,7 @@ export default (options = {}) => {
 			[$checked.attr('name')]: $checked.attr('id')
 		});
 
-		createChart($checked.val());
+		createChart();
 	});
 
 	$toggles.on('change', function() {
@@ -109,4 +118,13 @@ export default (options = {}) => {
 
 		chart[!hidden ? 'show' : 'hide'](o.index);
 	});
+
+	$date.flatpickr();
+	$date.on('change', function() {
+		SS.setPageCookie(opts.page, {
+			[$(this).attr('id')]: $(this).val()
+		});
+
+		createChart();
+	})
 }

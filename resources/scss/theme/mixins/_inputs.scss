@@ -77,42 +77,24 @@
     }
 }
 
-@mixin input-base-padding($padding-vertical, $padding-horizontal) {
-    .form-group.no-border,
-    .input-group.no-border {
-        .form-control {
-            padding: $padding-vertical $padding-horizontal;
+@mixin input-base-padding($padding-y, $padding-x) {
+    $reduced-x: calc(#{$padding-x} - #{$input-border-width});
+    $reduced-y: calc(#{$padding-y} - #{$input-border-width});
 
-            & + .input-group-text {
-                padding: $padding-vertical $padding-horizontal $padding-vertical
-                    0;
-            }
-        }
+    .form-control {
+        padding: $padding-y $padding-x $padding-y $padding-x;
 
-        .input-group-text {
-            padding: $padding-vertical 0 $padding-vertical $padding-horizontal;
+        & + .input-group-text {
+            padding: $padding-y $reduced-x $padding-y 0;
         }
     }
 
-    .form-group,
-    .input-group {
-        .form-control {
-            padding: $padding-vertical 0 $padding-vertical $padding-horizontal;
+    .input-group-text {
+        padding: $padding-y 0 $padding-y $reduced-x;
 
-            & + .input-group-text {
-                padding: $padding-vertical 0 $padding-vertical
-                    $padding-horizontal - 1;
-            }
-        }
-
-        .input-group-text {
-            padding: $padding-vertical 0 $padding-vertical $padding-horizontal;
-
-            & + .form-control,
-            & ~ .form-control {
-                padding: $padding-vertical $padding-horizontal - 1
-                    $padding-vertical $padding-horizontal - 1;
-            }
+        & + .form-control,
+        & ~ .form-control {
+            padding: $padding-y $reduced-x $padding-y $reduced-x;
         }
     }
 }
