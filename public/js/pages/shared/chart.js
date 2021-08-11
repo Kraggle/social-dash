@@ -11,15 +11,22 @@ export default (options = {}) => {
 		scales: {},
 		page: 'all',
 		options: {
-			maintainAspectRatio: true,
+			maintainAspectRatio: false,
 			aspectRatio: 4
 		}
 	}, options)
 
 	let $ctx = $(opts.chartId);
 	if (!$ctx.length) return;
-	const ctx = $ctx.get(0).getContext('2d'),
+
+	const ctx = $ctx.get(0),
 		type = $ctx.data('type') || 'line';
+
+	let $wrap = $ctx.parent(),
+		height = $ctx.data('height') || 'auto';
+	if (!$wrap.hasClass('chart-area')) $wrap.addClass('chart-area');
+	$wrap.height(opts.options.maintainAspectRatio ? 'auto' : height)
+		.css('min-height', 'initial');
 
 	const setData = [],
 		$card = $ctx.closest('.card'),
@@ -62,7 +69,7 @@ export default (options = {}) => {
 
 			for (let d = 0; d < s.count; d++) {
 				data.push({
-					x: date.format(scale == 'month' ? "MMM 'YY" : 'DD/MM'),
+					x: date.format(scale == 'month' ? "MMM 'YY" : "D MMM"),
 					y: last = K.random(s.min, s.max)
 				});
 				date = date.clone().add(1, scale);
@@ -94,7 +101,7 @@ export default (options = {}) => {
 		chart = new Chart(ctx, config);
 		$ctx.data('chart', chart);
 	}
-	createChart($scales.find(':checked').val());
+	createChart();
 
 	$scales.find('input').on('change', () => {
 		const $checked = $scales.find(':checked');
@@ -119,12 +126,14 @@ export default (options = {}) => {
 		chart[!hidden ? 'show' : 'hide'](o.index);
 	});
 
-	$date.flatpickr();
-	$date.on('change', function() {
-		SS.setPageCookie(opts.page, {
-			[$(this).attr('id')]: $(this).val()
-		});
+	if ($date.length) {
+		$date.flatpickr();
+		$date.on('change', function() {
+			SS.setPageCookie(opts.page, {
+				[$(this).attr('id')]: $(this).val()
+			});
 
-		createChart();
-	})
+			createChart();
+		});
+	}
 }

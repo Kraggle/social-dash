@@ -14,70 +14,67 @@ $cookie = AppHelper::getPageCookie($page);
     <div class="row">
       <div class="col-12">
         <div class="card card-chart">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-md-4">
-                <h5 class="card-category">Account Followers</h5>
-                <h2 class="card-title">Followers</h2>
-              </div>
-
-              <div class="row col-md-8 align-items-start justify-content-end pe-0">
-
-                <div class="col-auto pe-0">
-                  @include('forms.datepicker', ['options' => [
-                  'cookie' => $cookie,
-                  'id' => 'f-chart-date'
-                  ]])
-                </div>
-
-                {{-- chart day selector --}}
-                @include('forms.chart-radio', ['options' => [
-                'name' => 'f-chart-day',
-                'color' => 'warning',
-                'buttons' => [[
-                'display' => __('Daily'),
-                'id' => 'f-chart-day-1',
-                'value' => 'day',
-                'icon' => 'fal fa-calendar-day'
-                ], [
-                'display' => __('Weekly'),
-                'id' => 'f-chart-day-2',
-                'value' => 'week',
-                'icon' => 'fal fa-calendar-week'
-                ], [
-                'display' => __('Monthly'),
-                'id' => 'f-chart-day-3',
-                'value' => 'month',
-                'icon' => 'fal fa-calendar'
-                ]],
-                'group_class' => 'btn-group-sm pe-0',
-                'group_attrs' => 'data-chart-scale',
-                'cookie' => $cookie
-                ]])
-
-                {{-- chart line selector --}}
-                {{-- There is only one line, so we'll hide this with d-none --}}
-                {{-- We still need it for the color and tooltip label --}}
-                @include('forms.chart-toggles', ['options' => [
-                'buttons' => [[
-                'id' => 'f-chart-line-1',
-                'color' => 'yellow',
-                'display' => __('Followers'),
-                'icon' => 'fal fa-users',
-                ]],
-                'group_class' => 'd-none',
-                'group_attrs' => 'data-chart-toggles',
-                'cookie' => $cookie
-                ]])
-
-              </div>
+          <div class="card-header row">
+            <div class="col-md-4">
+              <h5 class="card-category">Account Followers</h5>
+              <h2 class="card-title">Followers</h2>
             </div>
 
+            <div class="row col-md-8 align-items-start justify-content-end pe-0">
+
+              <div class="col-auto pe-0">
+                @include('forms.datepicker', ['options' => [
+                'cookie' => $cookie,
+                'id' => 'f-chart-date'
+                ]])
+              </div>
+
+              {{-- chart day selector --}}
+              @include('forms.chart-radio', ['options' => [
+              'name' => 'f-chart-day',
+              'color' => 'warning',
+              'buttons' => [[
+              'display' => __('Daily'),
+              'id' => 'f-chart-day-1',
+              'value' => 'day',
+              'icon' => 'fal fa-calendar-day'
+              ], [
+              'display' => __('Weekly'),
+              'id' => 'f-chart-day-2',
+              'value' => 'week',
+              'icon' => 'fal fa-calendar-week'
+              ], [
+              'display' => __('Monthly'),
+              'id' => 'f-chart-day-3',
+              'value' => 'month',
+              'icon' => 'fal fa-calendar'
+              ]],
+              'group_class' => 'btn-group-sm pe-0',
+              'group_attrs' => 'data-chart-scale',
+              'cookie' => $cookie
+              ]])
+
+              {{-- chart line selector --}}
+              {{-- There is only one line, so we'll hide this with d-none --}}
+              {{-- We still need it for the color and tooltip label --}}
+              @include('forms.chart-toggles', ['options' => [
+              'buttons' => [[
+              'id' => 'f-chart-line-1',
+              'color' => 'yellow',
+              'display' => __('Followers'),
+              'icon' => 'fal fa-users',
+              ]],
+              'group_class' => 'd-none',
+              'group_attrs' => 'data-chart-toggles',
+              'cookie' => $cookie
+              ]])
+
+            </div>
           </div>
 
           <div class="card-body">
             <div class="chart-area">
-              <canvas id="follower-chart"></canvas>
+              <canvas id="follower-chart" data-type="line" data-height="280"></canvas>
             </div>
           </div>
         </div>
@@ -146,7 +143,7 @@ $cookie = AppHelper::getPageCookie($page);
           </div>
           <div class="card-body">
             <div class="chart-area">
-              <canvas id="follow-vs-unfollow-chart" data-type="bar"></canvas>
+              <canvas id="follow-vs-unfollow-chart" data-type="bar" data-height="250"></canvas>
             </div>
           </div>
         </div>
@@ -207,7 +204,7 @@ $cookie = AppHelper::getPageCookie($page);
           </div>
           <div class="card-body">
             <div class="chart-area">
-              <canvas id="follow-all-time-chart"></canvas>
+              <canvas id="follow-all-time-chart" data-type="line" data-height="250"></canvas>
             </div>
           </div>
         </div>

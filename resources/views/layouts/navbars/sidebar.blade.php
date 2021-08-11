@@ -89,39 +89,39 @@
             <ul class="nav">
               <li class="{{ $activePage == 'followers' ? ' active' : '' }}">
                 <a href="{{ route('pages.followers') }}">
-                  <span class="sidebar-mini-icon">Fo</span>
+                  <span class="sidebar-mini-icon">F</span>
                   <span class="sidebar-normal"> {{ __('Followers') }} </span>
                 </a>
               </li>
 
               <li class="{{ $activePage == 'likes' ? ' active' : '' }}">
                 <a href="{{ route('pages.likes') }}">
-                  <span class="sidebar-mini-icon">Li</span>
+                  <span class="sidebar-mini-icon">L</span>
                   <span class="sidebar-normal"> {{ __('Likes') }} </span>
                 </a>
               </li>
               <li class="{{ $activePage == 'comments' ? ' active' : '' }}">
                 <a href="{{ route('pages.comments') }}">
-                  <span class="sidebar-mini-icon">Co</span>
+                  <span class="sidebar-mini-icon">C</span>
                   <span class="sidebar-normal"> {{ __('Comments') }} </span>
                 </a>
               </li>
               <li class="{{ $activePage == 'posts' ? ' active' : '' }}">
                 <a href="{{ route('pages.posts') }}">
-                  <span class="sidebar-mini-icon">Po</span>
+                  <span class="sidebar-mini-icon">P</span>
                   <span class="sidebar-normal"> {{ __('Posts') }} </span>
                 </a>
               </li>
               <li class="{{ $activePage == 'demographics' ? ' active' : '' }}">
                 <a href="{{ route('pages.demographics') }}">
-                  <span class="sidebar-mini-icon">De</span>
+                  <span class="sidebar-mini-icon">D</span>
                   <span class="sidebar-normal"> {{ __('Demographics') }} </span>
                 </a>
               </li>
 
               <li class="{{ $activePage == 'hashtags' ? ' active' : '' }}">
                 <a href="{{ route('pages.hashtags') }}">
-                  <span class="sidebar-mini-icon">Ha</span>
+                  <span class="sidebar-mini-icon">H</span>
                   <span class="sidebar-normal"> {{ __('Hashtags') }} </span>
                 </a>
               </li>

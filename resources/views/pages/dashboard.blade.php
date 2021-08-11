@@ -187,7 +187,7 @@ $stats = [
           {{-- the chart --}}
           <div class="card-body">
             <div class="chart-area">
-              <canvas id="performance-chart" style="height: 220px"></canvas>
+              <canvas id="performance-chart" data-type="line" data-height="280"></canvas>
             </div>
           </div>
         </div>

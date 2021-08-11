@@ -9,8 +9,8 @@ class Defaults {
 		bodySpacing: 4,
 		padding: 12,
 		mode: "nearest",
-		intersect: false,
-		position: "nearest"
+		intersect: true,
+		position: "average"
 	}
 
 	lineOptions = {
@@ -176,6 +176,10 @@ const defaults = new Defaults();
 
 export default {
 
+	getHeight(ctx) {
+		return ($(ctx).data('height') || 280) * .71;
+	},
+
 	dataset(type = 'line', color = 'blue', ctx = null, gradient = null) {
 		return this[`${type}Dataset`](color, ctx, gradient);
 	},
@@ -186,7 +190,9 @@ export default {
 
 	lineDataset(color = 'blue', ctx = null, gradient = null) {
 		if (gradient && ctx) {
-			gradient = ctx.createLinearGradient(0, 200, 0, 0);
+			const height = this.getHeight(ctx);
+			ctx = ctx.getContext('2d');
+			gradient = ctx.createLinearGradient(0, height, 0, 0);
 			gradient.addColorStop(1, colors.alpha(color, 0.3));
 			// gradient.addColorStop(0.4, colors.alpha(color, 0.05));
 			gradient.addColorStop(0, colors.alpha(color, 0));
@@ -224,12 +230,14 @@ export default {
 	barDataset(color = 'blue', ctx = null, gradient = null) {
 		let hoverGradient;
 		if (gradient && ctx) {
-			gradient = ctx.createLinearGradient(0, 150, 0, 0);
+			const height = this.getHeight(ctx);
+			ctx = ctx.getContext('2d');
+			gradient = ctx.createLinearGradient(0, height, 0, 0);
 			gradient.addColorStop(1, colors.alpha(color, 0.8));
 			gradient.addColorStop(0.4, colors.alpha(color, 0.55));
 			gradient.addColorStop(0, colors.alpha(color, 0.5));
 
-			hoverGradient = ctx.createLinearGradient(0, 150, 0, 0);
+			hoverGradient = ctx.createLinearGradient(0, height, 0, 0);
 			hoverGradient.addColorStop(1, colors.alpha(color, 1));
 			hoverGradient.addColorStop(0.4, colors.alpha(color, 0.75));
 			hoverGradient.addColorStop(0, colors.alpha(color, 0.7));
