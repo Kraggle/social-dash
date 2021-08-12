@@ -13,6 +13,7 @@
 
         &.btn-simple {
             padding: 0;
+            border-color: transparent;
         }
 
         &.btn-sm {
@@ -46,6 +47,10 @@
                 width: 24px;
             }
         }
+    }
+
+    &.no-border {
+        // border-color: transparent;
     }
 }
 

@@ -1,7 +1,22 @@
 import K from '../../plugins/K.js';
 import colors from './colors.js';
+import Chart from '../../plugins/chart-js/chart.js';
+
+Chart.defaults.font.family = "Montserrat";
+
+const getHourOfDay = num => {
+	if (num < 0) num += 24;
+	if (num > 24) num -= 24;
+	if (!num) return '12am';
+	if (num < 12) return `${num}am`;
+	if (num == 12) return `${num}pm`;
+	return `${num - 12}pm`;
+};
+
+const getDayOfWeek = num => ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][num - 1];
 
 class Defaults {
+
 	tooltip = {
 		backgroundColor: '#f5f5f5',
 		titleColor: '#333',
@@ -10,7 +25,11 @@ class Defaults {
 		padding: 12,
 		mode: "nearest",
 		intersect: true,
-		position: "average"
+		position: "average",
+	}
+
+	legend = {
+		display: false
 	}
 
 	lineOptions = {
@@ -20,7 +39,7 @@ class Defaults {
 		},
 		responsive: true,
 		scales: {
-			yAxes: {
+			y: {
 				barPercentage: 1.6,
 				grid: {
 					drawBorder: false,
@@ -29,10 +48,10 @@ class Defaults {
 				},
 				ticks: {
 					padding: 20,
-					fontColor: colors.hex.blue
+					// color: colors.hex.blue
 				}
 			},
-			xAxes: {
+			x: {
 				barPercentage: 1.6,
 				grid: {
 					drawBorder: false,
@@ -41,31 +60,35 @@ class Defaults {
 				},
 				ticks: {
 					padding: 20,
-					fontColor: colors.hex.blue
+					// color: colors.hex.blue
 				}
 			}
 		},
 		plugins: {
-			legend: {
-				display: false
-			},
+			legend: this.legend,
 			tooltip: this.tooltip
 		}
 	}
 
 	lineDataset = {
 		label: '',
+		// line styling
 		fill: true,
+		backgroundColor: 'transparent',
+		borderCapStyle: 'round', // butt || round || square, 
 		borderColor: colors.hex.blue,
+		borderDash: [], // array of numbers
 		borderWidth: 2,
+		tension: 0.4,
+		// point styling
 		pointBackgroundColor: colors.hex.blue,
 		pointBorderColor: 'transparent',
-		pointHoverBackgroundColor: colors.hex.blue,
-		pointBorderWidth: 20,
-		pointHoverRadius: 4,
-		pointHoverBorderWidth: 15,
+		pointBorderWidth: 2,
+		pointHitRadius: 20,
 		pointRadius: 4,
-		tension: 0.4,
+		pointHoverBackgroundColor: colors.hex.blue,
+		pointHoverRadius: 7,
+		pointHoverBorderWidth: 4,
 	}
 
 	barOptions = {
@@ -75,32 +98,30 @@ class Defaults {
 		},
 		responsive: true,
 		scales: {
-			yAxes: [{
+			y: {
 				grid: {
 					drawBorder: false,
 					color: colors.alpha('blue', 0.1),
 					zeroLineColor: 'transparent',
 				},
 				ticks: {
-					fontColor: colors.hex.blue
+					// color: colors.hex.blue
 				}
-			}],
+			},
 
-			xAxes: [{
+			x: {
 				grid: {
 					drawBorder: false,
 					color: colors.alpha('blue', 0.1),
 					zeroLineColor: 'transparent',
 				},
 				ticks: {
-					fontColor: colors.hex.blue
+					// color: colors.hex.blue
 				}
-			}]
+			}
 		},
 		plugins: {
-			legend: {
-				display: false
-			},
+			legend: this.legend,
 			tooltip: this.tooltip
 		}
 	}
@@ -123,33 +144,44 @@ class Defaults {
 		},
 		responsive: true,
 		scales: {
-			yAxes: [{
+			y: {
 				grid: {
-					// drawBorder: false,
-					color: colors.alpha('blue', 0.1),
-					// zeroLineColor: 'transparent',
+					borderColor: 'transparent',
+					color: colors.alpha('black', 0.1),
 				},
 				ticks: {
-					fontColor: colors.hex.blue
+					callback: function(value) {
+						return getDayOfWeek(this.getLabelForValue(value));
+					}
 				}
-			}],
+			},
 
-			xAxes: [{
+			x: {
+				min: -1,
+				max: 24,
+				// grace: 1,
 				grid: {
-					// drawBorder: false,
-					color: colors.alpha('blue', 0.1),
-					// zeroLineColor: 'transparent',
+					borderColor: 'transparent',
+					color: colors.alpha('black', 0.1),
 				},
 				ticks: {
-					fontColor: colors.hex.blue
+					// color: colors.hex.blue,
+					callback: function(value, index) {
+						return getHourOfDay(parseInt(this.getLabelForValue(value)));
+					}
 				}
-			}]
+			}
 		},
 		plugins: {
-			legend: {
-				display: false
-			},
-			tooltip: this.tooltip
+			legend: this.legend,
+			tooltip: K.extend(true, {}, this.tooltip, {
+				callbacks: {
+					label: function(context) {
+						// console.log(context);
+						return `${context.label} - ${getDayOfWeek(context.raw.y)} ${getHourOfDay(context.raw.x)}: ${context.raw.r}`;
+					}
+				}
+			})
 		}
 	}
 
@@ -184,8 +216,8 @@ export default {
 		return this[`${type}Dataset`](color, ctx, gradient);
 	},
 
-	options(type = 'line', color = 'blue') {
-		return this[`${type}Options`](color);
+	options(type = 'line') {
+		return this[`${type}Options`]();
 	},
 
 	lineDataset(color = 'blue', ctx = null, gradient = null) {
@@ -203,28 +235,12 @@ export default {
 			backgroundColor: gradient || colors.alpha(color, 0.1),
 			pointBackgroundColor: colors.hex[color],
 			pointHoverBackgroundColor: colors.hex[color],
-			pointBorderColor: colors.alpha(color, 0),
+			// pointBorderColor: colors.hex['white'],
 		});
 	},
 
-	lineOptions(color = 'blue') {
-		return K.extend(true, {}, defaults.lineOptions, {
-			scales: {
-				yAxes: {
-					ticks: {
-						fontColor: colors.hex[color]
-					}
-				},
-				xAxes: {
-					grid: {
-						color: colors.alpha(color, 0.1)
-					},
-					ticks: {
-						fontColor: colors.hex[color]
-					}
-				}
-			}
-		});
+	lineOptions() {
+		return K.extend(true, {}, defaults.lineOptions);
 	},
 
 	barDataset(color = 'blue', ctx = null, gradient = null) {
@@ -250,28 +266,8 @@ export default {
 		});
 	},
 
-	barOptions(color = 'blue') {
-		return K.extend(true, {}, defaults.barOptions, {
-			scales: {
-				yAxes: [{
-					grid: {
-						color: colors.alpha(color, 0.1)
-					},
-					ticks: {
-						fontColor: colors.hex[color]
-					}
-				}],
-
-				xAxes: [{
-					grid: {
-						color: colors.alpha(color, 0.1)
-					},
-					ticks: {
-						fontColor: colors.hex[color]
-					}
-				}]
-			}
-		});
+	barOptions() {
+		return K.extend(true, {}, defaults.barOptions);
 	},
 
 	bubbleDataset(color = 'blue') {
@@ -284,7 +280,7 @@ export default {
 		});
 	},
 
-	bubbleOptions(color = 'blue') {
-		return this.barOptions(color);
+	bubbleOptions() {
+		return K.extend(true, {}, defaults.bubbleOptions);
 	}
 }

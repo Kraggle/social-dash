@@ -4,6 +4,7 @@
 
         background-color: $main;
         transition: all 0.15s ease;
+        border-width: 0;
 
         .btn-check:checked + &,
         .btn-check:active + &,

@@ -63,7 +63,7 @@ Route::middleware(['auth', 'subscribed'])->group(function () {
 
     Route::get('post', ['as' => 'pages.post', 'uses' => 'PagesController@post']);
     Route::get('compare-posts', ['as' => 'pages.compare-posts', 'uses' => 'PagesController@comparePosts']);
-    Route::get('single-profile', ['as' => 'pages.single-profile', 'uses' => 'PagesController@single-profile']);
+    Route::get('single-profile', ['as' => 'pages.single-profile', 'uses' => 'PagesController@singleProfile']);
 
     Route::get('scheduling', ['as' => 'pages.scheduling', 'uses' => 'PagesController@scheduling']);
     Route::get('reporting', ['as' => 'pages.reporting', 'uses' => 'PagesController@reporting']);

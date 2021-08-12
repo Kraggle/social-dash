@@ -1,6 +1,5 @@
 import $ from '../core/jquery/jquery.js';
 import newChart from './shared/chart.js';
-import '../plugins/flatpickr/flatpickr.js';
 
 $(() => {
 	const page = $('[data-page]').data('page');

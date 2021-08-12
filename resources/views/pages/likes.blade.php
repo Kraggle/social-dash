@@ -4,70 +4,78 @@
 'titlePage' => __('Likes')
 ])
 
+@php
+$page = 'likes'; // Used to get and set cookies
+$cookie = AppHelper::getPageCookie($page);
+@endphp
+
 @section('content')
-  <div class="content">
+  <div class="content" data-page="{{ $page }}">
     <div class="row">
       <div class="col-12">
         <div class="card card-chart">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-md-4">
-                <h5 class="card-category">Total Likes</h5>
-                <h2 class="card-title">Likes</h2>
-              </div>
-
-              <div class="row col-md-8 align-items-start justify-content-end">
-
-                <div class="col-auto pe-0">
-                  <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
-                </div>
-
-                {{-- chart day selector --}}
-                <div class="col-auto btn-group btn-group-sm pe-0" role="group">
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-1" checked>
-                  <label class="btn btn-outline-warning" for="p-chart-day-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Daily</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar-day"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-2">
-                  <label class="btn btn-outline-warning" for="p-chart-day-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Weekly</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar-week"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-3">
-                  <label class="btn btn-outline-warning" for="p-chart-day-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Monthly</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar"></i>
-                    </span>
-                  </label>
-                </div>
-
-                {{-- <div class="col-auto btn-group btn-group-toggle float-end" data-toggle="buttons">
-                  <label class="btn btn-sm btn-warning btn-gradient btn-simple" id="3">
-                    <input type="radio" class="d-none" name="options">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Posts</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-hand-point-up"></i>
-                    </span>
-                  </label>
-                </div> --}}
-
-              </div>
+          <div class="card-header row">
+            <div class="col-md-4">
+              <h5 class="card-category">Total Likes</h5>
+              <h2 class="card-title">Likes</h2>
             </div>
 
+            <div class="row col-md-8 align-items-start justify-content-end">
+
+              {{-- chart date picker --}}
+              <div class="col-auto pe-0">
+                @include('forms.datepicker', ['options' => [
+                'cookie' => $cookie,
+                'id' => 'l-chart-date'
+                ]])
+              </div>
+
+              {{-- chart day selector --}}
+              @include('forms.chart-radio', ['options' => [
+              'name' => 'l-chart-day',
+              'color' => 'warning',
+              'buttons' => [[
+              'display' => __('Daily'),
+              'id' => 'l-chart-day-1',
+              'value' => 'day',
+              'icon' => 'fal fa-calendar-day'
+              ], [
+              'display' => __('Weekly'),
+              'id' => 'l-chart-day-2',
+              'value' => 'week',
+              'icon' => 'fal fa-calendar-week'
+              ], [
+              'display' => __('Monthly'),
+              'id' => 'l-chart-day-3',
+              'value' => 'month',
+              'icon' => 'fal fa-calendar'
+              ]],
+              'group_class' => 'btn-group-sm pe-0',
+              'group_attrs' => 'data-chart-scale',
+              'cookie' => $cookie
+              ]])
+
+              {{-- chart line selector --}}
+              {{-- There is only one line, so we'll hide this with d-none --}}
+              {{-- We still need it for the color and tooltip label --}}
+              @include('forms.chart-toggles', ['options' => [
+              'buttons' => [[
+              'id' => 'l-chart-line-1',
+              'color' => 'yellow',
+              'display' => __('Likes'),
+              'icon' => 'fal fa-users',
+              ]],
+              'group_class' => 'd-none',
+              'group_attrs' => 'data-chart-toggles',
+              'cookie' => $cookie
+              ]])
+
+            </div>
           </div>
 
           <div class="card-body">
             <div class="chart-area">
-              <canvas id="likes-chart"></canvas>
+              <canvas id="likes-chart" data-type="line" data-height="280"></canvas>
             </div>
           </div>
         </div>

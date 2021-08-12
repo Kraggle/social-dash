@@ -4,8 +4,13 @@
 'titlePage' => __('post')
 ])
 
+@php
+$page = 'engagement'; // Used to get and set cookies
+$cookie = AppHelper::getPageCookie($page);
+@endphp
+
 @section('content')
-  <div class="content">
+  <div class="content" data-page="{{ $page }}">
 
     <div class="row">
       <div class="col-12 mb-4">
@@ -63,54 +68,65 @@
 
       <div class="col-md-9">
         <div class="card card-chart">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-4">
-                <h5 class="card-category">Overall Post Engagement</h5>
-                <h2 class="card-title">Engagements</h2>
+          <div class="card-header row">
+            <div class="col-4">
+              <h5 class="card-category">Overall Post Engagement</h5>
+              <h2 class="card-title">Engagements</h2>
+            </div>
+
+            <div class="row col-8 align-items-start justify-content-end pe-0" data-toggle="buttons">
+
+              <div class="col-auto pe-0">
+                @include('forms.datepicker', ['options' => [
+                'cookie' => $cookie,
+                'id' => 'f-chart-date'
+                ]])
               </div>
 
-              <div class="row col-8 align-items-start justify-content-end pe-0" data-toggle="buttons">
+              {{-- chart day selector --}}
+              @include('forms.chart-radio', ['options' => [
+              'name' => 'e-chart-day',
+              'color' => 'warning',
+              'buttons' => [[
+              'display' => __('Hourly'),
+              'id' => 'e-chart-day-1',
+              'value' => 'hour',
+              'icon' => 'fal fa-calendar-day'
+              ]],
+              'group_class' => 'btn-group-sm pe-0 d-none',
+              'group_attrs' => 'data-chart-scale',
+              'cookie' => $cookie
+              ]])
 
-                <div class="col-auto pe-0">
-                  <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
-                </div>
-
-                {{-- chart line selector --}}
-                <div class="col-auto btn-group btn-group-sm pe-0" role="group">
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="e-chart-line-1" checked>
-                  <label class="btn btn-outline-pink" for="e-chart-line-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Engagement</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-heart"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="e-chart-line-2">
-                  <label class="btn btn-outline-red" for="e-chart-line-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Likes</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-comments"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="e-chart-line-3">
-                  <label class="btn btn-sm btn-outline-teal" for="e-chart-line-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Comments</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-file-alt"></i>
-                    </span>
-                  </label>
-                </div>
-              </div>
-
+              {{-- chart line selector --}}
+              @include('forms.chart-toggles', ['options' => [
+              'buttons' => [[
+              'id' => 'e-chart-line-1',
+              'color' => 'pink',
+              'display' => __('Engagement'),
+              'icon' => 'fal fa-users',
+              ],[
+              'id' => 'e-chart-line-2',
+              'color' => 'red',
+              'display' => __('Likes'),
+              'icon' => 'fal fa-heart',
+              ],[
+              'id' => 'e-chart-line-3',
+              'color' => 'green',
+              'display' => __('Comments'),
+              'icon' => 'fal fa-comments',
+              ]],
+              'group_class' => 'btn-group-sm pe-0',
+              'group_attrs' => 'data-chart-toggles',
+              'cookie' => $cookie
+              ]])
 
             </div>
+
           </div>
           <div class="card-body">
             <div class="chart-area">
-              <canvas id="engagement-chart"></canvas>
+              <canvas id="engagement-chart" data-tyoe="line" data-height="368"></canvas>
             </div>
           </div>
         </div>

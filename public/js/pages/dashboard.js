@@ -105,7 +105,7 @@ $(() => {
 	// 			data: { datasets },
 	// 			options: K.extend(true, {}, chartConfig.lineOptions(), {
 	// 				scales: {
-	// 					yAxes: {
+	// 					y: {
 	// 						suggestedMin: Math.max(0, Math.min.apply(null, dataValues) - 10),
 	// 						suggestedMax: Math.max.apply(null, dataValues) + 10
 	// 					}

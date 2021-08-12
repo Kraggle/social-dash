@@ -1,5 +1,48 @@
-// Height values in vh
+@use "sass:math";
 
+// Height values in vh
 .h-100vh {
-	height: 100vh !important;
+    height: 100vh !important;
+}
+
+$grid-gutter-width-half: math.div($grid-gutter-width, 2);
+
+.gx-1,
+.gb-1 {
+    margin-bottom: $grid-gutter-width-half !important;
+}
+
+.gx-1,
+.gt-1 {
+    margin-top: $grid-gutter-width-half !important;
+}
+
+.gy-1,
+.ge-1 {
+    margin-right: $grid-gutter-width-half !important;
+}
+
+.gy-1,
+.gs-1 {
+    margin-left: $grid-gutter-width-half !important;
+}
+
+.gx-2,
+.gb-2 {
+    margin-bottom: $grid-gutter-width !important;
+}
+
+.gx-2,
+.gt-2 {
+    margin-top: $grid-gutter-width !important;
+}
+
+.gy-2,
+.ge-2 {
+    margin-right: $grid-gutter-width !important;
+}
+
+.gy-2,
+.gs-2 {
+    margin-left: $grid-gutter-width !important;
 }

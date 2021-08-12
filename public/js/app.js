@@ -39,4 +39,9 @@ $(() => {
 	// Used to set the selected account
 	$('#account-selector').on('change', handler.selectAccount);
 	handler.selectAccount();
+
+	$('.dropdown.keep-open').on('hide.bs.dropdown', function(e) {
+		if ($(this).find(e.clickEvent.target).length) return false;
+		return true;
+	});
 });

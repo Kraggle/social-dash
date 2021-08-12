@@ -4,65 +4,79 @@
 'titlePage' => __('Compare Posts')
 ])
 
+@php
+$page = 'comparison'; // Used to get and set cookies
+$cookie = AppHelper::getPageCookie($page);
+@endphp
+
 @section('content')
-  <div class="content">
+  <div class="content" data-page="{{ $page }}">
     <div class="row">
       <div class="col-12">
         <div class="card card-chart">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-md-3">
-                <h5 class="card-category">Post Comparison</h5>
-                <h2 class="card-title">Engagement</h2>
+          <div class="card-header row">
+            <div class="col-md-4">
+              <h5 class="card-category">Post Comparison</h5>
+              <h2 class="card-title">Engagement</h2>
+            </div>
+
+            <div class="row col-md-8 align-items-start justify-content-end pe-0">
+
+              <div class="col-auto pe-0">
+                @include('forms.datepicker', ['options' => [
+                'cookie' => $cookie,
+                'id' => 'c-chart-date'
+                ]])
               </div>
+
+              {{-- chart day selector --}}
+              @include('forms.chart-radio', ['options' => [
+              'name' => 'c-chart-day',
+              'color' => 'warning',
+              'buttons' => [[
+              'display' => __('Daily'),
+              'id' => 'c-chart-day-1',
+              'value' => 'day',
+              'icon' => 'fal fa-calendar-day'
+              ]],
+              'group_class' => 'btn-group-sm pe-0 d-none',
+              'group_attrs' => 'data-chart-scale',
+              'cookie' => $cookie
+              ]])
 
               {{-- chart line selector --}}
-              <div class="row col-md-9 align-items-start justify-content-end pe-0">
-                <div class="col-auto pe-0">
-                  <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
-                </div>
-
-                <div class="col-auto btn-group btn-group-sm pe-0" role="group">
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="p-chart-line-1" checked>
-                  <label class="btn btn-outline-blue" for="p-chart-line-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Followers</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-users"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="p-chart-line-2">
-                  <label class="btn btn-outline-pink" for="p-chart-line-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Likes</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-heart"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="p-chart-line-3">
-                  <label class="btn btn-outline-red" for="p-chart-line-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Comments</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-comments"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="p-chart-line-4">
-                  <label class="btn btn-sm btn-outline-teal" for="p-chart-line-4">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Engagement</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-file-alt"></i>
-                    </span>
-                  </label>
-                </div>
-              </div>
+              @include('forms.chart-toggles', ['options' => [
+              'buttons' => [[
+              'id' => 'c-chart-line-1',
+              'color' => 'blue',
+              'display' => __('Follower'),
+              'icon' => 'fal fa-users',
+              ],[
+              'id' => 'c-chart-line-2',
+              'color' => 'orange',
+              'display' => __('Likes'),
+              'icon' => 'fal fa-heart',
+              ],[
+              'id' => 'c-chart-line-3',
+              'color' => 'red',
+              'display' => __('Comments'),
+              'icon' => 'fal fa-comments',
+              ],[
+              'id' => 'c-chart-line-4',
+              'color' => 'green',
+              'display' => __('Engagement'),
+              'icon' => 'fal fa-file-alt',
+              ]],
+              'group_class' => 'btn-group-sm pe-0',
+              'group_attrs' => 'data-chart-toggles',
+              'cookie' => $cookie
+              ]])
 
             </div>
           </div>
           <div class="card-body">
             <div class="chart-area">
-              <canvas id="comparison-chart"></canvas>
+              <canvas id="comparison-chart" data-type="line" data-height="300"></canvas>
             </div>
           </div>
         </div>

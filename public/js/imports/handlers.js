@@ -12,7 +12,7 @@ export default {
 		if ($el.data('selected') == selected) return;
 		$el.data('selected', selected);
 		K.cookie.set('selected-account', selected, { expires: 64 });
-		console.log(selected);
+		// console.log(selected);
 	},
 
 	deleteAlert(e) {

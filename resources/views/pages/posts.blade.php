@@ -4,131 +4,170 @@
 'titlePage' => __('Posts')
 ])
 
+@php
+$page = 'followers'; // Used to get and set cookies
+$cookie = AppHelper::getPageCookie($page);
+@endphp
+
 @section('content')
-  <div class="content">
+  <div class="content" data-page="{{ $page }}">
     <div class="row">
       <div class="col-6">
         <div class="card card-chart">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-sm-3">
-                <h5 class="card-category">Account Posts</h5>
-                <h2 class="card-title">By Date</h2>
-              </div>
-              <div class="col-sm-9 row align-items-start justify-content-end pe-0">
-
-                {{-- chart day selector --}}
-                <div class="col-auto btn-group btn-group-sm pe-0" role="group">
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-1" checked>
-                  <label class="btn btn-outline-warning" for="p-chart-day-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Daily</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar-day"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-2">
-                  <label class="btn btn-outline-warning" for="p-chart-day-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Weekly</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar-week"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-day" id="p-chart-day-3">
-                  <label class="btn btn-outline-warning" for="p-chart-day-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Monthly</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-calendar"></i>
-                    </span>
-                  </label>
-                </div>
-
-                {{-- chart line selector --}}
-                <div class="col-auto btn-group btn-group-sm pe-0" role="group">
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="p-chart-line-1" checked>
-                  <label class="btn btn-outline-blue" for="p-chart-line-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Followers</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-users"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="p-chart-line-2">
-                  <label class="btn btn-outline-pink" for="p-chart-line-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Likes</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-heart"></i>
-                    </span>
-                  </label>
-
-                  <input type="checkbox" class="btn-check" name="p-chart-line" id="p-chart-line-3">
-                  <label class="btn btn-outline-red" for="p-chart-line-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Comments</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-comments"></i>
-                    </span>
-                  </label>
-                </div>
-
-                <div class="col-auto btn-group btn-group-sm pe-0" role="group">
-                  <input type="radio" class="btn-check" name="p-chart-type" checked id="p-chart-type-1">
-                  <label class="btn btn-outline-info" for="p-chart-type-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Photos</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-user"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-type" id="p-chart-type-2">
-                  <label class="btn btn-outline-info" for="p-chart-type-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Videos</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-gift-2"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-chart-type" id="p-chart-type-3">
-                  <label class="btn btn-outline-info" for="p-chart-type-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Carousels</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-hand-point-up"></i>
-                    </span>
-                  </label>
-                </div>
-
-                <div class="col-auto pe-0">
-                  <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
-                </div>
-              </div>
+          <div class="card-header row">
+            <div class="col-sm-3">
+              <h5 class="card-category">Account Posts</h5>
+              <h2 class="card-title">By Date</h2>
             </div>
-            <div class="card-body">
-              <div class="chart-area-posts">
-                <canvas id="posts-chart"></canvas>
+
+            <div class="col-sm-9 row align-items-start justify-content-end pe-0">
+
+              {{-- chart line selector --}}
+              @include('forms.chart-toggles', ['options' => [
+              'buttons' => [[
+              'id' => 'p-chart-line-1',
+              'color' => 'blue',
+              'display' => __('Follower'),
+              'icon' => 'fal fa-users',
+              ],[
+              'id' => 'p-chart-line-2',
+              'color' => 'orange',
+              'display' => __('Likes'),
+              'icon' => 'fal fa-heart',
+              ],[
+              'id' => 'p-chart-line-3',
+              'color' => 'red',
+              'display' => __('Comments'),
+              'icon' => 'fal fa-comments',
+              ]],
+              'group_class' => 'btn-group-sm pe-0 mb-2',
+              'group_attrs' => 'data-chart-toggles',
+              'cookie' => $cookie
+              ]])
+
+              <div class="col-auto pe-0">
+                <div class="dropdown keep-open">
+                  <button type="button" class="btn btn-sm btn-simple dropdown-toggle btn-icon no-caret" data-bs-toggle="dropdown">
+                    <i class="fal fa-cog"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-grid">
+
+                    {{-- chart day selector --}}
+                    @include('forms.chart-radio', ['options' => [
+                    'name' => 'p-chart-day',
+                    'color' => 'warning',
+                    'buttons' => [[
+                    'display' => __('Daily'),
+                    'id' => 'p-chart-day-1',
+                    'value' => 'day',
+                    'icon' => 'fal fa-calendar-day'
+                    ], [
+                    'display' => __('Weekly'),
+                    'id' => 'p-chart-day-2',
+                    'value' => 'week',
+                    'icon' => 'fal fa-calendar-week'
+                    ], [
+                    'display' => __('Monthly'),
+                    'id' => 'p-chart-day-3',
+                    'value' => 'month',
+                    'icon' => 'fal fa-calendar'
+                    ]],
+                    'group_class' => 'btn-group-sm',
+                    'group_attrs' => 'data-chart-scale',
+                    'cookie' => $cookie
+                    ]])
+
+                    {{-- chart type selector --}}
+                    @include('forms.chart-radio', ['options' => [
+                    'name' => 'p-chart-type',
+                    'color' => 'green',
+                    'buttons' => [[
+                    'display' => __('Photos'),
+                    'id' => 'p-chart-type-1',
+                    'value' => 'day',
+                    'icon' => 'fal fa-image-polaroid'
+                    ], [
+                    'display' => __('Videos'),
+                    'id' => 'p-chart-type-2',
+                    'value' => 'week',
+                    'icon' => 'fal fa-video'
+                    ], [
+                    'display' => __('Carousels'),
+                    'id' => 'p-chart-type-3',
+                    'value' => 'month',
+                    'icon' => 'fal film-canister'
+                    ]],
+                    'group_class' => 'btn-group-sm',
+                    'group_attrs' => 'data-chart-type',
+                    'cookie' => $cookie
+                    ]])
+
+                    <div class="col-auto">
+                      @include('forms.datepicker', ['options' => [
+                      'cookie' => $cookie,
+                      'id' => 'p-chart-date'
+                      ]])
+                    </div>
+
+                  </div>
+                </div>
               </div>
-              <!-- end content-->
+
             </div>
-            <!--  end card  -->
           </div>
-          <!-- end col-md-12 -->
+          <div class="card-body">
+            <div class="chart-area-posts">
+              <canvas id="posts-chart" data-type="line" data-height="250"></canvas>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="col-6">
         <div class="card card-chart">
 
-          <div class="card-header">
-            <div class="row">
-              <div class="col-sm-12 text-start">
-                <h5 class="card-category">Account Posts</h5>
-                <h2 class="card-title">By Time of Day</h2>
-              </div>
+          <div class="card-header row">
+            <div class="col-11">
+              <h5 class="card-category">Account Posts</h5>
+              <h2 class="card-title">By Time of Day</h2>
+            </div>
+
+            <div class="col-1 row align-items-start justify-content-end pe-0">
+
+              {{-- chart day selector --}}
+              @include('forms.chart-radio', ['options' => [
+              'name' => 'b-chart-day',
+              'color' => 'warning',
+              'buttons' => [[
+              'display' => __('Daily'),
+              'id' => 'b-chart-day-1',
+              'value' => 'day',
+              'icon' => 'fal fa-calendar-day'
+              ]],
+              'group_class' => 'd-none',
+              'group_attrs' => 'data-chart-scale',
+              'cookie' => $cookie
+              ]])
+
+              {{-- chart line selector --}}
+              @include('forms.chart-toggles', ['options' => [
+              'buttons' => [[
+              'id' => 'b-chart-bubble-1',
+              'color' => 'orange',
+              'display' => __('Posts'),
+              'icon' => 'fal fa-users',
+              ]],
+              'group_class' => 'd-none',
+              'group_attrs' => 'data-chart-toggles',
+              'cookie' => $cookie
+              ]])
+
             </div>
           </div>
+
           <div class="card-body">
             <div class="chart-area-posts">
-              <canvas id="bubble-chart"></canvas>
+              <canvas id="bubble-chart" data-type="bubble" data-height="250"></canvas>
             </div>
           </div>
         </div>
@@ -138,12 +177,52 @@
     <div class="row">
       <div class="col-12">
         <div class="card">
-          <div class="card-header">
-            <h2 class="card-title">Uploaded Posts</h2>
+          <div class="card-header row">
+            <h2 class="card-title col-4">Uploaded Posts</h2>
+
+            <div class="row col-8 align-items-start justify-content-end pe-0">
+
+              <div class="col-auto pe-0">
+                @include('forms.datepicker', ['options' => [
+                'cookie' => $cookie,
+                'id' => 'p-table-date'
+                ]])
+              </div>
+
+              {{-- chart type selector --}}
+              @include('forms.chart-radio', ['options' => [
+              'name' => 'p-table-type',
+              'color' => 'info',
+              'buttons' => [[
+              'display' => __('Photos'),
+              'id' => 'p-table-type-1',
+              'value' => 'day',
+              'icon' => 'fal fa-image-polaroid'
+              ], [
+              'display' => __('Videos'),
+              'id' => 'p-table-type-2',
+              'value' => 'week',
+              'icon' => 'fal fa-video'
+              ], [
+              'display' => __('Carousels'),
+              'id' => 'p-table-type-3',
+              'value' => 'month',
+              'icon' => 'fal film-canister'
+              ]],
+              'group_class' => 'btn-group-sm pe-0 mb-2',
+              'group_attrs' => 'data-table-type',
+              'cookie' => $cookie
+              ]])
+
+              <div class="col-auto pe-0">
+                <a href="{{ route('pages.compare-posts') }}" class="btn btn-sm btn-warning btn-gradient">Compare</a>
+              </div>
+
+            </div>
           </div>
           <div class="card-body">
             <div class="row mb-3">
-              <ul id="nav-tabs" class="nav nav-pills nav-pills-warning col-2" role="tablist" style="margin-left:12px">
+              <ul id="nav-tabs" class="nav nav-pills nav-pills-warning col-12" role="tablist" style="margin-left:12px">
                 <li class="nav-item" role="presentation">
                   <button id="nav-data-tab" class="nav-link active" data-bs-toggle="pill" type="button" aria-controls="pill-data-tab" aria-selected="true" data-bs-target="#pill-data-tab">Data</button>
                 </li>
@@ -151,44 +230,6 @@
                   <button id="nav-visual-tab" class="nav-link" data-bs-toggle="pill" type="button" aria-controls="pill-visual-tab" aria-selected="false" data-bs-target="#pill-visual-tab">Visual</button>
                 </li>
               </ul>
-
-              <div class="row col-10 align-items-start justify-content-end">
-
-                <div class="col-auto pe-0">
-                  <input type="text" class="form-control form-control-sm datepicker" value="05/05/2021">
-                </div>
-
-                <div class="col-auto btn-group btn-group-sm pe-0" role="group">
-                  <input type="radio" class="btn-check" name="p-table-type" checked id="p-table-type-1">
-                  <label class="btn btn-outline-info" for="p-table-type-1">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Photos</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-user"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-table-type" id="p-table-type-2">
-                  <label class="btn btn-outline-info" for="p-table-type-2">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Videos</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-gift-2"></i>
-                    </span>
-                  </label>
-
-                  <input type="radio" class="btn-check" name="p-table-type" id="p-table-type-3">
-                  <label class="btn btn-outline-info" for="p-table-type-3">
-                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Carousels</span>
-                    <span class="d-block d-sm-none">
-                      <i class="fal fa-hand-point-up"></i>
-                    </span>
-                  </label>
-                </div>
-
-                <div class="col-auto pe-0">
-                  <a href="{{ route('pages.compare-posts') }}" class="btn btn-sm btn-warning btn-gradient">Compare</a>
-                </div>
-
-              </div>
             </div>
 
             <div class="tab-content tab-space">

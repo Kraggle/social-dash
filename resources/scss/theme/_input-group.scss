@@ -96,10 +96,18 @@
 
 .input-group,
 .form-group {
-    margin-bottom: 10px;
+    margin-bottom: map-get($spacers, 3);
 
     .form-control-static {
         margin-top: 9px;
+    }
+
+    &.input-group-sm {
+        margin-bottom: map-get($spacers, 2);
+    }
+
+    &.input-group-lg {
+        margin-bottom: map-get($spacers, 4);
     }
 }
 

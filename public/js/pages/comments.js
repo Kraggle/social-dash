@@ -1,39 +1,28 @@
 import $ from '../core/jquery/jquery.js';
-import Chart from '../plugins/chart-js/chart.js';
-import chartConfig from './shared/chart-options.js';
-import K from '../plugins/K.js';
-import Maps from './shared/map-data.js';
+import newChart from './shared/chart.js';
 
 $(() => {
-	Maps.init();
+	const page = $('[data-page]').data('page');
 
-	const labels = ['09/05', '10/05', '11/05', '12/05', '13/05', '14/05', '15/05', '16/05', '17/05', '18/05', '19/05', '20/05'],
-		data = [30, 40, 60, 40, 50, 70, 30, 50, 40, 60, 60, 40],
-		color = 'red';
-
-	let ctx = $("#comments-chart").get(0);
-
-	if (ctx) {
-		ctx = ctx.getContext('2d');
-
-		let config = {
-			type: 'line',
-			data: {
-				labels: labels,
-				datasets: [K.extend({}, chartConfig.lineDataset(color, ctx, true), {
-					data
-				})]
+	newChart({
+		chartId: '#comments-chart',
+		scales: {
+			day: {
+				count: 15,
+				min: 0,
+				max: 300
 			},
-			options: K.extend(true, {}, chartConfig.lineOptions(color), {
-				scales: {
-					yAxes: {
-						suggestedMin: Math.min.apply(null, data) - 10,
-						suggestedMax: Math.max.apply(null, data) + 10
-					}
-				}
-			})
-		}
-
-		let myChartData = new Chart(ctx, config);
-	}
+			week: {
+				count: 15,
+				min: 0,
+				max: 2000
+			},
+			month: {
+				count: 11,
+				min: 1000,
+				max: 10000
+			}
+		},
+		page
+	});
 });

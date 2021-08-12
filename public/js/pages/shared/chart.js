@@ -1,4 +1,5 @@
 import $ from '../../core/jquery/jquery.js';
+import '../../plugins/flatpickr/flatpickr.js';
 import K from '../../plugins/K.js';
 import Chart from '../../plugins/chart-js/chart.js';
 import chartConfig from './chart-options.js';
@@ -16,7 +17,7 @@ export default (options = {}) => {
 		}
 	}, options)
 
-	let $ctx = $(opts.chartId);
+	const $ctx = $(opts.chartId);
 	if (!$ctx.length) return;
 
 	const ctx = $ctx.get(0),
@@ -57,7 +58,7 @@ export default (options = {}) => {
 
 		let end = dayjs($date.length ? $date.val() : undefined),
 			half = Math.ceil(s.count / 2);
-		end = end.add(half, scale);
+		scale != 'hour' && (end = end.add(half, scale));
 
 		if (end.isAfter(dayjs())) end = dayjs();
 
@@ -67,13 +68,26 @@ export default (options = {}) => {
 
 			const data = [];
 
-			for (let d = 0; d < s.count; d++) {
-				data.push({
-					x: date.format(scale == 'month' ? "MMM 'YY" : "D MMM"),
-					y: last = K.random(s.min, s.max)
-				});
+			for (let y = 1; y <= s.count; y++) {
+
+				if (type == 'bubble') {
+					for (let x = 0; x < opts.scales.x.count; x++) {
+						// console.log(getHourOfDay(x));
+						data.push({
+							x: x,
+							y: y,
+							r: K.random(s.min, s.max)
+						});
+					}
+				} else {
+					data.push({
+						x: date.format(scale == 'month' ? "MMM 'YY" : (scale == 'hour' ? 'ha' : "D MMM")),
+						y: last = K.random(s.min, s.max)
+					});
+				}
+
 				date = date.clone().add(1, scale);
-				dataValues.push(last);
+				last != undefined && dataValues.push(last);
 			}
 
 			datasets.push(K.extend({}, chartConfig.dataset(type, set.color, ctx, true), {
@@ -85,17 +99,21 @@ export default (options = {}) => {
 			set.index = i;
 		});
 
-		let config = {
+		const options = K.extend(true, {}, chartConfig.options(type));
+
+		if (type != 'bubble') K.extend(true, options, {
+			scales: {
+				y: {
+					suggestedMin: Math.max(0, Math.min.apply(null, dataValues) - 10),
+					suggestedMax: Math.max.apply(null, dataValues) + 10
+				}
+			}
+		});
+
+		const config = {
 			type,
 			data: { datasets },
-			options: K.extend(true, {}, chartConfig.options(type), {
-				scales: {
-					yAxes: {
-						suggestedMin: Math.max(0, Math.min.apply(null, dataValues) - 10),
-						suggestedMax: Math.max.apply(null, dataValues) + 10
-					}
-				}
-			}, opts.options)
+			options: K.extend(true, options, opts.options)
 		}
 
 		chart = new Chart(ctx, config);
