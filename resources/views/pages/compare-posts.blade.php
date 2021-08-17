@@ -17,20 +17,20 @@ $cookie = AppHelper::getPageCookie($page);
           <div class="card-header row">
             <div class="col-md-4">
               <h5 class="card-category">Post Comparison</h5>
-              <h2 class="card-title">Engagement</h2>
+              <h3 class="card-title">Engagement</h3>
             </div>
 
             <div class="row col-md-8 align-items-start justify-content-end pe-0">
 
               <div class="col-auto pe-0">
-                @include('forms.datepicker', ['options' => [
+                @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
                 'id' => 'c-chart-date'
                 ]])
               </div>
 
               {{-- chart day selector --}}
-              @include('forms.chart-radio', ['options' => [
+              @include('forms.chart-radio', ['settings' => [
               'name' => 'c-chart-day',
               'color' => 'warning',
               'buttons' => [[
@@ -45,7 +45,7 @@ $cookie = AppHelper::getPageCookie($page);
               ]])
 
               {{-- chart line selector --}}
-              @include('forms.chart-toggles', ['options' => [
+              @include('forms.chart-toggles', ['settings' => [
               'buttons' => [[
               'id' => 'c-chart-line-1',
               'color' => 'blue',
@@ -87,7 +87,7 @@ $cookie = AppHelper::getPageCookie($page);
           <div class="card-header row">
             <div class="col-3">
               <h5 class="card-category">Post Comparison</h5>
-              <h2 class="card-title">Compare</h2>
+              <h3 class="card-title">Compare</h3>
             </div>
             <div class="row col-9 justify-content-end align-items-start pe-0">
               <div class="col-auto pe-0">

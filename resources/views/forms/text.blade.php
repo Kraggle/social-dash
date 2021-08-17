@@ -1,34 +1,26 @@
-@php $yield = AppHelper::makeId() @endphp
-@extends('forms.group', ['options' => $options, 'yield' => $yield])
+@php
+$yield = AppHelper::makeId();
+$settings = $settings ?? [];
+@endphp
+@extends('forms.group')
 
 @php
-extract(
-    array_merge(
-        [
-            'id' => '',
-            'name' => '',
-            'placeholder' => '',
-            'value' => '',
-            'type' => 'text',
-            'disabled' => false,
-            'readonly' => false,
-            'required' => false,
-            'prepend' => false,
-            'append' => false,
-            'attrs' => [],
-        ],
-        $options,
-    ),
-);
+extract(AppHelper::arrayMerge(AppHelper::formDefaults(), $settings));
 
 $dot = AppHelper::toDot($name);
 $value = old($dot) ?? $value;
 
+if (!$placeholder && $label) {
+    $placeholder = ' ';
+}
+
 @endphp
 
 @section($yield)
-  <input class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}" name="{{ $name }}"
-    id="{{ $id }}" type="{{ $type }}" placeholder="{{ $placeholder }}" value="{{ $value }}"
-    {{ $required ? ' required=true ' : '' }} {{ $disabled ? 'disabled' : '' }}
-    {{ $readonly ? 'readonly' : '' }}{{ AppHelper::makeAttrs($attrs) }} />
+  <div class="input-wrap">
+    <input class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}" name="{{ $name }}" id="{{ $id }}" type="{{ $type }}" placeholder="{{ $placeholder }}" value="{{ $value }}" {{ $required ? ' required=true ' : '' }} {{ $disabled ? 'disabled' : '' }} {{ $readonly ? 'readonly' : '' }} @foreach ($attrs as $attr => $value) {{ $attr }}="{{ $value }}" @endforeach />
+    @if ($label)
+      <label for="{{ $id }}" class="input-label">{{ $label }}</label>
+    @endif
+  </div>
 @endsection

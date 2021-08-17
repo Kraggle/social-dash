@@ -8,27 +8,28 @@
     border-radius: 50%;
     height: 48px;
     width: 48px;
-}
 
-.avatar img {
-    width: 100%;
-    border-radius: 50%;
-}
+    img {
+        width: 100%;
+        border-radius: 50%;
+    }
 
-.avatar + .avatar-content {
-    display: inline-block;
-    margin-left: 0.75rem;
-}
-.avatar-lg {
-    width: 58px;
-    height: 58px;
-    font-size: $font-size-sm;
-}
+    + .avatar-content {
+        display: inline-block;
+        margin-left: 0.75rem;
+    }
 
-.avatar-sm {
-    width: 38px;
-    height: 38px;
-    font-size: $font-size-sm;
+    &.avatar-lg {
+        width: 58px;
+        height: 58px;
+        font-size: $font-size-sm;
+    }
+
+    &.avatar-sm {
+        width: 38px;
+        height: 38px;
+        font-size: $font-size-sm;
+    }
 }
 
 // Overlapped avatars

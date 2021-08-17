@@ -1,6 +1,5 @@
 @extends('layouts.app', [
 'class' => 'forgot-page',
-'classPage' => 'forgot-page',
 'activePage' => 'forgot',
 'titlePage' => __('Forgot Password'),
 ])
@@ -14,7 +13,7 @@
           <div class="card card-auth">
             <div class="card-header header-image">
               <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="">
-              <h1 class="card-title" style="font-size: 3.4rem">{{ __('Forgot Password') }}</h1>
+              <h3 class="card-title" style="font-size: 3.4rem">{{ __('Forgot Password') }}</h3>
             </div>
             <div class="card-body">
               <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">

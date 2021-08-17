@@ -18,20 +18,20 @@ $cookie = AppHelper::getPageCookie($page);
           <div class="card-header row">
             <div class="col-md-4">
               <h5 class="card-category">Overall Comments</h5>
-              <h2 class="card-title">Comments</h2>
+              <h3 class="card-title">Comments</h3>
             </div>
 
             <div class="row col-md-8 align-items-start justify-content-end">
 
               <div class="col-auto pe-0">
-                @include('forms.datepicker', ['options' => [
+                @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
                 'id' => 'c-chart-date'
                 ]])
               </div>
 
               {{-- chart day selector --}}
-              @include('forms.chart-radio', ['options' => [
+              @include('forms.chart-radio', ['settings' => [
               'name' => 'c-chart-day',
               'color' => 'warning',
               'buttons' => [[
@@ -58,7 +58,7 @@ $cookie = AppHelper::getPageCookie($page);
               {{-- chart line selector --}}
               {{-- There is only one line, so we'll hide this with d-none --}}
               {{-- We still need it for the color and tooltip label --}}
-              @include('forms.chart-toggles', ['options' => [
+              @include('forms.chart-toggles', ['settings' => [
               'buttons' => [[
               'id' => 'c-chart-line-1',
               'color' => 'yellow',

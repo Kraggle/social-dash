@@ -145,7 +145,6 @@ export default (options = {}) => {
 	});
 
 	if ($date.length) {
-		$date.flatpickr();
 		$date.on('change', function() {
 			SS.setPageCookie(opts.page, {
 				[$(this).attr('id')]: $(this).val()

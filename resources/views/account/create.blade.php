@@ -22,7 +22,7 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">{{ __('Search') }}</h4>
+                  <h3 class="card-title">{{ __('Search') }}</h3>
                 </div>
                 <div class="card-body">
                   <div class="row justify-content-md-center">
@@ -44,7 +44,7 @@
 
               <div toggle class="card">
                 <div class="card-header">
-                  <h4 class="card-title">{{ __('Account') }}</h4>
+                  <h3 class="card-title">{{ __('Account') }}</h3>
                 </div>
                 <div class="card-body">
                   <div class="row justify-content-md-center">
@@ -54,7 +54,7 @@
                       <label for="input-username">
                         {{ __('Instagram Username') }}
                       </label>
-                      @include('forms.text', ['options' => [
+                      @include('forms.text', ['settings' => [
                       'name' => 'username',
                       'id' => 'input-username',
                       'prepend' => ['icon' => 'fal fa-hashtag'],
@@ -68,7 +68,7 @@
                       <label for="input-pk">
                         {{ __('Instagram ID') }}
                       </label>
-                      @include('forms.text', ['options' => [
+                      @include('forms.text', ['settings' => [
                       'name' => 'pk',
                       'id' => 'input-pk',
                       'required' => true,
@@ -83,7 +83,7 @@
                         <label for="select-team-id">
                           {{ __('Add to Team') }}
                         </label>
-                        @include('forms.select', ['options' => [
+                        @include('forms.select', ['settings' => [
                         'name' => 'team_id',
                         'value' => 1,
                         'id' => 'select-team-id',
@@ -100,23 +100,21 @@
                 </div>
               </div>
 
-              @if ($plus)
-                <div toggle class="card">
-                  <div class="card-header">
-                    <h4 class="card-title">{{ __('Pricing Options') }}</h4>
-                  </div>
-                  <div class="card-body">
-                    <div class="row justify-content-md-center">
+              <div toggle class="card @if (!$plus) card-hidden @endif">
+                <div class="card-header">
+                  <h3 class="card-title">{{ __('Pricing Options') }}</h3>
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-md-center">
 
-                      {{-- settings --}}
-                      <div class="col-sm-11">
-                        @include('forms.settings', ['settings' => $settings])
-                      </div>
-
+                    {{-- settings --}}
+                    <div class="col-sm-11">
+                      @include('forms.settings', ['settings' => $settings, 'plus' => $plus])
                     </div>
+
                   </div>
                 </div>
-              @endif
+              </div>
             </div>
 
             <div class="col-md-4">
@@ -125,9 +123,9 @@
                   <a href="{{ route('account.index') }}" class="btn btn-sm btn-warning btn-gradient">{{ __('Back to list') }}</a>
                 </div>
               </div>
-              <div class="card card-pricing card-primary card-white">
+              <div class="card card-pricing card-primary">
                 <div class="card-body">
-                  <h1 class="card-title">payment</h1>
+                  <h3 class="card-title">payment</h3>
                   <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Image">
                   <ul class="list-group">
                     <li class="list-group-item"><span update="followers">98k</span> followers</li>
@@ -146,7 +144,7 @@
                   </div>
                 </div>
                 <div class="card-footer text-center mb-3 mt-3">
-                  <button class="btn btn-round btn-just-icon btn-primary btn-gradient">Pay Now</button>
+                  <button class="btn btn-primary btn-gradient rounded-pill">Pay Now</button>
                 </div>
               </div>
 

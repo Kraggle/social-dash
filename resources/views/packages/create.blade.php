@@ -12,7 +12,7 @@ Management')])
 
             <div class="card ">
               <div class="card-header">
-                <h4 class="card-title">{{ __('Add Package') }}</h4>
+                <h3 class="card-title">{{ __('Add Package') }}</h3>
               </div>
               <div class="card-body ">
                 <div class="row">
@@ -27,7 +27,7 @@ Management')])
                     {{ __('Name') }}
                   </label>
                   <div class="col-sm-8">
-                    @include('forms.text', ['options' => [
+                    @include('forms.text', ['settings' => [
                     'name' => 'name',
                     'placeholder' => __('Name'),
                     'id' => 'input-name',
@@ -42,7 +42,7 @@ Management')])
                     {{ __('Key') }}
                   </label>
                   <div class="col-sm-8">
-                    @include('forms.text', ['options' => [
+                    @include('forms.text', ['settings' => [
                     'name' => 'key',
                     'placeholder' => __('starter'),
                     'id' => 'input-key',
@@ -55,7 +55,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label pe-0 text-end" for="input-description">{{ __('Description') }}</label>
                   <div class="col-sm-8">
-                    @include('forms.textarea', ['options' => [
+                    @include('forms.textarea', ['settings' => [
                     'name' => 'description',
                     'placeholder' => __('Description'),
                     'id' => 'input-description',
@@ -68,7 +68,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label pe-0 text-end" for="input-includes">{{ __('Includes') }}</label>
                   <div class="col-sm-8">
-                    @include('forms.textarea', ['options' => [
+                    @include('forms.textarea', ['settings' => [
                     'name' => 'options[includes]',
                     'placeholder' => __('A comma separated list of benefits of the package. Include (+) at the
                     beginning format to set an icon.'),
@@ -82,7 +82,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label pe-0 text-end" for="number-cost">{{ __('Cost') }}</label>
                   <div class="col-sm-8">
-                    @include('forms.number', ['options' => [
+                    @include('forms.number', ['settings' => [
                     'name' => 'cost',
                     'placeholder' => '25.00',
                     'id' => 'number-cost',
@@ -97,7 +97,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label pe-0 text-end" for="input-stripe-id">{{ __('Stripe ID') }}</label>
                   <div class="col-sm-8">
-                    @include('forms.text', ['options' => [
+                    @include('forms.text', ['settings' => [
                     'name' => 'stripe_id',
                     'placeholder' => 'prod_oi34...',
                     'id' => 'input-stripe-id'
@@ -109,7 +109,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label pe-0 text-end" for="input-price-id">{{ __('Price ID') }}</label>
                   <div class="col-sm-8">
-                    @include('forms.text', ['options' => [
+                    @include('forms.text', ['settings' => [
                     'name' => 'price_id',
                     'placeholder' => 'price_w5u2...',
                     'id' => 'input-price-id'

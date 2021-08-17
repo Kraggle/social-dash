@@ -24,36 +24,36 @@ $(() => {
         $copy.find('input').each(function() {
             $(this).attr('name', $(this).attr('name').replace('[0]', `[${count}]`));
             if ($(this).attr('type') == 'checkbox') {
-                const $switch = $(this).closest('div.bootstrap-switch'),
+                const $switch = $(this).closest('div.switch.btn'),
                     $input = $(this).detach();
                 $switch.prev('input').attr('name', $(this).attr('name').replace('[0]', `[${count}]`));
                 $switch.before($input);
                 $switch.remove();
                 $input.prop('checked', false);
-                $input.bootstrapSwitch();
+                $input.get(0).switchButton();
             } else
                 $(this).val('');
         });
     });
 
     // Used to ensure only one string option can be default
-    $('#string-options').on('switchChange.bootstrapSwitch', 'input[type=checkbox]', function() {
+    $('#string-options').on('change', 'input[type=checkbox]', function() {
         if (!$(this).is(':checked')) return;
-        $('#string-options input:checked').not($(this)).bootstrapSwitch('state', false);
+        $('#string-options input:checked').not($(this)).get(0).switchButton('off');
     });
 
     // Used to switch between variable types
     $('#select-type').on('change', function() {
         const selected = $('option:selected', this).val();
         $('div[type]').addClass('d-none').find('input').each(function() {
-            if ($(this).hasClass('bootstrap-switch'))
-                $(this).bootstrapSwitch('disabled', true);
+            if ($(this).is('[data-toggle=switchbutton]'))
+                $(this).get(0).switchButton('disable');
             else
                 $(this).prop('disabled', true);
         });
         $(`div[type=${selected}]`).removeClass('d-none').find('input').each(function() {
-            if ($(this).hasClass('bootstrap-switch'))
-                $(this).bootstrapSwitch('disabled', false);
+            if ($(this).is('[data-toggle=switchbutton]'))
+                $(this).get(0).switchButton('enable');
             else
                 $(this).prop('disabled', false);
         });
@@ -67,7 +67,7 @@ $(() => {
             els = $(`[repeat${num}]`).first().prev().nextUntil(`.btn[repeat${num}]`);
         if (total.length < 2) {
             $('input[type=text]', els).val('');
-            $('input[type=checkbox]', els).bootstrapSwitch('state', false);
+            $('input[type=checkbox]', els).switchButton('off');
         } else {
             els.remove();
             let i = 0;
@@ -87,7 +87,7 @@ $(() => {
         }
     });
 
-    $('[data-disabler]').on('switchChange.bootstrapSwitch', disablerElements);
+    $('[data-disabler]').on('change', disablerElements);
     function disablerElements() {
         $(this).each(function() {
             const info = $(this).data('disabler'),

@@ -1,5 +1,5 @@
 /* Form controls */
-@include form-control-placeholder(rgba($black, 0.4), 1);
+@include form-control-placeholder(rgba($dark-states, 0.4), 1);
 
 .form-select,
 .form-control {
@@ -22,21 +22,6 @@
             border: 1px solid $primary;
             border-left: none;
             background-color: transparent;
-        }
-    }
-
-    .has-success &,
-    .has-error &,
-    .has-success &:focus,
-    .has-error &:focus {
-        @include box-shadow(none);
-    }
-
-    .has-danger &,
-    .has-success & {
-        &.form-control-success,
-        &.form-control-danger {
-            background-image: none;
         }
     }
 
@@ -63,68 +48,55 @@
     line-height: 1;
 }
 
-.has-success .form-control:focus,
-.has-success.input-group-focus .input-group-text {
-    border-color: darken($success, 10%);
-}
+.form-group,
+.input-group {
+    &.has-danger,
+    &.has-success {
+        .input-wrap {
+            position: relative;
 
-.has-danger .form-control,
-.has-danger .input-group-text,
-.has-danger.input-group-focus .input-group-text {
-    border-color: lighten($danger-states, 5%);
-    color: $danger-states;
-    background-color: rgba(222, 222, 222, 0.1);
+            &::after {
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 300;
+                content: '\f00c';
+                display: block;
+                position: absolute;
+                right: calc(#{$input-padding-y} * 2);
+                top: 50%;
+                transform: translateY(-50%);
+                color: $success;
+                font-size: $input-font-size;
+            }
+        }
 
-    &:focus {
-        background-color: transparent;
-    }
-}
+        &[class*='-sm'] {
+            .input-wrap {
+                &::after {
+                    right: calc(#{$input-padding-y-sm} * 2);
+                    font-size: $input-font-size-sm;
+                }
+            }
+        }
 
-// .has-danger,
-.has-success {
-    &:after {
-        font-family: 'nucleo';
-        content: '\ea1b';
-        display: inline-block;
-        position: absolute;
-        right: 20px;
-        top: 13px;
-        color: $success;
-        font-size: 11px;
-    }
-
-    &.form-control-lg {
-        &:after {
-            font-size: 13px;
-            top: 24px;
+        &[class*='-lg'] {
+            .input-wrap {
+                &::after {
+                    right: calc(#{$input-padding-y-lg} * 2);
+                    font-size: $input-font-size-lg;
+                }
+            }
         }
     }
 
-    &.has-label {
-        &:after {
-            top: 37px;
+    &.has-danger {
+        .input-wrap {
+            &::after {
+                content: '\f00d';
+                color: $danger;
+            }
         }
     }
-
-    &.form-check:after {
-        display: none !important;
-    }
-
-    &.form-check .form-check-label {
-        color: $success;
-    }
 }
-
-// .has-danger {
-//     &:after {
-//         content: "\ea48";
-//         color: $danger-states;
-//     }
-
-//     &.form-check .form-check-label {
-//         color: $danger-states;
-//     }
-// }
 
 @include media-breakpoint-down(xs) {
     .form-horizontal .col-form-label,

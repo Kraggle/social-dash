@@ -10,7 +10,7 @@ Management')])
             {{-- Account management - admin only --}}
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title d-inline-block">{{ __('Accounts') }}</h4>
+                <h3 class="card-title d-inline-block">{{ __('Accounts') }}</h3>
                 @can('create', App\Models\Account::class)
                   <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">{{ __('Add account') }}</a>
                 @endcan
@@ -69,7 +69,7 @@ Management')])
             @define($accounts = $team->accounts)
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title d-inline-block">{{ __('Instagram Accounts') }}</h4>
+                <h3 class="card-title d-inline-block">{{ __('Instagram Accounts') }}</h3>
                 @can('add-account', $team)
                   <a href="{{ route('account.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">
                     {{ __('Add account') }}

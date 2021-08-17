@@ -6,12 +6,15 @@ import handler from './imports/handlers.js';
 
 $(() => {
 
+	Theme.initTextareas();
 	Theme.initScrollbars();
 	Theme.initNavbar();
 	Theme.initSidebar();
 	Theme.initTooltips();
 	Theme.initSelects();
-	Theme.initSwitches();
+	Theme.initForms();
+	Theme.initDatePickers();
+	Theme.initInputLabels();
 
 	// transition the cards onto the screen
 	// const randMax = 300, randMin = 0;

@@ -1,24 +1,21 @@
-@php $yield = AppHelper::makeId() @endphp
-@extends('forms.group', ['options' => $options, 'yield' => $yield])
+@php
+$yield = AppHelper::makeId();
+$settings = $settings ?? [];
+@endphp
+@extends('forms.group')
 
 @php
 extract(
-    array_merge(
+    AppHelper::arrayMerge(
+        AppHelper::formDefaults(),
         [
-            'id' => '',
-            'name' => '',
-            'placeholder' => '',
-            'value' => '',
-            'options' => [],
             'from' => [],
-            'disabled' => false,
-            'readonly' => false,
-            'required' => false,
-            'prepend' => false,
-            'append' => false,
-            'attrs' => [],
+            'options' => [],
+            'group' => [
+                'class' => ['has-value'],
+            ],
         ],
-        $options,
+        $settings,
     ),
 );
 
@@ -29,8 +26,7 @@ $from = (object) $from;
 @endphp
 
 @section($yield)
-  <select class="selectpicker" data-style="btn" id="{{ $id }}" name="{{ $name }}"
-    {{ $disabled ? 'disabled' : '' }} {{ $readonly ? 'readonly' : '' }} {{ AppHelper::makeAttrs($attrs) }}>
+  <select class="selectpicker" data-style="btn" id="{{ $id }}" name="{{ $name }}" {{ $disabled ? 'disabled' : '' }} {{ $readonly ? 'readonly' : '' }} @foreach ($attrs as $attr => $value) {{ $attr }}="{{ $value }}" @endforeach>
     @if (isset($from->array) && isset($from->value) && isset($from->display))
       @foreach ($from->array as $option)
         <option value="{{ $option->{$from->value} }}" {{ AppHelper::selected($value, $option->{$from->value}) }}>

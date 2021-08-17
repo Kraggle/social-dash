@@ -1,6 +1,5 @@
 @extends('layouts.app', [
 'class' => 'login-page',
-'classPage' => 'login-page',
 'activePage' => 'login',
 'titlePage' => __('Log in'),
 ])
@@ -36,23 +35,32 @@
           <div class="card card-auth">
             <div class="card-header header-image">
               <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="">
-              <h1 class="card-title">{{ __('Log in') }}</h1>
+              <h3 class="card-title">{{ __('Log in') }}</h3>
             </div>
-            <div class="card-body">
-              <div class="input-group mb-3{{ $errors->has('email') ? ' has-danger' : '' }}">
-                <div class="input-group-text">
-                  <i class="fal fa-envelope"></i>
-                </div>
-                <input type="email" class="form-control" id="exampleEmails" name="email" placeholder="{{ __('Email...') }}" value="{{ old('email', 'admin@white.com') }}" required>
+            <div class="card-body row row-sm">
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'type' => 'email',
+                'name' => 'email',
+                'placeholder' => __('Email...'),
+                'value' => old('email', 'admin@white.com'),
+                'id' => 'input-email',
+                'prepend' => ['icon' => 'fal fa-envelope']
+                ]])
               </div>
-              @include('alerts.feedback', ['field' => 'email'])
-              <div class="input-group mb-0{{ $errors->has('password') ? ' has-danger' : '' }}">
-                <div class="input-group-text">
-                  <i class="fal fa-lock-alt"></i>
-                </div>
-                <input type="password" class="form-control" id="examplePassword" name="password" placeholder="{{ __('Password...') }}" value="secret" required>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'type' => 'password',
+                'name' => 'password',
+                'placeholder' => __('Password...'),
+                'value' => 'secret',
+                'id' => 'input-password',
+                'prepend' => ['icon' => 'fal fa-lock-alt']
+                ]])
               </div>
-              @include('alerts.feedback', ['field' => 'password'])
+
             </div>
             <div class="card-footer">
               <div class="d-grid">
@@ -83,9 +91,5 @@
 @endsection
 
 @push('js')
-  <script>
-    // $(document).ready(function() {
-    //   demo.checkFullPageBackgroundImage();
-    // });
-  </script>
+  <script type="module" src="{{ asset('js/pages/auth') }}/login.js"></script>
 @endpush

@@ -10,7 +10,7 @@
             @method('put')
 
             <div class="card-header">
-              <h5 class="card-title">{{ __('Edit Profile') }}</h5>
+              <h3 class="card-title">{{ __('Edit Profile') }}</h3>
             </div>
             <div class="card-body">
               <div class="row">
@@ -26,12 +26,12 @@
                     </div>
                     <div class="fileinput-preview fileinput-exists thumbnail img-circle" data-trigger="fileinput"></div>
                     <div class="d-grid">
-                      <span class="btn btn-round btn-indigo btn-file">
+                      <span class="btn rounded-pill btn-indigo btn-file">
                         <span class="fileinput-new">{{ __('Add Photo') }}</span>
                         <span class="fileinput-exists">{{ __('Change') }}</span>
                         <input type="file" name="photo" id="input-picture" />
                       </span>
-                      <a href="#pablo" class="btn btn-danger btn-gradient btn-round fileinput-exists mt-2" data-dismiss="fileinput"><i class="fa fa-times"></i> {{ __('Remove') }}</a>
+                      <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists mt-2" data-dismiss="fileinput"><i class="fa fa-times"></i> {{ __('Remove') }}</a>
                     </div>
                     @include('alerts.feedback', ['field' => 'photo'])
                   </div>
@@ -63,7 +63,7 @@
 
         <div class="card">
           <div class="card-header">
-            <h5 class="card-title">{{ __('Change password') }}</h5>
+            <h3 class="card-title">{{ __('Change password') }}</h3>
           </div>
           <div class="card-body">
             <form method="post" action="{{ route('profile.password') }}">
@@ -126,13 +126,13 @@
           </div>
           <div class="card-footer">
             <div class="button-container">
-              <button href="javascript:void(0)" class="btn btn-icon btn-round btn-facebook">
+              <button href="javascript:void(0)" class="btn btn-icon rounded-pill btn-facebook">
                 <i class="fab fa-facebook"></i>
               </button>
-              <button href="javascript:void(0)" class="btn btn-icon btn-round btn-twitter">
+              <button href="javascript:void(0)" class="btn btn-icon rounded-pill btn-twitter">
                 <i class="fab fa-twitter"></i>
               </button>
-              <button href="javascript:void(0)" class="btn btn-icon btn-round btn-google">
+              <button href="javascript:void(0)" class="btn btn-icon rounded-pill btn-google">
                 <i class="fab fa-google-plus"></i>
               </button>
             </div>

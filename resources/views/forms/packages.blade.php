@@ -19,12 +19,11 @@ $colors = ['danger', 'info', 'warning', 'success', 'primary'];
     @endphp
 
     <div class="col-sm-4 package-column">
-      <input class="d-none" type="radio" name="{{ $name }}" value={{ $package->stripe_id }}
-        id="{{ $id }}" {{ $checked }}>
+      <input class="d-none" type="radio" name="{{ $name }}" value={{ $package->stripe_id }} id="{{ $id }}" {{ $checked }}>
       <label class="package-button" for="{{ $id }}">
-        <div class="card card-pricing card-package card-white">
+        <div class="card card-pricing card-package">
           <div class="card-body">
-            <h1 class="card-title mt-3" style="font-size:4em">{{ $package->name }}</h1>
+            <h3 class="card-title mt-3" style="font-size:4em">{{ $package->name }}</h3>
             <img class="card-img" src="{{ asset('images') }}/card-{{ $color }}.png" alt="Image">
             <ul class="list-group">
               @foreach ($package->access as $access => $on)
@@ -43,7 +42,7 @@ $colors = ['danger', 'info', 'warning', 'success', 'primary'];
             </div>
           </div>
           <div class="card-footer text-center mb-3 mt-3">
-            <a href="javascript:void(0)" class="btn btn-round btn-just-icon btn-{{ $color }}"></a>
+            <a href="javascript:void(0)" class="btn btn-{{ $color }} rounded-pill"></a>
           </div>
         </div>
       </label>

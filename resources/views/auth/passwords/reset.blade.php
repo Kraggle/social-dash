@@ -1,6 +1,5 @@
 @extends('layouts.app', [
 'class' => 'reset-page',
-'classPage' => 'reset-page',
 'activePage' => 'reset',
 'titlePage' => __('Password Reset'),
 ])
@@ -16,7 +15,7 @@
           <div class="card card-auth">
             <div class="card-header header-image">
               <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="">
-              <h1 class="card-title" style="font-size: 3.4rem">{{ __('Password Reset') }}</h1>
+              <h3 class="card-title" style="font-size: 3.4rem">{{ __('Password Reset') }}</h3>
             </div>
             <div class="card-body">
               <div class="input-group mb-4{{ $errors->has('email') ? ' has-danger' : '' }}">

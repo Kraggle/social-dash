@@ -8,7 +8,7 @@ Scheduling')])
 
         <div class="col-12 card">
           <div class="card-header">
-            <h4 class="card-title">{{ __('Scheduling') }}</h4>
+            <h3 class="card-title">{{ __('Scheduling') }}</h3>
           </div>
 
           <div class="card-body row">
@@ -25,7 +25,7 @@ Scheduling')])
               </li>
             </ul>
 
-            <div class="col-12 tab-content tab-space" id="tab-content">
+            <div class="col-12 tab-content" id="tab-content">
 
               <div class="tab-pane fade show active" id="calendar-pane" role="tabpanel" aria-labelledby="calendar-tab">
                 <div id="full-calendar"></div>

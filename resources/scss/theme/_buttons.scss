@@ -2,55 +2,31 @@
     outline: none !important;
 
     &.btn-icon {
+        position: relative;
         height: $icon-size-regular;
-        min-width: $icon-size-regular;
         width: $icon-size-regular;
         padding: 0;
-        font-size: $icon-font-size-regular;
         overflow: hidden;
-        position: relative;
         line-height: normal;
-
-        &.btn-simple {
-            padding: 0;
-            border-color: transparent;
-        }
 
         &.btn-sm {
             height: $icon-size-sm;
-            min-width: $icon-size-sm;
             width: $icon-size-sm;
-
-            i {
-                font-size: $icon-font-size-sm;
-            }
         }
 
         &.btn-lg {
             height: $icon-size-lg;
-            min-width: $icon-size-lg;
             width: $icon-size-lg;
-
-            i {
-                font-size: $icon-font-size-lg;
-            }
         }
 
         &:not(.btn-footer) {
             i {
                 position: absolute;
-                font-size: 1em;
                 top: 50%;
                 left: 50%;
-                transform: translate(-12px, -12px);
-                line-height: 1.5626rem;
-                width: 24px;
+                transform: translate(-50%, -50%);
             }
         }
-    }
-
-    &.no-border {
-        // border-color: transparent;
     }
 }
 
@@ -75,97 +51,6 @@
     }
 }
 
-// Apply the mixin to the buttons
-// .btn-default { @include btn-styles($default-color, $default-states-color); }
-// .btn-primary {
-//     @include btn-styles($primary, $primary-states);
-// }
-
-// .btn-success {
-//     @include btn-styles($success, $success-states);
-// }
-
-// .btn-info {
-//     @include btn-styles($info, $info-states);
-// }
-
-// .btn-warning {
-//     @include btn-styles($warning, $warning-states);
-
-//     &:not(:disabled):not(.disabled):active {
-//         color: $white;
-//     }
-// }
-
-// .btn-danger {
-//     @include btn-styles($danger, $danger-states);
-// }
-
-// .btn-neutral {
-//     @include btn-styles($white, $white);
-// }
-
-.btn {
-    &:disabled,
-    &[disabled],
-    &.disabled {
-        @include opacity(0.5);
-
-        pointer-events: none;
-    }
-}
-
-.btn-simple {
-    border: $border;
-    border-color: $default;
-    box-shadow: none;
-    padding: ($padding-btn-vertical - 1) ($padding-round-horizontal - 1);
-    background-color: transparent;
-}
-
-.btn-simple,
-.btn-link {
-    &.disabled,
-    &:disabled,
-    &[disabled],
-    fieldset[disabled] & {
-        &,
-        &:hover,
-        &:focus,
-        &.focus,
-        &:active,
-        &.active {
-            background: transparent;
-        }
-    }
-}
-
-// .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
-//     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-// }
-
-.btn-link {
-    border: $none;
-    padding: $padding-base-vertical $padding-base-horizontal;
-    background: transparent;
-    color: $gray-600;
-    font-weight: $font-weight-bold;
-    outline: none !important;
-    text-decoration: none;
-
-    &:hover {
-        color: lighten($gray-600, 20%);
-    }
-}
-
-.btn-wd {
-    min-width: 140px;
-}
-
-.btn-group.select {
-    width: 100%;
-}
-
 .btn-group {
     .btn.active {
         box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
@@ -177,30 +62,10 @@
     }
 }
 
-.btn-group.select .btn {
-    text-align: left;
-}
-
-.btn-group.select .caret {
-    position: absolute;
-    top: 50%;
-    margin-top: -1px;
-    right: 8px;
-}
-
-.btn-round {
-    border-width: $border-thin;
-    border-radius: $btn-round-radius;
-
-    &.btn-simple {
-        padding: ($padding-btn-vertical - 1) ($padding-round-horizontal - 1);
-    }
-}
-
-.no-caret {
-    &.dropdown-toggle::after {
-        display: none;
-    }
+.btn-link {
+    font-weight: $btn-font-weight;
+    text-decoration: none;
+    border-color: transparent;
 }
 
 .btn {
@@ -211,6 +76,14 @@
                 map-get($brand-states, '#{$color}-states')
             );
         }
+    }
+
+    &:disabled,
+    &[disabled],
+    &.disabled {
+        @include opacity(0.5);
+
+        pointer-events: none;
     }
 
     &.btn-double-padding {
@@ -241,12 +114,5 @@
         .btn-text {
             display: none;
         }
-    }
-}
-
-@include media-breakpoint-down(md) {
-    .btn-group .btn {
-        padding-left: $padding-round-horizontal;
-        padding-right: $padding-round-horizontal;
     }
 }

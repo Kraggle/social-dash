@@ -14,7 +14,7 @@ Permissions')])
 
                 <div class="card">
                   <div class="card-header row">
-                    <h4 class="card-title col-md-6">{{ __('Team Member') }}</h4>
+                    <h3 class="card-title col-md-6">{{ __('Team Member') }}</h3>
 
                     <div class="col-md-6 mb-3 text-end">
                       <a href="{{ route('team.index') }}" class="btn btn-sm btn-warning btn-gradient">{{ __('Back to list') }}</a>
@@ -30,7 +30,7 @@ Permissions')])
                         <span class="form-wrap-title">Team Members</span>
 
                         <div class="col-sm-12">
-                          @include('forms.check', ['options' => [
+                          @include('forms.check', ['settings' => [
                           'name' => 'permission[member][create]',
                           'placeholder' => 'Add team members',
                           'value' => $member->permission->member->create ?? false
@@ -38,7 +38,7 @@ Permissions')])
                         </div>
 
                         <div class="col-sm-12">
-                          @include('forms.check', ['options' => [
+                          @include('forms.check', ['settings' => [
                           'name' => 'permission[member][update]',
                           'placeholder' => 'Set team member permissions',
                           'value' => $member->permission->member->update ?? false
@@ -46,7 +46,7 @@ Permissions')])
                         </div>
 
                         <div class="col-sm-12">
-                          @include('forms.check', ['options' => [
+                          @include('forms.check', ['settings' => [
                           'name' => 'permission[member][delete]',
                           'placeholder' => 'Remove team members',
                           'value' => $member->permission->member->delete ?? false
@@ -60,7 +60,7 @@ Permissions')])
                         <span class="form-wrap-title">Instagram Accounts</span>
 
                         <div class="col-sm-12">
-                          @include('forms.check', ['options' => [
+                          @include('forms.check', ['settings' => [
                           'name' => 'permission[account][create]',
                           'placeholder' => 'Add instagram accounts',
                           'value' => $member->permission->account->create ?? false
@@ -68,7 +68,7 @@ Permissions')])
                         </div>
 
                         <div class="col-sm-12">
-                          @include('forms.check', ['options' => [
+                          @include('forms.check', ['settings' => [
                           'name' => 'permission[account][update]',
                           'placeholder' => 'Update instagram accounts',
                           'value' => $member->permission->account->update ?? false
@@ -76,7 +76,7 @@ Permissions')])
                         </div>
 
                         <div class="col-sm-12">
-                          @include('forms.check', ['options' => [
+                          @include('forms.check', ['settings' => [
                           'name' => 'permission[account][delete]',
                           'placeholder' => 'Remove instagram accounts',
                           'value' => $member->permission->account->delete ?? false
@@ -90,7 +90,7 @@ Permissions')])
                         <span class="form-wrap-title">Clients</span>
 
                         <div class="col-sm-12">
-                          @include('forms.check', ['options' => [
+                          @include('forms.check', ['settings' => [
                           'name' => 'permission[client][add]',
                           'placeholder' => 'Share with clients',
                           'value' => $member->permission->client->add ?? false
@@ -98,7 +98,7 @@ Permissions')])
                         </div>
 
                         <div class="col-sm-12">
-                          @include('forms.check', ['options' => [
+                          @include('forms.check', ['settings' => [
                           'name' => 'permission[client][remove]',
                           'placeholder' => 'Unshare with clients',
                           'value' => $member->permission->client->remove ?? false

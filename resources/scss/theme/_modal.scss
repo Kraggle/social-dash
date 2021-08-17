@@ -73,14 +73,6 @@
 .modal {
     .modal-login {
         max-width: 320px;
-
-        .card-login {
-            .logo-container {
-                width: 65px;
-                margin-bottom: 38px;
-                margin-top: 27px;
-            }
-        }
     }
 
     &.modal-mini {
@@ -94,8 +86,6 @@
         }
 
         &.show .modal-dialog {
-            -webkit-transform: translate(0, 30%);
-            -o-transform: translate(0, 30%);
             transform: translate(0, 30%);
         }
 
@@ -126,7 +116,7 @@
             margin-top: -10px;
         }
 
-        &[class*="modal-profile-"] {
+        &[class*='modal-profile-'] {
             i {
                 color: $white;
             }

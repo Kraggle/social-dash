@@ -1,9 +1,8 @@
 @php
-$titlePage = isset($titlePage) ? $titlePage : '404 Error';
-$menuParent = isset($menuParent) ? $menuParent : '';
-$activePage = isset($activePage) ? $activePage : '';
-$class = isset($class) ? $class : '';
-$classPage = isset($classPage) ? $classPage : '';
+$titlePage = $titlePage ?? '404 Error';
+$menuParent = $menuParent ?? '';
+$activePage = $activePage ?? '';
+$class = $class ?? '';
 @endphp
 
 <!DOCTYPE html>

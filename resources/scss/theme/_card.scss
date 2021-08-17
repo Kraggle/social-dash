@@ -4,29 +4,11 @@
     margin-bottom: $grid-gutter-width;
     box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
 
-    // &:not(.no-animate) {
-    //     opacity: 0;
-    //     visibility: hidden;
-    // }
-
     .pagination .page-item:not(.active) .page-link {
         color: $dark-states;
 
         &:hover {
             background: rgba($gray-800, 0.1);
-        }
-    }
-
-    &:not(.card-wizard).nav-pills .nav-item .nav-link {
-        color: $nav-gray;
-        background-color: hsla(0, 0%, 87%, 0.3);
-
-        &:not(.active):hover {
-            background: hsla(0, 0%, 87%, 0.5);
-        }
-
-        &.active {
-            color: $white;
         }
     }
 
@@ -46,22 +28,6 @@
         }
     }
 
-    &.card-contributions {
-        span {
-            color: $gray-800;
-        }
-
-        .bootstrap-switch-container {
-            span {
-                color: $white;
-            }
-        }
-    }
-
-    label:not(.btn) {
-        color: $default;
-    }
-
     .card-title {
         margin-bottom: 0.75rem;
         color: $black;
@@ -76,7 +42,7 @@
         }
 
         .card-title {
-            color: $white;
+            color: $dark-states;
             text-transform: inherit;
             font-weight: $font-weight-light;
             margin-bottom: 0.75rem;
@@ -133,89 +99,8 @@
     .has-danger {
         .form-control,
         .input-group-text {
-            border-color: $danger-states;
+            border-color: $danger;
         }
-    }
-
-    // .form-control {
-    //     color: $black;
-    //     border-color: rgba($dark-states, 0.2);
-
-    //     &:focus {
-    //         border-color: $primary;
-    //     }
-    // }
-
-    label:not(.btn) {
-        color: $default;
-    }
-
-    // .form-group.no-border,
-    // .input-group.no-border {
-    //     .form-control,
-    //     .input-group-text {
-    //         background-color: $opacity-gray-3;
-
-    //         &:focus,
-    //         &:active,
-    //         &:active {
-    //             background-color: $opacity-gray-5;
-    //         }
-    //     }
-
-    //     .form-control {
-    //         &:focus {
-    //             & + .input-group-text {
-    //                 background-color: transparent;
-    //             }
-    //         }
-    //     }
-    // }
-
-    // .input-group[disabled] {
-    //     .input-group-text {
-    //         background-color: $opacity-gray-3;
-    //     }
-    // }
-
-    // .form-control[disabled],
-    // .form-control[readonly],
-    // fieldset[disabled] .form-control {
-    //     background: $opacity-gray-3;
-    // }
-
-    // .input-group-focus {
-    //     .input-group-text,
-    //     .form-control {
-    //         background-color: $white;
-    //         border-color: $primary;
-    //     }
-
-    //     &.no-border {
-    //         .input-group-text {
-    //             background-color: $opacity-gray-5;
-    //         }
-    //     }
-    // }
-
-    // .input-group-text {
-    //     border-right: none;
-    //     border-left: none;
-    // }
-
-    // .has-danger .form-control:focus,
-    // .has-success.input-group-focus .input-group-text {
-    //     border-color: $danger-states;
-    // }
-
-    // .has-success .form-control:focus,
-    // .has-success.input-group-focus .input-group-text {
-    //     border-color: darken($success, 10%);
-    // }
-
-    &.card-plain {
-        background: transparent;
-        box-shadow: none;
     }
 
     .image {
@@ -232,9 +117,10 @@
         margin-bottom: 15px;
     }
 
-    label:not(.btn) {
+    label:not(.btn):not(.input-label) {
         font-size: $font-size-sm;
         margin-bottom: 5px;
+        color: $default;
     }
 
     .card-footer {
@@ -255,43 +141,6 @@
         }
     }
 
-    &.card-pricing:not(.card-white) {
-        ul li {
-            color: $white;
-        }
-    }
-
-    &:not(.card-pricing) {
-        &.card-wizard {
-            .card-body {
-                background: $white;
-            }
-
-            .card-footer {
-                background-color: $white !important;
-            }
-
-            .nav-pills .nav-item .nav-link p {
-                color: $dark-states;
-            }
-        }
-
-        &.card-stats {
-            hr {
-                border-color: rgba($dark-states, 0.1);
-            }
-
-            .card-title {
-                color: $dark-states;
-            }
-
-            .card-category,
-            .stats {
-                color: $card-stats-gray;
-            }
-        }
-    }
-
     .card-describe {
         color: $dark-states;
         font-weight: 300;
@@ -300,39 +149,6 @@
 
         i {
             margin-right: 5px;
-        }
-    }
-
-    &.card-subscribe {
-        padding: 30px;
-
-        .fade-info {
-            padding: 20px 100px 10px;
-            color: $gray-600;
-        }
-
-        .btn {
-            font-size: 18px;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-    }
-
-    &.card-payment {
-        padding: 30px 40px;
-
-        .info-text {
-            text-align: center;
-        }
-
-        .btn-link {
-            position: absolute;
-            color: $gray-400;
-            font-size: 18px;
-            top: 0;
-            right: 0;
-            margin: 10px;
         }
     }
 }

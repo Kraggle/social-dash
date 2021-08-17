@@ -25,7 +25,7 @@
                 <span class="card-describe">
                   <i class="fal fa-clock"></i> 2 days ago
                 </span>
-                <button class="btn btn-sm btn-round btn-indigo d-none">Reply</button>
+                <button class="btn btn-sm btn-indigo rounded-pill d-none">Reply</button>
               </div>
             </div>
           </li>
@@ -45,7 +45,7 @@
                 <span class="card-describe">
                   <i class="fal fa-clock"></i> 1 day ago
                 </span>
-                <button class="btn btn-sm btn-round btn-indigo">Reply</button>
+                <button class="btn btn-sm btn-indigo rounded-pill">Reply</button>
               </div>
           </li>
 
@@ -64,7 +64,7 @@
                 <span class="card-describe">
                   <i class="fal fa-clock"></i> 16 hours ago
                 </span>
-                <button class="btn btn-sm btn-round btn-indigo d-none">Reply</button>
+                <button class="btn btn-sm btn-indigo rounded-pill d-none">Reply</button>
               </div>
             </div>
           </li>
@@ -85,7 +85,7 @@
                 <span class="card-describe">
                   <i class="fal fa-clock"></i> 4 hours ago
                 </span>
-                <button class="btn btn-sm btn-round btn-indigo">Reply</button>
+                <button class="btn btn-sm btn-indigo rounded-pill">Reply</button>
               </div>
             </div>
           </li>

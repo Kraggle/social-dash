@@ -156,7 +156,7 @@
         </div>
         <div class="card card-contributions">
           <div class="card-body">
-            <h1 class="card-title">6,332</h1>
+            <h3 class="card-title">6,332</h3>
             <h3 class="card-category">Total Public Contributions</h3>
             <p class="card-description">After a very successful two-year run, we’re going to be changing the way that
               contributions work.</p>
@@ -234,7 +234,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="dropdown">
-                      <button type="button" class="btn btn-round btn-info btn-gradient dropdown-toggle" data-bs-toggle="dropdown">
+                      <button type="button" class="btn rounded-pill btn-info btn-gradient dropdown-toggle" data-bs-toggle="dropdown">
                         <i class="fal fa-list-ul"></i>
                       </button>
                       <div class="dropdown-menu">
@@ -253,9 +253,9 @@
     </div>
     <div class="row">
       <div class="col-lg-3 col-md-6">
-        <div class="card card-pricing card-primary card-white">
+        <div class="card card-pricing card-primary">
           <div class="card-body">
-            <h1 class="card-title">pro</h1>
+            <h3 class="card-title">pro</h3>
             <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Image">
             <ul class="list-group">
               <li class="list-group-item">300 messages</li>
@@ -271,14 +271,14 @@
             </div>
           </div>
           <div class="card-footer text-center mb-3 mt-3">
-            <button class="btn btn-round btn-just-icon btn-primary btn-gradient">Get started</button>
+            <button class="btn rounded-pill btn-just-icon btn-primary btn-gradient">Get started</button>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="card card-pricing card-primary">
           <div class="card-body">
-            <h1 class="card-title">pro</h1>
+            <h3 class="card-title">pro</h3>
             <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Image">
             <ul class="list-group">
               <li class="list-group-item">300 messages</li>
@@ -294,7 +294,7 @@
             </div>
           </div>
           <div class="card-footer text-center mb-3 mt-3">
-            <button class="btn btn-round btn-just-icon btn-primary btn-gradient">Get started</button>
+            <button class="btn rounded-pill btn-just-icon btn-primary btn-gradient">Get started</button>
           </div>
         </div>
       </div>
@@ -314,7 +314,7 @@
             </div>
           </div>
           <div class="card-footer">
-            <h4 class="card-title">Robert Priscen</h4>
+            <h3 class="card-title">Robert Priscen</h3>
             <p class="category">@robertpriscen</p>
           </div>
         </div>

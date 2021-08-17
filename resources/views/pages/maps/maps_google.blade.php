@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card card-plain">
                 <div class="card-header">
-                    <h4 class='card-title'>Satellite Map</h4>
+                    <h3 class='card-title'>Satellite Map</h3>
                 </div>
                 <div class="card-body">
                     <div id="satelliteMap" class="map"></div>
@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <div class="card card-plain">
                 <div class="card-header">
-                    <h4 class='card-title'>Regular Map</h4>
+                    <h3 class='card-title'>Regular Map</h3>
                 </div>
                 <div class="card-body">
                     <div id="regularMap" class="map"></div>
@@ -26,7 +26,7 @@
         <div class="col-md-6">
             <div class="card card-plain">
                 <div class="card-header">
-                    <h4 class='card-title'>Custom Skin & Settings Map</h4>
+                    <h3 class='card-title'>Custom Skin & Settings Map</h3>
                 </div>
                 <div class="card-body">
                     <div id="customSkinMap" class="map"></div>

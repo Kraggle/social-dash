@@ -1,9 +1,6 @@
 import { K } from '../plugins/K.js';
 import SS from './shared/shared.js';
 import wNumb from '../plugins/wNumb-min.js';
-// import Sentencer from './libs/Sentencer-min.js';
-
-// console.log(Sentencer.make('{{ adverb }} {{ adjective }} {{ nouns }}').titleCase());
 
 $(() => {
 

@@ -1,6 +1,5 @@
 @extends('layouts.app', [
 'class' => 'lock-page',
-'classPage' => 'lick-page',
 'activePage' => 'lock',
 'titlePage' => __('White Dashboard'),
 ])
@@ -10,12 +9,12 @@
   <div class="content">
     <div class="container">
       <div class="col-lg-4 col-md-6 mx-auto">
-        <div class="card card-lock card-white text-center">
+        <div class="card card-lock text-center">
           <div class="card-header">
             <img src="{{ asset('white') }}/img/emilyz.jpg" alt="...">
           </div>
           <div class="card-body">
-            <h4 class="card-title">{{ __('Joe Gardner') }}</h4>
+            <h3 class="card-title">{{ __('Joe Gardner') }}</h3>
             <div class="input-group">
               <div class="input-group-text">
                 <i class="fal fa-key-skeleton"></i>
@@ -24,7 +23,7 @@
             </div>
           </div>
           <div class="card-footer">
-            <a href="javascript:void(0)" class="btn btn-primary btn-gradient btn-round btn-lg">{{ __('Unlock') }}</a>
+            <a href="javascript:void(0)" class="btn btn-primary btn-gradient rounded-pill btn-lg">{{ __('Unlock') }}</a>
           </div>
         </div>
       </div>

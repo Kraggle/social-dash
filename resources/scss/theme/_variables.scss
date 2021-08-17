@@ -33,27 +33,41 @@ $opacity-black-5: rgba($black, 0.5);
 $opacity-black-6: rgba($black, 0.6);
 $opacity-black-8: rgba($black, 0.8);
 
-$blue: #5e72e4;
-$indigo: #5603ad;
-$purple: #8965e0;
-$pink: #f3a4b5;
-$red: #f5365c;
-$orange: #fb6340;
-$yellow: #c5a507;
-$green: #5ab48d;
-$teal: #11cdef;
-$cyan: #2bffc6;
+/* Colors made for the theme we bought */
+// $blue: #5e72e4;
+// $indigo: #5603ad;
+// $purple: #8965e0;
+// $pink: #f3a4b5;
+// $red: #f5365c;
+// $orange: #fb6340;
+// $yellow: #c5a507;
+// $green: #5ab48d;
+// $teal: #11cdef;
+// $cyan: #2bffc6;
 
-// $blue: #5487f5;
-// $indigo: #6454f5;
-// $purple: #ba54f5;
-// $pink: #f554cd;
-// $red: #f5546a;
-// $orange: #f57454;
-// $yellow: #e5f554;
-// $green: #67f554;
-// $teal: #54f5f5;
-// $cyan: #54f5b7;
+/* Bootstrap default colors */
+// $blue: #0d6efd;
+// $indigo: #6610f2;
+// $purple: #6f42c1;
+// $pink: #d63384;
+// $red: #dc3545;
+// $orange: #fd7e14;
+// $yellow: #ffc107;
+// $green: #198754;
+// $teal: #20c997;
+// $cyan: #0dcaf0;
+
+/* My versions of the colors */
+$blue: #1e88e5;
+$indigo: #3949ab;
+$purple: #8e24aa;
+$pink: #d81b60;
+$red: #e53935;
+$orange: #fb8c00;
+$yellow: #fbc02d;
+$green: #43a047;
+$teal: #00897b;
+$cyan: #00acc1;
 
 $colors: (
     'blue': $blue,
@@ -73,25 +87,49 @@ $colors: (
     'lighter': $gray-200,
 );
 
-$default: #344675;
-$primary: #e14eca;
-$secondary: #e2d31b;
-$success: #17c3a0;
-$info: #1d8cf8;
-$warning: #ff8d72;
-$danger: #de4b39;
-$light: $gray-200;
-$dark: #222a42;
-
+/* Colors made for the theme we bought */
 // $default: #344675;
-// $primary: $pink;
-// $secondary: $teal;
-// $success: $green;
-// $info: $blue;
-// $warning: $orange;
-// $danger: $red;
-// $light: $gray-300;
+// $primary: #e14eca;
+// $secondary: #e44c4c;
+// $success: #17c3a0;
+// $info: #1d8cf8;
+// $warning: #ff8d72;
+// $danger: #de4b39;
+// $light: $gray-200;
 // $dark: #222a42;
+
+/* My versions of the colors */
+$default: #344675;
+$primary: #e100ff;
+$secondary: #f5af19;
+$success: #11998e;
+$info: #2980b9;
+$warning: #ff8d72;
+$danger: #e94057;
+$light: $gray-200;
+$dark: #243b55;
+
+/* Colors made for the theme we bought */
+// $default-states: #263148;
+// $primary-states: #6112b9;
+// $secondary-states: #e2d31b;
+// $success-states: #0098f0;
+// $info-states: #46f9f1;
+// $warning-states: #ff6491;
+// $danger-states: #a759d0;
+// $light-states: $gray-500;
+// $dark-states: #1d253b;
+
+/* My versions of the colors */
+$default-states: #263148;
+$primary-states: #7f00ff;
+$secondary-states: #f12711;
+$success-states: #38ef7d;
+$info-states: #6dd5fa;
+$warning-states: #ff6491;
+$danger-states: #f27121;
+$light-states: $gray-500;
+$dark-states: #141e30;
 
 $main-colors: (
     'default': $default,
@@ -104,16 +142,6 @@ $main-colors: (
     'light': $light,
     'dark': $dark,
 );
-
-$default-states: #263148;
-$primary-states: #6112b9;
-$secondary-states: #e44c4c;
-$success-states: #0098f0;
-$info-states: #46f9f1;
-$warning-states: #ff6491;
-$danger-states: #a759d0;
-$light-states: $gray-500;
-$dark-states: #1d253b;
 
 $main-states: (
     'default-states': $default-states,
@@ -246,6 +274,18 @@ $box-shadow-raised: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
 $box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.1);
 
 $spacer: 1.5rem;
+
+$spacer-0: 0;
+$spacer-1: $spacer * 0.25;
+$spacer-2: $spacer * 0.5;
+$spacer-3: $spacer;
+$spacer-4: $spacer * 1.5;
+$spacer-5: $spacer * 3;
+$spacer-sm: $spacer * 2;
+$spacer-md: $spacer * 4;
+$spacer-lg: $spacer * 6;
+$spacer-xl: $spacer * 8;
+
 $spacers: (
     0: 0,
     1: $spacer * 0.25,
@@ -374,7 +414,7 @@ $btn-focus-box-shadow: $btn-hover-box-shadow;
 $btn-focus-width: $input-btn-focus-width;
 
 $btn-active-box-shadow: none;
-$btn-round-radius: 30px;
+$rounded-pill-radius: 30px;
 
 // Forms
 
@@ -466,12 +506,10 @@ $custom-toggle-slider-bg: #ddd;
 $custom-toggle-checked-bg: $primary;
 
 $icon-size: auto;
-$icon-size-regular: 2.375rem;
-$icon-font-size-regular: 0.9375rem;
+$icon-size-regular: 2rem;
 $icon-font-size-sm: 0.6875rem;
 $icon-size-sm: 1.625rem;
-$icon-font-size-lg: 1.325rem;
-$icon-size-lg: 3.6rem;
+$icon-size-lg: 2.438rem;
 $icon-size-xl: 5rem;
 
 $sidebar-width: 260px;

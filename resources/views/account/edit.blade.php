@@ -14,7 +14,7 @@
 
               <div class="card">
                 <div class="card-header row">
-                  <h4 class="card-title col-md-6">{{ __('Account') }}</h4>
+                  <h3 class="card-title col-md-6">{{ __('Account') }}</h3>
                 </div>
                 <div class="card-body ">
 
@@ -25,7 +25,7 @@
                       <label for="input-username">
                         {{ __('Instagram Username') }}
                       </label>
-                      @include('forms.text', ['options' => [
+                      @include('forms.text', ['settings' => [
                       'name' => 'username',
                       'value' => $account->username ?? '',
                       'id' => 'input-username',
@@ -40,7 +40,7 @@
                       <label for="input-pk">
                         {{ __('Instagram ID') }}
                       </label>
-                      @include('forms.text', ['options' => [
+                      @include('forms.text', ['settings' => [
                       'name' => 'pk',
                       'value' => $account->pk ?? '',
                       'id' => 'input-pk',
@@ -56,7 +56,7 @@
                         <label for="select-team-id">
                           {{ __('Add to Team') }}
                         </label>
-                        @include('forms.select', ['options' => [
+                        @include('forms.select', ['settings' => [
                         'name' => 'team_id',
                         'value' => $account->team_id ?? 1,
                         'id' => 'select-team-id',
@@ -75,7 +75,7 @@
 
               <div toggle class="card">
                 <div class="card-header">
-                  <h4 class="card-title">{{ __('Pricing') }}</h4>
+                  <h3 class="card-title">{{ __('Pricing') }}</h3>
                 </div>
                 <div class="card-body">
                   <div class="row justify-content-md-center">
@@ -100,7 +100,7 @@
             </div>
             {{-- <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{ __('Example') }}</h4>
+                        <h3 class="card-title">{{ __('Example') }}</h3>
                     </div>
                     <div class="card-body">
 

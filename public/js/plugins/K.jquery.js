@@ -107,12 +107,34 @@ $.fn.hasAttr = function(attr) {
 
 $.fn.disable = function() {
 	return this.each(function() {
-		$(this).prop('disabled', true);
+		if ($(this).is('[data-toggle=switchbutton]'))
+			$(this).get(0).switchButton('disable');
+		else
+			$(this).prop('disabled', true);
+		$(this).closest('.input-group').attr('disabled', true);
+		$(this).trigger('state.change state.disabled');
 	});
 };
 
 $.fn.enable = function() {
 	return this.each(function() {
-		$(this).prop('disabled', false);
+		if ($(this).is('[data-toggle=switchbutton]'))
+			$(this).get(0).switchButton('enable');
+		else
+			$(this).prop('disabled', false);
+		$(this).closest('.input-group').attr('disabled', false);
+		$(this).trigger('state.change state.enabled');
 	});
+};
+
+$.fn.hasClassOld = $.fn.hasClass;
+
+$.fn.hasClass = function(selectors) {
+	selectors = selectors.split(',');
+	for (const selector of selectors) {
+		if (this.hasClassOld(selector.trim()))
+			return true;
+	}
+
+	return false;
 };

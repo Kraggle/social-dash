@@ -1,6 +1,5 @@
 @extends('layouts.app', [
 'class' => 'register-page',
-'classPage' => 'register-page',
 'activePage' => 'register',
 'titlePage' => __('Register')
 ])
@@ -23,17 +22,17 @@ if ($token) {
           <div class="card card-auth">
             <div class="card-header header-image">
               <img class="card-img" src="{{ asset('images') }}/card-primary.png" alt="Card image">
-              <h4 class="card-title">{{ __('Register') }}</h4>
+              <h3 class="card-title">{{ __('Register') }}</h3>
             </div>
             <div class="card-body">
-              <form class="form row" id="register-form" method="POST" action="{{ route('register') }}">
+              <form class="form" id="register-form" method="POST" action="{{ route('register') }}">
                 @csrf
 
                 @if ($token)
                   <input type="hidden" name="token" value="{{ $token }}">
                 @endif
 
-                {{-- @include('forms.text', ['options' => [
+                {{-- @include('forms.text', ['settings' => [
               'name' => 'user',
               'value' => app('request')->input('user'),
               'required' => true,
@@ -41,55 +40,61 @@ if ($token) {
               'placeholder' => __('Instagram username...')
               ]]) --}}
 
-
-                <div class="col-sm-6" style="padding-right: 5px">
+                <div class="row row-sm">
                   {{-- first name --}}
-                  @include('forms.text', ['options' => [
-                  'name' => 'firstname',
-                  'required' => true,
-                  'placeholder' => __('First Name...'),
-                  'prepend' => ['icon' => 'fal fa-user']
-                  ]])
-                </div>
+                  <div class="col-sm-6">
+                    @include('forms.text', ['settings' => [
+                    'name' => 'name',
+                    'required' => true,
+                    'placeholder' => __('First Name...'),
+                    'prepend' => ['icon' => 'fal fa-user']
+                    ]])
+                  </div>
 
-                <div class="col-sm-6" style="padding-left: 5px">
                   {{-- last name --}}
-                  @include('forms.text', ['options' => [
-                  'name' => 'lastname',
-                  'placeholder' => __('Last Name...'),
-                  'prepend' => ['icon' => 'fal fa-text-size']
-                  ]])
+                  <div class="col-sm-6">
+                    @include('forms.text', ['settings' => [
+                    'name' => 'lastname',
+                    'placeholder' => __('Last Name...'),
+                    'prepend' => ['icon' => 'fal fa-text-size']
+                    ]])
+                  </div>
                 </div>
 
-                <div class="col-sm-12">
-                  @include('forms.text', ['options' => [
-                  'name' => 'email',
-                  'required' => true,
-                  'prepend' => ['icon' => 'fal fa-envelope'],
-                  'placeholder' => __('Email...')
-                  ]])
+                <div class="row row-sm">
+                  {{-- email --}}
+                  <div class="col-12">
+                    @include('forms.text', ['settings' => [
+                    'name' => 'email',
+                    'required' => true,
+                    'prepend' => ['icon' => 'fal fa-envelope'],
+                    'placeholder' => __('Email...')
+                    ]])
+                  </div>
                 </div>
 
-                <div class="col-sm-6" style="padding-right: 5px">
+                <div class="row row-sm">
                   {{-- password --}}
-                  @include('forms.text', ['options' => [
-                  'name' => 'password',
-                  'type' => 'password',
-                  'required' => true,
-                  'placeholder' => __('Password...'),
-                  'prepend' => ['icon' => 'fal fa-lock-alt']
-                  ]])
-                </div>
+                  <div class="col-sm-6">
+                    @include('forms.text', ['settings' => [
+                    'name' => 'password',
+                    'type' => 'password',
+                    'required' => true,
+                    'placeholder' => __('Password...'),
+                    'prepend' => ['icon' => 'fal fa-lock-alt']
+                    ]])
+                  </div>
 
-                <div class="col-sm-6" style="padding-left: 5px">
                   {{-- confirm password --}}
-                  @include('forms.text', ['options' => [
-                  'name' => 'password_confirmation',
-                  'type' => 'password',
-                  'required' => true,
-                  'placeholder' => __('Confirm Password...'),
-                  'prepend' => ['icon' => 'fal fa-lock-alt']
-                  ]])
+                  <div class="col-sm-6">
+                    @include('forms.text', ['settings' => [
+                    'name' => 'password_confirmation',
+                    'type' => 'password',
+                    'required' => true,
+                    'placeholder' => __('Confirm Password...'),
+                    'prepend' => ['icon' => 'fal fa-lock-alt']
+                    ]])
+                  </div>
                 </div>
 
               </form>
@@ -101,20 +106,20 @@ if ($token) {
             </div>
 
             {{-- <div id="find-btn" class="card-footer d-flex justify-content-center" unhide="d-flex">
-            <a href="javascript:void(0)" class="btn btn-primary btn-gradient btn-round btn-lg">
+            <a href="javascript:void(0)" class="btn btn-primary btn-gradient btn-lg rounded-pill">
               find account
             </a>
           </div> --}}
 
             <div id="submit-btn" class="card-footer justify-content-center d-flex" unhide="d-flex">
-              <a href="javascript:void(0)" class="btn btn-primary btn-gradient btn-round btn-lg">
+              <a href="javascript:void(0)" class="btn btn-primary btn-gradient btn-lg rounded-pill">
                 lets go
               </a>
             </div>
 
           </div>
         @else
-          <div class="card card-register card-white">
+          <div class="card card-register">
             <div class="card-body">
               <div class="row justify-content-center">
                 <div class="col-md-auto mt-5">
@@ -133,5 +138,5 @@ if ($token) {
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/register.js"></script>
+  <script type="module" src="{{ asset('js/pages/auth') }}/register.js"></script>
 @endpush

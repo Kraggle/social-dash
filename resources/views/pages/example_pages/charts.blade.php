@@ -79,7 +79,7 @@
                 </div>
               </div>
               <div class="col-6">
-                <h4 class="card-title"><i class="tim-icons  icon-trophy text-success "></i> 10.000$</h4>
+                <h3 class="card-title"><i class="tim-icons  icon-trophy text-success "></i> 10.000$</h3>
                 <p class="category">A total of $54000</p>
               </div>
             </div>
@@ -99,7 +99,7 @@
                 </div>
               </div>
               <div class="col-6">
-                <h4 class="card-title"><i class="tim-icons  icon-tag text-warning "></i> 130,000</h4>
+                <h3 class="card-title"><i class="tim-icons  icon-tag text-warning "></i> 130,000</h3>
                 <p class="category">Feedback from 20.000 users</p>
               </div>
             </div>

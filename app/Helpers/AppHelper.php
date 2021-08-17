@@ -60,15 +60,13 @@ class AppHelper {
         return strlen($string) > $length ? trim(substr($string, 0, $length)) . "..." : $string;
     }
 
-    public static function makeAttrs(array $attrs) {
-        $return = '';
-        foreach ($attrs as $attr => $value) {
-            $type = gettype($value);
-            if ($type == 'array' || $type == 'object')
-                $value = json_encode($value);
-            $return .= " $attr=$value";
+    public static function makeClass($classes) {
+        try {
+            return implode(' ', $classes);
+        } catch (\Throwable $th) {
+            //throw $th;
         }
-        return $return;
+        return $classes ?? '';
     }
 
     public static function generateToken() {
@@ -99,5 +97,60 @@ class AppHelper {
         $cookie = $_COOKIE[$page] ?? (object) [];
         if (is_string($cookie)) $cookie = json_decode($cookie);
         return $cookie;
+    }
+
+    /**
+     * @param array $arrays
+     * @return array Merged array
+     */
+    public static function arrayMerge(...$arrays) {
+        $target = array_shift($arrays);
+
+        foreach ($arrays as $array) {
+            foreach ($array as $key => &$value) {
+                if (is_array($value) && isset($target[$key]) && is_array($target[$key])) {
+                    if (AppHelper::isAssoc($value)) {
+                        $target[$key] = AppHelper::arrayMerge($target[$key], $value);
+                    } else {
+                        $target[$key] = array_merge($target[$key], $value);
+                    }
+                } else {
+                    $target[$key] = $value;
+                }
+            }
+        }
+
+        return $target;
+    }
+
+    /**
+     * @return array 
+     */
+    public static function formDefaults() {
+        return [
+            'id' => AppHelper::makeId(),
+            'name' => '',
+            'label' => '',
+            'placeholder' => '',
+            'value' => '',
+            'type' => 'text',
+            'disabled' => false,
+            'readonly' => false,
+            'required' => false,
+            'prepend' => false,
+            'append' => false,
+            'class' => '',
+            'attrs' => [],
+            'group' => [
+                'class' => [],
+                'attrs' => [],
+                'size' => '',
+            ],
+            'cookie' => false
+        ];
+    }
+
+    public static function isAssoc($array) {
+        return array_keys($array) !== range(0, count($array) - 1);
     }
 }

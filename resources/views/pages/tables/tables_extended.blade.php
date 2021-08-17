@@ -28,7 +28,7 @@
                 </div>
               </div>
             </div>
-            <h4 class="card-title">Simple Table</h4>
+            <h3 class="card-title">Simple Table</h3>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -240,7 +240,7 @@
                 </div>
               </div>
             </div>
-            <h4 class="card-title">Striped Table</h4>
+            <h3 class="card-title">Striped Table</h3>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -473,7 +473,7 @@
                 </div>
               </div>
             </div>
-            <h4 class="card-title">Shopping Table</h4>
+            <h3 class="card-title">Shopping Table</h3>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -628,7 +628,7 @@
                   </tr>
                 </tbody>
               </table>
-              <button type="button" rel="tooltip" class="btn btn-info btn-gradient btn-round float-end me-5" data-original-title="" title="">
+              <button type="button" rel="tooltip" class="btn btn-info btn-gradient rounded-pill float-end me-5" data-original-title="" title="">
                 Complete Purchase
                 <i class="fal fa-chevron-right"></i>
               </button>

@@ -5,82 +5,6 @@
 
     @include transitions($fast-transition-time, $transition-linear);
 
-    &.dropdown-menu-end {
-        &:before,
-        &:after {
-            left: auto;
-            right: 10px;
-        }
-    }
-
-    &.dropdown-black {
-        background: linear-gradient(to bottom, $black 0%, $dark-states 100%);
-        border: 1px solid $default;
-
-        .dropdown-item {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .dropdown-divider {
-            border-color: $default;
-        }
-
-        &:before {
-            color: $black;
-            z-index: 2;
-        }
-
-        &:after {
-            display: inline-block;
-            position: absolute;
-            width: 0;
-            height: 0;
-            z-index: 1;
-            vertical-align: middle;
-            content: '';
-            top: -6px;
-            left: 10px;
-            right: auto;
-            color: $default;
-            border-bottom: 0.4em solid;
-            border-right: 0.4em solid transparent;
-            border-left: 0.4em solid transparent;
-        }
-
-        &.dropdown-menu-end {
-            &:after {
-                left: auto;
-                right: 10px;
-            }
-        }
-
-        .dropup & {
-            &:after {
-                color: $dark-states;
-                z-index: 2;
-            }
-
-            &:before {
-                display: inline-block;
-                position: absolute;
-                width: 0;
-                height: 0;
-                vertical-align: middle;
-                content: '';
-                top: auto;
-                bottom: -6px;
-                right: auto;
-                left: 10px;
-                color: $gray-700;
-                border-top: 0.4em solid;
-                border-right: 0.4em solid transparent;
-                border-left: 0.4em solid transparent;
-                border-bottom: none;
-                z-index: 1;
-            }
-        }
-    }
-
     .dropdown-item {
         &.active,
         &:active {
@@ -103,57 +27,88 @@
         }
     }
 
-    .dropup & {
-        &:before {
-            display: none;
+    .bootstrap-select & {
+        &:not(.inner) {
+            padding: 0;
         }
 
-        &:after {
-            display: inline-block;
-            position: absolute;
-            width: 0;
-            height: 0;
-            vertical-align: middle;
-            content: '';
-            top: auto;
-            bottom: -5px;
-            right: auto;
-            left: 10px;
-            color: $white;
-            border-top: 0.4em solid;
-            border-right: 0.4em solid transparent;
-            border-left: 0.4em solid transparent;
-            border-bottom: none;
-        }
+        &.inner {
+            padding: 10px 0;
 
-        &.dropdown-menu-end {
-            &:after,
-            &:before {
-                right: 10px;
-                left: auto;
+            &::before {
+                display: none;
             }
         }
     }
 
     &:before {
+        // bottom-start
         display: inline-block;
         position: absolute;
         width: 0;
         height: 0;
         vertical-align: middle;
         content: '';
-        top: -5px;
+        top: -10px;
         left: 10px;
         right: auto;
         color: $white;
-        border-bottom: 0.4em solid;
-        border-right: 0.4em solid transparent;
-        border-left: 0.4em solid transparent;
+        border-width: 0.4em;
+        border-style: solid;
+        border-color: transparent transparent $white transparent;
     }
 
-    &.dropdown-menu-end {
-        right: 0 !important;
-        left: auto !important;
+    &[data-popper-placement='bottom-end']:before {
+        left: auto;
+        right: 10px;
+    }
+
+    &[data-popper-placement='top-end']:before {
+        top: auto;
+        bottom: -10px;
+        right: 10px;
+        left: auto;
+        border-color: $white transparent transparent transparent;
+    }
+
+    &[data-popper-placement='top-start']:before {
+        top: auto;
+        bottom: -10px;
+        right: auto;
+        left: 10px;
+        border-color: $white transparent transparent transparent;
+    }
+
+    &[data-popper-placement='right-start']:before {
+        top: 10px;
+        bottom: auto;
+        right: auto;
+        left: -10px;
+        border-color: transparent $white transparent transparent;
+    }
+
+    &[data-popper-placement='right-end']:before {
+        top: auto;
+        bottom: 10px;
+        right: auto;
+        left: -10px;
+        border-color: transparent $white transparent transparent;
+    }
+
+    &[data-popper-placement='left-start']:before {
+        top: 10px;
+        bottom: auto;
+        right: -10px;
+        left: auto;
+        border-color: transparent transparent transparent $white;
+    }
+
+    &[data-popper-placement='left-end']:before {
+        top: auto;
+        bottom: 10px;
+        right: -10px;
+        left: auto;
+        border-color: transparent transparent transparent $white;
     }
 
     .dropdown-item,
@@ -238,72 +193,13 @@
         );
     }
 
-    .dropdown,
-    .dropup:not(.bootstrap-select) &,
-    .bootstrap-select &:not(.inner),
-    &.bootstrap-datetimepicker-widget.bottom {
-        // @include transform-translate-y-dropdown(-20px);
-        visibility: hidden;
-        display: block;
-        @include opacity(0);
-        // top: 100% !important;
-        // will-change: transform;
-
-        &:not(.show) {
-            .dropdown-menu.show {
-                visibility: hidden;
-            }
-        }
-    }
-
     &.bootstrap-datetimepicker-widget.top {
-        // @include transform-translate-y-dropdown(-20px);
         visibility: hidden;
         display: block;
         @include opacity(0);
-    }
-
-    &.bootstrap-datetimepicker-widget.top,
-    &.bootstrap-datetimepicker-widget.bottom {
-        // @include transform-translate-y-dropdown(-20px);
-    }
-
-    .bootstrap-select.dropup &:not(.inner) {
-        // @include transform-translate-y-dropdown(25px);
-    }
-
-    .dropup:not(.bootstrap-select) & {
-        // @include transform-translate-y-dropdown(20px);
-
-        // top: auto !important;
-        bottom: 100%;
-    }
-
-    .dropdown & {
-        &.show,
-        .bootstrap-select.show &:not(.inner),
-        &.bootstrap-datetimepicker-widget.top.open,
-        &.bootstrap-datetimepicker-widget.bottom.open,
-        .dropup.show:not(.bootstrap-select) &,
-        .navbar .dropdown.show & {
-            @include opacity(1);
-            visibility: visible;
-            // @include transform-translate-y-dropdown(1px);
-        }
-    }
-
-    &.bootstrap-datetimepicker-widget.top.open,
-    &.bootstrap-datetimepicker-widget.bottom.open {
-        // @include transform-translate-y-dropdown(0px);
-    }
-
-    .dropup.show:not(.bootstrap-select) & {
-        // @include transform-translate-y-dropdown(-2px);
     }
 
     &.dropdown-navbar {
-        // left: -80px;
-
         &:before,
         &:after {
             left: auto;
@@ -312,9 +208,9 @@
     }
 
     &.dropdown-grid.show {
-        padding: map-get($spacers, 2);
+        padding: $spacer-2;
         display: grid;
-        gap: map-get($spacers, 2);
+        gap: $spacer-2;
 
         > * {
             > input,
@@ -328,33 +224,22 @@
 .btn {
     cursor: pointer;
 
-    &.dropdown-toggle[data-bs-toggle='dropdown'] {
-        // padding: 10px;
-        // margin: 0;
-
-        // margin-bottom: 5px;
-
-        &:after {
-            content: '';
-            margin-left: 5px;
-        }
-    }
-
     span.bs-caret {
         display: none;
     }
-
-    &.btn-link {
-        &.dropdown-toggle {
-            height: 22px;
-            padding: 0;
-            margin-right: 5px;
-        }
-    }
 }
 
-.dropdown-toggle:after {
-    content: unset;
+.dropdown-toggle {
+    &::after {
+        content: unset;
+    }
+
+    &.no-caret {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
 }
 
 .btn:not(:disabled):not(.disabled).active:focus,

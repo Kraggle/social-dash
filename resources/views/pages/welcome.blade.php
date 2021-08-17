@@ -1,6 +1,5 @@
 @extends('layouts.app', [
 'class' => 'welcome-page',
-'classPage' => 'welcome-page',
 'activePage' => 'welcome',
 'titlePage' => __('White Dashboard'),
 ])

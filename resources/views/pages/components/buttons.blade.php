@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="card-header">
-            <h4 class="card-title">Pick your Color</h4>
+            <h3 class="card-title">Pick your Color</h3>
           </div>
           <div class="card-body">
             <button class="btn btn-primary btn-gradient">Default</button>
@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-6">
           <div class="card-header">
-            <h4 class="card-title">Buttons with Label</h4>
+            <h3 class="card-title">Buttons with Label</h3>
           </div>
           <div class="card-body">
             <button class="btn btn-primary btn-gradient">
@@ -49,7 +49,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="card-header">
-            <h4 class="card-title">Pick your Size</h4>
+            <h3 class="card-title">Pick your Size</h3>
           </div>
           <div class="card-body">
             <button class="btn btn-primary btn-gradient btn-sm">Small</button>
@@ -59,15 +59,15 @@
         </div>
         <div class="col-md-6">
           <div class="card-header">
-            <h4 class="card-title">Pick your Style</h4>
+            <h3 class="card-title">Pick your Style</h3>
           </div>
           <div class="card-body">
             <button class="btn btn-primary btn-gradient">Default</button>
-            <button class="btn btn-primary btn-gradient btn-round">round</button>
-            <button class="btn btn-primary btn-gradient btn-round">
+            <button class="btn btn-primary btn-gradient rounded-pill">round</button>
+            <button class="btn btn-primary btn-gradient rounded-pill">
               <i class="fal fa-heart"></i> with icon
             </button>
-            <button class="btn btn-primary btn-gradient btn-round btn-icon">
+            <button class="btn btn-primary btn-gradient rounded-pill btn-icon">
               <i class="fal fa-heart"></i>
             </button>
             <button class="btn btn-primary btn-gradient btn-simple">
@@ -82,7 +82,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="card-header">
-            <h4 class="card-title">Pagination</h4>
+            <h3 class="card-title">Pagination</h3>
           </div>
           <div class="card-body">
             <nav aria-label="Page navigation example">
@@ -129,7 +129,7 @@
         </div>
         <div class="col-md-6">
           <div class="card-header">
-            <h4 class="card-title">Button Group</h4>
+            <h3 class="card-title">Button Group</h3>
           </div>
           <div class="card-body">
             <div class="btn-group">
@@ -140,15 +140,15 @@
             <br>
             <br>
             <div class="btn-group" data-toggle="buttons">
-              <button type="button" class="btn btn-round btn-info btn-gradient">1</button>
-              <button type="button" class="btn btn-round btn-info btn-gradient">2</button>
-              <button type="button" class="btn btn-round btn-info btn-gradient">3</button>
-              <button type="button" class="btn btn-round btn-info btn-gradient">4</button>
+              <button type="button" class="btn rounded-pill btn-info btn-gradient">1</button>
+              <button type="button" class="btn rounded-pill btn-info btn-gradient">2</button>
+              <button type="button" class="btn rounded-pill btn-info btn-gradient">3</button>
+              <button type="button" class="btn rounded-pill btn-info btn-gradient">4</button>
             </div>
             <div class="btn-group">
-              <button type="button" class="btn btn-round btn-info btn-gradient">5</button>
-              <button type="button" class="btn btn-round btn-info btn-gradient">6</button>
-              <button type="button" class="btn btn-round btn-info btn-gradient">7</button>
+              <button type="button" class="btn rounded-pill btn-info btn-gradient">5</button>
+              <button type="button" class="btn rounded-pill btn-info btn-gradient">6</button>
+              <button type="button" class="btn rounded-pill btn-info btn-gradient">7</button>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="card-header">
-            <h4 class="card-title">Social buttons</h4>
+            <h3 class="card-title">Social buttons</h3>
           </div>
           <div class="card-body">
             <div class="row">
@@ -174,7 +174,7 @@
               </div>
               <div class="col-md-1 col-sm-1">
                 <p class="category">&nbsp;</p>
-                <button class="btn btn-icon btn-round btn-twitter">
+                <button class="btn btn-icon rounded-pill btn-twitter">
                   <i class="fab fa-twitter"></i>
                 </button>
               </div>
@@ -203,7 +203,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-facebook">
+                <button class="btn btn-icon rounded-pill btn-facebook">
                   <i class="fab fa-facebook-f"> </i>
                 </button>
               </div>
@@ -230,7 +230,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-google">
+                <button class="btn btn-icon rounded-pill btn-google">
                   <i class="fab fa-google-plus-g"> </i>
                 </button>
               </div>
@@ -257,7 +257,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-linkedin">
+                <button class="btn btn-icon rounded-pill btn-linkedin">
                   <i class="fab fa-linkedin"></i>
                 </button>
               </div>
@@ -284,7 +284,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-pinterest">
+                <button class="btn btn-icon rounded-pill btn-pinterest">
                   <i class="fab fa-pinterest"></i>
                 </button>
               </div>
@@ -311,7 +311,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-youtube">
+                <button class="btn btn-icon rounded-pill btn-youtube">
                   <i class="fab fa-youtube"> </i>
                 </button>
               </div>
@@ -338,7 +338,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-tumblr">
+                <button class="btn btn-icon rounded-pill btn-tumblr">
                   <i class="fab fa-tumblr"> </i>
                 </button>
               </div>
@@ -365,7 +365,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-github">
+                <button class="btn btn-icon rounded-pill btn-github">
                   <i class="fab fa-github"></i>
                 </button>
               </div>
@@ -392,7 +392,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-behance">
+                <button class="btn btn-icon rounded-pill btn-behance">
                   <i class="fab fa-behance"></i>
                 </button>
               </div>
@@ -419,7 +419,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-dribbble">
+                <button class="btn btn-icon rounded-pill btn-dribbble">
                   <i class="fab fa-dribbble"></i>
                 </button>
               </div>
@@ -446,7 +446,7 @@
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
-                <button class="btn btn-icon btn-round btn-reddit">
+                <button class="btn btn-icon rounded-pill btn-reddit">
                   <i class="fab fa-reddit"></i>
                 </button>
               </div>

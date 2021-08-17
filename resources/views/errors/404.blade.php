@@ -1,6 +1,5 @@
 @extends('errors.layout', [
 'class' => 'login-page',
-'classPage' => 'login-page',
 'activePage' => 'login',
 'titlePage' => __('White Dashboard')
 ])

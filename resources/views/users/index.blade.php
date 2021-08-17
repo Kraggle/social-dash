@@ -8,7 +8,7 @@ Management')])
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title d-inline-block">{{ __('Users') }}</h4>
+              <h3 class="card-title d-inline-block">{{ __('Users') }}</h3>
               @can('create', App\Models\User::class)
                 <a href="{{ route('user.create') }}" class="btn btn-sm btn-warning btn-gradient float-end">{{ __('Add user') }}</a>
               @endcan

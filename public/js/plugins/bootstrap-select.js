@@ -1143,52 +1143,46 @@ Selectpicker.prototype = {
 
 		if (this.options.header) {
 			header =
-				'<div class="' + classNames.POPOVERHEADER + '">' +
-				'<button type="button" class="close" aria-hidden="true">&times;</button>' +
-				this.options.header +
-				'</div>';
+				`<div class="${classNames.POPOVERHEADER}">
+					<button type="button" class="close" aria-hidden="true">&times;</button>
+					${this.options.header}
+				</div>`;
 		}
 
 		if (this.options.liveSearch) {
 			searchbox =
-				'<div class="bs-searchbox">' +
-				'<input type="search" class="form-control" autocomplete="off"' +
-				(
-					this.options.liveSearchPlaceholder === null ? ''
-						:
-						' placeholder="' + htmlEscape(this.options.liveSearchPlaceholder) + '"'
-				) +
-				' role="combobox" aria-label="Search" aria-controls="' + this.selectId + '" aria-autocomplete="list">' +
-				'</div>';
+				`<div class="bs-searchbox">
+					<input type="search" class="form-control" autocomplete="off"${this.options.liveSearchPlaceholder === null ? '' : ' placeholder="' + htmlEscape(this.options.liveSearchPlaceholder) + '"'} role="combobox" aria-label="Search" aria-controls="${this.selectId}" aria-autocomplete="list">
+				</div>`;
 		}
 
 		if (this.multiple && this.options.actionsBox) {
 			actionsbox =
-				'<div class="bs-actionsbox">' +
-				'<div class="btn-group btn-group-sm">' +
-				'<button type="button" class="actions-btn bs-select-all btn ' + classNames.BUTTONCLASS + '">' +
-				this.options.selectAllText +
-				'</button>' +
-				'<button type="button" class="actions-btn bs-deselect-all btn ' + classNames.BUTTONCLASS + '">' +
-				this.options.deselectAllText +
-				'</button>' +
-				'</div>' +
-				'</div>';
+				`<div class="bs-actionsbox">
+					<div class="btn-group btn-group-sm">
+						<button type="button" class="actions-btn bs-select-all btn ${classNames.BUTTONCLASS}"> 
+							${this.options.selectAllText}
+						</button>
+						<button type="button" class="actions-btn bs-deselect-all btn ${classNames.BUTTONCLASS}">
+							${this.options.deselectAllText}
+						</button>
+					</div>
+				</div>`;
 		}
 
 		if (this.multiple && this.options.doneButton) {
 			donebutton =
-				'<div class="bs-donebutton">' +
-				'<div class="btn-group">' +
-				'<button type="button" class="btn btn-sm ' + classNames.BUTTONCLASS + '">' +
-				this.options.doneButtonText +
-				'</button>' +
-				'</div>' +
-				'</div>';
+				`<div class="bs-donebutton">
+					<div class="btn-group">
+						<button type="button" class="btn btn-sm ${classNames.BUTTONCLASS}">
+							${this.options.doneButtonText}
+						</button>
+					</div>
+				</div>`;
 		}
 
 		if (this.options.allowClear) {
-			clearButton = '<span class="close bs-select-clear-selected" title="' + this.options.deselectAllText + '"><span>&times;</span>';
+			clearButton = `<span class="close bs-select-clear-selected" title="${this.options.deselectAllText}"><span>&times;</span>`;
 		}
 
 		const genId = this.generateID();
@@ -1233,6 +1227,29 @@ Selectpicker.prototype = {
 			donebutton +
 			'</div>' +
 			'</div>';
+
+		// drop =
+		// 	`<div class="dropdown bootstrap-select ${showTick} ${inputGroup} ${contClass}">
+		// 		<button id="${genId}" type="button" tabindex="-1" class="${this.options.styleBase} dropdown-toggle" ${(this.options.display === 'static' ? 'data-display="static"' : '')} ${Selector.DATA_TOGGLE} ${autofocus} role="combobox" aria-owns="${this.selectId}" aria-haspopup="listbox" aria-expanded="false">
+		// 			<div class="filter-option">
+		// 				<div class="filter-option-inner">
+		// 					<div class="filter-option-inner-inner">&nbsp;</div>
+		// 				</div> 
+		// 			</div>
+		// 			${clearButton}
+		// 			${version.major >= '4' ? '' : '<span class="bs-caret">' + this.options.template.caret + '</span>'}
+		// 		</button>
+		// 		<div class="${classNames.MENU} ${(version.major >= '4' ? '' : classNames.SHOW)}" aria-labelledby="${genId}">
+		// 			${header}
+		// 			${searchbox}
+		// 			${actionsbox}
+		// 			<div class="inner ${classNames.SHOW}" role="listbox" id="${this.selectId}" tabindex="-1" ${multiselectable}>
+		// 				<ul class="${classNames.MENU} inner ${version.major >= '4' ? classNames.SHOW : ''}" role="presentation">
+		// 				</ul>
+		// 			</div>
+		// 			${donebutton}
+		// 		</div>
+		// 	</div>`;
 
 		return $(drop);
 	},

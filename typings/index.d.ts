@@ -109,6 +109,7 @@ interface Date {
 interface JQuery {
     perfectScrollbar(settings?: object): jQuery;
     replaceTag(element: HTMLElement, newTag: string, keepProps?: boolean): this;
+    inArray(value: any, array: any[], fromIndex?: number): number;
 }
 
 interface JQueryStatic {

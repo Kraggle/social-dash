@@ -56,3 +56,561 @@ Stack trace:
 [07-Aug-2021 20:59:27 UTC] PHP Fatal error:  require(): Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php on line 34
 [07-Aug-2021 20:59:27 UTC] PHP Warning:  require(E:\laragon\www\social-dash\vendor\autoload.php): failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
 [07-Aug-2021 20:59:27 UTC] PHP Fatal error:  require(): Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php on line 34
+[14-Aug-2021 12:30:35 UTC] PHP Fatal error:  Uncaught ErrorException: htmlspecialchars() expects parameter 1 to be string, array given in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Support\helpers.php:118
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'htmlspecialchar...', 'E:\\laragon\\www\\...', 118, Array)
+#1 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Support\helpers.php(118): htmlspecialchars(Array, 3, 'UTF-8', true)
+#2 E:\laragon\www\social-dash\storage\framework\views\8631753355c8ae8456882eb373bc9cd7cb643b9a.php(26): e(Array)
+#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
+#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#5 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Support\helpers.php on line 118
+[14-Aug-2021 12:30:35 UTC] PHP Fatal error:  Uncaught ErrorException: htmlspecialchars() expects parameter 1 to be string, array given in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Support\helpers.php:118
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'htmlspecialchar...', 'E:\\laragon\\www\\...', 118, Array)
+#1 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Support\helpers.php(118): htmlspecialchars(Array, 3, 'UTF-8', true)
+#2 E:\laragon\www\social-dash\storage\framework\views\8631753355c8ae8456882eb373bc9cd7cb643b9a.php(26): e(Array)
+#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
+#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#5 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Support\helpers.php on line 118
+[14-Aug-2021 12:30:35 UTC] PHP Fatal error:  Uncaught ErrorException: htmlspecialchars() expects parameter 1 to be string, array given in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Support\helpers.php:118
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'htmlspecialchar...', 'E:\\laragon\\www\\...', 118, Array)
+#1 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Support\helpers.php(118): htmlspecialchars(Array, 3, 'UTF-8', true)
+#2 E:\laragon\www\social-dash\storage\framework\views\8631753355c8ae8456882eb373bc9cd7cb643b9a.php(26): e(Array)
+#3 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('E:\\laragon\\www\\...')
+#4 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#5 E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem in E:\laragon\www\social-dash\vendor\laravel\framework\src\Illuminate\Support\helpers.php on line 118
+[15-Aug-2021 18:10:03 UTC] PHP Fatal error:  Only variables can be passed by reference in E:\laragon\www\social-dash\storage\framework\views\67ed5378bd5147837f15e746870bc3474596c159.php on line 8
+[15-Aug-2021 18:10:04 UTC] PHP Fatal error:  Only variables can be passed by reference in E:\laragon\www\social-dash\storage\framework\views\67ed5378bd5147837f15e746870bc3474596c159.php on line 8
+[15-Aug-2021 18:10:29 UTC] PHP Fatal error:  Only variables can be passed by reference in E:\laragon\www\social-dash\storage\framework\views\67ed5378bd5147837f15e746870bc3474596c159.php on line 8
+[15-Aug-2021 18:10:30 UTC] PHP Fatal error:  Only variables can be passed by reference in E:\laragon\www\social-dash\storage\framework\views\67ed5378bd5147837f15e746870bc3474596c159.php on line 8
+[17-Aug-2021 13:53:01 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:01 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:02 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:02 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:03 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:03 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:03 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:03 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:04 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:04 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:04 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:04 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:05 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:05 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:05 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:05 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:06 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:06 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:06 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:06 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:07 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:07 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:07 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:07 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:07 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:07 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:08 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:08 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:08 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:08 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:08 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:08 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:09 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:09 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:09 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:09 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:10 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:10 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:10 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:10 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:11 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:11 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:11 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:11 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:11 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:11 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:12 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:12 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:12 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:12 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:12 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:12 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:12 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:13 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:13 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:14 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:14 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:14 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:14 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:14 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:14 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:15 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:15 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:15 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:15 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:15 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:15 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:16 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:16 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:16 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:16 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:17 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:17 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:17 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:17 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:18 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:18 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:18 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:18 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:18 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:18 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:19 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:19 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:19 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:19 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:20 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:20 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:20 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:20 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:20 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:20 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:21 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:21 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:21 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:21 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:21 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:21 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:22 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:22 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:22 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:22 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:22 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:22 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:22 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:22 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:23 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:23 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:23 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:23 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:24 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:24 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:24 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:24 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:25 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:25 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:25 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:25 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:26 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:26 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:26 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:26 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:27 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:28 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:28 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:28 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:28 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:28 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:28 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:28 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:29 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:29 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:29 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:29 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:29 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:29 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:30 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:30 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:30 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:30 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:31 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:31 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:32 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:32 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:32 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:32 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:32 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:33 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:33 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:33 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:33 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:33 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:34 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:53:34 UTC] PHP Warning:  require(E:\laragon\www\social-dash\public/../vendor/autoload.php): Failed to open stream: No such file or directory in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:53:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'E:\laragon\www\social-dash\public/../vendor/autoload.php' (include_path='.;E:/laragon/etc/php/pear') in E:\laragon\www\social-dash\public\index.php:34
+Stack trace:
+#0 {main}
+  thrown in E:\laragon\www\social-dash\public\index.php on line 34
+[17-Aug-2021 13:54:30 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:54:32 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 13:54:34 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 16:02:32 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 16:02:33 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 16:02:36 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 16:02:38 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 16:50:19 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:08:37 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:08:38 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:08:41 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:08:43 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:10:26 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:10:27 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:10:29 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:21:19 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:35:36 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:35:39 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:36:44 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:36:45 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:37:06 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:39:12 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:39:13 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:47:18 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:47:20 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:47:42 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:47:44 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:54:07 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:54:09 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:58:31 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:58:31 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:58:32 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:59:22 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 21:59:23 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:03 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:05 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:14 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:16 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:24 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:25 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:27 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:28 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:50 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:00:52 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:01:50 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:01:52 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:02:08 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:02:10 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:03:28 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[17-Aug-2021 22:03:29 UTC] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(

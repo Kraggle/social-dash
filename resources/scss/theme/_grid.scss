@@ -1,11 +1,36 @@
 .row {
-    // --#{$variable-prefix}gutter-x: #{$gutter};
-    // --#{$variable-prefix}gutter-y: 0;
+    > * {
+        > * {
+            margin-bottom: var(--bs-gutter-x);
+        }
+    }
 
-    // &:not(:last-of-type) {
-    //     margin-bottom: var(--#{$variable-prefix}gutter-x);
-    // }
+    &.row-sm,
+    &.row-form {
+        margin-right: calc(var(--bs-gutter-x) * -0.25);
+        margin-left: calc(var(--bs-gutter-x) * -0.25);
 
-    &.row-equal-height {
+        > * {
+            padding-right: calc(var(--bs-gutter-x) * 0.25);
+            padding-left: calc(var(--bs-gutter-x) * 0.25);
+
+            > * {
+                margin-bottom: calc(var(--bs-gutter-x) * 0.5);
+            }
+        }
+    }
+
+    &.row-lg {
+        margin-right: calc(var(--bs-gutter-x) * -0.75);
+        margin-left: calc(var(--bs-gutter-x) * -0.75);
+
+        > * {
+            padding-right: calc(var(--bs-gutter-x) * 0.75);
+            padding-left: calc(var(--bs-gutter-x) * 0.75);
+
+            > * {
+                margin-bottom: calc(var(--bs-gutter-x) * 1.5);
+            }
+        }
     }
 }

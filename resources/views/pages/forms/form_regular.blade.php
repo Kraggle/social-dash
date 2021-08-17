@@ -6,7 +6,7 @@
       <div class="col-md-6">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Stacked Form</h4>
+            <h3 class="card-title">Stacked Form</h3>
           </div>
           <div class="card-body">
             <form action="#">
@@ -35,7 +35,7 @@
       <div class="col-md-6">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Horizontal Form</h4>
+            <h3 class="card-title">Horizontal Form</h3>
           </div>
           <div class="card-body">
             <form class="form-horizontal">
@@ -92,7 +92,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Form Elements</h4>
+            <h3 class="card-title">Form Elements</h3>
           </div>
           <div class="card-body">
             <form method="get" action="/" class="form-horizontal">
@@ -203,7 +203,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Input Variants</h4>
+            <h3 class="card-title">Input Variants</h3>
           </div>
           <div class="card-body">
             <form method="get" action="/" class="form-horizontal">

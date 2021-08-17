@@ -1,5 +1,6 @@
-import { K } from './src/K.js';
-import Sentencer from './libs/Sentencer.js';
+import $ from '../../core/jquery/jquery.js';
+import { K } from '../../plugins/K.js';
+import Sentencer from '../../plugins/Sentencer.js';
 
 $(() => {
     // if (K.urlParam('user')) {

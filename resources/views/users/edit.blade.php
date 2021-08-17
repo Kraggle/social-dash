@@ -12,7 +12,7 @@ Management')])
 
             <div class="card ">
               <div class="card-header">
-                <h4 class="card-title d-inline-block">{{ __('Edit User') }}</h4>
+                <h3 class="card-title d-inline-block">{{ __('Edit User') }}</h3>
                 <a href="{{ route('user.index') }}" class="btn btn-sm btn-warning btn-gradient float-end">
                   {{ __('Back to list') }}
                 </a>
@@ -31,12 +31,12 @@ Management')])
                       </div>
                       <div class="fileinput-preview fileinput-exists thumbnail img-circle" data-trigger="fileinput"></div>
                       <div class="d-grid">
-                        <span class="btn btn-round btn-indigo btn-file">
+                        <span class="btn rounded-pill btn-indigo btn-file">
                           <span class="fileinput-new">{{ __('Add Photo') }}</span>
                           <span class="fileinput-exists">{{ __('Change') }}</span>
                           <input type="file" name="photo" id="input-picture" />
                         </span>
-                        <a href="#pablo" class="btn btn-danger btn-gradient btn-round fileinput-exists mt-2" data-dismiss="fileinput"><i class="fa fa-times"></i> {{ __('Remove') }}</a>
+                        <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists mt-2" data-dismiss="fileinput"><i class="fa fa-times"></i> {{ __('Remove') }}</a>
                       </div>
                       @include('alerts.feedback', ['field' => 'photo'])
                     </div>

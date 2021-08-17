@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
   <div class="card col-md-6">
     <div class="card-header">
-      {{-- <h4 class="card-title">Error</h4> --}}
+      {{-- <h3 class="card-title">Error</h3> --}}
     </div>
     <div class="card-body mt-4">
       <div class="row justify-content-center">

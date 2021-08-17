@@ -1,6 +1,5 @@
 @extends('layouts.app', [
 'class' => 'pricing-page',
-'classPage' => 'pricing-page',
 'activePage' => 'pricing',
 'titlePage' => __('White Dashboard'),
 ])
@@ -18,7 +17,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="card card-pricing card-primary">
             <div class="card-body">
-              <h1 class="card-title">pro</h1>
+              <h3 class="card-title">pro</h3>
               <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Image">
               <ul class="list-group">
                 <li class="list-group-item">{{ __('300 messages') }}</li>
@@ -34,14 +33,14 @@
               </div>
             </div>
             <div class="card-footer text-center mb-3 mt-3">
-              <button class="btn btn-round btn-just-icon btn-primary btn-gradient">{{ __('Get started') }}</button>
+              <button class="btn rounded-pill btn-just-icon btn-primary btn-gradient">{{ __('Get started') }}</button>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card card-pricing card-success card-white">
+          <div class="card card-pricing card-success">
             <div class="card-body">
-              <h1 class="card-title">basic</h1>
+              <h3 class="card-title">basic</h3>
               <img class="card-img" src="{{ asset('white') }}/img/card-success.png" alt="Image">
               <ul class="list-group">
                 <li class="list-group-item">50 messages</li>
@@ -57,14 +56,14 @@
               </div>
             </div>
             <div class="card-footer text-center mb-3 mt-3">
-              <button class="btn btn-round btn-just-icon btn-success btn-gradient">Get started</button>
+              <button class="btn rounded-pill btn-just-icon btn-success btn-gradient">Get started</button>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card card-pricing card-warning card-raised card-white">
+          <div class="card card-pricing card-warning card-raised">
             <div class="card-body">
-              <h1 class="card-title">mid</h1>
+              <h3 class="card-title">mid</h3>
               <img class="card-img" src="{{ asset('white') }}/img/card-warning.png" alt="Image">
               <ul class="list-group">
                 <li class="list-group-item">200 messages</li>
@@ -80,14 +79,14 @@
               </div>
             </div>
             <div class="card-footer text-center mb-3 mt-3">
-              <button class="btn btn-round btn-just-icon btn-warning btn-gradient">Get started</button>
+              <button class="btn rounded-pill btn-just-icon btn-warning btn-gradient">Get started</button>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card card-pricing card-danger card-white">
+          <div class="card card-pricing card-danger">
             <div class="card-body">
-              <h1 class="card-title">trial</h1>
+              <h3 class="card-title">trial</h3>
               <img class="card-img" src="{{ asset('white') }}/img/card-danger.png" alt="Image">
               <ul class="list-group">
                 <li class="list-group-item">50 messages</li>
@@ -103,7 +102,7 @@
               </div>
             </div>
             <div class="card-footer text-center mb-3 mt-3">
-              <button class="btn btn-round btn-just-icon btn-danger btn-gradient">Get started</button>
+              <button class="btn rounded-pill btn-just-icon btn-danger btn-gradient">Get started</button>
             </div>
           </div>
         </div>

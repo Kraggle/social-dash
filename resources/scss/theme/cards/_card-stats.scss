@@ -35,9 +35,11 @@
 
     .numbers {
         text-align: right;
+
         .card-title {
             margin-top: 0;
         }
+
         .card-category {
             margin-bottom: 0;
             color: $gray-800;
@@ -53,15 +55,9 @@
     }
 
     .stats {
-        color: rgba($white, 0.6);
+        color: $card-stats-gray;
         margin: 10px 15px;
         font-size: 0.9em;
-    }
-
-    &.card-white {
-        hr {
-            border-color: rgba(43, 53, 83, 0.2);
-        }
     }
 }
 

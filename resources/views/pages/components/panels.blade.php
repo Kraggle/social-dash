@@ -27,7 +27,7 @@
                 </a>
               </li>
             </ul>
-            <div class="tab-content tab-space">
+            <div class="tab-content tab-padding">
               <div class="tab-pane active" id="link1">
                 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
                 procrastinate B2C users after installed base benefits.
@@ -184,8 +184,8 @@
             <div class="row">
               <div class="col-lg-3 col-md-6">
                 <!--
-                                                            color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
-                                                        -->
+                            color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                        -->
                 <ul class="nav nav-pills nav-pills-primary nav-pills-icons flex-column">
                   <li class="nav-item">
                     <a class="nav-link active" data-bs-toggle="tab" href="#link10">
@@ -224,13 +224,13 @@
       <div class="col-md-8 mx-auto">
         <div class="card card-subcategories card-plain">
           <div class="card-header">
-            <h4 class="card-title text-center mt-5">Page Subcategories</h4>
+            <h3 class="card-title text-center mt-5">Page Subcategories</h3>
             <br />
           </div>
           <div class="card-body">
             <!--
-                                                    color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
-                                                    -->
+                                                            color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                                                            -->
             <ul class="nav nav-pills nav-pills-primary nav-pills-icons justify-content-center">
               <li class="nav-item">
                 <a class="nav-link active" data-bs-toggle="tab" href="#link7">
@@ -248,7 +248,7 @@
                 </a>
               </li>
             </ul>
-            <div class="tab-content tab-space tab-subcategories">
+            <div class="tab-content tab-subcategories">
               <div class="tab-pane active" id="link7">
                 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
                 procrastinate B2C users after installed base benefits.

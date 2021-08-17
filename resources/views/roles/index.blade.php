@@ -8,7 +8,7 @@ Management')])
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title d-inline-block">{{ __('Roles') }}</h4>
+              <h3 class="card-title d-inline-block">{{ __('Roles') }}</h3>
               @can('create', App\Models\Role::class)
                 <a href="{{ route('role.create') }}" class="btn btn-primary btn-gradient btn-sm float-end">{{ __('Add role') }}</a>
               @endcan

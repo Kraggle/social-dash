@@ -6,7 +6,7 @@
         <div class="col-md-12 mb-5">
             <div class="card ">
                 <div class="card-header">
-                    <h4 class="card-title"> Simple Table</h4>
+                    <h3 class="card-title"> Simple Table</h3>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -135,7 +135,7 @@
         <div class="col-md-12 mb-5">
             <div class="card  card-plain">
                 <div class="card-header">
-                    <h4 class="card-title"> Table on Plain Background</h4>
+                    <h3 class="card-title"> Table on Plain Background</h3>
                     <p class="category"> Here is a subtitle for this table</p>
                 </div>
                 <div class="card-body">
@@ -265,7 +265,7 @@
         <div class="col-md-12 mb-5">
             <div class="card ">
                 <div class="card-header">
-                    <h4 class="card-title"> Regular Table with Colors</h4>
+                    <h3 class="card-title"> Regular Table with Colors</h3>
                 </div>
                 <div class="card-body table-full-width">
                     <div class="table-responsive">

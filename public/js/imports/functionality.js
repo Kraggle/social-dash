@@ -1,31 +1,43 @@
 import $ from '../core/jquery/jquery.js';
+import '../plugins/flatpickr/flatpickr.js';
 import Bootstrap from '../core/bootstrap/bootstrap.esm.js';
 import Scrollbar from '../plugins/perfect-scrollbar/perfect-scrollbar.js';
 import '../plugins/bootstrap-notify.js';
 import '../plugins/bootstrap-select.js';
-import '../plugins/bootstrap-switch.js';
+import '../plugins/bootstrap-switch-button.js';
 import K from '../plugins/K.js';
 import '../plugins/K.jquery.js';
-
-let sidebarMiniActive = false;
+import SS from '../pages/shared/shared.js';
 
 const $html = $('html');
 
 const F = {
+	initTextareas() {
+		$('textarea.form-control').each(function() {
+			const $group = $(this).parent();
+			if ($group.hasClass('input-group, form-group')) {
+				// $group.addClass('perfect-scrollbar');
+				$(this).wrap($('<div />', {
+					class: 'grow-wrap'
+				}));
+				$(this).on('input', function() {
+					$(this).parent().get(0).dataset.replicatedValue = $(this).val();
+				});
+
+				$(this).parent().get(0).dataset.replicatedValue = $(this).val()
+			}
+		});
+	},
+
 	initSidebar() {
-		if ($('.sidebar-mini').length != 0)
-			sidebarMiniActive = true;
 
 		$('.minimize-sidebar').on('click', function() {
-			if (sidebarMiniActive) {
-				$('body').removeClass('sidebar-mini');
-				sidebarMiniActive = false;
-				F.showMessage('Sidebar mini deactivated...');
-			} else {
-				$('body').addClass('sidebar-mini');
-				sidebarMiniActive = true;
-				F.showMessage('Sidebar mini activated...');
-			}
+			const active = !$('.sidebar-mini').length;
+			$('body')[`${active ? 'add' : 'remove'}Class`]('sidebar-mini');
+
+			SS.setPageCookie('all', {
+				sidebar: active
+			});
 
 			// we simulate the window Resize so the charts will get updated in realtime.
 			const simulateWindowResize = setInterval(function() {
@@ -51,7 +63,7 @@ const F = {
 			// if we are on windows OS we activate the perfectScrollbar function
 
 			const sBars = [],
-				$els = $('.main-panel, .wrapper-full-page, .sidebar .sidebar-wrapper, .table-responsive'),
+				$els = $('.main-panel, .wrapper-full-page, .sidebar .sidebar-wrapper, .table-responsive, .perfect-scrollbar'),
 				options = {
 					wheelSpeed: 2,
 					wheelPropagation: true,
@@ -159,16 +171,9 @@ const F = {
 		}
 	},
 
-	initSwitches() {
-		$('.bootstrap-switch').each(function() {
-			const data = $(this).data();
-
-			$(this).bootstrapSwitch({
-				onText: data.onText || 'ON',
-				offText: data.offText || 'OFF',
-				onColor: data.onColor || 'danger',
-				offColor: data.offColor || 'default',
-			});
+	initForms() {
+		$('input').each(function() {
+			$(this).hasAttr('disabled') && $(this).disable();
 		});
 	},
 
@@ -190,35 +195,35 @@ const F = {
 		}
 	},
 
-	initCharts() {
-		// const $matches = $('[data-match-height]');
-		// $matches.each(function() {
-		// 	const $me = $(this),
-		// 		data = $me.data(),
-		// 		id = data.matchHeight,
-		// 		$chart = $('canvas', $me);
+	initDatePickers() {
+		$('[data-flatpickr]').each(function() {
+			$(this).data().flatpickr =
+				$(this).flatpickr({
+					positionElement: $(this).closest('.input-group').get(0)
+				});
+		});
 
-		// 	if ($chart.length && $chart.data('chart')) {
-		// 		data.chart = $chart.data('chart');
-		// 		const $body = $('card-body', $me);
-		// 		data.paddingLeft = $body.
-		// 	}
+		$('.main-panel').on('scroll', function() {
+			const $flatpickr = $('.flatpickr-input + input.active');
+			if ($flatpickr.length) {
+				const flatpickr = $flatpickr.prev().data().flatpickr || {};
+				flatpickr.close();
+				flatpickr.open();
+			}
+		})
+	},
 
-		// 	if (!$(id).length) return;
-
-		// 	const doScale = () => {
-		// 		const height = $(id).height(),
-		// 			headerHeight = $('.card-header', $me).height();
-		// 		$me.height(height);
-		// 		if (data.chart) {
-		// 			data.chart.resize($me.width(), height - headerHeight);
-		// 		}
-		// 	};
-		// 	$(window).on('resize', doScale);
-		// 	doScale();
-
-		// 	console.log(data);
-		// });
+	initInputLabels() {
+		const $els = $('.input-label').siblings('.form-control'),
+			handleLabel = function() {
+				$(this).each(function() {
+					const action = `${$(this).val() ? 'add' : 'remove'}Class`;
+					$(this)[action]('has-value');
+					$(this).closest('.input-group')[action]('has-value');
+				});
+			};
+		handleLabel.call($els);
+		$els.on('change blur input keyup', handleLabel);
 	}
 }
 

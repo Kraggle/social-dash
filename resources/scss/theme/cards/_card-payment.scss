@@ -1,0 +1,16 @@
+.card-payment {
+    padding: 30px 40px;
+
+    .info-text {
+        text-align: center;
+    }
+
+    .btn-link {
+        position: absolute;
+        color: $gray-400;
+        font-size: 18px;
+        top: 0;
+        right: 0;
+        margin: 10px;
+    }
+}

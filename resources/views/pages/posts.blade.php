@@ -17,13 +17,13 @@ $cookie = AppHelper::getPageCookie($page);
           <div class="card-header row">
             <div class="col-sm-3">
               <h5 class="card-category">Account Posts</h5>
-              <h2 class="card-title">By Date</h2>
+              <h3 class="card-title">By Date</h3>
             </div>
 
             <div class="col-sm-9 row align-items-start justify-content-end pe-0">
 
               {{-- chart line selector --}}
-              @include('forms.chart-toggles', ['options' => [
+              @include('forms.chart-toggles', ['settings' => [
               'buttons' => [[
               'id' => 'p-chart-line-1',
               'color' => 'blue',
@@ -47,13 +47,13 @@ $cookie = AppHelper::getPageCookie($page);
 
               <div class="col-auto pe-0">
                 <div class="dropdown keep-open">
-                  <button type="button" class="btn btn-sm btn-simple dropdown-toggle btn-icon no-caret" data-bs-toggle="dropdown">
+                  <button type="button" class="btn btn-gray btn-link dropdown-toggle btn-icon no-caret" data-bs-toggle="dropdown">
                     <i class="fal fa-cog"></i>
                   </button>
                   <div class="dropdown-menu dropdown-grid">
 
                     {{-- chart day selector --}}
-                    @include('forms.chart-radio', ['options' => [
+                    @include('forms.chart-radio', ['settings' => [
                     'name' => 'p-chart-day',
                     'color' => 'warning',
                     'buttons' => [[
@@ -78,7 +78,7 @@ $cookie = AppHelper::getPageCookie($page);
                     ]])
 
                     {{-- chart type selector --}}
-                    @include('forms.chart-radio', ['options' => [
+                    @include('forms.chart-radio', ['settings' => [
                     'name' => 'p-chart-type',
                     'color' => 'green',
                     'buttons' => [[
@@ -103,7 +103,7 @@ $cookie = AppHelper::getPageCookie($page);
                     ]])
 
                     <div class="col-auto">
-                      @include('forms.datepicker', ['options' => [
+                      @include('forms.datepicker', ['settings' => [
                       'cookie' => $cookie,
                       'id' => 'p-chart-date'
                       ]])
@@ -129,13 +129,13 @@ $cookie = AppHelper::getPageCookie($page);
           <div class="card-header row">
             <div class="col-11">
               <h5 class="card-category">Account Posts</h5>
-              <h2 class="card-title">By Time of Day</h2>
+              <h3 class="card-title">By Time of Day</h3>
             </div>
 
             <div class="col-1 row align-items-start justify-content-end pe-0">
 
               {{-- chart day selector --}}
-              @include('forms.chart-radio', ['options' => [
+              @include('forms.chart-radio', ['settings' => [
               'name' => 'b-chart-day',
               'color' => 'warning',
               'buttons' => [[
@@ -150,7 +150,7 @@ $cookie = AppHelper::getPageCookie($page);
               ]])
 
               {{-- chart line selector --}}
-              @include('forms.chart-toggles', ['options' => [
+              @include('forms.chart-toggles', ['settings' => [
               'buttons' => [[
               'id' => 'b-chart-bubble-1',
               'color' => 'orange',
@@ -178,19 +178,19 @@ $cookie = AppHelper::getPageCookie($page);
       <div class="col-12">
         <div class="card">
           <div class="card-header row">
-            <h2 class="card-title col-4">Uploaded Posts</h2>
+            <h3 class="card-title col-4">Uploaded Posts</h3>
 
             <div class="row col-8 align-items-start justify-content-end pe-0">
 
               <div class="col-auto pe-0">
-                @include('forms.datepicker', ['options' => [
+                @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
                 'id' => 'p-table-date'
                 ]])
               </div>
 
               {{-- chart type selector --}}
-              @include('forms.chart-radio', ['options' => [
+              @include('forms.chart-radio', ['settings' => [
               'name' => 'p-table-type',
               'color' => 'info',
               'buttons' => [[
@@ -232,7 +232,7 @@ $cookie = AppHelper::getPageCookie($page);
               </ul>
             </div>
 
-            <div class="tab-content tab-space">
+            <div class="tab-content">
               <div class="tab-pane fade show active" id="pill-data-tab" role="tabpanel" aria-labelledby="nav-data-tab">
                 <div class="card">
                   <div class="card-body">
@@ -541,7 +541,7 @@ $cookie = AppHelper::getPageCookie($page);
                             </a>
                           </li>
                         </ul>
-                        <div class="tab-content tab-space tab-subcategories mt-0">
+                        <div class="tab-content tab-subcategories mt-0">
                           <div class="tab-pane active" id="link7">
                             <div class="row card-stats">
                               <div class="col-6">
@@ -708,7 +708,7 @@ $cookie = AppHelper::getPageCookie($page);
                             </a>
                           </li>
                         </ul>
-                        <div class="tab-content tab-space tab-subcategories mt-0">
+                        <div class="tab-content tab-subcategories mt-0">
                           <div class="tab-pane active" id="link10">
                             <div class="row card-stats">
                               <div class="col-6">
@@ -875,7 +875,7 @@ $cookie = AppHelper::getPageCookie($page);
                             </a>
                           </li>
                         </ul>
-                        <div class="tab-content tab-space tab-subcategories mt-0">
+                        <div class="tab-content tab-subcategories mt-0">
                           <div class="tab-pane active" id="link13">
                             <div class="row card-stats">
                               <div class="col-6">
@@ -1042,7 +1042,7 @@ $cookie = AppHelper::getPageCookie($page);
                             </a>
                           </li>
                         </ul>
-                        <div class="tab-content tab-space tab-subcategories mt-0">
+                        <div class="tab-content tab-subcategories mt-0">
                           <div class="tab-pane active" id="link16">
                             <div class="row card-stats">
                               <div class="col-6">
@@ -1244,7 +1244,7 @@ $cookie = AppHelper::getPageCookie($page);
                             </a>
                           </li>
                         </ul>
-                        <div class="tab-content tab-space tab-subcategories mt-0">
+                        <div class="tab-content tab-subcategories mt-0">
                           <div class="tab-pane active" id="link19">
                             <div class="row card-stats">
                               <div class="col-6">
@@ -1411,7 +1411,7 @@ $cookie = AppHelper::getPageCookie($page);
                             </a>
                           </li>
                         </ul>
-                        <div class="tab-content tab-space tab-subcategories mt-0">
+                        <div class="tab-content tab-subcategories mt-0">
                           <div class="tab-pane active" id="link22">
                             <div class="row card-stats">
                               <div class="col-6">
@@ -1577,7 +1577,7 @@ $cookie = AppHelper::getPageCookie($page);
                             </a>
                           </li>
                         </ul>
-                        <div class="tab-content tab-space tab-subcategories mt-0">
+                        <div class="tab-content tab-subcategories mt-0">
                           <div class="tab-pane active" id="link25">
                             <div class="row card-stats">
                               <div class="col-6">
@@ -1743,7 +1743,7 @@ $cookie = AppHelper::getPageCookie($page);
                             </a>
                           </li>
                         </ul>
-                        <div class="tab-content tab-space tab-subcategories mt-0">
+                        <div class="tab-content tab-subcategories mt-0">
                           <div class="tab-pane active" id="link28">
                             <div class="row card-stats">
                               <div class="col-6">

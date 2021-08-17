@@ -1,0 +1,53 @@
+.floating-label {
+    position: relative;
+
+    &::before {
+        content: attr(data-label);
+        position: absolute;
+        font-size: $input-font-size;
+        color: $dark-states;
+        opacity: 0;
+        top: 5px;
+        left: 10px;
+        transform: translateY(0) scale(1);
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:focus-within,
+    &.has-value {
+        &::before {
+            opacity: 1;
+            top: 0;
+            left: 5px;
+            transform: translateY(-100%);
+            color: rgba($dark-states, 0.7);
+            font-size: calc(#{$input-font-size} * 0.8);
+        }
+    }
+
+    &.input-group-sm {
+        &::before {
+            font-size: $input-font-size-sm;
+        }
+
+        &:focus-within,
+        &.has-value {
+            &::before {
+                font-size: calc(#{$input-font-size-sm} * 0.8);
+            }
+        }
+    }
+
+    &.input-group-lg {
+        &::before {
+            font-size: $input-font-size-lg;
+        }
+
+        &:focus-within,
+        &.has-value {
+            &::before {
+                font-size: calc(#{$input-font-size-lg} * 0.8);
+            }
+        }
+    }
+}

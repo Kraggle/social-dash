@@ -8,7 +8,7 @@ Forms')])
         <form id="RegisterValidation">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">Register Form</h4>
+              <h3 class="card-title">Register Form</h3>
             </div>
             <div class="card-body">
               <div class="form-group has-label">
@@ -48,7 +48,7 @@ Forms')])
         <form id="LoginValidation">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">Login Form</h4>
+              <h3 class="card-title">Login Form</h3>
             </div>
             <div class="card-body">
               <div class="form-group has-label">
@@ -76,7 +76,7 @@ Forms')])
         <form id="TypeValidation" class="form-horizontal">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">Type Validation</h4>
+              <h3 class="card-title">Type Validation</h3>
             </div>
             <div class="card-body">
               <div class="row">
@@ -150,7 +150,7 @@ Forms')])
         <form id="RangeValidation" class="form-horizontal">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">Range Validation</h4>
+              <h3 class="card-title">Range Validation</h3>
             </div>
             <div class="card-body">
               <div class="row">

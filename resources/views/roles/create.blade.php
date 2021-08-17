@@ -12,7 +12,7 @@ Management')])
 
             <div class="card ">
               <div class="card-header">
-                <h4 class="card-title">{{ __('Add Role') }}</h4>
+                <h3 class="card-title">{{ __('Add Role') }}</h3>
               </div>
               <div class="card-body ">
                 <div class="row">
@@ -25,7 +25,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label" for="input-name">{{ __('Name') }}</label>
                   <div class="col-sm-7">
-                    @include('forms.text', ['options' => [
+                    @include('forms.text', ['settings' => [
                     'name' => 'name',
                     'id' => 'input-name',
                     'placeholder' => __('Name'),
@@ -38,7 +38,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label" for="input-description">{{ __('Description') }}</label>
                   <div class="col-sm-7">
-                    @include('forms.textarea', ['options' => [
+                    @include('forms.textarea', ['settings' => [
                     'name' => 'description',
                     'placeholder' => __('Description'),
                     'required' => true,

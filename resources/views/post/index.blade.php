@@ -8,7 +8,7 @@ Management')])
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title d-inline-block">{{ __('Posts') }}</h4>
+              <h3 class="card-title d-inline-block">{{ __('Posts') }}</h3>
               @can('create', App\Models\Post::class)
                 <a href="{{ route('post.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">
                   {{ __('Add post') }}

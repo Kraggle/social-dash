@@ -9,7 +9,7 @@ extract(
             'group_attrs' => '',
             'cookie' => false,
         ],
-        $options,
+        $settings ?? [],
     ),
 );
 

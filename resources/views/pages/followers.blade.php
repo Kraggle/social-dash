@@ -17,20 +17,20 @@ $cookie = AppHelper::getPageCookie($page);
           <div class="card-header row">
             <div class="col-md-4">
               <h5 class="card-category">Account Followers</h5>
-              <h2 class="card-title">Followers</h2>
+              <h3 class="card-title">Followers</h3>
             </div>
 
             <div class="row col-md-8 align-items-start justify-content-end pe-0">
 
               <div class="col-auto pe-0">
-                @include('forms.datepicker', ['options' => [
+                @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
                 'id' => 'f-chart-date'
                 ]])
               </div>
 
               {{-- chart day selector --}}
-              @include('forms.chart-radio', ['options' => [
+              @include('forms.chart-radio', ['settings' => [
               'name' => 'f-chart-day',
               'color' => 'warning',
               'buttons' => [[
@@ -57,7 +57,7 @@ $cookie = AppHelper::getPageCookie($page);
               {{-- chart line selector --}}
               {{-- There is only one line, so we'll hide this with d-none --}}
               {{-- We still need it for the color and tooltip label --}}
-              @include('forms.chart-toggles', ['options' => [
+              @include('forms.chart-toggles', ['settings' => [
               'buttons' => [[
               'id' => 'f-chart-line-1',
               'color' => 'yellow',
@@ -93,17 +93,17 @@ $cookie = AppHelper::getPageCookie($page);
             <div class="row col-md-6 align-items-start justify-content-end pe-0">
 
               <div class="col-auto pe-0">
-                @include('forms.datepicker', ['options' => [
+                @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
                 'id' => 'u-chart-date',
-                'settings' => ['alt-format' => 'F, Y']
+                'data' => ['alt-format' => 'F, Y']
                 ]])
               </div>
 
               {{-- chart line selector --}}
               {{-- There is only one line, so we'll hide this with d-none --}}
               {{-- We still need it for the color and tooltip label --}}
-              @include('forms.chart-toggles', ['options' => [
+              @include('forms.chart-toggles', ['settings' => [
               'buttons' => [[
               'id' => 'u-chart-bar-1',
               'color' => 'orange',
@@ -125,7 +125,7 @@ $cookie = AppHelper::getPageCookie($page);
               {{-- chart day selector --}}
               {{-- There is only one line, so we'll hide this with d-none --}}
               {{-- We still need it for the color and tooltip label --}}
-              @include('forms.chart-radio', ['options' => [
+              @include('forms.chart-radio', ['settings' => [
               'name' => 'u-chart-day',
               'color' => 'warning',
               'buttons' => [[
@@ -161,17 +161,17 @@ $cookie = AppHelper::getPageCookie($page);
             <div class="row col-md-6 align-items-start justify-content-end pe-0">
 
               <div class="col-auto pe-0">
-                @include('forms.datepicker', ['options' => [
+                @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
                 'id' => 'o-chart-date',
-                'settings' => ['alt-format' => 'F, Y']
+                'data' => ['alt-format' => 'F, Y']
                 ]])
               </div>
 
               {{-- chart line selector --}}
               {{-- There is only one line, so we'll hide this with d-none --}}
               {{-- We still need it for the color and tooltip label --}}
-              @include('forms.chart-toggles', ['options' => [
+              @include('forms.chart-toggles', ['settings' => [
               'buttons' => [[
               'id' => 'o-chart-bar-1',
               'color' => 'green',
@@ -186,7 +186,7 @@ $cookie = AppHelper::getPageCookie($page);
               {{-- chart day selector --}}
               {{-- There is only one line, so we'll hide this with d-none --}}
               {{-- We still need it for the color and tooltip label --}}
-              @include('forms.chart-radio', ['options' => [
+              @include('forms.chart-radio', ['settings' => [
               'name' => 'o-chart-day',
               'color' => 'warning',
               'buttons' => [[

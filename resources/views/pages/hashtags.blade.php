@@ -8,14 +8,14 @@
   <div class="content">
     <div class="row">
       <div class="col-md-6 mb-4">
-        <h2 class="card-title">Hashtags Most Commenly Used</h2>
+        <h3 class="card-title">Hashtags Most Commenly Used</h3>
         {{-- <input type="text"
                     value="#millionairemotivation,#moneymotivation,#hashtags,#cory,#beevers,#fillitup,#hashyhashtag,#millionairemotivation,#motivationalquote,#motivationalmeme,#moneymotivation,#moneyinspiration,#moneymentor,#anotherhashtag,#andanother,#have10intotal"
                     class="tagsinput" data-role="tagsinput" data-color="warning" /> --}}
       </div>
 
       <div class="col-md-6 mb-4 float-end">
-        <h2 class="card-title">Hashtags By Engagement Rate</h2>
+        <h3 class="card-title">Hashtags By Engagement Rate</h3>
         {{-- <input type="text"
                     value="#millionairemotivation,#moneymotivation,#hashtags,#cory,#beevers,#fillitup,#hashyhashtag,#millionairemotivation,#motivationalquote,#motivationalmeme,#moneymotivation,#moneyinspiration,#moneymentor,#anotherhashtag,#andanother,#have10intotal"
                     class="tagsinput" data-role="tagsinput" data-color="warning" /> --}}
@@ -85,7 +85,7 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-warning btn-gradient btn-round float-end">VIEW ALL HASHTAGS</button>
+        <button class="btn btn-warning btn-gradient rounded-pill">VIEW ALL HASHTAGS</button>
       </div>
       <div class="col-md-6 mb-4">
         <div class="progress-container progress-warning">
@@ -152,7 +152,7 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-warning btn-gradient btn-round float-end">VIEW ALL HASHTAGS</button>
+        <button class="btn btn-warning btn-gradient rounded-pill">VIEW ALL HASHTAGS</button>
       </div>
     </div>
 

@@ -10,7 +10,7 @@ Management')])
             {{-- Teams management - admin only --}}
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title d-inline-block">{{ __('Teams') }}</h4>
+                <h3 class="card-title d-inline-block">{{ __('Teams') }}</h3>
                 @can('create', App\Models\Team::class)
                   <a href="{{ route('team.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">
                     {{ __('Add team') }}
@@ -66,7 +66,7 @@ Management')])
             <div class="card">
 
               <div class="card-header">
-                <h4 class="card-title d-inline-block">{{ __('Team Management') }}</h4>
+                <h3 class="card-title d-inline-block">{{ __('Team Management') }}</h3>
                 @can('add-member', $team)
                   <a href="{{ route('member.create') }}" class="btn btn-sm btn-primary btn-gradient float-end">
                     {{ __('Add team member') }}

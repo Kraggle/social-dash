@@ -6,7 +6,7 @@
       <div class="col-md-4">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Date-Time-Picker</h4>
+            <h3 class="card-title">Date-Time-Picker</h3>
           </div>
           <div class="card-body">
             <div class="form-group">
@@ -18,7 +18,7 @@
       <div class="col-md-4">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Date Picker</h4>
+            <h3 class="card-title">Date Picker</h3>
           </div>
           <div class="card-body">
             <div class="form-group">
@@ -30,7 +30,7 @@
       <div class="col-md-4">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Time Picker</h4>
+            <h3 class="card-title">Time Picker</h3>
           </div>
           <div class="card-body">
             <div class="form-group">
@@ -46,7 +46,7 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-6 mb-4">
-                <h4 class="card-title">Toggle Buttons</h4>
+                <h3 class="card-title">Toggle Buttons</h3>
                 <div class="row mb-3">
                   <div class="col-md-4">
                     <p class="category">Default</p>
@@ -66,7 +66,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-4">
-                <h4 class="card-title">Customisable Select</h4>
+                <h3 class="card-title">Customisable Select</h3>
                 <div class="row">
                   <div class="col-lg-5 col-md-6 col-sm-3">
                     <select class="selectpicker" data-size="7" data-style="btn btn-primary" title="Single Select">
@@ -103,11 +103,11 @@
             </div>
             <div class="row">
               <div class="col-md-6 mb-4">
-                <h4 class="card-title">Tags</h4>
+                <h3 class="card-title">Tags</h3>
                 <input type="text" value="Amsterdam,Washington,Sydney,Beijing" class="tagsinput" data-role="tagsinput" data-color="danger" />
               </div>
               <div class="col-md-6">
-                <h4 class="card-title">Dropdown & Dropup</h4>
+                <h3 class="card-title">Dropdown & Dropup</h3>
                 <div class="row">
                   <div class="col-lg-4 col-md-6 col-sm-3">
                     <div class="dropdown">
@@ -140,7 +140,7 @@
             </div>
             <div class="row">
               <div class="col-md-6 mb-4">
-                <h4 class="card-title">Progress Bars</h4>
+                <h3 class="card-title">Progress Bars</h3>
                 <div class="progress-container">
                   <span class="progress-badge">Default</span>
                   <div class="progress">
@@ -159,7 +159,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <h4 class="card-title mt-3">Sliders</h4>
+                <h3 class="card-title mt-3">Sliders</h3>
                 <div id="sliderRegular" class="slider">
                 </div>
                 <br>
@@ -168,37 +168,37 @@
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-4">
-                <h4 class="card-title">Regular Image</h4>
+                <h3 class="card-title">Regular Image</h3>
                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                   <div class="fileinput-new thumbnail">
                     <img src="{{ asset('images') }}/image_placeholder.jpg" alt="...">
                   </div>
                   <div class="fileinput-preview fileinput-exists thumbnail"></div>
                   <div>
-                    <span class="btn btn-primary btn-gradient btn-round btn-file">
+                    <span class="btn btn-primary btn-gradient rounded-pill btn-file">
                       <span class="fileinput-new">Select image</span>
                       <span class="fileinput-exists">Change</span>
                       <input type="file" name="..." />
                     </span>
-                    <a href="#pablo" class="btn btn-danger btn-gradient btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                    <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-sm-4">
-                <h4 class="card-title">Avatar</h4>
+                <h3 class="card-title">Avatar</h3>
                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                   <div class="fileinput-new thumbnail img-circle">
                     <img src="{{ asset('images') }}/placeholder.jpg" alt="...">
                   </div>
                   <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
                   <div>
-                    <span class="btn btn-round btn-primary btn-gradient btn-file">
+                    <span class="btn rounded-pill btn-primary btn-gradient btn-file">
                       <span class="fileinput-new">Add Photo</span>
                       <span class="fileinput-exists">Change</span>
                       <input type="file" name="..." />
                     </span>
                     <br />
-                    <a href="#pablo" class="btn btn-danger btn-gradient btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                    <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
                   </div>
                 </div>
               </div>

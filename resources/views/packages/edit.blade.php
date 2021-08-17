@@ -13,7 +13,7 @@ Management')])
             <div class="card ">
               <div class="card-header">
                 <div class="row">
-                  <h4 class="card-title col-md-6">{{ __('Edit Package') }}</h4>
+                  <h3 class="card-title col-md-6">{{ __('Edit Package') }}</h3>
                   <div class="col-md-6 text-end">
                     <a href="{{ route('package.index') }}" class="btn btn-sm btn-warning btn-gradient">
                       {{ __('Back to list') }}
@@ -29,7 +29,7 @@ Management')])
                     {{ __('Name') }}
                   </label>
                   <div class="col-sm-8">
-                    @include('forms.text', ['options' => [
+                    @include('forms.text', ['settings' => [
                     'name' => 'name',
                     'value' => $package->name ?? '',
                     'placeholder' => __('Starter'),
@@ -45,7 +45,7 @@ Management')])
                     {{ __('Key') }}
                   </label>
                   <div class="col-sm-8">
-                    @include('forms.text', ['options' => [
+                    @include('forms.text', ['settings' => [
                     'name' => 'key',
                     'value' => $package->key ?? '',
                     'placeholder' => __('starter'),
@@ -61,7 +61,7 @@ Management')])
                     {{ __('Description') }}
                   </label>
                   <div class="col-sm-8">
-                    @include('forms.textarea', ['options' => [
+                    @include('forms.textarea', ['settings' => [
                     'name' => 'description',
                     'value' => $package->description ?? '',
                     'placeholder' => __('Description'),
@@ -77,7 +77,7 @@ Management')])
                     {{ __('Includes') }}
                   </label>
                   <div class="col-sm-8">
-                    @include('forms.textarea', ['options' => [
+                    @include('forms.textarea', ['settings' => [
                     'name' => 'options[includes]',
                     'value' => $package->options->includes ?? '',
                     'placeholder' => __('A comma separated list of benefits of the package. Include (+) at beginning to set an icon.'),
@@ -91,7 +91,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label pe-0 text-end" for="number-cost">{{ __('Cost') }}</label>
                   <div class="col-sm-8">
-                    @include('forms.number', ['options' => [
+                    @include('forms.number', ['settings' => [
                     'name' => 'cost',
                     'value' => $package->cost ?? '',
                     'placeholder' => '25.00',
@@ -107,7 +107,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label pe-0 text-end" for="input-stripe-id">{{ __('Stripe ID') }}</label>
                   <div class="col-sm-8">
-                    @include('forms.text', ['options' => [
+                    @include('forms.text', ['settings' => [
                     'name' => 'stripe_id',
                     'value' => $package->stripe_id ?? '',
                     'placeholder' => 'prod_oi34...',
@@ -120,7 +120,7 @@ Management')])
                 <div class="row">
                   <label class="col-sm-2 col-form-label pe-0 text-end" for="input-price-id">{{ __('Price ID') }}</label>
                   <div class="col-sm-8">
-                    @include('forms.text', ['options' => [
+                    @include('forms.text', ['settings' => [
                     'name' => 'price_id',
                     'value' => $package->price_id ?? '',
                     'placeholder' => 'price_w5u2...',

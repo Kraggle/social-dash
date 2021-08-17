@@ -13,7 +13,7 @@
 
             <div class="card">
               <div class="card-header row">
-                <h4 class="card-title col-md-6">{{ __('Default') }}</h4>
+                <h3 class="card-title col-md-6">{{ __('Default') }}</h3>
               </div>
               <div class="card-body ">
 
@@ -82,7 +82,7 @@
 
             <div class="card">
               <div class="card-header row">
-                <h4 class="card-title col-md-6">{{ __('Options') }}</h4>
+                <h3 class="card-title col-md-6">{{ __('Options') }}</h3>
               </div>
               <div class="card-body ">
 
@@ -92,27 +92,37 @@
 
                     {{-- hidden --}}
                     <div class="col-md-auto">
-                      <label class="d-block" for="switch-hidden">{{ __('Hide Setting') }}</label>
-                      <div class="py-1">
-                        @include('forms.switch', ['options' => [
-                        'name' => 'options[hidden]',
-                        'value' => $options->hidden ?? '',
-                        'id' => 'switch-hidden'
-                        ]])
-                      </div>
+                      <label class="d-block" for="switch-hidden" title="{{ __('Hide this setting from the user?') }}">{{ __('Hide Setting') }}</label>
+                      @include('forms.switch', ['settings' => [
+                      'name' => 'options[hidden]',
+                      'value' => $options->hidden ?? '',
+                      'id' => 'switch-hidden',
+                      'class' => ['mb-0']
+                      ]])
                     </div>
 
                     {{-- has_cost --}}
                     <div class="col-md-auto">
-                      <label class="d-block" for="switch-has-cost">{{ __('Has Cost') }}</label>
-                      <div class="py-1">
-                        @include('forms.switch', ['options' => [
-                        'name' => 'options[has_cost]',
-                        'value' => $options->has_cost ?? '',
-                        'id' => 'switch-has-cost',
-                        'attrs' => ['data-disabler' => ['name' => 'cost', 1 => 'show', 0 => 'hide']]
-                        ]])
-                      </div>
+                      <label class="d-block" for="switch-has-cost" title="{{ __('Does this setting have a cost?') }}">{{ __('Has Cost') }}</label>
+                      @include('forms.switch', ['settings' => [
+                      'name' => 'options[has_cost]',
+                      'value' => $options->has_cost ?? '',
+                      'id' => 'switch-has-cost',
+                      'class' => ['mb-0'],
+                      'attrs' => ['data-disabler' => ['name' => 'cost', 1 => 'show', 0 => 'hide']]
+                      ]])
+                    </div>
+
+                    {{-- is_restricted --}}
+                    <div class="col-md-auto">
+                      <label class="d-block" for="switch-is-restricted" title="{{ __('Is this setting restricted to certain subscription packages?') }}">{{ __('Is Restricted') }}</label>
+                      @include('forms.switch', ['settings' => [
+                      'name' => 'options[is_restricted]',
+                      'value' => $options->is_restricted ?? '',
+                      'id' => 'switch-is-restricted',
+                      'class' => ['mb-0'],
+                      'attrs' => ['data-disabler' => ['name' => 'restrict', 1 => 'show', 0 => 'hide']]
+                      ]])
                     </div>
 
                   </div>
@@ -182,7 +192,7 @@
                       @php $value = $options->values[0] ?? []; @endphp
 
                       {{-- value --}}
-                      @include('forms.text', ['options' => [
+                      @include('forms.text', ['settings' => [
                       'name' => 'options[values][0][value]',
                       'placeholder' => __('Some Value'),
                       'value' => $value->value ?? '',
@@ -191,7 +201,7 @@
                       ]])
 
                       {{-- key --}}
-                      @include('forms.text', ['options' => [
+                      @include('forms.text', ['settings' => [
                       'name' => 'options[values][0][key]',
                       'placeholder' => __('some_value'),
                       'value' => $value->key ?? '',
@@ -200,7 +210,7 @@
                       ]])
 
                       {{-- cost --}}
-                      @include('forms.number', ['options' => [
+                      @include('forms.number', ['settings' => [
                       'name' => 'options[values][0][cost]',
                       'placeholder' => '25.00',
                       'value' => $value->cost ?? '',
@@ -213,7 +223,7 @@
                       ]])
 
                       {{-- default --}}
-                      @include('forms.switch', ['options' => [
+                      @include('forms.switch', ['settings' => [
                       'name' => 'options[values][0][default]',
                       'value' => $options->default ?? '',
                       'disabled' => $disabled,
@@ -228,7 +238,7 @@
                         @continue($loop->index == 0)
 
                         {{-- value --}}
-                        @include('forms.text', ['options' => [
+                        @include('forms.text', ['settings' => [
                         'name' => "options[values][$loop->index][value]",
                         'placeholder' => __('Some Value'),
                         'value' => $value->value ?? '',
@@ -237,7 +247,7 @@
                         ]])
 
                         {{-- key --}}
-                        @include('forms.text', ['options' => [
+                        @include('forms.text', ['settings' => [
                         'name' => "options[values][$loop->index][key]",
                         'placeholder' => __('some_value'),
                         'value' => $value->key ?? '',
@@ -246,7 +256,7 @@
                         ]])
 
                         {{-- cost --}}
-                        @include('forms.number', ['options' => [
+                        @include('forms.number', ['settings' => [
                         'name' => "options[values][$loop->index][cost]",
                         'placeholder' => '25.00',
                         'value' => $value->cost ?? '',
@@ -259,7 +269,7 @@
                         ]])
 
                         {{-- default --}}
-                        @include('forms.switch', ['options' => [
+                        @include('forms.switch', ['settings' => [
                         'name' => "options[values][$loop->index][default]",
                         'value' => $value->default ?? '',
                         'disabled' => $disabled,
@@ -289,7 +299,7 @@
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pe-0 col-form-label text-end" for="number-default">{{ __('Default Value') }}</label>
                     <div class="col-sm-10">
-                      @include('forms.number', ['options' => [
+                      @include('forms.number', ['settings' => [
                       'name' => 'options[default]',
                       'placeholder' => '1000',
                       'value' => $options->default ?? '',
@@ -303,7 +313,7 @@
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pe-0 col-form-label text-end" for="number-min-value">{{ __('Minimum Value') }}</label>
                     <div class="col-sm-10">
-                      @include('forms.number', ['options' => [
+                      @include('forms.number', ['settings' => [
                       'name' => 'options[min_value]',
                       'placeholder' => '250',
                       'value' => $options->min_value ?? '',
@@ -317,7 +327,7 @@
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pe-0 col-form-label text-end" for="number-max-value">{{ __('Maximum Value') }}</label>
                     <div class="col-sm-10">
-                      @include('forms.number', ['options' => [
+                      @include('forms.number', ['settings' => [
                       'name' => 'options[max_value]',
                       'placeholder' => '9000',
                       'value' => $options->max_value ?? '',
@@ -331,7 +341,7 @@
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pe-0 col-form-label text-end" for="number-step">{{ __('Step') }}</label>
                     <div class="col-sm-10">
-                      @include('forms.number', ['options' => [
+                      @include('forms.number', ['settings' => [
                       'name' => 'options[step]',
                       'placeholder' => '50',
                       'value' => $options->step ?? '',
@@ -345,7 +355,7 @@
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pe-0 col-form-label text-end" for="number-min-cost">{{ __('Minimum Cost') }}</label>
                     <div class="col-sm-10">
-                      @include('forms.number', ['options' => [
+                      @include('forms.number', ['settings' => [
                       'name' => 'options[min_cost]',
                       'placeholder' => '0.00',
                       'value' => $options->min_cost ?? '',
@@ -363,7 +373,7 @@
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pe-0 col-form-label text-end" for="number-max-cost">{{ __('Maximum Cost') }}</label>
                     <div class="col-sm-10">
-                      @include('forms.number', ['options' => [
+                      @include('forms.number', ['settings' => [
                       'name' => 'options[max_cost]',
                       'placeholder' => '100.00',
                       'value' => $options->max_cost ?? '',
@@ -387,7 +397,7 @@
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pe-0 col-form-label text-end" for="switch-default">{{ __('Default Value') }}</label>
                     <div class="col-sm-10 has-switch">
-                      @include('forms.switch', ['options' => [
+                      @include('forms.switch', ['settings' => [
                       'name' => 'options[default]',
                       'value' => $options->default ?? '',
                       'id' => 'switch-default',
@@ -400,7 +410,7 @@
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pe-0 col-form-label text-end" for="number-on-cost">{{ __('On Cost') }}</label>
                     <div class="col-sm-10">
-                      @include('forms.number', ['options' => [
+                      @include('forms.number', ['settings' => [
                       'name' => 'options[on_cost]',
                       'placeholder' => '50.00',
                       'value' => $options->on_cost ?? '',
@@ -418,7 +428,7 @@
                   <div class="row justify-content-md-center">
                     <label class="col-sm-2 pe-0 col-form-label text-end" for="number-off-cost">{{ __('Off Cost') }}</label>
                     <div class="col-sm-10">
-                      @include('forms.number', ['options' => [
+                      @include('forms.number', ['settings' => [
                       'name' => 'options[off_cost]',
                       'placeholder' => '0.00',
                       'value' => $options->off_cost ?? '',
@@ -449,7 +459,7 @@
           </div>
           {{-- <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{ __('Example') }}</h4>
+                        <h3 class="card-title">{{ __('Example') }}</h3>
                     </div>
                     <div class="card-body">
 

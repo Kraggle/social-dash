@@ -8,7 +8,7 @@ Management')])
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title d-inline-block">{{ __('Packages') }}</h4>
+              <h3 class="card-title d-inline-block">{{ __('Packages') }}</h3>
               @can('create', App\Models\Package::class)
                 <a href="{{ route('package.create') }}" class="btn btn-primary btn-gradient btn-sm float-end">{{ __('Add package') }}</a>
               @endcan

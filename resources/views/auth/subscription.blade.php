@@ -1,6 +1,5 @@
 @extends('layouts.app', [
 'class' => 'subscribe-page',
-'classPage' => 'subscribe-page',
 'activePage' => 'subscribe',
 'titlePage' => __('Subscribe')
 ])
@@ -69,7 +68,7 @@ $prev = '';
           @endforeach
 
           <div class="col-sm-auto my-3">
-            @include('forms.check', ['options' => [
+            @include('forms.check', ['settings' => [
             'name' => 'policy',
             'id' => 'check-policy',
             'placeholder' => __('I agree with the ') . " <a href=\"#\">" . __('terms and conditions') . "</a>"
@@ -120,7 +119,7 @@ $prev = '';
 
                 {{-- billing name --}}
                 <label for="input-billing-name">{{ __('Name on Card') }}</label>
-                @include('forms.text', ['options' => [
+                @include('forms.text', ['settings' => [
                 'name' => 'billing-name',
                 'placeholder' => __('Mr S Shadow'),
                 'id' => 'input-billing-name',

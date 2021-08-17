@@ -1,6 +1,5 @@
 @extends('layouts.app', [
 'class' => 'home-page',
-'classPage' => 'home-page',
 'activePage' => 'home',
 'titlePage' => __('Welcome')
 ])

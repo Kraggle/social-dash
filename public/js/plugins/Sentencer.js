@@ -1,4 +1,4 @@
-import K from '../src/K.js';
+import K from './K.js';
 
 // ---------------------------------------------
 //                NOUN INFLECTOR
@@ -169,7 +169,7 @@ const NounInflector = function() {
 	this.singularForms.regularForms.push([/(buffal|tomat|tornad)(oes)$/i, '$1o']);
 	this.singularForms.regularForms.push([/(analy|naly|synop|parenthe|diagno|the)ses$/i, '$1sis']);
 	this.singularForms.regularForms.push([/(vert|ind|cort)(ices)$/i, '$1ex']);
-	// our pluralizer won''t cause this form of appendix (appendicies)
+	// our pluralizer won't cause this form of appendix (appendices)
 	// but we should handle it
 	this.singularForms.regularForms.push([/(matr|append)(ices)$/i, '$1ix']);
 	this.singularForms.regularForms.push([/(x|ch|ss|sh|s|z)es$/i, '$1']);

@@ -72,4 +72,13 @@ class ExamplePagesController extends Controller {
     public function calendar() {
         return view('pages.example_pages.calendar');
     }
+
+    /**
+     * Display the test page
+     *
+     * @return \Illuminate\View\View
+     */
+    public function test() {
+        return view('pages.example_pages.test');
+    }
 }

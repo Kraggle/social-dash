@@ -123,12 +123,12 @@ $stats = [
             <div class="row">
               <div class="col-md-4">
                 <h5 class="card-category">{{ __('Account Engagement') }}</h5>
-                <h2 class="card-title">{{ __('Performance') }}</h2>
+                <h3 class="card-title">{{ __('Performance') }}</h3>
               </div>
               <div class="row col-md-8 align-items-start justify-content-end pe-0">
 
                 {{-- chart day selector --}}
-                @include('forms.chart-radio', ['options' => [
+                @include('forms.chart-radio', ['settings' => [
                 'name' => 'p-chart-day',
                 'color' => 'warning',
                 'buttons' => [[
@@ -153,7 +153,7 @@ $stats = [
                 ]])
 
                 {{-- chart line selector --}}
-                @include('forms.chart-toggles', ['options' => [
+                @include('forms.chart-toggles', ['settings' => [
                 'buttons' => [[
                 'id' => 'p-chart-line-1',
                 'color' => 'blue',
@@ -201,13 +201,13 @@ $stats = [
         {{-- scheduled posts --}}
         <div class="card card-tasks">
           <div class="card-header">
-            <h6 class="title d-inline">Scheduled Posts</h6>
-            <p class="card-category d-inline">Upcoming</p>
-            <div class="dropdown">
-              <button type="button" class="btn btn-link dropdown-toggle btn-icon no-caret" data-bs-toggle="dropdown">
+            <h5 class="card-category">Scheduled Posts</h5>
+            <h3 class="card-title">Upcoming</h3>
+            <div class="dropdown position-absolute top-0 right-0 m-2">
+              <button type="button" class="btn btn-gray btn-lg btn-link dropdown-toggle no-caret" data-bs-toggle="dropdown">
                 <i class="fal fa-cog"></i>
               </button>
-              <div class="dropdown-menu dropdown-menu-end">
+              <div class="dropdown-menu">
                 <a class="dropdown-item" href="#pablo">Action</a>
                 <a class="dropdown-item" href="#pablo">Another action</a>
                 <a class="dropdown-item" href="#pablo">Something else</a>
@@ -220,126 +220,84 @@ $stats = [
                 <tbody>
                   <tr>
                     <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
+                      @include('forms.check', ['settings' => ['value' => 'false']])
                     </td>
                     <td>
                       <p class="title">Tesla Inspirational Quote 1</p>
                       <p class="text-muted">21/05/2021 @ 8:47 AM</p>
                     </td>
                     <td class="td-actions text-end">
-                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-link">
+                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
                         <i class="fal fa-pencil-alt"></i>
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="" checked="">
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
+                      @include('forms.check', ['settings' => ['value' => 'true']])
                     </td>
                     <td>
                       <p class="title">Tesla Inspirational Quote 2</p>
                       <p class="text-muted">21/05/2021 @ 10:47 AM</p>
                     </td>
                     <td class="td-actions text-end">
-                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-link">
+                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
                         <i class="fal fa-pencil-alt"></i>
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
+                      @include('forms.check', ['settings' => ['value' => 'false']])
                     </td>
                     <td>
                       <p class="title">Tesla Inspirational Quote 3</p>
                       <p class="text-muted">21/05/2021 @ 12:47 PM</p>
                     </td>
                     <td class="td-actions text-end">
-                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-link">
+                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
                         <i class="fal fa-pencil-alt"></i>
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
+                      @include('forms.check', ['settings' => ['value' => 'false']])
                     </td>
                     <td>
                       <p class="title">Tesla Inspirational Quote 4</p>
                       <p class="text-muted">21/05/2021 @ 14:47 PM</p>
                     </td>
                     <td class="td-actions text-end">
-                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-link">
+                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
                         <i class="fal fa-pencil-alt"></i>
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
+                      @include('forms.check', ['settings' => ['value' => 'false']])
                     </td>
                     <td>
                       <p class="title">Tesla Inspirational Quote 5</p>
                       <p class="text-muted">21/05/2021 @ 15:47 PM</p>
                     </td>
                     <td class="td-actions text-end">
-                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-link">
+                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
                         <i class="fal fa-pencil-alt"></i>
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
+                      @include('forms.check', ['settings' => ['value' => 'false']])
                     </td>
                     <td>
                       <p class="title">Tesla Inspirational Quote 6</p>
                       <p class="text-muted">21/05/2021 @ 17:47 PM</p>
                     </td>
                     <td class="td-actions text-end">
-                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-link">
+                      <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
                         <i class="fal fa-pencil-alt"></i>
                       </button>
                     </td>
@@ -356,20 +314,19 @@ $stats = [
         {{-- recent comments --}}
         <div class="card">
           <div class="card-header">
-            <div class="tools float-end">
+            <h3 class="card-title">Recent Comments</h3>
+            <div class="position-absolute top-0 right-0 m-2">
               <div class="dropdown">
-                <button type="button" class="btn dropdown-toggle btn-link btn-icon no-caret" data-bs-toggle="dropdown">
+                <button type="button" class="btn btn-gray btn-lg btn-link dropdown-toggle no-caret" data-bs-toggle="dropdown">
                   <i class="fal fa-cog"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  <a class="dropdown-item text-danger" href="#">Remove Data</a>
+                  <a class="dropdown-item" href="#pablo">Action</a>
+                  <a class="dropdown-item" href="#pablo">Another action</a>
+                  <a class="dropdown-item" href="#pablo">Something else</a>
                 </div>
               </div>
             </div>
-            <h4 class="card-title">Recent Comments</h4>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -500,7 +457,7 @@ $stats = [
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Follower Demographs By Country</h4>
+            <h3 class="card-title">Follower Demographs By Country</h3>
             <p class="card-category">Where Your Followers Are Based</p>
           </div>
           <div class="card-body">

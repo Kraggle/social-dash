@@ -7,7 +7,7 @@ __('Notifications')])
       <div class="col-md-6">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Notifications Style</h4>
+            <h3 class="card-title">Notifications Style</h3>
           </div>
           <div class="card-body">
             <div class="alert alert-info">
@@ -41,7 +41,7 @@ __('Notifications')])
       <div class="col-md-6">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Notification states</h4>
+            <h3 class="card-title">Notification states</h3>
           </div>
           <div class="card-body">
             <div class="alert alert-primary">
@@ -134,7 +134,7 @@ __('Notifications')])
             <div class="row">
               <div class="col-md-12 text-center">
                 <div class="card-header">
-                  <h4 class="card-title">Modal</h4>
+                  <h3 class="card-title">Modal</h3>
                 </div>
                 <button class="btn btn-primary btn-gradient" data-toggle="modal" data-bs-target="#myModal">
                   Classic modal
@@ -218,7 +218,7 @@ __('Notifications')])
                           here to help!</p>
                       </div>
                       <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-info btn-gradient btn-round" data-dismiss="modal">Sounds good!</button>
+                        <button type="button" class="btn btn-info btn-gradient rounded-pill" data-dismiss="modal">Sounds good!</button>
                       </div>
                     </div>
                   </div>

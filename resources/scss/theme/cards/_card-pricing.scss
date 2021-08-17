@@ -12,7 +12,7 @@
             position: relative;
             font-size: 5em;
             font-weight: 900;
-            color: $black;
+            color: white;
             text-transform: lowercase;
             margin-left: -5px;
             z-index: 1;
@@ -39,7 +39,7 @@
             .text-on-front {
                 position: relative;
                 z-index: 2;
-                color: rgba($white, 0.9);
+                color: $default-states;
                 font-size: 3.6em;
                 font-weight: 900;
                 text-align: center;
@@ -72,7 +72,7 @@
                 font-size: 0.8em;
                 margin-top: -49px;
                 text-align: center;
-                color: rgba($white, 0.9);
+                color: $default-states;
             }
         }
     }
@@ -84,7 +84,7 @@
         margin: 80px auto 40px;
 
         li {
-            color: rgba($white, 0.9);
+            color: $default-states;
             background: transparent;
             text-align: center;
             font-size: 1.2em;
@@ -93,66 +93,13 @@
             border: none;
         }
     }
-    &.card-white {
-        background: $white;
-        .card-body {
-            .card-title {
-                color: white;
-            }
-        }
-        .card-body .card-prices {
-            .text-on-front,
-            .plan {
-                color: $default-states;
-                span {
-                    color: $default-states;
+
+    @each $color, $value in $main-colors {
+        &.card-#{$color} {
+            .card-body .card-prices {
+                .text-on-back {
+                    color: rgba($value, 0.1);
                 }
-            }
-        }
-
-        ul li {
-            color: $default-states;
-        }
-
-        .list-group-item {
-            background: transparent;
-        }
-    }
-
-    &.card-primary {
-        .card-body .card-prices {
-            .text-on-back {
-                color: rgba($primary, 0.1);
-            }
-        }
-    }
-
-    &.card-info {
-        .text-on-back {
-            color: rgba($info, 0.1);
-        }
-    }
-
-    &.card-success {
-        .card-body .card-prices {
-            .text-on-back {
-                color: rgba($success, 0.1);
-            }
-        }
-    }
-
-    &.card-warning {
-        .card-body .card-prices {
-            .text-on-back {
-                color: rgba($warning, 0.1);
-            }
-        }
-    }
-
-    &.card-danger {
-        .card-body .card-prices {
-            .text-on-back {
-                color: rgba($danger, 0.1);
             }
         }
     }
@@ -171,7 +118,7 @@
 
 @include media-breakpoint-up(md) {
     .pricing-page {
-        [class*="col-"] {
+        [class*='col-'] {
             &:first-child {
                 padding-right: 0;
                 .card:not(.card-raised) {

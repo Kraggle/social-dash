@@ -1,10 +1,12 @@
 @php
-$titlePage = isset($titlePage) ? $titlePage : 'Here';
-$menuParent = isset($menuParent) ? $menuParent : '';
-$activePage = isset($activePage) ? $activePage : '';
-$class = isset($class) ? $class : '';
-$classPage = isset($classPage) ? $classPage : '';
+$titlePage = $titlePage ?? 'Here';
+$menuParent = $menuParent ?? '';
+$activePage = $activePage ?? '';
+$class = $class ?? '';
 $appName = env('APP_NAME') ?? 'Social Shadow';
+
+$cookie = AppHelper::getPageCookie('all');
+$sidebar = $cookie->sidebar ? ' sidebar-mini' : '';
 @endphp
 
 <!DOCTYPE html>
@@ -26,7 +28,7 @@ $appName = env('APP_NAME') ?? 'Social Shadow';
   <link href="{{ asset('css') }}/app.css?" rel="stylesheet" />
 </head>
 
-<body class="white-content {{ $class ?? '' }}">
+<body class="white-content {{ $class }}{{ $sidebar }}">
 
   @if (auth()->check() &&
     !in_array(

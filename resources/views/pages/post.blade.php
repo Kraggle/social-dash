@@ -14,11 +14,11 @@ $cookie = AppHelper::getPageCookie($page);
 
     <div class="row">
       <div class="col-12 mb-4">
-        <a href="{{ route('pages.post') }}" class="btn btn-round btn-lg btn-info btn-gradient">
+        <a href="{{ route('pages.post') }}" class="btn btn-lg btn-info btn-gradient rounded-pill">
           <i class="fal fa-chevron-left"></i>
           {{ __('Previous Post') }}
         </a>
-        <a href="{{ route('pages.post') }}" class="btn btn-round btn-lg btn-info btn-gradient">
+        <a href="{{ route('pages.post') }}" class="btn btn-lg btn-info btn-gradient rounded-pill">
           {{ __('Next Post') }}
           <i class="fal fa-chevron-right"></i>
         </a>
@@ -31,7 +31,7 @@ $cookie = AppHelper::getPageCookie($page);
         <div class="card card-post">
           <img class="card-img-top" src="{{ asset('images') }}/tania.jpg">
           <div class="card-header d-none">
-            <h4 class="card-title">{{ __('Post Details') }}</h4>
+            <h3 class="card-title">{{ __('Post Details') }}</h3>
           </div>
           <div class="card-body">
             <div class="row card-details">
@@ -71,20 +71,20 @@ $cookie = AppHelper::getPageCookie($page);
           <div class="card-header row">
             <div class="col-4">
               <h5 class="card-category">Overall Post Engagement</h5>
-              <h2 class="card-title">Engagements</h2>
+              <h3 class="card-title">Engagements</h3>
             </div>
 
             <div class="row col-8 align-items-start justify-content-end pe-0" data-toggle="buttons">
 
               <div class="col-auto pe-0">
-                @include('forms.datepicker', ['options' => [
+                @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
                 'id' => 'f-chart-date'
                 ]])
               </div>
 
               {{-- chart day selector --}}
-              @include('forms.chart-radio', ['options' => [
+              @include('forms.chart-radio', ['settings' => [
               'name' => 'e-chart-day',
               'color' => 'warning',
               'buttons' => [[
@@ -99,7 +99,7 @@ $cookie = AppHelper::getPageCookie($page);
               ]])
 
               {{-- chart line selector --}}
-              @include('forms.chart-toggles', ['options' => [
+              @include('forms.chart-toggles', ['settings' => [
               'buttons' => [[
               'id' => 'e-chart-line-1',
               'color' => 'pink',

@@ -1,26 +1,20 @@
-@php $yield = AppHelper::makeId() @endphp
-@extends('forms.group', ['options' => $options, 'yield' => $yield])
+@php
+$yield = AppHelper::makeId();
+$settings = $settings ?? [];
+@endphp
+@extends('forms.group')
 
 @php
 extract(
-    array_merge(
+    AppHelper::arrayMerge(
+        AppHelper::formDefaults(),
         [
-            'id' => '',
-            'name' => '',
-            'placeholder' => '',
-            'value' => '',
             'type' => 'number',
             'min' => '',
             'max' => '',
             'step' => '',
-            'disabled' => false,
-            'readonly' => false,
-            'required' => false,
-            'prepend' => false,
-            'append' => false,
-            'attrs' => [],
         ],
-        $options,
+        $settings,
     ),
 );
 
@@ -30,9 +24,7 @@ $value = old($dot) ?? $value;
 @endphp
 
 @section($yield)
-  <input class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}" name="{{ $name }}"
-    id="{{ $id }}" type="{{ $type }}" placeholder="{{ $placeholder }}" value="{{ $value }}"
-    {{ $required ? 'required=true' : '' }} {{ $disabled ? 'disabled' : '' }} {{ $readonly ? 'readonly' : '' }}
-    {{ strlen($min) ? "min=$min" : '' }} {{ strlen($max) ? "max=$max" : '' }}
-    {{ strlen($step) ? "step=$step" : '' }} {{ AppHelper::makeAttrs($attrs) }} />
+  <div class="input-wrap">
+    <input class="form-control{{ $errors->has($dot) ? ' is-invalid' : '' }}" name="{{ $name }}" id="{{ $id }}" type="{{ $type }}" placeholder="{{ $placeholder }}" value="{{ $value }}" {{ $required ? 'required=true' : '' }} {{ $disabled ? 'disabled' : '' }} {{ $readonly ? 'readonly' : '' }} {{ strlen($min) ? "min=$min" : '' }} {{ strlen($max) ? "max=$max" : '' }} {{ strlen($step) ? "step=$step" : '' }} @foreach ($attrs as $attr => $value) {{ $attr }}="{{ $value }}" @endforeach />
+  </div>
 @endsection

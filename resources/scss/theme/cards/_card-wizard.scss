@@ -1,21 +1,31 @@
-.card-wizard{
-  .card-header{
-    padding-bottom: 10px;
-  }
+.card-wizard {
+    .card-header {
+        padding-bottom: 10px;
+    }
+
+    .card-body {
+        background: $white;
+    }
+
+    .card-footer {
+        background-color: $white !important;
+    }
+
+    .nav-pills .nav-item .nav-link p {
+        color: $dark-states;
+    }
 }
 
-@include media-breakpoint-down(xs){
+@include media-breakpoint-down(xs) {
+    .card-wizard .card-footer .pull-left {
+        padding-left: 0;
+        float: none;
+        text-align: center;
+    }
 
-  .card-wizard .card-footer .pull-left {
-    padding-left: 0;
-    float: none;
-    text-align: center;
-  }
-
-  .card-wizard .card-footer .pull-right {
-    padding-right: 0;
-    float: none;
-    text-align: center;
-  }
-
+    .card-wizard .card-footer .pull-right {
+        padding-right: 0;
+        float: none;
+        text-align: center;
+    }
 }

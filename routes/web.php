@@ -70,6 +70,7 @@ Route::middleware(['auth', 'subscribed'])->group(function () {
     Route::get('support', ['as' => 'page.support', 'uses' => 'PagesController@support']);
 
     // Example Pages
+    Route::get('test', ['as' => 'page.test', 'uses' => 'ExamplePagesController@test']);
     Route::get('widgets', ['as' => 'page.widgets', 'uses' => 'ExamplePagesController@widgets']);
     Route::get('charts', ['as' => 'page.charts', 'uses' => 'ExamplePagesController@charts']);
     Route::get('calendar', ['as' => 'page.calendar', 'uses' => 'ExamplePagesController@calendar']);

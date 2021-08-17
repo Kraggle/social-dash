@@ -1,47 +1,28 @@
-{{-- test --}}
 @php
-extract(
-    array_merge(
-        [
-            'name' => '',
-            'prepend' => false,
-            'append' => false,
-            'group' => [],
-        ],
-        $options,
-    ),
-);
+$prepend = $prepend ?? '';
+$append = $append ?? '';
 
-$class = isset($group['class']) ? (is_array($group['class']) ? implode(' ', $group['class']) : $group['class']) : '';
-$class = ($prepend || $append ? 'input-group' : 'form-group') . " $class";
-$attrs = isset($group['attrs']) ? (is_array($group['attrs']) ? implode(' ', $group['attrs']) : $group['attrs']) : '';
+extract($group);
+
+$class[] = 'input-group';
+if ($size) {
+    $class[] = "input-group-$size";
+}
+if ($label) {
+    $class[] = 'floating-label';
+    $attrs['data-label'] = $label;
+}
+$class = AppHelper::makeClass($class);
 
 @endphp
 
-<div class="{{ $class }}{{ $errors->has($dot) ? ' has-danger' : '' }}" {{ $attrs }}>
+<div class="{{ $class }}{{ $errors->has($dot) ? ' has-danger' : '' }}" @foreach ($attrs as $attr => $value) {{ $attr }}="{{ $value }}" @endforeach>
 
-  @if ($prepend)
-    <div class="input-group-text">
-      @if (is_array($prepend))
-        <i class="{{ $prepend['icon'] }}"></i>
-      @else
-        {{ $prepend }}
-      @endif
-    </div>
-  @endif
+  @include('forms.pender', ['settings' => $prepend])
 
   @yield($yield)
 
-  @if ($append)
-    <div class="input-group-text">
-      @if (is_array($prepend))
-        <i class="{{ $append['icon'] }}"></i>
-      @else
-        {{ $append }}
-      @endif
-    </div>
-  @endif
-
+  @include('forms.pender', ['settings' => $append])
 
 </div>
 @include('alerts.feedback', ['field' => $dot])
