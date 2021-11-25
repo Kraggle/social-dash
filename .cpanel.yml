@@ -2,7 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/gdaddykraggle/social-dashboard/
-    - /bin/cp -R * $DEPLOYPATH
     - PATH={path_to_node}:$PATH  
     - npm i  
-    - composer install  
+    - composer install
+    - /bin/cp -R * $DEPLOYPATH
