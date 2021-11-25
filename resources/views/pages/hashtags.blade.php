@@ -192,9 +192,9 @@
                     <td>67</td>
                     <td>321</th>
                     <td class="text-end">
-                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                     </td>
                   </tr>
                   <tr>
@@ -208,9 +208,9 @@
                     <td>58</td>
                     <td>96</th>
                     <td class="text-end">
-                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                     </td>
                   </tr>
                   <tr>
@@ -224,9 +224,9 @@
                     <td>78</td>
                     <td>145</th>
                     <td class="text-end">
-                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm  edit"><i class="fal fa-pencil-alt"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm  edit">@icon('fal fa-pencil-alt')</a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                     </td>
                   </tr>
                   <tr>
@@ -242,9 +242,9 @@
 
                     </th>
                     <td class="text-end">
-                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                      <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                     </td>
 
                   </tr>
@@ -279,5 +279,5 @@
 
 
 @push('js')
-  <script src="{{ asset('js/pages') }}/datatable-only.js" type="module"></script>
+  <script src="{{ AH::asset('js/pages', '/datatable-only.js') }}" type="module"></script>
 @endpush

@@ -230,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'AppHelper' => App\Helpers\AppHelper::class,
+        'AH' => App\Helpers\AppHelper::class,
         // 'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
         // 'PayPalClient' => Srmklive\PayPal\Services\PayPal::class,
     ],

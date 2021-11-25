@@ -17,7 +17,7 @@
             <h3 class="card-title">{{ __('Joe Gardner') }}</h3>
             <div class="input-group">
               <div class="input-group-text">
-                <i class="fal fa-key-skeleton"></i>
+                @icon('fal fa-key-skeleton')
               </div>
               <input type="text" class="form-control" placeholder="Password">
             </div>

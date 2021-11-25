@@ -41,12 +41,12 @@ Management')])
 
                               @can('update', $default)
                                 <a href="{{ route('default.edit', $default) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
-                                  <i class="fal fa-pencil-alt"></i>
+                                  @icon('fal fa-pencil-alt')
                                 </a>
                               @endcan
                               @if (auth()->user()->can('remove', $default))
                                 <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove delete-alert" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
-                                  <i class="fal fa-trash-alt"></i>
+                                  @icon('fal fa-trash-alt')
                                 </button>
                               @endif
                             </form>
@@ -66,5 +66,5 @@ Management')])
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/pages/datatable-only.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/pages/datatable-only.js') }}"></script>
 @endpush

@@ -116,5 +116,5 @@
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/accounts.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/accounts.js') }}"></script>
 @endpush

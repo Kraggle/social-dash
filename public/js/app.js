@@ -1,5 +1,5 @@
 import $ from './core/jquery/jquery.js';
-// import Bootstrap from './core/bootstrap/bootstrap.esm.js';
+import Bootstrap from './core/bootstrap/bootstrap.esm.js';
 import Theme from './imports/functionality.js';
 import K from './plugins/K.js';
 import handler from './imports/handlers.js';
@@ -16,27 +16,6 @@ $(() => {
 	Theme.initDatePickers();
 	Theme.initInputLabels();
 
-	// transition the cards onto the screen
-	// const randMax = 300, randMin = 0;
-	// $('.card:not(.no-animate)').each(function() {
-	// 	const rX = K.random(-200, 200),
-	// 		rY = K.random(-200, 200),
-	// 		r = K.random(-35, 35),
-	// 		s = K.random(30, 80) / 100;
-	// 	$(this).css({
-	// 		transform: `translate(${rX}%, ${rY}%) rotate(${r}deg) scale(${s})`,
-	// 	});
-
-	// 	setTimeout(() => {
-	// 		$(this).css({
-	// 			transition: 'all 0.3s cubic-bezier(.38,.01,.38,1.49)',
-	// 			transform: 'translate(0, 0) rotate(0) scale(1)',
-	// 			opacity: '1',
-	// 			visibility: 'visible'
-	// 		});
-	// 	}, K.random(randMax, randMin));
-	// });
-
 	$('.delete-alert').on('click', handler.deleteAlert);
 
 	// Used to set the selected account
@@ -47,4 +26,46 @@ $(() => {
 		if ($(this).find(e.clickEvent.target).length) return false;
 		return true;
 	});
+
+	const $life = $('.modal[data-lifetime]');
+	if ($life.length) {
+		const lifetime = parseInt($life.data('lifetime')) * 60000,
+			modal = new Bootstrap.Modal($life.get(0)),
+			timeout = 45000,
+			$time = $('#time-left');
+		let timedOut, timeInterval, timeLeft = timeout / 1000;
+
+		const startLifetime = () => {
+			setTimeout(() => {
+				modal.show();
+
+				timedOut = setTimeout(() => {
+					window.location.reload();
+				}, timeout);
+
+				$time.text(timeLeft);
+				timeInterval = setInterval(() => {
+					$time.text(timeLeft--);
+				}, 1000);
+
+			}, lifetime - timeout);
+		}
+		startLifetime();
+
+		$('#resume-session').on('click', function() {
+			modal.hide();
+			clearTimeout(timedOut);
+			clearInterval(timeInterval);
+
+			$.ajax({
+				dataType: "json",
+				type: 'POST',
+				url: '/keep-alive',
+				complete: function() {
+					startLifetime();
+					timeLeft = timeout / 1000
+				}
+			});
+		});
+	}
 });

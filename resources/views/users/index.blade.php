@@ -44,17 +44,17 @@ Management')])
                                 @method('delete')
 
                                 @can('update', $user)
-                                  <a href="{{ route('user.edit', $user) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
+                                  <a href="{{ route('user.edit', $user) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
                                 @endcan
                                 @can('delete', $user)
                                   <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove delete-alert">
-                                    <i class="fal fa-trash-alt"></i>
+                                    @icon('fal fa-trash-alt')
                                   </button>
                                 @endcan
                               </form>
                             @else
                               <a href="{{ route('profile.edit') }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-bs-toggle="tooltip" title="Edit">
-                                <i class="fal fa-pencil-alt"></i>
+                                @icon('fal fa-pencil-alt')
                               </a>
                             @endif
                           </td>
@@ -73,5 +73,5 @@ Management')])
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/pages/datatable-only.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/pages/datatable-only.js') }}"></script>
 @endpush

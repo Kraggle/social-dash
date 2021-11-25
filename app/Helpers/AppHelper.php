@@ -3,6 +3,7 @@
 namespace App\Helpers;
 
 use DateTime;
+use Illuminate\Support\Str;
 
 class AppHelper {
     /**
@@ -152,5 +153,25 @@ class AppHelper {
 
     public static function isAssoc($array) {
         return array_keys($array) !== range(0, count($array) - 1);
+    }
+
+    public static function asset($path, $file) {
+        $url = asset($path) . $file;
+        $path = public_path($path) . preg_replace("/\?.*$/", '', $file);
+        if (is_file($path)) {
+            $stamp = filemtime($path);
+            $mark = strpos($url, '?') === false ? '?' : '&';
+            return "$url{$mark}v=$stamp";
+        } else {
+            return $url;
+        }
+    }
+
+    public static function stripParentheses($expression) {
+        if (Str::startsWith($expression, '(')) {
+            $expression = substr($expression, 1, -1);
+        }
+
+        return $expression;
     }
 }

@@ -123,7 +123,7 @@ if ($token) {
             <div class="card-body">
               <div class="row justify-content-center">
                 <div class="col-md-auto mt-5">
-                  <i class="fad fa-exclamation-triangle text-warning" style="font-size:250px"></i>
+                  <i class="fad fa-exclamation-triangle text-warning" style="font-size:250px" aria-hidden="true"></i>
                 </div>
               </div>
               <h4 class="text-center fz-xl m-5">
@@ -138,5 +138,5 @@ if ($token) {
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js/pages/auth') }}/register.js"></script>
+  <script type="module" src="{{ AH::asset('js/pages/auth', '/register.js') }}"></script>
 @endpush

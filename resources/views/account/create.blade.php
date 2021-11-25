@@ -29,7 +29,7 @@
                     <div class="col-sm-11">
                       <div class="input-group">
                         <div class="input-group-text">
-                          <i class="fal fa-hashtag"></i>
+                          @icon('fal fa-hashtag')
                         </div>
                         <input id="search" class="form-control" type="search" placeholder="Instagram username" value="makemoneyfromhomeuk" />
                         <button id="find-btn" class="btn btn-success btn-gradient">
@@ -159,5 +159,5 @@
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/pages/accounts.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/pages/accounts.js') }}"></script>
 @endpush

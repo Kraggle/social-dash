@@ -13,7 +13,7 @@
         <div class="card card-chart">
           <div class="card-header">
             <h5 class="card-category">Simple With Gradient</h5>
-            <h3 class="card-title"><i class="fal fa-chart-bar text-primary "></i> 10,000</h3>
+            <h3 class="card-title">@icon('fal fa-chart-bar text-primary ') 10,000</h3>
           </div>
           <div class="card-body">
             <div class="chart-area">
@@ -26,7 +26,7 @@
         <div class="card card-chart">
           <div class="card-header">
             <h5 class="card-category">With Numbers and Grid</h5>
-            <h3 class="card-title"><i class="fal fa-paper-plane text-info "></i> 750,000€</h3>
+            <h3 class="card-title">@icon('fal fa-paper-plane text-info ') 750,000€</h3>
           </div>
           <div class="card-body">
             <div class="chart-area">
@@ -41,7 +41,7 @@
         <div class="card card-chart">
           <div class="card-header">
             <h5 class="card-category">Gradient Bar Chart</h5>
-            <h3 class="card-title"><i class="fal fa-star text-danger "></i> 1,000,000£
+            <h3 class="card-title">@icon('fal fa-star text-danger ') 1,000,000£
             </h3>
           </div>
           <div class="card-body">
@@ -55,7 +55,7 @@
         <div class="card card-chart">
           <div class="card-header">
             <h5 class="card-category">Multiple Bars Chart With Grid</h5>
-            <h3 class="card-title"><i class="fal fa-alarm-clock text-warning "></i> 130,000$</h3>
+            <h3 class="card-title">@icon('fal fa-alarm-clock text-warning ') 130,000$</h3>
           </div>
           <div class="card-body">
             <div class="chart-area">
@@ -79,7 +79,7 @@
                 </div>
               </div>
               <div class="col-6">
-                <h3 class="card-title"><i class="tim-icons  icon-trophy text-success "></i> 10.000$</h3>
+                <h3 class="card-title">@icon('tim-icons icon-trophy text-success ') 10.000$</h3>
                 <p class="category">A total of $54000</p>
               </div>
             </div>
@@ -99,7 +99,7 @@
                 </div>
               </div>
               <div class="col-6">
-                <h3 class="card-title"><i class="tim-icons  icon-tag text-warning "></i> 130,000</h3>
+                <h3 class="card-title">@icon('tim-icons icon-tag text-warning ') 130,000</h3>
                 <p class="category">Feedback from 20.000 users</p>
               </div>
             </div>

@@ -11,7 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.sourceMaps(true, 'source-map')
+mix.disableSuccessNotifications()
+    .setPublicPath('public')
+    .sourceMaps(true, 'source-map')
     .webpackConfig({ devtool: 'source-map' })
     .options({
         postCss: [
@@ -19,5 +21,19 @@ mix.sourceMaps(true, 'source-map')
         ]
     })
     .sass('resources/scss/app.scss', 'public/css')
+    .minify('public/css/app.css')
     .sass('resources/scss/plugins/bootstrap/bootstrap.scss', 'public/css')
+    .minify('public/css/bootstrap.css')
+    .browserSync({
+        watch: true,
+        proxy: 'http://social-dash.test',
+        files: [
+            'public/js/**/*.js',
+            'public/css/**/*.css',
+            'resources/views/**/*.php',
+            'routes/**/*.php',
+            'app/**/*.php',
+        ],
+        reloadDelay: 1000
+    })
     // .sass('resources/scss/plugins/font-awesome/font-awesome.scss', 'public/css')

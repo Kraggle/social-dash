@@ -64,5 +64,5 @@
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/teams.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/teams.js') }}"></script>
 @endpush

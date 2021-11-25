@@ -66,7 +66,7 @@
               <div class="d-grid">
                 <a href="#" onclick="event.preventDefault(); document.getElementById('login-form').submit();" class="btn btn-primary btn-gradient btn-lg mb-3">{{ __('Get started') }}</a>
               </div>
-              <div class="pull-left">
+              <div class="d-flex justify-content-between">
                 <h6>
                   @if (Route::has('password.request'))
                     <a href="{{ route('password.request') }}" class="text-light">
@@ -74,8 +74,6 @@
                     </a>
                   @endif
                 </h6>
-              </div>
-              <div class="pull-right">
                 <h6>
                   <a href="{{ route('register') }}" class="text-light">
                     <small>{{ __('Create new account') }}</small>
@@ -91,5 +89,5 @@
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js/pages/auth') }}/login.js"></script>
+  <script type="module" src="{{ AH::asset('js/pages/auth', '/login.js') }}"></script>
 @endpush

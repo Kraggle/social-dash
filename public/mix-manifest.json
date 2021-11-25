@@ -1,4 +1,6 @@
 {
     "/css/bootstrap.css": "/css/bootstrap.css",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/css/app.min.css": "/css/app.min.css",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css"
 }

@@ -43,12 +43,12 @@ Management')])
 
                               @can('update', $team)
                                 <a href="{{ route('team.edit', $team) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" title="{{ __('Edit') }}">
-                                  <i class="fal fa-pencil-alt"></i>
+                                  @icon('fal fa-pencil-alt')
                                 </a>
                               @endcan
                               @if (auth()->user()->can('remove', $team))
                                 <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove delete-alert" title="{{ __('Delete') }}">
-                                  <i class="fal fa-trash-alt"></i>
+                                  @icon('fal fa-trash-alt')
                                 </button>
                               @endif
                             </form>
@@ -86,7 +86,7 @@ Management')])
                     <tbody>
                       @foreach ($team->members as $member)
                         @php
-                          $admin = $member->isTeamAdmin() ? '<i class="fal fa-user-crown text-orange"></i> &nbsp;' : '';
+                          $admin = $member->isTeamAdmin() ? '@icon('fal fa-user-crown text-orange') &nbsp;' : '';
                         @endphp
                         <tr>
                           <td>{!! $admin !!} {{ $member->name }}</td>
@@ -100,13 +100,13 @@ Management')])
                               @unless(auth()->user()->id == $member->id || $member->isTeamAdmin())
                                 @can('edit-member', $team)
                                   <a href="{{ route('member.edit', $member) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-bs-toggle="tooltip" title="{{ __('Edit') }}">
-                                    <i class="fal fa-pencil-alt"></i>
+                                    @icon('fal fa-pencil-alt')
                                   </a>
                                 @endcan
 
                                 @can('remove-member', $team)
                                   <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove delete-alert" data-bs-toggle="tooltip" title="{{ __('Delete') }}">
-                                    <i class="fal fa-trash-alt"></i>
+                                    @icon('fal fa-trash-alt')
                                   </button>
                                 @endcan
                               @endunless
@@ -131,5 +131,5 @@ Management')])
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/pages/datatable-only.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/pages/datatable-only.js') }}"></script>
 @endpush

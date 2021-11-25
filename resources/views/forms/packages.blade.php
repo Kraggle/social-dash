@@ -29,7 +29,7 @@ $colors = ['danger', 'info', 'warning', 'success', 'primary'];
               @foreach ($package->access as $access => $on)
                 @php $on = AppHelper::isTrue($on) @endphp
                 <li class="list-group-item {{ !$on ? 'mark-not' : 'mark-is' }}">
-                  {{ ucfirst($access) }}<i class="fa fa-{{ !$on ? 'times' : 'check' }}"></i>
+                  {{ ucfirst($access) }}@icon('fa fa-{{ !$on ? 'times' : 'check' }}')
                 </li>
               @endforeach
             </ul>

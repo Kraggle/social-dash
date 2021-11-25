@@ -20,21 +20,21 @@
             <div class="card-body">
               <div class="input-group mb-4{{ $errors->has('email') ? ' has-danger' : '' }}">
                 <div class="input-group-text">
-                  <i class="fal fa-envelope"></i>
+                  @icon('fal fa-envelope')
                 </div>
                 <input type="email" class="form-control" id="exampleEmails" name="email" placeholder="{{ __('Email...') }}" value="{{ old('email') }}" required>
               </div>
               @include('alerts.feedback', ['field' => 'email'])
               <div class="input-group mb-2{{ $errors->has('password') ? ' has-danger' : '' }}">
                 <div class="input-group-text">
-                  <i class="fal fa-lock-alt"></i>
+                  @icon('fal fa-lock-alt')
                 </div>
                 <input type="password" class="form-control" id="examplePassword" name="password" placeholder="{{ __('Password...') }}" required>
               </div>
               @include('alerts.feedback', ['field' => 'password'])
               <div class="input-group mb-2{{ $errors->has('password_confirmation') ? ' has-danger' : '' }}">
                 <div class="input-group-text">
-                  <i class="fal fa-lock-alt"></i>
+                  @icon('fal fa-lock-alt')
                 </div>
                 <input type="password" class="form-control" id="examplePassword" name="password_confirmation" placeholder="{{ __('Password Confirmation...') }}" required>
                 @include('alerts.feedback', ['field' => 'password_confirmation'])

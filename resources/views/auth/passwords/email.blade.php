@@ -18,7 +18,7 @@
             <div class="card-body">
               <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                 <div class="input-group-text">
-                  <i class="fal fa-envelope"></i>
+                  @icon('fal fa-envelope')
                 </div>
                 <input type="email" class="form-control" id="exampleEmails" name="email" placeholder="{{ __('Email...') }}" value="{{ old('email') }}" required>
               </div>

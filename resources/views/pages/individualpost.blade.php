@@ -92,21 +92,21 @@
                         <input type="radio" class="d-none" name="options">
                         <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Engagement</span>
                         <span class="d-block d-sm-none">
-                          <i class="tim-icons icon-tap-02"></i>
+                          @icon('tim-icons icon-tap-02')
                         </span>
                       </div>
                       <div class="btn btn-sm btn-warning btn-gradient" id="3">
                         <input type="radio" class="d-none" name="options">
                         <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Likes</span>
                         <span class="d-block d-sm-none">
-                          <i class="tim-icons icon-tap-02"></i>
+                          @icon('tim-icons icon-tap-02')
                         </span>
                       </div>
                       <div class="btn btn-sm btn-warning btn-gradient" id="3">
                         <input type="radio" class="d-none" name="options">
                         <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Comments</span>
                         <span class="d-block d-sm-none">
-                          <i class="tim-icons icon-tap-02"></i>
+                          @icon('tim-icons icon-tap-02')
                         </span>
                       </div>
                     </div>

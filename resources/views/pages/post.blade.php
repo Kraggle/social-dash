@@ -15,12 +15,12 @@ $cookie = AppHelper::getPageCookie($page);
     <div class="row">
       <div class="col-12 mb-4">
         <a href="{{ route('pages.post') }}" class="btn btn-lg btn-info btn-gradient rounded-pill">
-          <i class="fal fa-chevron-left"></i>
+          @icon('fal fa-chevron-left')
           {{ __('Previous Post') }}
         </a>
         <a href="{{ route('pages.post') }}" class="btn btn-lg btn-info btn-gradient rounded-pill">
           {{ __('Next Post') }}
-          <i class="fal fa-chevron-right"></i>
+          @icon('fal fa-chevron-right')
         </a>
       </div>
     </div>
@@ -385,6 +385,6 @@ $cookie = AppHelper::getPageCookie($page);
 
 
 @push('js')
-  <script src="{{ asset('js/pages') }}/datatable-only.js" type="module"></script>
+  <script src="{{ AH::asset('js/pages', '/datatable-only.js') }}" type="module"></script>AH::asset('js/pages', '/datatable-only.js') }}
   <script src="{{ asset('js/pages') }}/post.js" type="module"></script>
 @endpush

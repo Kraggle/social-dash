@@ -24,24 +24,29 @@
           </div>
           <div class="card-body">
             <button class="btn btn-primary btn-gradient">
-              <i class="fal fa-chevron-left"></i> Left
+              @icon('fal fa-chevron-left')
+              Left
             </button>
             <button class="btn btn-primary btn-gradient">
               Right
-              <i class="fal fa-chevron-right"></i>
+              @icon('fal fa-chevron-right')
             </button>
             <button class="btn btn-info btn-gradient">
-              <i class="fal fa-info-circle"></i> Info
+              @icon('fal fa-info-circle')
+              Info
             </button>
             <br>
             <button class="btn btn-success btn-gradient">
-              <i class="fal fa-check"></i> Success
+              @icon('fal fa-check')
+              Success
             </button>
             <button class="btn btn-warning btn-gradient">
-              <i class="fal fa-alarm-clock"></i> Warning
+              @icon('fal fa-alarm-clock')
+              Warning
             </button>
             <button class="btn btn-danger btn-gradient">
-              <i class="fal fa-trash-alt"></i> Danger
+              @icon('fal fa-trash-alt')
+              Danger
             </button>
           </div>
         </div>
@@ -65,10 +70,11 @@
             <button class="btn btn-primary btn-gradient">Default</button>
             <button class="btn btn-primary btn-gradient rounded-pill">round</button>
             <button class="btn btn-primary btn-gradient rounded-pill">
-              <i class="fal fa-heart"></i> with icon
+              @icon('fal fa-heart')
+              with icon
             </button>
             <button class="btn btn-primary btn-gradient rounded-pill btn-icon">
-              <i class="fal fa-heart"></i>
+              @icon('fal fa-heart')
             </button>
             <button class="btn btn-primary btn-gradient btn-simple">
               simple
@@ -106,7 +112,7 @@
               <ul class="pagination">
                 <li class="page-item">
                   <a class="page-link" href="#link" aria-label="Previous">
-                    <span aria-hidden="true"><i class="fal fa-chevron-double-left" aria-hidden="true"></i></span>
+                    <span aria-hidden="true">@icon('fal fa-chevron-double-left')</span>
                   </a>
                 </li>
                 <li class="page-item">
@@ -120,7 +126,7 @@
                 </li>
                 <li class="page-item">
                   <a class="page-link" href="#link" aria-label="Next">
-                    <span aria-hidden="true"><i class="fal fa-chevron-double-right" aria-hidden="true"></i></span>
+                    <span aria-hidden="true">@icon('fal fa-chevron-double-right')</span>
                   </a>
                 </li>
               </ul>
@@ -163,301 +169,323 @@
               <div class="col-md-4 col-sm-5">
                 <p class="category">Default</p>
                 <button class="btn btn-twitter">
-                  <i class="fab fa-twitter"></i> Connect with Twitter
+                  @icon('fab fa-twitter')
+                  Connect with Twitter
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <p class="category">&nbsp;</p>
                 <button class="btn btn-icon btn-twitter">
-                  <i class="fab fa-twitter"></i>
+                  @icon('fab fa-twitter')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <p class="category">&nbsp;</p>
                 <button class="btn btn-icon rounded-pill btn-twitter">
-                  <i class="fab fa-twitter"></i>
+                  @icon('fab fa-twitter')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <p class="category">Neutral</p>
                 <button class="btn btn-icon btn-simple btn-twitter">
-                  <i class="fab fa-twitter"></i>
+                  @icon('fab fa-twitter')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <p class="category">&nbsp;</p>
                 <button class="btn btn-simple btn-twitter">
-                  <i class="fab fa-twitter"></i> Connect with Twitter
+                  @icon('fab fa-twitter')
+                  Connect with Twitter
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-facebook">
-                  <i class="fab fa-facebook-square"></i> Share · 2.2k
+                  @icon('fab fa-facebook-square')
+                  Share · 2.2k
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-facebook">
-                  <i class="fab fa-facebook-f"> </i>
+                  @icon('fab fa-facebook-f')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-facebook">
-                  <i class="fab fa-facebook-f"> </i>
+                  @icon('fab fa-facebook-f')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-facebook">
-                  <i class="fab fa-facebook-square"> </i>
+                  @icon('fab fa-facebook-square')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-facebook">
-                  <i class="fab fa-facebook-square"></i> Share · 2.2k
+                  @icon('fab fa-facebook-square')
+                  Share · 2.2k
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-google">
-                  <i class="fab fa-google-plus-g"></i> Share on Google+
+                  @icon('fab fa-google-plus-g')
+                  Share on Google+
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon  btn-google">
-                  <i class="fab fa-google-plus-g"> </i>
+                  @icon('fab fa-google-plus-g')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-google">
-                  <i class="fab fa-google-plus-g"> </i>
+                  @icon('fab fa-google-plus-g')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-google">
-                  <i class="fab fa-google-plus-g"> </i>
+                  @icon('fab fa-google-plus-g')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-google">
-                  <i class="fab fa-google-plus-g"></i> Share on Google+
+                  @icon('fab fa-google-plus-g')
+                  Share on Google+
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-linkedin">
-                  <i class="fab fa-linkedin"></i> Connect with Linkedin
+                  @icon('fab fa-linkedin')
+                  Connect with Linkedin
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon  btn-linkedin">
-                  <i class="fab fa-linkedin"></i>
+                  @icon('fab fa-linkedin')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-linkedin">
-                  <i class="fab fa-linkedin"></i>
+                  @icon('fab fa-linkedin')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-linkedin">
-                  <i class="fab fa-linkedin"></i>
+                  @icon('fab fa-linkedin')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-linkedin">
-                  <i class="fab fa-linkedin"></i> Connect with Linkedin
+                  @icon('fab fa-linkedin')
+                  Connect with Linkedin
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-pinterest">
-                  <i class="fab fa-pinterest"></i> Pint it · 212
+                  @icon('fab fa-pinterest')
+                  Pint it · 212
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-pinterest">
-                  <i class="fab fa-pinterest"></i>
+                  @icon('fab fa-pinterest')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-pinterest">
-                  <i class="fab fa-pinterest"></i>
+                  @icon('fab fa-pinterest')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-pinterest">
-                  <i class="fab fa-pinterest"></i>
+                  @icon('fab fa-pinterest')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-pinterest">
-                  <i class="fab fa-pinterest"></i> Pint it · 212
+                  @icon('fab fa-pinterest')
+                  Pint it · 212
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-youtube">
-                  <i class="fab fa-youtube"></i> View on Youtube
+                  @icon('fab fa-youtube')
+                  View on Youtube
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-youtube">
-                  <i class="fab fa-youtube"> </i>
+                  @icon('fab fa-youtube')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-youtube">
-                  <i class="fab fa-youtube"> </i>
+                  @icon('fab fa-youtube')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-youtube">
-                  <i class="fab fa-youtube"> </i>
+                  @icon('fab fa-youtube')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-youtube">
-                  <i class="fab fa-youtube"></i> View on Youtube
+                  @icon('fab fa-youtube')
+                  View on Youtube
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-tumblr">
-                  <i class="fab fa-tumblr-square"></i> Repost
+                  @icon('fab fa-tumblr-square')
+                  Repost
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon  btn-tumblr">
-                  <i class="fab fa-tumblr"> </i>
+                  @icon('fab fa-tumblr')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-tumblr">
-                  <i class="fab fa-tumblr"> </i>
+                  @icon('fab fa-tumblr')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-tumblr">
-                  <i class="fab fa-tumblr-square"> </i>
+                  @icon('fab fa-tumblr-square')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-tumblr">
-                  <i class="fab fa-tumblr-square"></i> Repost
+                  @icon('fab fa-tumblr-square')
+                  Repost
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-github">
-                  <i class="fab fa-github"></i> Connect with Github
+                  @icon('fab fa-github')
+                  Connect with Github
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon  btn-github">
-                  <i class="fab fa-github"></i>
+                  @icon('fab fa-github')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-github">
-                  <i class="fab fa-github"></i>
+                  @icon('fab fa-github')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-github">
-                  <i class="fab fa-github"></i>
+                  @icon('fab fa-github')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-github">
-                  <i class="fab fa-github"></i> Connect with Github
+                  @icon('fab fa-github')
+                  Connect with Github
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-behance">
-                  <i class="fab fa-behance-square"></i> Follow us
+                  @icon('fab fa-behance-square')
+                  Follow us
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon  btn-behance">
-                  <i class="fab fa-behance"></i>
+                  @icon('fab fa-behance')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-behance">
-                  <i class="fab fa-behance"></i>
+                  @icon('fab fa-behance')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-behance">
-                  <i class="fab fa-behance"></i>
+                  @icon('fab fa-behance')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-behance">
-                  <i class="fab fa-behance-square"></i> Follow us
+                  @icon('fab fa-behance-square')
+                  Follow us
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-dribbble">
-                  <i class="fab fa-dribbble"></i> Find us on Dribble
+                  @icon('fab fa-dribbble')
+                  Find us on Dribble
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon  btn-dribbble">
-                  <i class="fab fa-dribbble"></i>
+                  @icon('fab fa-dribbble')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-dribbble">
-                  <i class="fab fa-dribbble"></i>
+                  @icon('fab fa-dribbble')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-dribbble">
-                  <i class="fab fa-dribbble"></i>
+                  @icon('fab fa-dribbble')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-dribbble">
-                  <i class="fab fa-dribbble"></i> Find us on Dribble
+                  @icon('fab fa-dribbble')
+                  Find us on Dribble
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-5">
                 <button class="btn btn-reddit">
-                  <i class="fab fa-reddit"></i> Repost · 232
+                  @icon('fab fa-reddit')
+                  Repost · 232
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon  btn-reddit">
-                  <i class="fab fa-reddit"></i>
+                  @icon('fab fa-reddit')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon rounded-pill btn-reddit">
-                  <i class="fab fa-reddit"></i>
+                  @icon('fab fa-reddit')
                 </button>
               </div>
               <div class="col-md-1 col-sm-1">
                 <button class="btn btn-icon btn-simple btn-reddit">
-                  <i class="fab fa-reddit"></i>
+                  @icon('fab fa-reddit')
                 </button>
               </div>
               <div class="col-md-3 col-sm-4">
                 <button class="btn btn-simple btn-reddit">
-                  <i class="fab fa-reddit"></i> Repost · 232
+                  @icon('fab fa-reddit')
+                  Repost · 232
                 </button>
               </div>
             </div>

@@ -21,7 +21,7 @@
       ©
       <script>
         document.write(new Date().getFullYear())
-      </script> made with <i class="fal fa-heart"></i> by
+      </script> made with @icon('fal fa-heart') by
       <a href="https://www.social-shadow.com" target="_blank">Social Shadow Ltd</a>.
     </div>
   </div>

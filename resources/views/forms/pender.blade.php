@@ -2,7 +2,7 @@
   @if (is_array($settings))
     @if (isset($settings['icon']))
       <div class="input-group-text">
-        <i class="{{ $settings['icon'] }}"></i>
+        @icon($settings['icon'])
       </div>
     @elseif (isset($settings['btn']))
       @php

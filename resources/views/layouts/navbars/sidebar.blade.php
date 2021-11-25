@@ -1,7 +1,7 @@
 <div class="navbar-minimize-fixed">
   <button class="minimize-sidebar btn btn-link btn-just-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Sidebar toggle">
-    <i class="fal fa-align-center visible-on-sidebar-regular"></i>
-    <i class="fal fa-list-ul visible-on-sidebar-mini"></i>
+    @icon('fal fa-align-center visible-on-sidebar-regular')
+    @icon('fal fa-list-ul visible-on-sidebar-mini')
   </button>
 </div>
 <div class="sidebar" data="orange">
@@ -19,7 +19,7 @@
 
       <li class="{{ $activePage == 'dashboard' ? ' active' : '' }}">
         <a href="{{ route('home') }}">
-          <i class="fal fa-chart-pie-alt"></i>
+          @icon('fal fa-chart-pie-alt')
           <p>{{ __('Dashboard') }}</p>
         </a>
       </li>
@@ -28,49 +28,49 @@
 
         <li class="{{ $activePage == 'user-management' ? ' active' : '' }}">
           <a href="{{ route('user.index') }}">
-            <i class="fal fa-users"></i>
+            @icon('fal fa-users')
             <p>{{ __('Users') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'role-management' ? ' active' : '' }}">
           <a href="{{ route('role.index') }}">
-            <i class="fal fa-tags"></i>
+            @icon('fal fa-tags')
             <p>{{ __('Roles') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'package-management' ? ' active' : '' }}">
           <a href="{{ route('package.index') }}">
-            <i class="fal fa-cubes"></i>
+            @icon('fal fa-cubes')
             <p>{{ __('Packages') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'account-management' ? ' active' : '' }}">
           <a href="{{ route('account.index') }}">
-            <i class="fal fa-id-card"></i>
+            @icon('fal fa-id-card')
             <p>{{ __('Accounts') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'team-management' ? ' active' : '' }}">
           <a href="{{ route('team.index') }}">
-            <i class="fal fa-rocket-launch"></i>
+            @icon('fal fa-rocket-launch')
             <p>{{ __('Teams') }}</p>
           </a>
         </li>
 
         {{-- <li class="{{ $activePage == 'post-management' ? ' active' : '' }}">
           <a href="{{ route('post.index') }}">
-            <i class="fal fa-alarm-clock"></i>
+            @icon('fal fa-alarm-clock')
             <p>{{ __('Posts') }}</p>
           </a>
         </li> --}}
 
         <li class="{{ $activePage == 'default-management' ? ' active' : '' }}">
           <a href="{{ route('default.index') }}">
-            <i class="fal fa-cogs"></i>
+            @icon('fal fa-cogs')
             <p>{{ __('Defaults') }}</p>
           </a>
         </li>
@@ -79,7 +79,7 @@
 
         <li class="{{ $menuParent == 'analytics' ? ' active' : '' }}">
           <a data-bs-toggle="collapse" href="#analytics">
-            <i class="fab fa-laravel"></i>
+            @icon('fab fa-laravel')
             <p>
               {{ __('Analytics') }}
               <b class="caret"></b>
@@ -132,49 +132,49 @@
 
         <li class="{{ $activePage == 'scheduling' ? ' active' : '' }}">
           <a href="{{ route('pages.scheduling') }}">
-            <i class="fal fa-alarm-clock"></i>
+            @icon('fal fa-alarm-clock')
             <p>{{ __('Scheduling') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'hashtag-generator' ? ' active' : '' }}">
           <a href="{{ route('pages.hashtag-generator') }}">
-            <i class="fal fa-hashtag"></i>
+            @icon('fal fa-hashtag')
             <p>{{ __('Hashtags') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'account-management' ? ' active' : '' }}">
           <a href="{{ route('account.index') }}">
-            <i class="fal fa-id-card"></i>
+            @icon('fal fa-id-card')
             <p>{{ __('Accounts') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'reporting' ? ' active' : '' }}">
           <a href="{{ route('pages.reporting') }}">
-            <i class="fal fa-file-chart-pie"></i>
+            @icon('fal fa-file-chart-pie')
             <p>{{ __('Reporting') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'team-management' ? ' active' : '' }}">
           <a href="{{ route('team.index') }}">
-            <i class="fal fa-rocket-launch"></i>
+            @icon('fal fa-rocket-launch')
             <p>{{ __('Team') }}</p>
           </a>
         </li>
 
         <li class="{{ $activePage == 'timeline' ? ' active' : '' }}">
           <a href="{{ route('page.support') }}">
-            <i class="fal fa-envelope"></i>
+            @icon('fal fa-envelope')
             <p>{{ __('Support') }}</p>
           </a>
         </li>
 
         <li class=" {{ $activePage == 'profile' ? ' active' : '' }}">
           <a href="{{ route('profile.edit') }}">
-            <i class="fal fa-cogs"></i>
+            @icon('fal fa-cogs')
             <p>{{ __('Settings') }}</p>
           </a>
         </li>

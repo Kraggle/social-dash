@@ -15,20 +15,20 @@ __('Notifications')])
             </div>
             <div class="alert alert-info">
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="fal fa-trash-alt"></i>
+                @icon('fal fa-trash-alt')
               </button>
               <span>This is a notification with close button.</span>
             </div>
             <div class="alert alert-info alert-with-icon" data-notify="container">
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="fal fa-trash-alt"></i>
+                @icon('fal fa-trash-alt')
               </button>
               <span data-notify="icon" class="fal fa-bell"></span>
               <span data-notify="message">This is a notification with close button and icon.</span>
             </div>
             <div class="alert alert-info alert-with-icon" data-notify="container">
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="fal fa-trash-alt"></i>
+                @icon('fal fa-trash-alt')
               </button>
               <span data-notify="icon" class="fal fa-bell"></span>
               <span data-notify="message">This is a notification with close button and icon and have many lines. You can
@@ -46,35 +46,35 @@ __('Notifications')])
           <div class="card-body">
             <div class="alert alert-primary">
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="fal fa-trash-alt"></i>
+                @icon('fal fa-trash-alt')
               </button>
               <span>
                 <b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
             </div>
             <div class="alert alert-info">
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="fal fa-trash-alt"></i>
+                @icon('fal fa-trash-alt')
               </button>
               <span>
                 <b> Info - </b> This is a regular notification made with ".alert-info"</span>
             </div>
             <div class="alert alert-success">
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="fal fa-trash-alt"></i>
+                @icon('fal fa-trash-alt')
               </button>
               <span>
                 <b> Success - </b> This is a regular notification made with ".alert-success"</span>
             </div>
             <div class="alert alert-warning">
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="fal fa-trash-alt"></i>
+                @icon('fal fa-trash-alt')
               </button>
               <span>
                 <b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
             </div>
             <div class="alert alert-danger">
               <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="fal fa-trash-alt"></i>
+                @icon('fal fa-trash-alt')
               </button>
               <span>
                 <b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
@@ -151,7 +151,7 @@ __('Notifications')])
                     <div class="modal-content">
                       <div class="modal-header justify-content-center">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                          <i class="fal fa-trash-alt"></i>
+                          @icon('fal fa-trash-alt')
                         </button>
                         <h6 class="title title-up">Modal title</h6>
                       </div>
@@ -177,7 +177,7 @@ __('Notifications')])
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                          <i class="fal fa-trash-alt"></i>
+                          @icon('fal fa-trash-alt')
                         </button>
                         <h5 class="modal-title" id="myModalLabel">How Do You Become an Affiliate?</h5>
                       </div>
@@ -230,10 +230,10 @@ __('Notifications')])
                     <div class="modal-content">
                       <div class="modal-header justify-content-center">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                          <i class="fal fa-trash-alt text-white"></i>
+                          @icon('fal fa-trash-alt text-white')
                         </button>
                         <div class="modal-profile">
-                          <i class="fal fa-user"></i>
+                          @icon('fal fa-user')
                         </div>
                       </div>
                       <div class="modal-body">

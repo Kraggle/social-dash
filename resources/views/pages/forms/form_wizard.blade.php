@@ -20,19 +20,19 @@
                 <ul>
                   <li class="nav-item">
                     <a class="nav-link active" href="#about" data-bs-toggle="tab">
-                      <i class="fal fa-user"></i>
+                      @icon('fal fa-user')
                       <p>About</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#account" data-bs-toggle="tab">
-                      <i class="fal fa-cog"></i>
+                      @icon('fal fa-cog')
                       <p>Account</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#address" data-bs-toggle="tab">
-                      <i class="tim-icons icon-delivery-fast"></i>
+                      @icon('tim-icons icon-delivery-fast')
                       <p>Address</p>
                     </a>
                   </li>
@@ -47,13 +47,13 @@
                     <div class="col-sm-5">
                       <div class="input-group">
                         <div class="input-group-text">
-                          <i class="fal fa-user"></i>
+                          @icon('fal fa-user')
                         </div>
                         <input type="text" name="firstname" class="form-control" placeholder="First Name...">
                       </div>
                       <div class="input-group">
                         <div class="input-group-text">
-                          <i class="tim-icons icon-email-85"></i>
+                          @icon('tim-icons icon-email-85')
                         </div>
                         <input type="email" required name="email" class="form-control" placeholder="Email...">
                       </div>
@@ -61,13 +61,13 @@
                     <div class="col-sm-5">
                       <div class="input-group">
                         <div class="input-group-text">
-                          <i class="tim-icons icon-caps-small"></i>
+                          @icon('tim-icons icon-caps-small')
                         </div>
                         <input type="text" name="lastname" placeholder="Last Name..." class="form-control">
                       </div>
                       <div class="input-group">
                         <div class="input-group-text">
-                          <i class="tim-icons icon-mobile"></i>
+                          @icon('tim-icons icon-mobile')
                         </div>
                         <input type="number" name="number" class="form-control" placeholder="Phone...">
                       </div>
@@ -75,7 +75,7 @@
                     <div class="col-sm-10">
                       <div class="input-group">
                         <div class="input-group-text">
-                          <i class="tim-icons icon-square-pin"></i>
+                          @icon('tim-icons icon-square-pin')
                         </div>
                         <input type="text" name="address" class="form-control" placeholder="Address">
                       </div>
@@ -97,7 +97,7 @@
                             <span class="fileinput-exists">Change</span>
                             <input type="file" name="..." />
                           </span>
-                          <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                          <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists" data-dismiss="fileinput">@icon('fa fa-times') Remove</a>
                         </div>
                       </div>
                     </div>
@@ -146,11 +146,11 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="pull-right">
+              <div class="float-end">
                 <input type='button' class='btn btn-next btn-fill btn-primary btn-wd' name='next' value='Next' />
                 <input type='button' class='btn btn-finish btn-fill btn-primary btn-wd' name='finish' value='Finish' />
               </div>
-              <div class="pull-left">
+              <div class="float-start">
                 <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
               </div>
               <div class="clearfix"></div>

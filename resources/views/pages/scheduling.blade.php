@@ -99,7 +99,7 @@ Scheduling')])
                                   <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"
                                     data-original-title="" title=""
                                     onclick="confirm('{{ __('Are you sure you want to delete this item?') }}') ? this.parentElement.submit() : ''">
-                                    <i class="fal fa-trash-alt"></i>
+                                    @icon('fal fa-trash-alt')
                                   </button>
                                 @endcan
                               </form>
@@ -122,7 +122,7 @@ Scheduling')])
 @endsection
 
 @push('js')
-  {{-- <script src="{{ asset('js/plugins') }}/full-calendar/fullcalendar.js"></script> --}}
+  {{-- <script src="{{ AH::asset('js/plugins', '/full-calendar/fullcalendar.js') }}"></script> --}}AH::asset('js/plugins', '/full-calendar/fullcalendar.js') }}AH::asset('js/plugins', '/full-calendar/fullcalendar.js') }}
   <script src="{{ asset('js/pages') }}/datatable-only.js" type="module"></script>
   <script src="{{ asset('js/pages') }}/scheduling.js" type="module"></script>
 @endpush

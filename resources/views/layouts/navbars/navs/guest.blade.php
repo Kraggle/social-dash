@@ -22,7 +22,8 @@
         @if (auth()->user() && $activePage != 'subscribe')
           <li class="nav-item">
             <a href="{{ route('home') }}" class="nav-link">
-              <i class="fal fa-chevron-left"></i> {{ __('Back to Dashboard') }}
+              @icon('fal fa-chevron-left')
+              {{ __('Back to Dashboard') }}
             </a>
           </li>
         @endif
@@ -31,7 +32,8 @@
           @if ($activePage != 'register')
             <li class="nav-item">
               <a href="{{ route('register') }}" class="nav-link">
-                <i class="fal fa-desktop"></i> {{ __('Register') }}
+                @icon('fal fa-desktop')
+                {{ __('Register') }}
               </a>
             </li>
           @endif
@@ -39,7 +41,8 @@
           @if ($activePage != 'login')
             <li class="nav-item">
               <a href="{{ route('login') }}" class="nav-link">
-                <i class="fal fa-user"></i> {{ __('Login') }}
+                @icon('fal fa-user')
+                {{ __('Login') }}
               </a>
             </li>
           @endif
@@ -48,7 +51,7 @@
         @auth()
           <li class="nav-item">
             <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-              <i class="fal fa-sign-out"></i>
+              @icon('fal fa-sign-out')
               <span>{{ __('Logout') }}</span>
             </a>
           </li>
@@ -63,7 +66,7 @@
       <div class="modal-header">
         <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <i class="fal fa-trash-alt"></i>
+          @icon('fal fa-trash-alt')
         </button>
       </div>
     </div>

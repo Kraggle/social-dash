@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9 mx-auto mb-1 text-center">
-          <h2>{{ __('Forbidden') }} <i class="fal fa-frown-open ps-2"></i></h2>
+          <h2>{{ __('Forbidden') }} @icon('fal fa-frown-open ps-2')</h2>
           <h4>{{ __('Ooooups! Looks like you got lost.') }}</h4>
         </div>
       </div>

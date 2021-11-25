@@ -47,14 +47,14 @@
       <ul class="navbar-nav ms-auto">
         <li class="search-bar nav-item">
           <a href="javascript:void(0)" class="nav-link" data-bs-toggle="modal" data-bs-target="#searchModal">
-            <i class="fal fa-search"></i>
+            @icon('fal fa-search')
             <p class="d-lg-none">{{ __('Search') }}</p>
           </a>
         </li>
         <li class="dropdown nav-item">
           <a href="javascript:void(0)" class="dropdown-toggle nav-link" id="notify-panel" data-bs-toggle="dropdown">
             <div class="notification d-none d-lg-block d-xl-block"></div>
-            <i class="fal fa-waveform"></i>
+            @icon('fal fa-waveform')
             <p class="d-lg-none">{{ __('Notifications') }}</p>
           </a>
           <ul class="dropdown-menu dropdown-menu-end dropdown-navbar" aria-labelledby="notify-panel">
@@ -95,7 +95,7 @@
         </li>
         <li class="nav-item d-lg-none">
           <a onclick="event.preventDefault();document.getElementById('logout-form').submit();" href="{{ route('logout') }}" class="nav-link">
-            <i class="fal fa-sign-out-alt"></i>
+            @icon('fal fa-sign-out-alt')
             <p>{{ __('Log out') }}</p>
           </a>
         </li>
@@ -109,7 +109,7 @@
       <div class="modal-header">
         <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="{{ __('SEARCH') }}">
         <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('Close') }}">
-          <i class="fal fa-trash-alt"></i>
+          @icon('fal fa-trash-alt')
         </button>
       </div>
     </div>

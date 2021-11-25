@@ -6,7 +6,7 @@ $class = $class ?? '';
 $appName = env('APP_NAME') ?? 'Social Shadow';
 
 $cookie = AppHelper::getPageCookie('all');
-$sidebar = $cookie->sidebar ? ' sidebar-mini' : '';
+$sidebar = isset($cookie->sidebar) && $cookie->sidebar ? ' sidebar-mini' : '';
 @endphp
 
 <!DOCTYPE html>
@@ -23,12 +23,12 @@ $sidebar = $cookie->sidebar ? ' sidebar-mini' : '';
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,700,800,900" rel="stylesheet" />
 
-  <link href="{{ asset('css') }}/font-awesome.css?v" rel="stylesheet" />
-  <link href="{{ asset('css') }}/bootstrap.css?" rel="stylesheet" />
-  <link href="{{ asset('css') }}/app.css?" rel="stylesheet" />
+  <link href="{{ AH::asset('css', '/font-awesome.css') }}" rel="stylesheet" />
+  <link href="{{ AH::asset('css', '/bootstrap.css') }}" rel="stylesheet" />
+  <link href="{{ AH::asset('css', '/app.css') }}" rel="stylesheet" />
 </head>
 
-<body class="white-content {{ $class }}{{ $sidebar }}">
+<body class="{{ $class }}{{ $sidebar }}">
 
   @if (auth()->check() &&
     !in_array(
@@ -44,90 +44,29 @@ $sidebar = $cookie->sidebar ? ' sidebar-mini' : '';
     @csrf
   </form>
 
-  <script src="{{ asset('js') }}/app.js" type="module"></script>
+  <script src="{{ AH::asset('js', '/app.js') }}" type="module"></script>
   <script src="https://js.stripe.com/v3/"></script>
-  <script>
-    //   $(document).ready(function() {
-    @if (session('status'))
-      // $.notify({
-      // icon: "fal fa-check"
-      // , message: "{{ session('status') }}"
-      // }, {
-      // type: 'success'
-      // , timer: 3000
-      // , placement: {
-      // from: 'top'
-      // , align: 'right'
-      // }
-      // });
-    @endif
 
-    @if (session('info'))
-      // $.notify({
-      // icon: "fal fa-check"
-      // , message: "{{ session('info') }}"
-      // }, {
-      // type: 'info'
-      // , timer: 3000
-      // , placement: {
-      // from: 'top'
-      // , align: 'right'
-      // }
-      // });
-    @endif
+  @if (Auth::check())
+    <div class="modal fade show" tabindex="-1" data-lifetime="{{ config('session.lifetime') }}">
+      <div class="modal-dialog modal-fullscreen-md-down modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header row justify-content-between">
+            <h3 class="modal-title col-auto">{{ __('Your session is about to expire!') }}</h3>
+            <h2 class="modal-title fw-bolder col-auto" id="time-left">45</h2>
+          </div>
+          <div class="modal-body">
+            <p>{{ __('Would you like to resume?') }}</p>
+          </div>
+          <div class="modal-footer">
+            <a type="button" class="btn btn-lg btn-danger me-2" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">No</a>
+            <button id="resume-session" type="button" class="btn btn-lg btn-success">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  @endif
 
-    //     $('#facebook').sharrre({
-    //       share: {
-    //         facebook: true
-    //       },
-    //       enableHover: false,
-    //       enableTracking: false,
-    //       enableCounter: false,
-    //       click: function(api, options) {
-    //         api.simulateClick();
-    //         api.openPopup('facebook');
-    //       },
-    //       template: '<i class="fab fa-facebook-f"></i> Facebook',
-    //       url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
-    //     });
-
-    //     $('#google').sharrre({
-    //       share: {
-    //         googlePlus: true
-    //       },
-    //       enableCounter: false,
-    //       enableHover: false,
-    //       enableTracking: true,
-    //       click: function(api, options) {
-    //         api.simulateClick();
-    //         api.openPopup('googlePlus');
-    //       },
-    //       template: '<i class="fab fa-google-plus"></i> Google',
-    //       url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
-    //     });
-
-    //     $('#twitter').sharrre({
-    //       share: {
-    //         twitter: true
-    //       },
-    //       enableHover: false,
-    //       enableTracking: false,
-    //       enableCounter: false,
-    //       buttons: {
-    //         twitter: {
-    //           via: 'CreativeTim'
-    //         }
-    //       },
-    //       click: function(api, options) {
-    //         api.simulateClick();
-    //         api.openPopup('twitter');
-    //       },
-    //       template: '<i class="fab fa-twitter"></i> Twitter',
-    //       url: 'https://white-dashboard-pro-laravel.creative-tim.com/login'
-    //     });
-    //   });
-    // 
-  </script>
   @stack('js')
 
 </body>

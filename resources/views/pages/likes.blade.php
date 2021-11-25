@@ -294,7 +294,7 @@ $cookie = AppHelper::getPageCookie($page);
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js/pages') }}/datatable-only.js"></script>
+  <script type="module" src="{{ AH::asset('js/pages', '/datatable-only.js') }}"></script>AH::asset('js/pages', '/datatable-only.js') }}
   <script type="module" src="{{ asset('js/pages') }}/likes.js"></script>
   <script>
     // $(document).ready(function() {

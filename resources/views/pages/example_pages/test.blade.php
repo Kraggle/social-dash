@@ -21,174 +21,20 @@ $types = [
   <div class="content">
 
     <div class="row">
-
-      @foreach ($types as $type)
-
-        <div class="col-4">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">{{ $type->name }} Labeled Elements</h4>
-            </div>
-            <div class="card-body row px-4">
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'A text input...',
-                'group' => ['size' => $type->size],
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'With prepend...',
-                'group' => ['size' => $type->size],
-                'prepend' => ['icon' => 'fal fa-user']
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'With append...',
-                'group' => ['size' => $type->size],
-                'append' => 'Text'
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'With button...',
-                'group' => ['size' => $type->size],
-                'append' => ['btn' => [
-                'display' => 'Button',
-                'class' => 'btn btn-primary'
-                ]]
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'A success input...',
-                'value' => 'With success text',
-                'group' => ['size' => $type->size, 'class' => ['has-success']]
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'An error input...',
-                'value' => 'With error text',
-                'group' => ['size' => $type->size, 'class' => ['has-danger']]
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'A success input...',
-                'value' => 'With success text',
-                'group' => ['size' => $type->size, 'class' => ['has-success']],
-                'append' => 'Text'
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'An error input...',
-                'value' => 'With error text',
-                'group' => ['size' => $type->size, 'class' => ['has-danger']],
-                'append' => 'Text'
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.select', ['settings' => [
-                'label' => 'A select input...',
-                'options' => [
-                'one' => 'Option One',
-                'two' => 'Option Two',
-                'three' => 'Option Three',
-                'four' => 'Options Four',
-                ],
-                'value' => 'one',
-                'group' => ['size' => $type->size]
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.switch', ['settings' => [
-                'label' => 'A switch...',
-                'size' => $type->size
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.check', ['settings' => [
-                'label' => 'A checkbox...',
-                'size' => $type->size
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'A disabled input...',
-                'value' => 'With a value',
-                'group' => ['size' => $type->size],
-                'disabled' => true
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.datepicker', ['settings' => [
-                'label' => 'A datepicker...',
-                'group' => ['size' => $type->size],
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'A text input...',
-                'group' => ['size' => $type->size, 'class' => ['rounded-pill']]
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.text', ['settings' => [
-                'label' => 'Rounded with button...',
-                'group' => ['size' => $type->size, 'class' => ['rounded-pill']],
-                'append' => ['btn' => [
-                'display' => 'Button',
-                'class' => 'btn btn-primary'
-                ]]
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.select', ['settings' => [
-                'label' => 'A rounded select...',
-                'options' => [
-                'one' => 'Rounded One',
-                'two' => 'Rounded Two',
-                'three' => 'Rounded Three',
-                'four' => 'Rounded Four',
-                ],
-                'value' => 'one',
-                'group' => ['size' => $type->size, 'class' => ['rounded-pill']]
-                ]])
-              </div>
-
-              <div class="col-12">
-                @include('forms.switch', ['settings' => [
-                'label' => 'A rounded switch...',
-                'size' => $type->size,
-                'style' => 'rounded-pill'
-                ]])
-              </div>
-
-            </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">
+              Information
+            </h4>
+          </div>
+          <div class="card-body">
+            <p>Everything on this page is what is available with the Theme in regards to form elements and buttons.</p>
+            <p>Most elements have special <code>{{ '@' . 'include()' }}</code> files to easily create them so the site keeps the same consistant style.</p>
+            <p>This file is located @ <code>/resources/pages/example_pages/test.blade.php</code> so if you want to see how it is created check there.</p>
           </div>
         </div>
-
-      @endforeach
-
+      </div>
     </div>
 
     <div class="row">
@@ -197,7 +43,7 @@ $types = [
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">{{ $type->name }} Elements</h4>
+              <h4 class="card-title">{{ $type->name }} Elements and Spacing</h4>
             </div>
             <div class="card-body row row-{{ $type->size }}">
 
@@ -342,19 +188,19 @@ $types = [
 
               <div class="col-auto">
                 <button class="btn btn-primary btn-icon btn-{{ $type->size }}">
-                  <i class="fas fa-heart"></i>
+                  @icon('fas fa-heart')
                 </button>
               </div>
 
               <div class="col-auto">
                 <button class="btn btn-primary btn-gradient btn-icon btn-{{ $type->size }}">
-                  <i class="fas fa-heart"></i>
+                  @icon('fas fa-heart')
                 </button>
               </div>
 
               <div class="col-auto">
                 <button class="btn btn-outline-primary btn-icon btn-{{ $type->size }}">
-                  <i class="fas fa-heart"></i>
+                  @icon('fas fa-heart')
                 </button>
               </div>
 
@@ -378,19 +224,19 @@ $types = [
 
               <div class="col-auto">
                 <button class="btn btn-primary rounded-pill btn-icon btn-{{ $type->size }}">
-                  <i class="fas fa-heart"></i>
+                  @icon('fas fa-heart')
                 </button>
               </div>
 
               <div class="col-auto">
                 <button class="btn btn-primary rounded-pill btn-gradient btn-icon btn-{{ $type->size }}">
-                  <i class="fas fa-heart"></i>
+                  @icon('fas fa-heart')
                 </button>
               </div>
 
               <div class="col-auto">
                 <button class="btn btn-outline-primary rounded-pill btn-icon btn-{{ $type->size }}">
-                  <i class="fas fa-heart"></i>
+                  @icon('fas fa-heart')
                 </button>
               </div>
 
@@ -402,7 +248,7 @@ $types = [
 
               <div class="col-auto">
                 <button class="btn btn-primary btn-link btn-icon btn-{{ $type->size }}">
-                  <i class="fas fa-heart"></i>
+                  @icon('fas fa-heart')
                 </button>
               </div>
 
@@ -417,6 +263,62 @@ $types = [
               <div class="col-auto">
                 @include('forms.datepicker', ['settings' => [
                 'group' => ['size' => $type->size],
+                ]])
+              </div>
+
+              <div class="col-auto">
+                @include('forms.radio-group', ['settings' => [
+                'group' => ['size' => $type->size],
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Some'
+                ],[
+                'display' => 'Radio'
+                ],[
+                'display' => 'Buttons'
+                ]]
+                ]])
+              </div>
+
+              <div class="col-auto">
+                @include('forms.radio-group', ['settings' => [
+                'group' => ['size' => $type->size, 'class' => ['rounded-pill']],
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Some'
+                ],[
+                'display' => 'Rounded'
+                ],[
+                'display' => 'Radios'
+                ]]
+                ]])
+              </div>
+
+              <div class="col-auto">
+                @include('forms.toggle-group', ['settings' => [
+                'group' => ['size' => $type->size],
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Toggle'
+                ],[
+                'display' => 'Button'
+                ],[
+                'display' => 'Group'
+                ]]
+                ]])
+              </div>
+
+              <div class="col-auto">
+                @include('forms.toggle-group', ['settings' => [
+                'group' => ['size' => $type->size, 'class' => ['rounded-pill']],
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Toggle'
+                ],[
+                'display' => 'Rounded'
+                ],[
+                'display' => 'Buttons'
+                ]]
                 ]])
               </div>
 
@@ -839,6 +741,239 @@ $types = [
           </div>
         </div>
       </div>
+
+    </div>
+
+    <div class="row">
+
+      @foreach ($types as $type)
+
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ $type->name }} Labeled Elements</h4>
+            </div>
+            <div class="card-body row px-4">
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'A text input...',
+                'group' => ['size' => $type->size],
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'With prepend...',
+                'group' => ['size' => $type->size],
+                'prepend' => ['icon' => 'fal fa-user']
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'With append...',
+                'group' => ['size' => $type->size],
+                'append' => 'Text'
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'With button...',
+                'group' => ['size' => $type->size],
+                'append' => ['btn' => [
+                'display' => 'Button',
+                'class' => 'btn btn-primary'
+                ]]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'A success input...',
+                'value' => 'With success text',
+                'group' => ['size' => $type->size, 'class' => ['has-success']]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'An error input...',
+                'value' => 'With error text',
+                'group' => ['size' => $type->size, 'class' => ['has-danger']]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'A success input...',
+                'value' => 'With success text',
+                'group' => ['size' => $type->size, 'class' => ['has-success']],
+                'append' => 'Text'
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'An error input...',
+                'value' => 'With error text',
+                'group' => ['size' => $type->size, 'class' => ['has-danger']],
+                'append' => 'Text'
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.select', ['settings' => [
+                'label' => 'A select input...',
+                'options' => [
+                'one' => 'Option One',
+                'two' => 'Option Two',
+                'three' => 'Option Three',
+                'four' => 'Options Four',
+                ],
+                'value' => 'one',
+                'group' => ['size' => $type->size]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.switch', ['settings' => [
+                'label' => 'A switch...',
+                'size' => $type->size
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.check', ['settings' => [
+                'label' => 'A checkbox...',
+                'size' => $type->size
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'A disabled input...',
+                'value' => 'With a value',
+                'group' => ['size' => $type->size],
+                'disabled' => true
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.datepicker', ['settings' => [
+                'label' => 'A datepicker...',
+                'group' => ['size' => $type->size],
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'A text input...',
+                'group' => ['size' => $type->size, 'class' => ['rounded-pill']]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.text', ['settings' => [
+                'label' => 'Rounded with button...',
+                'group' => ['size' => $type->size, 'class' => ['rounded-pill']],
+                'append' => ['btn' => [
+                'display' => 'Button',
+                'class' => 'btn btn-primary'
+                ]]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.select', ['settings' => [
+                'label' => 'A rounded select...',
+                'options' => [
+                'one' => 'Rounded One',
+                'two' => 'Rounded Two',
+                'three' => 'Rounded Three',
+                'four' => 'Rounded Four',
+                ],
+                'value' => 'one',
+                'group' => ['size' => $type->size, 'class' => ['rounded-pill']]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.switch', ['settings' => [
+                'label' => 'A rounded switch...',
+                'size' => $type->size,
+                'style' => 'rounded-pill'
+                ]])
+              </div>
+
+
+              <div class="col-12">
+                @include('forms.radio-group', ['settings' => [
+                'group' => ['size' => $type->size],
+                'label' => 'Radio group...',
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Some'
+                ],[
+                'display' => 'Radio'
+                ],[
+                'display' => 'Buttons'
+                ]]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.radio-group', ['settings' => [
+                'group' => ['size' => $type->size, 'class' => ['rounded-pill']],
+                'label' => 'Rounded radio group...',
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Some'
+                ],[
+                'display' => 'Rounded'
+                ],[
+                'display' => 'Radios'
+                ]]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.toggle-group', ['settings' => [
+                'group' => ['size' => $type->size],
+                'label' => 'Toggle group...',
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Toggle'
+                ],[
+                'display' => 'Button'
+                ],[
+                'display' => 'Group'
+                ]]
+                ]])
+              </div>
+
+              <div class="col-12">
+                @include('forms.toggle-group', ['settings' => [
+                'group' => ['size' => $type->size, 'class' => ['rounded-pill']],
+                'label' => 'Rounded toggle group...',
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Toggle'
+                ],[
+                'display' => 'Rounded'
+                ],[
+                'display' => 'Buttons'
+                ]]
+                ]])
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      @endforeach
 
     </div>
 

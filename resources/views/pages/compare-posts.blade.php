@@ -663,5 +663,5 @@ $cookie = AppHelper::getPageCookie($page);
 
 
 @push('js')
-  <script src="{{ asset('js/pages') }}/compare-posts.js" type="module"></script>
+  <script src="{{ AH::asset('js/pages', '/compare-posts.js') }}" type="module"></script>
 @endpush

@@ -10,7 +10,7 @@
             <p class="card-category d-inline">today</p>
             <div class="dropdown">
               <button type="button" class="btn btn-link dropdown-toggle btn-icon" data-bs-toggle="dropdown">
-                <i class="fal fa-cog"></i>
+                @icon('fal fa-cog')
               </button>
               <div class="dropdown-menu dropdown-menu-end">
                 <a class="dropdown-item" href="#">Action</a>
@@ -40,7 +40,7 @@
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-tools"></i>
+                        @icon('fal fa-tools')
                       </button>
                     </td>
                   </tr>
@@ -61,7 +61,7 @@
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-tools"></i>
+                        @icon('fal fa-tools')
                       </button>
                     </td>
                   </tr>
@@ -82,7 +82,7 @@
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-tools"></i>
+                        @icon('fal fa-tools')
                       </button>
                     </td>
                   </tr>
@@ -103,7 +103,7 @@
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-tools"></i>
+                        @icon('fal fa-tools')
                       </button>
                     </td>
                   </tr>
@@ -124,7 +124,7 @@
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-tools"></i>
+                        @icon('fal fa-tools')
                       </button>
                     </td>
                   </tr>
@@ -145,7 +145,7 @@
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                        <i class="fal fa-tools"></i>
+                        @icon('fal fa-tools')
                       </button>
                     </td>
                   </tr>
@@ -186,7 +186,7 @@
             <ul class="timeline timeline-simple">
               <li class="timeline-end">
                 <div class="timeline-badge danger">
-                  <i class="fal fa-shopping-bag"></i>
+                  @icon('fal fa-shopping-bag')
                 </div>
                 <div class="card-timeline">
                   <div class="timeline-heading">
@@ -198,13 +198,13 @@
                       rude Kanye Show at 2am Sold Out Famous viewing @ Figueroa and 12th in downtown.</p>
                   </div>
                   <h6>
-                    <i class="fal fa-clock"></i> 11 hours ago via Twitter
+                    @icon('fal fa-clock') 11 hours ago via Twitter
                   </h6>
                 </div>
               </li>
               <li class="timeline-end">
                 <div class="timeline-badge success">
-                  <i class="fal fa-gift-2"></i>
+                  @icon('fal fa-gift-2')
                 </div>
                 <div class="card-timeline">
                   <div class="timeline-heading">
@@ -219,7 +219,7 @@
               </li>
               <li class="timeline-end">
                 <div class="timeline-badge info">
-                  <i class="fal fa-planet-ringed"></i>
+                  @icon('fal fa-planet-ringed')
                 </div>
                 <div class="card-timeline">
                   <div class="timeline-heading">
@@ -235,7 +235,7 @@
                   <div class="card-footer">
                     <div class="dropdown">
                       <button type="button" class="btn rounded-pill btn-info btn-gradient dropdown-toggle" data-bs-toggle="dropdown">
-                        <i class="fal fa-list-ul"></i>
+                        @icon('fal fa-list-ul')
                       </button>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Action</a>
@@ -310,7 +310,7 @@
               The networking at Web Summit is like no other European tech conference.
             </p>
             <div class="icon icon-primary">
-              <i class="fa fa-quote-right"></i>
+              @icon('fa fa-quote-right')
             </div>
           </div>
           <div class="card-footer">

@@ -231,7 +231,7 @@
                       ]])
 
                       <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove" data-bs-toggle="tooltip" title="Remove" repeat="_0">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
 
                       @foreach (old('options.values') ?? ($options->values ?? []) as $value)
@@ -277,7 +277,7 @@
                         ]])
 
                         <button type="button" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove" data-bs-toggle="tooltip" title="Remove" repeat="_{{ $loop->index }}">
-                          <i class="fal fa-trash-alt"></i>
+                          @icon('fal fa-trash-alt')
                         </button>
 
                       @endforeach
@@ -472,5 +472,5 @@
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/pages/defaults.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/pages/defaults.js') }}"></script>
 @endpush

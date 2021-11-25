@@ -48,7 +48,7 @@ $cookie = AppHelper::getPageCookie($page);
               <div class="col-auto pe-0">
                 <div class="dropdown keep-open">
                   <button type="button" class="btn btn-gray btn-link dropdown-toggle btn-icon no-caret" data-bs-toggle="dropdown">
-                    <i class="fal fa-cog"></i>
+                    @icon('fal fa-cog')
                   </button>
                   <div class="dropdown-menu dropdown-grid">
 
@@ -167,7 +167,7 @@ $cookie = AppHelper::getPageCookie($page);
 
           <div class="card-body">
             <div class="chart-area-posts">
-              <canvas id="bubble-chart" data-type="bubble" data-height="250"></canvas>
+              <canvas id="bubble-chart" data-type="bubble" data-height="264"></canvas>
             </div>
           </div>
         </div>
@@ -185,7 +185,8 @@ $cookie = AppHelper::getPageCookie($page);
               <div class="col-auto pe-0">
                 @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
-                'id' => 'p-table-date'
+                'id' => 'p-table-date',
+                'group' => ['size' => 'sm']
                 ]])
               </div>
 
@@ -271,9 +272,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">22/02/2021</a></td>
                           <td>#cristianoronaldo #ronaldo #cr...</td>
                           <td class="text-nowrap text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -291,9 +292,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">20/02/2021</a></td>
                           <td>#rocky #rockybalboa #rockybal...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -311,9 +312,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">19/02/2021</a></td>
                           <td>#millionairequote #millionaire...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm  edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm  edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -331,9 +332,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">18/02/2021</a></td>
                           <td>#millionairequote #moneymotiva...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -351,9 +352,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">17/02/2021</a></td>
                           <td>#thomasshelby #tomshelby #shelby...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -371,9 +372,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">17/02/2021</a></td>
                           <td>#millionairequote #moneymotiva...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -391,9 +392,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">15/02/2021</a></td>
                           <td>#millionairequote #moneymotiva...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -411,9 +412,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">15/02/2021</a></td>
                           <td>#millionairequote #entrepre...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -431,9 +432,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">15/02/2021</a></td>
                           <td>#billionairequote #billiona...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -451,9 +452,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">14/02/2021</a></td>
                           <td>#thomasshelby #thomasshelbyme...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -471,9 +472,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">12/02/2021</a></td>
                           <td>#arnoldschwarzenegger #schwarze...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                         <tr>
@@ -491,9 +492,9 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">12/02/2021</a></td>
                           <td>#entrepreneurship #entrepreneu...</td>
                           <td class="text-end">
-                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like"><i class="fal fa-heart"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit"><i class="fal fa-pencil-alt"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-info btn-gradient btn-icon btn-sm like">@icon('fal fa-heart')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit">@icon('fal fa-pencil-alt')</a>
+                            <a href="javascript:void(0)" class="btn btn-link btn-danger btn-gradient btn-icon btn-sm remove">@icon('fal fa-trash-alt')</a>
                           </td>
                         </tr>
                       </tbody>
@@ -527,17 +528,20 @@ $cookie = AppHelper::getPageCookie($page);
                         <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
                           <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#link7">
-                              <i class="fas fa-analytics"></i> Data
+                              @icon('fas fa-analytics')
+                              Data
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link8">
-                              <i class="fal fa-comments"></i> Caption
+                              @icon('fal fa-comments')
+                              Caption
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link9">
-                              <i class="fas fa-hashtag"></i> Hashtags
+                              @icon('fas fa-hashtag')
+                              Hashtags
                             </a>
                           </li>
                         </ul>
@@ -694,17 +698,20 @@ $cookie = AppHelper::getPageCookie($page);
                         <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
                           <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#link10">
-                              <i class="fas fa-analytics"></i> Data
+                              @icon('fas fa-analytics')
+                              Data
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link11">
-                              <i class="fal fa-comments"></i> Caption
+                              @icon('fal fa-comments')
+                              Caption
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link12">
-                              <i class="fas fa-hashtag"></i> Hashtags
+                              @icon('fas fa-hashtag')
+                              Hashtags
                             </a>
                           </li>
                         </ul>
@@ -861,17 +868,20 @@ $cookie = AppHelper::getPageCookie($page);
                         <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
                           <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#link13">
-                              <i class="fas fa-analytics"></i> Data
+                              @icon('fas fa-analytics')
+                              Data
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link14">
-                              <i class="fal fa-comments"></i> Caption
+                              @icon('fal fa-comments')
+                              Caption
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link15">
-                              <i class="fas fa-hashtag"></i> Hashtags
+                              @icon('fas fa-hashtag')
+                              Hashtags
                             </a>
                           </li>
                         </ul>
@@ -1028,17 +1038,20 @@ $cookie = AppHelper::getPageCookie($page);
                         <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
                           <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#link16">
-                              <i class="fas fa-analytics"></i> Data
+                              @icon('fas fa-analytics')
+                              Data
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link17">
-                              <i class="fal fa-comments"></i> Caption
+                              @icon('fal fa-comments')
+                              Caption
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link18">
-                              <i class="fas fa-hashtag"></i> Hashtags
+                              @icon('fas fa-hashtag')
+                              Hashtags
                             </a>
                           </li>
                         </ul>
@@ -1186,7 +1199,8 @@ $cookie = AppHelper::getPageCookie($page);
                         {{-- <div class="row card-stats">
                                     <div class="col-2">
                                         <div class="info-icon text-center icon-warning">
-                                            <i class="fal fa-play"></i>
+                                            @icon('fal fa-play')
+
                                         </div>
                                     </div>
                                     <div class="col-10">
@@ -1196,7 +1210,8 @@ $cookie = AppHelper::getPageCookie($page);
                                 <div class="row card-stats">
                                     <div class="col-2">
                                         <div class="info-icon text-center icon-warning">
-                                          <i class="fal fa-heart"></i>
+                                          @icon('fal fa-heart')
+
                                         </div>
                                     </div>
                                     <div class="col-10">
@@ -1206,7 +1221,8 @@ $cookie = AppHelper::getPageCookie($page);
                                 <div class="row card-stats">
                                     <div class="col-2">
                                         <div class="info-icon text-center icon-warning">
-                                            <i class="fal fa-comments"></i>
+                                            @icon('fal fa-comments')
+
                                         </div>
                                     </div>
                                     <div class="col-10">
@@ -1230,17 +1246,20 @@ $cookie = AppHelper::getPageCookie($page);
                         <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
                           <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#link19">
-                              <i class="fas fa-analytics"></i> Data
+                              @icon('fas fa-analytics')
+                              Data
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link20">
-                              <i class="fal fa-comments"></i> Caption
+                              @icon('fal fa-comments')
+                              Caption
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link21">
-                              <i class="fas fa-hashtag"></i> Hashtags
+                              @icon('fas fa-hashtag')
+                              Hashtags
                             </a>
                           </li>
                         </ul>
@@ -1397,17 +1416,20 @@ $cookie = AppHelper::getPageCookie($page);
                         <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
                           <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#link22">
-                              <i class="fas fa-analytics"></i> Data
+                              @icon('fas fa-analytics')
+                              Data
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link23">
-                              <i class="fal fa-comments"></i> Caption
+                              @icon('fal fa-comments')
+                              Caption
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link24">
-                              <i class="fas fa-hashtag"></i> Hashtags
+                              @icon('fas fa-hashtag')
+                              Hashtags
                             </a>
                           </li>
                         </ul>
@@ -1563,17 +1585,20 @@ $cookie = AppHelper::getPageCookie($page);
                         <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
                           <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#link25">
-                              <i class="fas fa-analytics"></i> Data
+                              @icon('fas fa-analytics')
+                              Data
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link26">
-                              <i class="fal fa-comments"></i> Caption
+                              @icon('fal fa-comments')
+                              Caption
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link27">
-                              <i class="fas fa-hashtag"></i> Hashtags
+                              @icon('fas fa-hashtag')
+                              Hashtags
                             </a>
                           </li>
                         </ul>
@@ -1729,17 +1754,20 @@ $cookie = AppHelper::getPageCookie($page);
                         <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
                           <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#link28">
-                              <i class="fas fa-analytics"></i> Data
+                              @icon('fas fa-analytics')
+                              Data
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link29">
-                              <i class="fal fa-comments"></i> Caption
+                              @icon('fal fa-comments')
+                              Caption
                             </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#link30">
-                              <i class="fas fa-hashtag"></i> Hashtags
+                              @icon('fas fa-hashtag')
+                              Hashtags
                             </a>
                           </li>
                         </ul>
@@ -1899,6 +1927,7 @@ $cookie = AppHelper::getPageCookie($page);
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js/pages') }}/datatable-only.js"></script>
+
+  <script type="module" src="{{ AH::asset('js/pages', '/datatable-only.js') }}"></script>AH::asset('js/pages', '/datatable-only.js') }}
   <script type="module" src="{{ asset('js/pages') }}/posts.js"></script>
 @endpush

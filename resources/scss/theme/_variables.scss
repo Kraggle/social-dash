@@ -183,8 +183,8 @@ $facebook: #3b5998;
 $facebook-states: darken($facebook, 5%);
 $twitter: #55acee;
 $twitter-states: darken($twitter, 5%);
-$google-plus: #dd4b39;
-$google-plus-states: darken($google-plus, 5%);
+$google: #dd4b39;
+$google-states: darken($google, 5%);
 $instagram: #125688;
 $instagram-states: lighten($instagram, 6%);
 $linkedin: #0077b5;
@@ -222,7 +222,7 @@ $theme-colors: (
 $brand-colors: (
     'facebook': $facebook,
     'twitter': $twitter,
-    'google-plus': $google-plus,
+    'google': $google,
     'instagram': $instagram,
     'pinterest': $pinterest,
     'youtube': $youtube,
@@ -237,7 +237,7 @@ $brand-colors: (
 $brand-states: (
     'facebook': $facebook-states,
     'twitter': $twitter-states,
-    'google-plus': $google-plus-states,
+    'google': $google-states,
     'instagram': $instagram-states,
     'pinterest': $pinterest-states,
     'youtube': $youtube-states,

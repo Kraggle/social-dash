@@ -136,9 +136,9 @@ function getAttributesObject($select) {
 
 	// for backwards compatibility
 	// (using title as placeholder is deprecated - remove in v2.0.0)
-	if (!attributesObject.placeholder && attributesObject.title) {
-		attributesObject.placeholder = attributesObject.title;
-	}
+	// if (!attributesObject.placeholder && attributesObject.title) {
+	// 	attributesObject.placeholder = attributesObject.title;
+	// }
 
 	return attributesObject;
 }
@@ -1182,7 +1182,7 @@ Selectpicker.prototype = {
 		}
 
 		if (this.options.allowClear) {
-			clearButton = `<span class="close bs-select-clear-selected" title="${this.options.deselectAllText}"><span>&times;</span>`;
+			clearButton = `<span class="close bs-select-clear-selected" data-bs-toggle="tooltip" title="${this.options.deselectAllText}"><span>&times;</span>`;
 		}
 
 		const genId = this.generateID();
@@ -2008,7 +2008,8 @@ Selectpicker.prototype = {
 
 		// if the select has a title, apply it to the button, and if not, apply titleFragment text
 		// strip all HTML tags and trim the result, then unescape any escaped tags
-		button.title = titleFragment.textContent.replace(/<[^>]*>?/g, '').trim();
+		// button.title = titleFragment.textContent.replace(/<[^>]*>?/g, '').trim();
+		// console.log(button.title);
 
 		if (this.options.sanitize && hasContent) {
 			sanitizeHtml([titleFragment], that.options.whiteList, that.options.sanitizeFn);

@@ -34,6 +34,10 @@ Route::group(['middleware' => 'auth'], function () {
     // TODO: Setup change subscription
     Route::get('subscription', ['as' => 'auth.subscription', 'uses' => 'SubscriptionController@index']);
     Route::post('/subscribe', ['as' => 'subscription.store', 'uses' => 'SubscriptionController@store']);
+
+    Route::post('/keep-alive', function () {
+        return response()->json(['alive' => true]);
+    });
 });
 
 Route::middleware(['auth', 'subscribed'])->group(function () {

@@ -18,7 +18,7 @@
       </li>
     </ul>
     <div class="copyright">
-      © {{ now()->year }} made with <i class="fal fa-heart"></i> by
+      © {{ now()->year }} made with @icon('fal fa-heart') by
       <a href="https://www.social-shadow.com" target="_blank">Social Shadow Ltd</a> for a better analytical
       understanding of our Instagram accounts.
     </div>

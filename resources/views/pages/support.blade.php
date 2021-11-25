@@ -11,7 +11,7 @@
 
           <li class="timeline-end">
             <div class="timeline-badge bg-danger">
-              <i class="fal fa-comments"></i>
+              @icon('fal fa-comments')
             </div>
             <div class="card card-timeline">
               <div class="card-header">
@@ -23,7 +23,8 @@
               </div>
               <div class="card-footer">
                 <span class="card-describe">
-                  <i class="fal fa-clock"></i> 2 days ago
+                  @icon('fal fa-clock')
+                  2 days ago
                 </span>
                 <button class="btn btn-sm btn-indigo rounded-pill d-none">Reply</button>
               </div>
@@ -32,7 +33,7 @@
 
           <li class="timeline-start">
             <div class="timeline-badge bg-warning">
-              <i class="fal fa-comments"></i>
+              @icon('fal fa-comments')
             </div>
             <div class="card card-timeline">
               <div class="card-header">
@@ -43,7 +44,8 @@
               </div>
               <div class="card-footer">
                 <span class="card-describe">
-                  <i class="fal fa-clock"></i> 1 day ago
+                  @icon('fal fa-clock')
+                  1 day ago
                 </span>
                 <button class="btn btn-sm btn-indigo rounded-pill">Reply</button>
               </div>
@@ -51,7 +53,7 @@
 
           <li class="timeline-end">
             <div class="timeline-badge bg-danger">
-              <i class="fal fa-comments"></i>
+              @icon('fal fa-comments')
             </div>
             <div class="card card-timeline">
               <div class="card-header">
@@ -62,7 +64,8 @@
               </div>
               <div class="card-footer">
                 <span class="card-describe">
-                  <i class="fal fa-clock"></i> 16 hours ago
+                  @icon('fal fa-clock')
+                  16 hours ago
                 </span>
                 <button class="btn btn-sm btn-indigo rounded-pill d-none">Reply</button>
               </div>
@@ -71,7 +74,7 @@
 
           <li class="timeline-start">
             <div class="timeline-badge bg-warning">
-              <i class="fal fa-comments"></i>
+              @icon('fal fa-comments')
             </div>
             <div class="card card-timeline">
               <div class="card-header">
@@ -83,7 +86,8 @@
               </div>
               <div class="card-footer">
                 <span class="card-describe">
-                  <i class="fal fa-clock"></i> 4 hours ago
+                  @icon('fal fa-clock')
+                  4 hours ago
                 </span>
                 <button class="btn btn-sm btn-indigo rounded-pill">Reply</button>
               </div>

@@ -1,4 +1,4 @@
-@define($class = $class ?? '');
+@define($class = $class ?? '')
 
 @include('layouts.navbars.navs.guest')
 <div class="wrapper wrapper-full-page">

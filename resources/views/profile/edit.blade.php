@@ -31,7 +31,7 @@
                         <span class="fileinput-exists">{{ __('Change') }}</span>
                         <input type="file" name="photo" id="input-picture" />
                       </span>
-                      <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists mt-2" data-dismiss="fileinput"><i class="fa fa-times"></i> {{ __('Remove') }}</a>
+                      <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists mt-2" data-dismiss="fileinput">@icon('fa fa-times') {{ __('Remove') }}</a>
                     </div>
                     @include('alerts.feedback', ['field' => 'photo'])
                   </div>
@@ -55,7 +55,7 @@
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-warning btn-gradient pull-right">{{ __('Update Profile') }}</button>
+              <button type="submit" class="btn btn-warning btn-gradient float-end">{{ __('Update Profile') }}</button>
               <div class="clearfix"></div>
             </div>
           </form>
@@ -96,7 +96,7 @@
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-warning btn-gradient pull-right">{{ __('Change password') }}</button>
+              <button type="submit" class="btn btn-warning btn-gradient float-end">{{ __('Change password') }}</button>
               <div class="clearfix"></div>
             </form>
           </div>
@@ -112,7 +112,7 @@
               <div class="block block-three"></div>
               <div class="block block-four"></div>
               <a href="javascript:void(0)">
-                <img class="avatar" src="{{ auth()->user()->profilePicture() }}">
+                <img class="avatar" src="{{ auth()->user()->profilePicture() }}" alt="{{ __('Profile picture') }}">
                 <h5 class="title">{{ auth()->user()->name }}</h5>
               </a>
               <p class="description">
@@ -127,13 +127,13 @@
           <div class="card-footer">
             <div class="button-container">
               <button href="javascript:void(0)" class="btn btn-icon rounded-pill btn-facebook">
-                <i class="fab fa-facebook"></i>
+                @icon('fab fa-facebook')
               </button>
               <button href="javascript:void(0)" class="btn btn-icon rounded-pill btn-twitter">
-                <i class="fab fa-twitter"></i>
+                @icon('fab fa-twitter')
               </button>
               <button href="javascript:void(0)" class="btn btn-icon rounded-pill btn-google">
-                <i class="fab fa-google-plus"></i>
+                @icon('fab fa-google-plus')
               </button>
             </div>
           </div>
@@ -145,5 +145,5 @@
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/pages/fileinput-only.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/pages/fileinput-only.js') }}"></script>
 @endpush

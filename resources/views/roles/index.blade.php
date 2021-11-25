@@ -36,7 +36,7 @@ Management')])
                           <td class="td-actions text-end">
                             @can('update', $role)
                               <a href="{{ route('role.edit', $role) }}" class="btn btn-link btn-warning btn-gradient btn-icon btn-sm edit" data-bs-toggle="tooltip" title="Edit">
-                                <i class="fal fa-pencil-alt"></i>
+                                @icon('fal fa-pencil-alt')
                               </a>
                             @endcan
                           </td>
@@ -55,5 +55,5 @@ Management')])
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/pages/datatable-only.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/pages/datatable-only.js') }}"></script>
 @endpush

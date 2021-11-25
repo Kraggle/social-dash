@@ -32,7 +32,7 @@ Forms')])
               <div class="category form-category">* Required fields</div>
             </div>
             <div class="card-footer text-end">
-              <div class="form-check pull-left">
+              <div class="form-check float-start">
                 <label class="form-check-label">
                   <input class="form-check-input" type="checkbox" name="optionCheckboxes">
                   <span class="form-check-sign"></span>
@@ -67,7 +67,7 @@ Forms')])
             </div>
             <div class="card-footer text-start">
               <button type="submit" class="btn btn-primary btn-gradient">Register</button>
-              <a href="javascript:void(0)" class="pull-right">Forgot password?</a>
+              <a href="javascript:void(0)" class="float-end">Forgot password?</a>
             </div>
           </div>
         </form>

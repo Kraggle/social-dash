@@ -31,7 +31,7 @@
                           <span class="fileinput-exists">{{ __('Change') }}</span>
                           <input type="file" name="photo" id="input-picture" />
                         </span>
-                        <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists mt-2" data-dismiss="fileinput"><i class="fa fa-times"></i> {{ __('Remove') }}</a>
+                        <a href="#pablo" class="btn btn-danger btn-gradient rounded-pill fileinput-exists mt-2" data-dismiss="fileinput">@icon('fa fa-times') {{ __('Remove') }}</a>
                       </div>
                       @include('alerts.feedback', ['field' => 'photo'])
                     </div>

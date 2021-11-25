@@ -15,7 +15,7 @@
   <!-- Nucleo Icons -->
   <link href="{{ asset('white') }}/css/nucleo-icons.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="{{ asset('css') }}/white-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <link href="{{ AH::asset('css', '/white-dashboard.css?v=1.0.0') }}" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{ asset('white') }}/demo/demo.css" rel="stylesheet" />
@@ -25,8 +25,8 @@
   <div class="wrapper">
     <div class="navbar-minimize-fixed">
       <button class="minimize-sidebar btn btn-link btn-just-icon">
-        <i class="fal fa-align-center visible-on-sidebar-regular text-muted"></i>
-        <i class="fal fa-list-ul visible-on-sidebar-mini text-muted"></i>
+        @icon('fal fa-align-center visible-on-sidebar-regular text-muted')
+        @icon('fal fa-list-ul visible-on-sidebar-mini text-muted')
       </button>
     </div>
     <div class="sidebar">
@@ -45,13 +45,13 @@
         <ul class="nav">
           <li>
             <a href="{{ route('home') }}">
-              <i class="fal fa-chart-pie-alt"></i>
+              @icon('fal fa-chart-pie-alt')
               <p>لوحة القيادة</p>
             </a>
           </li>
           <li>
             <a data-bs-toggle="collapse" href="#pagesExamples">
-              <i class="fal fa-image-polaroid"></i>
+              @icon('fal fa-image-polaroid')
               <p>
                 صفحات
                 <b class="caret"></b>
@@ -94,7 +94,7 @@
           </li>
           <li>
             <a data-bs-toggle="collapse" href="#componentsExamples">
-              <i class="tim-icons icon-molecule-40"></i>
+              @icon('tim-icons icon-molecule-40')
               <p>
                 المكونات
                 <b class="caret"></b>
@@ -167,7 +167,7 @@
           </li>
           <li>
             <a data-bs-toggle="collapse" href="#formsExamples">
-              <i class="tim-icons icon-notes"></i>
+              @icon('tim-icons icon-notes')
               <p>
                 إستمارات
                 <b class="caret"></b>
@@ -204,7 +204,7 @@
           </li>
           <li>
             <a data-bs-toggle="collapse" href="#tablesExamples">
-              <i class="tim-icons icon-puzzle-10"></i>
+              @icon('tim-icons icon-puzzle-10')
               <p>
                 الجداول
                 <b class="caret"></b>
@@ -235,7 +235,7 @@
           </li>
           <li>
             <a data-bs-toggle="collapse" href="#mapsExamples">
-              <i class="tim-icons icon-pin"></i>
+              @icon('tim-icons icon-pin')
               <p>
                 خرائط
                 <b class="caret"></b>
@@ -266,19 +266,19 @@
           </li>
           <li>
             <a href="{{ route('page.widgets') }}">
-              <i class="fal fa-tools"></i>
+              @icon('fal fa-tools')
               <p>الحاجيات</p>
             </a>
           </li>
           <li>
             <a href="{{ route('page.charts') }}">
-              <i class="fal fa-chart-bar"></i>
+              @icon('fal fa-chart-bar')
               <p>الرسوم البيانية</p>
             </a>
           </li>
           <li>
             <a href="{{ route('page.calendar') }}">
-              <i class="fal fa-alarm-clock"></i>
+              @icon('fal fa-alarm-clock')
               <p>التقويم</p>
             </a>
           </li>
@@ -292,8 +292,8 @@
           <div class="navbar-wrapper">
             <div class="navbar-minimize d-inline">
               <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip" data-original-title="Sidebar toggle" data-placement="right">
-                <i class="fal fa-align-center visible-on-sidebar-regular"></i>
-                <i class="fal fa-list-ul visible-on-sidebar-mini"></i>
+                @icon('fal fa-align-center visible-on-sidebar-regular')
+                @icon('fal fa-list-ul visible-on-sidebar-mini')
               </button>
             </div>
             <div class="navbar-toggle d-inline">
@@ -314,14 +314,14 @@
             <ul class="navbar-nav  me-auto">
               <li class="search-bar nav-item">
                 <a href="javascript:void(0)" class="nav-link" data-toggle="modal" data-bs-target="#searchModal">
-                  <i class="tim-icons icon-zoom-split"></i>
+                  @icon('tim-icons icon-zoom-split')
                   <p class="d-lg-none">Search</p>
                 </a>
               </li>
               <li class="dropdown nav-item">
                 <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                   <div class="notification d-none d-lg-block d-xl-block"></div>
-                  <i class="tim-icons icon-sound-wave"></i>
+                  @icon('tim-icons icon-sound-wave')
                   <p class="d-lg-none">
                     Notifications
                   </p>
@@ -378,7 +378,7 @@
             <div class="modal-header">
               <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <i class="fal fa-trash-alt"></i>
+                @icon('fal fa-trash-alt')
               </button>
             </div>
           </div>
@@ -393,7 +393,7 @@
                 <h6 class="title d-inline">تتبع</h6>
                 <p class="card-category d-inline">اليوم</p>
                 <div class="dropdown">
-                  <a class="btn btn-link dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-cog"></i></a>
+                  <a class="btn btn-link dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@icon('fal fa-cog')</a>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="#">عمل</a>
                     <a class="dropdown-item" href="#">عمل آخر</a>
@@ -422,7 +422,7 @@
                         </td>
                         <td class="td-actions">
                           <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
-                            <i class="fal fa-tools"></i>
+                            @icon('fal fa-tools')
                           </button>
                         </td>
                       </tr>
@@ -445,7 +445,7 @@
                         </td>
                         <td class="td-actions">
                           <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
-                            <i class="fal fa-tools"></i>
+                            @icon('fal fa-tools')
                           </button>
                         </td>
                       </tr>
@@ -467,7 +467,7 @@
                         </td>
                         <td class="td-actions">
                           <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
-                            <i class="fal fa-tools"></i>
+                            @icon('fal fa-tools')
                           </button>
                         </td>
                       </tr>
@@ -489,7 +489,7 @@
                         </td>
                         <td class="td-actions">
                           <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
-                            <i class="fal fa-tools"></i>
+                            @icon('fal fa-tools')
                           </button>
                         </td>
                       </tr>
@@ -512,7 +512,7 @@
                         </td>
                         <td class="td-actions">
                           <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
-                            <i class="fal fa-tools"></i>
+                            @icon('fal fa-tools')
                           </button>
                         </td>
                       </tr>
@@ -534,7 +534,7 @@
                         </td>
                         <td class="td-actions">
                           <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
-                            <i class="fal fa-tools"></i>
+                            @icon('fal fa-tools')
                           </button>
                         </td>
                       </tr>
@@ -574,7 +574,7 @@
                 <ul class="timeline timeline-simple">
                   <li class="timeline-end">
                     <div class="timeline-badge danger">
-                      <i class="fal fa-shopping-bag"></i>
+                      @icon('fal fa-shopping-bag')
                     </div>
                     <div class="card-timeline text-end">
                       <div class="timeline-heading">
@@ -585,13 +585,13 @@
                           عائلتي لقد استمتعنا بالموضوع "المستقبلي" !!! كانت ليلة ممتعة معًا ...</p>
                       </div>
                       <h6>
-                        <i class="fal fa-clock"></i> قبل ساعتين عبر تويتر
+                        @icon('fal fa-clock') قبل ساعتين عبر تويتر
                       </h6>
                     </div>
                   </li>
                   <li class="timeline-end">
                     <div class="timeline-badge success">
-                      <i class="fal fa-gift-2"></i>
+                      @icon('fal fa-gift-2')
                     </div>
                     <div class="card-timeline text-end">
                       <div class="timeline-heading">
@@ -606,7 +606,7 @@
                   </li>
                   <li class="timeline-end">
                     <div class="timeline-badge info">
-                      <i class="fal fa-planet-ringed"></i>
+                      @icon('fal fa-planet-ringed')
                     </div>
                     <div class="card-timeline text-end">
                       <div class="timeline-heading">
@@ -623,7 +623,7 @@
                       <div class="card-footer">
                         <div class="dropdown">
                           <button type="button" class="btn rounded-pill btn-info btn-gradient dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fal fa-list-ul"></i>
+                            @icon('fal fa-list-ul')
                           </button>
                           <div class="dropdown-menu dropdown-menu-end">
                             <a class="dropdown-item" href="#">عمل</a>
@@ -702,7 +702,7 @@
                   إن التشبيك في قمة الويب لا يشبه أي مؤتمر تقني أوروبي آخر.
                 </p>
                 <div class="icon icon-primary">
-                  <i class="fa fa-quote-right"></i>
+                  @icon('fa fa-quote-right')
                 </div>
               </div>
               <div class="card-footer ">
@@ -734,7 +734,7 @@
           </ul>
           <div class="copyright">
             ©
-            {{ now()->year }} made with <i class="fal fa-heart"></i> by
+            {{ now()->year }} made with @icon('fal fa-heart') by
             <a href="javascript:void(0)" target="_blank">Creative Tim</a> for a better web.
           </div>
         </div>

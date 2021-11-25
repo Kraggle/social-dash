@@ -87,7 +87,7 @@ $stats = [
               <div class="row justify-content-between">
                 <div class="col-auto">
                   <div class="info-icon text-center icon-warning">
-                    <i class="{{ $stat->icon }}"></i>
+                    @icon($stat->icon)
                   </div>
                 </div>
                 <div class="col-auto">
@@ -104,7 +104,7 @@ $stats = [
             <div class="card-footer">
               <hr>
               <div class="stats">
-                <i id="dir-{{ $stat->id }}" class="fal fa-arrow-up"></i>
+                <i id="dir-{{ $stat->id }}" class="fal fa-arrow-up" aria-hidden="true"></i>
                 <span id="inc-{{ $stat->id }}" data-value="{{ $stat->stat }}"></span>
               </div>
             </div>
@@ -205,7 +205,7 @@ $stats = [
             <h3 class="card-title">Upcoming</h3>
             <div class="dropdown position-absolute top-0 right-0 m-2">
               <button type="button" class="btn btn-gray btn-lg btn-link dropdown-toggle no-caret" data-bs-toggle="dropdown">
-                <i class="fal fa-cog"></i>
+                @icon('fal fa-cog')
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#pablo">Action</a>
@@ -228,7 +228,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
-                        <i class="fal fa-pencil-alt"></i>
+                        @icon('fal fa-pencil-alt')
                       </button>
                     </td>
                   </tr>
@@ -242,7 +242,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
-                        <i class="fal fa-pencil-alt"></i>
+                        @icon('fal fa-pencil-alt')
                       </button>
                     </td>
                   </tr>
@@ -256,7 +256,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
-                        <i class="fal fa-pencil-alt"></i>
+                        @icon('fal fa-pencil-alt')
                       </button>
                     </td>
                   </tr>
@@ -270,7 +270,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
-                        <i class="fal fa-pencil-alt"></i>
+                        @icon('fal fa-pencil-alt')
                       </button>
                     </td>
                   </tr>
@@ -284,7 +284,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
-                        <i class="fal fa-pencil-alt"></i>
+                        @icon('fal fa-pencil-alt')
                       </button>
                     </td>
                   </tr>
@@ -298,7 +298,7 @@ $stats = [
                     </td>
                     <td class="td-actions text-end">
                       <button type="button" data-bs-toggle="tooltip" title="Edit Task" class="btn btn-orange btn-link">
-                        <i class="fal fa-pencil-alt"></i>
+                        @icon('fal fa-pencil-alt')
                       </button>
                     </td>
                   </tr>
@@ -318,7 +318,7 @@ $stats = [
             <div class="position-absolute top-0 right-0 m-2">
               <div class="dropdown">
                 <button type="button" class="btn btn-gray btn-lg btn-link dropdown-toggle no-caret" data-bs-toggle="dropdown">
-                  <i class="fal fa-cog"></i>
+                  @icon('fal fa-cog')
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="#pablo">Action</a>
@@ -356,7 +356,7 @@ $stats = [
                     <td class="text-center">7</td>
                     <td class="text-end">
                       <button type="button" data-bs-toggle="tooltip" class="btn btn-link btn-icon" title="More actions...">
-                        <i class="fal fa-chevron-down"></i>
+                        @icon('fal fa-chevron-down')
                       </button>
                     </td>
                   </tr>
@@ -373,7 +373,7 @@ $stats = [
                     <td class="text-center">26</td>
                     <td class="text-end">
                       <button type="button" data-bs-toggle="tooltip" class="btn btn-link btn-icon" title="More actions...">
-                        <i class="fal fa-chevron-down"></i>
+                        @icon('fal fa-chevron-down')
                       </button>
                     </td>
                   </tr>
@@ -390,7 +390,7 @@ $stats = [
                     <td class="text-center">1</td>
                     <td class="text-end">
                       <button type="button" data-bs-toggle="tooltip" class="btn btn-link btn-icon" title="More actions...">
-                        <i class="fal fa-chevron-down"></i>
+                        @icon('fal fa-chevron-down')
                       </button>
                     </td>
                   </tr>
@@ -407,7 +407,7 @@ $stats = [
                     <td class="text-center">1</td>
                     <td class="text-end">
                       <button type="button" data-bs-toggle="tooltip" class="btn btn-link btn-icon" title="More actions...">
-                        <i class="fal fa-chevron-down"></i>
+                        @icon('fal fa-chevron-down')
                       </button>
                     </td>
                   </tr>
@@ -424,7 +424,7 @@ $stats = [
                     <td class="text-center">1</td>
                     <td class="text-end">
                       <button type="button" data-bs-toggle="tooltip" class="btn btn-link btn-icon" title="More actions...">
-                        <i class="fal fa-chevron-down"></i>
+                        @icon('fal fa-chevron-down')
                       </button>
                     </td>
                   </tr>
@@ -441,7 +441,7 @@ $stats = [
                     <td class="text-center">41</td>
                     <td class="text-end">
                       <button type="button" data-bs-toggle="tooltip" class="btn btn-link btn-icon" title="More actions...">
-                        <i class="fal fa-chevron-down"></i>
+                        @icon('fal fa-chevron-down')
                       </button>
                     </td>
                   </tr>
@@ -544,5 +544,5 @@ $stats = [
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js') }}/pages/dashboard.js"></script>
+  <script type="module" src="{{ AH::asset('js', '/pages/dashboard.js') }}"></script>
 @endpush

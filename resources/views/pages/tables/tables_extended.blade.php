@@ -18,7 +18,7 @@
             <div class="tools float-end">
               <div class="dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-bs-toggle="dropdown">
-                  <i class="fal fa-cog"></i>
+                  @icon('fal fa-cog')
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="#">Action</a>
@@ -76,10 +76,10 @@
                     </td>
                     <td class="text-end">
                       <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
-                        <i class="fal fa-redo"></i>
+                        @icon('fal fa-redo')
                       </button>
                       <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
                     </td>
                   </tr>
@@ -103,10 +103,10 @@
                     </td>
                     <td class="text-end">
                       <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
-                        <i class="fal fa-redo"></i>
+                        @icon('fal fa-redo')
                       </button>
                       <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
                     </td>
                   </tr>
@@ -130,10 +130,10 @@
                     </td>
                     <td class="text-end">
                       <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon " data-original-title="Tooltip on top" title="Refresh">
-                        <i class="fal fa-redo"></i>
+                        @icon('fal fa-redo')
                       </button>
                       <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm " data-original-title="Tooltip on top" title="Delete">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
                     </td>
                   </tr>
@@ -157,10 +157,10 @@
                     </td>
                     <td class="text-end">
                       <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
-                        <i class="fal fa-redo"></i>
+                        @icon('fal fa-redo')
                       </button>
                       <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
                     </td>
                   </tr>
@@ -184,10 +184,10 @@
                     </td>
                     <td class="text-end">
                       <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
-                        <i class="fal fa-redo"></i>
+                        @icon('fal fa-redo')
                       </button>
                       <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
                     </td>
                   </tr>
@@ -211,10 +211,10 @@
                     </td>
                     <td class="text-end">
                       <button type="button" rel="tooltip" class="btn btn-success btn-gradient btn-link btn-sm btn-icon   btn-neutral  " data-original-title="Tooltip on top" title="Refresh">
-                        <i class="fal fa-redo"></i>
+                        @icon('fal fa-redo')
                       </button>
                       <button type="button" rel="tooltip" class="btn btn-danger btn-gradient btn-link btn-sm   btn-neutral  " data-original-title="Tooltip on top" title="Delete">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
                     </td>
                   </tr>
@@ -230,7 +230,7 @@
             <div class="tools float-end">
               <div class="dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-bs-toggle="dropdown">
-                  <i class="fal fa-cog"></i>
+                  @icon('fal fa-cog')
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="#">Action</a>
@@ -463,7 +463,7 @@
             <div class="tools float-end">
               <div class="dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle btn-link btn-icon" data-bs-toggle="dropdown">
-                  <i class="fal fa-cog"></i>
+                  @icon('fal fa-cog')
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="javascript:void(0)">Action</a>
@@ -525,9 +525,9 @@
                     </td>
                     <td class="td-number">
                       <div class="btn-group">
-                        <button class="btn btn-info btn-gradient btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
+                        <button class="btn btn-info btn-gradient btn-simple btn-sm"> @icon('fal fa-trash-alt')
                         </button>
-                        <button class="btn btn-info btn-gradient btn-sm"> <i class="fal fa-plus"></i> </button>
+                        <button class="btn btn-info btn-gradient btn-sm"> @icon('fal fa-plus') </button>
                       </div>
                       1
                     </td>
@@ -536,7 +536,7 @@
                     </td>
                     <td class="td-actions">
                       <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-gradient btn-link" data-original-title="Remove item">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
                     </td>
                   </tr>
@@ -562,9 +562,9 @@
                     </td>
                     <td class="td-number">
                       <div class="btn-group">
-                        <button class="btn btn-info btn-gradient btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
+                        <button class="btn btn-info btn-gradient btn-simple btn-sm"> @icon('fal fa-trash-alt')
                         </button>
-                        <button class="btn btn-info btn-gradient btn-sm"> <i class="fal fa-plus"></i> </button>
+                        <button class="btn btn-info btn-gradient btn-sm"> @icon('fal fa-plus') </button>
                       </div>
                       2
                     </td>
@@ -573,7 +573,7 @@
                     </td>
                     <td class="td-actions">
                       <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-gradient btn-link" data-original-title="Remove item">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
                     </td>
                   </tr>
@@ -599,9 +599,9 @@
                     </td>
                     <td class="td-number">
                       <div class="btn-group">
-                        <button class="btn btn-info btn-gradient btn-simple btn-sm"> <i class="fal fa-trash-alt"></i>
+                        <button class="btn btn-info btn-gradient btn-simple btn-sm"> @icon('fal fa-trash-alt')
                         </button>
-                        <button class="btn btn-info btn-gradient btn-sm"> <i class="fal fa-plus"></i> </button>
+                        <button class="btn btn-info btn-gradient btn-sm"> @icon('fal fa-plus') </button>
                       </div>
                       1
                     </td>
@@ -610,7 +610,7 @@
                     </td>
                     <td class="td-actions">
                       <button type="button" rel="tooltip" data-placement="top" title="" class="btn btn-primary btn-gradient btn-link" data-original-title="Remove item">
-                        <i class="fal fa-trash-alt"></i>
+                        @icon('fal fa-trash-alt')
                       </button>
                     </td>
                   </tr>
@@ -630,7 +630,7 @@
               </table>
               <button type="button" rel="tooltip" class="btn btn-info btn-gradient rounded-pill float-end me-5" data-original-title="" title="">
                 Complete Purchase
-                <i class="fal fa-chevron-right"></i>
+                @icon('fal fa-chevron-right')
               </button>
             </div>
           </div>

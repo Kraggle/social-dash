@@ -6,7 +6,7 @@
     <div class="card-body mt-4">
       <div class="row justify-content-center">
         <div class="col-md-auto">
-          <i class="fad fa-lock-alt text-warning" style="font-size:250px"></i>
+          <i class="fad fa-lock-alt text-warning" style="font-size:250px" aria-hidden="true"></i>
         </div>
       </div>
       <div class="row justify-content-center">

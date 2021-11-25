@@ -47,7 +47,7 @@ if ($cookie) {
     <label class="btn btn-outline-{{ $btn['color'] }}" for="{{ $btn['id'] }}">
       <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">{{ $btn['display'] }}</span>
       <span class="d-block d-sm-none">
-        <i class="{{ $btn['icon'] }}"></i>
+        @icon($btn['icon'])
       </span>
     </label>
   @endforeach

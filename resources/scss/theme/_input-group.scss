@@ -65,30 +65,21 @@
 }
 
 .input-group {
-    .form-control:not(:first-child),
-    .input-group-btn:not(:first-child) {
+    .form-control:not(:first-child) {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border-left: 0;
     }
 
-    .form-control:not(:last-child),
-    .input-group-btn:not(:last-child) {
+    .form-control:not(:last-child) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-right: 0;
     }
 
-    // .btn {
-    //     display: flex;
-    //     align-items: center;
-    //     padding: $input-padding-y $input-padding-x;
-    //     margin: 0;
-    //     font-size: $font-size-base;
-    //     font-weight: $font-weight-bold;
-    //     line-height: $input-line-height;
-    //     border-color: $primary;
-    // }
+    > .btn:not(.dropdown-toggle) {
+        margin: -1px;
+    }
 }
 
 textarea.form-control {
@@ -416,22 +407,24 @@ textarea.form-control {
 }
 
 .switch-wrap {
+    display: flex;
+
     .input-label {
         font-size: $input-font-size;
-        padding-left: $input-padding-x;
+        padding: $input-padding-y $input-padding-x;
     }
 
     &.switch-wrap-sm {
         .input-label {
             font-size: $input-font-size-sm;
-            padding-left: $input-padding-x-sm;
+            padding: $input-padding-y-sm $input-padding-x-sm;
         }
     }
 
     &.switch-wrap-lg {
         .input-label {
             font-size: $input-font-size-lg;
-            padding-left: $input-padding-x-lg;
+            padding: $input-padding-y-lg $input-padding-x-lg;
         }
     }
 }

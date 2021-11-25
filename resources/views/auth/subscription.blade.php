@@ -42,8 +42,8 @@ $prev = '';
               <label for="{{ $id }}" class="check-wrap">
                 <div class="head-row">
                   <div class="check-mark">
-                    <i class="off fal fa-stop"></i>
-                    <i class="on fas fa-stop"></i>
+                    @icon('off fal fa-stop')
+                    @icon('on fas fa-stop')
                   </div>
 
                   <div class="check-title">{{ $package->name }}</div>
@@ -59,7 +59,7 @@ $prev = '';
 
                 @foreach ($includes as $value)
                   <p class="check-item">
-                    {!! str_replace('(+)', '<i class="far fa-plus"></i>', trim($value)) !!}
+                    {!! str_replace('(+)', '<i class="far fa-plus" aria-hidden="true"></i>', trim($value)) !!}
                   </p>
                 @endforeach
               </label>
@@ -96,7 +96,7 @@ $prev = '';
       <div class="col-lg-4">
         <div class="card card-payment no-animate">
           <a href="javascript:void(0)" id="close-btn" class="btn btn-icon btn-link">
-            <i class="fas fa-times"></i>
+            @icon('fas fa-times')
           </a>
 
           <form class="form" data-secret={{ $intent->client_secret }} data-stripe="{{ $stripe_key }}" id="payment-form" method="POST" action="{{ route('subscription.store') }}">
@@ -134,7 +134,7 @@ $prev = '';
                     <label for="">{{ __('Card Number') }}</label>
                     <div class="form-group d-flex">
                       <div class="input-group-text">
-                        <i class="fal fa-credit-card"></i>
+                        @icon('fal fa-credit-card')
                       </div>
                       <div class="form-control" id="number-element">
                       </div>
@@ -158,7 +158,7 @@ $prev = '';
                     <label for="">{{ __('Expiry') }}</label>
                     <div class="form-group d-flex">
                       <div class="input-group-text">
-                        <i class="fal fa-calendar-week"></i>
+                        @icon('fal fa-calendar-week')
                       </div>
                       <div class="form-control" id="expiry-element"></div>
                     </div>
@@ -170,7 +170,7 @@ $prev = '';
                     <label for="">{{ __('CVC') }}</label>
                     <div class="form-group d-flex">
                       <div class="input-group-text">
-                        <i class="fal fa-shield-alt"></i>
+                        @icon('fal fa-shield-alt')
                       </div>
                       <div class="form-control" id="cvc-element"></div>
                     </div>
@@ -194,5 +194,5 @@ $prev = '';
 @endsection
 
 @push('js')
-  <script type="module" src="{{ asset('js/pages') }}/subscribe.js"></script>
+  <script type="module" src="{{ AH::asset('js/pages', '/subscribe.js') }}"></script>
 @endpush
