@@ -24,7 +24,7 @@ if ($placeholder) {
     <input class="form-check-input" type="checkbox" name="{{ $name }}" value=1 id="{{ $id }}" {{ AppHelper::checked($value) }} {{ $disabled ? 'disabled' : '' }} {{ $readonly ? 'readonly' : '' }}>
     <span class="form-check-sign"></span>
     @if ($placeholder)
-      <span class="form-check-placeholder">{{ $placeholder }}</span>
+      <span class="form-check-placeholder">{!! $placeholder !!}</span>
     @endif
   </label>
 </div>

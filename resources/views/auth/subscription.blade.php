@@ -123,21 +123,21 @@ $prev = '';
                 'name' => 'billing-name',
                 'placeholder' => __('Mr S Shadow'),
                 'id' => 'input-billing-name',
-                'prepend' => ['icon' => 'fal fa-user']
+                'prepend' => ['icon' => 'fal fa-user'],
+                'group' => ['class' => 'mb-2']
                 ]])
                 <label id="error-billing-name" class="error text-danger" for="input-billing-name"></label>
 
-                <div class="row">
+                <div class="row mb-0">
 
                   {{-- card number --}}
                   <div class="col-sm-12">
                     <label for="">{{ __('Card Number') }}</label>
-                    <div class="form-group d-flex">
+                    <div class="input-group mb-2 d-flex">
                       <div class="input-group-text">
                         @icon('fal fa-credit-card')
                       </div>
-                      <div class="form-control" id="number-element">
-                      </div>
+                      <div class="form-control" id="number-element"></div>
                       <div class="input-group-cards">
                         <img class="card-icon" src="https://js.stripe.com/v3/fingerprinted/img/visa-365725566f9578a9589553aa9296d178.svg" alt="visa">
                         <img class="card-icon" src="https://js.stripe.com/v3/fingerprinted/img/mastercard-4d8844094130711885b5e41b28c9848f.svg" alt="mastercard">
@@ -156,7 +156,7 @@ $prev = '';
                   {{-- card expiry --}}
                   <div class="col-sm-7 pe-0">
                     <label for="">{{ __('Expiry') }}</label>
-                    <div class="form-group d-flex">
+                    <div class="input-group mb-2 d-flex">
                       <div class="input-group-text">
                         @icon('fal fa-calendar-week')
                       </div>
@@ -168,7 +168,7 @@ $prev = '';
                   {{-- card cvc --}}
                   <div class="col-sm-5">
                     <label for="">{{ __('CVC') }}</label>
-                    <div class="form-group d-flex">
+                    <div class="input-group mb-2 d-flex">
                       <div class="input-group-text">
                         @icon('fal fa-shield-alt')
                       </div>

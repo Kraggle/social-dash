@@ -8168,7 +8168,7 @@ body {
   text-align: center;
 }
 .card-payment .btn-link {
-  position: absolute;
+  position: absolute !important;
   color: #ced4da;
   font-size: 18px;
   top: 0;
@@ -17724,6 +17724,25 @@ button.bg-lighter:focus {
   margin: 0;
 }
 
+.bootstrap-select.dropdown > .dropdown-toggle .filter-option-inner-inner {
+  width: 100%;
+  color: #141e30;
+}
+.bootstrap-select.dropdown > .dropdown-toggle:after {
+  color: #141e30;
+}
+.bootstrap-select.dropdown > .dropdown-toggle .select-cost {
+  display: none;
+}
+.bootstrap-select.dropdown li span.text {
+  display: block;
+  width: 100%;
+}
+.bootstrap-select.dropdown li .select-cost {
+  padding-right: 27px;
+  float: right;
+}
+
 .input-group + label.error,
 .form-group + label.error {
   display: block;
@@ -17815,7 +17834,7 @@ button.bg-lighter:focus {
   padding: 10px;
   background-color: white;
   right: 8px;
-  bottom: -23px;
+  bottom: -46px;
 }
 
 .check-wrap {
@@ -17853,6 +17872,8 @@ button.bg-lighter:focus {
   color: #fb8c00;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
+  -webkit-transform: translate(-50%, -45%);
+          transform: translate(-50%, -45%);
 }
 .check-wrap .check-title {
   display: inline-block;
@@ -17940,15 +17961,15 @@ label:empty {
   visibility: hidden;
 }
 
-.form-group .input-group-cards {
+.input-group .input-group-cards {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 5px;
-  margin-right: 79px;
+  margin-right: 10px;
 }
-.form-group .input-group-cards .img-rotator {
+.input-group .input-group-cards .img-rotator {
   display: grid;
   grid-template-columns: 24px;
   grid-template-rows: auto;
@@ -17960,13 +17981,13 @@ label:empty {
   justify-items: center;
   position: relative;
 }
-.form-group .input-group-cards .img-rotator img {
+.input-group .input-group-cards .img-rotator img {
   opacity: 1;
   grid-area: only;
   -webkit-transition: all 0.3ms linear;
   transition: all 0.3ms linear;
 }
-.form-group .input-group-cards .img-rotator .hidden {
+.input-group .input-group-cards .img-rotator .hidden {
   opacity: 0;
 }
 

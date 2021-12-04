@@ -100,8 +100,8 @@ use App\Models\Defaults;
 
     @if ($default->description)
       <div class="col-sm-auto">
-        <button toggle="{{ $key }}" class="btn-sm btn-link">
-          <span class="fal fa-info-circle"></span>
+        <button toggle="{{ $key }}" class="btn btn-link btn-icon">
+          @icon('fal fa-info-circle')
         </button>
       </div>
       <div toggle="{{ $key }}" class="col-sm-12 text-black-50 font-italic d-none mb-2" style="font-size:0.725rem; line-height:1.3;">

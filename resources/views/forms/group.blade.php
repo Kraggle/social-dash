@@ -4,6 +4,10 @@ $append = $append ?? '';
 
 extract($group);
 
+if (isset($class) && !is_array($class)) {
+    $class = [$class];
+}
+
 $class[] = 'input-group';
 if ($size) {
     $class[] = "input-group-$size";

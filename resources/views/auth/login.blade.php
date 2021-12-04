@@ -7,27 +7,28 @@
 @section('content')
   <div class="content d-flex align-items-center">
     <div class="container">
-      {{-- <div class="row">
-                <div class="col-md-9 mx-auto mb-1 text-center">
-                    <h3>{{ __('Welcome to social shadow') }} </h3>
+      <div class="row">
+        <div class="col-md-9 mx-auto mb-1 text-center">
+          <h3>{{ __('Welcome to Social Shadow') }} </h3>
 
-        <p class="text-lead text-light mt-3 mb-0">
-            {{ __('Log in and see how you can save more than 150 hours of work with CRUDs for managing: #users, #roles, #items, #categories, #tags and more.') }}
-        </p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-5 col-md-8 col-sm-10 mx-auto mb-3 text-center">
-        <h5 class="text-lead mt-2 mb-0">
+          <p class="text-lead text-light mt-3 mb-0">
+            {{ __('These login details are to see the functionality of the different account types available.') }}
+            <br><em>{{ __('Be aware that not all functionality has been included as of yet. This is still a work in progress.') }}</em>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 col-md-8 col-sm-10 mx-auto mb-3 text-center">
+          <h5 class="text-lead mt-2 mb-0">
             <strong>{{ __('You can log in with 3 user types:') }}</strong>
-        </h5>
-        <ol class="text-lead text-light mt-3 mb-3">
-            <li>{!! __('Username <b>admin@white.com</b> Password <b>secret</b>') !!}</li>
-            <li>{!! __('Username <b>creator@white.com</b> Password <b>secret</b>') !!}</li>
-            <li>{!! __('Username <b>member@white.com</b> Password <b>secret</b>') !!}</li>
-        </ol>
-    </div>
-</div> --}}
+          </h5>
+          <ol class="text-lead text-light mt-3 mb-3">
+            <li>{!! __('Email <b>teamadmin@white.com</b> Password <b>secret</b>') !!}</li>
+            <li>{!! __('Email <b>teammember@white.com</b> Password <b>secret</b>') !!}</li>
+            <li>{!! __('Email <b>free@white.com</b> Password <b>secret</b>') !!}</li>
+          </ol>
+        </div>
+      </div>
       <div class="mx-auto" style="width:340px;max-width:calc(100vw - 80px);">
         <form class="form" id="login-form" method="POST" action="{{ route('login') }}">
           @csrf
@@ -44,7 +45,7 @@
                 'type' => 'email',
                 'name' => 'email',
                 'placeholder' => __('Email...'),
-                'value' => old('email', 'admin@white.com'),
+                'value' => old('email', 'teamadmin@white.com'),
                 'id' => 'input-email',
                 'prepend' => ['icon' => 'fal fa-envelope']
                 ]])
