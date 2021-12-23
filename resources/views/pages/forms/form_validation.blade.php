@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'form_validation', 'menuParent' => 'forms', 'titlePage' => __('Validation
+@extends('layouts.app', ['activePage' => 'form-validation', 'menuParent' => 'examples', 'titlePage' => __('Validation
 Forms')])
 
 @section('content')

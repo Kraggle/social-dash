@@ -1,7 +1,7 @@
 @extends('layouts.app', [
 'class' => 'welcome-page',
 'activePage' => 'welcome',
-'titlePage' => __('White Dashboard'),
+'titlePage' => __(env('APP_NAME') ?? 'Social Shadow'),
 ])
 
 @section('content')

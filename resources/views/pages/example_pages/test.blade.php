@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'calendar', 'menuParent' => 'calendar', 'titlePage' => __('Calendar')])
+@extends('layouts.app', ['activePage' => 'test', 'menuParent' => 'examples', 'titlePage' => __('Elements')])
 
 @php
 $types = [

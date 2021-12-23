@@ -157,25 +157,28 @@
         border: 0;
     }
 
-    .table-header {
+    th {
         font-weight: $font-weight-bolder;
         text-align: right;
+        border: 0;
     }
 
-    td:not(.table-header) {
+    td {
         text-align: center;
         font-size: $font-size-lg;
-    }
-
-    tr:nth-of-type(even) {
-        background-color: #f9f9f9;
-        border-top-width: 1px;
-        border-bottom-width: 1px;
     }
 
     tr.text-left {
         td {
             text-align: left;
+        }
+    }
+
+    &.table-striped {
+        tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+            border-top-width: 1px;
+            border-bottom-width: 1px;
         }
     }
 }
@@ -242,9 +245,9 @@
     }
 }
 
-#tables .table-responsive {
-    margin-bottom: 30px;
-}
+// #tables .table-responsive {
+//     margin-bottom: 30px;
+// }
 
 table.tablesorter thead tr .header {
     background-image: url('../../images/bg.gif');

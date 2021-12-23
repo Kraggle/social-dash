@@ -230,18 +230,19 @@ $cookie = AppHelper::getPageCookie($page);
               <!--        Here you can write extra buttons/actions for the toolbar              -->
             </div>
             <table id="datatable" class="table table-striped">
+              <caption class="p-0"></caption>
               <thead>
                 <tr>
-                  <th>Profile</th>
-                  <th>Instagram UN</th>
-                  <th>Followers</th>
-                  <th>Posts</th>
-                  <th>Likes</th>
-                  <th>Comments</th>
-                  <th>Avg Likes</th>
-                  <th>Avg Comments</th>
-                  <th>Action</th>
-                  <th class="dt-nosort text-end">Actions</th>
+                  <th scope="col">Profile</th>
+                  <th scope="col">Instagram UN</th>
+                  <th scope="col">Followers</th>
+                  <th scope="col">Posts</th>
+                  <th scope="col">Likes</th>
+                  <th scope="col">Comments</th>
+                  <th scope="col">Avg Likes</th>
+                  <th scope="col">Avg Comments</th>
+                  <th scope="col">Action</th>
+                  <th scope="col" class="dt-nosort text-end">Actions</th>
                 </tr>
               </thead>
               <tbody>

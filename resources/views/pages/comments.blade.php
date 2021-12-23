@@ -99,20 +99,21 @@ $cookie = AppHelper::getPageCookie($page);
               <!--        Here you can write extra buttons/actions for the toolbar              -->
             </div>
             <table id="datatable" class="table table-striped">
+              <caption></caption>
               <thead>
                 <tr>
-                  <th title="The Instagram commenters profile icon.">Profile</th>
-                  <th title="The username of the Instagram account who has commented.">Instagram
+                  <th scope="col" title="The Instagram commenters profile icon.">Profile</th>
+                  <th scope="col" title="The username of the Instagram account who has commented.">Instagram
                     UN</th>
-                  <th title="The amount of followers this individual user has in total.">Followers
+                  <th scope="col" title="The amount of followers this individual user has in total.">Followers
                   </th>
-                  <th title="The post of which the user has commented on.">Post URL</th>
-                  <th title="A summary of the comment that was placed by the individual user.">
+                  <th scope="col" title="The post of which the user has commented on.">Post URL</th>
+                  <th scope="col" title="A summary of the comment that was placed by the individual user.">
                     Description</th>
-                  <th title="A total of likes the comment has recieved.">Likes</th>
-                  <th title="The amount of other comments this user has posted on your posts.">
+                  <th scope="col" title="A total of likes the comment has recieved.">Likes</th>
+                  <th scope="col" title="The amount of other comments this user has posted on your posts.">
                     Total Comments</th>
-                  <th class="sorting_desc_disabled sorting_asc_disabled text-end">Actions</th>
+                  <th scope="col" class="sorting_desc_disabled sorting_asc_disabled text-end">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -1053,18 +1054,6 @@ $cookie = AppHelper::getPageCookie($page);
                   </td>
                 </tr>
               </tbody>
-              <tfoot>
-                <tr>
-                  <th>Profile</th>
-                  <th>Instagram UN</th>
-                  <th>Followers</th>
-                  <th>Post URL</th>
-                  <th>Description</th>
-                  <th>Likes</th>
-                  <th>Total Comments</th>
-                  <th class="disabled-sorting text-end">Actions</th>
-                </tr>
-              </tfoot>
             </table>
           </div>
           <!-- end content-->

@@ -1,7 +1,7 @@
 @extends('layouts.app', [
 'class' => 'lock-page',
 'activePage' => 'lock',
-'titlePage' => __('White Dashboard'),
+'titlePage' => __(env('APP_NAME') ?? 'Social Shadow'),
 ])
 
 

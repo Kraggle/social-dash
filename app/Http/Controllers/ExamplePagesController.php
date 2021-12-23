@@ -56,15 +56,6 @@ class ExamplePagesController extends Controller {
     }
 
     /**
-     * Display the charts page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function charts() {
-        return view('pages.example_pages.charts');
-    }
-
-    /**
      * Display the calendar page
      *
      * @return \Illuminate\View\View

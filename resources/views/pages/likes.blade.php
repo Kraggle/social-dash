@@ -101,15 +101,16 @@ $cookie = AppHelper::getPageCookie($page);
               <!--        Here you can write extra buttons/actions for the toolbar              -->
             </div>
             <table id="datatable" class="table table-striped">
+              <caption class="p-0"></caption>
               <thead>
                 <tr>
-                  <th>Post</th>
-                  <th>Post URL</th>
-                  <th>Desciption</th>
-                  <th>Likes</th>
-                  <th>Comments</th>
-                  <th>Date Posted</th>
-                  <th>Hashtags</th>
+                  <th scope="col">Post</th>
+                  <th scope="col">Post URL</th>
+                  <th scope="col">Desciption</th>
+                  <th scope="col">Likes</th>
+                  <th scope="col">Comments</th>
+                  <th scope="col">Date Posted</th>
+                  <th scope="col">Hashtags</th>
                 </tr>
               </thead>
               <tbody>
@@ -272,13 +273,13 @@ $cookie = AppHelper::getPageCookie($page);
               </tbody>
               <tfoot>
                 <tr>
-                  <th>Post</th>
-                  <th>Post URL</th>
-                  <th>Desciption</th>
-                  <th>Likes</th>
-                  <th>Comments</th>
-                  <th>Date Posted</th>
-                  <th>Hashtags</th>
+                  <th scope="col">Post</th>
+                  <th scope="col">Post URL</th>
+                  <th scope="col">Desciption</th>
+                  <th scope="col">Likes</th>
+                  <th scope="col">Comments</th>
+                  <th scope="col">Date Posted</th>
+                  <th scope="col">Hashtags</th>
                 </tr>
               </tfoot>
             </table>

@@ -25,7 +25,8 @@ $cookie = AppHelper::getPageCookie($page);
               <div class="col-auto pe-0">
                 @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
-                'id' => 'c-chart-date'
+                'id' => 'c-chart-date',
+                'group' => ['size' => 'sm']
                 ]])
               </div>
 
@@ -119,29 +120,30 @@ $cookie = AppHelper::getPageCookie($page);
             {{-- posts --}}
             <div class="row">
               <div class="col-12">
-                <table class="table table-compare table-images table-fixed">
+                <table class="table table-compare table-images table-fixed mb-0">
+                  <caption class="p-0"></caption>
                   <tbody>
                     <tr>
-                      <td class="no-border"></td>
-                      <td>
+                      <th scope="row"></th>
+                      <td class="img-check-wrap">
                         <input type="checkbox" id="myCheckbox31" />
-                        <label for="myCheckbox31"><img src="{{ asset('images') }}/post1.jpg"></label>
+                        <label for="myCheckbox31"><img alt="" src="{{ asset('images') }}/post1.jpg"></label>
                       </td>
-                      <td>
+                      <td class="img-check-wrap">
                         <input type="checkbox" id="myCheckbox32" />
-                        <label for="myCheckbox32"><img src="{{ asset('images') }}/post2.jpg"></label>
+                        <label for="myCheckbox32"><img alt="" src="{{ asset('images') }}/post2.jpg"></label>
                       </td>
-                      <td>
+                      <td class="img-check-wrap">
                         <input type="checkbox" id="myCheckbox33" />
-                        <label for="myCheckbox33"><img src="{{ asset('images') }}/post3.jpg"></label>
+                        <label for="myCheckbox33"><img alt="" src="{{ asset('images') }}/post3.jpg"></label>
                       </td>
-                      <td>
+                      <td class="img-check-wrap">
                         <input type="checkbox" id="myCheckbox34" />
-                        <label for="myCheckbox34"><img src="{{ asset('images') }}/post4.jpg"></label>
+                        <label for="myCheckbox34"><img alt="" src="{{ asset('images') }}/post4.jpg"></label>
                       </td>
-                      <td>
+                      <td class="img-check-wrap">
                         <input type="checkbox" id="myCheckbox35" />
-                        <label for="myCheckbox35"><img src="{{ asset('images') }}/post5.jpg"></label>
+                        <label for="myCheckbox35"><img alt="" src="{{ asset('images') }}/post5.jpg"></label>
                       </td>
                     </tr>
                   </tbody>
@@ -156,9 +158,10 @@ $cookie = AppHelper::getPageCookie($page);
 
                   <div class="tab-pane active" id="data-pane" role="tabpanel">
                     <table class="table table-striped table-compare table-invert table-fixed">
+                      <caption class="p-0"></caption>
                       <tbody>
                         <tr>
-                          <td class="table-header" title="This is the type of post you have published. It can be photo, carousel or video.">Type</td>
+                          <th scope="row" class="table-header" title="This is the type of post you have published. It can be photo, carousel or video.">Type</th>
                           <td><a href="{{ route('pages.posts') }}">Photo</a></td>
                           <td><a href="{{ route('pages.posts') }}">Photo</a></td>
                           <td><a href="{{ route('pages.posts') }}">Photo</a></td>
@@ -166,7 +169,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">Photo</a></td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="This is the character count of your Instagram post.">Description</td>
+                          <th scope="row" class="table-header" title="This is the character count of your Instagram post.">Description</th>
                           <td>72</td>
                           <td>108</td>
                           <td>63</td>
@@ -174,7 +177,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>145</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="How many likes you have recieved in 1 hour.">Likes (1 hour)</td>
+                          <th scope="row" class="table-header" title="How many likes you have recieved in 1 hour.">Likes (1 hour)</th>
                           <td>34</td>
                           <td>32</td>
                           <td>30</td>
@@ -182,7 +185,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>31</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="How many likes you have recieved in 6 hours.">Likes (6 hour)</td>
+                          <th scope="row" class="table-header" title="How many likes you have recieved in 6 hours.">Likes (6 hour)</th>
                           <td>62</td>
                           <td>67</td>
                           <td>65</td>
@@ -190,7 +193,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>50</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="How many likes you have recieved in 12 hours.">Likes (12 hour)</td>
+                          <th scope="row" class="table-header" title="How many likes you have recieved in 12 hours.">Likes (12 hour)</th>
                           <td>123</td>
                           <td>120</td>
                           <td>121</td>
@@ -198,7 +201,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>118</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="How many likes you have recieved in 1 day.">Likes (1 day)</td>
+                          <th scope="row" class="table-header" title="How many likes you have recieved in 1 day.">Likes (1 day)</th>
                           <td>225</td>
                           <td>158</td>
                           <td>248</td>
@@ -206,7 +209,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>178</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="How many likes you have recieved in total.">Likes (total)</td>
+                          <th scope="row" class="table-header" title="How many likes you have recieved in total.">Likes (total)</th>
                           <td>321</td>
                           <td>246</td>
                           <td>289</td>
@@ -214,7 +217,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>209</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="How many Comments you have recieved on each post.">Comments</td>
+                          <th scope="row" class="table-header" title="How many Comments you have recieved on each post.">Comments</th>
                           <td>56</td>
                           <td>91</td>
                           <td>75</td>
@@ -222,7 +225,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>32</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="The percentage of engagement from your followers towards your post.">Eng Rate</td>
+                          <th scope="row" class="table-header" title="The percentage of engagement from your followers towards your post.">Eng Rate</th>
                           <td>4.6%</td>
                           <td>4.1%</td>
                           <td>4.5%</td>
@@ -230,7 +233,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>2.2%</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="How many different hashtags you have used on the post.">Hashtags</td>
+                          <th scope="row" class="table-header" title="How many different hashtags you have used on the post.">Hashtags</th>
                           <td>12</td>
                           <td>8</td>
                           <td>15</td>
@@ -238,7 +241,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>23</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="What the overall average difficulty of the targeted hashtags is.">Avg Tag Difficulty</td>
+                          <th scope="row" class="table-header" title="What the overall average difficulty of the targeted hashtags is.">Avg Tag Difficulty</th>
                           <td>72</td>
                           <td>64</td>
                           <td>84</td>
@@ -246,7 +249,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>91</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="The average amount of likes for each hashtags used.">Likes Per Tag</td>
+                          <th scope="row" class="table-header" title="The average amount of likes for each hashtags used.">Likes Per Tag</th>
                           <td>26</td>
                           <td>31</td>
                           <td>19</td>
@@ -254,7 +257,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>5</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="How many additional followers were generated during this timeframe.">Potential Followers</td>
+                          <th scope="row" class="table-header" title="How many additional followers were generated during this timeframe.">Potential Followers</th>
                           <td>62</td>
                           <td>32</td>
                           <td>26</td>
@@ -262,7 +265,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>7</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="How many followers were lossed during this timeframe.">Potential Un-Followers</td>
+                          <th scope="row" class="table-header" title="How many followers were lossed during this timeframe.">Potential Un-Followers</th>
                           <td>8</td>
                           <td>12</td>
                           <td>18</td>
@@ -270,7 +273,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td>9</td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="The date of which the post was published.">Date</td>
+                          <th scope="row" class="table-header" title="The date of which the post was published.">Date</th>
                           <td><a href="{{ route('pages.posts') }}">05/02/2021</a></td>
                           <td><a href="{{ route('pages.posts') }}">21/04/2021</a></td>
                           <td><a href="{{ route('pages.posts') }}">15/08/2020</a></td>
@@ -278,7 +281,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">09/01/2021</a></td>
                         </tr>
                         <tr>
-                          <td class="table-header" title="The time of which the post was published.">Time</td>
+                          <th scope="row" class="table-header" title="The time of which the post was published.">Time</th>
                           <td><a href="{{ route('pages.posts') }}">11:04</a></td>
                           <td><a href="{{ route('pages.posts') }}">09:58</a></td>
                           <td><a href="{{ route('pages.posts') }}">13:01</a></td>
@@ -286,7 +289,7 @@ $cookie = AppHelper::getPageCookie($page);
                           <td><a href="{{ route('pages.posts') }}">12:42</a></td>
                         </tr>
                         <tr>
-                          <td></td>
+                          <th scope="row"></th>
                           <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-gradient btn-lg">View Post</a></td>
                           <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-gradient btn-lg">View Post</a></td>
                           <td><a href="{{ route('pages.post') }}" class="btn btn-primary btn-gradient btn-lg">View Post</a></td>
@@ -302,9 +305,10 @@ $cookie = AppHelper::getPageCookie($page);
                     <div class="row">
                       <div class="col-12">
                         <table class="table table-fixed table-compare">
+                          <caption class="p-0"></caption>
                           <tbody>
                             <tr class="text-left">
-                              <td></td>
+                              <th scope="row">Hashtags</th>
                               <td>
                                 <div class="progress-container progress-warning">
                                   <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneymotivation</a></span>
@@ -636,9 +640,8 @@ $cookie = AppHelper::getPageCookie($page);
                                 </div>
                               </td>
                             </tr>
-                            <tr></tr>
                             <tr>
-                              <td></td>
+                              <th scope="row"></th>
                               <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary btn-gradient">View all Hashtags</a></td>
                               <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary btn-gradient">View all Hashtags</a></td>
                               <td><a href="{{ route('pages.hashtags') }}" class="btn btn-lg btn-primary btn-gradient">View all Hashtags</a></td>

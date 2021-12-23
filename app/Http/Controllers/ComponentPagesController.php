@@ -36,7 +36,7 @@ class ComponentPagesController extends Controller {
      * @return \Illuminate\View\View
      */
     public function sweetAlert() {
-        return view('pages.components.sweet_alert');
+        return view('pages.components.sweet-alert');
     }
 
     /**

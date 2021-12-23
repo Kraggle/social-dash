@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'extended', 'menuParent' => 'tables', 'titlePage' => __('Extended Tables')])
+@extends('layouts.app', ['activePage' => 'extended-tables', 'menuParent' => 'examples', 'titlePage' => __('Extended Tables')])
 
 @section('content')
   <div class="content">

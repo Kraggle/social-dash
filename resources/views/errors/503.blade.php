@@ -1,7 +1,7 @@
 @extends('errors.layout', [
-'class' => 'login-page',
-'activePage' => 'login',
-'titlePage' => __('White Dashboard')
+'class' => 'error-page',
+'activePage' => 'error',
+'titlePage' => __('503 Error')
 ])
 
 @section('content')

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'form_extended', 'menuParent' => 'forms', 'titlePage' => __('Extended Forms')])
+@extends('layouts.app', ['activePage' => 'form-extended', 'menuParent' => 'examples', 'titlePage' => __('Extended Forms')])
 
 @section('content')
   <div class="content">

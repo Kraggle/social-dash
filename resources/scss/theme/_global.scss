@@ -9,7 +9,6 @@
 }
 
 .section-nucleo-icons {
-
     --icon-size: 5rem;
     --icon-sm-size: 3.75rem;
     --gutter: 7rem;
@@ -25,7 +24,7 @@
             z-index: 1;
             transform: translate(-50%, -50%);
             @include box-shadow($box-shadow);
-            transition: all .2s cubic-bezier(.25,.65,.9,.75);
+            transition: all 0.2s cubic-bezier(0.25, 0.65, 0.9, 0.75);
 
             &.icon {
                 width: var(--icon-size);
@@ -41,7 +40,7 @@
 
             &:nth-child(1) {
                 font-size: 42px;
-                color: theme-color("warning");
+                color: theme-color('warning');
                 z-index: 2;
             }
         }
@@ -54,12 +53,11 @@
 
                 &:not(:nth-child(1)) {
                     opacity: 0;
-                } 
+                }
             }
         }
 
         &.on-screen {
-
             i {
                 opacity: 1;
 
@@ -67,7 +65,7 @@
                     left: 50%;
                     top: 50%;
                     font-size: 42px;
-                    color: theme-color("warning");
+                    color: theme-color('warning');
                 }
 
                 &:nth-child(2) {
@@ -128,13 +126,11 @@
                 &:nth-child(13) {
                     left: calc(50% - (var(--gutter) * 2.7));
                     top: calc(50% - (var(--gutter) * 1.5));
-                } 
+                }
             }
-            
         }
     }
 }
-
 
 // Blurable sections
 
@@ -142,7 +138,7 @@
     position: relative;
 
     .blur-item {
-        transition: 1s cubic-bezier(.19,1,.22,1);
+        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
         will-change: transform;
         filter: blur(0);
         opacity: 1;
@@ -159,9 +155,9 @@
     }
     &:hover {
         .blur-item {
-            opacity: .8;
+            opacity: 0.8;
             filter: blur(10px);
-            transform: scale(.95);
+            transform: scale(0.95);
             z-index: 1;
         }
         .blur-hidden {
@@ -170,3 +166,86 @@
         }
     }
 }
+
+// .card {
+//     &.card-post {
+//         ul {
+//             list-style-type: none;
+//         }
+
+//         li {
+//             display: inline-block;
+//         }
+
+//         input[type='checkbox'] {
+//             display: none;
+//         }
+
+//         label {
+//             border: 1px solid #fff;
+//             padding: 10px;
+//             display: block;
+//             position: relative;
+//             margin: 10px;
+//             cursor: pointer;
+//             user-select: none;
+
+//             &::before {
+//                 background-color: white;
+//                 color: white;
+//                 content: ' ';
+//                 display: block;
+//                 border-radius: 50%;
+//                 border: 1px solid grey;
+//                 position: absolute;
+//                 top: -5px;
+//                 left: -5px;
+//                 width: 25px;
+//                 height: 25px;
+//                 text-align: center;
+//                 line-height: 28px;
+//                 transition-duration: 0.4s;
+//                 transform: scale(0);
+//             }
+
+//             img {
+//                 height: 330px;
+//                 width: 330px;
+//                 transition-duration: 0.2s;
+//                 transform-origin: 50% 50%;
+//             }
+
+//             &:hover {
+//                 border-color: #ddd;
+
+//                 &::before {
+//                     content: '✓';
+//                     background-color: gray;
+//                     transform: scale(1);
+//                 }
+
+//                 img {
+//                     transform: scale(0.9);
+//                     box-shadow: 0 0 5px #333;
+//                     z-index: -1;
+//                 }
+//             }
+//         }
+
+//         :checked + label {
+//             border-color: #ddd;
+
+//             &::before {
+//                 content: '✓';
+//                 background-color: green;
+//                 transform: scale(1);
+//             }
+
+//             img {
+//                 transform: scale(0.9);
+//                 box-shadow: 0 0 5px #333;
+//                 z-index: -1;
+//             }
+//         }
+//     }
+// }

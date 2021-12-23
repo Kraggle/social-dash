@@ -217,6 +217,12 @@ $stats = [
           <div class="card-body">
             <div class="table-full-width table-responsive">
               <table class="table">
+                <caption class="p-0"></caption>
+                <thead class="d-none">
+                  <th scope="col">Check</th>
+                  <th scope="col">Post</th>
+                  <th scope="col">Actions</th>
+                </thead>
                 <tbody>
                   <tr>
                     <td>
@@ -331,15 +337,16 @@ $stats = [
           <div class="card-body">
             <div class="table-responsive">
               <table class="table">
+                <caption class="p-0"></caption>
                 <thead>
                   <tr>
-                    <th>{{ __('Profile') }}</th>
-                    <th>{{ __('Instagram UN') }}</th>
-                    <th>{{ __('Followers') }}</th>
-                    <th>{{ __('Description') }}</th>
-                    <th>{{ __('Likes') }}</th>
-                    <th>{{ __('Comments') }}</th>
-                    <th class="text-end">{{ __('Actions') }}</th>
+                    <th scope="col">{{ __('Profile') }}</th>
+                    <th scope="col">{{ __('Instagram UN') }}</th>
+                    <th scope="col">{{ __('Followers') }}</th>
+                    <th scope="col">{{ __('Description') }}</th>
+                    <th scope="col">{{ __('Likes') }}</th>
+                    <th scope="col">{{ __('Comments') }}</th>
+                    <th scope="col" class="text-end">{{ __('Actions') }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -465,6 +472,13 @@ $stats = [
               <div class="col-md-6">
                 <div class="table-responsive">
                   <table class="table">
+                    <caption class="p-0"></caption>
+                    <thead class="d-none">
+                      <th scope="row">Flag</th>
+                      <th scope="row">Country</th>
+                      <th scope="row">Count</th>
+                      <th scope="row">Percent</th>
+                    </thead>
                     <tbody>
                       <tr>
                         <td>

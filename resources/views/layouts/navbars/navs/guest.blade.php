@@ -28,6 +28,15 @@
           </li>
         @endif
 
+        @if ($activePage == 'error')
+          <li class="nav-item">
+            <a href="{{ url()->previous() }}" class="nav-link">
+              @icon('fal fa-arrow-alt-left')
+              {{ __('Back') }}
+            </a>
+          </li>
+        @endif
+
         @if (!auth()->user())
           @if ($activePage != 'register')
             <li class="nav-item">

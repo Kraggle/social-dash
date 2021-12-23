@@ -3,68 +3,66 @@ Scheduling')])
 
 @section('content')
   <div class="content">
-    <div class="container-fluid">
-      <div class="row">
 
-        <div class="col-12 card">
-          <div class="card-header">
-            <h3 class="card-title">{{ __('Scheduling') }}</h3>
-          </div>
+    <div class="card card-tabbed">
+      <div class="card-header">
+        <h3 class="card-title">{{ __('Scheduling') }}</h3>
+      </div>
 
-          <div class="card-body row">
-            <ul class="col-12 nav nav-pills nav-pills-warning">
-              <li class="nav-item">
-                <button class="nav-link active" id=" calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-pane" type="button" role="tab" aria-controls="calendar" aria-selected="true">
-                  {{ __('Calendar') }}
-                </button>
-              </li>
-              <li class="nav-item">
-                <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list-pane" type="button" role="tab" aria-controls="list" aria-selected="false">
-                  {{ __('List') }}
-                </button>
-              </li>
-            </ul>
+      <ul class="card-nav nav nav-tabs">
+        <li class="nav-item">
+          <button class="nav-link active" id=" calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-pane" type="button" role="tab" aria-controls="calendar" aria-selected="true">
+            {{ __('Calendar') }}
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list-pane" type="button" role="tab" aria-controls="list" aria-selected="false">
+            {{ __('List') }}
+          </button>
+        </li>
+      </ul>
 
-            <div class="col-12 tab-content" id="tab-content">
+      <div class="card-tabs tab-content" id="tab-content">
 
-              <div class="tab-pane fade show active" id="calendar-pane" role="tabpanel" aria-labelledby="calendar-tab">
-                <div id="full-calendar"></div>
+        <div class="tab-pane fade show active" id="calendar-pane" role="tabpanel" aria-labelledby="calendar-tab">
+          <div id="full-calendar"></div>
+        </div>
+
+        <div class="tab-pane fade row" id="list-pane" role="tabpanel" aria-labelledby="list-tab">
+          @can('create', App\Item::class)
+            <div class="row">
+              <div class="col-12 text-end mb-3">
+                <a href="{{ route('item.create') }}" class="btn btn-sm btn-primary btn-gradient">{{ __('Add Item') }}</a>
               </div>
-
-              <div class="tab-pane fade row" id="list-pane" role="tabpanel" aria-labelledby="list-tab">
-                @can('create', App\Item::class)
-                  <div class="row">
-                    <div class="col-12 text-end mb-3">
-                      <a href="{{ route('item.create') }}" class="btn btn-sm btn-primary btn-gradient">{{ __('Add Item') }}</a>
-                    </div>
-                  </div>
+            </div>
+          @endcan
+          <div class="table-responsive">
+            <table id="datatable" class="table table-striped table-no-bordered table-hover" style="display:none">
+              <caption></caption>
+              <thead class="text-primary">
+                <th scope="col">
+                  {{ __('Picture') }}
+                </th>
+                <th scope="col">
+                  {{ __('Description') }}
+                </th>
+                <th scope="col">
+                  {{ __('Hashtags') }}
+                </th>
+                <th scope="col">
+                  {{ __('Schedule Date') }}
+                </th>
+                <th scope="col">
+                  {{ __('Schedule Time') }}
+                </th>
+                @can('manage-items', App\User::class)
+                  <th scope="col" class="text-end">
+                    {{ __('Actions') }}
+                  </th>
                 @endcan
-                <div class="table-responsive">
-                  <table id="datatable" class="table table-striped table-no-bordered table-hover" style="display:none">
-                    <thead class="text-primary">
-                      <th>
-                        {{ __('Picture') }}
-                      </th>
-                      <th>
-                        {{ __('Description') }}
-                      </th>
-                      <th>
-                        {{ __('Hashtags') }}
-                      </th>
-                      <th>
-                        {{ __('Schedule Date') }}
-                      </th>
-                      <th>
-                        {{ __('Schedule Time') }}
-                      </th>
-                      @can('manage-items', App\User::class)
-                        <th class="text-end">
-                          {{ __('Actions') }}
-                        </th>
-                      @endcan
-                    </thead>
-                    <tbody>
-                      {{-- @foreach ($items as $item)
+              </thead>
+              <tbody>
+                {{-- @foreach ($items as $item)
                         <tr>
                           <td>
                             <img src="{{ $item->path() }}" alt="" style="max-width: 200px;">
@@ -107,22 +105,18 @@ Scheduling')])
                           @endcan
                         </tr>
                       @endforeach --}}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
+              </tbody>
+            </table>
           </div>
-
         </div>
+
       </div>
+
     </div>
   </div>
 @endsection
 
 @push('js')
-  {{-- <script src="{{ AH::asset('js/plugins', '/full-calendar/fullcalendar.js') }}"></script> --}}AH::asset('js/plugins', '/full-calendar/fullcalendar.js') }}AH::asset('js/plugins', '/full-calendar/fullcalendar.js') }}
   <script src="{{ asset('js/pages') }}/datatable-only.js" type="module"></script>
   <script src="{{ asset('js/pages') }}/scheduling.js" type="module"></script>
 @endpush

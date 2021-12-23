@@ -47,16 +47,17 @@
               <!--        Here you can write extra buttons/actions for the toolbar              -->
             </div>
             <table id="datatable" class="table table-striped">
+              <caption class="p-0"></caption>
               <thead>
                 <tr>
-                  <th>Post</th>
-                  <th>Post URL</th>
-                  <th>Desciption</th>
-                  <th>Likes</th>
-                  <th>Comments</th>
-                  <th>Posted</th>
-                  <th>Hashtags</th>
-                  <th class="dt-nosort text-end">
+                  <th scope="col">Post</th>
+                  <th scope="col">Post URL</th>
+                  <th scope="col">Desciption</th>
+                  <th scope="col">Likes</th>
+                  <th scope="col">Comments</th>
+                  <th scope="col">Posted</th>
+                  <th scope="col">Hashtags</th>
+                  <th scope="col" class="dt-nosort text-end">
                     Actions</th>
                 </tr>
               </thead>
@@ -280,14 +281,14 @@
               </tbody>
               <tfoot>
                 <tr>
-                  <th>Post</th>
-                  <th>Post URL</th>
-                  <th>Desciption</th>
-                  <th>Likes</th>
-                  <th>Comments</th>
-                  <th>Date Posted</th>
-                  <th>Hashtags</th>
-                  <th class="disabled-sorting text-end">Actions</th>
+                  <th scope="col">Post</th>
+                  <th scope="col">Post URL</th>
+                  <th scope="col">Desciption</th>
+                  <th scope="col">Likes</th>
+                  <th scope="col">Comments</th>
+                  <th scope="col">Date Posted</th>
+                  <th scope="col">Hashtags</th>
+                  <th scope="col" class="disabled-sorting text-end">Actions</th>
                 </tr>
               </tfoot>
             </table>

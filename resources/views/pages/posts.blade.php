@@ -241,17 +241,18 @@ $cookie = AppHelper::getPageCookie($page);
                       <!--        Here you can write extra buttons/actions for the toolbar              -->
                     </div>
                     <table id="datatable" class="table table-striped">
+                      <caption class="p-0"></caption>
                       <thead>
                         <tr>
-                          <th>Post</th>
-                          <th>Post URL</th>
-                          <th>Type</th>
-                          <th>Desciption</th>
-                          <th>Likes</th>
-                          <th>Comments</th>
-                          <th>Date Posted</th>
-                          <th>Hashtags</th>
-                          <th class="dt-nosort text-end">
+                          <th scope="col">Post</th>
+                          <th scope="col">Post URL</th>
+                          <th scope="col">Type</th>
+                          <th scope="col">Desciption</th>
+                          <th scope="col">Likes</th>
+                          <th scope="col">Comments</th>
+                          <th scope="col">Date Posted</th>
+                          <th scope="col">Hashtags</th>
+                          <th scope="col" class="dt-nosort text-end">
                             Actions
                           </th>
                         </tr>
@@ -260,7 +261,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLmHaJSptE6/</a>
@@ -280,7 +281,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLgxTAOp2xM/</a>
@@ -300,7 +301,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLe2eLOpb9L/</a>
@@ -320,7 +321,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLe2eLOpb9L/</a>
@@ -340,7 +341,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLZqAn9pars/</a>
@@ -360,7 +361,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLZBFTvJPb3/</a>
@@ -380,7 +381,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLUvY44Jbaa/</a>
@@ -400,7 +401,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLUT4w2JmSC/</a>
@@ -420,7 +421,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLUA1cjpJAV/</a>
@@ -440,7 +441,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLTqyVdpjF6/</a>
@@ -460,7 +461,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLMy_kNpDD4/</a>
@@ -480,7 +481,7 @@ $cookie = AppHelper::getPageCookie($page);
                         <tr>
                           <td>
                             <div class="photo">
-                              <img src="{{ asset('images') }}/tania.jpg" alt="Table image">
+                              <img alt src="{{ asset('images') }}/tania.jpg" alt="Table image">
                             </div>
                           </td>
                           <td><a href="{{ route('pages.post') }}">/p/CLMSkboJWjh/</a>
@@ -498,1426 +499,341 @@ $cookie = AppHelper::getPageCookie($page);
                           </td>
                         </tr>
                       </tbody>
-                      <tfoot>
-                        <tr>
-                          <th>Post</th>
-                          <th>Post URL</th>
-                          <td>Type</td>
-                          <th>Desciption</th>
-                          <th>Likes</th>
-                          <th>Comments</th>
-                          <th>Date Posted</th>
-                          <th>Hashtags</th>
-                          <th class="disabled-sorting text-end">Actions</th>
-                        </tr>
-                      </tfoot>
                     </table>
                   </div>
                   <!-- end content-->
                 </div>
                 <!--  end card  -->
               </div>
+
               <div class="tab-pane fade" id="pill-visual-tab" role="tabpanel" aria-labelledby="nav-visual-tab">
-                <div class="row">
+                <div class="row mb-3">
+
                   <div class="col-3">
-                    <div class="card card-post">
-                      <div class="card-header">
-                        <input type="checkbox" id="myCheckbox1" />
-                        <label for="myCheckbox1"><img src="{{ asset('images') }}/post1.jpg"></label>
+                    <input type="checkbox" class="post-selector" id="post-1">
+                    <label for="post-1" class="card card-post border">
 
-                        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#link7">
-                              @icon('fas fa-analytics')
-                              Data
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link8">
-                              @icon('fal fa-comments')
-                              Caption
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link9">
-                              @icon('fas fa-hashtag')
-                              Hashtags
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="tab-content tab-subcategories mt-0">
-                          <div class="tab-pane active" id="link7">
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Type:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>Photo</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Likes:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>132</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Comments:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>31</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Date:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>07/05/2020</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Time:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>15:08</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane" id="link8">
-                            <p>👆 "You can have all the motivation and knowledge in the world,
-                              if
-                              you have no consistency or dedication you will NOT be getting
-                              far!!"
-                            </p>
-                          </div>
-                          <div class="tab-pane" id="link9">
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneymotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                  <span class="progress-value">86</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
-                                  <span class="progress-value">98</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
-                                  <span class="progress-value">72</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneyinspiation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#billionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-2">
-                              <ul class="pagination pagination-warning">
-                                <li class="page-item active">
-                                  <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">5</a>
-                                </li>
-                              </ul>
-                            </nav>
-                            {{-- <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememes</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                                <span class="progress-value">70</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememe</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-                                                <span class="progress-value">65</span>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#mondaymotivation</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                                <span class="progress-value">52</span>
-                                              </div>
-                                            </div>
-                                        </div> --}}
-                          </div>
-                        </div>
+                      <img alt class="card-img-top" src="{{ asset('images') }}/post1.jpg">
+
+                      <div class="card-body">
+
+                        <p class="card-detail">
+                          <img alt class="card-user" src="{{ asset('images') }}/tania.jpg">
+                          <span class="card-name">howtomakemoneyfromhome</span>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-val">132</span>
+                          <span class="card-for">likes,</span>
+                          <span class="card-val">28</span>
+                          <span class="card-for">comments,</span>
+                          <span class="card-val">2</span>
+                          <span class="card-for">saves</span>
+                        </p>
+
+                        <p class="card-detail">👆 "You can have all the motivation and knowledge in the world, if you have no consistency or dedication you will NOT be getting far!!"</p>
+
+                        <p class="card-detail">
+                          <a href="{{ route('pages.hashtags') }}">#millionairemotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneymotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneyinspiation</a>
+                          <a href="{{ route('pages.hashtags') }}">#billionairemotivation</a>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-for">23/04/2020</span>
+                          <span class="card-for">3:02pm</span>
+                        </p>
                       </div>
-                    </div>
+                    </label>
                   </div>
+
                   <div class="col-3">
-                    <div class="card card-post">
-                      <div class="card-header">
-                        <input type="checkbox" id="myCheckbox2" />
-                        <label for="myCheckbox2"><img src="{{ asset('images') }}/post2.jpg"></label>
+                    <input type="checkbox" class="post-selector" id="post-2">
+                    <label for="post-2" class="card card-post border">
 
-                        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#link10">
-                              @icon('fas fa-analytics')
-                              Data
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link11">
-                              @icon('fal fa-comments')
-                              Caption
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link12">
-                              @icon('fas fa-hashtag')
-                              Hashtags
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="tab-content tab-subcategories mt-0">
-                          <div class="tab-pane active" id="link10">
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Type:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>Photo</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Likes:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>132</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Comments:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>31</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Date:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>07/05/2020</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Time:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>15:08</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane" id="link11">
-                            <p>👆 "You can have all the motivation and knowledge in the world,
-                              if
-                              you have no consistency or dedication you will NOT be getting
-                              far!!"
-                            </p>
-                          </div>
-                          <div class="tab-pane" id="link12">
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneymotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                  <span class="progress-value">86</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
-                                  <span class="progress-value">98</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
-                                  <span class="progress-value">72</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneyinspiation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#billionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <nav aria-label="Page navigation example">
-                              <ul class="pagination pagination-warning">
-                                <li class="page-item active">
-                                  <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">5</a>
-                                </li>
-                              </ul>
-                            </nav>
-                            {{-- <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememes</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                                <span class="progress-value">70</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememe</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-                                                <span class="progress-value">65</span>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#mondaymotivation</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                                <span class="progress-value">52</span>
-                                              </div>
-                                            </div>
-                                        </div> --}}
-                          </div>
-                        </div>
+                      <img alt class="card-img-top" src="{{ asset('images') }}/post2.jpg">
+
+                      <div class="card-body">
+
+                        <p class="card-detail">
+                          <img alt class="card-user" src="{{ asset('images') }}/tania.jpg">
+                          <span class="card-name">howtomakemoneyfromhome</span>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-val">132</span>
+                          <span class="card-for">likes,</span>
+                          <span class="card-val">28</span>
+                          <span class="card-for">comments,</span>
+                          <span class="card-val">2</span>
+                          <span class="card-for">saves</span>
+                        </p>
+
+                        <p class="card-detail">👆 "You can have all the motivation and knowledge in the world, if you have no consistency or dedication you will NOT be getting far!!"</p>
+
+                        <p class="card-detail">
+                          <a href="{{ route('pages.hashtags') }}">#millionairemotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneymotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneyinspiation</a>
+                          <a href="{{ route('pages.hashtags') }}">#billionairemotivation</a>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-for">23/04/2020</span>
+                          <span class="card-for">3:02pm</span>
+                        </p>
                       </div>
-                    </div>
+                    </label>
                   </div>
+
                   <div class="col-3">
-                    <div class="card card-post">
-                      <div class="card-header">
-                        <input type="checkbox" id="myCheckbox3" />
-                        <label for="myCheckbox3"><img src="{{ asset('images') }}/post3.jpg"></label>
+                    <input type="checkbox" class="post-selector" id="post-3">
+                    <label for="post-3" class="card card-post border">
 
-                        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#link13">
-                              @icon('fas fa-analytics')
-                              Data
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link14">
-                              @icon('fal fa-comments')
-                              Caption
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link15">
-                              @icon('fas fa-hashtag')
-                              Hashtags
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="tab-content tab-subcategories mt-0">
-                          <div class="tab-pane active" id="link13">
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Type:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>Photo</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Likes:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>132</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Comments:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>31</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Date:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>07/05/2020</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Time:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>15:08</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane" id="link14">
-                            <p>👆 "You can have all the motivation and knowledge in the world,
-                              if
-                              you have no consistency or dedication you will NOT be getting
-                              far!!"
-                            </p>
-                          </div>
-                          <div class="tab-pane" id="link15">
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneymotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                  <span class="progress-value">86</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
-                                  <span class="progress-value">98</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
-                                  <span class="progress-value">72</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneyinspiation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#billionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <nav aria-label="Page navigation example">
-                              <ul class="pagination pagination-warning">
-                                <li class="page-item active">
-                                  <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">5</a>
-                                </li>
-                              </ul>
-                            </nav>
-                            {{-- <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememes</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                                <span class="progress-value">70</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememe</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-                                                <span class="progress-value">65</span>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#mondaymotivation</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                                <span class="progress-value">52</span>
-                                              </div>
-                                            </div>
-                                        </div> --}}
-                          </div>
-                        </div>
+                      <img alt class="card-img-top" src="{{ asset('images') }}/post3.jpg">
+
+                      <div class="card-body">
+
+                        <p class="card-detail">
+                          <img alt class="card-user" src="{{ asset('images') }}/tania.jpg">
+                          <span class="card-name">howtomakemoneyfromhome</span>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-val">132</span>
+                          <span class="card-for">likes,</span>
+                          <span class="card-val">28</span>
+                          <span class="card-for">comments,</span>
+                          <span class="card-val">2</span>
+                          <span class="card-for">saves</span>
+                        </p>
+
+                        <p class="card-detail">👆 "You can have all the motivation and knowledge in the world, if you have no consistency or dedication you will NOT be getting far!!"</p>
+
+                        <p class="card-detail">
+                          <a href="{{ route('pages.hashtags') }}">#millionairemotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneymotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneyinspiation</a>
+                          <a href="{{ route('pages.hashtags') }}">#billionairemotivation</a>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-for">23/04/2020</span>
+                          <span class="card-for">3:02pm</span>
+                        </p>
                       </div>
-                    </div>
+                    </label>
                   </div>
+
                   <div class="col-3">
-                    <div class="card card-post">
-                      <div class="card-header">
-                        <input type="checkbox" id="myCheckbox4" />
-                        <label for="myCheckbox4"><img src="{{ asset('images') }}/post4.jpg"></label>
+                    <input type="checkbox" class="post-selector" id="post-4">
+                    <label for="post-4" class="card card-post border">
 
-                        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#link16">
-                              @icon('fas fa-analytics')
-                              Data
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link17">
-                              @icon('fal fa-comments')
-                              Caption
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link18">
-                              @icon('fas fa-hashtag')
-                              Hashtags
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="tab-content tab-subcategories mt-0">
-                          <div class="tab-pane active" id="link16">
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Type:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>Photo</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Likes:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>132</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Comments:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>31</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Date:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>07/05/2020</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Time:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>15:08</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane" id="link17">
-                            <p>👆 "You can have all the motivation and knowledge in the world,
-                              if
-                              you have no consistency or dedication you will NOT be getting
-                              far!!"
-                            </p>
-                          </div>
-                          <div class="tab-pane" id="link18">
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneymotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                  <span class="progress-value">86</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
-                                  <span class="progress-value">98</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
-                                  <span class="progress-value">72</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneyinspiation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#billionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <nav aria-label="Page navigation example">
-                              <ul class="pagination pagination-warning">
-                                <li class="page-item active">
-                                  <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">5</a>
-                                </li>
-                              </ul>
-                            </nav>
-                            {{-- <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememes</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                                <span class="progress-value">70</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememe</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-                                                <span class="progress-value">65</span>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#mondaymotivation</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                                <span class="progress-value">52</span>
-                                              </div>
-                                            </div>
-                                        </div> --}}
-                          </div>
-                        </div>
-                        {{-- <div class="row card-stats">
-                                    <div class="col-2">
-                                        <div class="info-icon text-center icon-warning">
-                                            @icon('fal fa-play')
+                      <img alt class="card-img-top" src="{{ asset('images') }}/post4.jpg">
 
-                                        </div>
-                                    </div>
-                                    <div class="col-10">
-                                        <p>You can have all the motivation and knowledge in the world, if you have no consistency or dedication you will NOT be getting far!!</p>
-                                    </div>
-                                </div>
-                                <div class="row card-stats">
-                                    <div class="col-2">
-                                        <div class="info-icon text-center icon-warning">
-                                          @icon('fal fa-heart')
+                      <div class="card-body">
 
-                                        </div>
-                                    </div>
-                                    <div class="col-10">
-                                        <p>132</p>
-                                    </div>
-                                </div>
-                                <div class="row card-stats">
-                                    <div class="col-2">
-                                        <div class="info-icon text-center icon-warning">
-                                            @icon('fal fa-comments')
+                        <p class="card-detail">
+                          <img alt class="card-user" src="{{ asset('images') }}/tania.jpg">
+                          <span class="card-name">howtomakemoneyfromhome</span>
+                        </p>
 
-                                        </div>
-                                    </div>
-                                    <div class="col-10">
-                                        <p>31</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <input type="text" value="#millionairemotivation,#moneymotivation,#hashtags,#cory,#beevers,#fillitup,#hashyhashtag,#millionairemotivation,#motivationalquote,#motivationalmeme,#moneymotivation,#moneyinspiration,#moneymentor,#anotherhashtag,#andanother,#have10intotal" class="tagsinput" data-role="tagsinput" data-color="warning" />
-                                </div> --}}
+                        <p class="card-detail">
+                          <span class="card-val">132</span>
+                          <span class="card-for">likes,</span>
+                          <span class="card-val">28</span>
+                          <span class="card-for">comments,</span>
+                          <span class="card-val">2</span>
+                          <span class="card-for">saves</span>
+                        </p>
+
+                        <p class="card-detail">👆 "You can have all the motivation and knowledge in the world, if you have no consistency or dedication you will NOT be getting far!!"</p>
+
+                        <p class="card-detail">
+                          <a href="{{ route('pages.hashtags') }}">#millionairemotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneymotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneyinspiation</a>
+                          <a href="{{ route('pages.hashtags') }}">#billionairemotivation</a>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-for">23/04/2020</span>
+                          <span class="card-for">3:02pm</span>
+                        </p>
                       </div>
-                    </div>
+                    </label>
                   </div>
+
                 </div>
                 <div class="row">
-                  <div class="col-3">
-                    <div class="card card-post">
-                      <div class="card-header">
-                        <input type="checkbox" id="myCheckbox5" />
-                        <label for="myCheckbox5"><img src="{{ asset('images') }}/post5.jpg"></label>
 
-                        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#link19">
-                              @icon('fas fa-analytics')
-                              Data
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link20">
-                              @icon('fal fa-comments')
-                              Caption
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link21">
-                              @icon('fas fa-hashtag')
-                              Hashtags
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="tab-content tab-subcategories mt-0">
-                          <div class="tab-pane active" id="link19">
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Type:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>Photo</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Likes:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>132</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Comments:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>31</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Date:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>07/05/2020</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Time:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>15:08</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane" id="link20">
-                            <p>👆 "You can have all the motivation and knowledge in the world,
-                              if
-                              you have no consistency or dedication you will NOT be getting
-                              far!!"
-                            </p>
-                          </div>
-                          <div class="tab-pane" id="link21">
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneymotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                  <span class="progress-value">86</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
-                                  <span class="progress-value">98</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
-                                  <span class="progress-value">72</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneyinspiation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#billionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <nav aria-label="Page navigation example">
-                              <ul class="pagination pagination-warning">
-                                <li class="page-item active">
-                                  <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">5</a>
-                                </li>
-                              </ul>
-                            </nav>
-                            {{-- <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememes</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                                <span class="progress-value">70</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememe</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-                                                <span class="progress-value">65</span>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#mondaymotivation</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                                <span class="progress-value">52</span>
-                                              </div>
-                                            </div>
-                                        </div> --}}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <div class="col-3">
-                    <div class="card card-post">
-                      <div class="card-header">
-                        <input type="checkbox" id="myCheckbox6" />
-                        <label for="myCheckbox6"><img src="{{ asset('images') }}/post6.jpg"></label>
+                    <input type="checkbox" class="post-selector" id="post-5">
+                    <label for="post-5" class="card card-post border">
 
-                        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#link22">
-                              @icon('fas fa-analytics')
-                              Data
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link23">
-                              @icon('fal fa-comments')
-                              Caption
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link24">
-                              @icon('fas fa-hashtag')
-                              Hashtags
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="tab-content tab-subcategories mt-0">
-                          <div class="tab-pane active" id="link22">
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Type:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>Photo</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Likes:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>132</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Comments:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>31</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Date:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>07/05/2020</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Time:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>15:08</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane" id="link23">
-                            <p>👆 "You can have all the motivation and knowledge in the world,
-                              if
-                              you have no consistency or dedication you will NOT be getting
-                              far!!"
-                            </p>
-                          </div>
-                          <div class="tab-pane" id="link24">
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneymotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                  <span class="progress-value">86</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
-                                  <span class="progress-value">98</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
-                                  <span class="progress-value">72</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneyinspiation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#billionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <nav aria-label="Page navigation example">
-                              <ul class="pagination pagination-warning">
-                                <li class="page-item active">
-                                  <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">5</a>
-                                </li>
-                              </ul>
-                            </nav>
-                            {{-- <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememes</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                                <span class="progress-value">70</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememe</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-                                                <span class="progress-value">65</span>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#mondaymotivation</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                                <span class="progress-value">52</span>
-                                              </div>
-                                            </div>
-                                        </div> --}}
-                          </div>
-                        </div>
+                      <img alt class="card-img-top" src="{{ asset('images') }}/post5.jpg">
+
+                      <div class="card-body">
+
+                        <p class="card-detail">
+                          <img alt class="card-user" src="{{ asset('images') }}/tania.jpg">
+                          <span class="card-name">howtomakemoneyfromhome</span>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-val">132</span>
+                          <span class="card-for">likes,</span>
+                          <span class="card-val">28</span>
+                          <span class="card-for">comments,</span>
+                          <span class="card-val">2</span>
+                          <span class="card-for">saves</span>
+                        </p>
+
+                        <p class="card-detail">👆 "You can have all the motivation and knowledge in the world, if you have no consistency or dedication you will NOT be getting far!!"</p>
+
+                        <p class="card-detail">
+                          <a href="{{ route('pages.hashtags') }}">#millionairemotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneymotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneyinspiation</a>
+                          <a href="{{ route('pages.hashtags') }}">#billionairemotivation</a>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-for">23/04/2020</span>
+                          <span class="card-for">3:02pm</span>
+                        </p>
                       </div>
-                    </div>
+                    </label>
                   </div>
+
                   <div class="col-3">
-                    <div class="card card-post">
-                      <div class="card-header">
-                        <input type="checkbox" id="myCheckbox7" />
-                        <label for="myCheckbox7"><img src="{{ asset('images') }}/post7.jpg"></label>
-                        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#link25">
-                              @icon('fas fa-analytics')
-                              Data
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link26">
-                              @icon('fal fa-comments')
-                              Caption
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link27">
-                              @icon('fas fa-hashtag')
-                              Hashtags
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="tab-content tab-subcategories mt-0">
-                          <div class="tab-pane active" id="link25">
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Type:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>Photo</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Likes:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>132</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Comments:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>31</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Date:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>07/05/2020</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Time:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>15:08</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane" id="link26">
-                            <p>👆 "You can have all the motivation and knowledge in the world,
-                              if
-                              you have no consistency or dedication you will NOT be getting
-                              far!!"
-                            </p>
-                          </div>
-                          <div class="tab-pane" id="link27">
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneymotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                  <span class="progress-value">86</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
-                                  <span class="progress-value">98</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
-                                  <span class="progress-value">72</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneyinspiation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#billionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <nav aria-label="Page navigation example">
-                              <ul class="pagination pagination-warning">
-                                <li class="page-item active">
-                                  <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">5</a>
-                                </li>
-                              </ul>
-                            </nav>
-                            {{-- <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememes</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                                <span class="progress-value">70</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememe</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-                                                <span class="progress-value">65</span>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#mondaymotivation</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                                <span class="progress-value">52</span>
-                                              </div>
-                                            </div>
-                                        </div> --}}
-                          </div>
-                        </div>
+                    <input type="checkbox" class="post-selector" id="post-6">
+                    <label for="post-6" class="card card-post border">
+
+                      <img alt class="card-img-top" src="{{ asset('images') }}/post6.jpg">
+
+                      <div class="card-body">
+
+                        <p class="card-detail">
+                          <img alt class="card-user" src="{{ asset('images') }}/tania.jpg">
+                          <span class="card-name">howtomakemoneyfromhome</span>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-val">132</span>
+                          <span class="card-for">likes,</span>
+                          <span class="card-val">28</span>
+                          <span class="card-for">comments,</span>
+                          <span class="card-val">2</span>
+                          <span class="card-for">saves</span>
+                        </p>
+
+                        <p class="card-detail">👆 "You can have all the motivation and knowledge in the world, if you have no consistency or dedication you will NOT be getting far!!"</p>
+
+                        <p class="card-detail">
+                          <a href="{{ route('pages.hashtags') }}">#millionairemotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneymotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneyinspiation</a>
+                          <a href="{{ route('pages.hashtags') }}">#billionairemotivation</a>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-for">23/04/2020</span>
+                          <span class="card-for">3:02pm</span>
+                        </p>
                       </div>
-                    </div>
+                    </label>
                   </div>
+
                   <div class="col-3">
-                    <div class="card card-post">
-                      <div class="card-header">
-                        <input type="checkbox" id="myCheckbox8" />
-                        <label for="myCheckbox8"><img src="{{ asset('images') }}/post8.jpg"></label>
-                        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center pt-2">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#link28">
-                              @icon('fas fa-analytics')
-                              Data
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link29">
-                              @icon('fal fa-comments')
-                              Caption
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#link30">
-                              @icon('fas fa-hashtag')
-                              Hashtags
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="tab-content tab-subcategories mt-0">
-                          <div class="tab-pane active" id="link28">
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Type:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>Photo</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Likes:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>132</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Comments:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>31</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Date:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>07/05/2020</p>
-                              </div>
-                            </div>
-                            <div class="row card-stats">
-                              <div class="col-6">
-                                <h4><a href="{{ route('pages.post') }}">Time:</a>
-                                </h4>
-                              </div>
-                              <div class="col-6">
-                                <p>15:08</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane" id="link29">
-                            <p>👆 "You can have all the motivation and knowledge in the world,
-                              if
-                              you have no consistency or dedication you will NOT be getting
-                              far!!"
-                            </p>
-                          </div>
-                          <div class="tab-pane" id="link30">
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneymotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                  <span class="progress-value">86</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
-                                  <span class="progress-value">98</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
-                                  <span class="progress-value">72</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#moneyinspiation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="progress-container progress-warning">
-                              <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#billionairemotivation</a></span>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                  <span class="progress-value">70</span>
-                                </div>
-                              </div>
-                            </div>
-                            <nav aria-label="Page navigation example">
-                              <ul class="pagination pagination-warning">
-                                <li class="page-item active">
-                                  <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">5</a>
-                                </li>
-                              </ul>
-                            </nav>
-                            {{-- <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememes</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                                <span class="progress-value">70</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#millionairememe</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-                                                <span class="progress-value">65</span>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-container progress-warning">
-                                            <span class="progress-badge"><a href="{{ route('pages.hashtags') }}">#mondaymotivation</a></span>
-                                            <div class="progress">
-                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                                <span class="progress-value">52</span>
-                                              </div>
-                                            </div>
-                                        </div> --}}
-                          </div>
-                        </div>
+                    <input type="checkbox" class="post-selector" id="post-7">
+                    <label for="post-7" class="card card-post border">
+
+                      <img alt class="card-img-top" src="{{ asset('images') }}/post7.jpg">
+
+                      <div class="card-body">
+
+                        <p class="card-detail">
+                          <img alt class="card-user" src="{{ asset('images') }}/tania.jpg">
+                          <span class="card-name">howtomakemoneyfromhome</span>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-val">132</span>
+                          <span class="card-for">likes,</span>
+                          <span class="card-val">28</span>
+                          <span class="card-for">comments,</span>
+                          <span class="card-val">2</span>
+                          <span class="card-for">saves</span>
+                        </p>
+
+                        <p class="card-detail">👆 "You can have all the motivation and knowledge in the world, if you have no consistency or dedication you will NOT be getting far!!"</p>
+
+                        <p class="card-detail">
+                          <a href="{{ route('pages.hashtags') }}">#millionairemotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneymotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneyinspiation</a>
+                          <a href="{{ route('pages.hashtags') }}">#billionairemotivation</a>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-for">23/04/2020</span>
+                          <span class="card-for">3:02pm</span>
+                        </p>
                       </div>
-                    </div>
+                    </label>
                   </div>
+
+                  <div class="col-3">
+                    <input type="checkbox" class="post-selector" id="post-8">
+                    <label for="post-8" class="card card-post border">
+
+                      <img alt class="card-img-top" src="{{ asset('images') }}/post8.jpg">
+
+                      <div class="card-body">
+
+                        <p class="card-detail">
+                          <img alt class="card-user" src="{{ asset('images') }}/tania.jpg">
+                          <span class="card-name">howtomakemoneyfromhome</span>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-val">132</span>
+                          <span class="card-for">likes,</span>
+                          <span class="card-val">28</span>
+                          <span class="card-for">comments,</span>
+                          <span class="card-val">2</span>
+                          <span class="card-for">saves</span>
+                        </p>
+
+                        <p class="card-detail">👆 "You can have all the motivation and knowledge in the world, if you have no consistency or dedication you will NOT be getting far!!"</p>
+
+                        <p class="card-detail">
+                          <a href="{{ route('pages.hashtags') }}">#millionairemotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneymotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#entrepreneurmotivation</a>
+                          <a href="{{ route('pages.hashtags') }}">#moneyinspiation</a>
+                          <a href="{{ route('pages.hashtags') }}">#billionairemotivation</a>
+                        </p>
+
+                        <p class="card-detail">
+                          <span class="card-for">23/04/2020</span>
+                          <span class="card-for">3:02pm</span>
+                        </p>
+                      </div>
+                    </label>
+                  </div>
+
                 </div>
               </div>
-
             </div>
           </div>
         </div>

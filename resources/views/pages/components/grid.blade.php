@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'grid', 'menuParent' => 'components', 'titlePage' => __('Grid System')])
+@extends('layouts.app', ['activePage' => 'grid', 'menuParent' => 'examples', 'titlePage' => __('Grid System')])
 
 @section('content')
   <div class="content">

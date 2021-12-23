@@ -15,12 +15,12 @@ $cookie = AppHelper::getPageCookie($page);
     <div class="row">
       <div class="col-12 mb-4">
         <a href="{{ route('pages.post') }}" class="btn btn-lg btn-info btn-gradient rounded-pill">
-          @icon('fal fa-chevron-left')
+          @icon('fal fa-chevron-left me-2')
           {{ __('Previous Post') }}
         </a>
         <a href="{{ route('pages.post') }}" class="btn btn-lg btn-info btn-gradient rounded-pill">
           {{ __('Next Post') }}
-          @icon('fal fa-chevron-right')
+          @icon('fal fa-chevron-right ms-2')
         </a>
       </div>
     </div>
@@ -29,39 +29,31 @@ $cookie = AppHelper::getPageCookie($page);
       {{-- Post Overview --}}
       <div class="col-md-3">
         <div class="card card-post">
-          <img class="card-img-top" src="{{ asset('images') }}/tania.jpg">
-          <div class="card-header d-none">
-            <h3 class="card-title">{{ __('Post Details') }}</h3>
-          </div>
+
+          <img alt class="card-img-top" src="{{ asset('images') }}/post1.jpg">
+
           <div class="card-body">
-            <div class="row card-details">
-              <div class="col-12 mb-1">
-                <label>Description</label>
-                <p>Don't settle for less than the best! 👊💯</p>
-              </div>
-              <div class="col-auto pe-0 mb-1">
-                <label>Likes</label>
-                <p>132</p>
-              </div>
-              <div class="col-auto pe-0 mb-1">
-                <label>Comments</label>
-                <p>28</p>
-              </div>
-              <div class="col-auto pe-0 mb-1">
-                <label>Saves</label>
-                <p>2</p>
-              </div>
-              <div class="row col-12">
-                <div class="col-auto pe-0 mb-1">
-                  <label>Date</label>
-                  <p>23/04/2020</p>
-                </div>
-                <div class="col-auto pe-0 mb-1">
-                  <label>Time</label>
-                  <p>3:02pm</p>
-                </div>
-              </div>
-            </div>
+
+            <p class="card-detail">
+              <img alt class="card-user" src="{{ asset('images') }}/tania.jpg">
+              <span class="card-name">howtomakemoneyfromhome</span>
+            </p>
+
+            <p class="card-detail">
+              <span class="card-val">132</span>
+              <span class="card-for">likes,</span>
+              <span class="card-val">28</span>
+              <span class="card-for">comments,</span>
+              <span class="card-val">2</span>
+              <span class="card-for">saves</span>
+            </p>
+
+            <p class="card-detail">Don't settle for less than the best! 👊💯</p>
+
+            <p class="card-detail">
+              <span class="card-for">23/04/2020</span>
+              <span class="card-for">3:02pm</span>
+            </p>
           </div>
         </div>
       </div>
@@ -79,7 +71,8 @@ $cookie = AppHelper::getPageCookie($page);
               <div class="col-auto pe-0">
                 @include('forms.datepicker', ['settings' => [
                 'cookie' => $cookie,
-                'id' => 'f-chart-date'
+                'id' => 'f-chart-date',
+                'group' => ['size' => 'sm']
                 ]])
               </div>
 
@@ -143,13 +136,14 @@ $cookie = AppHelper::getPageCookie($page);
           <div class="card-body">
             <div class="table-responsive">
               <table id="datatable" class="table table-striped" is-datatable data-search-placeholder="{{ __('Search comments...') }}">
+                <caption class="pb-0"></caption>
                 <thead>
                   <tr>
-                    <th>User</th>
-                    <th>Followers</th>
-                    <th>Description</th>
-                    <th>Likes</th>
-                    <th>Replies</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Followers</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Likes</th>
+                    <th scope="col">Replies</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -290,17 +284,18 @@ $cookie = AppHelper::getPageCookie($page);
           <div class="card-body">
             <div class="table-responsive">
               <table id="hashtaginpost" class="table table-striped" is-datatable data-search-placeholder="{{ __('Search hashtags...') }}">
+                <caption class="pb-0"></caption>
                 <thead>
                   <tr>
-                    <th>Hashtag</th>
-                    <th>Competition</th>
-                    <th>Posts</th>
-                    <th>Likes</th>
-                    <th>Eng Rate</th>
-                    <th>Like Rate</th>
-                    <th>Comment Rate</th>
-                    <th>Difficulty ?/100</th>
-                    <th>Daily Competition</th>
+                    <th scope="col">Hashtag</th>
+                    <th scope="col">Competition</th>
+                    <th scope="col">Posts</th>
+                    <th scope="col">Likes</th>
+                    <th scope="col">Eng Rate</th>
+                    <th scope="col">Like Rate</th>
+                    <th scope="col">Comment Rate</th>
+                    <th scope="col">Difficulty ?/100</th>
+                    <th scope="col">Daily Competition</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -362,15 +357,15 @@ $cookie = AppHelper::getPageCookie($page);
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th>Hashtag</th>
-                    <th>Competition</th>
-                    <th>Posts</th>
-                    <th>Likes</th>
-                    <th>Eng Rate</th>
-                    <th>Like Rate</th>
-                    <th>Comment Rate</th>
-                    <th>Difficulty ?/100</th>
-                    <th>Other Post Per Day</th>
+                    <th scope="col">Hashtag</th>
+                    <th scope="col">Competition</th>
+                    <th scope="col">Posts</th>
+                    <th scope="col">Likes</th>
+                    <th scope="col">Eng Rate</th>
+                    <th scope="col">Like Rate</th>
+                    <th scope="col">Comment Rate</th>
+                    <th scope="col">Difficulty ?/100</th>
+                    <th scope="col">Other Post Per Day</th>
                   </tr>
                 </tfoot>
               </table>

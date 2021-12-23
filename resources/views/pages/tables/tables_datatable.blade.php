@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'datatables', 'menuParent' => 'tables', 'titlePage' => __('DataTables.net')])
+@extends('layouts.app', ['activePage' => 'datatables', 'menuParent' => 'examples', 'titlePage' => __('DataTables.net')])
 
 @section('content')
   <div class="content">

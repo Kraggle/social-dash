@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'panels', 'menuParent' => 'components', 'titlePage' => __('Panels')])
+@extends('layouts.app', ['activePage' => 'panels', 'menuParent' => 'examples', 'titlePage' => __('Panels')])
 
 @section('content')
   <div class="content">
@@ -184,8 +184,8 @@
             <div class="row">
               <div class="col-lg-3 col-md-6">
                 <!--
-                                      color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
-                                  -->
+                                        color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                                    -->
                 <ul class="nav nav-pills nav-pills-primary nav-pills-icons flex-column">
                   <li class="nav-item">
                     <a class="nav-link active" data-bs-toggle="tab" href="#link10">
@@ -231,8 +231,8 @@
           </div>
           <div class="card-body">
             <!--
-                                                                      color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
-                                                                      -->
+                                                                        color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                                                                        -->
             <ul class="nav nav-pills nav-pills-primary nav-pills-icons justify-content-center">
               <li class="nav-item">
                 <a class="nav-link active" data-bs-toggle="tab" href="#link7">

@@ -166,18 +166,19 @@
                 <!--        Here you can write extra buttons/actions for the toolbar              -->
               </div>
               <table id="datatable" class="table table-striped">
+                <caption class="p-0"></caption>
                 <thead>
                   <tr>
-                    <th>Hashtag</th>
-                    <th>Competition</th>
-                    <th>Posts</th>
-                    <th>Likes</th>
-                    <th>Eng Rate</th>
-                    <th>Like Rate</th>
-                    <th>Comment Rate</th>
-                    <th>Difficulty ?/100</th>
-                    <th>Other Post Per Day</th>
-                    <th class="dt-nosort text-end">Actions</th>
+                    <th scope="col">Hashtag</th>
+                    <th scope="col">Competition</th>
+                    <th scope="col">Posts</th>
+                    <th scope="col">Likes</th>
+                    <th scope="col">Eng Rate</th>
+                    <th scope="col">Like Rate</th>
+                    <th scope="col">Comment Rate</th>
+                    <th scope="col">Difficulty ?/100</th>
+                    <th scope="col">Other Post Per Day</th>
+                    <th scope="col" class="dt-nosort text-end">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -251,16 +252,16 @@
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th>Hashtag</th>
-                    <th>Competition</th>
-                    <th>Posts</th>
-                    <th>Likes</th>
-                    <th>Eng Rate</th>
-                    <th>Like Rate</th>
-                    <th>Comment Rate</th>
-                    <th></th>
-                    <th>Action</th>
-                    <th class="disabled-sorting text-end">Actions</th>
+                    <th scope="col">Hashtag</th>
+                    <th scope="col">Competition</th>
+                    <th scope="col">Posts</th>
+                    <th scope="col">Likes</th>
+                    <th scope="col">Eng Rate</th>
+                    <th scope="col">Like Rate</th>
+                    <th scope="col">Comment Rate</th>
+                    <th scope="col"></th>
+                    <th scope="col">Action</th>
+                    <th scope="col" class="disabled-sorting text-end">Actions</th>
                   </tr>
                 </tfoot>
               </table>

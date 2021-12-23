@@ -181,7 +181,83 @@
 
       @endif
 
+      <li class="{{ $menuParent == 'examples' ? ' active' : '' }}">
+        <a data-bs-toggle="collapse" href="#examples">
+          @icon('fal fa-chart-network')
+          <p>
+            {{ __('Examples') }}
+            <b class="caret"></b>
+          </p>
+        </a>
+        <div class="collapse {{ $menuParent == 'examples' ? ' show' : '' }}" id="examples">
+          <ul class="nav">
 
+            <li class="{{ $activePage == 'test' ? ' active' : '' }}">
+              <a href="{{ route('page.test') }}">
+                <span class="sidebar-mini-icon">T</span>
+                <span class="sidebar-normal"> {{ __('Elements') }} </span>
+              </a>
+            </li>
+
+            <li class="{{ $activePage == 'widgets' ? ' active' : '' }}">
+              <a href="{{ route('page.widgets') }}">
+                <span class="sidebar-mini-icon">W</span>
+                <span class="sidebar-normal"> {{ __('Widgets') }} </span>
+              </a>
+            </li>
+
+            <li class="{{ $activePage == 'buttons' ? ' active' : '' }}">
+              <a href="{{ route('page.buttons') }}">
+                <span class="sidebar-mini-icon">B</span>
+                <span class="sidebar-normal"> {{ __('Buttons') }} </span>
+              </a>
+            </li>
+
+            <li class="{{ $activePage == 'grid' ? ' active' : '' }}">
+              <a href="{{ route('page.grid') }}">
+                <span class="sidebar-mini-icon">G</span>
+                <span class="sidebar-normal"> {{ __('Grid') }} </span>
+              </a>
+            </li>
+
+            <li class="{{ $activePage == 'panels' ? ' active' : '' }}">
+              <a href="{{ route('page.panels') }}">
+                <span class="sidebar-mini-icon">P</span>
+                <span class="sidebar-normal"> {{ __('Panels') }} </span>
+              </a>
+            </li>
+
+            <li class="{{ $activePage == 'typography' ? ' active' : '' }}">
+              <a href="{{ route('page.typography') }}">
+                <span class="sidebar-mini-icon">T</span>
+                <span class="sidebar-normal"> {{ __('Typography') }} </span>
+              </a>
+            </li>
+
+            <li class="{{ $activePage == 'regular-tables' ? ' active' : '' }}">
+              <a href="{{ route('page.regular-tables') }}">
+                <span class="sidebar-mini-icon">RT</span>
+                <span class="sidebar-normal"> {{ __('Regular Tables') }} </span>
+              </a>
+            </li>
+
+            <li class="{{ $activePage == 'extended-tables' ? ' active' : '' }}">
+              <a href="{{ route('page.extended-tables') }}">
+                <span class="sidebar-mini-icon">ET</span>
+                <span class="sidebar-normal"> {{ __('Extended Tables') }} </span>
+              </a>
+            </li>
+
+            <li class="{{ $activePage == 'validation-forms' ? ' active' : '' }}">
+              <a href="{{ route('page.validation-forms') }}">
+                <span class="sidebar-mini-icon">VF</span>
+                <span class="sidebar-normal"> {{ __('Validation Forms') }} </span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </li>
 
     </ul>
   </div>
