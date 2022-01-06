@@ -34,7 +34,7 @@
     }
 
     .card-body {
-        padding: 15px;
+        padding: $card-cap-padding-y $card-cap-padding-x;
 
         &.table-full-width {
             padding-left: 0;
@@ -55,17 +55,18 @@
     }
 
     .card-header {
-        padding: 15px 15px 0;
+        padding: $card-cap-padding-y $card-cap-padding-x 0;
         border: 0;
         color: $black;
+        background-color: transparent;
 
         a[data-bs-toggle='collapse'] {
             color: $black;
         }
 
-        &:not([data-background-color]) {
-            background-color: transparent;
-        }
+        // &:not([data-background-color]) {
+        //     background-color: transparent;
+        // }
 
         .card-title {
             color: $dark-states;
@@ -76,6 +77,10 @@
             color: $card-stats-gray;
             margin-bottom: 5px;
             font-weight: 300;
+        }
+
+        &.card-cap-bg {
+            background-color: $card-cap-bg;
         }
     }
 
@@ -155,8 +160,23 @@
 
 .card-body {
     padding: $card-spacer-y;
+
+    &.tab-content {
+        margin-top: $card-cap-padding-y;
+    }
 }
 
 .card-message {
     margin-top: 20px;
+}
+
+.card-header-tabs {
+    margin-bottom: 0;
+    margin-left: -$card-cap-padding-x;
+    margin-right: -$card-cap-padding-x;
+    margin-top: -$card-cap-padding-y;
+    $my-pad: $card-cap-padding-x * 0.3;
+    padding: $my-pad $my-pad 0;
+    border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+    // background-color: $card-cap-bg;
 }

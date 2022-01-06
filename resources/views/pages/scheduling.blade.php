@@ -4,25 +4,33 @@ Scheduling')])
 @section('content')
   <div class="content">
 
-    <div class="card card-tabbed">
-      <div class="card-header">
-        <h3 class="card-title">{{ __('Scheduling') }}</h3>
+    <div class="card">
+      <div class="card-header card-cap-bg">
+        <h3 class="card-title">{{ __('Post Scheduling') }}</h3>
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <button class="nav-link active" id=" calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-pane" type="button" role="tab" aria-controls="calendar" aria-selected="true">
+              @icon('fal fa-calendar-alt')
+              {{ __('Calendar View') }}
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list-pane" type="button" role="tab" aria-controls="list" aria-selected="false">
+              @icon('fal fa-list-alt')
+              {{ __('List View') }}
+            </button>
+          </li>
+          <li class="flex-grow-1"></li>
+          <li class="nav-item">
+            <button class="nav-link fw-bold text-primary" id="new-tab" data-bs-toggle="tab" data-bs-target="#new-pane" type="button" role="tab" aria-controls="list" aria-selected="false">
+              @icon('fas fa-plus-square')
+              {{ __('New Post') }}
+            </button>
+          </li>
+        </ul>
       </div>
 
-      <ul class="card-nav nav nav-tabs">
-        <li class="nav-item">
-          <button class="nav-link active" id=" calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-pane" type="button" role="tab" aria-controls="calendar" aria-selected="true">
-            {{ __('Calendar') }}
-          </button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list-pane" type="button" role="tab" aria-controls="list" aria-selected="false">
-            {{ __('List') }}
-          </button>
-        </li>
-      </ul>
-
-      <div class="card-tabs tab-content" id="tab-content">
+      <div class="card-body tab-content" id="tab-content">
 
         <div class="tab-pane fade show active" id="calendar-pane" role="tabpanel" aria-labelledby="calendar-tab">
           <div id="full-calendar"></div>
@@ -108,6 +116,10 @@ Scheduling')])
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div class="tab-pane fade" id="new-pane" role="tabpanel" aria-labelledby="new-tab">
+
         </div>
 
       </div>

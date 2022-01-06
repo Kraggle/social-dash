@@ -51,16 +51,16 @@
     }
 }
 
-.btn-group {
-    .btn.active {
-        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-        transform: translateY(-1px);
-    }
+// .btn-group {
+//     .btn.active {
+//         box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+//         transform: translateY(-1px);
+//     }
 
-    label.btn.active {
-        transform: translateY(0);
-    }
-}
+//     label.btn.active {
+//         transform: translateY(0);
+//     }
+// }
 
 .btn-link {
     font-weight: $btn-font-weight;

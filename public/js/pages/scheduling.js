@@ -5,13 +5,11 @@ import K from '../plugins/K.js';
 
 $(() => {
 
-	const $calendar = document.getElementById('full-calendar'),
+	const $calendar = $('full-calendar').get(0),
 		today = new Date(),
 		y = today.getFullYear(),
 		m = today.getMonth(),
 		d = today.getDate();
-
-	console.log($calendar);
 
 	const calendar = new FullCalendar.Calendar($calendar, {
 		themeSystem: 'bootstrap',

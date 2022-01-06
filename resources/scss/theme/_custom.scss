@@ -1,6 +1,13 @@
 $border: $table-border-width solid rgba($dark-states, 0.3);
 
 .fc-theme-bootstrap {
+    .fc-view-harness {
+        margin-left: -$card-cap-padding-x;
+        margin-right: -$card-cap-padding-x;
+        margin-bottom: -$card-cap-padding-y;
+        border-top: 1px solid #000;
+    }
+
     table.table-bordered {
         &.fc-scrollgrid {
             thead,

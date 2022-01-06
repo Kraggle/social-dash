@@ -322,6 +322,34 @@ $types = [
                 ]])
               </div>
 
+              <div class="col-auto">
+                @include('forms.button-group', ['settings' => [
+                'group' => ['size' => $type->size],
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Some'
+                ],[
+                'display' => 'Button'
+                ],[
+                'display' => 'Group'
+                ]]
+                ]])
+              </div>
+
+              <div class="col-auto">
+                @include('forms.button-group', ['settings' => [
+                'group' => ['size' => $type->size, 'class' => ['rounded-pill']],
+                'name' => AppHelper::makeId(),
+                'buttons' => [[
+                'display' => 'Rounded'
+                ],[
+                'display' => 'Button'
+                ],[
+                'display' => 'Group'
+                ]]
+                ]])
+              </div>
+
             </div>
           </div>
         </div>
