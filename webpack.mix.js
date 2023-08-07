@@ -14,7 +14,9 @@ const mix = require('laravel-mix');
 mix.disableSuccessNotifications()
     .setPublicPath('public')
     .sourceMaps(true, 'source-map')
-    .webpackConfig({ devtool: 'source-map' })
+    .webpackConfig({
+        devtool: 'source-map'
+    })
     .options({
         postCss: [
             require('autoprefixer')
@@ -27,6 +29,7 @@ mix.disableSuccessNotifications()
     .browserSync({
         watch: true,
         proxy: 'http://social-dash.test',
+        port: 3008,
         files: [
             'public/js/**/*.js',
             'public/css/**/*.css',
@@ -36,4 +39,4 @@ mix.disableSuccessNotifications()
         ],
         reloadDelay: 1000
     })
-    // .sass('resources/scss/plugins/font-awesome/font-awesome.scss', 'public/css')
+// .sass('resources/scss/plugins/font-awesome/font-awesome.scss', 'public/css')
